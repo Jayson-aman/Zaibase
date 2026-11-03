@@ -1,11 +1,14 @@
 import type { StudyPeriod } from './lesson-types';
 
-/** 学年区分（小学4年〜中学3年）。 */
-export type GradeKey = 'e4' | 'e5' | 'e6' | 'j1' | 'j2' | 'j3';
+/** 学年区分（小学1年〜中学3年）。 */
+export type GradeKey = 'e1' | 'e2' | 'e3' | 'e4' | 'e5' | 'e6' | 'j1' | 'j2' | 'j3';
 
-export const GRADE_ORDER: GradeKey[] = ['e4', 'e5', 'e6', 'j1', 'j2', 'j3'];
+export const GRADE_ORDER: GradeKey[] = ['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'j1', 'j2', 'j3'];
 
 export const GRADE_LABELS: Record<GradeKey, string> = {
+  e1: '小学1年',
+  e2: '小学2年',
+  e3: '小学3年',
   e4: '小学4年',
   e5: '小学5年',
   e6: '小学6年',
@@ -15,6 +18,9 @@ export const GRADE_LABELS: Record<GradeKey, string> = {
 };
 
 export const GRADE_SHORT_LABELS: Record<GradeKey, string> = {
+  e1: '小1',
+  e2: '小2',
+  e3: '小3',
   e4: '小4',
   e5: '小5',
   e6: '小6',
@@ -31,6 +37,9 @@ export function examTypeOfGrade(grade: GradeKey): 'chugaku' | 'koko' {
 /** 既存のLesson.studyPeriod（小5前半/中3夏 など）から、粗い学年区分を導出する。 */
 export function gradeOfStudyPeriod(period: StudyPeriod | undefined): GradeKey | null {
   if (!period) return null;
+  if (period.startsWith('小1')) return 'e1';
+  if (period.startsWith('小2')) return 'e2';
+  if (period.startsWith('小3')) return 'e3';
   if (period.startsWith('小4')) return 'e4';
   if (period.startsWith('小5')) return 'e5';
   if (period.startsWith('小6')) return 'e6';

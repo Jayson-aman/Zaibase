@@ -12,6 +12,9 @@ export type LessonSection = {
 };
 
 export type StudyPeriod =
+  | '小1'
+  | '小2'
+  | '小3'
   | '小4'
   | '小5前半'
   | '小5後半'
