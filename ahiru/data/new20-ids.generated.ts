@@ -159,6 +159,11 @@ export const NEW20_FREE_IDS: string[] = [
   'u120_e1_sansu_003',
   'u120_e1_sansu_004',
   'u120_e1_sansu_005',
+  'u120_e1_kokugo_001',
+  'u120_e1_kokugo_002',
+  'u120_e1_kokugo_003',
+  'u120_e1_kokugo_004',
+  'u120_e1_kokugo_005',
 ];
 
 export const NEW20_LOCKED_IDS: string[] = [
@@ -727,4 +732,19 @@ export const NEW20_LOCKED_IDS: string[] = [
   'u120_e1_sansu_118',
   'u120_e1_sansu_119',
   'u120_e1_sansu_120',
+  'u120_e1_kokugo_006',
+  'u120_e1_kokugo_007',
+  'u120_e1_kokugo_008',
+  'u120_e1_kokugo_009',
+  'u120_e1_kokugo_010',
+  'u120_e1_kokugo_011',
+  'u120_e1_kokugo_012',
+  'u120_e1_kokugo_013',
+  'u120_e1_kokugo_014',
+  'u120_e1_kokugo_015',
+  'u120_e1_kokugo_016',
+  'u120_e1_kokugo_017',
+  'u120_e1_kokugo_018',
+  'u120_e1_kokugo_019',
+  'u120_e1_kokugo_020',
 ];
