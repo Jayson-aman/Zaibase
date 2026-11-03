@@ -10,9 +10,9 @@ export { FREE_UNITS_PER_CLUSTER };
 const FREE_UNIT_IDS = new Set<string>(NEW20_FREE_IDS);
 const LOCKED_UNIT_IDS = new Set<string>(NEW20_LOCKED_IDS);
 
-/** この単元が「学年×科目20単元追加」バッチ由来かどうか */
+/** この単元が「学年×科目で追加した単元」（new20_ 小4〜中3、u120_ 小1〜小3）かどうか */
 export function isNew20Unit(lessonId: string): boolean {
-  return lessonId.startsWith('new20_');
+  return lessonId.startsWith('new20_') || lessonId.startsWith('u120_');
 }
 
 /** new20由来でない単元は常にtrue（このロックの対象外）を返す */

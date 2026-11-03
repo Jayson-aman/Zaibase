@@ -154,6 +154,11 @@ export const NEW20_FREE_IDS: string[] = [
   'new20_j3_shakai_03',
   'new20_j3_shakai_04',
   'new20_j3_shakai_05',
+  'u120_e1_sansu_001',
+  'u120_e1_sansu_002',
+  'u120_e1_sansu_003',
+  'u120_e1_sansu_004',
+  'u120_e1_sansu_005',
 ];
 
 export const NEW20_LOCKED_IDS: string[] = [
@@ -607,4 +612,19 @@ export const NEW20_LOCKED_IDS: string[] = [
   'new20_j3_shakai_18',
   'new20_j3_shakai_19',
   'new20_j3_shakai_20',
+  'u120_e1_sansu_006',
+  'u120_e1_sansu_007',
+  'u120_e1_sansu_008',
+  'u120_e1_sansu_009',
+  'u120_e1_sansu_010',
+  'u120_e1_sansu_011',
+  'u120_e1_sansu_012',
+  'u120_e1_sansu_013',
+  'u120_e1_sansu_014',
+  'u120_e1_sansu_015',
+  'u120_e1_sansu_016',
+  'u120_e1_sansu_017',
+  'u120_e1_sansu_018',
+  'u120_e1_sansu_019',
+  'u120_e1_sansu_020',
 ];

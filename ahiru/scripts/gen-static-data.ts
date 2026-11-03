@@ -42,6 +42,7 @@ import { lessonsNew20J3Kokugo } from '../data/lessons-new20-j3-kokugo';
 import { lessonsNew20J3Rika } from '../data/lessons-new20-j3-rika';
 import { lessonsNew20J3Sansu } from '../data/lessons-new20-j3-sansu';
 import { lessonsNew20J3Shakai } from '../data/lessons-new20-j3-shakai';
+import { lessonsU120E1Sansu } from '../data/lessons-u120-e1-sansu';
 
 const FREE_UNITS_PER_CLUSTER = 5;
 const CLUSTERS = [
@@ -75,6 +76,7 @@ const CLUSTERS = [
   lessonsNew20J3Rika,
   lessonsNew20J3Sansu,
   lessonsNew20J3Shakai,
+  lessonsU120E1Sansu,
 ];
 
 function genNew20Ids(): string {
