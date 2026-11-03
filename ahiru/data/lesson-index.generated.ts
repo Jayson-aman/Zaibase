@@ -5954,7 +5954,7 @@ export const LESSON_CHUNK: Record<string, string> = {
 };
 
 export const LESSON_COUNTS: Record<string, number> = {
-  "sansu|chugaku": 709,
+  "sansu|chugaku": 589,
   "sansu|koko": 558,
   "kokugo|chugaku": 591,
   "kokugo|koko": 571,

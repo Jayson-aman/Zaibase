@@ -13,6 +13,7 @@ import { useRouter } from 'expo-router';
 import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
 import { useLessonChunk } from '../../hooks/useLessonChunk';
 import { LESSON_COUNTS } from '../../data/lesson-index.generated';
+import { gradeOfStudyPeriod, isLowGrade } from '../../data/grades';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
@@ -136,6 +137,8 @@ export default function TextbookScreen() {
   const { paywallVisible, setPaywallVisible } = useProGate(betaAccess);
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
+  // 「小1の算数」への切りかえ。小1〜小3の単元は、ふつうの一覧には混ぜない
+  const [lowMode, setLowMode] = useState(false);
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
   const { examType: savedExamType } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
@@ -151,7 +154,11 @@ export default function TextbookScreen() {
   // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
   // 選んだ教科×受験種別の単元だけ（約4MB）を、教科を選んでから読みこむ（読みこみ中は null）
   const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
-  const lessons = useMemo(() => chunk ?? [], [chunk]);
+  const lowActive = lowMode && selectedSubject === 'sansu' && examType === 'chugaku';
+  const lessons = useMemo(
+    () => (chunk ?? []).filter((l) => isLowGrade(gradeOfStudyPeriod(l.studyPeriod) ?? undefined) === lowActive),
+    [chunk, lowActive],
+  );
 
   // 科目タイルの単元数は、前もって書き出した数（data/lesson-index.generated.ts）を使う。単元の本体は読まない。
   const subjectCounts = useMemo(() => {
@@ -282,6 +289,24 @@ export default function TextbookScreen() {
         })}
       </View>
 
+      {selectedSubject === 'sansu' && examType === 'chugaku' && (
+        <View style={styles.examTypeRow}>
+          {([
+            { low: false, label: 'ふつうの 単元' },
+            { low: true, label: '🌱 小1の 算数' },
+          ]).map((t) => (
+            <TouchableOpacity
+              key={t.label}
+              style={[styles.examTypeBtn, lowMode === t.low && styles.examTypeBtnActive]}
+              onPress={() => setLowMode(t.low)}
+              activeOpacity={0.85}
+            >
+              <Text style={[styles.examTypeText, lowMode === t.low && styles.examTypeTextActive]}>{t.label}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      )}
+
       {/* Lesson List */}
       {selectedSubject != null && (
         <Text style={styles.lessonListTitle}>
@@ -302,7 +327,7 @@ export default function TextbookScreen() {
       )}
     </View>
     ),
-    [isPro, examType, selectedSubject, subjectCounts, showEmpty, showLoading],
+    [isPro, examType, selectedSubject, subjectCounts, showEmpty, showLoading, lowMode],
   );
 
   if (loading) {

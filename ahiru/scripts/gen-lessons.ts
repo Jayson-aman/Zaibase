@@ -6,6 +6,7 @@
 //
 // 元のデータ（data/lessons-*.ts）は今までどおりここで直す。直したら `npm run gen:lessons` で作り直す。
 // 作り直し忘れは `npm run audit` が見つける（gen:lessons:check）。
+import { gradeOfStudyPeriod, isLowGrade } from '../data/grades';
 import { writeFileSync, readFileSync, existsSync, mkdirSync } from 'fs';
 import { resolve } from 'path';
 import { allLessons } from '../data/lessons';
@@ -40,7 +41,8 @@ function genIndex(): string {
   const counts: string[] = [];
   for (const s of SUBJECTS) for (const e of EXAMS) {
     const ls = lessonsOf(s, e);
-    counts.push(`  ${JSON.stringify(`${s}|${e}`)}: ${ls.length},`);
+    // 小1〜小3の単元は「小1の算数」の切りかえで出す専用なので、科目タイルの「◯単元」には数えない
+    counts.push(`  ${JSON.stringify(`${s}|${e}`)}: ${ls.filter((l) => !isLowGrade(gradeOfStudyPeriod(l.studyPeriod) ?? undefined)).length},`);
     for (const l of ls) chunk.push(`  ${JSON.stringify(l.id)}: ${JSON.stringify(chunkOf(s, e))},`);
   }
   return `// scripts/gen-lessons.ts が自動生成する。手で直さない（npm run gen:lessons で作り直す）。
