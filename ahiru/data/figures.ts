@@ -537,6 +537,11 @@ import { figuresSchoolChugaku11 } from './figures-school-chugaku-11';
 import { figuresSchoolChugaku10 } from './figures-school-chugaku-10';
 import { figuresSchoolChugaku08 } from './figures-school-chugaku-08';
 import { figuresSansuGap7 } from './figures-sansu-gap-7';
+import { figuresMoshi202611Kokugo } from './figures-moshi-2026-11-kokugo';
+import { figuresMoshi202611Eigo } from './figures-moshi-2026-11-eigo';
+import { figuresMoshi202611Shakai } from './figures-moshi-2026-11-shakai';
+import { figuresMoshi202611Sansu } from './figures-moshi-2026-11-sansu';
+import { figuresMoshi202611Rika } from './figures-moshi-2026-11-rika';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -658,6 +663,11 @@ export const figures: Record<string, Figure> = {
   ...figuresSchoolChugaku10,
   ...figuresSchoolChugaku08,
   ...figuresSansuGap7,
+  ...figuresMoshi202611Kokugo,
+  ...figuresMoshi202611Eigo,
+  ...figuresMoshi202611Shakai,
+  ...figuresMoshi202611Sansu,
+  ...figuresMoshi202611Rika,
 };
 
 export function getFigure(questionId: string): Figure | null {
