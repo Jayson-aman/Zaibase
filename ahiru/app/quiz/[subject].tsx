@@ -197,6 +197,8 @@ export default function QuizScreen() {
 
   // 「もう一度チャレンジ」で毎回シャッフルし直すためのキー
   const [restartKey, setRestartKey] = useState(0);
+  // 「まちがえた問題だけ もう一度」：このIDの問題だけを出し直す（null のときは ふつうの出題）
+  const [retryIds, setRetryIds] = useState<string[] | null>(null);
   // テスト対策の出題の並びの種。画面を開くたびに変える（固定だと、入り直すたびに同じ問題が同じ順で出る）
   const testSeedRef = useRef(Date.now() % 1000000);
 
@@ -218,6 +220,7 @@ export default function QuizScreen() {
     // 判定しないと、URLを直接開かれた場合にMAX限定コンテンツが誰でも見られてしまう。
     if (isDaily) return isMax ? getDailyQuestions(subjectPoolAllowed, subjectKey, 30, course, examType) : [];
     const all = subjectPoolAllowed;
+    if (retryIds != null) return shuffle(all.filter((q) => retryIds.includes(q.id)));
     // 単元別モード：コースを問わず、その単元に該当する問題だけを出題
     if (topicParam) {
       const topic = getTopic(subjectKey, topicParam);
@@ -263,7 +266,7 @@ export default function QuizScreen() {
     const filtered = filterQuestions(all, examType, course, difficultyFilter, isPro || isMax, gradeFilter);
     const picked = shuffle(filtered);
     return questionLimit != null ? picked.slice(0, questionLimit) : picked;
-  }, [questionLimit, subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, gradeFilter, unlockedFormulaKey]);
+  }, [questionLimit, subjectPool, questionsLoading, subjectKey, difficultyFilter, isDaily, isMock, isKakomon, testModeKey, course, examType, isPro, isMax, topicParam, restartKey, retryIds, gradeFilter, unlockedFormulaKey]);
 
   // 無料/Pro/MAXユーザーがMAX限定モードにどれだけ到達しているかを集計できるよう記録する。
   // baseQuestions（useMemo）はレンダー中に副作用を起こしたくないため、別のeffectで発火する。
@@ -646,6 +649,16 @@ export default function QuizScreen() {
     setShowPaywall(false);
     setShowTutorChat(false);
     setTrialBlocked(false);
+    setRetryIds(null);
+    setRestartKey((k) => k + 1);
+  }
+
+  // まちがえた問題だけを、もう一度出す。全問できるまで くりかえせる。
+  function handleRetryWrong() {
+    setShowPaywall(false);
+    setShowTutorChat(false);
+    setTrialBlocked(false);
+    setRetryIds([...wrongIds]);
     setRestartKey((k) => k + 1);
   }
 
@@ -851,6 +864,16 @@ export default function QuizScreen() {
                   <Text style={styles.previewBtnText}>👑 MAXプランを見る</Text>
                 </TouchableOpacity>
               </View>
+            )}
+
+            {wrongIds.length > 0 && (
+              <TouchableOpacity
+                style={[styles.restartButton, { backgroundColor: '#DC2626', marginBottom: 10 }]}
+                onPress={handleRetryWrong}
+                activeOpacity={0.85}
+              >
+                <Text style={styles.restartButtonText}>❌ まちがえた {wrongIds.length}問だけ もう一度</Text>
+              </TouchableOpacity>
             )}
 
             <TouchableOpacity
