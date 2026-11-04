@@ -60,6 +60,11 @@ export default function TestPrepScreen() {
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>
+        <TouchableOpacity style={styles.teikiLink} onPress={() => router.push('/lastminute' as any)} activeOpacity={0.85}>
+          <Text style={styles.teikiTitle}>📌 模試の直前まとめ（ここだけは必要！）</Text>
+          <Text style={styles.teikiSub}>5教科の要点を、5分で見直せます →</Text>
+        </TouchableOpacity>
+
         <TouchableOpacity style={styles.teikiLink} onPress={() => router.push('/teiki' as any)} activeOpacity={0.85}>
           <Text style={styles.teikiTitle}>📘 定期テストの教科書（中1〜中3）</Text>
           <Text style={styles.teikiSub}>学校の教科書を、動く図解でかみくだきます →</Text>

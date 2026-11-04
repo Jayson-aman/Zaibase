@@ -342,7 +342,7 @@ const k02 = show([
   G('供給曲線は右上がりです。価格が高いと売る人がふえ、安いと売る人が減るからです。200円のとき200個、500円のとき400個、800円のとき600個です。',
     [...gS()], '供給曲線 ＝ 右上がり（高いと売りたい）', GREEN),
   G('価格800円の高さを右へたどります。需要曲線とぶつかる点は200個、供給曲線とぶつかる点は600個です。つまり、買いたい量は200個、売りたい量は600個です。',
-    [ln(40, gy(800), gx(600), gy(800), C.red, true, 1.5), ci(gx(200), gy(800), 4, undefined, C.blue, FILL.blue), ci(gx(600), gy(800), 4, undefined, C.green, FILL.green), lb(gx(200), gy(800) - 8, '需要200', 10, C.blue, 'middle', true), lb(gx(600) - 14, gy(800) - 8, '供給600', 10, C.green, 'middle', true)],
+    [ln(40, gy(800), gx(600), gy(800), C.red, true, 1.5), ci(gx(200), gy(800), 4, undefined, C.blue, FILL.blue), ci(gx(600), gy(800), 4, undefined, C.green, FILL.green), lb(gx(200), gy(800) - 8, '需要200', 10, C.blue, 'middle', true), lb(gx(600) - 14, gy(800) - 20, '供給600', 10, C.green, 'middle', true)],
     '800円のとき：買いたい200個・売りたい600個', RED),
   G('売りたい量のほうが多いので、売れ残りが出ます。売れ残り＝供給量−需要量＝600−200＝400個です。',
     [ln(gx(200), gy(800) + 6, gx(600), gy(800) + 6, C.red, false, 3), lb((gx(200) + gx(600)) / 2, 16, '売れ残り400個', 12, C.red, 'middle', true)],
