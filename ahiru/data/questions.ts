@@ -245,6 +245,7 @@ import { tokaiKokoSansu as nagoyaTokaiKokoSansu } from './nagoya_koko_exam';
 import { kaseiKokoSansu } from './tokyo_shirtsu_exam';
 import { gradeE5SansuQuestions } from './grade_e5_sansu';
 import { gradeE1SansuQuestions } from './grade_e1_sansu';
+import { gradeE1KokugoQuestions } from './grade_e1_kokugo';
 import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
 import { gradeE6SansuQuestions } from './grade_e6_sansu';
@@ -3875,6 +3876,7 @@ const baseQuestions: Question[] = [
   ...kaseiKokoSansu,
   ...gradeE5SansuQuestions,
   ...gradeE1SansuQuestions,
+  ...gradeE1KokugoQuestions,
   ...gradeE4SansuQuestions,
   ...gradeJ1SansuQuestions,
   ...gradeE6SansuQuestions,
