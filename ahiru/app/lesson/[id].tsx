@@ -204,10 +204,20 @@ export default function LessonDetailScreen() {
   // LessonRenderer側（koushiki-access.ts）に一任する。ここでブロックすると、公式集全体が
   // 非Pro・非Maxユーザーだけでなく¥50を支払った購入者からも閲覧できなくなってしまう。
   const isKoushiki = lesson.id.startsWith('koushiki_');
+  // 世界の計算テクニック（豆知識）は、誰でも読める（おぼえなくていい読み物なので、ためし読みにしない）
+  const isTrivia = lesson.id.startsWith('calc_trivia_');
   const contentUnlocked =
-    isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki ? true : freeLesson);
+    isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki || isTrivia ? true : freeLesson);
   // ロック中の単元のためし読み：最初の節に図解が無いときは、あとの節の最初の図解を
   // 「最初の数枚だけ」見せる（動く図解の出来を、買う前に確かめられるようにする）。
+  // ロック中の人に「解放すると何が読めるか」を見せる。豆知識・復習の節は目立たせる（🎁）。
+  const teaserHeadings = (() => {
+    const heads = lesson.sections.slice(1).map((x) => (x.heading ?? '').replace(/^\d+\.\s*/, '').trim()).filter(Boolean);
+    const isSpecial = (h: string) => /豆知識|まめちしき|復習|インド式|おさらい/.test(h);
+    const special = heads.filter(isSpecial).map((text) => ({ text, special: true }));
+    const normal = heads.filter((h) => !isSpecial(h)).map((text) => ({ text, special: false }));
+    return [...special, ...normal].slice(0, 5);
+  })();
   const trialFigure = (() => {
     if (lesson.sections.length === 0 || lesson.sections[0].figureId != null) return null;
     for (const sec of lesson.sections) {
@@ -287,6 +297,17 @@ export default function LessonDetailScreen() {
             )}
             <View style={styles.freeTeaser}>
               <Text style={styles.freeTeaserText}>👀 ここまでがためし読みです。この先に「なぜそうなるか」「確かめ方」「ひっかけ」が続きます</Text>
+              {teaserHeadings.length > 0 && (
+                <View style={styles.teaserList}>
+                  <Text style={styles.teaserListTitle}>🔓 解放すると、この先で読める内容</Text>
+                  {teaserHeadings.map((t) => (
+                    <Text key={t.text} style={[styles.teaserItem, t.special && styles.teaserItemSpecial]} numberOfLines={2}>
+                      {t.special ? '🎁 ' : '・'}
+                      {t.text}
+                    </Text>
+                  ))}
+                </View>
+              )}
             </View>
           </View>
         )}
@@ -531,6 +552,10 @@ const styles = StyleSheet.create({
     borderColor: '#A7F3D0',
   },
   freeTeaserText: { fontSize: 13, color: '#047857', fontWeight: '600' },
+  teaserList: { marginTop: 10, gap: 4 },
+  teaserListTitle: { fontSize: 13, color: '#047857', fontWeight: '800' },
+  teaserItem: { fontSize: 13, color: '#065F46', lineHeight: 19 },
+  teaserItemSpecial: { fontWeight: '800', color: '#B45309' },
   // 導入（つかみ）。本文より先に読ませたいので、本文とは違う色面で目立たせる。
   introBox: {
     backgroundColor: '#FAF6EF',

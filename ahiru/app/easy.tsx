@@ -10,7 +10,7 @@ import { useExamType } from '../store/examType';
 
 const GRADES = {
   // 小1は算数の単元・問題がそろっている。小2・小3は中身ができたら足す
-  chugaku: ['e1', 'e4', 'e5', 'e6'] as GradeKey[],
+  chugaku: ['e1', 'e2', 'e4', 'e5', 'e6'] as GradeKey[],
   koko: ['j1', 'j2', 'j3'] as GradeKey[],
 };
 
@@ -62,7 +62,7 @@ export default function EasyScreen() {
 
         <TouchableOpacity
           style={styles.sec}
-          onPress={() => router.push(`/lesson/${grade === 'e1' ? 'u120_e1_sansu_001' : `new20_${grade}_sansu_01`}` as any)}
+          onPress={() => router.push(`/lesson/${grade === 'e1' ? 'u120_e1_sansu_001' : grade === 'e2' ? 'u120_e2_sansu_001' : `new20_${grade}_sansu_01`}` as any)}
           activeOpacity={0.85}
         >
           <Text style={styles.secText}>まず 教科書を少し読む</Text>
