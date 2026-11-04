@@ -8,6 +8,7 @@ import { getKoushikiFormulaInfo } from '../data/koushiki-access';
 import { lessonMediaModule } from '../data/lesson-media-lazy';
 import { figuresModule } from '../data/figures-lazy';
 import FigureView from './FigureView';
+import StrokeOrder from './StrokeOrder';
 import MangaDialogue from './MangaDialogue';
 import InlineQuiz, { questionsToQuizItems } from './InlineQuiz';
 
@@ -222,6 +223,12 @@ export default function LessonRenderer({
               const fig = media ? media.getLessonFigure(section.figureId as string) : null;
               return fig != null ? <FigureView figure={fig} animated previewSlides={figurePreviewSlides} /> : null;
             })()}
+            {section.kanji != null && figurePreviewSlides == null && section.kanji.map((ch) => (
+              <View key={ch} style={styles.kanjiBlock}>
+                <Text style={styles.kanjiTitle}>✏️「{ch}」の かきじゅん</Text>
+                <StrokeOrder char={ch} size={220} />
+              </View>
+            ))}
             {section.mangaId != null && figurePreviewSlides == null && (() => {
               const script = media ? media.getMangaScript(section.mangaId as string) : undefined;
               return script != null ? (
@@ -247,6 +254,8 @@ export default function LessonRenderer({
 }
 
 const styles = StyleSheet.create({
+  kanjiBlock: { alignItems: 'center', marginTop: 14, paddingVertical: 12, backgroundColor: '#FFFDF8', borderRadius: 14, borderWidth: 1.5, borderColor: '#EFE5D4' },
+  kanjiTitle: { fontSize: 15, fontWeight: '800', color: '#6B4226', marginBottom: 8 },
   section: {
     marginBottom: 20,
   },

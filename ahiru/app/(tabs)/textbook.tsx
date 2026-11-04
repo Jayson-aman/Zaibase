@@ -154,7 +154,7 @@ export default function TextbookScreen() {
   // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
   // 選んだ教科×受験種別の単元だけ（約4MB）を、教科を選んでから読みこむ（読みこみ中は null）
   const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
-  const lowActive = lowMode && selectedSubject === 'sansu' && examType === 'chugaku';
+  const lowActive = lowMode && (selectedSubject === 'sansu' || selectedSubject === 'kokugo') && examType === 'chugaku';
   const lessons = useMemo(
     () => (chunk ?? []).filter((l) => isLowGrade(gradeOfStudyPeriod(l.studyPeriod) ?? undefined) === lowActive),
     [chunk, lowActive],
@@ -289,11 +289,11 @@ export default function TextbookScreen() {
         })}
       </View>
 
-      {selectedSubject === 'sansu' && examType === 'chugaku' && (
+      {(selectedSubject === 'sansu' || selectedSubject === 'kokugo') && examType === 'chugaku' && (
         <View style={styles.examTypeRow}>
           {([
             { low: false, label: 'ふつうの 単元' },
-            { low: true, label: '🌱 小1の 算数' },
+            { low: true, label: selectedSubject === 'kokugo' ? '🌱 小1の 国語' : '🌱 小1の 算数' },
           ]).map((t) => (
             <TouchableOpacity
               key={t.label}
