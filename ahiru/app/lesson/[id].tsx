@@ -204,8 +204,10 @@ export default function LessonDetailScreen() {
   // LessonRenderer側（koushiki-access.ts）に一任する。ここでブロックすると、公式集全体が
   // 非Pro・非Maxユーザーだけでなく¥50を支払った購入者からも閲覧できなくなってしまう。
   const isKoushiki = lesson.id.startsWith('koushiki_');
+  // 世界の計算テクニック（豆知識）は、誰でも読める（おぼえなくていい読み物なので、ためし読みにしない）
+  const isTrivia = lesson.id.startsWith('calc_trivia_');
   const contentUnlocked =
-    isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki ? true : freeLesson);
+    isPro || (isNew20 ? new20Free || new20Unlocked : isKoushiki || isTrivia ? true : freeLesson);
   // ロック中の単元のためし読み：最初の節に図解が無いときは、あとの節の最初の図解を
   // 「最初の数枚だけ」見せる（動く図解の出来を、買う前に確かめられるようにする）。
   // ロック中の人に「解放すると何が読めるか」を見せる。豆知識・復習の節は目立たせる（🎁）。

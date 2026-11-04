@@ -5,7 +5,7 @@ type Figure = ReturnType<typeof show>;
 export const lessonFigsU120CalcTrivia: Record<string, Figure> = {
   ctriv_01_a: show([
     { note: "12 × 23 を、線を 引いて 答えを 出して みよう。", add: [lb(160, 100, "12 × 23", 44, C.ink, 'middle', true), lb(160, 160, "九九は つかわない！", 22, C.blue, 'middle', true)] },
-    { note: "まず「12」を 線で あらわす。十の くらいは 1。だから 1本 ひく。", add: [cover(0, 200, 320, 40), lb(160, 215, "十の くらい 1 → 1本", 20, C.blue, 'middle', true), ln(12, 22, 188, 198, C.blue, false, 3)] },
+    { note: "まず「12」を 線で あらわす。十の くらいは 1。だから 1本 ひく。", add: [...fresh(lb(160, 215, "十の くらい 1 → 1本", 20, C.blue, 'middle', true),ln(12, 22, 188, 198, C.blue, false, 3))] },
     { note: "一の くらいは 2。少し はなして 2本 ひく。", add: [cover(0, 200, 320, 40), lb(160, 215, "一の くらい 2 → 2本", 20, C.blue, 'middle', true), ln(122, 22, 298, 198, C.blue, false, 3), ln(146, 22, 312, 188, C.blue, false, 3)] },
     { note: "つぎに「23」。左から ななめに 交わるように、十の くらい 2 → 2本。", add: [cover(0, 200, 320, 40), lb(160, 215, "十の くらい 2 → 2本", 20, C.red, 'middle', true), ln(158, 22, 8, 172, C.red, false, 3), ln(182, 22, 8, 196, C.red, false, 3)] },
     { note: "一の くらいは 3。少し はなして 3本 ひく。", add: [cover(0, 200, 320, 40), lb(160, 215, "一の くらい 3 → 3本", 20, C.red, 'middle', true), ln(278, 22, 102, 198, C.red, false, 3), ln(302, 22, 126, 198, C.red, false, 3), ln(312, 36, 150, 198, C.red, false, 3)] },

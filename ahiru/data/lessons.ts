@@ -79,6 +79,7 @@ export { FREE_LESSON_LIMIT };
 
 /** その単元が、無料お試し範囲（同じ科目・同じ受験種別の中で最初のN単元）に入っているか */
 export function isLessonFree(lesson: Lesson): boolean {
+  if (lesson.id.startsWith('calc_trivia_')) return true; // 世界の計算テクニック（豆知識）は無料
   const siblings = getLessonsBySubject(lesson.subject).filter(
     (l) => (l.examType ?? 'chugaku') === (lesson.examType ?? 'chugaku'),
   );
