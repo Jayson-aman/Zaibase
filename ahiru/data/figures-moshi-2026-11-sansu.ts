@@ -37,7 +37,7 @@ const c01: Figure = show(
     },
     {
       note: 'その12分のあいだに、弟は何m進むでしょう。道のり＝速さ×時間 なので、60×12＝720m。弟は家から720mの地点にいます。',
-      add: [ci(mx(720), 90, 8, undefined, C.green, FILL.green), lb(mx(720), 74, '720m', 12, C.green, 'middle', true), ...band(150, eb(160, '弟：60×12 ＝ 720m', C.green, FILL.green, 15))],
+      add: [ci(mx(720), 90, 8, undefined, C.green, FILL.green), lb(mx(720), 110, '720m', 12, C.green, 'middle', true), ...band(150, eb(160, '弟：60×12 ＝ 720m', C.green, FILL.green, 15))],
     },
     {
       note: '弟から駅までの残りの道のりが、聞かれていることです。全体の1800mから、進んだ720mを引きます。1800−720＝1080m。',
@@ -360,15 +360,15 @@ const c10: Figure = show(
     },
     {
       note: 'まず、正五角形の1つの内角を求めます。五角形の内角の和は 180×(5−2)＝540度。5つの角が等しいので、1つは 540÷5＝108度。',
-      add: [lb(220, 80, '108°', 12, C.main, 'end', true), ...band(176, tx(204, '内角 ＝ 180×(5−2)÷5 ＝ 108°', 14, C.main, true))],
+      add: [lb(210, 70, '108°', 11, C.main, 'end', true), ...band(176, tx(204, '内角 ＝ 180×(5−2)÷5 ＝ 108°', 14, C.main, true))],
     },
     {
       note: '三角形ABCを見ます。AB＝BC（正五角形の辺）の二等辺三角形で、頂点Bの角は108度。底角は等しいので、角BAC＝(180−108)÷2＝36度。',
-      add: [pg([pt('A'), pt('B'), pt('C')], C.blue, 'rgba(2,132,199,0.18)'), lb(172, 40, '36°', 11, C.blue, 'start', true), ...band(176, tx(190, '△ABCは AB＝BC の二等辺三角形', 12), tx(214, '角BAC ＝ (180−108)÷2 ＝ 36°', 14, C.blue, true))],
+      add: [pg([pt('A'), pt('B'), pt('C')], C.blue, 'rgba(2,132,199,0.18)'), lb(175, 56, '36°', 10, C.blue, 'start', true), ...band(176, tx(190, '△ABCは AB＝BC の二等辺三角形', 12), tx(214, '角BAC ＝ (180−108)÷2 ＝ 36°', 14, C.blue, true))],
     },
     {
       note: '同じように、三角形BCDも二等辺三角形で、角CBD＝36度です。だから、角ABD＝角ABC−角CBD＝108−36＝72度。',
-      add: [pg([pt('B'), pt('C'), pt('D')], C.purple, 'rgba(147,51,234,0.15)'), lb(216, 92, '36°', 11, C.purple, 'end', true), ...band(176, tx(190, '△BCDも二等辺 → 角CBD ＝ 36°', 12), tx(214, '角ABD ＝ 108−36 ＝ 72°', 14, C.purple, true))],
+      add: [pg([pt('B'), pt('C'), pt('D')], C.purple, 'rgba(147,51,234,0.15)'), lb(208, 96, '36°', 10, C.purple, 'middle', true), ...band(176, tx(190, '△BCDも二等辺 → 角CBD ＝ 36°', 12), tx(214, '角ABD ＝ 108−36 ＝ 72°', 14, C.purple, true))],
     },
     {
       note: '三角形ABPに注目します。角PAB＝角BAC＝36度、角PBA＝角ABD＝72度。三角形の内角の和は180度なので、角APB＝180−36−72＝72度。',
@@ -415,7 +415,7 @@ const k01: Figure = show(
     },
     {
       note: 'よくあるまちがい。√48−√27 を √(48−27)＝√21 としてしまうこと。ルートの足し引きは、中身どうしを引いてはいけません。√3の何倍かにそろえてから、係数だけを計算します。',
-      add: fresh(eb(30, '× √48−√27 ＝ √21', C.red, FILL.red, 15, 36), tx(100, 'ルートの中身は引けない', 13, C.red, true), eb(130, '○ 4√3 − 3√3 ＝ √3', C.green, FILL.green, 15, 36), tx(194, 'そろえてから、係数だけ計算', 13, C.gray)),
+      add: fresh(eb(30, '× √48−√27 ＝ √21', C.red, FILL.red, 15, 36), tx(100, 'ルートの中身は引けない', 13, C.red, true), eb(130, '○ 4√3−3√3＋2√3 ＝ 3√3', C.green, FILL.green, 15, 36), tx(194, 'そろえてから、係数だけ計算', 13, C.gray)),
     },
   ],
   '√3の何倍かにそろえる。答え 3√3。',
@@ -636,7 +636,7 @@ const k07: Figure = show(
       add: [ln(...O7, ...B7, C.green, false, 2), ln(...O7, ...D7, C.green, false, 2), ...band(182, tx(204, '同じ弧に対して', 13), tx(226, '中心角 ＝ 円周角 × 2', 15, C.green, true))],
     },
     {
-      note: '∠BOC＝2×∠BAC＝2×28°＝56°。扇形（赤い扇のところ）が∠BOCです。',
+      note: '∠BOC＝2×∠BAC＝2×28°＝56°。扇形（青い扇のところ）が∠BOCです。',
       add: [sc(...O7, 30, 0, 56, C.blue, 'rgba(2,132,199,0.3)'), lb(196, 72, '56°', 11, C.blue, 'start', true), ...band(182, tx(210, '∠BOC ＝ 2×28° ＝ 56°', 15, C.blue, true))],
     },
     {
