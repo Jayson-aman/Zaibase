@@ -86,6 +86,16 @@ import { moshi202609KokoEigo } from './moshi_2026_09_koko_eigo';
 import { moshi202609KokoShakai } from './moshi_2026_09_koko_shakai';
 import { moshi202609KokoSansu } from './moshi_2026_09_koko_sansu';
 import { moshi202609KokoRika } from './moshi_2026_09_koko_rika';
+import { moshi202611ChugakuKokugo } from './moshi_2026_11_chugaku_kokugo';
+import { moshi202611KokoKokugo } from './moshi_2026_11_koko_kokugo';
+import { moshi202611ChugakuEigo } from './moshi_2026_11_chugaku_eigo';
+import { moshi202611KokoEigo } from './moshi_2026_11_koko_eigo';
+import { moshi202611ChugakuShakai } from './moshi_2026_11_chugaku_shakai';
+import { moshi202611KokoShakai } from './moshi_2026_11_koko_shakai';
+import { moshi202611ChugakuSansu } from './moshi_2026_11_chugaku_sansu';
+import { moshi202611KokoSansu } from './moshi_2026_11_koko_sansu';
+import { moshi202611ChugakuRika } from './moshi_2026_11_chugaku_rika';
+import { moshi202611KokoRika } from './moshi_2026_11_koko_rika';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -3664,6 +3674,16 @@ const baseQuestions: Question[] = [
   ...moshi202609KokoShakai,
   ...moshi202609KokoSansu,
   ...moshi202609KokoRika,
+  ...moshi202611ChugakuKokugo,
+  ...moshi202611KokoKokugo,
+  ...moshi202611ChugakuEigo,
+  ...moshi202611KokoEigo,
+  ...moshi202611ChugakuShakai,
+  ...moshi202611KokoShakai,
+  ...moshi202611ChugakuSansu,
+  ...moshi202611KokoSansu,
+  ...moshi202611ChugakuRika,
+  ...moshi202611KokoRika,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
