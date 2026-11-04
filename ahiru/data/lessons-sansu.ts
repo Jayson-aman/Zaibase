@@ -20,6 +20,7 @@ import { lessonsNew20E5Sansu } from './lessons-new20-e5-sansu';
 import { lessonsNew20E6Sansu } from './lessons-new20-e6-sansu';
 import { lessonsU120E1Sansu } from './lessons-u120-e1-sansu';
 import { lessonsU120E2Sansu } from './lessons-u120-e2-sansu';
+import { lessonsU120CalcTrivia } from './lessons-calc-trivia';
 import { lessonsKoushikiC1Menseki } from './lessons-koushiki-c1menseki';
 import { lessonsKoushikiC2En } from './lessons-koushiki-c2en';
 import { lessonsKoushikiC3Tairyoku1 } from './lessons-koushiki-c3tairyoku1';
@@ -7426,4 +7427,5 @@ export const sansuLessons: Lesson[] = [
   ...lessonsNew20E6Sansu,
   ...lessonsU120E1Sansu,
   ...lessonsU120E2Sansu,
+  ...lessonsU120CalcTrivia,
 ];
