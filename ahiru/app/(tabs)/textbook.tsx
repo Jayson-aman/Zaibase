@@ -13,7 +13,7 @@ import { useRouter } from 'expo-router';
 import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
 import { useLessonChunk } from '../../hooks/useLessonChunk';
 import { LESSON_COUNTS } from '../../data/lesson-index.generated';
-import { gradeOfStudyPeriod, isLowGrade } from '../../data/grades';
+import { gradeOfStudyPeriod, isLowGrade, type GradeKey } from '../../data/grades';
 import type { ExamType } from '../../data/courses';
 import type { Lesson } from '../../data/lessons';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
@@ -138,7 +138,8 @@ export default function TextbookScreen() {
 
   const [selectedSubject, setSelectedSubject] = useState<SubjectKey | null>(null);
   // 「小1の算数」への切りかえ。小1〜小3の単元は、ふつうの一覧には混ぜない
-  const [lowMode, setLowMode] = useState(false);
+  const [lowGrade, setLowGrade] = useState<GradeKey | null>(null);
+  const lowMode = lowGrade != null;
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
   const { examType: savedExamType } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
@@ -156,8 +157,12 @@ export default function TextbookScreen() {
   const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
   const lowActive = lowMode && (selectedSubject === 'sansu' || selectedSubject === 'kokugo') && examType === 'chugaku';
   const lessons = useMemo(
-    () => (chunk ?? []).filter((l) => isLowGrade(gradeOfStudyPeriod(l.studyPeriod) ?? undefined) === lowActive),
-    [chunk, lowActive],
+    () =>
+      (chunk ?? []).filter((l) => {
+        const g = gradeOfStudyPeriod(l.studyPeriod) ?? undefined;
+        return lowActive ? g === lowGrade : !isLowGrade(g);
+      }),
+    [chunk, lowActive, lowGrade],
   );
 
   // 科目タイルの単元数は、前もって書き出した数（data/lesson-index.generated.ts）を使う。単元の本体は読まない。
@@ -292,16 +297,17 @@ export default function TextbookScreen() {
       {(selectedSubject === 'sansu' || selectedSubject === 'kokugo') && examType === 'chugaku' && (
         <View style={styles.examTypeRow}>
           {([
-            { low: false, label: 'ふつうの 単元' },
-            { low: true, label: selectedSubject === 'kokugo' ? '🌱 小1の 国語' : '🌱 小1の 算数' },
+            { g: null as GradeKey | null, label: 'ふつうの 単元' },
+            { g: 'e1' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小1の 国語' : '🌱 小1の 算数' },
+            ...(selectedSubject === 'sansu' ? [{ g: 'e2' as GradeKey | null, label: '🌱 小2の 算数' }] : []),
           ]).map((t) => (
             <TouchableOpacity
               key={t.label}
-              style={[styles.examTypeBtn, lowMode === t.low && styles.examTypeBtnActive]}
-              onPress={() => setLowMode(t.low)}
+              style={[styles.examTypeBtn, lowGrade === t.g && styles.examTypeBtnActive]}
+              onPress={() => setLowGrade(t.g)}
               activeOpacity={0.85}
             >
-              <Text style={[styles.examTypeText, lowMode === t.low && styles.examTypeTextActive]}>{t.label}</Text>
+              <Text style={[styles.examTypeText, lowGrade === t.g && styles.examTypeTextActive]}>{t.label}</Text>
             </TouchableOpacity>
           ))}
         </View>
