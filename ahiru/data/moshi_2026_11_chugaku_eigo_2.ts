@@ -185,7 +185,7 @@ color という語だけ見て、疑問詞を Which などと混ぜてしまう�
     examType: 'chugaku',
     difficulty: 'basic',
     question: "空所に入る最も適切な語を選びなさい。\n「______ quiet in the library.」",
-    choices: ["① Are", "② Is", "③ Be", "④ Do"],
+    choices: ["① Are", "② Is", "③ Be", "④ You"],
     answer: "③ Be",
     hint: "「〜しなさい」と命令する文は、主語を言わず、動詞の原形から始めるよ。be動詞の原形は？",
     explanation: `【何を聞かれているか】
@@ -207,7 +207,7 @@ color という語だけ見て、疑問詞を Which などと混ぜてしまう�
 ③ Be（Be quiet in the library.）
 
 【確かめ】
-「図書館では静かにしなさい」と自然な命令文になります。Are・Is は主語が必要で、Do は一般動詞の命令文に使う語なので、quiet（形容詞）の前には入りません。
+「図書館では静かにしなさい」と自然な命令文になります。Are・Is は主語が必要で、You を最初に置くと「あなたは図書館で静か」という文のかたちになり、「〜しなさい」という命令の意味になりません。
 
 【よくあるまちがい】
 Are quiet と書いてしまうことです。「Are you quiet?（あなたは静かですか）」という疑問文になってしまいます。命令文では be動詞も原形 Be にします。`,
@@ -1198,7 +1198,7 @@ Ken is as tall as Tom. と書きます。
     subject: 'eigo',
     examType: 'chugaku',
     difficulty: 'advanced',
-    passage: "[英文を読んで答えなさい]\nMs. Green is our English teacher. She comes from Canada. She came to Japan three years ago. She likes sushi, but she doesn't like natto. Her class is fun, because we sing songs and play games. We like her very much.",
+    passage: "[英文を読んで答えなさい]\nMs. Green is our English teacher. She comes from Canada. She came to Japan three years ago. She likes sushi, but she doesn't like natto. Her class is fun because we sing songs and play games. We like her very much.",
     question: "本文の内容に合うものを選びなさい。",
     choices: ["① グリーン先生は3年前に日本に来た。", "② グリーン先生は寿司がきらいだ。", "③ グリーン先生はアメリカ出身だ。", "④ 授業では歌もゲームもしない。"],
     answer: "① グリーン先生は3年前に日本に来た。",
@@ -1380,7 +1380,7 @@ I am fine. を選んでしまうことです。fine は How are you? の答え�
 空所に入る形を選びます。「私は新しい自転車を持ちたい（ほしい）」という文です。
 
 【なぜそうなるのか】
-want は「〜したい」という意味で、あとに動詞を続けるときは、to ＋ 動詞の原形（）の形にします。want to ～ で1つのまとまりとして覚えます。want 自体は「ほしい」という気持ちを表し、to ～ で「何をしたいか」を表すしくみです。
+want は「〜したい」という意味で、あとに動詞を続けるときは、to ＋ 動詞の原形（have など）の形にします。want to ～ で1つのまとまりとして覚えます。want 自体は「ほしい」という気持ちを表し、to ～ で「何をしたいか」を表すしくみです。
 
 【ステップ1】
 want のあとに動詞（have）を続ける文だとたしかめます。
