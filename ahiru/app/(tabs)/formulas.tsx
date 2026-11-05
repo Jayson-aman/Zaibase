@@ -387,7 +387,7 @@ export default function FormulasScreen() {
     }
     const ok = await confirmDialog(
       '購入の確認',
-      `「${label}」を ${priceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+      `「${label}」を ${priceLabel} でひらきます。\n\n・1回だけのお支払い（買い切り）です\n・月額や自動更新はありません\n・いちどひらくと、アカウントにずっと残ります`,
     );
     if (!ok) {
       logPurchaseEvent('unlock_confirm_declined', 'formula');
@@ -422,7 +422,7 @@ export default function FormulasScreen() {
     }
     const ok = await confirmDialog(
       '購入の確認',
-      `この教科の「公式・まとめ」タブで、ロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。\n※教科書の単元ページにある個別のロックは、この対象には入りません。`,
+      `この教科の「公式・まとめ」タブで、ロック中の公式${bundleCount}項目を、ぜんぶ ${bundlePriceLabel} でひらきます。\n\n・1回だけのお支払い（買い切り）です\n・月額や自動更新はありません\n・この先ふえる項目も、追加料金なしで読めます（上限つき）\n・いちどひらくと、アカウントにずっと残ります`,
     );
     if (!ok) {
       logPurchaseEvent('unlock_confirm_declined', 'bundle');

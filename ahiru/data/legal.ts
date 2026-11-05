@@ -26,7 +26,7 @@ export type LegalSection = {
 export const TERMS_UPDATED = '2026年10月7日';
 export const PRIVACY_UPDATED = '2026年10月7日';
 export const TOKUSHO_UPDATED = '2026年10月7日';
-export const CREDITS_UPDATED = '2026年7月21日';
+export const CREDITS_UPDATED = '2026年11月5日';
 
 export const ahiruTerms: LegalSection[] = [
   {
@@ -398,12 +398,13 @@ export const ahiruCredits: LegalSection[] = [
     heading: '漢字の書き順データ',
     paragraphs: [
       '漢字の書き順を動かして見せる機能には、Hanzi Writer の日本語データ（hanzi-writer-data-jp）を使用しています。',
-      'このデータは、animCJK（Copyright 2016-2019 Francois Mizessyn）と Make Me a Hanzi をもとにしており、さらにその元は、台湾の Arphic Technology 社の字体（Arphic PL KaitiM GB、Arphic PL UKai）です。GNU Lesser General Public License（LGPL）と Arphic Public License の条件のもとで使用しています。',
+      'このデータは、animCJK（Copyright 2016-2019 Francois Mizessyn）と Make Me a Hanzi をもとにしており、さらにその元は、台湾の Arphic Technology 社の字体（Arphic PL KaitiM GB、Arphic PL UKai）です。GNU Lesser General Public License（LGPL）と Arphic Public License の条件のもとで使用しています。書き順データは、80字ぶんを抜き出して1つのファイルにまとめる形式の変換をしています（字の形は変えていません）。このデータの部分は Arphic Public License のもとで、誰でも自由に使えます。',
     ],
     bullets: [
       'animCJK（https://github.com/parsimonhi/animCJK）',
       'Make Me a Hanzi（https://github.com/skishore/makemeahanzi）',
       'hanzi-writer-data-jp（https://github.com/chanind/hanzi-writer-data-jp）',
+      'Arphic Public License 全文（https://exam.zaibase.group/licenses/ARPHICPL.TXT）',
     ],
   },
   {

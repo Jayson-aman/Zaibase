@@ -1,6 +1,9 @@
 // 小学1年生で習う漢字80字の、書き順データ（各画の形と、書きはじめの位置）。
 // 出どころ：Hanzi Writer の日本語データ（hanzi-writer-data-jp）。元は animCJK / Make Me a Hanzi で、
 // Arphic Public License（AR PL）と GNU LGPL の条件で再配布できる。くわしい表示は app/credits.tsx にある。
+// 【Arphic Public License 第2条(a) に基づく改変の表示】このファイルは、hanzi-writer-data-jp の小学1年の漢字80字のデータを抜き出して、
+// 1つの TypeScript ファイルにまとめたもの（形式の変換・字の選択）で、2026-11-04 に作成した。字の形そのものは変えていない。
+// このデータの部分は Arphic Public License のもとにあり、同じ条件で誰でも自由に使える。license 全文：public/licenses/ARPHICPL.TXT
 // 座標は 1024×1024（縦は上向き）。画面に出すときは scale(1,-1) translate(0,-900) で上下を反転する。
 // ✔ 確認ずみ：80字すべて、別の公開データ KanjiVG（日本の筆順にそったもの）と、各画の位置・向き・順番が一致する。詳しい方法は docs/kanji-stroke-verification.md。
 // ⚠️ ただし、文部科学省の「筆順指導の手びき」の本文と1字ずつ照らしたわけではない。
