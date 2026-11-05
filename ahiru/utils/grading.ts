@@ -335,7 +335,21 @@ export function judge(input: string, answer: string, questionText?: string): Jud
   if (lhs && !/=/.test(normalize(answer))) {
     for (const ok of oks) if (lhs[1] === ok || stripTailPunct(lhs[1]) === stripTailPunct(ok)) return 'correct';
   }
-  return isProse(answer) ? 'review' : 'wrong';
+  return isProse(answer) || isFreeEnglishSentence(answer, questionText) ? 'review' : 'wrong';
+}
+
+/**
+ * 和文英訳のように「ほかの言い方でも正解になりうる英文」の答えか。
+ * 英単語4語以上の文で、語を並べかえる問題（[ ] で語を示す・「並べかえ」）ではないとき。
+ * 並べかえは正解が1通りなので、ちがえば×のままにする。
+ */
+function isFreeEnglishSentence(answer: string, questionText?: string): boolean {
+  const a = String(answer ?? '').trim();
+  if (!/^[A-Za-z][A-Za-z0-9'’,.!? -]*$/.test(a)) return false;
+  if (a.split(/\s+/).length < 4) return false;
+  const q = String(questionText ?? '');
+  if (/[\[［]/.test(q) || /並べ(?:か|替)/.test(q)) return false;
+  return true;
 }
 
 /**
