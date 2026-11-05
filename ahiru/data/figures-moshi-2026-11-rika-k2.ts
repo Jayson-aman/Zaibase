@@ -71,9 +71,9 @@ const k14Base = (): DiagramElement[] => [
 ];
 const f14 = show([
   { note: 'U字形磁石の間につるしたコイルに電流を流すと、コイルが磁界から力を受けて動きます。この力を大きくする方法を探します。', add: [...k14Base(), ...m('磁石の間のコイルに電流を流す')] },
-  { note: '磁石のN極からS極に向かって、磁界ができています。コイルはこの磁界の中にあります。', add: [ar(74, 85, 126, 85, C.blue), ar(194, 85, 246, 85, C.blue), lb(160, 45, '磁界の向き（N→S）', 11, C.blue, 'middle', true), ...m('磁界：N極→S極', C.blue, FILL.blue)] },
+  { note: '磁石のN極からS極に向かって、磁界ができています。コイルはこの磁界の中にあります。', add: [ar(74, 85, 126, 85, C.blue), ar(194, 85, 246, 85, C.blue), lb(160, 25, '磁界の向き（N→S）', 11, C.blue, 'middle', true), ...m('磁界：N極→S極', C.blue, FILL.blue)] },
   { note: '❓力の大きさは何で決まるのでしょう。電流が大きいほど、磁界が強いほど、力は大きくなります。', add: m('大きさ：電流と磁界の強さで決まる', C.purple, FILL.purple) },
-  { note: '電流を大きくすると、コイルが受ける力は大きくなります。矢印が長くなります。', add: [ar(160, 58, 160, 14, C.red), lb(172, 30, '力が大きい', 11, C.red, 'start', true), ...m('電流を大きくする→力が大きい', C.red, FILL.red)] },
+  { note: '電流を大きくすると、コイルが受ける力は大きくなります。矢印が長くなります。', add: [ar(160, 58, 160, 36, C.red), lb(172, 48, '力が大きい', 11, C.red, 'start', true), ...m('電流を大きくする→力が大きい', C.red, FILL.red)] },
   { note: '❓電流の向きを逆にするとどうなるでしょう。力の向きが逆になるだけで、大きさは変わりません。磁石の向きを入れかえても、同じです。', add: [ar(160, 112, 160, 150, C.gray, true), lb(172, 140, '向きだけ逆', 11, C.gray, 'start', true), ...m('向きを変える→大きさは同じ', C.gray, FILL.gray)] },
   { note: '磁石をコイルから遠ざけると、コイルのある場所の磁界が弱くなるので、力は小さくなります。', add: m('磁石を遠ざける→力は小さい', C.blue, FILL.blue) },
   { note: '大きくなるのは、電流を大きくしたときだけです。答えは「コイルに流す電流を大きくする」です。', add: m('答え：電流を大きくする', C.green, FILL.green) },
@@ -125,7 +125,7 @@ const f17 = show([
   { note: '3番目の区間の平均の速さは、7.5÷0.1＝75cm/sです。(1)の答えです。', add: [ln(90, 80, 165, 80, C.red, false, 4), ...m('3番目：7.5÷0.1＝75cm/s', C.red, FILL.red)] },
   { note: '速さの差を見ます。45−15＝30、75−45＝30、105−75＝30。0.1秒ごとに30cm/sずつ一定の割合で増えています。(2)の答えです。', add: m('45−15＝75−45＝105−75＝30cm/s', C.purple, FILL.purple) },
   { note: '❓なぜ一定の割合で増えるのでしょう。斜面の上では、重力の斜面に平行な分力が、進む向きに一定の大きさではたらき続けるからです。', add: [pg([[30, 160], [130, 160], [130, 125]], C.gray, FILL.gray), ar(95, 138, 70, 148, C.red), lb(150, 148, '分力が一定', 10, C.red, 'start', true), ...m('分力が一定→速さが一定の割合で増える', C.red, FILL.red)] },
-  { note: '斜面の傾きを大きくすると、斜面に平行な分力が大きくなります。そのため、速さの増え方は大きくなります。(3)の答えです。', add: [pg([[190, 160], [250, 160], [250, 118]], C.gray, FILL.gray), ar(240, 128, 214, 150, C.red), ...m('傾き大→分力大→増え方が大きい', C.green, FILL.green)] },
+  { note: '斜面の傾きを大きくすると、斜面に平行な分力が大きくなります。そのため、速さの増え方は大きくなります。(3)の答えです。', add: [pg([[235, 160], [295, 160], [295, 118]], C.gray, FILL.gray), ar(285, 128, 259, 150, C.red), ...m('傾き大→分力大→増え方が大きい', C.green, FILL.green)] },
 ], '答え：(1) 75cm/s (2) 30cm/s (3) 大きくなる');
 
 // k18 ふりこ
@@ -187,7 +187,7 @@ const k21Base = (): DiagramElement[] => [
 const f21 = show([
   { note: '炭酸水素ナトリウムを試験管に入れて加熱します。試験管の口は、少し下げておきます。', add: [...k21Base(), ...m('炭酸水素ナトリウムを加熱する')] },
   { note: '❓出てくる気体は何でしょう。試験管の口から出た気体を、石灰水に通します。石灰水が白くにごります。', add: [ln(98, 128, 60, 128, C.gray, false, 2), ln(60, 128, 60, 140, C.gray, false, 2), bx(35, 140, 50, 22, '石灰水', C.blue, FILL.blue, 10), ar(110, 118, 70, 126, C.purple), ...m('気体を石灰水に通す→白くにごる', C.purple, FILL.purple)] },
-  { note: '石灰水を白くにごらせる気体は、二酸化炭素です。(1)の答えです。', add: [cover(35, 140, 50, 22), bx(35, 140, 50, 22, '白くにごる', C.red, FILL.red, 9), ...m('(1) 気体＝二酸化炭素', C.red, FILL.red)] },
+  { note: '石灰水を白くにごらせる気体は、二酸化炭素です。(1)の答えです。', add: [cover(35, 140, 50, 22), bx(30, 140, 60, 22, '白くにごる', C.red, FILL.red, 9), ...m('(1) 気体＝二酸化炭素', C.red, FILL.red)] },
   { note: '試験管の口の近くには、液体がたまります。青色の塩化コバルト紙をつけると、赤（桃）色に変わります。これは水です。(2)の答えです。', add: [ci(112, 123, 3.5, undefined, C.blue, FILL.blue), ci(120, 118, 3.5, undefined, C.blue, FILL.blue), ci(106, 128, 3.5, undefined, C.blue, FILL.blue), lb(150, 150, '水のつぶ', 10, C.blue, 'middle', true), ...m('(2) 口の液体＝水（塩化コバルト紙が赤）', C.blue, FILL.blue)] },
   { note: '❓残った白い固体は、もとの物質でしょうか。ちがいます。水にとけやすく、水溶液が強いアルカリ性を示す、炭酸ナトリウムです。(3)の答えです。', add: [ci(190, 90, 6, undefined, C.green, FILL.green), ...m('(3) 白い固体＝炭酸ナトリウム', C.green, FILL.green)] },
   { note: '化学反応式で表すと、2NaHCO₃ → Na₂CO₃ ＋ H₂O ＋ CO₂。1種類の物質が3種類に分かれる、熱分解です。', add: m('2NaHCO₃→Na₂CO₃＋H₂O＋CO₂', C.purple, FILL.purple) },
@@ -213,7 +213,7 @@ const f22 = show([
 // k23 銅の酸化
 const f23 = show([
   { note: '銅粉1.6gを加熱して完全に酸化させると、酸化銅2.0gができました。銅と酸素が結びつく質量の比は一定です。', add: [bx(40, 30, 64, 24, '銅 1.6g', C.main, FILL.warm, 11), bx(40, 70, 80, 24, '酸化銅 2.0g', C.ink, FILL.gray, 11), ...m('銅1.6g＋酸素→酸化銅2.0g')] },
-  { note: '❓結びついた酸素は何gでしょう。化学変化の前後で、全体の質量は変わりません。酸化銅から銅を引くと、2.0−1.6＝0.4g。(1)の答えです。', add: [bx(104, 30, 16, 24, undefined, C.blue, FILL.blue), lb(112, 66, '酸素0.4g', 10, C.blue, 'middle', true), ...m('酸素＝2.0−1.6＝0.4g', C.blue, FILL.blue)] },
+  { note: '❓結びついた酸素は何gでしょう。化学変化の前後で、全体の質量は変わりません。酸化銅から銅を引くと、2.0−1.6＝0.4g。(1)の答えです。', add: [bx(104, 30, 16, 24, undefined, C.blue, FILL.blue), lb(112, 62, '酸素0.4g', 10, C.blue, 'middle', true), ...m('酸素＝2.0−1.6＝0.4g', C.blue, FILL.blue)] },
   { note: '質量の比は、銅：酸素：酸化銅＝1.6：0.4：2.0＝4：1：5です。この比はいつも同じです。', add: m('銅：酸素：酸化銅＝4：1：5', C.purple, FILL.purple) },
   { note: '銅3.2gは、1.6gの2倍です。比は一定なので、酸化銅も2倍の2.0×2＝4.0g。(2)の答えです。', add: [bx(40, 108, 128, 22, '銅 3.2g', C.main, FILL.warm, 11), bx(40, 134, 160, 22, '酸化銅 4.0g', C.red, FILL.red, 11), ...m('2倍：酸化銅も2.0×2＝4.0g', C.red, FILL.red)] },
   { note: '酸化銅7.5gでは、そのうち銅は、全体5のうち4の割合です。', add: fresh(bx(20, 40, 225, 26, '酸化銅 7.5g', C.ink, FILL.gray, 12), ...m('酸化銅5のうち、銅は4（4/5）', C.blue, FILL.blue)) },
@@ -224,14 +224,14 @@ const f23 = show([
 // k24 塩酸と石灰石
 const k24Axes = (): DiagramElement[] => [
   ln(50, 140, 210, 140, C.ink, false, 1.8), ln(50, 140, 50, 10, C.ink, false, 1.8),
-  lb(130, 155, '石灰石の質量(g)', 10, C.gray, 'middle', true), lb(50, 6, 'CO₂(g)', 9, C.gray, 'start', true),
+  lb(130, 163, '石灰石の質量(g)', 10, C.gray, 'middle', true), lb(50, 6, 'CO₂(g)', 9, C.gray, 'start', true),
 ];
 const f24 = show([
   { note: '塩酸20cm³に石灰石を加えて、発生した二酸化炭素の質量を調べました。点は、0.5gごとの測定結果です。', add: [...k24Axes(), ci(75, 120.2, 3, undefined, C.blue, C.blue), ci(100, 100.4, 3, undefined, C.blue, C.blue), ci(125, 80.6, 3, undefined, C.blue, C.blue), ci(150, 80.6, 3, undefined, C.blue, C.blue), ci(175, 80.6, 3, undefined, C.blue, C.blue), ...m('塩酸20cm³に石灰石を加える')] },
   { note: '❓どんなふうに増えているでしょう。石灰石が1.5gまでは、0.5gごとに0.22gずつ、比例して増えます。2.0g以上は、0.66gで一定です。', add: [ln(50, 140, 125, 80.6, C.blue, false, 2), ln(125, 80.6, 200, 80.6, C.blue, false, 2), ...m('1.5gまで比例、それ以後は一定', C.blue, FILL.blue)] },
   { note: '❓なぜ一定になるのでしょう。塩酸が全部使われると、石灰石を増やしても、反応が進まないからです。折れ曲がる点が、ちょうど反応した点です。(1)の答えは1.5gです。', add: [ln(125, 80.6, 125, 140, C.red, true), lb(125, 150, '1.5g', 11, C.red, 'middle', true), ...m('(1) ちょうど反応＝1.5g', C.red, FILL.red)] },
   { note: '石灰石3.0gは、1.5gより多いので、塩酸が足りません。発生量は、上限の0.66gのままです。(2)の答えです。', add: [ln(50, 80.6, 125, 80.6, C.red, true), ci(200, 80.6, 4, undefined, C.red, FILL.red), lb(30, 81, '0.66', 10, C.red, 'middle', true), ...m('(2) 3.0g→上限の0.66g', C.red, FILL.red)] },
-  { note: '❓塩酸を40cm³（2倍）にすると、どうなるでしょう。ちょうど反応する石灰石も2倍の3.0gになり、発生量の上限も2倍の1.32gになります。', add: [ln(50, 140, 200, 21.2, C.purple, false, 2), lb(115, 60, '塩酸40cm³', 10, C.purple, 'middle', true), ...m('40cm³：3.0gで上限1.32g', C.purple, FILL.purple)] },
+  { note: '❓塩酸を40cm³（2倍）にすると、どうなるでしょう。ちょうど反応する石灰石も2倍の3.0gになり、発生量の上限も2倍の1.32gになります。', add: [ln(50, 140, 200, 21.2, C.purple, false, 2), lb(90, 45, '塩酸40cm³', 10, C.purple, 'middle', true), ...m('40cm³：3.0gで上限1.32g', C.purple, FILL.purple)] },
   { note: '石灰石は2.0gで、3.0gに足りないので、石灰石がすべて反応します。1.0gで0.44gなので、2.0gでは0.88g。(3)の答えです。', add: [ln(50, 60.8, 150, 60.8, C.green, true), ln(150, 60.8, 150, 140, C.green, true), ci(150, 60.8, 4, undefined, C.green, FILL.green), lb(30, 61, '0.88', 10, C.green, 'middle', true), ...m('(3) 2.0g→0.44×2＝0.88g', C.green, FILL.green)] },
   { note: '確かめます。3.0gで1.32gなので、2.0gはその2/3。1.32×2/3＝0.88gで一致します。', add: m('1.32×(2.0÷3.0)＝0.88g', C.green, FILL.green) },
 ], '答え：(1) 1.5g (2) 0.66g (3) 0.88g');
@@ -297,7 +297,7 @@ const f28 = show([
 // k29 気体の集め方
 const k29Base = (): DiagramElement[] => [
   bx(10, 16, 96, 26, '水上置換法', C.blue, FILL.blue, 12), bx(112, 16, 96, 26, '上方置換法', C.green, FILL.green, 12), bx(214, 16, 96, 26, '下方置換法', C.purple, FILL.purple, 12),
-  bx(15, 100, 86, 40, '水', C.blue, FILL.blue, 11), bx(45, 56, 30, 64, undefined, C.gray, '#FFFFFF'),
+  bx(15, 100, 86, 40, undefined, C.blue, FILL.blue), lb(28, 128, '水', 11, C.blue, 'middle', true), bx(45, 56, 30, 64, undefined, C.gray, '#FFFFFF'),
   bx(150, 70, 30, 64, undefined, C.gray, '#FFFFFF'), ar(165, 152, 165, 118, C.green),
   bx(252, 70, 30, 64, undefined, C.gray, '#FFFFFF'), ar(267, 50, 267, 86, C.purple),
 ];
@@ -346,15 +346,15 @@ const f31 = show([
 
 // k32 BTB溶液とオオカナダモ
 const k32Tubes = (aFill: string, bFill: string): DiagramElement[] => [
-  bx(50, 50, 70, 90, 'オオカナダモ', C.ink, aFill, 8), bx(200, 50, 70, 90, 'オオカナダモ', C.ink, bFill, 8),
-  lb(85, 150, 'A 光に当てる', 10, C.main, 'middle', true), lb(235, 150, 'B 暗い所', 10, C.gray, 'middle', true),
+  bx(50, 50, 70, 90, undefined, C.ink, aFill), bx(200, 50, 70, 90, undefined, C.ink, bFill),
+  lb(85, 118, 'オオカナダモ', 9, C.ink, 'middle', true), lb(235, 118, 'オオカナダモ', 9, C.ink, 'middle', true),
 ];
 const f32 = show([
-  { note: 'BTB溶液を加えて緑色にした水に、オオカナダモを入れます。Aは明るい窓ぎわ、Bはアルミニウムはくで包んで暗い所に置きます。', add: [...k32Tubes(FILL.green, FILL.green), ci(85, 25, 12, '光', C.main, FILL.yellow, 10), bx(190, 22, 90, 24, 'アルミはく', C.gray, FILL.gray, 10), ...m('Aは明るい所、Bは暗い所')] },
+  { note: 'BTB溶液を加えて緑色にした水に、オオカナダモを入れます。Aは明るい窓ぎわ、Bはアルミニウムはくで包んで暗い所に置きます。', add: [...k32Tubes(FILL.green, FILL.green), lb(85, 150, 'A 光に当てる', 10, C.main, 'middle', true), lb(235, 150, 'B 暗い所', 10, C.gray, 'middle', true), ci(85, 25, 12, '光', C.main, FILL.yellow, 10), bx(190, 22, 90, 24, 'アルミはく', C.gray, FILL.gray, 10), ...m('Aは明るい所、Bは暗い所')] },
   { note: '❓暗いBでは、オオカナダモは何をしているでしょう。光がないので光合成はできません。呼吸だけを行います。', add: m('Bは暗い→呼吸だけ行う', C.gray, FILL.gray) },
-  { note: '呼吸では二酸化炭素が出ます。水の中の二酸化炭素がふえると、水溶液は酸性に近づきます。', add: [ar(235, 70, 235, 54, C.gray), lb(262, 62, 'CO₂', 10, C.gray, 'middle', true), ...m('CO₂がふえる→酸性に近づく', C.gray, FILL.gray)] },
+  { note: '呼吸では二酸化炭素が出ます。水の中の二酸化炭素がふえると、水溶液は酸性に近づきます。', add: [ar(222, 80, 222, 58, C.gray), lb(250, 68, 'CO₂', 10, C.gray, 'middle', true), ...m('CO₂がふえる→酸性に近づく', C.gray, FILL.gray)] },
   { note: '酸性になると、BTB溶液は黄色になります。Bの水溶液は黄色です。(1)の答えです。', add: [...k32Tubes(FILL.green, FILL.yellow), ...m('(1) Bの色＝黄色', C.main, FILL.yellow)] },
-  { note: '❓明るいAでは、何が起こっているでしょう。光があるので光合成が盛んです。呼吸でも二酸化炭素は出ますが、光合成で吸収する量のほうが多くなります。', add: [ar(61, 35, 85, 54, C.green), lb(35, 62, 'CO₂', 10, C.green, 'middle', true), ...m('A：光合成のほうが盛ん', C.green, FILL.green)] },
+  { note: '❓明るいAでは、何が起こっているでしょう。光があるので光合成が盛んです。呼吸でも二酸化炭素は出ますが、光合成で吸収する量のほうが多くなります。', add: [ar(72, 80, 72, 58, C.green), lb(100, 68, 'CO₂', 10, C.green, 'middle', true), ...m('A：光合成のほうが盛ん', C.green, FILL.green)] },
   { note: '二酸化炭素が減ると、水溶液はアルカリ性に近づき、BTB溶液は青色になります。Aが青色になったのは、光合成で二酸化炭素を吸収したからです。(2)の答えです。', add: [...k32Tubes(FILL.blue, FILL.yellow), ...m('(2) 光合成でCO₂を吸収→青色', C.blue, FILL.blue)] },
   { note: '確かめます。オオカナダモを入れない試験管を同じように置くと、色は変わりません。したがって、色の変化の原因は、オオカナダモのはたらきです。', add: m('対照実験で原因がわかる', C.green, FILL.green) },
 ], '答え：(1) 黄色 (2) 光合成で二酸化炭素を吸収したから');
@@ -374,9 +374,9 @@ const k33Base = (): DiagramElement[] => [
 const f33 = show([
   { note: '同じ大きさの枝A〜Dを、水を入れたメスシリンダーにさし、水面に油を注ぎます。B・Cは、表または裏にワセリンをぬった枝です（赤い葉）。', add: [...k33Base(), ...m('A〜Dの水の減少量を比べる')] },
   { note: '一定時間後の水の減少量は、Aが6.2cm³、Bが4.6cm³、Cが2.2cm³、Dが0.6cm³でした。水面には油があるので、減った水はすべて蒸散によります。', add: [lb(40, 158, '6.2cm³', 11, C.blue, 'middle', true), lb(120, 158, '4.6cm³', 11, C.blue, 'middle', true), lb(200, 158, '2.2cm³', 11, C.blue, 'middle', true), lb(280, 158, '0.6cm³', 11, C.blue, 'middle', true), ...m('減少量：A6.2、B4.6、C2.2、D0.6', C.blue, FILL.blue)] },
-  { note: '❓Dは何の蒸散量でしょう。葉をすべて取ったので、茎だけからの蒸散です。茎は0.6cm³です。', add: [bx(244, 5, 72, 150, undefined, C.gray, 'none'), ...m('D：茎だけ＝0.6cm³', C.gray, FILL.gray)] },
-  { note: '❓表側からの蒸散量は、どう求めるのでしょう。Aは表＋裏＋茎、Bは表をふさいだので裏＋茎です。AとBの差が表側です。6.2−4.6＝1.6cm³。(1)の答えです。', add: [bx(8, 5, 64, 150, undefined, C.red, 'none'), bx(88, 5, 64, 150, undefined, C.red, 'none'), ...m('(1) 表＝A−B＝6.2−4.6＝1.6cm³', C.red, FILL.red)] },
-  { note: '裏側は、Cが表＋茎なので、AとCの差です。6.2−2.2＝4.0cm³。(2)の答えです。', add: [bx(168, 5, 64, 150, undefined, C.blue, 'none'), ...m('(2) 裏＝A−C＝6.2−2.2＝4.0cm³', C.blue, FILL.blue)] },
+  { note: '❓Dは何の蒸散量でしょう。葉をすべて取ったので、茎だけからの蒸散です。茎は0.6cm³です。', add: [bx(244, 5, 72, 142, undefined, C.gray, 'none'), ...m('D：茎だけ＝0.6cm³', C.gray, FILL.gray)] },
+  { note: '❓表側からの蒸散量は、どう求めるのでしょう。Aは表＋裏＋茎、Bは表をふさいだので裏＋茎です。AとBの差が表側です。6.2−4.6＝1.6cm³。(1)の答えです。', add: [bx(8, 5, 64, 142, undefined, C.red, 'none'), bx(88, 5, 64, 142, undefined, C.red, 'none'), ...m('(1) 表＝A−B＝6.2−4.6＝1.6cm³', C.red, FILL.red)] },
+  { note: '裏側は、Cが表＋茎なので、AとCの差です。6.2−2.2＝4.0cm³。(2)の答えです。', add: [bx(168, 5, 64, 142, undefined, C.blue, 'none'), ...m('(2) 裏＝A−C＝6.2−2.2＝4.0cm³', C.blue, FILL.blue)] },
   { note: '確かめます。表1.6＋裏4.0＋茎0.6＝6.2cm³で、Aの値と一致します。Bは4.0＋0.6＝4.6、Cは1.6＋0.6＝2.2で、どちらも合っています。', add: m('1.6＋4.0＋0.6＝6.2cm³（A）', C.green, FILL.green) },
   { note: '❓気孔が多いのは、どちらでしょう。蒸散量は、裏側の4.0cm³が、表側の1.6cm³より多いので、気孔が多いのは裏側です。(3)の答えです。', add: m('(3) 蒸散量が多い裏側に気孔が多い', C.green, FILL.green) },
 ], '答え：(1) 1.6cm³ (2) 4.0cm³ (3) 裏側');
@@ -494,7 +494,7 @@ const f40 = show([
 
 // k41 湿度と水滴
 const f41 = show([
-  { note: '気温25℃、湿度70%の空気1m³を考えます。飽和水蒸気量は、25℃で23.1g/m³、10℃で9.4g/m³です。1gを8pxで表します。', add: [lb(32, 42, '25℃', 11, C.ink, 'middle', true), bx(60, 30, 185, 24, '飽和水蒸気量 23.1g', C.blue, FILL.gray, 11), ...m('25℃の飽和水蒸気量＝23.1g/m³')] },
+  { note: '気温25℃、湿度70%の空気1m³を考えます。飽和水蒸気量は、25℃で23.1g/m³、10℃で9.4g/m³です。1gを8pxで表します。', add: [lb(32, 42, '25℃', 11, C.ink, 'middle', true), bx(60, 30, 185, 24, undefined, C.blue, FILL.gray), lb(152, 64, '飽和水蒸気量 23.1g', 10, C.blue, 'middle', true), ...m('25℃の飽和水蒸気量＝23.1g/m³')] },
   { note: '❓空気1m³にふくまれる水蒸気は、何gでしょう。湿度は、飽和水蒸気量に対する割合です。23.1×0.7＝16.17gです。小数第1位まで求めると約16.2g。(1)の答えです。', add: [bx(60, 30, 129, 24, '16.17g', C.blue, FILL.blue, 11), ...m('(1) 23.1×0.7＝16.17→約16.2g', C.blue, FILL.blue)] },
   { note: '次に、この空気を10℃まで冷やします。10℃の飽和水蒸気量は9.4gです。この空気が、水蒸気のままでいられるのは、9.4gまでです。', add: [lb(32, 92, '10℃', 11, C.ink, 'middle', true), bx(60, 80, 75, 24, '入る分 9.4g', C.green, FILL.green, 10), ...m('10℃では9.4gまでしか入らない', C.green, FILL.green)] },
   { note: '❓ふくんでいる水蒸気は何gでしょう。冷やす前と同じ16.17gです。9.4gを超えた分が、入りきらずに水滴になります。', add: [bx(135, 80, 54, 24, '水滴', C.blue, FILL.blue, 11), ...m('16.17gのうち、9.4gを超えた分が水滴', C.blue, FILL.blue)] },
@@ -510,7 +510,7 @@ const f42 = show([
   { note: '3つの時刻の観測結果です。9時は21℃・南東の風・くもり、12時は22℃・南の風・くもり、15時は15℃・北西の風・強い雨です。', add: [k42Box(0, '9時\n21℃\n南東\nくもり'), k42Box(1, '12時\n22℃\n南\nくもり'), k42Box(2, '15時\n15℃\n北西\n強い雨'), ...m('9時・12時・15時の観測')] },
   { note: '9時から12時は、気温が21℃から22℃へほとんど変わらず、風向も南東から南です。どちらも暖かい空気の中にいます。', add: [ar(100, 70, 114, 70, C.green), ...m('9→12時：変化は小さい（暖気の中）', C.green, FILL.green)] },
   { note: '❓12時から15時は、どうでしょう。気温が22℃から15℃へ7℃も下がり、風向は南から北西へ急に変わって、強い雨になりました。大きな変化が起こっています。', add: [ar(205, 70, 219, 70, C.red), ...m('12→15時：気温−7℃・風向が急変', C.red, FILL.red)] },
-  { note: '❓寒冷前線は、どんな前線でしょう。冷たい空気（寒気）が、暖かい空気（暖気）の下にもぐりこみ、暖気を急に押し上げる前線です。', add: fresh(pg([[100, 150], [290, 150], [290, 100]], C.blue, FILL.blue), lb(240, 135, '寒気', 12, C.blue, 'middle', true), lb(120, 110, '暖気', 12, C.red, 'middle', true), ar(260, 120, 200, 140, C.blue), ...m('寒気が暖気の下にもぐりこむ', C.blue, FILL.blue)) },
+  { note: '❓寒冷前線は、どんな前線でしょう。冷たい空気（寒気）が、暖かい空気（暖気）の下にもぐりこみ、暖気を急に押し上げる前線です。', add: fresh(pg([[100, 150], [290, 150], [290, 100]], C.blue, FILL.blue), lb(272, 142, '寒気', 12, C.blue, 'middle', true), lb(60, 110, '暖気', 12, C.red, 'middle', true), ar(260, 120, 200, 140, C.blue), ...m('寒気が暖気の下にもぐりこむ', C.blue, FILL.blue)) },
   { note: '暖気が急に押し上げられるので、積乱雲が発達し、強い雨が短時間降ります。', add: [ci(130, 55, 24, '積乱雲', C.gray, FILL.gray, 10), ln(120, 80, 114, 104, C.blue, false, 2), ln(132, 80, 126, 104, C.blue, false, 2), ln(144, 80, 138, 104, C.blue, false, 2), ...m('積乱雲→強い雨', C.blue, FILL.blue)] },
   { note: '前線が通りすぎると、冷たい空気にすっぽり入ります。気温は急に下がり、風向は南寄りから北寄りに急に変わります。', add: m('通過後：気温が急に下がる・風は北寄り', C.purple, FILL.purple) },
   { note: '12時の気温はまだ22℃で暖気の中、15時には15℃で寒気の中です。したがって、通過したのは、12時から15時のあいだです。', add: m('答え：12時から15時のあいだ', C.green, FILL.green) },
@@ -535,9 +535,9 @@ const k44Base = (): DiagramElement[] => [
 const f44 = show([
   { note: '冬の日本列島を、断面で見ます。左が日本海側、中央が山地、右が太平洋側です。', add: [...k44Base(), ...m('冬の日本列島（断面）')] },
   { note: '冬は、シベリア気団から、冷たく乾いた北西の季節風が吹いてきます。', add: [ar(20, 70, 110, 70, C.blue), lb(65, 56, '冷たく乾いた風', 10, C.blue, 'middle', true), ...m('シベリア気団から北西の季節風', C.blue, FILL.blue)] },
-  { note: '❓なぜ乾いた風が、雪を降らせるのでしょう。風は、あたたかい日本海の上をわたるあいだに、海から蒸発する水蒸気をたくさん取りこみます。', add: [ar(40, 118, 40, 92, C.green), ar(70, 118, 70, 92, C.green), ar(100, 118, 100, 92, C.green), lb(70, 104, '水蒸気', 9, C.green, 'middle', true), ...m('日本海で水蒸気をふくむ', C.green, FILL.green)] },
+  { note: '❓なぜ乾いた風が、雪を降らせるのでしょう。風は、あたたかい日本海の上をわたるあいだに、海から蒸発する水蒸気をたくさん取りこみます。', add: [ar(40, 118, 40, 92, C.green), ar(70, 118, 70, 92, C.green), ar(100, 118, 100, 92, C.green), lb(70, 80, '水蒸気', 9, C.green, 'middle', true), ...m('日本海で水蒸気をふくむ', C.green, FILL.green)] },
   { note: '水蒸気をふくんだ湿った空気は、山地にぶつかって、斜面をのぼります。上昇すると、冷えて雲ができます。', add: [ar(122, 100, 160, 66, C.purple), ci(180, 40, 18, '雲', C.gray, FILL.gray, 11), ...m('山にぶつかり上昇→冷えて雲', C.purple, FILL.purple)] },
-  { note: '雲から、日本海側に雪が降ります。', add: [ci(142, 82, 2.5, undefined, C.blue, C.blue), ci(130, 90, 2.5, undefined, C.blue, C.blue), ci(150, 96, 2.5, undefined, C.blue, C.blue), ci(138, 104, 2.5, undefined, C.blue, C.blue), lb(95, 92, '雪', 12, C.blue, 'middle', true), ...m('日本海側に雪が降る', C.blue, FILL.blue)] },
+  { note: '雲から、日本海側に雪が降ります。', add: [ci(142, 82, 2.5, undefined, C.blue, C.blue), ci(130, 90, 2.5, undefined, C.blue, C.blue), ci(150, 96, 2.5, undefined, C.blue, C.blue), ci(138, 104, 2.5, undefined, C.blue, C.blue), lb(120, 78, '雪', 12, C.blue, 'middle', true), ...m('日本海側に雪が降る', C.blue, FILL.blue)] },
   { note: '❓山をこえると、どうなるでしょう。水分を失った乾いた風が吹きおりるので、太平洋側は、乾燥した晴れの日が多くなります。', add: [ar(215, 80, 255, 105, C.main), lb(268, 92, '乾いた風', 10, C.main, 'middle', true), ...m('太平洋側は乾燥した晴れ', C.main, FILL.warm)] },
   { note: 'まとめます。冷たい風が、日本海で水蒸気をふくみ、山地で上昇して雲をつくるため、日本海側に雪が降ります。', add: m('答え：水蒸気をふくみ山で上昇して雲', C.green, FILL.green) },
 ], '答え：シベリアからの冷たく乾いた空気が日本海で水蒸気をふくみ、山地で上昇して雲をつくるから');
@@ -549,7 +549,7 @@ const f45 = show([
   { note: '4時間では、15×4＝60°動きます。(1)の答えです。', add: [sc(160, 85, 55, 100, 160, C.blue, 'rgba(14,165,233,0.15)'), ci(108.3, 66.2, 4, undefined, C.blue, FILL.yellow), lb(82, 56, '4時間後', 10, C.blue, 'middle', true), ...m('(1) 15°×4＝60°', C.blue, FILL.blue)] },
   { note: '❓どちら回りでしょう。星は、矢印の向きに、反時計回りに動いて見えます。(2)の答えです。', add: [ar(146, 33, 122, 42, C.red), ...m('(2) 反時計回り', C.red, FILL.red)] },
   { note: '次に、東の空です。東の空にのぼる星は、時間がたつと、右上に向かって動いて見えます。(3)の答えです。', add: fresh(ln(20, 140, 300, 140, C.gray, false, 3), ci(60, 130, 4, undefined, C.blue, FILL.yellow), ar(66, 124, 140, 70, C.blue), lb(40, 152, '東', 12, C.ink, 'middle', true), lb(280, 152, '西', 12, C.ink, 'middle', true), ...m('(3) 東の空：右上へ動く', C.blue, FILL.blue)) },
-  { note: '❓星そのものが動いているのでしょうか。いいえ。地球が西から東へ自転しているので、星が東から西へ動くように見えるのです。見かけの動きです。', add: fresh(ci(160, 80, 32, '地球', C.green, FILL.green, 12), ar(205, 60, 205, 100, C.red), lb(228, 80, '自転', 11, C.red, 'start', true), ...m('地球の自転による見かけの動き', C.green, FILL.green)) },
+  { note: '❓星そのものが動いているのでしょうか。いいえ。地球が西から東へ自転しているので、星が東から西へ動くように見えるのです。見かけの動きです。', add: fresh(ci(160, 80, 32, '地球', C.green, FILL.green, 12), ar(205, 100, 205, 60, C.red), lb(214, 80, '北極の上から\n見て反時計回り', 9, C.red, 'start', true), ...m('地球の自転による見かけの動き', C.green, FILL.green)) },
   { note: '確かめます。24時間で、15×24＝360°。ちょうど1周して、もとの位置にもどります。', add: m('15×24＝360°（1周）で一致', C.green, FILL.green) },
 ], '答え：(1) 60度 (2) 反時計回り (3) 右上');
 
@@ -557,7 +557,7 @@ const f45 = show([
 const f46 = show([
   { note: '太陽のまわりを、地球と金星が回っています。金星の軌道は、地球の軌道の内側にあります。', add: [ci(160, 80, 68, undefined, C.gray, 'none'), ci(160, 80, 38, undefined, C.gray, 'none'), ci(160, 80, 12, '太陽', C.red, FILL.yellow, 9), ci(160, 148, 8, '地', C.green, FILL.green, 9), ...m('金星は地球より内側を公転')] },
   { note: '❓真夜中に見える方向は、どちらでしょう。真夜中は、地球から見て、太陽と反対側（下向き）の方向です。', add: [ar(160, 158, 160, 166, C.purple), lb(208, 160, '真夜中の方向', 9, C.purple, 'middle', true), ...m('真夜中は太陽と反対の方向', C.purple, FILL.purple)] },
-  { note: '❓金星は、その方向に来るでしょうか。金星の軌道は、地球の内側にあります。地球から見ると、太陽から大きく離れた方向に来ることはありません。', add: [ln(160, 148, 191.5, 101.2, C.gray, true), ln(160, 148, 128.5, 101.2, C.gray, true), ci(191.5, 101.2, 5, undefined, C.red, FILL.red), ci(128.5, 101.2, 5, undefined, C.red, FILL.red), ...m('金星は太陽の近くの方向にしか見えない', C.red, FILL.red)] },
+  { note: '❓金星は、その方向に来るでしょうか。金星の軌道は、地球の内側にあります。地球から見ると、太陽から大きく離れた方向に来ることはありません。', add: [ln(164.5, 141.4, 191.5, 101.2, C.gray, true), ln(155.5, 141.4, 128.5, 101.2, C.gray, true), ci(191.5, 101.2, 5, undefined, C.red, FILL.red), ci(128.5, 101.2, 5, undefined, C.red, FILL.red), ...m('金星は太陽の近くの方向にしか見えない', C.red, FILL.red)] },
   { note: '見えるのは、太陽が沈んだあとの夕方の西の空か、太陽がのぼる前の明け方の東の空だけです。真夜中には見えません。これが正しい選択肢です。', add: m('夕方の西か、明け方の東だけ', C.green, FILL.green) },
   { note: '❓金星が地球に近いとき、どう見えるでしょう。地球に近いと、金星は大きく見えますが、太陽の光が当たった面の一部しか見えないので、三日月形に欠けて見えます。', add: [ci(160, 118, 6, undefined, C.red, FILL.red), bx(240, 30, 70, 50, '三日月形\n大きい', C.red, FILL.red, 10), ...m('近い→欠けて大きく見える', C.red, FILL.red)] },
   { note: '反対に、地球から遠いときは、ほぼ丸く見えますが、遠いので小さく見えます。「三日月のときは遠くて小さい」は誤りです。', add: [ci(160, 42, 6, undefined, C.blue, FILL.blue), bx(240, 95, 70, 50, '丸い\n小さい', C.blue, FILL.blue, 10), ...m('遠い→丸くて小さく見える', C.blue, FILL.blue)] },
@@ -609,11 +609,11 @@ const k50Base = (): DiagramElement[] => [
   ar(310, 60, 285, 60, C.main), ar(310, 85, 285, 85, C.main), ar(310, 110, 285, 110, C.main), lb(296, 46, '太陽の光', 9, C.main, 'middle', true),
 ];
 const f50 = show([
-  { note: '月は、地球のまわりを約29.5日で1周します。太陽の光は、右から当たっています。月が太陽と同じ向きにあるのが、新月です。', add: [...k50Base(), ci(215, 85, 7, undefined, C.gray, FILL.gray), lb(215, 105, '新月', 10, C.gray, 'middle', true), ...m('月は約29.5日で地球を1周')] },
-  { note: '❓新月から約7日後は、どこにあるでしょう。4分の1周して、太陽と90°ずれた位置（上）にあります。地球から見ると、右半分が光る上弦の月（半月）です。(1)の答えです。', add: [ci(160, 30, 7, undefined, C.main, FILL.yellow), lb(160, 18, '上弦', 10, C.main, 'middle', true), ...m('(1) 約7日後＝上弦の月（半月）', C.red, FILL.red)] },
-  { note: '約15日後には、月は太陽と反対側（左）に来ます。太陽の光を受けた面を、すべて地球に向けるので、満月です。', add: [ci(105, 85, 7, undefined, C.main, FILL.yellow), lb(105, 105, '満月', 10, C.main, 'middle', true), ...m('満月：太陽の反対側にある', C.main, FILL.yellow)] },
+  { note: '月は、地球のまわりを約29.5日で1周します。太陽の光は、右から当たっています。月が太陽と同じ向きにあるのが、新月です。', add: [...k50Base(), ci(215, 85, 7, undefined, C.gray, FILL.gray), lb(224, 85, '新月', 10, C.gray, 'start', true), ...m('月は約29.5日で地球を1周')] },
+  { note: '❓新月から約7日後は、どこにあるでしょう。4分の1周して、太陽と90°ずれた位置（上）にあります。地球から見ると、右半分が光る上弦の月（半月）です。(1)の答えです。', add: [ci(160, 30, 7, undefined, C.main, FILL.yellow), lb(160, 14, '上弦', 10, C.main, 'middle', true), ...m('(1) 約7日後＝上弦の月（半月）', C.red, FILL.red)] },
+  { note: '約15日後には、月は太陽と反対側（左）に来ます。太陽の光を受けた面を、すべて地球に向けるので、満月です。', add: [ci(105, 85, 7, undefined, C.main, FILL.yellow), lb(96, 85, '満月', 10, C.main, 'end', true), ...m('満月：太陽の反対側にある', C.main, FILL.yellow)] },
   { note: '❓真夜中に南の空に見える月は何でしょう。真夜中、地球の観測者は太陽と反対向きを向いています。その方向にあるのは、満月です。(2)の答えです。', add: [ci(148, 85, 3, undefined, C.red, C.red), ar(144, 85, 114, 85, C.red), ...m('(2) 真夜中に南中する月＝満月', C.red, FILL.red)] },
-  { note: '夕方は、太陽が西にしずんだころです。地球の北側にいる観測者が、夕方に見る三日月は、太陽より少し東（左）にずれた、新月に近い位置にあります。', add: [ci(160, 73, 3, undefined, C.red, C.red), ci(202, 50, 5, undefined, C.main, FILL.yellow), ar(163, 71, 197, 53, C.red), lb(210, 36, '三日月', 10, C.main, 'start', true), ...m('夕方の三日月は新月に近い位置', C.purple, FILL.purple)] },
+  { note: '夕方は、太陽が西にしずんだころです。地球の北側にいる観測者が、夕方に見る三日月は、太陽より少し東（左）にずれた、新月に近い位置にあります。', add: fresh(...k50Base(), ci(215, 85, 7, undefined, C.gray, FILL.gray), lb(224, 85, '新月', 10, C.gray, 'start', true), ci(160, 73, 3, undefined, C.red, C.red), ci(202, 50, 5, undefined, C.main, FILL.yellow), ar(163, 71, 197, 53, C.red), lb(210, 36, '三日月', 10, C.main, 'start', true), ...m('夕方の三日月は新月に近い位置', C.purple, FILL.purple)) },
   { note: '❓光っているのは、右側と左側のどちらでしょう。光っている側は、太陽の方向（西）を向いています。夕方は、右側が光ります。(3)の答えです。', add: fresh(ci(160, 70, 40, undefined, C.gray, FILL.gray), crescent(160, 70, 40, 20), lb(230, 70, '右側が光る', 12, C.red, 'start', true), lb(160, 128, '夕方の西の空の三日月', 11, C.ink, 'middle', true), ...m('(3) 太陽に向いた右側が光る', C.red, FILL.red)) },
   { note: '確かめます。夕方の月は、日がたつにつれて、右側から満ちていきます。左側が光るのは、満月のあとの欠けていく月（明け方に見える）です。', add: m('右が光る月は夕方、満ちていく', C.green, FILL.green) },
 ], '答え：(1) 上弦の月 (2) 満月 (3) 右側');
