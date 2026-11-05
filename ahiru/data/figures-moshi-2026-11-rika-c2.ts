@@ -353,14 +353,14 @@ const c31 = show([
 ], '答え：(1) 1.9g (2) 27.6g');
 
 // c32 びんの中の酸素
-const c32Bottle = (water: number): DiagramElement[] => [rect(100, 28, 100, 100, C.gray, '#FFFFFF'), rect(60, 118, 180, 40, C.blue, '#FFFFFF'), rect(61, 124, 178, 33, '#BAE6FD', '#BAE6FD'), ...(water > 0 ? [rect(101, 118 - water, 98, water + 8, '#BAE6FD', '#BAE6FD')] : []), bx(125, 50, 50, 24, 'スチール\nウール', C.gray, FILL.gray, 8)];
+const c32Bottle = (water: number): DiagramElement[] => [rect(100, 28, 100, 100, C.gray, '#FFFFFF'), rect(60, 118, 180, 40, C.blue, '#FFFFFF'), rect(61, 124, 178, 33, '#BAE6FD', '#BAE6FD'), ...(water > 0 ? [rect(101, 118 - water, 98, water + 8, '#BAE6FD', '#BAE6FD')] : []), bx(120, 46, 60, 30, 'スチール\nウール', C.gray, FILL.gray, 9)];
 const c32 = show([
   { note: '空気600cm³がふくまれるびんの中に、スチールウールを入れて、さかさにして口を水に入れます。長い間おくと、スチールウールがさびて、びんの中に水が入ってきます。', add: [...c32Bottle(0), ...m('600cm³の空気とスチールウール')] },
   { note: '❓スチールウールがさびるとき、空気の何が使われるのでしょう。酸素です。酸素は、鉄と結びついて、気体ではなくなります。', add: m('酸素が使われてなくなる', C.blue, FILL.blue) },
   { note: '❓空気のうち、酸素はどれくらいでしょう。体積の約5分の1です。', add: fresh(bx(20, 50, 56, 40, '酸素\n1/5', C.blue, FILL.blue, 12), bx(76, 50, 224, 40, 'ちっ素など（4/5）', C.gray, FILL.gray, 13), lb(160, 118, '空気600cm³', 12, C.ink, 'middle', true), ...m('空気の約1/5が酸素')) },
   { note: '酸素の体積は、600÷5＝120cm³です。この120cm³がなくなります。', add: [lb(48, 108, '120cm³', 12, C.blue, 'middle', true), ...m('600÷5＝120cm³', C.blue, FILL.blue)] },
   { note: '❓なくなった体積は、どうなるのでしょう。びんの中の気体が120cm³減って、そのぶんを水が入ってきてうめます。', add: fresh(...c32Bottle(24), lb(260, 70, '水が入る', 11, C.blue, 'middle', true), ...m('(1) 入る水は120cm³', C.blue, FILL.blue)) },
-  { note: '(2) 酸素がなくなったあと、びんに残る気体で、いちばん多いのは、空気のおもな成分の残り、ちっ素です。', add: [lb(150, 90, 'ちっ素', 14, C.main, 'middle', true), ...m('(2) 残るのはちっ素', C.main, FILL.warm)] },
+  { note: '(2) 酸素がなくなったあと、びんに残る気体で、いちばん多いのは、空気のおもな成分の残り、ちっ素です。', add: [lb(150, 88, 'ちっ素', 14, C.main, 'middle', true), ...m('(2) 残るのはちっ素', C.main, FILL.warm)] },
   { note: '確かめます。水が入ったあとの気体は 600−120＝480cm³。これは、もとの空気のちっ素 600×4÷5＝480cm³と一致します。', add: m('600−120＝480cm³で一致', C.green, FILL.green) },
 ], '答え：(1) 120cm³ (2) ちっ素');
 
@@ -601,7 +601,7 @@ const arcPts = (R: number, from: number, to: number, n = 14): [number, number][]
 const riverShape = (): DiagramElement => pg([...arcPts(100, Math.PI, 0), ...arcPts(58, 0, Math.PI)], C.blue, '#BAE6FD');
 const c48 = show([
   { note: '曲がって流れる川を、上から見たところです。川は、左から右へ、上に張り出すように曲がっています。', add: [riverShape(), lb(160, 52, '曲がりの外側', 11, C.ink, 'middle', true), lb(160, 138, '曲がりの内側', 11, C.ink, 'middle', true), ...m('曲がる川のようす')] },
-  { note: '❓水は、外側と内側で、どちらが速く流れるでしょう。外側のほうが、流れが速く、強くなります。', add: [ar(122, 70, 198, 70, C.red), lb(160, 82, '速い', 10, C.red, 'middle', true), ar(140, 100, 180, 100, C.blue), lb(160, 116, 'ゆっくり', 10, C.blue, 'middle', true), ...m('外側は速く、内側はゆっくり')] },
+  { note: '❓水は、外側と内側で、どちらが速く流れるでしょう。外側のほうが、流れが速く、強くなります。', add: [ar(138, 73, 182, 73, C.red), lb(160, 84, '速い', 10, C.red, 'middle', true), ar(142, 94, 178, 94, C.blue), lb(160, 106, 'ゆっくり', 10, C.blue, 'middle', true), ...m('外側は速く、内側はゆっくり')] },
   { note: '(1) 流れの速い外側では、岸がけずられて、がけができます。', add: [pg([[64, 168], [72, 120], [96, 90], [128, 72], [128, 62], [88, 80], [56, 118], [48, 168]], C.red, FILL.red), ...m('(1) 外側にがけができる', C.red, FILL.red)] },
   { note: '流れのゆるやかな内側では、石や砂が積もって、川原ができます。', add: [pg([[112, 168], [118, 140], [140, 124], [180, 124], [202, 140], [208, 168]], C.main, FILL.yellow), ...m('内側には川原ができる', C.main, FILL.warm)] },
   { note: '(2) 川の石を見ます。❓上流では、どんな石でしょう。大きくて、角ばった石です。', add: fresh(bx(20, 40, 130, 50, '上流の石\n大きくて角ばる', C.gray, FILL.gray, 12), ...m('上流は大きくて角ばる')) },
