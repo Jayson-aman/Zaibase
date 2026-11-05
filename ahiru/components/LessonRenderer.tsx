@@ -11,6 +11,7 @@ import FigureView from './FigureView';
 import StrokeOrder from './StrokeOrder';
 import MangaDialogue from './MangaDialogue';
 import InlineQuiz, { questionsToQuizItems } from './InlineQuiz';
+import UnlockPitch from './UnlockPitch';
 
 type Props = {
   sections: LessonSection[];
@@ -185,8 +186,9 @@ export default function LessonRenderer({
               <View style={styles.lockCard}>
                 <Text style={styles.lockIcon}>🔒</Text>
                 <Text style={styles.lockText}>
-                  この公式は買い切りで解放できます（{formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}・1回のみ）
+                  この公式は、買い切りで ひらけます（{formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL}・1回だけ）
                 </Text>
+                <UnlockPitch kind="formula" priceLabel={formulaUnlockPriceLabel ?? FORMULA_UNLOCK_PRICE_LABEL} />
                 <TouchableOpacity
                   style={[styles.unlockBtn, (!formulaUnlockProductReady || isPurchasing) && styles.unlockBtnDisabled]}
                   activeOpacity={0.85}

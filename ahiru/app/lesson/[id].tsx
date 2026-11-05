@@ -18,6 +18,7 @@ import { FREE_LESSON_LIMIT } from '../../data/lesson-limits';
 import { lessonMediaModule } from '../../data/lesson-media-lazy';
 import { figuresModule } from '../../data/figures-lazy';
 import { isNew20Unit, isNew20UnitFree } from '../../data/new20-access';
+import UnlockPitch from '../../components/UnlockPitch';
 import LessonRenderer from '../../components/LessonRenderer';
 import FigureView from '../../components/FigureView';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
@@ -112,7 +113,7 @@ export default function LessonDetailScreen() {
     }
     const okFormula = await confirmDialog(
       '購入の確認',
-      `「${heading}」を ${formulaUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+      `「${heading}」を ${formulaUnlockPriceLabel} でひらきます。\n\n・1回だけのお支払い（買い切り）です\n・月額や自動更新はありません\n・いちどひらくと、アカウントにずっと残ります`,
     );
     if (!okFormula) {
       logPurchaseEvent('unlock_confirm_declined', 'formula');
@@ -141,7 +142,7 @@ export default function LessonDetailScreen() {
     }
     const ok = await confirmDialog(
       '購入の確認',
-      `「${title}」を ${unitUnlockPriceLabel} で解放します。\n\n1回のみのお支払い（買い切り）で、月額などの継続課金ではありません。`,
+      `「${title}」を ${unitUnlockPriceLabel} でひらきます。\n\n・1回だけのお支払い（買い切り）です\n・月額や自動更新はありません\n・いちどひらくと、アカウントにずっと残ります`,
     );
     if (!ok) {
       logPurchaseEvent('unlock_confirm_declined', 'unit');
@@ -314,8 +315,9 @@ export default function LessonDetailScreen() {
         {!subLoading && !(isNew20 && unitUnlocksLoading) && !contentUnlocked && isNew20 && (
           <View style={styles.lockedBanner}>
             <Text style={styles.lockedText} maxFontSizeMultiplier={1.25}>
-              🔒 この単元は買い切りで解放できます（{unitUnlockPriceLabel}・1回のみ）
+              🔒 この先は、買い切りで ひらけます（{unitUnlockPriceLabel}・1回だけ）
             </Text>
+            <UnlockPitch kind="unit" priceLabel={unitUnlockPriceLabel} />
             <TouchableOpacity
               style={[
                 styles.unlockUnitBtn,
