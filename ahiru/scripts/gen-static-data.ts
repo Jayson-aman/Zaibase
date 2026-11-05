@@ -48,6 +48,8 @@ import { lessonsU120E2Sansu } from '../data/lessons-u120-e2-sansu';
 import { lessonsU120E1Kokugo } from '../data/lessons-u120-e1-kokugo';
 
 const FREE_UNITS_PER_CLUSTER = 5;
+// 小1・小2（u120_）は、ためし読みを広げて 最初の10単元まで無料にする（2026/11/5 決定）
+const FREE_UNITS_LOW_GRADE = 10;
 const CLUSTERS = [
   lessonsNew20E4Eigo,
   lessonsNew20E4Kokugo,
@@ -89,11 +91,11 @@ function genNew20Ids(): string {
   const locked: string[] = [];
   for (const cluster of CLUSTERS) {
     const sorted = [...cluster].sort((a, b) => a.order - b.order);
-    sorted.forEach((lesson, idx) => (idx < FREE_UNITS_PER_CLUSTER ? free : locked).push(lesson.id));
+    sorted.forEach((lesson, idx) => (idx < (lesson.id.startsWith('u120_') ? FREE_UNITS_LOW_GRADE : FREE_UNITS_PER_CLUSTER) ? free : locked).push(lesson.id));
   }
   const list = (arr: string[]) => arr.map((id) => `  '${id}',`).join('\n');
   return `// scripts/gen-static-data.ts が自動生成する。手で直さない（npm run gen:static で作り直す）。
-// new20 単元のうち、学年×科目クラスターごとに先頭 ${FREE_UNITS_PER_CLUSTER} 件（無料）と、それ以降（¥150買い切り）の ID。
+// new20 単元のうち、学年×科目クラスターごとに先頭 ${FREE_UNITS_PER_CLUSTER} 件（小1・小2は ${FREE_UNITS_LOW_GRADE} 件）が無料、それ以降（¥150買い切り）の ID。
 // 単元データ本体（約3.7MB）を読まずに判定できるよう、ID だけを前もって書き出してある。
 export const FREE_UNITS_PER_CLUSTER = ${FREE_UNITS_PER_CLUSTER};
 

@@ -102,7 +102,7 @@ export const TEST_MODES: TestMode[] = [
   {
     key: 'moshi',
     title: '月例実力テスト（全国模試対応）',
-    summary: '毎月更新・全国模試と同じ形式。まちがえた問題だけ再挑戦できる',
+    summary: '毎月更新・全国模試と同じ形式。1回10問、まちがえた問題だけ再挑戦できる',
     detail:
       '毎月更新される、全国模試（中学受験・高校受験）に近い形式の実力テストです。' +
       '解説は動く図解つき。終わったあと「まちがえた問題だけ もう一度」を押すと、' +
@@ -110,7 +110,7 @@ export const TEST_MODES: TestMode[] = [
       '学年が上がり学習が進むにつれて、出題範囲も少しずつ広がっていきます。',
     emoji: '📅',
     color: '#DC2626',
-    count: 15,
+    count: 10, // 1回10問（誰でも同じ）。各教科・各受験種別50問のなかから、毎回ちがう10問が出る
     mix: { basic: 0.2, standard: 0.4, advanced: 0.4 },
     writtenRatio: 0.15,
     moshiOnly: true,
