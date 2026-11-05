@@ -805,8 +805,8 @@ const k08 = show([
     bt('③ most interesting', undefined, 'green'),
   ),
   sl(
-    '【確かめ】interesting だけでは the のあとで「いちばん」の意味が出ません。more は比較級で、than（〜より）が必要です。very は「とても」の意味で、the のすぐあとには置けません。',
-    chk(['① interesting（「いちばん」の意味が出ない）', '② more interesting（than が必要）', '④ very interesting（the のあとに置けない）'], '③ the most interesting  ○'),
+    '【確かめ】interesting だけでは the のあとで「いちばん」の意味が出ません。more は比較級で、than（〜より）が必要です。very は「とても」と強める語で、「いちばん」の意味は出ません（最上級を強める the very best のような形はあります）。',
+    chk(['① interesting（「いちばん」の意味が出ない）', '② more interesting（than が必要）', '④ very interesting（「いちばん」にならない）'], '③ the most interesting  ○'),
     bt('the ＋ most ＋ 長い語', undefined, 'green'),
   ),
 ], 'the ＋ 最上級（長い語は most）');

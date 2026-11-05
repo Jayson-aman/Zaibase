@@ -306,7 +306,7 @@ interesting は長い語（in・ter・est・ing）なので、most をつけて 
 ③ most interesting（This is the most interesting movie I have ever seen.）
 
 【確かめ】
-「これまでに見た中でいちばんおもしろい映画」と意味が通ります。① interesting は the のあとでは「いちばん」の意味が出ません。② more は比較級で、than（〜より）が必要です。④ very は「とても」を表し、the のすぐあとには置けません。
+「これまでに見た中でいちばんおもしろい映画」と意味が通ります。① interesting は the のあとでは「いちばん」の意味が出ません。② more は比較級で、than（〜より）が必要です。④ very は「とても」と程度を強める語で、「いちばん」という最上級の意味は出ません（the very best のように最上級を強めることはできますが、very だけでは「いちばん」になりません）。
 
 【よくあるまちがい】
 more interesting を選んでしまうことです。more は2つをくらべる形で、「〜より」という相手（than ～）がいるときに使います。「いちばん」には most です。なお、movie と I のあいだには目的格の関係代名詞 that が省略されています。`,

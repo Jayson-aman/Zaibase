@@ -11,7 +11,7 @@ export const LAST_MINUTE: Record<ExamType, Record<SubjectKey, LastMinutePoint[]>
       { title: '速さ', body: '道のり ＝ 速さ × 時間。時速を分速にするときは 60 でわる。単位をそろえてから計算する。' },
       { title: '比', body: 'A：B ＝ 3：2 のとき、全体は 3＋2＝5。A は全体の 5分の3。' },
       { title: '平均', body: '平均 ＝ 合計 ÷ 個数。合計 ＝ 平均 × 個数 も使う。' },
-      { title: 'つるかめ算', body: '全部が足の少ないほうだと仮定して、足の数の差 ÷ 1ひきあたりの足の差 ＝ 入れかわる数。' },
+      { title: 'つるかめ算', body: '全部が足の少ないほうだと仮定して、本当の足の数との差 ÷ 1ひきあたりの足の差 ＝ 入れかわる数。' },
       { title: '面積の公式', body: '三角形 ＝ 底辺 × 高さ ÷ 2、台形 ＝（上底＋下底）× 高さ ÷ 2、円 ＝ 半径 × 半径 × 3.14。' },
       { title: '角度', body: '三角形の内角の和は 180度、四角形は 360度、五角形は 540度。' },
       { title: '場合の数', body: '5人の並べ方は 5×4×3×2×1 ＝ 120 通り。「順番に かけていく」。' },
@@ -49,7 +49,7 @@ export const LAST_MINUTE: Record<ExamType, Record<SubjectKey, LastMinutePoint[]>
     ],
     eigo: [
       { title: 'be動詞', body: 'I am / You are / He(She) is。主語で形が変わる。' },
-      { title: '一般動詞', body: '主語が He・She・It のとき、動詞に s をつける（He plays）。' },
+      { title: '一般動詞', body: '主語が He・She・It のとき、動詞に s か es をつける（He plays / He goes）。' },
       { title: '過去形', body: '規則動詞は ed（played）。不規則動詞は覚える（go→went、eat→ate）。' },
       { title: '疑問詞', body: 'what（何）・who（だれ）・where（どこ）・when（いつ）・why（なぜ）・how（どう）。' },
       { title: 'can', body: 'can ＋ 動詞のもとの形で「〜できる」。I can swim.' },
@@ -61,7 +61,7 @@ export const LAST_MINUTE: Record<ExamType, Record<SubjectKey, LastMinutePoint[]>
   koko: {
     sansu: [
       { title: '因数分解の公式', body: 'x²＋2ax＋a² ＝ (x＋a)²、x²−a² ＝ (x＋a)(x−a)。まず共通因数をくくる。' },
-      { title: '2次方程式', body: '解の公式 x ＝ (−b ± √(b²−4ac)) ÷ 2a。因数分解できるなら先に因数分解。' },
+      { title: '2次方程式', body: '解の公式 x ＝ (−b ± √(b²−4ac)) ÷ (2a)。因数分解できるなら先に因数分解。' },
       { title: 'y＝ax²', body: '変化の割合 ＝ yの増加量 ÷ xの増加量。グラフは原点を通る放物線。' },
       { title: '相似', body: '相似比 a：b のとき、面積比は a²：b²、体積比は a³：b³。' },
       { title: '三平方の定理', body: 'a²＋b²＝c²。3：4：5、1：1：√2、1：2：√3 の直角三角形は辺の比を覚える。' },
@@ -72,7 +72,7 @@ export const LAST_MINUTE: Record<ExamType, Record<SubjectKey, LastMinutePoint[]>
     kokugo: [
       { title: '品詞', body: '10品詞：名詞・動詞・形容詞・形容動詞・副詞・連体詞・接続詞・感動詞・助詞・助動詞。' },
       { title: '動詞の活用', body: '五段・上一段・下一段・カ変・サ変。「ない」をつけて 直前の音で見分ける。' },
-      { title: '歴史的仮名遣い', body: '語頭以外の は・ひ・ふ・へ・ほ は わ・い・う・え・お、ゐ→い、ゑ→え、を→お。' },
+      { title: '歴史的仮名遣い', body: '語頭以外の は行 は わ・い・う・え・お、ゐ→い、ゑ→え、を→お（助詞の「を」は除く）。' },
       { title: '係り結び', body: 'ぞ・なむ・や・か → 文末は連体形、こそ → 文末は已然形。' },
       { title: '漢文', body: '返り点（レ点・一二点）にしたがって、下から上へ もどって読む。' },
       { title: '論説文', body: '筆者の主張と、それを支える具体例・対比を分けて整理する。' },
@@ -85,7 +85,7 @@ export const LAST_MINUTE: Record<ExamType, Record<SubjectKey, LastMinutePoint[]>
       { title: '酸とアルカリ', body: 'BTB液は 酸性で黄色、中性で緑色、アルカリ性で青色。' },
       { title: '遺伝', body: '顕性（優性）の純系 × 潜性（劣性）の純系 → 子は すべて顕性。孫は 3：1。' },
       { title: '力と圧力', body: '圧力（Pa）＝ 力（N）÷ 面積（m²）。作用と反作用は 別の物体にはたらく。' },
-      { title: '天体', body: '地球の自転で 1時間に 15度 動いて見える（日周運動）。公転は 年周運動。' },
+      { title: '天体', body: '地球の自転で 1時間に 15度 動いて見える（日周運動）。公転による見かけの動きは 年周運動。' },
       { title: '前線', body: '寒冷前線は 積乱雲で にわか雨、温暖前線は 乱層雲で 広い範囲に弱い雨。' },
       { title: 'イオン', body: '陽イオンは電子を失い、陰イオンは電子を受け取った原子。' },
     ],
