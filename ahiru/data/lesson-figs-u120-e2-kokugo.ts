@@ -601,6 +601,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓なぜ 右がわが よみの ヒントに なるの？", add: [...fresh(lb(160, 45, "晴 ＝ 日 ＋ 青", 24, C.blue, 'middle', true),lb(160, 95, "青の 音 ＝ セイ", 22, C.ink, 'middle', true),lb(160, 145, "晴の 音 ＝ セイ", 22, C.red, 'middle', true),lb(160, 195, "右がわが よみを あらわす", 18, C.ink, 'middle', true))] },
     { note: "時（じ）も 同（おな）じ。右の「寺」は ジ。", add: [...fresh(lb(160, 45, "時 ＝ 日 ＋ 寺", 24, C.blue, 'middle', true),lb(160, 95, "寺の 音 ＝ ジ", 22, C.ink, 'middle', true),lb(160, 145, "時の 音 ＝ ジ", 22, C.red, 'middle', true),lb(160, 195, "校＝交（コウ）　理＝里（リ）", 18, C.ink, 'middle', true))] },
     { note: "「晴」と「時」。右がわが「青」なのは どっち？", add: [...fresh(lb(160, 55, "晴 ＝ 日 ＋ ？", 28, C.blue, 'middle', true),lb(160, 110, "時 ＝ 日 ＋ ？", 28, C.blue, 'middle', true),lb(160, 170, "青の 音は セイ", 22, C.ink, 'middle', true))] },
+    { note: "答（こた）え：晴。青の 音「セイ」と 晴の 音「セイ」が 同じ。", add: [...fresh(lb(160, 80, "日 ＋ 青 ＝ 晴", 34, C.red, 'middle', true),lb(160, 140, "日 ＋ 寺 ＝ 時", 34, C.blue, 'middle', true),lb(160, 195, "右がわが ヒント", 20, C.ink, 'middle', true))] },
   ], "動かして、1つずつ たしかめよう"),
   u120k2_048_a: show([
     { note: "おわりの かたちは 3つ。とめる・はねる・はらう。", add: [...fresh(lb(160, 40, "字の おわりかた", 24, C.red, 'middle', true),lb(160, 95, "とめる", 28, C.blue, 'middle', true),lb(160, 140, "はねる", 28, C.main, 'middle', true),lb(160, 185, "はらう", 28, C.red, 'middle', true))] },
@@ -612,6 +613,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "てんの いちを かえると、ちがう 字に なる。", add: [...fresh(lb(160, 45, "大 ＋ 下に てん ＝ 太（ふと）", 20, C.blue, 'middle', true),lb(160, 100, "大 ＋ 右上に てん ＝ 犬", 25, C.red, 'middle', true),lb(160, 155, "王 ＋ てん ＝ 玉", 26, C.main, 'middle', true),lb(160, 205, "てんの いちを 見よう", 18, C.ink, 'middle', true))] },
     { note: "しんにょうの 字。しんにょうは 3かく、てんは 1つ。", add: [...fresh(lb(160, 40, "近（7）　道（12）", 28, C.blue, 'middle', true),lb(160, 95, "通（10）　週（11）", 28, C.blue, 'middle', true),lb(160, 150, "遠（13）", 28, C.blue, 'middle', true),lb(160, 200, "左下の しんにょうに 気を つけよう", 16, C.ink, 'middle', true))] },
     { note: "「木」に 1本 足して「本」。かくすうは いくつ？", add: [...fresh(lb(160, 55, "木 ＝ 4かく", 30, C.blue, 'middle', true),lb(160, 115, "本 ＝ 木 ＋ 1本", 30, C.blue, 'middle', true),lb(160, 175, "4 ＋ 1 ＝ ？", 28, C.red, 'middle', true))] },
+    { note: "答（こた）え：5かく。足した 1本ぶん ふえる。", add: [...fresh(lb(160, 80, "木 ＝ 4かく", 32, C.blue, 'middle', true),lb(160, 140, "本 ＝ 5かく", 34, C.red, 'middle', true),lb(160, 195, "4 ＋ 1 ＝ 5", 22, C.ink, 'middle', true))] },
   ], "動かして、1つずつ たしかめよう"),
   u120k2_049_a: show([
     { note: "まわりの ものには、ぜんぶ なまえが あるよ。", add: [...fresh(lb(160, 45, "ひと　どうぶつ", 28, C.blue, 'middle', true),lb(160, 100, "たべもの　ばしょ", 28, C.blue, 'middle', true),lb(160, 160, "ぜんぶ なまえが ある", 22, C.red, 'middle', true))] },
