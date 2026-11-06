@@ -300,6 +300,7 @@ export default function TextbookScreen() {
             { g: null as GradeKey | null, label: 'ふつうの 単元' },
             { g: 'e1' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小1の 国語' : '🌱 小1の 算数' },
             { g: 'e2' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小2の 国語' : '🌱 小2の 算数' },
+            ...(selectedSubject === 'sansu' ? [{ g: 'e3' as GradeKey | null, label: '🌱 小3の 算数' }] : []),
           ]).map((t) => (
             <TouchableOpacity
               key={t.label}

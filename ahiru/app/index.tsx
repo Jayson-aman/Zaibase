@@ -28,7 +28,7 @@ const CHOICES: {
   {
     key: 'chugaku',
     label: '中学受験',
-    target: '小学生（1〜2年の算数・4〜6年）',
+    target: '小学生（1〜3年の算数・1〜2年の国語・4〜6年）',
     detail: '算数・国語・理科・社会・英語',
     color: '#B5622E',
     emoji: '🎒',
