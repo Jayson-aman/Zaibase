@@ -185,7 +185,7 @@ color という語だけ見て、疑問詞を Which などと混ぜてしまう�
     examType: 'chugaku',
     difficulty: 'basic',
     question: "空所に入る最も適切な語を選びなさい。\n「______ quiet in the library.」",
-    choices: ["① Are", "② Is", "③ Be", "④ Do"],
+    choices: ["① Are", "② Is", "③ Be", "④ You"],
     answer: "③ Be",
     hint: "「〜しなさい」と命令する文は、主語を言わず、動詞の原形から始めるよ。be動詞の原形は？",
     explanation: `【何を聞かれているか】
@@ -207,7 +207,7 @@ color という語だけ見て、疑問詞を Which などと混ぜてしまう�
 ③ Be（Be quiet in the library.）
 
 【確かめ】
-「図書館では静かにしなさい」と自然な命令文になります。Are・Is は主語が必要で、Do は一般動詞の命令文に使う語なので、quiet（形容詞）の前には入りません。
+「図書館では静かにしなさい」と自然な命令文になります。Are・Is は主語が必要で、You を最初に置くと「あなたは図書館で静か」という文のかたちになり、「〜しなさい」という命令の意味になりません。
 
 【よくあるまちがい】
 Are quiet と書いてしまうことです。「Are you quiet?（あなたは静かですか）」という疑問文になってしまいます。命令文では be動詞も原形 Be にします。`,
@@ -437,7 +437,7 @@ How many pen と単数のままにすることです。How many のあとは複�
 空所に入る動詞の形を選びます。「きのう、私は友だちとサッカーをしました」という文です。
 
 【なぜそうなるのか】
-yesterday（きのう）は過去を表す言葉なので、動詞を過去形にします。ふつうの動詞の過去形は、語の終わりに ed をつけます（play → played）。過去形は主語が何でも同じ形なので、三単現の s のような区別は要りません。
+yesterday（きのう）は過去を表す言葉なので、動詞を過去形にします。ふつうの動詞の過去形は、語の終わりに ed をつけます（play → played）。過去形は主語が何でも同じ形なので、三単現（さんたんげん）の s のような区別は要りません。
 
 【ステップ1】
 yesterday があるので、過去の話だとわかります。
@@ -487,7 +487,7 @@ We went to the zoo last Saturday. と読みます。
 ③ went（We went to the zoo last Saturday.）
 
 【確かめ】
-「この前の土曜日に動物園へ行きました」と過去の文になります。go は現在形、goes は三単現、gone は完了などで使う別の形で、ここでは合いません。
+「この前の土曜日に動物園へ行きました」と過去の文になります。go は現在形、goes は三単現（さんたんげん）、gone は完了などで使う別の形で、ここでは合いません。
 
 【よくあるまちがい】
 goed と書いてしまうことです。go のような不規則動詞に ed はつけません。`,
@@ -577,7 +577,7 @@ Yes, he plays. と動詞をくり返してしまうことです。短い答え�
 空所に入る動詞の形を選びます。「私は来週、祖母をたずねるつもりです」という文です。
 
 【なぜそうなるのか】
-will は「〜するつもりだ・〜だろう」と未来のことを言う助動詞です。can と同じなかまで、あとに続く動詞は主語が何でも原形（何もつかない形）を使います。will がすでに未来の意味を持っているので、動詞の形は変えません。
+will は「〜するつもりだ・〜だろう」と未来のことを言う助動詞（じょどうし）です。can と同じなかまで、あとに続く動詞は主語が何でも原形（何もつかない形）を使います。will がすでに未来の意味を持っているので、動詞の形は変えません。
 
 【ステップ1】
 next week（来週）があり、will があるので、未来の文です。
@@ -592,7 +592,7 @@ I will visit my grandmother next week. と書きます。
 ③ visit（I will visit my grandmother next week.）
 
 【確かめ】
-「来週、祖母をたずねるつもりです」と自然です。visits は三単現、visited は過去形、visiting は ing 形で、will のあとには置けません。
+「来週、祖母をたずねるつもりです」と自然です。visits は三単現（さんたんげん）、visited は過去形、visiting は ing 形で、will のあとには置けません。
 
 【よくあるまちがい】
 will のあとに visited や visiting を置くことです。will ＋ 動詞の原形、と決めておきましょう。`,
@@ -926,7 +926,7 @@ half past nine を、10時30分（次の時刻のほう）と読んでしまう�
 「〜しません」という否定文をつくる語を選びます。主語が1人のときの形を問う問題です。
 
 【なぜそうなるのか】
-一般動詞の否定文は、動詞の前に do not（don't）か does not（doesn't）を置きます。主語が he・she・it など1人（三人称単数）のときは doesn't、それ以外（I・you・複数）のときは don't を使います。doesn't の中に三単現の s の働きがあるので、あとの動詞は原形（watch）にします。
+一般動詞の否定文は、動詞の前に do not（don't）か does not（doesn't）を置きます。主語が he・she・it など1人（三人称単数＝さんにんしょうたんすう）のときは doesn't、それ以外（I・you・複数）のときは don't を使います。doesn't の中に三単現の s の働きがあるので、あとの動詞は原形（watch）にします。
 
 【ステップ1】
 watch は一般動詞なので、否定は don't または doesn't を使います。
@@ -998,7 +998,7 @@ When your birthday is? のように、日本語の順でならべてしまうこ
 be動詞の疑問文（Are you ～?）には、be動詞を使って答えます。質問の主語は you ですが、答える人は自分（I）のことを言うので、主語を I に変え、I に合う be動詞 am を使います。Do ～? の質問に do で答えるのと同じで、質問と同じなかまの語で答えるのがきまりです。
 
 【ステップ1】
-質問は Are you studying ～? です。be動詞（are）で始まる現在進行形の疑問文です。
+質問は Are you studying ～? です。be動詞（are）で始まる現在進行形（げんざいしんこうけい）の疑問文です。
 
 【ステップ2】
 答えるとき、you は I に変わります。I に合う be動詞は am です。
@@ -1030,7 +1030,7 @@ Yes, I am. は「はい、しています」と自然な答えです。do は一
 空所に入る be動詞を選びます。「テーブルの下にネコが2ひきいます」という文です。
 
 【なぜそうなるのか】
-There is ～／There are ～ は、「〜がいる・ある」と存在を表す言い方です。There のあとの be動詞は、後ろにある名詞の数で決まります。1つ・1人なら is、2つ以上なら are です。主語にあたるのは There ではなく、あとの two cats だからです。
+There is ～／There are ～ は、「〜がいる・ある」と存在（そんざい）を表す言い方です。There のあとの be動詞は、後ろにある名詞の数で決まります。1つ・1人なら is、2つ以上なら are です。主語にあたるのは There ではなく、あとの two cats だからです。
 
 【ステップ1】
 「〜がいる」を表す There ＋ be動詞 の文だとたしかめます。
@@ -1100,7 +1100,7 @@ No, I don't. と現在の形で答えてしまうことです。質問が過去�
 空所に入る語の形を選びます。「私は姉よりじょうずにピアノをひきます」という文です。
 
 【なぜそうなるのか】
-than があるので、2人をくらべる比較級を使います。「じょうずに」は副詞 well で、well の比較級は better です。good（よい）も比較級は better ですが、「じょうずに ひく」のように動詞を説明するときは well を使うので、元の形は well です。good・well の比較級は、どちらも er ではなく better になる特別な形です。
+than があるので、2人をくらべる比較級を使います。「じょうずに」は副詞（ふくし）well で、well の比較級は better です。good（よい）も比較級は better ですが、「じょうずに ひく」のように動詞を説明するときは well を使うので、元の形は well です。good・well の比較級は、どちらも er ではなく better になる特別な形です。
 
 【ステップ1】
 than があるので、2人をくらべる文だとわかります。比較級が必要です。
@@ -1198,7 +1198,7 @@ Ken is as tall as Tom. と書きます。
     subject: 'eigo',
     examType: 'chugaku',
     difficulty: 'advanced',
-    passage: "[英文を読んで答えなさい]\nMs. Green is our English teacher. She comes from Canada. She came to Japan three years ago. She likes sushi, but she doesn't like natto. Her class is fun, because we sing songs and play games. We like her very much.",
+    passage: "[英文を読んで答えなさい]\nMs. Green is our English teacher. She comes from Canada. She came to Japan three years ago. She likes sushi, but she doesn't like natto. Her class is fun because we sing songs and play games. We like her very much.",
     question: "本文の内容に合うものを選びなさい。",
     choices: ["① グリーン先生は3年前に日本に来た。", "② グリーン先生は寿司がきらいだ。", "③ グリーン先生はアメリカ出身だ。", "④ 授業では歌もゲームもしない。"],
     answer: "① グリーン先生は3年前に日本に来た。",
@@ -1241,7 +1241,7 @@ Ken is as tall as Tom. と書きます。
 5つの語（句）をならべかえて、「ユキは日曜日に図書館へ行きます」という英文をつくります。
 
 【なぜそうなるのか】
-英語の文は、「だれが → どうする → どこへ → いつ」の順にならぶことが多いです。ユキは1人（三人称単数）なので、go は goes の形になっています。「どこへ」を表す to the library は動詞のすぐあとに置き、「いつ」を表す on Sundays は文の終わりに置きます。
+英語の文は、「だれが → どうする → どこへ → いつ」の順にならぶことが多いです。ユキは1人（三人称単数＝さんにんしょうたんすう）なので、go は goes の形になっています。「どこへ」を表す to the library は動詞のすぐあとに置き、「いつ」を表す on Sundays は文の終わりに置きます。
 
 【ステップ1】
 文の最初は大文字の Yuki（主語）です。つぎに動詞 goes を置きます。Yuki goes
@@ -1380,7 +1380,7 @@ I am fine. を選んでしまうことです。fine は How are you? の答え�
 空所に入る形を選びます。「私は新しい自転車を持ちたい（ほしい）」という文です。
 
 【なぜそうなるのか】
-want は「〜したい」という意味で、あとに動詞を続けるときは、to ＋ 動詞の原形（）の形にします。want to ～ で1つのまとまりとして覚えます。want 自体は「ほしい」という気持ちを表し、to ～ で「何をしたいか」を表すしくみです。
+want は「〜したい」という意味で、あとに動詞を続けるときは、to ＋ 動詞の原形（have など）の形にします。want to ～ で1つのまとまりとして覚えます。want 自体は「ほしい」という気持ちを表し、to ～ で「何をしたいか」を表すしくみです。
 
 【ステップ1】
 want のあとに動詞（have）を続ける文だとたしかめます。
@@ -1395,7 +1395,7 @@ I want to have a new bike. と書きます。「新しい自転車を持ちた�
 ② to have（I want to have a new bike.）
 
 【確かめ】
-「新しい自転車を持ちたい」と自然な文です。have だけでは want と動詞が to なしでつながり、having は ing 形、has は三単現で、want のあとには置けません。
+「新しい自転車を持ちたい」と自然な文です。have だけでは want と動詞が to なしでつながり、having は ing 形、has は三単現（さんたんげん）で、want のあとには置けません。
 
 【よくあるまちがい】
 I want have と、to を落としてしまうことです。want のあとの動詞には to が必要です。`,

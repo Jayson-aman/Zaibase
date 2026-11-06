@@ -96,6 +96,16 @@ import { moshi202611ChugakuSansu } from './moshi_2026_11_chugaku_sansu';
 import { moshi202611KokoSansu } from './moshi_2026_11_koko_sansu';
 import { moshi202611ChugakuRika } from './moshi_2026_11_chugaku_rika';
 import { moshi202611KokoRika } from './moshi_2026_11_koko_rika';
+import { moshi202611ChugakuKokugo2 } from './moshi_2026_11_chugaku_kokugo_2';
+import { moshi202611KokoKokugo2 } from './moshi_2026_11_koko_kokugo_2';
+import { moshi202611ChugakuEigo2 } from './moshi_2026_11_chugaku_eigo_2';
+import { moshi202611KokoEigo2 } from './moshi_2026_11_koko_eigo_2';
+import { moshi202611ChugakuShakai2 } from './moshi_2026_11_chugaku_shakai_2';
+import { moshi202611KokoShakai2 } from './moshi_2026_11_koko_shakai_2';
+import { moshi202611ChugakuSansu2 } from './moshi_2026_11_chugaku_sansu_2';
+import { moshi202611KokoSansu2 } from './moshi_2026_11_koko_sansu_2';
+import { moshi202611ChugakuRika2 } from './moshi_2026_11_chugaku_rika_2';
+import { moshi202611KokoRika2 } from './moshi_2026_11_koko_rika_2';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -3684,6 +3694,16 @@ const baseQuestions: Question[] = [
   ...moshi202611KokoSansu,
   ...moshi202611ChugakuRika,
   ...moshi202611KokoRika,
+  ...moshi202611ChugakuKokugo2,
+  ...moshi202611KokoKokugo2,
+  ...moshi202611ChugakuEigo2,
+  ...moshi202611KokoEigo2,
+  ...moshi202611ChugakuShakai2,
+  ...moshi202611KokoShakai2,
+  ...moshi202611ChugakuSansu2,
+  ...moshi202611KokoSansu2,
+  ...moshi202611ChugakuRika2,
+  ...moshi202611KokoRika2,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,

@@ -196,6 +196,24 @@ export function acceptedAnswers(answer: string): string[] {
     if (n) out.add(n);
   };
   add(raw);
+  // ⚠️ 因数分解の答え「3(x−6)(x＋2)」のかっこは言いかえではなく式そのもの。
+  //    かっこの外（「3」）や中（「x−6」）だけで○にしてはいけない（実際に「3」だけで○になった）。
+  //    半角かっこが英数字や「)」にくっついていて、中が式（英字か演算子を含み、日本語や単位だけではない）なら、
+  //    かっこの外だけ・中だけの登録はしない。
+  const algebra = [...toHalfWidth(raw).matchAll(/[A-Za-z0-9)]\(([^()]*)\)/g)].some((m) => {
+    const inner = m[1].trim();
+    return (
+      /^[A-Za-z0-9+\-−×÷*\/^\s²³.,=]+$/.test(inner) &&
+      /[A-Za-z+\-−×÷*\/^]/.test(inner) &&
+      !UNIT_ONLY.test(normalize(inner))
+    );
+  });
+  if (algebra) {
+    const eqA = raw.match(/^[a-zA-Zａ-ｚＡ-Ｚ]\s*[=＝]\s*([^、，,=＝]+)$/);
+    if (eqA) add(eqA[1]);
+    add(raw.replace(/(?:です|でした|になる|になります|である)。?$/u, ''));
+    return [...out];
+  }
   // かっこの外だけ／かっこの中だけ
   const outside = raw.replace(/[（(][^）)]*[）)]/g, '').trim();
   if (outside) add(outside);
@@ -335,7 +353,21 @@ export function judge(input: string, answer: string, questionText?: string): Jud
   if (lhs && !/=/.test(normalize(answer))) {
     for (const ok of oks) if (lhs[1] === ok || stripTailPunct(lhs[1]) === stripTailPunct(ok)) return 'correct';
   }
-  return isProse(answer) ? 'review' : 'wrong';
+  return isProse(answer) || isFreeEnglishSentence(answer, questionText) ? 'review' : 'wrong';
+}
+
+/**
+ * 和文英訳のように「ほかの言い方でも正解になりうる英文」の答えか。
+ * 英単語4語以上の文で、語を並べかえる問題（[ ] で語を示す・「並べかえ」）ではないとき。
+ * 並べかえは正解が1通りなので、ちがえば×のままにする。
+ */
+function isFreeEnglishSentence(answer: string, questionText?: string): boolean {
+  const a = String(answer ?? '').trim();
+  if (!/^[A-Za-z][A-Za-z0-9'’,.!? -]*$/.test(a)) return false;
+  if (a.split(/\s+/).length < 4) return false;
+  const q = String(questionText ?? '');
+  if (/[\[［]/.test(q) || /並べ(?:か|替)/.test(q)) return false;
+  return true;
 }
 
 /**
