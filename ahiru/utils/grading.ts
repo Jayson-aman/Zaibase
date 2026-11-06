@@ -196,6 +196,24 @@ export function acceptedAnswers(answer: string): string[] {
     if (n) out.add(n);
   };
   add(raw);
+  // ⚠️ 因数分解の答え「3(x−6)(x＋2)」のかっこは言いかえではなく式そのもの。
+  //    かっこの外（「3」）や中（「x−6」）だけで○にしてはいけない（実際に「3」だけで○になった）。
+  //    半角かっこが英数字や「)」にくっついていて、中が式（英字か演算子を含み、日本語や単位だけではない）なら、
+  //    かっこの外だけ・中だけの登録はしない。
+  const algebra = [...toHalfWidth(raw).matchAll(/[A-Za-z0-9)]\(([^()]*)\)/g)].some((m) => {
+    const inner = m[1].trim();
+    return (
+      /^[A-Za-z0-9+\-−×÷*\/^\s²³.,=]+$/.test(inner) &&
+      /[A-Za-z+\-−×÷*\/^]/.test(inner) &&
+      !UNIT_ONLY.test(normalize(inner))
+    );
+  });
+  if (algebra) {
+    const eqA = raw.match(/^[a-zA-Zａ-ｚＡ-Ｚ]\s*[=＝]\s*([^、，,=＝]+)$/);
+    if (eqA) add(eqA[1]);
+    add(raw.replace(/(?:です|でした|になる|になります|である)。?$/u, ''));
+    return [...out];
+  }
   // かっこの外だけ／かっこの中だけ
   const outside = raw.replace(/[（(][^）)]*[）)]/g, '').trim();
   if (outside) add(outside);
