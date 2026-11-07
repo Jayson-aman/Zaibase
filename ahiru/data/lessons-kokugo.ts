@@ -21,6 +21,7 @@ import { lessonsNew20E6Kokugo } from './lessons-new20-e6-kokugo';
 import { lessonsU120E1Kokugo } from './lessons-u120-e1-kokugo';
 import { lessonsU120E2Kokugo } from './lessons-u120-e2-kokugo';
 import { lessonsU120E3Kokugo } from './lessons-u120-e3-kokugo';
+import { lessonsU120E4Kokugo } from './lessons-u120-e4-kokugo';
 
 const kokugoOverviewLessons: Lesson[] = [
   {
@@ -4198,4 +4199,5 @@ export const kokugoLessons: Lesson[] = [
   ...lessonsU120E1Kokugo,
   ...lessonsU120E2Kokugo,
   ...lessonsU120E3Kokugo,
+  ...lessonsU120E4Kokugo,
 ];

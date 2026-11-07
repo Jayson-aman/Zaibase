@@ -49,6 +49,7 @@ import { lessonsU120E3Sansu } from '../data/lessons-u120-e3-sansu';
 import { lessonsU120E1Kokugo } from '../data/lessons-u120-e1-kokugo';
 import { lessonsU120E2Kokugo } from '../data/lessons-u120-e2-kokugo';
 import { lessonsU120E3Kokugo } from '../data/lessons-u120-e3-kokugo';
+import { lessonsU120E4Kokugo } from '../data/lessons-u120-e4-kokugo';
 import { lessonsU120E3Rika } from '../data/lessons-u120-e3-rika';
 import { lessonsU120E3Shakai } from '../data/lessons-u120-e3-shakai';
 
@@ -92,6 +93,7 @@ const CLUSTERS = [
   lessonsU120E1Kokugo,
   lessonsU120E2Kokugo,
   lessonsU120E3Kokugo,
+  lessonsU120E4Kokugo,
   lessonsU120E3Rika,
   lessonsU120E3Shakai,
 ];
@@ -101,7 +103,7 @@ function genNew20Ids(): string {
   const locked: string[] = [];
   for (const cluster of CLUSTERS) {
     const sorted = [...cluster].sort((a, b) => a.order - b.order);
-    sorted.forEach((lesson, idx) => (idx < (lesson.id.startsWith('u120_') ? FREE_UNITS_LOW_GRADE : FREE_UNITS_PER_CLUSTER) ? free : locked).push(lesson.id));
+    sorted.forEach((lesson, idx) => (idx < (/^u120_e[123]_/.test(lesson.id) ? FREE_UNITS_LOW_GRADE : FREE_UNITS_PER_CLUSTER) ? free : locked).push(lesson.id));
   }
   const list = (arr: string[]) => arr.map((id) => `  '${id}',`).join('\n');
   return `// scripts/gen-static-data.ts が自動生成する。手で直さない（npm run gen:static で作り直す）。
