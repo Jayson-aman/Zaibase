@@ -207,6 +207,7 @@ import { lessonFigsU120CalcTrivia } from './lesson-figs-calc-trivia';
 import { lessonFigsU120E1Kokugo } from './lesson-figs-u120-e1-kokugo';
 import { lessonFigsU120E2Kokugo } from './lesson-figs-u120-e2-kokugo';
 import { lessonFigsU120E3Kokugo } from './lesson-figs-u120-e3-kokugo';
+import { lessonFigsU120E4Kokugo } from './lesson-figs-u120-e4-kokugo';
 import { lessonFigsU120E3Rika } from './lesson-figs-u120-e3-rika';
 import { lessonFigsU120E3Shakai } from './lesson-figs-u120-e3-shakai';
 import { lessonFigsNew20J2Eigo } from './lesson-figs-new20-j2-eigo';
@@ -264,6 +265,7 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsU120E1Kokugo,
   ...lessonFigsU120E2Kokugo,
   ...lessonFigsU120E3Kokugo,
+  ...lessonFigsU120E4Kokugo,
   ...lessonFigsU120E3Rika,
   ...lessonFigsU120E3Shakai,
   ...lessonFigsNew20J2Eigo,
