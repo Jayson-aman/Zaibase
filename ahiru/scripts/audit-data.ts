@@ -21,6 +21,7 @@ import { TEIKI_Q_PER_CELL } from '../data/teiki-questions/types';
 import { judge } from '../utils/grading';
 import { REVIEW_BLOCKS } from '../data/review-blocks';
 import { getMangaScript } from '../data/manga-scripts';
+import { MANGA_IMAGES } from '../data/manga-images';
 import { questions } from '../data/questions';
 import { explanationText } from '../utils/explanation';
 import { quickTricks } from '../data/quick-tricks';
@@ -96,6 +97,20 @@ check(
   ),
 );
 // 同じ台本を2か所から指していたら、どちらかが結線ミス
+// マンガのイラスト対応表（data/manga-images.ts）：台本が無い・コマの番号が範囲外・画像ファイルが無い、を見張る
+{
+  const bad: string[] = [];
+  for (const [mid, panels] of Object.entries(MANGA_IMAGES)) {
+    const sc = getMangaScript(mid);
+    if (!sc) { bad.push(`${mid}:台本なし`); continue; }
+    for (const [idx, file] of Object.entries(panels)) {
+      if (Number(idx) < 0 || Number(idx) >= sc.panels.length) bad.push(`${mid}:コマ${idx}は範囲外`);
+      const fp = path.join(__dirname.includes('scripts') ? path.join(__dirname, '..') : process.cwd(), 'public', 'manga', file);
+      if (!fs.existsSync(fp) && !fs.existsSync(path.join(process.cwd(), 'public', 'manga', file))) bad.push(`${mid}:画像なし ${file}`);
+    }
+  }
+  check('マンガのイラスト対応表の食いちがい', bad);
+}
 const mangaIds = L.flatMap((l) => (l.sections ?? []).map((s: any) => s.mangaId).filter(Boolean));
 check('同じマンガを複数の節が参照', dupes(mangaIds as string[]));
 
