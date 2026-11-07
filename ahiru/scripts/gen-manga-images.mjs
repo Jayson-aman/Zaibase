@@ -20,6 +20,6 @@ for (const id of Object.keys(merged).sort()) {
 }
 const file = 'data/manga-images.ts';
 let src = fs.readFileSync(file, 'utf8');
-src = src.replace(/export const MANGA_IMAGES: Record<string, Record<number, string>> = \{[\s\S]*?\n\};/, `export const MANGA_IMAGES: Record<string, Record<number, string>> = {\n${lines.join('\n')}${lines.length ? '\n' : ''}};`);
+src = src.replace(/export const MANGA_IMAGES: Record<string, Record<number, string>> = \{[\s\S]*?\};/, `export const MANGA_IMAGES: Record<string, Record<number, string>> = {\n${lines.join('\n')}${lines.length ? '\n' : ''}};`);
 fs.writeFileSync(file, src);
 console.log('ok', Object.keys(merged).length, 'マンガ,', n, 'コマ');
