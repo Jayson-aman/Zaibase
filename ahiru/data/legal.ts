@@ -26,7 +26,7 @@ export type LegalSection = {
 export const TERMS_UPDATED = '2026年10月7日';
 export const PRIVACY_UPDATED = '2026年10月7日';
 export const TOKUSHO_UPDATED = '2026年10月7日';
-export const CREDITS_UPDATED = '2026年11月5日';
+export const CREDITS_UPDATED = '2026年11月7日';
 
 export const ahiruTerms: LegalSection[] = [
   {
@@ -405,6 +405,12 @@ export const ahiruCredits: LegalSection[] = [
       'Make Me a Hanzi（https://github.com/skishore/makemeahanzi）',
       'hanzi-writer-data-jp（https://github.com/chanind/hanzi-writer-data-jp）',
       'Arphic Public License 全文（https://exam.zaibase.group/licenses/ARPHICPL.TXT）',
+    ],
+  },
+  {
+    heading: 'マンガのイラスト',
+    paragraphs: [
+      '一部の「マンガ解説」に添えているイラストは、Google の画像生成AI（Gemini）で作成したものです。実在の人物・作品を描いたものではありません。生成した絵は、内容が教科書の説明と合っているかを当社が確認してから掲載しています。',
     ],
   },
   {

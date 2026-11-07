@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Image, Platform } from 'react-native';
 import type { MangaScript, MangaSpeaker } from '../data/manga-types';
 import type { SubjectKey } from '../data/questions-meta';
 import FeedbackForm from './FeedbackForm';
 import { rich } from './RichText';
+import { MANGA_IMAGES, mangaImageUrl } from '../data/manga-images';
 
 type SpeakerInfo = {
   name: string;
@@ -35,12 +36,16 @@ type Props = {
 export default function MangaDialogue({ script, context }: Props) {
   const [index, setIndex] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
+  const [badImages, setBadImages] = useState<Record<string, boolean>>({});
   const panel = script.panels[index];
   // コマが空の台本でも落ちないようにする
   if (panel == null) return null;
   const info = SPEAKERS[panel.speaker];
   const total = script.panels.length;
   const isLast = index >= total - 1;
+  // このコマに添えるイラスト（AIで作成）。読みこめなかったときは出さない
+  const imageFile = MANGA_IMAGES[script.id]?.[index];
+  const showImage = imageFile != null && !badImages[`${script.id}:${index}`];
 
   return (
     <View style={styles.container}>
@@ -58,6 +63,15 @@ export default function MangaDialogue({ script, context }: Props) {
         ))}
       </View>
 
+      {showImage && (
+        <Image
+          source={{ uri: mangaImageUrl(imageFile as string, Platform.OS === 'web') }}
+          style={styles.panelImage}
+          resizeMode="cover"
+          accessibilityLabel="マンガのイラスト"
+          onError={() => setBadImages((m) => ({ ...m, [`${script.id}:${index}`]: true }))}
+        />
+      )}
       <View
         style={[
           styles.panel,
@@ -164,6 +178,13 @@ const styles = StyleSheet.create({
   },
   dotDone: { backgroundColor: '#C7B9A6' },
   dotActive: { backgroundColor: '#B5622E' },
+  panelImage: {
+    width: '100%',
+    aspectRatio: 1,
+    borderRadius: 12,
+    marginBottom: 8,
+    backgroundColor: '#EFE7DA',
+  },
   panel: {
     borderRadius: 12,
     borderWidth: 1.5,
