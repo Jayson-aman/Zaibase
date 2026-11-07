@@ -940,7 +940,7 @@ export const COUNTS_GENERAL: Record<string, number> = {
   "shakai|chugaku|basic": 286,
   "shakai|chugaku|standard": 427,
   "shakai|koko|advanced": 350,
-  "shakai|koko|all": 930,
-  "shakai|koko|basic": 244,
-  "shakai|koko|standard": 336,
+  "shakai|koko|all": 1012,
+  "shakai|koko|basic": 289,
+  "shakai|koko|standard": 373,
 };
