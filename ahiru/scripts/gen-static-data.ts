@@ -46,6 +46,7 @@ import { lessonsNew20J3Shakai } from '../data/lessons-new20-j3-shakai';
 import { lessonsU120E1Sansu } from '../data/lessons-u120-e1-sansu';
 import { lessonsU120E2Sansu } from '../data/lessons-u120-e2-sansu';
 import { lessonsU120E3Sansu } from '../data/lessons-u120-e3-sansu';
+import { lessonsU120E4Sansu } from '../data/lessons-u120-e4-sansu';
 import { lessonsU120E1Kokugo } from '../data/lessons-u120-e1-kokugo';
 import { lessonsU120E2Kokugo } from '../data/lessons-u120-e2-kokugo';
 import { lessonsU120E3Kokugo } from '../data/lessons-u120-e3-kokugo';
@@ -90,6 +91,7 @@ const CLUSTERS = [
   lessonsU120E1Sansu,
   lessonsU120E2Sansu,
   lessonsU120E3Sansu,
+  lessonsU120E4Sansu,
   lessonsU120E1Kokugo,
   lessonsU120E2Kokugo,
   lessonsU120E3Kokugo,
