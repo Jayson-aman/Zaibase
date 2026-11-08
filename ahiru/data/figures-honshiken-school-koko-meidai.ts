@@ -291,7 +291,7 @@ const s_r01: Figure = show([
 
 // 02 音の反射
 const s_r02: Figure = show([
-  SF('岩壁に近づく船が汽笛を鳴らし、4.0秒後に反射音が聞こえた。その間に船は40m進んだ。鳴らした地点から岩壁までの距離を求める。', ['音の速さ340m/s　4.0秒　船は40m進む'], [
+  SF('岩壁に近づく船が汽笛を鳴らし、4.0秒後に反射音が聞こえた。その間に船は40m進んだ。鳴らした地点から岩壁までの距離を求める。', ['340m/s　4.0秒　船は40m進む'], [
     ln(285, 30, 285, 124, C.ink, false, 4), tx(285, 24, '岩壁', 11, C.ink), bx(22, 50, 24, 18, '船', C.blue, FILL.blue, 11), tx(34, 82, '鳴らす', 10, C.blue),
   ]),
   S('音は岩壁まで進む（往路）。鳴らした地点から岩壁までを d m とする。', ['往路　d m'], [ar(48, 59, 282, 59, C.red), tx(165, 52, '往路 d', 11, C.red)]),
@@ -465,12 +465,12 @@ const skyPt = (a: number): V => [skyC[0] + skyR * Math.cos((a * Math.PI) / 180),
 const starAt = (a: number, col: string): E => { const p = skyPt(a); return ci(p[0], p[1], 6, undefined, col, col); };
 const s_r12: Figure = show([
   SF('午後8時にオリオン座が真南で南中した。星の日周運動は1時間15°、年周運動は1か月で約30°。南の空を、東（左）から西（右）へ見る。', ['午後8時　南中'], [
-    ...curve(arcPts(skyC[0], skyC[1], skyR, 0, 180, 36), C.gray, 1.5), ln(20, 124, 300, 124, C.gray, false, 1.5), tx(54, 118, '東', 12, C.ink), tx(266, 118, '西', 12, C.ink), tx(160, 144 - 20, '南の空', 10, C.gray),
+    ...curve(arcPts(skyC[0], skyC[1], skyR, 0, 180, 36), C.gray, 1.5), ln(20, 124, 300, 124, C.gray, false, 1.5), tx(54, 118, '東', 12, C.ink), tx(266, 118, '西', 12, C.ink), tx(160, 138, '南の空', 10, C.gray),
     starAt(90, C.red), tx(160, 16, '午後8時（南中）', 11, C.red),
   ]),
   S('(1) 同じ日の午後10時は2時間後。15°×2＝30°。星は東から西へ動くので、西へ30°。', ['(1)　15°×2＝30° 西へ'], [...curve(arcPts(skyC[0], skyC[1], skyR, 60, 90, 8), C.red, 3), starAt(60, C.red), tx(skyPt(60)[0] + 10, skyPt(60)[1] + 2, '午後10時', 10, C.red, true, 'start')]),
   S('年周運動：同じ時刻に見える星の位置は、1か月で約30°西へずれる。2か月なら 30°×2＝60°。', ['2か月で 30°×2＝60°']),
-  S('(2) 2か月後の午後8時、星は南中の位置から西へ60°ずれた位置に見える。', ['(2)　西へ60°'], [...curve(arcPts(skyC[0], skyC[1], skyR, 30, 90, 16), C.purple, 3), starAt(30, C.purple), tx(skyPt(30)[0], skyPt(30)[1] + 18, '2か月後の午後8時', 10, C.purple)]),
+  S('(2) 2か月後の午後8時、星は南中の位置から西へ60°ずれた位置に見える。', ['(2)　西へ60°'], [...curve(arcPts(skyC[0], skyC[1], skyR, 30, 90, 16), C.purple, 3), starAt(30, C.purple), tx(skyPt(30)[0] - 12, skyPt(30)[1] + 26, '2か月後の午後8時', 10, C.purple, true, 'end')]),
   S('(3) 西へ60°ずれているのは、南中から 60÷15＝4時間たった位置。南中は4時間前に済んでいる。', ['60÷15＝4時間前']),
   S('南中の時刻は 午後8時−4時間＝午後4時ごろ。', ['=答え　30°、60°、午後4時']),
   S('確かめ。年周運動のため、南中する時刻は1か月で約2時間（30°÷15°）早くなる。2か月で4時間早いので午後4時。', ['1か月で2時間早い', '=2か月で4時間 → 午後4時 ✓']),
@@ -505,7 +505,7 @@ const s_s02: Figure = show([
     bx(10, 24, 140, 34, '東京　1/10 午後1時', C.red, FILL.red, 12), ar(152, 41, 168, 41, C.gray), bx(170, 24, 140, 34, '東京　1/11 午前2時', C.red, FILL.red, 12), tx(160, 16, '13時間の飛行', 10, C.gray),
   ]),
   S('この時刻を、ニューヨークの時刻に直す。14時間遅れなので 1/11 午前2時−14時間。', ['NY ＝ 東京 −14時間'], [ar(240, 60, 240, 84, C.blue), tx(262, 76, '−14時間', 10, C.blue, true, 'start'), bx(170, 88, 140, 34, 'NY　1/10 午後0時', C.blue, FILL.blue, 12)]),
-  S('1月11日午前2時の14時間前は、1月10日の正午（午後0時）。', ['=答え　1月10日 午後0時（正午）']),
+  S('1月11日午前2時の14時間前は、1月10日の正午（午後0時）。', ['=答え　1/10 午後0時（正午）']),
   S('確かめ。出発のとき、ニューヨークは東京より14時間遅れの 1月9日午後11時。そこから13時間飛ぶと 1月10日午後0時。', ['出発時のNY：1/9 午後11時', '=＋13時間＝1/10 午後0時 ✓']),
 ], '時差14時間。東京の1/11 午前2時＝NYの1/10 午後0時。');
 
@@ -549,7 +549,7 @@ const s_s04: Figure = show([
 const bx5 = [40, 130, 220];
 const bar5 = (i: number, pct: number, col: string, fill: string): E => bx(bx5[i], 124 - pct * 2, 50, pct * 2, undefined, col, fill);
 const s_s05: Figure = show([
-  SF('有権者が人口にしめる割合の変化。1890年は約1％、1925年は約20％、1946年は約50％。', ['有権者の割合　約1％→約20％→約50％'], [
+  SF('有権者が人口にしめる割合の変化。1890年は約1％、1925年は約20％、1946年は約50％。', ['有権者 約1％→約20％→約50％'], [
     ln(20, 124, 300, 124, C.gray, false, 1.5),
     bar5(0, 1, C.blue, FILL.blue), bar5(1, 20, C.blue, FILL.blue), bar5(2, 50, C.blue, FILL.blue),
     tx(65, 118, '約1％', 11, C.blue), tx(155, 78, '約20％', 11, C.blue), tx(245, 20, '約50％', 11, C.blue),
@@ -558,7 +558,7 @@ const s_s05: Figure = show([
   S('1925年は、満25歳以上のすべての男子に選挙権が与えられた。納税額による制限がなくなった。', ['1925年：満25歳以上の男子'], [bar5(1, 20, C.red, FILL.red), tx(155, 64, '満25歳以上の男子', 10, C.red)]),
   S('この法律が普通選挙法。', ['1925年　普通選挙法']),
   S('同じ1925年に、社会運動を取りしまる治安維持法も成立した。', ['同じ年に 治安維持法'], [tx(155, 50, '＋治安維持法（同じ年）', 10, C.purple)]),
-  S('1946年は、満20歳以上の男女に選挙権。女性と25歳未満の男子が加わり、割合は約50％になった。', ['1946年：満20歳以上の男女'], [bar5(2, 50, C.green, FILL.green), tx(214, 40, '満20歳以上の男女', 10, C.green, true, 'end')]),
+  S('1946年は、満20歳以上の男女に選挙権。女性と25歳未満の男子が加わり、割合は約50％になった。', ['1946年：満20歳以上の男女'], [bar5(2, 50, C.green, FILL.green), tx(214, 33, '満20歳以上の男女', 10, C.green, true, 'end')]),
   S('(2) 理由は「満20歳以上の男女に選挙権が認められたから」。22字で、25字以内。', ['女性と若い男子が加わった']),
   S('(1) 普通選挙法、治安維持法　(2) 満20歳以上の男女に選挙権が認められたから。', ['=答え　普通選挙法・治安維持法']),
   S('確かめ。1925年の有権者に女性はいない。女性の参政権は1945年の法改正で実現し、1946年の選挙で初めて行使された。', ['1925年は男子のみ', '=女性の参加が割合を大きく上げた ✓']),
@@ -568,7 +568,7 @@ const s_s05: Figure = show([
 const qx = (q: number): number => 44 + q * 3.0;
 const py = (p: number): number => 130 - p * 0.27;
 const s_s06: Figure = show([
-  SF('価格と、買いたい量（需要量）・売りたい量（供給量）の表。価格が100円上がるごとに、需要は20個減り、供給は20個増える。', ['価格が上がる→需要は減り供給は増える'], [
+  SF('価格と、買いたい量（需要量）・売りたい量（供給量）の表。価格が100円上がるごとに、需要は20個減り、供給は20個増える。', ['高くなる→需要は減り供給は増える'], [
     ln(44, 130, 296, 130, C.gray, false, 1.5), ln(44, 130, 44, 12, C.gray, false, 1.5), tx(50, 13, '価格', 10, C.gray, true, 'start'), tx(300, 142, '数量(個)', 10, C.gray, true, 'end'), tx(40, py(400) + 4, '400円', 9, C.gray, true, 'end'), tx(40, py(250) + 4, '250円', 9, C.gray, true, 'end'), tx(40, py(100) + 4, '100円', 9, C.gray, true, 'end'),
   ]),
   S('需要の線。価格100円で70個、200円で50個、300円で30個、400円で10個。右下がりの直線。', ['需要：100円で70個→400円で10個'], [ln(qx(70), py(100), qx(10), py(400), C.blue, false, 2.5), tx(qx(10) + 10, py(400) - 6, '需要', 11, C.blue, true, 'start')]),
@@ -676,3 +676,240 @@ const s_s12: Figure = show([
   S('誤っているのは、エ。', ['=答え　エ']),
   S('確かめ。一九と馬琴は、どちらも化政文化の作家で時期は合っているが、作品がちがう。「膝栗毛＝一九」「八犬伝＝馬琴」とセットで覚える。', ['膝栗毛＝一九　八犬伝＝馬琴', '=エだけが入れかわり ✓']),
 ], '誤りはエ。八犬伝は滝沢馬琴、膝栗毛は十返舎一九。');
+
+// ════════════ 国語 ════════════
+// 04 「れる・られる」の識別
+const meanBox = (i: number, t: string): E => bx(10 + i * 78, 16, 70, 28, t, C.blue, FILL.blue, 12);
+const kRow = (i: number, t: string, col: string, fill: string): E => bx(10, 56 + i * 22, 300, 20, t, col, fill, 11);
+const s_k04: Figure = show([
+  SF('「れる・られる」には4つの意味がある。形は同じでも、文の中で意味が変わる。', ['受け身・可能・自発・尊敬'], [meanBox(0, '受け身'), meanBox(1, '可能'), meanBox(2, '自発'), meanBox(3, '尊敬')]),
+  S('ア「校長先生が話される」。主語は目上の人で、その動作を敬っている。尊敬。', ['ア 目上の人の動作を敬う → 尊敬'], [kRow(0, 'ア 話される ＝ 主語は校長先生 → 尊敬', C.purple, FILL.purple)]),
+  S('イ「昔の友人のことが思い出される」。思い出そうとしなくても、自然に心にうかぶ。自発。', ['イ 自然にそうなる → 自発'], [kRow(1, 'イ 思い出される ＝ 自然にうかぶ → 自発', C.green, FILL.green)]),
+  S('ウ「弟は母にしかられる」。母から動作を受ける。受け身。', ['ウ 動作を受ける → 受け身'], [kRow(2, 'ウ しかられる ＝ 母から受ける → 受け身', C.gray, FILL.gray)]),
+  S('エ「私は一人で朝早く起きられる」。「起きることができる」と言いかえられる。可能。', ['エ「〜できる」に言いかえ → 可能'], [kRow(3, 'エ 起きられる ＝ 起きることができる → 可能', C.red, FILL.red)]),
+  S('「可能」は エ。', ['=答え　エ']),
+  S('確かめ。ア「話すことができる」は意味が変わる。イ「思い出すことができる」も、自然にうかぶという意味とはずれる。言いかえで確かめる。', ['可能＝「〜できる」に言いかえ', '=ア・イ・ウは言いかえると不自然 ✓']),
+], '言いかえ：できる→可能、自然に→自発、敬語→尊敬、受ける→受け身。');
+
+// 05 論説文の記述（辞書と検索）
+const s_k05: Figure = show([
+  SF('「思いがけない出会いは減ってしまう」のはなぜか。第2段落の、辞書と検索のちがいに注目する。', ['辞書 と 検索 のちがい'], [bx(10, 20, 140, 30, '辞書', C.blue, FILL.blue, 14), bx(170, 20, 140, 30, '検索', C.red, FILL.red, 14)]),
+  S('辞書では、目的の語にたどり着くまでに、ほかの語の意味が目に入る。', ['辞書：周りの語も目に入る'], [bx(10, 60, 140, 40, '周りの別の語も\n目に入る', C.blue, FILL.blue, 11)]),
+  S('検索では、知りたいことだけが表示され、それ以外のものは視界に入らない。', ['検索：知りたいことだけ'], [bx(170, 60, 140, 40, '知りたいことだけ\n表示される', C.red, FILL.red, 11)]),
+  S('だから、検索では別の語に興味がわくきっかけがなく、思いがけない出会いが減る。', ['→ 思いがけない出会いが減る'], [ar(80, 102, 130, 112, C.purple), ar(240, 102, 190, 112, C.purple), bx(60, 114, 200, 26, '思いがけない出会いが減る', C.purple, FILL.purple, 12)]),
+  SF('記述は「辞書では〜が、検索は〜から。」の対比の形で、1文にまとめる。', ['「ちがい」は両方を書く'], [bx(8, 40, 126, 50, '辞書では\n周りの語も目に入る', C.blue, FILL.blue, 10), bx(140, 40, 126, 50, '検索は知りたい\nことだけ表示', C.red, FILL.red, 10), bx(272, 40, 40, 50, 'から', C.purple, FILL.purple, 12)]),
+  S('模範解答は55字。「辞書では目的の語の周りにある別の語も目に入るが、検索は知りたいことだけを表示し、それ以外は視界に入らないから。」', ['=答え　対比を1文にまとめる']),
+  S('確かめ。句点まで数えて55字で、60字以内。辞書と検索の両方が入り、理由を表す「から」で終わっている。', ['55字 ＜ 60字', '=辞書と検索の両方 ✓']),
+], '辞書は周りの語も目に入るが、検索は知りたいことだけ。');
+
+// 07 論説文の主旨
+const pRow = (i: number, t: string, col: string, fill: string): E => bx(10, 10 + i * 32, 300, 26, t, col, fill, 11);
+const s_k07: Figure = show([
+  SF('文章全体の筆者の考えを選ぶ。段落ごとの内容を整理する。第1段落。', ['第1段落：便利と考える時間'], [pRow(0, '① 検索は便利だが、考える時間が短くなる', C.blue, FILL.blue)]),
+  S('第2段落：辞書では思いがけない出会いがあるが、検索では減る。', ['第2段落：思いがけない出会いが減る'], [pRow(1, '② 辞書では出会いがあるが、検索では減る', C.blue, FILL.blue)]),
+  S('第3段落：「もちろん」検索を否定しない。問題は使い方にある。', ['第3段落：否定せず、使い方が問題'], [pRow(2, '③ 検索を否定しない。問題は使い方', C.green, FILL.green)]),
+  S('第4段落：何を道具にまかせ、何を自分の頭で引き受けるかを選ぶことが大切。ここが結論。', ['第4段落：結論'], [pRow(3, '④ 何を任せ、何を自分で引き受けるか', C.red, FILL.red)]),
+  S('筆者の主張は、第4段落の「何を道具にまかせ、何を自分で引き受けるかを選ぶこと」。検索を認めたうえでの主張。', ['主張＝認めたうえで、選ぶ']),
+  S('ア「使わないほうがよい」は、第3段落の「否定するつもりはない」と食いちがう。ウ「辞書が正確」は書かれていない。エ「手間をすべて省く」は、省いてはならない手間もあるという第4段落と食いちがう。', ['ア 使わないほうがよい ✗', 'ウ 辞書が正確 ✗　エ すべて省く ✗']),
+  S('正しいのは イ。', ['=答え　イ']),
+  S('確かめ。イは「便利さを認める」（第3段落）と「選ぶことが大切」（第4段落）の両方をふくむ。極端な言い方の選択肢は、まず疑う。', ['イ＝認める＋選ぶ', '=ほかは極端な言い方 ✓']),
+], '筆者の主張：便利さを認めたうえで、何を任せ何を引き受けるかを選ぶ。');
+
+// 08 小説の心情
+const nRow = (i: number, t: string, col: string, fill: string): E => bx(10, 8 + i * 27, 300, 22, t, col, fill, 11);
+const s_k08: Figure = show([
+  S('「咲は唇をかんだ」の直前は、三度目の失敗。ソロの音が裏返った。', ['直前：三度目の失敗'], [nRow(0, '三度目の失敗（音が裏返る）', C.gray, FILL.gray), nRow(1, '咲は唇をかんだ', C.red, FILL.red)]),
+  S('直後の文に理由がある。去年の先輩のソロは、客席のすみずみまで届いていた。', ['直後：先輩の音は届いていた'], [nRow(2, '去年の先輩の音は、すみずみまで届いた', C.blue, FILL.blue)]),
+  S('続けて、自分の音はホールの半分にも届かない気がする、と思っている。先輩と自分をくらべている。', ['自分の音は半分も届かない'], [nRow(3, '自分の音は半分も届かない気がする', C.blue, FILL.blue)]),
+  S('先輩とくらべて足りないと感じる気持ちが、「唇をかむ」に表れている。くやしさと、本番への不安。', ['気持ち＝くやしさ・不安'], [nRow(4, '→ くやしさ・不安', C.purple, FILL.purple)]),
+  SF('記述は「理由（先輩のように届けられない）」と「気持ち（くやしさ・不安）」の2点を、1文にする。', ['理由 ＋ 気持ち'], [bx(10, 40, 140, 50, '先輩のように\n音を届けられず', C.blue, FILL.blue, 11), bx(170, 40, 140, 50, 'くやしさと不安を\n感じている', C.purple, FILL.purple, 11)]),
+  S('模範解答は44字。「先輩のようにホールのすみずみまで音を届けられず、自分の演奏にくやしさと不安を感じている。」', ['=答え　理由＋気持ちを1文に']),
+  S('確かめ。句点まで数えて44字で、50字以内。理由と気持ちの両方が入り、本文にない気持ちは足していない。', ['44字 ＜ 50字', '=理由＋気持ち ✓']),
+], '唇をかむ＝先輩のように届かないくやしさと不安。');
+
+// 10 方丈記
+const hoLines = ['ゆく河の流れは絶えずして、しかももとの水にあらず。', '淀みに浮かぶうたかたは、かつ消えかつ結びて、', '久しくとどまりたるためしなし。', '世の中にある人と栖と、またかくのごとし。'];
+const s_k10: Figure = show([
+  SF('『方丈記』の冒頭。川の流れと泡の例で、この世は移り変わることを述べている。', ['川の流れ・泡 と 人・住まい'], hoLines.map((t, i) => tx(10, 20 + i * 22, t, 11, C.ink, false, 'start'))),
+  S('「ゆく河の流れは絶えずして、しかももとの水にあらず」。川の水は、流れ去って、いつも入れかわる。', ['川の水は入れかわる'], [bx(10, 104, 140, 30, '川の水は入れかわる', C.blue, FILL.blue, 11)]),
+  S('「淀みに浮かぶうたかたは、かつ消えかつ結びて」。泡は、消えると同時にまた生まれ、長くとどまらない。', ['泡は消えては生まれる'], [bx(170, 104, 140, 30, '泡は消えては生まれる', C.blue, FILL.blue, 11)]),
+  S('「かく」は「このように」。直前の、川の流れや泡のようすを指す。', ['「かく」＝川と泡のようす']),
+  SF('「世の中にある人と栖と、またかくのごとし」。人と住まい（栖）も、川の流れや泡と同じ。', ['人と栖も同じ'], [bx(10, 36, 120, 40, '川の流れ・泡', C.blue, FILL.blue, 13), tx(160, 62, '＝', 20, C.ink), bx(190, 36, 120, 40, '人と住まい', C.red, FILL.red, 13), tx(160, 106, '絶えず移り変わる', 14, C.purple)]),
+  S('(1)「ためし」は、名詞で「例・先例」。「久しくとどまりたるためしなし」は、長くとどまる例がない。', ['(1) ためし ＝ 例（先例）']),
+  S('(1) 例（先例）　(2) 世の中の人と住まいも、川の流れや泡のように、絶えず移り変わり続けるということ。（39字）', ['=答え　例／移り変わる']),
+  S('確かめ。(2) は句点まで数えて39字で、40字以内。人と住まい・川の流れ（泡）・絶えず移り変わる、の3要素が入っている。', ['39字 ＜ 40字', '=3つの要素が入っている ✓']),
+], '川の流れも泡も人も住まいも、絶えず移り変わる。');
+
+// 11 春暁
+const poem = ['春眠不覚暁', '処処聞啼鳥', '夜来風雨声', '花落知多少'];
+const poemEls = (): E[] => poem.map((t, i) => tx(20, 28 + i * 26, t, 15, C.ink, true, 'start'));
+const s_k11: Figure = show([
+  SF('孟浩然「春暁」。形式、韻をふむ字、第四句の書き下し文を答える。', ['春暁　孟浩然'], poemEls()),
+  S('(1) 1句が5字で、全部で4句。五言絶句。七言なら1句7字、律詩なら8句。', ['5字×4句＝五言絶句'], [tx(264, 66, '五言絶句', 16, C.blue)]),
+  S('(2) 韻は句の終わりの字でふむ。第1句の暁（ギョウ）、第2句の鳥（チョウ）、第4句の少（ショウ）は、音が「ウ」で終わって響きが合う。', ['句末：暁・鳥・少 が韻をふむ'], [tx(104, 28, '← 暁（ギョウ）', 11, C.red, true, 'start'), tx(104, 54, '← 鳥（チョウ）', 11, C.red, true, 'start'), tx(104, 106, '← 少（ショウ）', 11, C.red, true, 'start')]),
+  S('第3句の声（セイ）は、響きがちがうので韻をふまない。五言絶句では第1・2・4句の末で韻をふむ。', ['声（セイ）は韻をふまない'], [tx(104, 80, '← 声（セイ）×', 11, C.gray, true, 'start')]),
+  SF('(3) 第四句「花落知多少」を書き下す。「花落」は「花落つること」、「知」は「知る」、「多少」は「どれほど」。', ['花落 ＋ 知 ＋ 多少'], [bx(10, 50, 100, 30, '花落つること', C.blue, FILL.blue, 12), bx(116, 50, 60, 30, '知る', C.green, FILL.green, 12), bx(182, 50, 60, 30, '多少', C.purple, FILL.purple, 12), tx(160, 110, '花はどれほど落ちただろうか', 12, C.gray)]),
+  S('(1) 五言絶句　(2) 暁・鳥・少　(3) 花落つること知る多少。', ['=答え　五言絶句・暁鳥少']),
+  S('確かめ。暁・鳥・少は音読みの終わりが「ウ」で響きが合う。第3句の声（セイ）は合わない。意味は「花はどれほど落ちただろうか」。', ['暁ギョウ 鳥チョウ 少ショウ', '=声セイは韻をふまない ✓']),
+], '五言絶句。韻は暁・鳥・少。「花落つること知る多少」。');
+
+// 12 紀友則の和歌
+const waka = ['ひさかたの', '光のどけき', '春の日に', 'しづ心なく', '花の散るらむ'];
+const wakaEls = (): E[] => waka.map((t, i) => tx(20, 24 + i * 24, t, 14, C.ink, true, 'start'));
+const s_k12: Figure = show([
+  SF('紀友則の和歌。枕詞、「しづ心なく」の意味、込められた気持ちを答える。', ['ひさかたの 光のどけき 春の日に…'], wakaEls()),
+  S('(1)「ひさかたの」は、「光」を導く5音の修辞。枕詞という。現代語訳ではふつう訳さない。', ['(1) 特定の語を導く5音 → 枕詞'], [tx(130, 24, '← 枕詞（「光」にかかる）', 11, C.red, true, 'start')]),
+  S('(2)「しづ心」は静かで落ち着いた心。「なく」は否定なので、「落ち着いた心もなく」。', ['(2) 落ち着いた心もなく'], [tx(130, 96, '← 落ち着いた心もなく', 11, C.green, true, 'start')]),
+  S('(3) 日の光がのどかな春の日（静）と、落ち着きなく散る花（動）が対比されている。', ['のどかな春 ⇔ 落ち着きなく散る花'], [tx(130, 48, '← のどか（静）', 11, C.blue, true, 'start'), tx(130, 72, '← のどかな春の日', 11, C.blue, true, 'start'), tx(150, 120, '← 落ち着きなく散る（動）', 11, C.purple, true, 'start')]),
+  S('のどかな日に花が散っていくことを、惜しむ気持ち。', ['対比 → 散る花を惜しむ気持ち']),
+  S('(1) 枕詞　(2) 落ち着いた心もなく　(3) 春ののどかな日に、桜の花が落ち着きなく散っていくことを惜しむ気持ち。（34字）', ['=答え　枕詞・惜しむ気持ち']),
+  S('確かめ。(3) は句点まで数えて34字で、35字以内。のどか／落ち着きなく散る、の対比と、惜しむ気持ちが入っている。', ['34字 ＜ 35字', '=対比＋惜しむ気持ち ✓']),
+], '枕詞「ひさかたの」。のどかな春に散る花を惜しむ。');
+
+// ════════════ 英語 ════════════
+const wbx = (x: number, y: number, t: string, w = 96, col: string = C.blue, fill: string = FILL.blue, size = 14): E => bx(x, y, w, 30, t, col, fill, size);
+// 01 語群から選ぶ
+const s_e01: Figure = show([
+  SF('語群：since / for / who / which / was / were。3つの空所に、1語ずつ入れる。', ['語群から1語ずつ選ぶ'], [
+    wbx(10, 20, 'since'), wbx(112, 20, 'for'), wbx(214, 20, 'who'), wbx(10, 62, 'which'), wbx(112, 62, 'was'), wbx(214, 62, 'were'),
+  ]),
+  SF('(1) I have lived in this town（　）five years.　five years は「どれだけの期間か」を表す。', ['five years は「期間」'], [tx(160, 50, 'I have lived in this town（　）five years.', 12, C.ink), tx(160, 84, 'five years ＝ 5年間（期間）', 13, C.red)]),
+  S('期間には for。since は起点（since 2020 など）に使う。', ['期間 → for（起点なら since）'], [bx(110, 98, 100, 30, 'for', C.green, FILL.green, 15)]),
+  SF('(2) The boy（　）is running over there is my brother.　先行詞は人（The boy）で、is running の主語になる。', ['先行詞が人 → who'], [tx(160, 50, 'The boy（　）is running over there is my brother.', 11, C.ink), tx(160, 84, 'The boy ＝ 人 ／ 主語になる', 13, C.red), bx(110, 98, 100, 30, 'who', C.green, FILL.green, 15)]),
+  SF('(3) This temple（　）built about 400 years ago.　主語は単数で、「建てられた」という過去の受け身。', ['単数＋過去の受け身 → was'], [tx(160, 50, 'This temple（　）built about 400 years ago.', 12, C.ink), tx(160, 84, 'temple は単数 ／ 過去の受け身', 13, C.red), bx(110, 98, 100, 30, 'was（built）', C.green, FILL.green, 13)]),
+  S('(1) for　(2) who　(3) was。', ['=答え　for、who、was']),
+  S('確かめ。(1) 5年間住んでいる。(2) あそこを走っている少年。(3) 約400年前に建てられた。どれも意味が通る。', ['(1) 5年間　(2) 走っている少年', '=(3) 400年前に建てられた ✓']),
+], 'for＋期間、who（先行詞が人）、was＋過去分詞（単数の受け身）。');
+
+// 02 整序（不要語1つ）
+const words9 = ['the', 'book', 'I', 'bought', 'yesterday', 'is', 'very', 'interesting', 'to'];
+const s_e02: Figure = show([
+  SF('9語のうち、不要な1語を除いて並べかえる。日本文は「私が昨日買った本は、とてもおもしろいです」。', ['9語から1語を除く'], words9.map((w, i) => bx(10 + (i % 3) * 105, 20 + Math.floor(i / 3) * 36, 95, 28, w, C.blue, FILL.blue, 13))),
+  SF('主語は「私が昨日買った本」。まず、中心の名詞 The book を置く。', ['主語の中心：The book'], [tx(160, 22, '主語の中心', 11, C.gray), bx(10, 30, 76, 30, 'The book', C.blue, FILL.blue, 13)]),
+  S('「私が昨日買った」は、book を後ろから説明する。名詞のすぐ後ろに「主語＋動詞」を置く。', ['名詞のすぐ後ろに「主語＋動詞」'], [ar(88, 45, 100, 45, C.gray), bx(102, 30, 156, 30, 'I bought yesterday', C.green, FILL.green, 13)]),
+  S('述語「とてもおもしろいです」は is very interesting。', ['述語：is very interesting'], [bx(10, 84, 176, 30, 'is very interesting', C.purple, FILL.purple, 13)]),
+  S('つなぐと、The book I bought yesterday is very interesting.', ['The book I bought yesterday', 'is very interesting.']),
+  S('使わなかった語は to。9語のうち8語を使う。', ['=答え　上の文（不要語は to）']),
+  S('確かめ。日本文と逆に読む。「その本（私が昨日買った）は、とてもおもしろい」。to は、どこにも入れる場所がない。', ['The book（I bought yesterday）', '=is very interesting ✓']),
+], 'The book I bought yesterday is very interesting.（不要語 to）');
+
+// 05 長文の内容一致（Book Bridge）
+const oRow = (i: number, t: string, col: string, fill: string): E => bx(10, 14 + i * 30, 282, 24, t, col, fill, 10);
+const oMark = (i: number, m: string, col: string): E => tx(296, 14 + i * 30 + 18, m, 14, col, true, 'start');
+const s_e05: Figure = show([
+  SF('本文の内容と合うものを選ぶ。選択肢を日本語に直して、本文の1文ずつと照らす。', ['選択肢を本文と照らす'], [
+    oRow(0, 'ア　最初は、多くの生徒が参加した', C.blue, FILL.blue), oRow(1, 'イ　看護師が、手紙を書くよう頼んだ', C.blue, FILL.blue), oRow(2, 'ウ　ポスターで、活動を知らせた', C.blue, FILL.blue), oRow(3, 'エ　1か月で、300冊より少なかった', C.blue, FILL.blue),
+  ]),
+  S('ア：第1段落に「only ten students joined」。多くではなく、少人数だった。', ['only ten students → 多くない'], [oMark(0, '×', C.red)]),
+  S('イ：第2段落で、看護師は病院の子どもたちの話をしただけ。手紙を書くよう頼んではいない。', ['看護師の話に、手紙の依頼はない'], [oMark(1, '×', C.red)]),
+  S('ウ：第2段落に「We made posters and put them up in the school hall.」。ポスターをはって知らせた。本文に合う。', ['made posters and put them up'], [oMark(2, '○', C.green)]),
+  S('エ：第2段落に「we collected more than 300 books」。300冊を超えている。fewer than ではない。', ['more than 300 → 300冊を超える'], [oMark(3, '×', C.red)]),
+  S('正しいのは ウ。', ['=答え　ウ']),
+  S('確かめ。数や程度を表す語（only／more than／fewer than）は、まちがいの選択肢の作り方に使われやすい。1語ずつ確かめる。', ['only／more than に注意', '=ウだけが本文と一致 ✓']),
+], 'ウが正しい。only ten、more than 300 を読みちがえない。');
+
+// 07 会話文
+const dRow = (i: number, t: string, col: string = C.ink): E => bx(10, 8 + i * 21, 262, 18, t, col, '#FFFFFF', 10);
+const dlg = (): E[] => [
+  dRow(0, 'Clerk: May I help you?'), dRow(1, 'Meg: （1）'), dRow(2, 'Clerk: How about this scarf? It is warm.'), dRow(3, 'Meg: It looks nice. （2）'), dRow(4, 'Clerk: It is 3,000 yen.'), dRow(5, 'Meg: （3） Could you wrap it?'),
+];
+const dMark = (i: number, ch: string, col: string = C.green, fill: string = FILL.green): E => ci(292, 8 + i * 21 + 9, 10, ch, col, fill, 11);
+const s_e07: Figure = show([
+  SF('買い物の会話。（1）〜（3）に入る文を、ア〜エから選ぶ。ア値段をたずねる　イ サイズをたずねる　ウ 祖母へのプレゼントを探している　エ 買うことを決める。', ['ア 値段　イ サイズ', 'ウ 探し物　エ 買う'], dlg()),
+  S('(1)「May I help you?」（何かお探しですか）への返事なので、目的を伝える ウ。', ['(1) 返事で目的を伝える → ウ'], [dMark(1, 'ウ')]),
+  S('(2) 直後の店員が「It is 3,000 yen.」と値段を答えている。その前は、値段をたずねる ア「How much is it?」。', ['(2) 直後が値段の答え → ア'], [dMark(3, 'ア')]),
+  S('(3) 値段を聞いたあと、「包んでもらえますか」と続く。買うと決めた エ「I will take it.」。', ['(3) 買うと決める → エ'], [dMark(5, 'エ')]),
+  S('イ「What size do you want?」は、この会話の流れで使うところがなく、余る。', ['イ は使わない']),
+  S('(1) ウ　(2) ア　(3) エ。', ['=答え　(1)ウ (2)ア (3)エ']),
+  S('確かめ。通して読む。「何かお探しですか」「祖母へのプレゼントを探しています」…「いくらですか」「3,000円です」「それをいただきます。包んでもらえますか」。自然な流れ。', ['探している→勧める→値段→購入', '=自然な流れ ✓']),
+], '(1)ウ、(2)ア、(3)エ。イは使わない。');
+
+// 09 和文英訳
+const s_e09: Figure = show([
+  SF('「私の兄が書いたこの本は、とても人気があります。」を、book・write・popular を使って英語にする。', ['book・write・popular を使う'], [wbx(10, 30, 'book', 90, C.gray, FILL.gray, 14), wbx(115, 30, 'write', 90, C.gray, FILL.gray, 14), wbx(220, 30, 'popular', 90, C.gray, FILL.gray, 14), tx(160, 90, '語の形は変えてよい', 12, C.gray)]),
+  SF('主語は「この本」。This book を置く。', ['主語：This book'], [tx(50, 22, '主語', 11, C.gray), bx(10, 30, 80, 30, 'This book', C.blue, FILL.blue, 13)]),
+  S('「私の兄が書いた」は、book を後ろから説明する。write の過去分詞 written を使い、written by my brother（兄によって書かれた）と続ける。', ['written by my brother'], [ar(92, 45, 104, 45, C.gray), bx(106, 30, 170, 30, 'written by my brother', C.green, FILL.green, 12), tx(190, 76, 'write → written（過去分詞）', 10, C.gray)]),
+  S('述語「とても人気があります」は is very popular。主語 This book は単数なので is。', ['述語：is very popular'], [bx(10, 92, 150, 30, 'is very popular', C.purple, FILL.purple, 13)]),
+  S('つなぐと、This book written by my brother is very popular.', ['This book written by my brother', 'is very popular.']),
+  S('これが答え。指定の3語（book・write→written・popular）をすべて使っている。', ['=答え　上の文']),
+  S('確かめ。動詞は is だけで、written は book を説明する語。動詞を2つ並べていない。主語と is も一致。', ['動詞は is の1つだけ', '=written は説明の語 ✓']),
+], 'This book written by my brother is very popular.');
+
+// 11 誤文訂正
+const eRow = (i: number, t: string): E => bx(8, 10 + i * 30, 250, 24, t, C.blue, FILL.blue, 10);
+const eFix = (i: number, t: string): E => tx(262, 10 + i * 30 + 16, t, 10, C.red, true, 'start');
+const s_e11: Figure = show([
+  SF('4つの文に、1か所ずつ誤りがある。規則から見つけて直す。', ['4文に誤りが1か所ずつ'], [eRow(0, '① She has already finish her homework.'), eRow(1, '② English is speaking in many countries.'), eRow(2, '③ I have lived in Nagoya since three years.'), eRow(3, '④ This is the movie which I saw it last week.')]),
+  S('① 現在完了は「have／has＋過去分詞」。finish → finished。', ['① has のあとは過去分詞'], [eFix(0, 'finished')]),
+  S('② 「英語は話されている」は受け身。「be動詞＋過去分詞」で、speaking → spoken。', ['② 受け身は過去分詞'], [eFix(1, 'spoken')]),
+  S('③ three years は期間。期間は for、since は起点に使う。since → for。', ['③ 期間は for'], [eFix(2, 'for')]),
+  S('④ 関係代名詞 which が saw の目的語の役目をしている。あとの it は重なるのでとる。', ['④ it が重複 → とる'], [eFix(3, 'it をとる')]),
+  S('① finish → finished　② speaking → spoken　③ since → for　④ it をとる。', ['=答え　①〜④の訂正']),
+  S('確かめ。直した4文を読む。She has already finished her homework. / English is spoken in many countries. / for three years / the movie which I saw last week。', ['4文とも自然な英文 ✓', '=speak の過去分詞は spoken']),
+], 'finished／spoken／for／it をとる。');
+
+// 12 メール文の内容一致
+const s_e12: Figure = show([
+  SF('Kenta から Emma へのメール。内容と合うものを選ぶ。選択肢を日本語に直して、本文と照らす。', ['選択肢を本文と照らす'], [
+    oRow(0, 'ア　お寺は約50年前に建てられた', C.blue, FILL.blue), oRow(1, 'イ　4月12日に雨なら、科学博物館に行く', C.blue, FILL.blue), oRow(2, 'ウ　科学博物館は5時に閉まる', C.blue, FILL.blue), oRow(3, 'エ　母は洋食づくりが得意だ', C.blue, FILL.blue),
+  ]),
+  S('ア：本文は「built about 500 years ago」。約500年前で、50年前ではない。', ['500 years ago ≠ 50年前'], [oMark(0, '×', C.red)]),
+  S('イ：本文は「If the weather is bad, we will visit the science museum instead.」。天気が悪ければ（雨なら）、代わりに科学博物館へ行く。本文に合う。', ['If the weather is bad → 科学博物館'], [oMark(1, '○', C.green)]),
+  S('ウ：本文は「open until six o\'clock」。閉まるのは6時で、5時ではない。', ['until six o\'clock ≠ 5時'], [oMark(2, '×', C.red)]),
+  S('エ：本文は「she is learning how to make Western-style dishes」。作り方を学んでいる最中で、得意とは書いていない。', ['learning ≠ 得意'], [oMark(3, '×', C.red)]),
+  S('正しいのは イ。', ['=答え　イ']),
+  S('確かめ。イは、本文の「天気が悪ければ」を「雨なら」と言いかえている。日付は Saturday, April 12 と本文にある。数字と、学んでいる最中か得意かの程度に注意する。', ['500年・6時・learning に注意', '=イだけが本文と一致 ✓']),
+], 'イが正しい。500年前、6時、learning（学んでいる最中）。');
+
+export const figuresHonshikenSchool_koko_meidai: Record<string, Figure> = {
+  honshiken_school_koko_meidai_sansu_01: s01,
+  honshiken_school_koko_meidai_sansu_02: s02,
+  honshiken_school_koko_meidai_sansu_03: s03,
+  honshiken_school_koko_meidai_sansu_04: s04,
+  honshiken_school_koko_meidai_sansu_05: s05,
+  honshiken_school_koko_meidai_sansu_06: s06,
+  honshiken_school_koko_meidai_sansu_07: s07,
+  honshiken_school_koko_meidai_sansu_08: s08,
+  honshiken_school_koko_meidai_sansu_09: s09,
+  honshiken_school_koko_meidai_sansu_10: s10,
+  honshiken_school_koko_meidai_sansu_11: s11,
+  honshiken_school_koko_meidai_sansu_12: s12,
+  honshiken_school_koko_meidai_rika_01: s_r01,
+  honshiken_school_koko_meidai_rika_02: s_r02,
+  honshiken_school_koko_meidai_rika_03: s_r03,
+  honshiken_school_koko_meidai_rika_04: s_r04,
+  honshiken_school_koko_meidai_rika_05: s_r05,
+  honshiken_school_koko_meidai_rika_06: s_r06,
+  honshiken_school_koko_meidai_rika_07: s_r07,
+  honshiken_school_koko_meidai_rika_08: s_r08,
+  honshiken_school_koko_meidai_rika_09: s_r09,
+  honshiken_school_koko_meidai_rika_10: s_r10,
+  honshiken_school_koko_meidai_rika_11: s_r11,
+  honshiken_school_koko_meidai_rika_12: s_r12,
+  honshiken_school_koko_meidai_shakai_01: s_s01,
+  honshiken_school_koko_meidai_shakai_02: s_s02,
+  honshiken_school_koko_meidai_shakai_03: s_s03,
+  honshiken_school_koko_meidai_shakai_04: s_s04,
+  honshiken_school_koko_meidai_shakai_05: s_s05,
+  honshiken_school_koko_meidai_shakai_06: s_s06,
+  honshiken_school_koko_meidai_shakai_07: s_s07,
+  honshiken_school_koko_meidai_shakai_08: s_s08,
+  honshiken_school_koko_meidai_shakai_09: s_s09,
+  honshiken_school_koko_meidai_shakai_10: s_s10,
+  honshiken_school_koko_meidai_shakai_11: s_s11,
+  honshiken_school_koko_meidai_shakai_12: s_s12,
+  honshiken_school_koko_meidai_kokugo_04: s_k04,
+  honshiken_school_koko_meidai_kokugo_05: s_k05,
+  honshiken_school_koko_meidai_kokugo_07: s_k07,
+  honshiken_school_koko_meidai_kokugo_08: s_k08,
+  honshiken_school_koko_meidai_kokugo_10: s_k10,
+  honshiken_school_koko_meidai_kokugo_11: s_k11,
+  honshiken_school_koko_meidai_kokugo_12: s_k12,
+  honshiken_school_koko_meidai_eigo_01: s_e01,
+  honshiken_school_koko_meidai_eigo_02: s_e02,
+  honshiken_school_koko_meidai_eigo_05: s_e05,
+  honshiken_school_koko_meidai_eigo_07: s_e07,
+  honshiken_school_koko_meidai_eigo_09: s_e09,
+  honshiken_school_koko_meidai_eigo_11: s_e11,
+  honshiken_school_koko_meidai_eigo_12: s_e12,
+};
