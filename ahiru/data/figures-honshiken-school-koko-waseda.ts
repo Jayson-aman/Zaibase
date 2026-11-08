@@ -2071,7 +2071,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
   "caption": "答え　CD＝7√2 cm",
   "slides": [
    {
-    "note": "AB＝10cm が直径の半円。AC＝6cm の点 C。∠ACB の二等分線が半円と交わる点 D。CD を求める。",
+    "note": "AB＝10cm が直径の円。AC＝6cm の円周上の点 C。∠ACB の二等分線が円と交わるもう一つの点 D。CD を求める。",
     "add": [
      {
       "t": "box",
