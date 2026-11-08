@@ -17715,6 +17715,4930 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    }
   ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_01": {
+  "caption": "答え　収拾",
+  "slides": [
+   {
+    "note": "「混乱した事態を「シュウシュウ」するのに時間がかかった」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "傍線部のカタカナを漢字に",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "読みは シュウシュウ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「シュウシュウ」の候補は2つ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "収集：あつめる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "収拾：乱れをおさめととのえる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "文は「混乱した事態を」とつながっている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "混乱 → 乱れたものをどうする？",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "あつめるのではなく、おさめる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「拾」は散らばったものをひろい集めて整える意味の字。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "収（おさめる）＋ 拾（ひろう）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 乱れを整える",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "文に当てはめてみる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "混乱した事態を収拾する",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "意味が通る",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは 収拾。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "収拾",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "慣用的な言い方で確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「収拾がつかない」と言う",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「収集がつかない」とは言わない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_03": {
+  "caption": "答え　校長先生が式で話される。",
+  "slides": [
+   {
+    "note": "「れる・られる」のうち、尊敬のものを選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "4つの意味：受身・可能・自発・尊敬",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "4つの文を調べる",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "言いかえで確かめる。尊敬は「お〜になる」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "尊敬 → お〜になる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "可能 → 〜できる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 99,
+      "w": 280,
+      "h": 26,
+      "text": "自発 → 自然にそうなる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "主語が敬うべき人（校長先生）で、その人の動作かどうかを見る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "校長先生が話される",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 校長先生がお話しになる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "他の文を言いかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "風景が思い出される → 自然に思い出す（自\n発）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 83,
+      "w": 280,
+      "h": 41,
+      "text": "山菜は食べられる → 食べることができる（\n可能）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「友人に秘密を知られる」は？",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "友人に知られてしまう",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 受身",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは「校長先生が式で話される。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "校長先生が式で話される。",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "不自然な言いかえで確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「友人にお知りになる」は不自然",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "尊敬に言いかえられるのは1つだけ",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_04": {
+  "caption": "答え　道路は実際より太く描かれ、小さな家はまとめて一つの四角にされているから。",
+  "slides": [
+   {
+    "note": "「地図は現実の小さな複製ではなく」の根拠を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "傍線部①",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "根拠は本文のどこ？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「つまり」は前の内容をまとめる接続語。根拠は「つまり」の前にある。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "つまり、地図は現実の小さな複製ではなく…",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "↑ この前を探す",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "第1段落の前半に、実際の地図の特徴が書いてある。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "道路は実際より太く描かれている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "小さな家はまとめて一つの四角",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "そのまま小さくうつしたものなら、こうはならない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "複製なら道路の太さも家の数も同じ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "実際はそうなっていない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "選択肢を本文と比べる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "色・作り手が土地を見たか・紙の話 ＝ 本文\nにない",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 83,
+      "w": 280,
+      "h": 26,
+      "text": "道路と家の話 ＝ 本文にある",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは「道路は実際より太く描かれ、小さな家はまとめて一つの四角にされているから。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "道路・家の描き方",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "本文の言葉と選択肢が対応するか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「道路は実際より太く描かれ」",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「小さな家はまとめて一つの四角」　一致",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_06": {
+  "caption": "答え　省かれた部分に、地図をつくった人の意図が表れているから。",
+  "slides": [
+   {
+    "note": "「描かれていないものにも目を向けるべきだ」の理由を40字以内で。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "傍線部③",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "理由を書く記述問題",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "理由を表す文末「〜からである」を探す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "最後の文：",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 41,
+      "text": "「省かれた部分に、地図をつくった人の意図\nが表れているからである」",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「描かれていないもの」とは、「省かれた部分」のこと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "描かれていないもの ＝ 省かれた部分",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "省かれた部分を見れば、作った人がどう考えたかがわかる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "省いた理由 ＝ つくった人の意図",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "40字以内にまとめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "①省かれた部分に",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "②地図をつくった人の意図が表れているから",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "模範解答。28字。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "省かれた部分に、地図をつくった人の意図が\n表れているから。",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "字数と要素を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "28字で40字以内",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「省かれた部分」「意図」の2つあり",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_08": {
+  "caption": "答え　ぼくが描きたいものを見つけたことを喜び、そっと見守ろうとしている",
+  "slides": [
+   {
+    "note": "千尋は「そう」とだけ言い、黙って筆を洗いはじめた。うれしそうな手つき。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "千尋の気持ちを選ぶ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "手がかりは3つ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "言葉：「そう」とだけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "短い返事",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "深く聞かず、受けとめている",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "行動：黙って筆を洗いはじめた。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "邪魔をしない",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "絵を描く準備を静かに整える",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "様子：その手つきが、少しうれしそうに見えた。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "うれしさが表れている",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "ぼくは「描きたいものがない」と言っていた。それが、描きたいものを見つけた。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "ぼくの変化を",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "千尋は喜んでいる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは「ぼくが自分から描きたいものを見つけたことを喜び、何も言わずにそっと見守ろうとしている。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "喜び ＋ そっと見守る",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢とのちがいを確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "意気ごむ・絵の具を貸す・あきれる",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "どれも本文の手がかりと合わない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_10": {
+  "caption": "答え　雨粒から祖父の畑のスケッチを思い出し、うまさを考えず夢中で描けたことに気づいたから",
+  "slides": [
+   {
+    "note": "「描きたいものがない」と言った「ぼく」が、描きたいものを見つけた理由を50字以内で。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "気持ちの変化の理由を書く記述問題",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "きっかけ：窓の外の雨粒を見ているうちに、あることを思い出した。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "先月、祖父の畑でスケッチをした",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "泥だらけの長靴・曲がったきゅうり",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "そのときの様子：鉛筆は不思議なほど止まらなかった。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "夢中で描けた",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "うまさを考えていなかった",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「うまい絵」ではなく、「描きたい」という気持ちで描けたことに気づいた。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "基準が「うまさ」から",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「描きたい気持ち」へ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "きっかけと気づきをつなげる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "①雨粒から祖父の畑のスケッチを思い出した",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "②うまさを考えず夢中で描けたと気づいた",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "模範解答。44字。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 57,
+      "text": "雨粒を見て祖父の畑でのスケッチを思い出し\n、うまさを考えず夢中で描けたことに気づい\nたから。",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "字数と要素を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "44字で50字以内",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「思い出した」「夢中で描けた」の2つあり",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_11": {
+  "caption": "答え　炭を持って運ぶのも、いかにも冬の朝らしくふさわしい",
+  "slides": [
+   {
+    "note": "『枕草子』冬の段。「炭もて渡るも、いとつきづきし」の訳を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「つとめて」＝早朝",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「熾して」＝火をおこして",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "一語ずつ訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "炭もて ＝ 炭を持って",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "渡る ＝ 運んで行き来する",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「いとつきづきし」を訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "いと ＝ とても",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "つきづきし ＝ 似つかわしい",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "前の文脈を見る。寒い朝に火を急いでおこす様子が、よいものとして書かれている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「冬はつとめて」",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "冬は早朝がよい",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "全体を訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "炭を持って運ぶのも",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "とても（冬の朝に）似つかわしい",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは「炭を持って運んでいくのも、いかにも冬の朝らしくふさわしい。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "肯定的な意味",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢は否定的な意味で、文脈と合わない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "危なっかしい・つらい・ふさわしくない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ どれも文脈と合わない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_kokugo_12": {
+  "caption": "答え　昨夜の風雨で花がどれほど散ったかと、春を惜しむ気持ち",
+  "slides": [
+   {
+    "note": "『春暁』の結句「花落知多少」の気持ちを選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "孟浩然の五言絶句",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "起承転結で読む",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "第1・2句（起承）：春の朝のねむけと、鳥の声。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "春眠 暁を覚えず",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "処処 啼鳥を聞く",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "第3句（転）：話が昨夜にもどる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "夜来 風雨の声",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "昨夜、風雨の音がしていた",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "第4句（結）：風雨で花がどれほど散ったか。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "花落つること 知る多少",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "「どれほどだろうか」と問う",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "花が散ることは、春の終わりが近いこと。ためいきまじりの問いかけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "風雨 → 花が散る → 春が過ぎる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "惜しむ気持ち",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは「昨夜の風雨を思い出し、花がどれほど散ってしまっただろうかと、春の過ぎゆくのを惜しむ気持ち。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "春を惜しむ気持ち",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢は、詩の内容と合わない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "「うれしい」「悔やむ」「反省」",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "どれも句に根拠がない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_02": {
+  "caption": "答え　have lived",
+  "slides": [
+   {
+    "note": "I (　) in Kyoto for ten years, so I know the city well.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "空所に入る語句を選ぶ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "期間：for ten years",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「for ten years（10年間）」は期間を表す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "過去のある時点から今までの期間",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「so I know the city well」は、今の状態を表している。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "今、街をよく知っている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 過去と現在がつながっている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "過去から現在までのつながりを表す形は、現在完了形。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "have ＋ 過去分詞",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "継続の用法（for / since）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "選択肢を比べる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "lived：もう住んでいない（過去形）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "am living：for と合わない",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 99,
+      "w": 280,
+      "h": 26,
+      "text": "have lived：今も住んでいる",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは have lived。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "have lived",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "日本語にして確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "私は京都に10年間住んでいるので、",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "その街をよく知っています。",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_03": {
+  "caption": "答え　I don't know why she is angry.",
+  "slides": [
+   {
+    "note": "「私は、彼女がなぜ怒っているのか知りません。」の英文を作る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "(angry / she / why / is / know / I / don't)",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "文の中心は「知りません」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "I don't know",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「彼女がなぜ怒っているのか」は、know のあとに続く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "know の目的語になっている",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "文の一部になる疑問は、疑問詞のあとを、ふつうの文の順にする（間接疑問）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "×  why is she angry",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "○  why she is angry",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "2つの部分をつなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "I don't know",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "＋ why she is angry",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは I don't know why she is angry.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "I don't know why she is angry.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "日本語にもどして確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "私は知りません／彼女がなぜ怒っているのか",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "語順：why ＋ she ＋ is ＋ angry",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_04": {
+  "caption": "答え　The book is popular with many students because it is easy to read.",
+  "slides": [
+   {
+    "note": "「その本は読みやすいので、多くの生徒に人気があります。」を英語に。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "主節：その本は人気がある",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "理由：読みやすい",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "主節を作る。「〜に人気がある」は popular with 〜。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "The book is popular",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "with many students",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "理由の「読みやすい」は「読むのが簡単だ」と言いかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "easy to read",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "（形容詞 ＋ to不定詞）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「〜なので」は、理由を表す because。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "because ＋ 主語 ＋ 動詞",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "because it is easy to read",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "2つをつなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "The book is popular with many students",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "because it is easy to read.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えの一例。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "The book is popular with many students bec\nause it is easy to read.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "主語・動詞を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "主節：The book is",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "理由の節：it is　どちらもある",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_06": {
+  "caption": "答え　本を持ち帰るなら、かわりに本を1冊置く",
+  "slides": [
+   {
+    "note": "\"If you take a book, please leave one.\" の意味を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "本のコーナーの規則",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "one は何を指す？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "If 節を訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "If you take a book",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "＝ もし本を1冊取るなら",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "please leave one。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "leave ＝ 置いていく",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "one ＝ a book（本1冊）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "one は、直前の a book を受ける代名詞。「別の本1冊」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "本を取る → 本を置く",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 交換のルール",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "選択肢を本文と比べる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "「毎日1冊」「読んでから帰る」「名前を書\nく」",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 83,
+      "w": 280,
+      "h": 26,
+      "text": "どれも本文に書かれていない",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは When you take a book home, you should put another book in the box.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "アが合う",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "本文の流れと合うか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "anyone could take one home",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "→ 数を保つため、同じ数を置く",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_08": {
+  "caption": "答え　The notes, not the books, make the place special.",
+  "slides": [
+   {
+    "note": "it is not the books but the notes that make the place special。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "最後の文",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "同じ意味の文を選ぶ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「not A but B」は「A ではなく B」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "A ＝ the books",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "B ＝ the notes",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "B のほうが、正しい・大切な内容。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "大切なのは the notes",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "全体を訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "その場所を特別にしているのは、",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "本ではなくメモだ",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "選択肢を比べる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "both A and B：両方 → ×",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "neither A nor B：どちらも〜ない → ×",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 99,
+      "w": 280,
+      "h": 26,
+      "text": "books, not notes：逆 → ×",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは The notes, not the books, make the place special.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "メモが特別にしている",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "not A, B の形で、同じ意味になっているか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "The notes, not the books",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "＝ メモであって、本ではない　一致",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_09": {
+  "caption": "答え　メモに励まされた少年は、次の読者に気持ちを伝えたかった",
+  "slides": [
+   {
+    "note": "なぜ少年は、1週間後に自分のメモを残したのか。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "理由は直接書かれていない",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "出来事をつなげて考える",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "少年は、メモのある本を手に取った。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "\"Don't give up in the middle.\"",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "\"The last page is the best.\"",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "少年は、初めて本を最初から最後まで読んだ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "for the first time in his life",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "メモに励まされた",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "1週間後、少年は自分のメモを別の本に残した。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "left his own note in another book",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "前の読者のメモに励まされた経験から、自分も次の読者に伝えたいと思った。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "出来事 → 気持ち → 行動",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは Because the note he had found moved him, and he wanted to share his feelings with the next reader.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "アが合う",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢は、本文に根拠がない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "Mr. Sato に言われた・全部持ち帰りたい・\nレポート",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 83,
+      "w": 280,
+      "h": 26,
+      "text": "どれも本文にない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_11": {
+  "caption": "答え　I talked about my day while eating the dinner my father made for me.",
+  "slides": [
+   {
+    "note": "「私は、父が作ってくれた夕食を食べながら、その日の出来事を話しました。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "3つの部分に分ける",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "主節：「私はその日の出来事を話しました」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "I talked about my day",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "（過去形）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「〜を食べながら」は、同時の動作。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "while eating 〜",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "（while ＋ 〜ing）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「父が作ってくれた夕食」は、名詞のあとに説明を続ける。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "the dinner (that) my father made for me",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "関係代名詞は省略できる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "3つをつなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "I talked about my day",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "while eating the dinner",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 99,
+      "w": 280,
+      "h": 26,
+      "text": "my father made for me.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えの一例。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "I talked about my day while eating the din\nner my father made for me.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "動詞の形を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "talked（過去）／ eating（while のあと）",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "made（dinner を説明する節）",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_rakunan_eigo_12": {
+  "caption": "答え　This is the best movie that I have ever seen.",
+  "slides": [
+   {
+    "note": "「これは、私が今までに見た中で最高の映画です。」を並べかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "10語すべて使う",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "骨組み：これは最高の映画です。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "This is the best movie",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「私が今までに見た」は、movie を後ろから説明する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "that I have ever seen",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "経験を表す現在完了（have ＋ 過去分詞）。ever は have と過去分詞のあいだ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "have ever seen",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "2つをつなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "This is the best movie",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "＋ that I have ever seen",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答えは This is the best movie that I have ever seen.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 41,
+      "text": "This is the best movie that I have ever se\nen.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "語数と語順を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 36,
+      "w": 280,
+      "h": 26,
+      "text": "10語すべて使っている",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 26,
+      "text": "have ever seen の順　一致",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 13
+     }
+    ]
+   }
+  ]
  }
 };
 
