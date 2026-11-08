@@ -12951,8 +12951,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 271,
-      "y": 114,
+      "x": 277,
+      "y": 138,
       "text": "31.6°（冬至）",
       "size": 11,
       "color": "#0284C7",
