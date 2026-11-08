@@ -100,6 +100,7 @@ const SCHOOL_META: Record<string, { name: string; emoji: string; hensachi: strin
   'koko-nanzan':      { name: '南山高校',            emoji: '🌺', hensachi: '64〜68', region: '愛知' },
   'koko-shitennoji':  { name: '四天王寺高校',        emoji: '🏯', hensachi: '64〜70', region: '大阪' },
   'koko-kankan':      { name: '関関同立系高校',      emoji: '🎓', hensachi: '60〜68', region: '関西' },
+  'koko-ritsumeikan': { name: '立命館高校',          emoji: '🏫', hensachi: '60〜68', region: '京都・滋賀' },
 };
 
 type StageKey = 'textbook' | 'kiso' | 'oyo' | 'mogi' | 'kakomon';

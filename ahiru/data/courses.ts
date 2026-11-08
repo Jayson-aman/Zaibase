@@ -42,6 +42,7 @@ export type CourseKey =
   // ── 高校受験 カテゴリ ──
   | 'koko-general'    // 公立高校 一般
   | 'koko-kankan'     // 関関同立附属高
+  | 'koko-ritsumeikan' // 立命館高校・立命館宇治高校・立命館守山高校
   | 'koko-shitennoji' // 四天王寺高等学校
   | 'koko-top'        // 最難関公立（天王寺・北野）MAXのみ
   // ── 東京 高校受験 ──
@@ -404,6 +405,19 @@ export const ALL_COURSES: CourseInfo[] = [
     level: '難関',
     targetSchools: ['関大一高', '関学高', '同志社高', '立命館高'],
     description: '関関同立附属高校の入試レベル問題',
+    gender: '共学',
+    hensachi: '60〜68',
+  },
+  {
+    key: 'koko-ritsumeikan',
+    examType: 'koko',
+    name: '立命館高校',
+    shortName: '立命館(高)',
+    emoji: '🏫',
+    color: '#B91C1C',
+    level: '難関',
+    targetSchools: ['立命館高校', '立命館宇治高校', '立命館守山高校'],
+    description: '立命館高校・立命館宇治高校・立命館守山高校の入試に合わせた、教科書の単元・入試傾向問題・本試験対策',
     gender: '共学',
     hensachi: '60〜68',
   },
