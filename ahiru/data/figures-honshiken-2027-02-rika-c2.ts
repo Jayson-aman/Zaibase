@@ -26,11 +26,11 @@ const mark = (i: number, y: number, ok: boolean): DiagramElement => ci(cx4[i], y
 // c26 風媒花
 const c26 = show([
   { note: '4つの花のうち、花粉を風で運んでもらう花を選びます。', add: [...names4(['アブラナ', 'イネ', 'ヒマワリ', 'ツツジ']), ...m('風で運ばれる花は？')] },
-  { note: '❓虫に運んでもらう花と、風に運んでもらう花では、何がちがうでしょう。虫を呼ぶ花は、目立つ花びらとみつを持ちます。風で運ぶ花は、虫を呼ぶ必要がないので、花びらが小さく、花粉が軽くて多いのです。', add: [bx(20, 76, 130, 40, '虫媒花\n大きな花びら・みつ', C.blue, FILL.blue, 11), bx(170, 76, 130, 40, '風媒花\n小さな花・軽い花粉', C.green, FILL.green, 11), ...m('目立つ花びら＝虫を呼ぶ', C.blue, FILL.blue)] },
-  { note: 'アブラナは、黄色い大きな花びらがあり、みつを出します。ミツバチやチョウが来る、虫媒花です。', add: [...band(120), tag(0, 126, '黄色い花びら\nみつ', C.blue, FILL.blue, 34), mark(0, 150, false), ...m('アブラナ：虫媒花', C.blue, FILL.blue)] },
-  { note: 'ヒマワリは、大きな黄色い花びらが目立ち、ハチなどが来ます。虫媒花です。', add: [tag(2, 126, '大きな\n花びら', C.blue, FILL.blue, 34), mark(2, 150, false), ...m('ヒマワリ：虫媒花', C.blue, FILL.blue)] },
-  { note: 'ツツジも、大きな花びらがあって、みつを出します。虫媒花です。', add: [tag(3, 126, '大きな\n花びら', C.blue, FILL.blue, 34), mark(3, 150, false), ...m('ツツジ：虫媒花', C.blue, FILL.blue)] },
-  { note: '❓残ったイネは、どうでしょう。花びらがなく、小さな花がたくさんつきます。花粉が軽くて多く、風で運ばれます。風媒花です。', add: [tag(1, 126, '花びらなし\n軽い花粉', C.green, FILL.green, 34), mark(1, 150, true), ...m('イネ：風媒花', C.green, FILL.green)] },
+  { note: '❓虫に運んでもらう花と、風に運んでもらう花では、何がちがうでしょう。虫を呼ぶ花は、目立つ花びらとみつを持ちます。風で運ぶ花は、虫を呼ぶ必要がないので、花びらが小さく、花粉が軽くて多いのです。', add: [bx(20, 62, 130, 34, '虫媒花\n大きな花びら・みつ', C.blue, FILL.blue, 10), bx(170, 62, 130, 34, '風媒花\n小さな花・軽い花粉', C.green, FILL.green, 10), ...m('目立つ花びら＝虫を呼ぶ', C.blue, FILL.blue)] },
+  { note: 'アブラナは、黄色い大きな花びらがあり、みつを出します。ミツバチやチョウが来る、虫媒花です。', add: [tag(0, 130, '黄色い花びら\nみつ', C.blue, FILL.blue, 34), mark(0, 114, false), ...m('アブラナ：虫媒花', C.blue, FILL.blue)] },
+  { note: 'ヒマワリは、大きな黄色い花びらが目立ち、ハチなどが来ます。虫媒花です。', add: [tag(2, 130, '大きな\n花びら', C.blue, FILL.blue, 34), mark(2, 114, false), ...m('ヒマワリ：虫媒花', C.blue, FILL.blue)] },
+  { note: 'ツツジも、大きな花びらがあって、みつを出します。虫媒花です。', add: [tag(3, 130, '大きな\n花びら', C.blue, FILL.blue, 34), mark(3, 114, false), ...m('ツツジ：虫媒花', C.blue, FILL.blue)] },
+  { note: '❓残ったイネは、どうでしょう。花びらがなく、小さな花がたくさんつきます。花粉が軽くて多く、風で運ばれます。風媒花です。', add: [tag(1, 130, '花びらなし\n軽い花粉', C.green, FILL.green, 34), mark(1, 114, true), ...m('イネ：風媒花', C.green, FILL.green)] },
   { note: '答え。イネです。確かめ：ほかの3つは、花びらが大きく目立ちます。目立つ花びらは虫を呼ぶ道具なので、風で運ぶ花にはありません。', add: m('答え：イネ', C.green, FILL.green) },
 ], '答え：イネ');
 
@@ -59,10 +59,10 @@ const c28 = show([
 // c29 池の小さな生き物
 const c29 = show([
   { note: '池の水を顕微鏡で見ると、小さな生き物がいます。4つのうち、動物はどれでしょう。', add: [...names4(['ミカヅキモ', 'ゾウリムシ', 'アオミドロ', 'ケイソウ']), ...m('動物のなかまはどれ？')] },
-  { note: '❓養分のとり方は、2通りです。光合成で自分でつくる生き物と、ほかの生き物を食べる生き物です。後者が、動物のなかまです。', add: [bx(20, 72, 130, 30, '自分でつくる（光合成）', C.green, FILL.green, 11), bx(170, 72, 130, 30, '食べて養分をとる', C.red, FILL.red, 11), ...m('養分のとり方で分ける', C.main, FILL.warm)] },
-  { note: 'ミカヅキモは三日月の形で緑色、アオミドロは緑色のひも状です。どちらも光合成をします。', add: [...band(110), tag(0, 118, '緑色\n光合成', C.green, FILL.green), tag(2, 118, '緑色\n光合成', C.green, FILL.green), mark(0, 152, false), mark(2, 152, false), ...m('緑色＝光合成をする', C.green, FILL.green)] },
-  { note: 'ケイソウは、黄色っぽい茶色で、かたい殻を持ちます。これも光合成をします。', add: [tag(3, 118, '茶色\n光合成', C.green, FILL.green), mark(3, 152, false), ...m('ケイソウも光合成', C.green, FILL.green)] },
-  { note: '❓残ったゾウリムシは、どうでしょう。ほとんど無色で、毛を動かして泳ぎ、細菌などを食べて生活しています。', add: [tag(1, 118, '無色\n食べる', C.red, FILL.red), mark(1, 152, true), ...m('ゾウリムシ：食べる動物', C.red, FILL.red)] },
+  { note: '❓養分のとり方は、2通りです。光合成で自分でつくる生き物と、ほかの生き物を食べる生き物です。後者が、動物のなかまです。', add: [bx(20, 64, 130, 28, '自分でつくる（光合成）', C.green, FILL.green, 11), bx(170, 64, 130, 28, '食べて養分をとる', C.red, FILL.red, 11), ...m('養分のとり方で分ける', C.main, FILL.warm)] },
+  { note: 'ミカヅキモは三日月の形で緑色、アオミドロは緑色のひも状です。どちらも光合成をします。', add: [tag(0, 126, '緑色\n光合成', C.green, FILL.green), tag(2, 126, '緑色\n光合成', C.green, FILL.green), mark(0, 110, false), mark(2, 110, false), ...m('緑色＝光合成をする', C.green, FILL.green)] },
+  { note: 'ケイソウは、黄色っぽい茶色で、かたい殻を持ちます。これも光合成をします。', add: [tag(3, 126, '茶色\n光合成', C.green, FILL.green), mark(3, 110, false), ...m('ケイソウも光合成', C.green, FILL.green)] },
+  { note: '❓残ったゾウリムシは、どうでしょう。ほとんど無色で、毛を動かして泳ぎ、細菌などを食べて生活しています。', add: [tag(1, 126, '無色\n食べる', C.red, FILL.red), mark(1, 110, true), ...m('ゾウリムシ：食べる動物', C.red, FILL.red)] },
   { note: '動くかどうかでは分けません。ミカヅキモなども動きますが、養分は光合成でつくります。', add: m('動くかどうかでは分けない', C.gray, FILL.gray) },
   { note: '答え。ゾウリムシです。確かめ：ほかの3つは色がついていて、光合成をします。色がほとんどなく、食べて養分をとるのはゾウリムシだけです。', add: m('答え：ゾウリムシ', C.green, FILL.green) },
 ], '答え：ゾウリムシ');
@@ -137,11 +137,14 @@ const c35Names = ['モンシロチョウ', 'トンボ', 'カブトムシ', 'バ�
 const c35Box = (i: number, color: string, fill: string): DiagramElement => {
   const [x, y] = c35Pos(i); return bx(x - 35, y, 70, 26, c35Names[i], color, fill, 9);
 };
+const c35Re = (i: number, color: string, fill: string): DiagramElement[] => {
+  const [x, y] = c35Pos(i); return [cover(x - 35, y, 70, 26), c35Box(i, color, fill)];
+};
 const c35 = show([
   { note: '7種類のこん虫のうち、さなぎの時期があるものを選びます。', add: [...c35Names.map((_, i) => c35Box(i, C.gray, FILL.gray)), ...m('さなぎのある虫はどれ？')] },
   { note: '❓育ち方は、2通りです。幼虫と成虫がまったく別のすがたで、さなぎになるものと、幼虫が成虫に似ていて、さなぎにならないものです。', add: [bx(10, 92, 145, 34, 'さなぎあり\n（幼虫と成虫が別すがた）', C.green, FILL.green, 10), bx(165, 92, 145, 34, 'さなぎなし\n（幼虫が成虫に似る）', C.red, FILL.red, 10), ...m('2つの育ち方')] },
-  { note: 'モンシロチョウ、カブトムシ、ミツバチ、ハエは、幼虫がイモムシやウジのすがたで、さなぎになります。', add: [0, 2, 4, 6].map((i) => c35Box(i, C.green, FILL.green)).concat(m('さなぎあり：4種類', C.green, FILL.green)) },
-  { note: 'トンボ、バッタ、セミは、幼虫が成虫に似ています。さなぎにならずに、成虫になります。', add: [1, 3, 5].map((i) => c35Box(i, C.red, FILL.red)).concat(m('さなぎなし：3種類', C.red, FILL.red)) },
+  { note: 'モンシロチョウ、カブトムシ、ミツバチ、ハエは、幼虫がイモムシやウジのすがたで、さなぎになります。', add: [0, 2, 4, 6].flatMap((i) => c35Re(i, C.green, FILL.green)).concat(m('さなぎあり：4種類', C.green, FILL.green)) },
+  { note: 'トンボ、バッタ、セミは、幼虫が成虫に似ています。さなぎにならずに、成虫になります。', add: [1, 3, 5].flatMap((i) => c35Re(i, C.red, FILL.red)).concat(m('さなぎなし：3種類', C.red, FILL.red)) },
   { note: '❓(2) さなぎのない育ち方では、成長のたびに、かたい外側の皮をぬぎます。これを、だっぴといいます。', add: [bx(60, 134, 200, 28, '外側の皮をぬぐ＝だっぴ', C.purple, FILL.purple, 12), ...m('(2) だっぴ', C.purple, FILL.purple)] },
   { note: '(3) トンボは、水辺に卵をうみます。幼虫のヤゴは、水の中で生活し、大きくなると水から出て、成虫になります。', add: [...band(130, bx(60, 134, 200, 28, 'トンボの幼虫ヤゴ＝水の中', C.blue, FILL.blue, 12), bx(20, 176, 280, 34, '(3) 水の中', C.blue, FILL.blue, 13))] },
   { note: '答え。(1) ア・ウ・オ・キ、(2) だっぴ、(3) 水の中です。確かめ：(1) の4つは、幼虫が成虫と別のすがたです。', add: m('チョウ・カブトムシ・ハチ・ハエ', C.green, FILL.green) },
@@ -305,7 +308,7 @@ const layersBase = (): DiagramElement[] => [
 ];
 const c46 = show([
   { note: 'あるがけの地層です。下から、ア・イ・ウ・エの順に、かさなっています。', add: [...layersBase(), ...m('ア〜エの層と断層')] },
-  { note: '❓断層とは、何でしょう。すでにできていた地層が、割れて、ずれたあとです。赤い線が、断層です。', add: [ln(140, 56, 140, 134, C.red, false, 3), lb(150, 150, '断層', 11, C.red, 'start', true), ...m('断層＝割れてずれたあと', C.red, FILL.red)] },
+  { note: '❓断層とは、何でしょう。すでにできていた地層が、割れて、ずれたあとです。赤い線が、断層です。', add: [ln(140, 56, 140, 134, C.red, false, 3), lb(140, 24, '断層', 11, C.red, 'middle', true), ...m('断層＝割れてずれたあと', C.red, FILL.red)] },
   { note: '❓ア・イ・ウは、断層で切られて、ずれています。ずれたということは、断層ができる前に、すでにできていた層です。', add: [lb(250, 95, '切られた', 10, C.red, 'start', true), ...m('切られた層＝断層より前', C.red, FILL.red)] },
   { note: '❓エは、断層で切られていません。ということは、断層ができたあとに、たい積した層です。', add: [lb(250, 43, '切られない', 10, C.blue, 'start', true), ...m('切られない層＝断層より後', C.blue, FILL.blue)] },
   { note: '2つをあわせます。断層ができたのは、ウができたあと、エができる前のあいだです。', add: [bx(60, 140, 200, 24, 'ウができた後〜エができる前', C.green, FILL.green, 11), ...m('2つの層のあいだ', C.green, FILL.green)] },
@@ -322,7 +325,7 @@ const c47Sites = (eColor: string, eFill: string): DiagramElement[] => [
 ];
 const c47 = show([
   { note: '火山から10km離れた、東西南北の4地点で、火山灰のつもった厚さを調べました。', add: [...c47Sites(C.gray, FILL.gray), ...m('4地点の灰の厚さ')] },
-  { note: '厚さをくらべます。東が8cmで、いちばん厚く、西が0.5cmで、いちばんうすいです。', add: [...c47Sites(C.red, FILL.red), ...m('東がいちばん厚い：8cm', C.red, FILL.red)] },
+  { note: '厚さをくらべます。東が8cmで、いちばん厚く、西が0.5cmで、いちばんうすいです。', add: [cover(222, 73, 76, 24), asBox(222, 73, 76, '東 8cm', C.red, FILL.red), ...m('東がいちばん厚い：8cm', C.red, FILL.red)] },
   { note: '❓なぜ東に厚いのでしょう。ふき上げられた灰が、上空の風に流されて、風下に降るからです。', add: [ar(50, 60, 280, 60, C.purple), lb(165, 53, '上空の風', 10, C.purple, 'middle'), ...m('灰は風に流される', C.purple, FILL.purple)] },
   { note: '(1) 風は東へふいていました。風の向きは「ふいてくる方位」で言うので、西からです。', add: m('(1) 西からふく風', C.blue, FILL.blue) },
   { note: '❓(2) 日本付近の上空で、年中、西から東へふいている強い風は何でしょう。偏西風です。', add: m('(2) 偏西風：西→東', C.green, FILL.green) },
