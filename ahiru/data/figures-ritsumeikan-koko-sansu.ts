@@ -10665,16 +10665,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -10682,8 +10682,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -10692,8 +10692,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -10702,8 +10702,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -10712,8 +10712,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -10722,8 +10722,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -10732,8 +10732,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -10791,16 +10791,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -10808,8 +10808,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -10818,8 +10818,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -10828,8 +10828,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -10838,8 +10838,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -10848,8 +10848,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -10858,8 +10858,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -10917,16 +10917,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -10934,8 +10934,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -10944,8 +10944,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -10954,8 +10954,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -10964,8 +10964,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -10974,8 +10974,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -10984,8 +10984,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -10996,16 +10996,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        110,
-        148
+        112,
+        134
        ]
       ],
       "color": "#16A34A",
@@ -11013,8 +11013,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 110,
-      "cy": 148,
+      "cx": 112,
+      "cy": 134,
       "r": 3.5,
       "color": "#E11D48",
       "fill": "#E11D48",
@@ -11071,16 +11071,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -11088,8 +11088,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -11098,8 +11098,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -11108,8 +11108,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -11118,8 +11118,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -11128,8 +11128,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -11138,8 +11138,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -11197,16 +11197,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -11214,8 +11214,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -11224,8 +11224,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -11234,8 +11234,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -11244,8 +11244,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -11254,8 +11254,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -11264,8 +11264,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -11276,16 +11276,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        110.0,
-        103.0
+        112.0,
+        92.0
        ]
       ],
       "color": "#16A34A",
@@ -11293,8 +11293,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 110.0,
-      "cy": 103.0,
+      "cx": 112.0,
+      "cy": 92.0,
       "r": 3.5,
       "color": "#E11D48",
       "fill": "#E11D48",
@@ -11351,16 +11351,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -11368,8 +11368,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -11378,8 +11378,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -11388,8 +11388,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -11398,8 +11398,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -11408,8 +11408,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -11418,8 +11418,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -11466,16 +11466,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -11483,8 +11483,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -11493,8 +11493,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -11503,8 +11503,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -11513,8 +11513,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -11523,8 +11523,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -11533,8 +11533,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -11592,16 +11592,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        50,
-        58
+        56,
+        50
        ],
        [
-        50,
-        148
+        56,
+        134
        ],
        [
-        170,
-        148
+        168,
+        134
        ]
       ],
       "color": "#0284C7",
@@ -11609,8 +11609,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 60,
+      "x": 48,
+      "y": 52,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -11619,8 +11619,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 42,
-      "y": 152,
+      "x": 48,
+      "y": 138,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -11629,8 +11629,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 179,
-      "y": 152,
+      "x": 177,
+      "y": 138,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -11639,8 +11639,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 159,
+      "x": 112.0,
+      "y": 145,
       "text": "8",
       "size": 10,
       "color": "#6E645C",
@@ -11649,8 +11649,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 41,
-      "y": 103.0,
+      "x": 47,
+      "y": 92.0,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -11659,8 +11659,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 120.0,
-      "y": 100.0,
+      "x": 122.0,
+      "y": 89.0,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -11722,9 +11722,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -11740,7 +11740,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -11760,9 +11760,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -11770,7 +11770,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -11780,7 +11780,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -11790,7 +11790,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -11847,9 +11847,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -11865,7 +11865,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -11885,9 +11885,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -11895,7 +11895,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -11905,7 +11905,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -11915,7 +11915,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -11972,9 +11972,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -11990,7 +11990,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12010,9 +12010,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12020,7 +12020,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12030,7 +12030,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12040,7 +12040,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -12097,9 +12097,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -12115,7 +12115,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12135,9 +12135,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12145,7 +12145,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12155,7 +12155,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12165,7 +12165,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -12175,7 +12175,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 255.7,
-      "cy": 56.4,
+      "cy": 54.0,
       "r": 3.5,
       "color": "#E11D48",
       "fill": "#E11D48",
@@ -12231,9 +12231,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -12249,7 +12249,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12269,9 +12269,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12279,7 +12279,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12289,7 +12289,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12299,7 +12299,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -12356,9 +12356,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -12374,7 +12374,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12394,9 +12394,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12404,7 +12404,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12414,7 +12414,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12424,7 +12424,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -12481,9 +12481,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -12499,7 +12499,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12519,9 +12519,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12529,7 +12529,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12539,7 +12539,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12549,7 +12549,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -12606,9 +12606,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "arrow",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 300.0,
-      "y2": 146.0,
+      "y2": 134.0,
       "color": "#6E645C",
       "dashed": false
      },
@@ -12624,7 +12624,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 296.0,
-      "y": 158.0,
+      "y": 146.0,
       "text": "分",
       "size": 10,
       "color": "#6E645C",
@@ -12644,9 +12644,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 34.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
-      "y2": 47.4,
+      "y2": 46.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
@@ -12654,7 +12654,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 167.0,
-      "y1": 146.0,
+      "y1": 134.0,
       "x2": 277.8,
       "y2": 34.0,
       "color": "#E11D48",
@@ -12664,7 +12664,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 82.8,
-      "y": 103.4,
+      "y": 96.0,
       "text": "兄",
       "size": 11,
       "color": "#0284C7",
@@ -12674,7 +12674,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 242.4,
-      "y": 73.2,
+      "y": 69.0,
       "text": "弟",
       "size": 11,
       "color": "#E11D48",
@@ -22993,16 +22993,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -23012,292 +23012,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -23305,8 +23305,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -23315,8 +23315,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -23325,8 +23325,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -23335,8 +23335,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -23345,8 +23345,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -23355,8 +23355,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -23414,16 +23414,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -23433,292 +23433,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -23726,8 +23726,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -23736,8 +23736,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -23746,8 +23746,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -23756,8 +23756,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -23766,8 +23766,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -23776,8 +23776,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -23835,16 +23835,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -23854,292 +23854,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -24147,8 +24147,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -24157,8 +24157,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -24167,8 +24167,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -24177,8 +24177,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -24187,8 +24187,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -24197,8 +24197,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -24256,16 +24256,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -24275,292 +24275,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -24568,8 +24568,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -24578,8 +24578,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -24588,8 +24588,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -24598,8 +24598,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -24608,8 +24608,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -24618,8 +24618,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -24628,18 +24628,18 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 126.0,
-      "y1": 35.6,
-      "x2": 126.0,
-      "y2": 146.0,
+      "x1": 138.0,
+      "y1": 37.2,
+      "x2": 138.0,
+      "y2": 138.0,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 133.4,
-      "y": 48.5,
+      "x": 144.7,
+      "y": 49.0,
       "text": "h",
       "size": 10,
       "color": "#E11D48",
@@ -24697,16 +24697,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -24716,292 +24716,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -25009,8 +25009,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -25019,8 +25019,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -25029,8 +25029,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -25039,8 +25039,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -25049,8 +25049,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -25059,8 +25059,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -25118,16 +25118,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -25137,292 +25137,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -25430,8 +25430,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -25440,8 +25440,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -25450,8 +25450,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -25460,8 +25460,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -25470,8 +25470,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -25480,8 +25480,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -25539,16 +25539,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -25558,292 +25558,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -25851,8 +25851,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -25861,8 +25861,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -25871,8 +25871,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -25881,8 +25881,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -25891,8 +25891,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -25901,8 +25901,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -25911,10 +25911,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 135.2,
-      "y1": 109.2,
-      "x2": 135.2,
-      "y2": 146.0,
+      "x1": 146.4,
+      "y1": 104.4,
+      "x2": 146.4,
+      "y2": 138.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
@@ -25959,16 +25959,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -25978,292 +25978,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -26271,8 +26271,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -26281,8 +26281,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -26291,8 +26291,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -26301,8 +26301,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -26311,8 +26311,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -26321,8 +26321,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -26380,16 +26380,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        80.0,
-        146.0
+        96.0,
+        138.0
        ],
        [
-        208.8,
-        146.0
+        213.6,
+        138.0
        ],
        [
-        126.0,
-        35.6
+        138.0,
+        37.2
        ]
       ],
       "color": "#0284C7",
@@ -26399,292 +26399,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        172.0,
-        109.2
+        180.0,
+        104.4
        ],
        [
-        171.9,
-        106.0
+        179.9,
+        101.5
        ],
        [
-        171.4,
-        102.8
+        179.5,
+        98.6
        ],
        [
-        170.7,
-        99.7
+        178.9,
+        95.7
        ],
        [
-        169.8,
-        96.6
+        178.0,
+        92.9
        ],
        [
-        168.6,
-        93.6
+        176.9,
+        90.2
        ],
        [
-        167.1,
-        90.8
+        175.5,
+        87.6
        ],
        [
-        165.3,
-        88.1
+        173.9,
+        85.1
        ],
        [
-        163.4,
-        85.5
+        172.1,
+        82.8
        ],
        [
-        161.2,
-        83.2
+        170.2,
+        80.6
        ],
        [
-        158.9,
-        81.0
+        168.0,
+        78.7
        ],
        [
-        156.3,
-        79.1
+        165.7,
+        76.9
        ],
        [
-        153.6,
-        77.3
+        163.2,
+        75.3
        ],
        [
-        150.8,
-        75.8
+        160.6,
+        73.9
        ],
        [
-        147.8,
-        74.6
+        157.9,
+        72.8
        ],
        [
-        144.7,
-        73.7
+        155.1,
+        71.9
        ],
        [
-        141.6,
-        73.0
+        152.2,
+        71.3
        ],
        [
-        138.4,
-        72.5
+        149.3,
+        70.9
        ],
        [
-        135.2,
-        72.4
+        146.4,
+        70.8
        ],
        [
-        132.0,
-        72.5
+        143.5,
+        70.9
        ],
        [
-        128.8,
-        73.0
+        140.6,
+        71.3
        ],
        [
-        125.7,
-        73.7
+        137.7,
+        71.9
        ],
        [
-        122.6,
-        74.6
+        134.9,
+        72.8
        ],
        [
-        119.6,
-        75.8
+        132.2,
+        73.9
        ],
        [
-        116.8,
-        77.3
+        129.6,
+        75.3
        ],
        [
-        114.1,
-        79.1
+        127.1,
+        76.9
        ],
        [
-        111.5,
-        81.0
-       ],
-       [
-        109.2,
-        83.2
-       ],
-       [
-        107.0,
-        85.5
-       ],
-       [
-        105.1,
-        88.1
-       ],
-       [
-        103.3,
-        90.8
-       ],
-       [
-        101.8,
-        93.6
-       ],
-       [
-        100.6,
-        96.6
-       ],
-       [
-        99.7,
-        99.7
-       ],
-       [
-        99.0,
-        102.8
-       ],
-       [
-        98.5,
-        106.0
-       ],
-       [
-        98.4,
-        109.2
-       ],
-       [
-        98.5,
-        112.4
-       ],
-       [
-        99.0,
-        115.6
-       ],
-       [
-        99.7,
-        118.7
-       ],
-       [
-        100.6,
-        121.8
-       ],
-       [
-        101.8,
-        124.8
-       ],
-       [
-        103.3,
-        127.6
-       ],
-       [
-        105.1,
-        130.3
-       ],
-       [
-        107.0,
-        132.9
-       ],
-       [
-        109.2,
-        135.2
-       ],
-       [
-        111.5,
-        137.4
-       ],
-       [
-        114.1,
-        139.3
-       ],
-       [
-        116.8,
-        141.1
-       ],
-       [
-        119.6,
-        142.6
+        124.8,
+        78.7
        ],
        [
         122.6,
-        143.8
+        80.6
        ],
        [
-        125.7,
-        144.7
+        120.7,
+        82.8
        ],
        [
-        128.8,
-        145.4
+        118.9,
+        85.1
        ],
        [
-        132.0,
-        145.9
+        117.3,
+        87.6
        ],
        [
-        135.2,
-        146.0
+        115.9,
+        90.2
        ],
        [
-        138.4,
-        145.9
+        114.8,
+        92.9
        ],
        [
-        141.6,
-        145.4
+        113.9,
+        95.7
        ],
        [
-        144.7,
-        144.7
+        113.3,
+        98.6
        ],
        [
-        147.8,
-        143.8
+        112.9,
+        101.5
        ],
        [
-        150.8,
-        142.6
+        112.8,
+        104.4
        ],
        [
-        153.6,
-        141.1
+        112.9,
+        107.3
        ],
        [
-        156.3,
-        139.3
+        113.3,
+        110.2
        ],
        [
-        158.9,
-        137.4
+        113.9,
+        113.1
        ],
        [
-        161.2,
-        135.2
+        114.8,
+        115.9
        ],
        [
-        163.4,
-        132.9
+        115.9,
+        118.6
        ],
        [
-        165.3,
-        130.3
+        117.3,
+        121.2
        ],
        [
-        167.1,
-        127.6
+        118.9,
+        123.7
        ],
        [
-        168.6,
-        124.8
+        120.7,
+        126.0
        ],
        [
-        169.8,
-        121.8
+        122.6,
+        128.2
        ],
        [
-        170.7,
-        118.7
+        124.8,
+        130.1
        ],
        [
-        171.4,
-        115.6
+        127.1,
+        131.9
        ],
        [
-        171.9,
-        112.4
+        129.6,
+        133.5
+       ],
+       [
+        132.2,
+        134.9
+       ],
+       [
+        134.9,
+        136.0
+       ],
+       [
+        137.7,
+        136.9
+       ],
+       [
+        140.6,
+        137.5
+       ],
+       [
+        143.5,
+        137.9
+       ],
+       [
+        146.4,
+        138.0
+       ],
+       [
+        149.3,
+        137.9
+       ],
+       [
+        152.2,
+        137.5
+       ],
+       [
+        155.1,
+        136.9
+       ],
+       [
+        157.9,
+        136.0
+       ],
+       [
+        160.6,
+        134.9
+       ],
+       [
+        163.2,
+        133.5
+       ],
+       [
+        165.7,
+        131.9
+       ],
+       [
+        168.0,
+        130.1
+       ],
+       [
+        170.2,
+        128.2
+       ],
+       [
+        172.1,
+        126.0
+       ],
+       [
+        173.9,
+        123.7
+       ],
+       [
+        175.5,
+        121.2
+       ],
+       [
+        176.9,
+        118.6
+       ],
+       [
+        178.0,
+        115.9
+       ],
+       [
+        178.9,
+        113.1
+       ],
+       [
+        179.5,
+        110.2
+       ],
+       [
+        179.9,
+        107.3
        ]
       ],
       "color": "#16A34A",
@@ -26692,8 +26692,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 126.0,
-      "y": 30.6,
+      "x": 138.0,
+      "y": 32.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -26702,8 +26702,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 72.0,
-      "y": 150.0,
+      "x": 88.0,
+      "y": 142.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -26712,8 +26712,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 216.8,
-      "y": 150.0,
+      "x": 221.6,
+      "y": 142.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -26722,8 +26722,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94.2,
-      "y": 90.8,
+      "x": 108.5,
+      "y": 87.6,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -26732,8 +26732,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 176.0,
-      "y": 83.1,
+      "x": 184.0,
+      "y": 80.2,
       "text": "15",
       "size": 10,
       "color": "#6E645C",
@@ -26742,8 +26742,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 144.4,
-      "y": 158.0,
+      "x": 154.8,
+      "y": 150.0,
       "text": "14",
       "size": 10,
       "color": "#6E645C",
@@ -26806,292 +26806,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -27099,68 +27099,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -27169,8 +27169,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -27179,8 +27179,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -27189,8 +27189,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -27199,8 +27199,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -27258,292 +27258,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -27551,68 +27551,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -27621,8 +27621,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -27631,8 +27631,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -27641,8 +27641,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -27651,8 +27651,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -27710,292 +27710,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -28003,68 +28003,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -28073,8 +28073,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -28083,8 +28083,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -28093,8 +28093,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -28103,8 +28103,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -28162,292 +28162,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -28455,68 +28455,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -28525,8 +28525,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -28535,8 +28535,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -28545,8 +28545,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -28555,8 +28555,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -28565,20 +28565,20 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 141.7,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 144.6,
+      "y2": 92.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -28634,292 +28634,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -28927,68 +28927,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -28997,8 +28997,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -29007,8 +29007,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -29017,8 +29017,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -29027,8 +29027,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -29086,292 +29086,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -29379,68 +29379,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -29449,8 +29449,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -29459,8 +29459,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -29469,8 +29469,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -29479,8 +29479,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -29527,292 +29527,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -29820,68 +29820,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -29890,8 +29890,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -29900,8 +29900,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -29910,8 +29910,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -29920,8 +29920,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -29979,292 +29979,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        224.0,
-        96.0
+        214.0,
+        92.0
        ],
        [
-        223.8,
-        90.4
+        213.8,
+        87.3
        ],
        [
-        223.0,
-        84.9
+        213.2,
+        82.6
        ],
        [
-        221.8,
-        79.4
+        212.2,
+        78.0
        ],
        [
-        220.1,
-        74.1
+        210.7,
+        73.5
        ],
        [
-        218.0,
-        69.0
+        208.9,
+        69.2
        ],
        [
-        215.4,
-        64.0
+        206.8,
+        65.0
        ],
        [
-        212.4,
-        59.3
+        204.2,
+        61.0
        ],
        [
-        209.0,
-        54.9
+        201.4,
+        57.3
        ],
        [
-        205.3,
-        50.7
+        198.2,
+        53.8
        ],
        [
-        201.1,
-        47.0
+        194.7,
+        50.6
        ],
        [
-        196.7,
-        43.6
-       ],
-       [
-        192.0,
-        40.6
+        191.0,
+        47.8
        ],
        [
         187.0,
-        38.0
+        45.2
        ],
        [
-        181.9,
-        35.9
+        182.8,
+        43.1
        ],
        [
-        176.6,
-        34.2
+        178.5,
+        41.3
        ],
        [
-        171.1,
-        33.0
+        174.0,
+        39.8
        ],
        [
-        165.6,
-        32.2
+        169.4,
+        38.8
+       ],
+       [
+        164.7,
+        38.2
        ],
        [
         160.0,
-        32.0
-       ],
-       [
-        154.4,
-        32.2
-       ],
-       [
-        148.9,
-        33.0
-       ],
-       [
-        143.4,
-        34.2
-       ],
-       [
-        138.1,
-        35.9
-       ],
-       [
-        133.0,
         38.0
        ],
        [
-        128.0,
-        40.6
+        155.3,
+        38.2
        ],
        [
-        123.3,
-        43.6
+        150.6,
+        38.8
        ],
        [
-        118.9,
-        47.0
+        146.0,
+        39.8
        ],
        [
-        114.7,
-        50.7
+        141.5,
+        41.3
        ],
        [
-        111.0,
-        54.9
+        137.2,
+        43.1
        ],
        [
-        107.6,
-        59.3
+        133.0,
+        45.2
        ],
        [
-        104.6,
-        64.0
+        129.0,
+        47.8
        ],
        [
-        102.0,
-        69.0
+        125.3,
+        50.6
        ],
        [
-        99.9,
-        74.1
+        121.8,
+        53.8
        ],
        [
-        98.2,
-        79.4
+        118.6,
+        57.3
        ],
        [
-        97.0,
-        84.9
+        115.8,
+        61.0
        ],
        [
-        96.2,
-        90.4
+        113.2,
+        65.0
        ],
        [
-        96.0,
-        96.0
+        111.1,
+        69.2
        ],
        [
-        96.2,
-        101.6
+        109.3,
+        73.5
        ],
        [
-        97.0,
-        107.1
+        107.8,
+        78.0
        ],
        [
-        98.2,
-        112.6
+        106.8,
+        82.6
        ],
        [
-        99.9,
-        117.9
+        106.2,
+        87.3
        ],
        [
-        102.0,
+        106.0,
+        92.0
+       ],
+       [
+        106.2,
+        96.7
+       ],
+       [
+        106.8,
+        101.4
+       ],
+       [
+        107.8,
+        106.0
+       ],
+       [
+        109.3,
+        110.5
+       ],
+       [
+        111.1,
+        114.8
+       ],
+       [
+        113.2,
+        119.0
+       ],
+       [
+        115.8,
         123.0
        ],
        [
-        104.6,
-        128.0
+        118.6,
+        126.7
        ],
        [
-        107.6,
-        132.7
+        121.8,
+        130.2
        ],
        [
-        111.0,
-        137.1
+        125.3,
+        133.4
        ],
        [
-        114.7,
-        141.3
-       ],
-       [
-        118.9,
-        145.0
-       ],
-       [
-        123.3,
-        148.4
-       ],
-       [
-        128.0,
-        151.4
+        129.0,
+        136.2
        ],
        [
         133.0,
-        154.0
+        138.8
        ],
        [
-        138.1,
-        156.1
+        137.2,
+        140.9
        ],
        [
-        143.4,
-        157.8
+        141.5,
+        142.7
        ],
        [
-        148.9,
-        159.0
+        146.0,
+        144.2
        ],
        [
-        154.4,
-        159.8
+        150.6,
+        145.2
+       ],
+       [
+        155.3,
+        145.8
        ],
        [
         160.0,
-        160.0
+        146.0
        ],
        [
-        165.6,
-        159.8
+        164.7,
+        145.8
        ],
        [
-        171.1,
-        159.0
+        169.4,
+        145.2
        ],
        [
-        176.6,
-        157.8
+        174.0,
+        144.2
        ],
        [
-        181.9,
-        156.1
+        178.5,
+        142.7
+       ],
+       [
+        182.8,
+        140.9
        ],
        [
         187.0,
-        154.0
+        138.8
        ],
        [
-        192.0,
-        151.4
+        191.0,
+        136.2
        ],
        [
-        196.7,
-        148.4
+        194.7,
+        133.4
        ],
        [
-        201.1,
-        145.0
+        198.2,
+        130.2
        ],
        [
-        205.3,
-        141.3
+        201.4,
+        126.7
        ],
        [
-        209.0,
-        137.1
-       ],
-       [
-        212.4,
-        132.7
-       ],
-       [
-        215.4,
-        128.0
-       ],
-       [
-        218.0,
+        204.2,
         123.0
        ],
        [
-        220.1,
-        117.9
+        206.8,
+        119.0
        ],
        [
-        221.8,
-        112.6
+        208.9,
+        114.8
        ],
        [
-        223.0,
-        107.1
+        210.7,
+        110.5
        ],
        [
-        223.8,
-        101.6
+        212.2,
+        106.0
+       ],
+       [
+        213.2,
+        101.4
+       ],
+       [
+        213.8,
+        96.7
        ]
       ],
       "color": "#0284C7",
@@ -30272,68 +30272,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 96.0,
-      "y1": 96.0,
-      "x2": 179.8,
-      "y2": 35.1,
+      "x1": 106.0,
+      "y1": 92.0,
+      "x2": 176.7,
+      "y2": 40.6,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 179.8,
-      "y1": 35.1,
-      "x2": 224.0,
-      "y2": 96.0,
+      "x1": 176.7,
+      "y1": 40.6,
+      "x2": 214.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 224.0,
-      "y1": 96.0,
-      "x2": 114.0,
-      "y2": 140.5,
+      "x1": 214.0,
+      "y1": 92.0,
+      "x2": 121.2,
+      "y2": 129.5,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 114.0,
-      "y1": 140.5,
-      "x2": 96.0,
-      "y2": 96.0,
+      "x1": 121.2,
+      "y1": 129.5,
+      "x2": 106.0,
+      "y2": 92.0,
       "color": "#0284C7",
       "dashed": false,
       "width": 2
      },
      {
       "t": "label",
-      "x": 87.0,
-      "y": 100.0,
+      "x": 97.0,
+      "y": 96.0,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -30342,8 +30342,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 181.8,
-      "y": 30.1,
+      "x": 178.7,
+      "y": 35.6,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -30352,8 +30352,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 233.0,
-      "y": 100.0,
+      "x": 223.0,
+      "y": 96.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -30362,8 +30362,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 110.0,
-      "y": 154.5,
+      "x": 117.2,
+      "y": 143.5,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -30372,8 +30372,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 151.7,
-      "y": 91.0,
+      "x": 154.6,
+      "y": 87.0,
       "text": "E",
       "size": 11,
       "color": "#9333EA",
@@ -30437,19 +30437,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -30458,9 +30458,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30468,9 +30468,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30478,7 +30478,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -30488,7 +30488,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -30498,7 +30498,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -30508,7 +30508,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -30518,7 +30518,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -30528,7 +30528,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -30538,7 +30538,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -30597,19 +30597,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -30618,9 +30618,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30628,9 +30628,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30638,7 +30638,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -30648,7 +30648,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -30658,7 +30658,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -30668,7 +30668,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -30678,7 +30678,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -30688,7 +30688,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -30698,7 +30698,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -30757,19 +30757,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -30778,9 +30778,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30788,9 +30788,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30798,7 +30798,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -30808,7 +30808,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -30818,7 +30818,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -30828,7 +30828,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -30838,7 +30838,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -30848,7 +30848,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -30858,7 +30858,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -30917,19 +30917,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -30938,9 +30938,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30948,9 +30948,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -30958,7 +30958,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -30968,7 +30968,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -30978,7 +30978,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -30988,7 +30988,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -30998,7 +30998,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -31008,7 +31008,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -31018,7 +31018,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -31030,15 +31030,15 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         172.5,
-        83.8
+        76.2
        ]
       ],
       "color": "#E11D48",
@@ -31096,19 +31096,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -31117,9 +31117,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31127,9 +31127,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31137,7 +31137,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31147,7 +31147,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -31157,7 +31157,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31167,7 +31167,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31177,7 +31177,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -31187,7 +31187,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -31197,7 +31197,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -31209,15 +31209,15 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60,
-        140
+        130
        ],
        [
         260,
-        140
+        130
        ],
        [
         172.5,
-        83.8
+        76.2
        ]
       ],
       "color": "#16A34A",
@@ -31275,19 +31275,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -31296,9 +31296,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31306,9 +31306,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31316,7 +31316,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31326,7 +31326,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -31336,7 +31336,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31346,7 +31346,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31356,7 +31356,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -31366,7 +31366,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -31376,7 +31376,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -31424,19 +31424,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -31445,9 +31445,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31455,9 +31455,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31465,7 +31465,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31475,7 +31475,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -31485,7 +31485,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31495,7 +31495,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31505,7 +31505,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -31515,7 +31515,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -31525,7 +31525,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -31584,19 +31584,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         120,
-        50
+        44
        ],
        [
         180,
-        50
+        44
        ],
        [
         260,
-        140
+        130
        ],
        [
         60,
-        140
+        130
        ]
       ],
       "color": "#0284C7",
@@ -31605,9 +31605,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 120,
-      "y1": 50,
+      "y1": 44,
       "x2": 260,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31615,9 +31615,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 180,
-      "y1": 50,
+      "y1": 44,
       "x2": 60,
-      "y2": 140,
+      "y2": 130,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
@@ -31625,7 +31625,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 116,
-      "y": 46,
+      "y": 40,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31635,7 +31635,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 46,
+      "y": 40,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -31645,7 +31645,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52,
-      "y": 144,
+      "y": 134,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31655,7 +31655,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 144,
+      "y": 134,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31665,7 +31665,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 181.5,
-      "y": 79.8,
+      "y": 72.2,
       "text": "P",
       "size": 11,
       "color": "#9333EA",
@@ -31675,7 +31675,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 150,
-      "y": 44,
+      "y": 38,
       "text": "6",
       "size": 10,
       "color": "#6E645C",
@@ -31685,7 +31685,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 160,
-      "y": 154,
+      "y": 143,
       "text": "10",
       "size": 10,
       "color": "#6E645C",
@@ -31748,16 +31748,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -31767,16 +31767,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -31784,28 +31784,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31814,8 +31814,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31825,7 +31825,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31834,8 +31834,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -31893,16 +31893,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -31912,16 +31912,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -31929,28 +31929,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -31959,8 +31959,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -31970,7 +31970,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -31979,8 +31979,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32038,16 +32038,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32057,16 +32057,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32074,28 +32074,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32104,8 +32104,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32115,7 +32115,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32124,8 +32124,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32183,16 +32183,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32202,16 +32202,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32219,28 +32219,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32249,8 +32249,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32260,7 +32260,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32269,8 +32269,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32279,10 +32279,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 124,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 92,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -32338,16 +32338,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32357,16 +32357,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32374,28 +32374,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32404,8 +32404,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32415,7 +32415,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32424,8 +32424,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32483,16 +32483,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32502,16 +32502,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32519,28 +32519,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32549,8 +32549,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32560,7 +32560,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32569,8 +32569,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32617,16 +32617,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32636,16 +32636,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32653,28 +32653,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32683,8 +32683,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32694,7 +32694,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32703,8 +32703,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -32762,16 +32762,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        44.8
+        132.0,
+        39.2
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32781,16 +32781,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        40,
-        124
+        60,
+        92
        ],
        [
-        119.2,
-        203.2
+        132.0,
+        144.8
        ],
        [
         260,
-        124
+        92
        ]
       ],
       "color": "#0284C7",
@@ -32798,28 +32798,28 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 40,
-      "y1": 124,
+      "x1": 60,
+      "y1": 92,
       "x2": 260,
-      "y2": 124,
+      "y2": 92,
       "color": "#6E645C",
       "dashed": true,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 119.2,
-      "y1": 44.8,
-      "x2": 119.2,
-      "y2": 203.2,
+      "x1": 132.0,
+      "y1": 39.2,
+      "x2": 132.0,
+      "y2": 144.8,
       "color": "#E11D48",
       "dashed": true,
       "width": 2
      },
      {
       "t": "label",
-      "x": 119.2,
-      "y": 39.8,
+      "x": 132.0,
+      "y": 34.2,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -32828,8 +32828,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 32,
-      "y": 128,
+      "x": 52,
+      "y": 96,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -32839,7 +32839,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 268,
-      "y": 128,
+      "y": 96,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -32848,8 +32848,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 127.2,
-      "y": 121,
+      "x": 140.0,
+      "y": 89,
       "text": "H",
       "size": 10,
       "color": "#E11D48",
@@ -33779,19 +33779,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -33800,19 +33800,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -33820,9 +33820,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -33830,7 +33830,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -33840,7 +33840,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -33849,8 +33849,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -33859,8 +33859,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -33869,8 +33869,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -33879,8 +33879,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -33939,19 +33939,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -33960,19 +33960,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -33980,9 +33980,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -33990,7 +33990,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34000,7 +34000,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34009,8 +34009,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34019,8 +34019,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34029,8 +34029,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34039,8 +34039,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34099,19 +34099,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34120,19 +34120,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34140,9 +34140,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34150,7 +34150,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34160,7 +34160,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34169,8 +34169,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34179,8 +34179,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34189,8 +34189,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34199,8 +34199,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34210,9 +34210,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -34269,19 +34269,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34290,19 +34290,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34310,9 +34310,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34320,7 +34320,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34330,7 +34330,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34339,8 +34339,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34349,8 +34349,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34359,8 +34359,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34369,8 +34369,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34429,19 +34429,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34450,19 +34450,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34470,9 +34470,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34480,7 +34480,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34490,7 +34490,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34499,8 +34499,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34509,8 +34509,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34519,8 +34519,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34529,8 +34529,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34539,10 +34539,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -34599,19 +34599,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34620,19 +34620,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34640,9 +34640,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34650,7 +34650,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34660,7 +34660,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34669,8 +34669,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34679,8 +34679,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34689,8 +34689,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34699,8 +34699,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34748,19 +34748,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34769,19 +34769,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34789,9 +34789,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34799,7 +34799,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34809,7 +34809,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34818,8 +34818,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34828,8 +34828,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34838,8 +34838,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -34848,8 +34848,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -34908,19 +34908,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         60.0,
-        40.0
+        33.6
        ],
        [
         60.0,
-        146.0
+        134.0
        ],
        [
-        240.5,
-        146.0
+        231.0,
+        134.0
        ],
        [
-        240.5,
-        40.0
+        231.0,
+        33.6
        ]
       ],
       "color": "#0284C7",
@@ -34929,19 +34929,19 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 240.5,
-      "y2": 98.9,
+      "y1": 33.6,
+      "x2": 231.0,
+      "y2": 89.4,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 240.5,
-      "y1": 98.9,
-      "x2": 204.4,
-      "y2": 146.0,
+      "x1": 231.0,
+      "y1": 89.4,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34949,9 +34949,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 60.0,
-      "y1": 40.0,
-      "x2": 204.4,
-      "y2": 146.0,
+      "y1": 33.6,
+      "x2": 196.8,
+      "y2": 134.0,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
@@ -34959,7 +34959,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 38.0,
+      "y": 31.6,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -34969,7 +34969,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 52.0,
-      "y": 150.0,
+      "y": 138.0,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -34978,8 +34978,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 150.0,
+      "x": 239.0,
+      "y": 138.0,
       "text": "C",
       "size": 11,
       "color": "#2B2420",
@@ -34988,8 +34988,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 248.5,
-      "y": 38.0,
+      "x": 239.0,
+      "y": 31.6,
       "text": "D",
       "size": 11,
       "color": "#2B2420",
@@ -34998,8 +34998,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 204.4,
-      "y": 158.0,
+      "x": 196.8,
+      "y": 146.0,
       "text": "F",
       "size": 11,
       "color": "#2B2420",
@@ -35008,8 +35008,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 249.5,
-      "y": 101.9,
+      "x": 240.0,
+      "y": 92.4,
       "text": "E",
       "size": 11,
       "color": "#2B2420",
@@ -40570,292 +40570,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -40863,68 +40863,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -40933,8 +40933,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -40943,8 +40943,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -40953,8 +40953,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -40963,8 +40963,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -41022,292 +41022,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -41315,68 +41315,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -41385,8 +41385,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -41395,8 +41395,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -41405,8 +41405,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -41415,8 +41415,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -41474,292 +41474,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -41767,68 +41767,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -41837,8 +41837,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -41847,8 +41847,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -41857,8 +41857,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -41867,8 +41867,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -41877,20 +41877,20 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 238,
-      "y2": 92,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -41946,292 +41946,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -42239,68 +42239,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -42309,8 +42309,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -42319,8 +42319,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -42329,8 +42329,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -42339,8 +42339,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -42398,292 +42398,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -42691,68 +42691,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -42761,8 +42761,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -42771,8 +42771,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -42781,8 +42781,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -42791,8 +42791,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -42801,10 +42801,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#E11D48",
       "dashed": false,
       "width": 3
@@ -42860,292 +42860,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -43153,68 +43153,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -43223,8 +43223,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -43233,8 +43233,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -43243,8 +43243,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -43253,8 +43253,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -43301,292 +43301,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -43594,68 +43594,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -43664,8 +43664,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -43674,8 +43674,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -43684,8 +43684,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -43694,8 +43694,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
@@ -43753,292 +43753,292 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "poly",
       "pts": [
        [
-        150.0,
-        92.0
+        147.5,
+        88.0
        ],
        [
-        149.8,
-        87.2
-       ],
-       [
-        149.2,
-        82.4
-       ],
-       [
-        148.1,
-        77.8
+        147.3,
+        83.4
        ],
        [
         146.7,
-        73.2
+        78.9
        ],
        [
-        144.8,
-        68.8
+        145.7,
+        74.4
+       ],
+       [
+        144.3,
+        70.0
        ],
        [
         142.6,
-        64.5
+        65.8
        ],
        [
-        140.1,
-        60.5
+        140.5,
+        61.8
        ],
        [
-        137.1,
-        56.6
+        138.0,
+        57.9
        ],
        [
-        133.9,
-        53.1
+        135.2,
+        54.3
        ],
        [
-        130.4,
-        49.9
+        132.1,
+        50.9
        ],
        [
-        126.5,
-        46.9
+        128.7,
+        47.8
        ],
        [
-        122.5,
-        44.4
+        125.1,
+        45.0
        ],
        [
-        118.2,
-        42.2
+        121.2,
+        42.5
        ],
        [
-        113.8,
-        40.3
+        117.2,
+        40.4
        ],
        [
-        109.2,
-        38.9
+        113.0,
+        38.7
        ],
        [
-        104.6,
-        37.8
+        108.6,
+        37.3
        ],
        [
-        99.8,
-        37.2
+        104.1,
+        36.3
+       ],
+       [
+        99.6,
+        35.7
        ],
        [
         95.0,
-        37.0
+        35.5
        ],
        [
-        90.2,
-        37.2
+        90.4,
+        35.7
        ],
        [
-        85.4,
-        37.8
+        85.9,
+        36.3
        ],
        [
-        80.8,
-        38.9
+        81.4,
+        37.3
        ],
        [
-        76.2,
-        40.3
+        77.0,
+        38.7
        ],
        [
-        71.8,
-        42.2
+        72.8,
+        40.4
        ],
        [
-        67.5,
-        44.4
+        68.8,
+        42.5
        ],
        [
-        63.5,
-        46.9
+        64.9,
+        45.0
        ],
        [
-        59.6,
-        49.9
+        61.3,
+        47.8
        ],
        [
-        56.1,
-        53.1
+        57.9,
+        50.9
        ],
        [
-        52.9,
-        56.6
+        54.8,
+        54.3
        ],
        [
-        49.9,
-        60.5
+        52.0,
+        57.9
+       ],
+       [
+        49.5,
+        61.7
        ],
        [
         47.4,
-        64.5
+        65.8
        ],
        [
-        45.2,
-        68.8
+        45.7,
+        70.0
+       ],
+       [
+        44.3,
+        74.4
        ],
        [
         43.3,
-        73.2
+        78.9
        ],
        [
-        41.9,
-        77.8
+        42.7,
+        83.4
        ],
        [
-        40.8,
-        82.4
+        42.5,
+        88.0
        ],
        [
-        40.2,
-        87.2
+        42.7,
+        92.6
        ],
        [
-        40.0,
-        92.0
+        43.3,
+        97.1
        ],
        [
-        40.2,
-        96.8
-       ],
-       [
-        40.8,
+        44.3,
         101.6
        ],
        [
-        41.9,
-        106.2
-       ],
-       [
-        43.3,
-        110.8
-       ],
-       [
-        45.2,
-        115.2
+        45.7,
+        106.0
        ],
        [
         47.4,
-        119.5
+        110.2
        ],
        [
-        49.9,
-        123.5
+        49.5,
+        114.2
        ],
        [
-        52.9,
-        127.4
+        52.0,
+        118.1
        ],
        [
-        56.1,
-        130.9
+        54.8,
+        121.7
        ],
        [
-        59.6,
-        134.1
+        57.9,
+        125.1
        ],
        [
-        63.5,
-        137.1
+        61.3,
+        128.2
        ],
        [
-        67.5,
-        139.6
+        64.9,
+        131.0
        ],
        [
-        71.8,
-        141.8
+        68.7,
+        133.5
        ],
        [
-        76.2,
-        143.7
+        72.8,
+        135.6
        ],
        [
-        80.8,
-        145.1
+        77.0,
+        137.3
        ],
        [
-        85.4,
-        146.2
+        81.4,
+        138.7
        ],
        [
-        90.2,
-        146.8
+        85.9,
+        139.7
+       ],
+       [
+        90.4,
+        140.3
        ],
        [
         95.0,
-        147.0
+        140.5
        ],
        [
-        99.8,
-        146.8
+        99.6,
+        140.3
        ],
        [
-        104.6,
-        146.2
+        104.1,
+        139.7
        ],
        [
-        109.2,
-        145.1
+        108.6,
+        138.7
        ],
        [
-        113.8,
-        143.7
+        113.0,
+        137.3
        ],
        [
-        118.2,
-        141.8
+        117.2,
+        135.6
        ],
        [
-        122.5,
-        139.6
+        121.2,
+        133.5
        ],
        [
-        126.5,
-        137.1
+        125.1,
+        131.0
        ],
        [
-        130.4,
-        134.1
+        128.7,
+        128.2
        ],
        [
-        133.9,
-        130.9
+        132.1,
+        125.1
        ],
        [
-        137.1,
-        127.4
+        135.2,
+        121.7
        ],
        [
-        140.1,
-        123.5
+        138.0,
+        118.1
+       ],
+       [
+        140.5,
+        114.2
        ],
        [
         142.6,
-        119.5
+        110.2
        ],
        [
-        144.8,
-        115.2
+        144.3,
+        106.0
+       ],
+       [
+        145.7,
+        101.6
        ],
        [
         146.7,
-        110.8
+        97.1
        ],
        [
-        148.1,
-        106.2
-       ],
-       [
-        149.2,
-        101.6
-       ],
-       [
-        149.8,
-        96.8
+        147.3,
+        92.6
        ]
       ],
       "color": "#0284C7",
@@ -44046,68 +44046,68 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 238,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 231.5,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#16A34A",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 41.2,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 39.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#6E645C",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 116.2,
-      "y1": 41.2,
-      "x2": 116.2,
-      "y2": 142.8,
+      "x1": 115.2,
+      "y1": 39.5,
+      "x2": 115.2,
+      "y2": 136.5,
       "color": "#E11D48",
       "dashed": false,
       "width": 2
      },
      {
       "t": "line",
-      "x1": 95,
-      "y1": 92,
-      "x2": 238,
-      "y2": 92,
+      "x1": 95.0,
+      "y1": 88.0,
+      "x2": 231.5,
+      "y2": 88.0,
       "color": "#6E645C",
       "dashed": true,
       "width": 1
      },
      {
       "t": "label",
-      "x": 86,
-      "y": 96,
+      "x": 86.0,
+      "y": 92.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -44116,8 +44116,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 247,
-      "y": 96,
+      "x": 240.5,
+      "y": 92.0,
       "text": "P",
       "size": 11,
       "color": "#2B2420",
@@ -44126,8 +44126,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 35.2,
+      "x": 111.2,
+      "y": 33.5,
       "text": "A",
       "size": 11,
       "color": "#2B2420",
@@ -44136,8 +44136,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 112.2,
-      "y": 156.8,
+      "x": 111.2,
+      "y": 150.5,
       "text": "B",
       "size": 11,
       "color": "#2B2420",
@@ -44146,8 +44146,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 166.5,
-      "y": 104,
+      "x": 163.2,
+      "y": 100.0,
       "text": "13",
       "size": 10,
       "color": "#6E645C",
