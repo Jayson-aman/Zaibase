@@ -14284,6 +14284,2172 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    }
   ]
+ },
+ "honshiken_school_koko_waseda_eigo_02": {
+  "caption": "答え　I don't know why she was late.",
+  "slides": [
+   {
+    "note": "「彼女がなぜ遅れたのか、私にはわかりません」を並べかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "why / was / I / she",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "late / know / don't",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "まず主文。「私は知らない」＝ I don't know。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「なぜ遅れたのか」は、know のあとに続く、文の中の疑問（間接疑問）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "know ＋ （なぜ彼女が遅れたか）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "間接疑問の語順は、疑問詞＋主語＋動詞。疑問文の語順にしない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "why ＋ she ＋ was late",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "× why was she late",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "つなぐ。I don't know why she was late.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know why she was late.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "7語すべてを使ったか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "why・was・I・she",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "late・know・don't ← 7語",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。I don't know why she was late.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know why",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "she was late.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。「なぜ彼女が遅れたか」の部分に、疑問文の語順（was she）が入っていない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "why she was ← 肯定文の語順",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_03": {
+  "caption": "答え　been／playing／her削除／mountain",
+  "slides": [
+   {
+    "note": "4つの英文の誤りを直す。それぞれ1か所だけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 52,
+      "w": 280,
+      "h": 28,
+      "text": "① has gone to Kyoto",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 88,
+      "w": 280,
+      "h": 28,
+      "text": "② enjoyed to play",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 28,
+      "text": "③ who I met her",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 160,
+      "w": 280,
+      "h": 28,
+      "text": "④ any other mountains",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "① three times（3回）は経験。経験は have been to。has gone to は『行ってしまった』。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "has gone → has been",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "② enjoy は、あとに動名詞（〜ing）だけをとる。to play は使えない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "enjoyed to play",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ enjoyed playing",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "③ who が、met の目的語の役目をしている。her が二重になるので、取る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "who I met her",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ who I met",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "④ any other は『ほかのどの〜』。あとの名詞は単数形。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "any other mountains",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ any other mountain",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "直した4文。自然な英文になっているか、声に出して読んで確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 52,
+      "w": 280,
+      "h": 28,
+      "text": "He has been to Kyoto ...",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 88,
+      "w": 280,
+      "h": 28,
+      "text": "I enjoyed playing tennis ...",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 28,
+      "text": "the girl who I met yesterday",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 160,
+      "w": 280,
+      "h": 28,
+      "text": "any other mountain in Japan",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答え。① been　② playing　③ her をとる　④ mountain。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "① been　② playing",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "③ her をとる　④ mountain",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "まとめ。経験＝have been to、enjoy＋〜ing、関係代名詞のあとは代名詞なし、any other＋単数。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "4つの規則を覚える",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_04": {
+  "caption": "答え　Because he was so happy to catch a fish.",
+  "slides": [
+   {
+    "note": "Why did the writer forget about his phone? 本文から理由を探す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "forgot about his phone",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ 理由は？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "本文の forgot about my phone を探す。第2段落の最後の文にある。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "I was so happy that",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "I forgot about my phone.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "so ~ that ... は「とても〜なので…」。前が原因、後ろが結果。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "so happy（原因）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "that I forgot（結果）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "うれしかった理由は、直前の文。After an hour, I finally caught a small one.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "魚を1匹つかまえた",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ とてもうれしかった",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "選択肢を見る。ア「魚をつかまえてとてもうれしかったから」が一致。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "ア ◯",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "イ・ウ・エは本文にない。ウ「携帯が使えない」は第1段落の事実で、理由ではない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "イ ✕　ウ ✕　エ ✕",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。ア。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Because he was so happy",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "to catch a fish.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。本文の2つの文（魚をつかまえた→うれしくて忘れた）がつながっている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "つかまえた → うれしい → 忘れた",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_05": {
+  "caption": "答え　都会（同時に多く）⇔ 村（1つをゆっくり）",
+  "slides": [
+   {
+    "note": "第3段落で筆者が気づいたことを、日本語60字以内で説明する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "第3段落",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "気づいたこと",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "60字以内",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "I realized something important. 「大切なことに気づいた」。このあと内容が説明される。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "I realized something important.",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "In the city の文。「都会では、いつも同時にたくさんのことをしようとしていた」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "In the city",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "同時に多くのことをしようとした",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "In the village の文。「村では、1つのことをゆっくりするほうが楽しいと学んだ」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "In the village",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "1つのことをゆっくり → 楽しい",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "2つを対比して1文に。都会＝同時に多く、村＝1つをゆっくり。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "都会⇔村",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "同時に多く ⇔ 1つをゆっくり",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "解答例。都会ではいつも同時に多くのことをしようとしていたが、村では1つのことをゆっくりするほうが楽しめると学んだ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 56,
+      "w": 280,
+      "h": 26,
+      "text": "都会ではいつも同時に多くの",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 90,
+      "w": 280,
+      "h": 26,
+      "text": "ことをしようとしていたが、村",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 26,
+      "text": "では1つのことをゆっくりする",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 158,
+      "w": 280,
+      "h": 26,
+      "text": "ほうが楽しめると学んだ。",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 12
+     }
+    ]
+   },
+   {
+    "note": "確かめ。対比が2点とも入っているか。53字で60字以内か。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "都会◯　村◯",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "53字（60字以内）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "まちがい例。村での学びだけだと、「気づき」の意味が弱くなる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "都会との対比が必要",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_07": {
+  "caption": "答え　The man I met yesterday is a friend of my brother's.",
+  "slides": [
+   {
+    "note": "「私が昨日会った男の人は、私の兄の友だちです」を英語に。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "私が昨日会った男の人",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "は、私の兄の友だちです",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語は「私が昨日会った男の人」。名詞を文で説明する。説明は名詞のあとに置く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The man ＋ （説明）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "説明は『私が昨日会った』＝ I met yesterday。whom / that は省略できる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The man (whom) I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "述語。『〜は友だちです』＝ is a friend。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "... is a friend",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "『私の兄の』は of my brother's。a friend of my brother's＝兄の友だちの1人。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "a friend of my brother's",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "つなぐ。The man I met yesterday is a friend of my brother's.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "is a friend of my brother's.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "is a friend of my brother's.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。met のあとに him を入れない。関係代名詞が目的語の役目。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "met him ✕",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_08": {
+  "caption": "答え　This book gave me the courage to try again.",
+  "slides": [
+   {
+    "note": "「この本は、私にもう一度やってみる勇気を与えてくれた」を並べかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "courage / gave / try / book",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "this / to / me / again / the",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語と動詞。This book gave。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "This book gave",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「人に物を与える」は give＋人＋物。『私に』が先、『勇気を』があと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "gave ＋ me ＋ the courage",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "『やってみる勇気』。勇気の内容を、あとから説明する。to try again。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "the courage ＋ to try again",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "つなぐ。This book gave me the courage to try again.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "This book gave me",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "the courage to try again.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "9語すべてを使ったか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "courage・gave・try・book",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "this・to・me・again・the",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "This book gave me",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "the courage to try again.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。gave the courage me のように、人と物を逆にしない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "gave me the courage ◯",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_09": {
+  "caption": "答え　This song has been loved by people ...",
+  "slides": [
+   {
+    "note": "「People all over the world have loved this song for many years.」を受動態に。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "現在完了の文",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "主語を This song に",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "受動態は『〜される』の形。be＋過去分詞。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "be＋過去分詞",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "現在完了は have＋過去分詞。受動態にすると have been＋過去分詞。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "have loved",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ have been loved",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語は This song（単数）。have は has に変わる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "This song has been loved",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "もとの主語は by のあとに置く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "by people all over the world",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "期間の語句はそのまま。for many years。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "for many years",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "This song has been loved",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "by people all over the world",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "for many years.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。been を落としていないか。has（単数）か。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "has been loved ◯",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_waseda_eigo_12": {
+  "caption": "答え　祖父が手で魚をとる方法を見せた",
+  "slides": [
+   {
+    "note": "本文と合っているものを選ぶ。選択肢の1語ずつを、本文で探す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 52,
+      "w": 280,
+      "h": 28,
+      "text": "ア　祖父が見せた",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 88,
+      "w": 280,
+      "h": 28,
+      "text": "イ　最初から楽しい",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 28,
+      "text": "ウ　大きな魚",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 160,
+      "w": 280,
+      "h": 28,
+      "text": "エ　祖父と再訪",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "アは、第2段落の He showed me how to catch fish with my hands. と同じ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "ア ◯",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "イは、第1段落 At first, I was upset.（最初は不満）と反対。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "イ ✕（At first, upset）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "ウは、I failed many times と a small one。『大きな魚を最初に』は事実と違う。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "ウ ✕（small／many times）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "エは、最後の文。再訪して教えたい相手は妹。祖父とは書かれていない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "エ ✕（teach my little sister）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えはア。本文の文を、そのまま言いかえた選択肢。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "正解は ア",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。ア以外の3つは、本文の語と食いちがう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "イ・ウ・エ ✕",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "まとめ。内容一致は、本文にない語・ちがう語を探して、消去する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "ちがう語を探す",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   }
+  ]
  }
 };
 

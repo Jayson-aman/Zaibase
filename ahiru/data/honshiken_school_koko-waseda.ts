@@ -698,5 +698,195 @@ export const honshikenSchool_koko_waseda: Question[] = [
       "気をつけるべきことが書かれている",
       "100字以内"
     ]
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_01",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "basic",
+    "question": "次の動詞の過去分詞を書きなさい。\n(1) choose　(2) begin　(3) swim　(4) steal　(5) draw",
+    "answer": "(1) chosen　(2) begun　(3) swum　(4) stolen　(5) drawn",
+    "hint": "過去形とまちがえやすい動詞ばかり。過去形は chose / began / swam / stole / drew。",
+    "explanation": "【何を聞かれているか】不規則動詞の過去分詞を、過去形と区別して書く。\n【なぜそうなるのか】過去分詞は、現在完了（have＋過去分詞）や受動態（be＋過去分詞）に使う。不規則動詞は、原形・過去形・過去分詞の3つ組で覚える。choose-chose-chosen、begin-began-begun、swim-swam-swum、steal-stole-stolen、draw-drew-drawn。過去形と過去分詞が別の形になる動詞は、とくに取りちがえやすい。\n【ステップ1】(1) choose-chose-chosen。過去分詞は chosen。\n【ステップ2】(2) begin-began-begun。過去分詞は begun。\n【ステップ3】(3) swim-swam-swum。過去分詞は swum。\n【ステップ4】(4) steal-stole-stolen。過去分詞は stolen。\n【ステップ5】(5) draw-drew-drawn。過去分詞は drawn。\n【答え】(1) chosen　(2) begun　(3) swum　(4) stolen　(5) drawn\n【確かめ】文で確かめる。It has begun to rain.（現在完了）。The picture was drawn by my sister.（受動態）。過去形（began・drew）では、have や be のあとに置けない。\n【よくあるまちがい】過去形をそのまま答える誤り（chose・began・swam・stole・drew）。have や be のあとには過去分詞が来る。",
+    "pitfall": "過去形（began など）を過去分詞として答える。",
+    "memoryTip": "原形-過去形-過去分詞の3つ組で覚える。have/be のあとは過去分詞。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_02",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "standard",
+    "question": "次の日本文に合うように、（　）内の語をすべて使って並べかえ、英文を完成させなさい。\n彼女がなぜ遅れたのか、私にはわかりません。\n（ why / was / I / she / late / know / don't ）",
+    "answer": "I don't know why she was late.",
+    "hint": "「なぜ遅れたのか」は、疑問文ではなく、know のあとに続く名詞のかたまり（間接疑問）。why のあとは、ふつうの文の語順。",
+    "explanation": "【何を聞かれているか】間接疑問文の語順を、疑問文の語順と区別して作る。\n【なぜそうなるのか】「彼女がなぜ遅れたのか」は、know の目的語になる文の中の疑問。このような間接疑問では、疑問詞のあとは「主語＋動詞」の肯定文の語順になる。疑問文の語順（was she）にしないこと。\n【ステップ1】主文を作る。「私は知らない」＝ I don't know。\n【ステップ2】「なぜ〜か」は why。つづけて、「彼女が遅れた」を、ふつうの語順で。why she was late。\n【ステップ3】つなぐ。I don't know why she was late.\n【ステップ4】使う語を確かめる。why・was・I・she・late・know・don't の7語すべてを使っている。\n【答え】I don't know why she was late.\n【確かめ】日本文を英文から逆に読む。「私は知らない／なぜ彼女が遅れたか」で、日本文と合う。\n【よくあるまちがい】I don't know why was she late. のように、疑問文の語順にしてしまう誤り。間接疑問は、疑問詞のあとが「主語＋動詞」。",
+    "pitfall": "why のあとを疑問文の語順（was she）にする。",
+    "memoryTip": "間接疑問＝疑問詞＋主語＋動詞。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_03",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "standard",
+    "question": "次の①〜④の英文には、それぞれ1か所だけ誤りがあります。誤りの部分を、正しい形に直しなさい。\n① He has gone to Kyoto three times.\n② I enjoyed to play tennis with my friends.\n③ This is the girl who I met her yesterday.\n④ Mt. Fuji is higher than any other mountains in Japan.",
+    "answer": "① gone → been　② to play → playing　③ her をとる　④ mountains → mountain",
+    "hint": "①は「〜へ行ったことがある」の形。②は enjoy のあとの形。③は関係代名詞が目的語の役目をしている。④は any other のあとの名詞の数。",
+    "explanation": "【何を聞かれているか】よく出る文法の誤りを、規則から見つけて直す。\n【なぜそうなるのか】①「〜に行ったことがある（経験）」は have been to で、have gone to は「行ってしまった（今ここにいない）」。②enjoy は目的語に動名詞（〜ing）をとり、不定詞（to〜）はとらない。③関係代名詞 who は、あとの her の役目をすでに果たしているので、her が二重になる。④「ほかのどの〜よりも」の any other のあとは、単数形の名詞。\n【ステップ1】① three times（3回）という経験を言うので have been to。has gone to は『行ってしまって、ここにはいない』なので、3回と合わない。→ been。\n【ステップ2】② enjoy＋〜ing。enjoy は動名詞だけを目的語にする。→ playing。\n【ステップ3】③ 関係代名詞 who が the girl を受け、met の目的語の役目をしている。そのため her は不要。→ her をとる。\n【ステップ4】④ any other のあとは、1つ1つを順に比べるので単数形。→ mountain。\n【答え】① gone → been　② to play → playing　③ her をとる　④ mountains → mountain\n【確かめ】直した文を読み返す。① He has been to Kyoto three times. ② I enjoyed playing tennis with my friends. ③ This is the girl who I met yesterday. ④ Mt. Fuji is higher than any other mountain in Japan. どれも自然な英文。\n【よくあるまちがい】③で who を whom に直すだけで、her が残る誤り。who（whom）が目的語の役目をしているので、her は不要。④で other を取って any mountain とする誤り（other が入るのは、富士山自身をのぞくため）。",
+    "pitfall": "③で her を残したまま who を whom にする。",
+    "memoryTip": "経験＝have been to、enjoy＋〜ing、関係代名詞のあとに代名詞は不要、any other＋単数。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_04",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "standard",
+    "question": "次の英文を読んで、問いに答えなさい。\nWhy did the writer forget about his phone?",
+    "answer": "Because he was so happy to catch a fish.",
+    "hint": "本文の「so ~ that ...」の文に注目する。so ~ that ... は「とても〜なので…」。",
+    "explanation": "【何を聞かれているか】本文の so ~ that ... の文から、理由を選ぶ。\n【なぜそうなるのか】問いは「なぜ筆者は携帯電話のことを忘れたのか」。本文の第2段落の最後に、I was so happy that I forgot about my phone.（私はとてもうれしかったので、携帯電話のことを忘れた）とある。so ~ that ... は、前に原因、後ろに結果を表す。\n【ステップ1】質問文を読む。forgot about his phone の理由をたずねている。\n【ステップ2】本文で forgot about my phone を探す。第2段落の最後の文。\n【ステップ3】その前の部分を読む。I was so happy that ... で、原因は「とてもうれしかった」。そのうれしさは、直前の「やっと小さな魚をつかまえた」ことから。\n【ステップ4】選択肢アが、この内容と合う。イ・ウ・エは本文にない。\n【答え】Because he was so happy to catch a fish.\n【確かめ】本文の After an hour, I finally caught a small one. I was so happy that I forgot about my phone. と、選択肢の内容が一致している。\n【よくあるまちがい】ウのように、「携帯電話が使えなかった」を選ぶ誤り。それは第1段落の事実だが、forgot の理由として本文は述べていない。",
+    "pitfall": "「携帯電話が使えなかったから」を選ぶ。本文は、うれしかったことを理由にしている。",
+    "memoryTip": "so ~ that ...＝原因〜結果。理由の文を本文から探す。",
+    "choices": [
+      "Because he was so happy to catch a fish.",
+      "Because his grandfather took his phone away.",
+      "Because his phone did not work in the mountains.",
+      "Because he was tired after playing video games."
+    ],
+    "passage": "Last summer, my family visited a small village in the mountains. There was no convenience store, and our phones did not work well. At first, I was upset. I had planned to spend the whole week playing video games and watching videos.\n\nOn the second day, however, my grandfather, who lives in the village, took me to a river. He showed me how to catch fish with my hands. I failed many times, but he told me, \"The fish are not in a hurry, so you should not be, either.\" After an hour, I finally caught a small one. I was so happy that I forgot about my phone.\n\nThat night, I realized something important. In the city, I was always trying to do many things at the same time. In the village, I learned that doing one thing slowly can make it more enjoyable. I want to visit the village again next summer and teach my little sister how to catch fish."
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_05",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "本文の第3段落で、筆者は何に気づいたと述べていますか。日本語で、60字以内で説明しなさい。",
+    "answer": "都会ではいつも同時に多くのことをしようとしていたが、村では1つのことをゆっくりするほうが楽しめると学んだ。（53字）",
+    "hint": "第3段落の In the city と In the village の2つの文を、対比して書く。",
+    "explanation": "【何を聞かれているか】段落の中の対比を、日本語の1文にまとめる。\n【なぜそうなるのか】第3段落は、I realized something important.（大切なことに気づいた）のあと、In the city と In the village を対比して、気づいた内容を説明している。記述では、都会での自分の様子と、村で学んだことの2つを入れる。\n【ステップ1】In the city の文を訳す。『都会では、私はいつも同時にたくさんのことをしようとしていた』。\n【ステップ2】In the village の文を訳す。『村では、1つのことをゆっくりすることが、それをより楽しくすると学んだ』。\n【ステップ3】2つを対比して1文にまとめる。『都会ではいつも同時に多くのことをしようとしていたが、村では1つのことをゆっくりするほうが楽しめると学んだ。』（53字）\n【答え】都会ではいつも同時に多くのことをしようとしていたが、村では1つのことをゆっくりするほうが楽しめると学んだ。（53字）\n【確かめ】字数は53字で60字以内。「都会（同時に多くのこと）」と「村（1つのことをゆっくり）」の対比が入っている。\n【よくあるまちがい】村での学びだけを書いて、都会での様子を書かない誤り。気づきは、都会と比べてはじめて意味をもつ。",
+    "pitfall": "村での学びだけ書き、都会の様子を落とす。",
+    "memoryTip": "In the city / In the village の対比を2点とも書く。",
+    "passage": "Last summer, my family visited a small village in the mountains. There was no convenience store, and our phones did not work well. At first, I was upset. I had planned to spend the whole week playing video games and watching videos.\n\nOn the second day, however, my grandfather, who lives in the village, took me to a river. He showed me how to catch fish with my hands. I failed many times, but he told me, \"The fish are not in a hurry, so you should not be, either.\" After an hour, I finally caught a small one. I was so happy that I forgot about my phone.\n\nThat night, I realized something important. In the city, I was always trying to do many things at the same time. In the village, I learned that doing one thing slowly can make it more enjoyable. I want to visit the village again next summer and teach my little sister how to catch fish.",
+    "isWritten": true,
+    "rubricPoints": [
+      "都会では同時に多くのことをしようとしていた",
+      "村では1つのことをゆっくりするほうが楽しめると学んだ",
+      "60字以内"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_06",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "Do you think it is good to spend a week without a smartphone? Write your opinion in English in about 30 words. Give one reason.",
+    "answer": "I think it is a good idea. If we do not use our smartphones for a week, we can spend more time with our family and read more books.",
+    "hint": "最初の文で賛成か反対かを書き、2文目で理由を書く。理由は because や If ... で始めてもよい。",
+    "explanation": "【何を聞かれているか】自分の意見を、理由つきで、30語ほどの英語でまとめる。\n【なぜそうなるのか】自由英作文は、①意見（I think ...）、②理由（because ... / If ...）の2点を、文法の誤りなく書くことが大切。難しい表現より、正確でまとまりのある英文が評価される。解答例は賛成の立場で、理由は『家族との時間や読書の時間が増える』。反対の立場でも、理由がはっきりしていればよい。\n【ステップ1】意見を書く。I think it is a good idea.（よい考えだと思う）。\n【ステップ2】理由を書く。If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【ステップ3】全体の語数を数える。意見の文が7語、理由の文が23語で、合計約30語。\n【ステップ4】文法を確かめる。if の節は現在形（do not use）、主節は can＋動詞の原形（spend, read）。\n【答え】I think it is a good idea. If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【確かめ】語数はおよそ30語。意見と理由がそろい、if 節の中は未来のことでも現在形（do not use）で書けている。\n【よくあるまちがい】理由を書かずに意見だけで終わる誤り。また、If we will not use ... のように、if の中で will を使う誤り。",
+    "pitfall": "意見だけで理由がない。if の中に will を入れる。",
+    "memoryTip": "自由英作文＝意見＋理由。時や条件の節の中は未来でも現在形。",
+    "isWritten": true,
+    "rubricPoints": [
+      "賛成か反対かがはっきり書かれている",
+      "理由が1つ書かれている",
+      "文法の誤りがない（if節は現在形など）",
+      "約30語"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_07",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "standard",
+    "question": "次の日本文を英語になおしなさい。\n私が昨日会った男の人は、私の兄の友だちです。",
+    "answer": "The man I met yesterday is a friend of my brother's.",
+    "hint": "「私が昨日会った」が「男の人」を説明している。関係代名詞を使うか、省略した形で後ろから説明する。",
+    "explanation": "【何を聞かれているか】後ろから名詞を説明する形（関係代名詞の目的格）を使って英訳する。\n【なぜそうなるのか】「私が昨日会った男の人」のように、名詞を文で説明するときは、名詞のあとに説明を置く。The man（whom/that）I met yesterday。目的格の関係代名詞は省略できる。「私の兄の友だち」は、a friend of my brother's の形（『兄の友だちのうちの1人』）。\n【ステップ1】主語を作る。『私が昨日会った男の人』＝ The man I met yesterday。（whom または that を入れてもよい。省略可。）\n【ステップ2】述語を作る。『〜は友だちです』＝ is a friend。\n【ステップ3】『私の兄の』を足す。a friend of my brother's。\n【ステップ4】つなぐ。The man I met yesterday is a friend of my brother's.\n【答え】The man I met yesterday is a friend of my brother's.\n【確かめ】日本文にもどす。「私が昨日会った男の人は、私の兄の友だちです」。意味が合う。who(m)・that を入れた文も正解。\n【よくあるまちがい】The man who I met him yesterday のように、him を入れる誤り。関係代名詞が目的語の役目をするので、him は不要。また、my brother's friend は「兄の友だち（特定の人）」で、意味が少し変わる。",
+    "pitfall": "met のあとに him を入れる。関係代名詞（または省略）が目的語の役目をする。",
+    "memoryTip": "名詞＋（whom）＋主語＋動詞＝『〜が…する名詞』。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_08",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "次の日本文に合うように、（　）内の語をすべて使って並べかえ、英文を完成させなさい。\nこの本は、私にもう一度やってみる勇気を与えてくれました。\n（ courage / gave / try / book / this / to / me / again / the ）",
+    "answer": "This book gave me the courage to try again.",
+    "hint": "「与える」は gave me ... の形。「〜する勇気」は、courage のあとに不定詞（to＋動詞）を置く。",
+    "explanation": "【何を聞かれているか】「人に物を与える」の語順と、名詞を後ろから説明する不定詞を組み合わせて並べる。\n【なぜそうなるのか】「（人）に（物）を与える」は、give＋人＋物 の語順。ここでは『私に』が me、『勇気』が the courage。『もう一度やってみる』は、勇気の内容を説明するので、名詞 courage のあとに to try again を置く（名詞を説明する不定詞）。\n【ステップ1】主語と動詞。『この本は与えた』＝ This book gave。\n【ステップ2】『私に』＝ me。『勇気を』＝ the courage。語順は gave＋人＋物。\n【ステップ3】『もう一度やってみる』は勇気を説明する。the courage to try again。\n【ステップ4】つなぐ。This book gave me the courage to try again.\n【ステップ5】使う語を確かめる。courage・gave・try・book・this・to・me・again・the の9語すべて使った。\n【答え】This book gave me the courage to try again.\n【確かめ】日本文にもどす。「この本は私にもう一度やってみる勇気を与えた」。9語すべてを使っている。\n【よくあるまちがい】This book gave the courage me to try again. のように、人と物の語順を逆にする誤り。give は、人が先、物があと。",
+    "pitfall": "gave the courage me のように、人と物を逆にする。",
+    "memoryTip": "give＋人＋物。名詞を説明する to＋動詞は名詞のあと。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_09",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "次の文を、「This song」を主語にして、ほぼ同じ意味の受動態の文に書きかえなさい。\nPeople all over the world have loved this song for many years.",
+    "answer": "This song has been loved by people all over the world for many years.",
+    "hint": "現在完了の受動態は、have been＋過去分詞。主語が this song（単数）なので has been。",
+    "explanation": "【何を聞かれているか】現在完了の文を受動態にするときの形を作る。\n【なぜそうなるのか】受動態は『主語が〜される』の形で、be＋過去分詞。もとの文が現在完了（have＋過去分詞）なら、受動態は have been＋過去分詞になる。主語が三人称単数なら has been。もとの主語（People all over the world）は、by のあとに置く。\n【ステップ1】目的語を主語にする。this song → This song。\n【ステップ2】動詞を受動態の現在完了にする。have loved → has been loved（主語が単数なので has）。\n【ステップ3】もとの主語を by のあとに置く。by people all over the world。\n【ステップ4】期間を表す語句はそのまま。for many years。つなぐ。\n【答え】This song has been loved by people all over the world for many years.\n【確かめ】能動態にもどす。People all over the world have loved this song for many years.。意味が一致する。\n【よくあるまちがい】This song has loved by people ... のように been を落とす誤り。また、have been loved と主語の数（単数）に合わせない誤り。",
+    "pitfall": "been を落とす。主語が単数なので has been。",
+    "memoryTip": "現在完了の受動態＝have（has）been＋過去分詞。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_10",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "次の英文を日本語になおしなさい。\nThe more I read about the history of the town, the more interested I became.",
+    "answer": "その町の歴史について読めば読むほど、私はますます興味をもつようになった。",
+    "hint": "the more ～, the more ... は、「～すればするほど、ますます…」の形。2つの文の対応に注目する。",
+    "explanation": "【何を聞かれているか】「the＋比較級，the＋比較級」の構文を訳す。\n【なぜそうなるのか】The more ..., the more ... は、『…すればするほど、ますます…』という意味の決まった形。前半と後半が対になっていて、2つの量や程度が同時に増えていくことを表す。『読む量』が増えるほど、『興味の度合い』も増える。\n【ステップ1】前半を訳す。The more I read about the history of the town＝『その町の歴史について読めば読むほど』。\n【ステップ2】後半を訳す。the more interested I became＝『私はますます興味をもつようになった』。\n【ステップ3】つなぐ。『その町の歴史について読めば読むほど、私はますます興味をもつようになった。』\n【答え】その町の歴史について読めば読むほど、私はますます興味をもつようになった。\n【確かめ】構文の形を確かめる。The more（程度）, the more（程度）。前半と後半が対になっている。\n【よくあるまちがい】「より多く読んだので、より興味をもった」と、2つの文を別々に訳す誤り。決まった構文として「〜すればするほど…」と訳す。",
+    "pitfall": "二文に分けて訳す。決まった構文として「〜すればするほど、ますます…」と訳す。",
+    "memoryTip": "The more A, the more B＝Aすればするほど、ますますB。"
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_11",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "standard",
+    "question": "次の対話文の（　）に入る最も適切な文を選びなさい。\nA: Excuse me. Could you tell me how to get to the station?\nB: Sure. Go straight and turn left at the second corner. You can't miss it.\nA: （　）\nB: It takes about ten minutes on foot.",
+    "answer": "How long does it take?",
+    "hint": "B の答え「歩いて約10分かかります」は、何をたずねられたときの答えか。",
+    "explanation": "【何を聞かれているか】対話文で、答えの文から、元の質問を逆にたどって選ぶ。\n【なぜそうなるのか】空所のあとの B の発言は、It takes about ten minutes on foot.（歩いて約10分かかります）。これは『時間』を答えている。時間をたずねるときの言い方は How long does it take?。選択肢は、きょり・頻度・料金をたずねる文で、どれも「10分」という答えとは合わない。\n【ステップ1】B の最後の発言を読む。It takes about ten minutes on foot.＝時間の答え。\n【ステップ2】「時間」をたずねる表現は How long ...?。\n【ステップ3】選択肢ごとに、10分と答えるのが自然かを確かめる。How far is it? はきょり（例：約800m）、How often ...? は回数・間隔、How much ...? は金額をたずねる。\n【ステップ4】How long does it take? が自然につながる。\n【答え】How long does it take?\n【確かめ】A の質問に、B が「It takes about ten minutes on foot.」と答える。答えが「時間」で、質問が How long で、対応している。\n【よくあるまちがい】How far is it? を選ぶ誤り。「歩いて10分」は、きょりの答えとして使うこともあるが、It takes ... は How long への答え方。",
+    "pitfall": "How far（きょり）と How long（時間）を取りちがえる。",
+    "memoryTip": "答えが It takes ...（かかる時間）なら、質問は How long。",
+    "choices": [
+      "How far is it?",
+      "How long does it take?",
+      "How often does the bus run?",
+      "How much is the fare?"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_waseda_eigo_12",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-waseda",
+    "difficulty": "advanced",
+    "question": "次の英文を読んで、問いに答えなさい。\n本文の内容と合っているものを、次から選びなさい。",
+    "answer": "The writer's grandfather showed him how to catch fish with his hands.",
+    "hint": "選択肢の内容を、本文の1つ1つの文と照らす。違う語（big・from the beginning・with his grandfather）に注意。",
+    "explanation": "【何を聞かれているか】選択肢を、本文の事実と1つずつ照らして、正しいものを選ぶ。\n【なぜそうなるのか】内容一致の問題は、選択肢の文を本文と照らして、同じ内容のものだけを選ぶ。よくある誤りは、本文にない語（big、with his grandfather）や、時のずれ（from the beginning）が入っていること。1語ずつ、本文のどこに書いてあるかを探す。\n【ステップ1】アを調べる。第2段落に He showed me how to catch fish with my hands. とある。『祖父が手で魚をつかまえる方法を見せてくれた』と一致する。\n【ステップ2】イを調べる。第1段落に At first, I was upset. とある。『最初は、はじめからうれしかった』は反対。\n【ステップ3】ウを調べる。第2段落に I failed many times とあり、最後に caught a small one。『大きな魚を最初に』は、事実と違う（small、many times）。\n【ステップ4】エを調べる。最終文は『来年の夏に、また村に行き、妹に魚のとり方を教えたい』。祖父と行くとは書かれていない。\n【答え】The writer's grandfather showed him how to catch fish with his hands.\n【確かめ】アは、本文の He showed me how to catch fish with my hands. の言いかえ。イ・ウ・エは本文と食いちがう。\n【よくあるまちがい】ウのように、big や first try など、本文にない語を見のがす誤り。また、エの with his grandfather のように、本文に出てくる人物（祖父・妹）を入れかえた選択肢に注意。",
+    "pitfall": "big・from the beginning・with his grandfather のような本文にない語を見のがす。",
+    "memoryTip": "内容一致＝選択肢の1語ずつを、本文で探す。",
+    "choices": [
+      "The writer's grandfather showed him how to catch fish with his hands.",
+      "The writer was happy to be in the village from the beginning.",
+      "The writer caught a big fish on his first try.",
+      "The writer wants to visit the village again with his grandfather."
+    ],
+    "passage": "Last summer, my family visited a small village in the mountains. There was no convenience store, and our phones did not work well. At first, I was upset. I had planned to spend the whole week playing video games and watching videos.\n\nOn the second day, however, my grandfather, who lives in the village, took me to a river. He showed me how to catch fish with my hands. I failed many times, but he told me, \"The fish are not in a hurry, so you should not be, either.\" After an hour, I finally caught a small one. I was so happy that I forgot about my phone.\n\nThat night, I realized something important. In the city, I was always trying to do many things at the same time. In the village, I learned that doing one thing slowly can make it more enjoyable. I want to visit the village again next summer and teach my little sister how to catch fish."
   }
 ];
