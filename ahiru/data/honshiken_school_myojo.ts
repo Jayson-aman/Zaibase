@@ -16,7 +16,7 @@
 //   ・既存の明星向け問題（myojo_exam.ts・questions-schools-3.ts・splus-my-b.ts・kansaihokuyo_myojo_tezukayama_max.ts）と話題が重ならないよう、速さ（電車の通過・旅人算・池）、水そう、面積比、仕事算、状態変化、浮力、ふりこ、てこ、東北の農業、江戸の政治、国連、三大改革などは避けた。
 // 動く図解は data/figures-honshiken-school-myojo.ts に同じIDで置く。
 
-import type { Question } from './questions-meta';
+import type { Question } from './questions';
 
 export const honshikenSchool_myojo: Question[] = [
   {
