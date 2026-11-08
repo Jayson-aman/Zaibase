@@ -109,7 +109,7 @@ const k03 = show([
 // k04 アンデスの高山気候
 const k04 = show([
   S('アンデス山脈の標高3000mの都市の気温を求めます。標高0mは28℃、100mごとに0.6℃下がります。',
-    [pg([[160, 18], [50, 142], [270, 142]], C.main, FILL.warm), lb(160, 14, '標高3000m　？℃', 12, C.red, 'middle', true), lb(50, 154, '標高0m　28℃', 11, C.blue, 'middle', true)],
+    [pg([[160, 26], [50, 128], [270, 128]], C.main, FILL.warm), lb(160, 16, '標高3000m　？℃', 12, C.red, 'middle', true), lb(60, 146, '標高0m　28℃', 11, C.blue, 'middle', true)],
     '標高3000mの気温は？', MAIN),
   S('手がかりは100mで0.6℃です。3000mには、100mが何回ふくまれるかを数えます。',
     [bx(14, 14, 292, 40, '3000m÷100m＝30回', C.blue, FILL.blue, 14), bx(14, 66, 292, 40, '1回で0.6℃下がる', C.blue, FILL.blue, 14)], '30回ぶん下がる', BLUE),
@@ -226,7 +226,7 @@ const stack100 = (rows: [string, number, number, number][], hl = -1): DiagramEle
     out.push(lb(30, y + 18, name, 13, hlc ? C.red : C.ink, 'middle', true));
     const wa = (a / 100) * W, wb = (b / 100) * W, wc = (c / 100) * W;
     out.push(bx(x0, y, wa, 28, undefined, C.green, FILL.green));
-    out.push(bx(x0 + wa, y, wb, 28, undefined, C.blue, FILL.blue));
+    out.push(bx(x0 + wa, y, wb, 28, b + '％', C.blue, FILL.blue, 10));
     out.push(bx(x0 + wa + wb, y, wc, 28, c + '％', hlc ? C.red : C.main, hlc ? FILL.red : FILL.warm, 11));
   });
   return out;

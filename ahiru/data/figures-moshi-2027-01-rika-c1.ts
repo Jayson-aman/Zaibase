@@ -238,7 +238,7 @@ const c13 = show([
   { note: '水1cm³は1gなので、おしのけた水の体積は900cm³。(1) 水面より下の氷の体積は900cm³です。', add: fresh(...tank(70), rect(130, 56, 60, 30, C.main, FILL.warm), rect(130, 70, 60, 16, C.red, FILL.red), lb(210, 84, '水面の下900cm³', 11, C.red, 'start', true), ...m('(1) 900cm³', C.green, FILL.green)) },
   { note: '❓(2) 氷がとけると、水面はどうなるでしょう。とけた氷は、900gの水になります。体積は900cm³で、おしのけていた体積900cm³と、ちょうど同じです。', add: fresh(...tank(70), rect(131, 70, 128, 16, C.blue, FILL.blue), ...m('(2) 変わらない', C.green, FILL.green)) },
   { note: '(3) 氷の中に、体積10cm³・重さ79gの鉄の球があります。全体は979gで浮いているので、おしのけている水は979gで、979cm³です。', add: fresh(...tank(70), rect(130, 56, 60, 30, C.main, FILL.warm), disc(160, 72, 6, C.ink, FILL.gray), lb(210, 84, '979cm³', 12, C.red, 'start', true), ...m('おしのけ979cm³', C.red, FILL.red)) },
-  { note: '❓とけると、どうなるのでしょう。氷は900gの水（900cm³）になり、鉄の球は底にしずんで、自分の体積10cm³だけをおしのけます。合計910cm³。979−910＝69cm³ふえない、つまり、へります。', add: fresh(...tank(80), disc(160, 132, 6, C.ink, FILL.gray), lb(210, 76, '910cm³', 12, C.blue, 'start', true), ...m('979→910：69cm³へる', C.red, FILL.red)) },
+  { note: '❓とけると、どうなるのでしょう。氷は900gの水（900cm³）になり、鉄の球は底にしずんで、自分の体積10cm³ぶんをしめます。合計910cm³で、979−910＝69cm³へります。', add: fresh(...tank(80), disc(160, 132, 6, C.ink, FILL.gray), lb(210, 76, '910cm³', 12, C.blue, 'start', true), ...m('979→910：69cm³へる', C.red, FILL.red)) },
   { note: '水そうの底面積は100cm²。69cm³へるので、水面は69÷100＝0.69cm下がります。(3) 0.69cm。確かめ：しずむと79cm³ぶんが10cm³ぶんになり、79−10＝69cm³で一致します。', add: m('(3) 0.69cm下がる', C.green, FILL.green) },
 ], '答え：(1) 900cm³ (2) 変わらない (3) 0.69cm');
 
