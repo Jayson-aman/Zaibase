@@ -1,1 +1,0 @@
-{ "extends": "./tsconfig.json", "include": ["/home/user/Zaibase/ahiru/data/honshiken_school_tokyo-tsukuba-komaba.ts", "/home/user/Zaibase/ahiru/data/figures-honshiken-school-tokyo-tsukuba-komaba.ts"], "compilerOptions": {"noEmit": true, "skipLibCheck": true} }

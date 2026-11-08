@@ -572,6 +572,20 @@ import { figuresMoshi202612ShakaiChugaku1 } from './figures-moshi-2026-12-shakai
 import { figuresMoshi202612ShakaiChugaku2 } from './figures-moshi-2026-12-shakai-c2';
 import { figuresMoshi202612ShakaiKoko1 } from './figures-moshi-2026-12-shakai-k1';
 import { figuresMoshi202612ShakaiKoko2 } from './figures-moshi-2026-12-shakai-k2';
+import { figuresHonshikenSchool_hakuryo } from './figures-honshiken-school-hakuryo';
+import { figuresHonshikenSchool_kobe_jogakuin } from './figures-honshiken-school-kobe-jogakuin';
+import { figuresHonshikenSchool_koko_keio_shiki } from './figures-honshiken-school-koko-keio-shiki';
+import { figuresHonshikenSchool_koko_rakunan } from './figures-honshiken-school-koko-rakunan';
+import { figuresHonshikenSchool_rakunan } from './figures-honshiken-school-rakunan';
+import { figuresHonshikenSchool_rokko } from './figures-honshiken-school-rokko';
+import { figuresHonshikenSchool_tokyo_azabu } from './figures-honshiken-school-tokyo-azabu';
+import { figuresHonshikenSchool_tokyo_eiko } from './figures-honshiken-school-tokyo-eiko';
+import { figuresHonshikenSchool_tokyo_joshigakuin } from './figures-honshiken-school-tokyo-joshigakuin';
+import { figuresHonshikenSchool_tokyo_kaisei } from './figures-honshiken-school-tokyo-kaisei';
+import { figuresHonshikenSchool_tokyo_komaba_toho } from './figures-honshiken-school-tokyo-komaba-toho';
+import { figuresHonshikenSchool_tokyo_oin_sansu } from './figures-honshiken-school-tokyo-oin';
+import { figuresHonshikenSchool_tokyo_seiko_yokohama } from './figures-honshiken-school-tokyo-seiko-yokohama';
+import { figuresHonshikenSchool_tokyo_tsukuba_komaba } from './figures-honshiken-school-tokyo-tsukuba-komaba';
 import { figuresHonshikenSchool_koko_kasei } from './figures-honshiken-school-koko-kasei';
 import { figuresHonshikenSchool_koko_ritsumeikan } from './figures-honshiken-school-koko-ritsumeikan';
 import { figuresHonshikenSchool_koko_tokai } from './figures-honshiken-school-koko-tokai';
@@ -815,6 +829,20 @@ export const figures: Record<string, Figure> = {
   ...figuresMoshi202612ShakaiChugaku2,
   ...figuresMoshi202612ShakaiKoko1,
   ...figuresMoshi202612ShakaiKoko2,
+  ...figuresHonshikenSchool_hakuryo,
+  ...figuresHonshikenSchool_kobe_jogakuin,
+  ...figuresHonshikenSchool_koko_keio_shiki,
+  ...figuresHonshikenSchool_koko_rakunan,
+  ...figuresHonshikenSchool_rakunan,
+  ...figuresHonshikenSchool_rokko,
+  ...figuresHonshikenSchool_tokyo_azabu,
+  ...figuresHonshikenSchool_tokyo_eiko,
+  ...figuresHonshikenSchool_tokyo_joshigakuin,
+  ...figuresHonshikenSchool_tokyo_kaisei,
+  ...figuresHonshikenSchool_tokyo_komaba_toho,
+  ...figuresHonshikenSchool_tokyo_oin_sansu,
+  ...figuresHonshikenSchool_tokyo_seiko_yokohama,
+  ...figuresHonshikenSchool_tokyo_tsukuba_komaba,
   ...figuresHonshikenSchool_koko_kasei,
   ...figuresHonshikenSchool_koko_ritsumeikan,
   ...figuresHonshikenSchool_koko_tokai,

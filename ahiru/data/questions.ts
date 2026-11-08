@@ -337,6 +337,20 @@ import { gradeE3RikaQuestions } from './grade_e3_rika';
 import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
 import { gradeE4ShakaiBQuestions } from './grade_e4_shakai_b';
+import { honshikenSchool_hakuryo } from './honshiken_school_hakuryo';
+import { honshikenSchool_kobe_jogakuin } from './honshiken_school_kobe-jogakuin';
+import { honshikenSchool_koko_keio_shiki } from './honshiken_school_koko-keio-shiki';
+import { honshikenSchool_koko_rakunan } from './honshiken_school_koko-rakunan';
+import { honshikenSchool_rakunan } from './honshiken_school_rakunan';
+import { honshikenSchool_rokko } from './honshiken_school_rokko';
+import { honshikenSchool_tokyo_azabu } from './honshiken_school_tokyo-azabu';
+import { honshikenSchool_tokyo_eiko } from './honshiken_school_tokyo-eiko';
+import { honshikenSchoolTokyoJoshigakuin } from './honshiken_school_tokyo-joshigakuin';
+import { honshikenSchool_tokyo_kaisei } from './honshiken_school_tokyo-kaisei';
+import { honshikenSchool_tokyo_komaba_toho } from './honshiken_school_tokyo-komaba-toho';
+import { honshikenSchool_tokyo_oin } from './honshiken_school_tokyo-oin';
+import { honshikenSchool_tokyo_seiko_yokohama } from './honshiken_school_tokyo-seiko-yokohama';
+import { honshikenSchool_tokyo_tsukuba_komaba } from './honshiken_school_tokyo-tsukuba-komaba';
 import { honshikenSchool_koko_kasei } from './honshiken_school_koko-kasei';
 import { honshikenSchool_koko_ritsumeikan } from './honshiken_school_koko-ritsumeikan';
 import { honshikenSchool_koko_tokai } from './honshiken_school_koko-tokai';
@@ -4108,6 +4122,20 @@ const baseQuestions: Question[] = [
   ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
   ...gradeE4ShakaiBQuestions,
+  ...honshikenSchool_hakuryo,
+  ...honshikenSchool_kobe_jogakuin,
+  ...honshikenSchool_koko_keio_shiki,
+  ...honshikenSchool_koko_rakunan,
+  ...honshikenSchool_rakunan,
+  ...honshikenSchool_rokko,
+  ...honshikenSchool_tokyo_azabu,
+  ...honshikenSchool_tokyo_eiko,
+  ...honshikenSchoolTokyoJoshigakuin,
+  ...honshikenSchool_tokyo_kaisei,
+  ...honshikenSchool_tokyo_komaba_toho,
+  ...honshikenSchool_tokyo_oin,
+  ...honshikenSchool_tokyo_seiko_yokohama,
+  ...honshikenSchool_tokyo_tsukuba_komaba,
   ...honshikenSchool_koko_kasei,
   ...honshikenSchool_koko_ritsumeikan,
   ...honshikenSchool_koko_tokai,
