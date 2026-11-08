@@ -2194,9 +2194,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -2204,7 +2204,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -2218,7 +2218,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -2227,151 +2227,151 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 43.0,
-      "y1": 3.5,
+      "y1": 8.0,
       "x2": 55.6,
-      "y2": 39.7,
+      "y2": 41.5,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 55.6,
-      "y1": 39.7,
+      "y1": 41.5,
       "x2": 68.2,
-      "y2": 72.6,
+      "y2": 72.0,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 68.2,
-      "y1": 72.6,
+      "y1": 72.0,
       "x2": 80.8,
-      "y2": 102.3,
+      "y2": 99.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 80.8,
-      "y1": 102.3,
+      "y1": 99.4,
       "x2": 93.4,
-      "y2": 128.8,
+      "y2": 123.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 93.4,
-      "y1": 128.8,
+      "y1": 123.9,
       "x2": 106.0,
-      "y2": 152.0,
+      "y2": 145.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 106.0,
-      "y1": 152.0,
+      "y1": 145.4,
       "x2": 118.6,
-      "y2": 172.0,
+      "y2": 163.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 118.6,
-      "y1": 172.0,
+      "y1": 163.9,
       "x2": 131.2,
-      "y2": 188.7,
+      "y2": 179.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 131.2,
-      "y1": 188.7,
+      "y1": 179.4,
       "x2": 143.8,
-      "y2": 202.2,
+      "y2": 191.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 143.8,
-      "y1": 202.2,
+      "y1": 191.9,
       "x2": 156.4,
-      "y2": 212.5,
+      "y2": 201.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 156.4,
-      "y1": 212.5,
+      "y1": 201.3,
       "x2": 169.0,
-      "y2": 219.5,
+      "y2": 207.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 169.0,
-      "y1": 219.5,
+      "y1": 207.8,
       "x2": 181.6,
-      "y2": 223.3,
+      "y2": 211.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 181.6,
-      "y1": 223.3,
+      "y1": 211.3,
       "x2": 194.2,
-      "y2": 223.8,
+      "y2": 211.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 194.2,
-      "y1": 223.8,
+      "y1": 211.8,
       "x2": 206.8,
-      "y2": 221.1,
+      "y2": 209.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 206.8,
-      "y1": 221.1,
+      "y1": 209.3,
       "x2": 219.4,
-      "y2": 215.2,
+      "y2": 203.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 219.4,
-      "y1": 215.2,
+      "y1": 203.8,
       "x2": 232.0,
-      "y2": 206.0,
+      "y2": 195.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 232.0,
-      "y1": 206.0,
+      "y1": 195.3,
       "x2": 244.6,
-      "y2": 193.6,
+      "y2": 183.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2379,7 +2379,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -2388,7 +2388,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2396,7 +2396,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -2405,7 +2405,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 190,
-      "cy": 224,
+      "cy": 212.0,
       "r": 3,
       "color": "#2B2420",
       "fill": "#2B2420"
@@ -2413,7 +2413,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 220,
+      "y": 208.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -2447,9 +2447,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -2457,7 +2457,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -2471,7 +2471,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -2480,151 +2480,151 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 43.0,
-      "y1": 3.5,
+      "y1": 8.0,
       "x2": 55.6,
-      "y2": 39.7,
+      "y2": 41.5,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 55.6,
-      "y1": 39.7,
+      "y1": 41.5,
       "x2": 68.2,
-      "y2": 72.6,
+      "y2": 72.0,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 68.2,
-      "y1": 72.6,
+      "y1": 72.0,
       "x2": 80.8,
-      "y2": 102.3,
+      "y2": 99.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 80.8,
-      "y1": 102.3,
+      "y1": 99.4,
       "x2": 93.4,
-      "y2": 128.8,
+      "y2": 123.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 93.4,
-      "y1": 128.8,
+      "y1": 123.9,
       "x2": 106.0,
-      "y2": 152.0,
+      "y2": 145.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 106.0,
-      "y1": 152.0,
+      "y1": 145.4,
       "x2": 118.6,
-      "y2": 172.0,
+      "y2": 163.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 118.6,
-      "y1": 172.0,
+      "y1": 163.9,
       "x2": 131.2,
-      "y2": 188.7,
+      "y2": 179.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 131.2,
-      "y1": 188.7,
+      "y1": 179.4,
       "x2": 143.8,
-      "y2": 202.2,
+      "y2": 191.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 143.8,
-      "y1": 202.2,
+      "y1": 191.9,
       "x2": 156.4,
-      "y2": 212.5,
+      "y2": 201.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 156.4,
-      "y1": 212.5,
+      "y1": 201.3,
       "x2": 169.0,
-      "y2": 219.5,
+      "y2": 207.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 169.0,
-      "y1": 219.5,
+      "y1": 207.8,
       "x2": 181.6,
-      "y2": 223.3,
+      "y2": 211.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 181.6,
-      "y1": 223.3,
+      "y1": 211.3,
       "x2": 194.2,
-      "y2": 223.8,
+      "y2": 211.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 194.2,
-      "y1": 223.8,
+      "y1": 211.8,
       "x2": 206.8,
-      "y2": 221.1,
+      "y2": 209.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 206.8,
-      "y1": 221.1,
+      "y1": 209.3,
       "x2": 219.4,
-      "y2": 215.2,
+      "y2": 203.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 219.4,
-      "y1": 215.2,
+      "y1": 203.8,
       "x2": 232.0,
-      "y2": 206.0,
+      "y2": 195.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 232.0,
-      "y1": 206.0,
+      "y1": 195.3,
       "x2": 244.6,
-      "y2": 193.6,
+      "y2": 183.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2632,7 +2632,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -2641,7 +2641,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2649,7 +2649,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -2658,16 +2658,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 92,
-      "y1": 144,
+      "y1": 138.0,
       "x2": 232,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#9333EA",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 190,
-      "cy": 200,
+      "cy": 189.8,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
@@ -2675,7 +2675,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 195,
-      "y": 196,
+      "y": 185.8,
       "text": "C(0,6)",
       "size": 11,
       "color": "#9333EA",
@@ -2708,9 +2708,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -2718,7 +2718,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -2732,7 +2732,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -2741,7 +2741,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2749,7 +2749,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -2758,7 +2758,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -2766,7 +2766,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -2775,7 +2775,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 190,
-      "cy": 200,
+      "cy": 189.8,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
@@ -2783,7 +2783,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 195,
-      "y": 196,
+      "y": 185.8,
       "text": "C",
       "size": 11,
       "color": "#9333EA",
@@ -2794,15 +2794,15 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         190,
-        224
+        212.0
        ],
        [
         106,
-        152
+        145.4
        ],
        [
         190,
-        200
+        189.8
        ]
       ],
       "color": "#16A34A",
@@ -2813,15 +2813,15 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "pts": [
        [
         190,
-        224
+        212.0
        ],
        [
         190,
-        200
+        189.8
        ],
        [
         218,
-        216
+        204.6
        ]
       ],
       "color": "#0284C7",
@@ -2864,9 +2864,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -2874,7 +2874,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -2888,7 +2888,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -2897,151 +2897,151 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 43.0,
-      "y1": 3.5,
+      "y1": 8.0,
       "x2": 55.6,
-      "y2": 39.7,
+      "y2": 41.5,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 55.6,
-      "y1": 39.7,
+      "y1": 41.5,
       "x2": 68.2,
-      "y2": 72.6,
+      "y2": 72.0,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 68.2,
-      "y1": 72.6,
+      "y1": 72.0,
       "x2": 80.8,
-      "y2": 102.3,
+      "y2": 99.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 80.8,
-      "y1": 102.3,
+      "y1": 99.4,
       "x2": 93.4,
-      "y2": 128.8,
+      "y2": 123.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 93.4,
-      "y1": 128.8,
+      "y1": 123.9,
       "x2": 106.0,
-      "y2": 152.0,
+      "y2": 145.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 106.0,
-      "y1": 152.0,
+      "y1": 145.4,
       "x2": 118.6,
-      "y2": 172.0,
+      "y2": 163.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 118.6,
-      "y1": 172.0,
+      "y1": 163.9,
       "x2": 131.2,
-      "y2": 188.7,
+      "y2": 179.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 131.2,
-      "y1": 188.7,
+      "y1": 179.4,
       "x2": 143.8,
-      "y2": 202.2,
+      "y2": 191.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 143.8,
-      "y1": 202.2,
+      "y1": 191.9,
       "x2": 156.4,
-      "y2": 212.5,
+      "y2": 201.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 156.4,
-      "y1": 212.5,
+      "y1": 201.3,
       "x2": 169.0,
-      "y2": 219.5,
+      "y2": 207.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 169.0,
-      "y1": 219.5,
+      "y1": 207.8,
       "x2": 181.6,
-      "y2": 223.3,
+      "y2": 211.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 181.6,
-      "y1": 223.3,
+      "y1": 211.3,
       "x2": 194.2,
-      "y2": 223.8,
+      "y2": 211.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 194.2,
-      "y1": 223.8,
+      "y1": 211.8,
       "x2": 206.8,
-      "y2": 221.1,
+      "y2": 209.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 206.8,
-      "y1": 221.1,
+      "y1": 209.3,
       "x2": 219.4,
-      "y2": 215.2,
+      "y2": 203.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 219.4,
-      "y1": 215.2,
+      "y1": 203.8,
       "x2": 232.0,
-      "y2": 206.0,
+      "y2": 195.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 232.0,
-      "y1": 206.0,
+      "y1": 195.3,
       "x2": 244.6,
-      "y2": 193.6,
+      "y2": 183.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3049,7 +3049,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -3058,7 +3058,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3066,7 +3066,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -3075,16 +3075,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 106,
-      "y1": 152,
+      "y1": 145.4,
       "x2": 218,
-      "y2": 216,
+      "y2": 204.6,
       "color": "#9333EA",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 162,
-      "cy": 184,
+      "cy": 175.0,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
@@ -3092,7 +3092,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 168,
-      "y": 178,
+      "y": 169.0,
       "text": "M(−2,10)",
       "size": 11,
       "color": "#9333EA",
@@ -3101,7 +3101,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 190,
-      "cy": 224,
+      "cy": 212.0,
       "r": 3,
       "color": "#2B2420",
       "fill": "#2B2420"
@@ -3109,7 +3109,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 184,
-      "y": 220,
+      "y": 208.0,
       "text": "O",
       "size": 11,
       "color": "#2B2420",
@@ -3153,9 +3153,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -3163,7 +3163,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -3177,7 +3177,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -3186,151 +3186,151 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 43.0,
-      "y1": 3.5,
+      "y1": 8.0,
       "x2": 55.6,
-      "y2": 39.7,
+      "y2": 41.5,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 55.6,
-      "y1": 39.7,
+      "y1": 41.5,
       "x2": 68.2,
-      "y2": 72.6,
+      "y2": 72.0,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 68.2,
-      "y1": 72.6,
+      "y1": 72.0,
       "x2": 80.8,
-      "y2": 102.3,
+      "y2": 99.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 80.8,
-      "y1": 102.3,
+      "y1": 99.4,
       "x2": 93.4,
-      "y2": 128.8,
+      "y2": 123.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 93.4,
-      "y1": 128.8,
+      "y1": 123.9,
       "x2": 106.0,
-      "y2": 152.0,
+      "y2": 145.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 106.0,
-      "y1": 152.0,
+      "y1": 145.4,
       "x2": 118.6,
-      "y2": 172.0,
+      "y2": 163.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 118.6,
-      "y1": 172.0,
+      "y1": 163.9,
       "x2": 131.2,
-      "y2": 188.7,
+      "y2": 179.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 131.2,
-      "y1": 188.7,
+      "y1": 179.4,
       "x2": 143.8,
-      "y2": 202.2,
+      "y2": 191.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 143.8,
-      "y1": 202.2,
+      "y1": 191.9,
       "x2": 156.4,
-      "y2": 212.5,
+      "y2": 201.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 156.4,
-      "y1": 212.5,
+      "y1": 201.3,
       "x2": 169.0,
-      "y2": 219.5,
+      "y2": 207.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 169.0,
-      "y1": 219.5,
+      "y1": 207.8,
       "x2": 181.6,
-      "y2": 223.3,
+      "y2": 211.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 181.6,
-      "y1": 223.3,
+      "y1": 211.3,
       "x2": 194.2,
-      "y2": 223.8,
+      "y2": 211.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 194.2,
-      "y1": 223.8,
+      "y1": 211.8,
       "x2": 206.8,
-      "y2": 221.1,
+      "y2": 209.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 206.8,
-      "y1": 221.1,
+      "y1": 209.3,
       "x2": 219.4,
-      "y2": 215.2,
+      "y2": 203.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 219.4,
-      "y1": 215.2,
+      "y1": 203.8,
       "x2": 232.0,
-      "y2": 206.0,
+      "y2": 195.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 232.0,
-      "y1": 206.0,
+      "y1": 195.3,
       "x2": 244.6,
-      "y2": 193.6,
+      "y2": 183.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3338,7 +3338,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -3347,7 +3347,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3355,7 +3355,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -3364,16 +3364,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 44.4,
-      "y1": 16,
+      "y1": 19.6,
       "x2": 190,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#E11D48",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 162,
-      "cy": 184,
+      "cy": 175.0,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
@@ -3381,7 +3381,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 168,
-      "y": 178,
+      "y": 169.0,
       "text": "M",
       "size": 11,
       "color": "#9333EA",
@@ -3424,9 +3424,9 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 14,
-      "y1": 224,
+      "y1": 212.0,
       "x2": 310,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#6E645C"
      },
      {
@@ -3434,7 +3434,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x1": 190,
       "y1": 24,
       "x2": 190,
-      "y2": 228,
+      "y2": 218,
       "color": "#6E645C"
      },
      {
@@ -3448,7 +3448,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 306,
-      "y": 220,
+      "y": 208.0,
       "text": "x",
       "size": 11,
       "color": "#6E645C",
@@ -3457,151 +3457,151 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 43.0,
-      "y1": 3.5,
+      "y1": 8.0,
       "x2": 55.6,
-      "y2": 39.7,
+      "y2": 41.5,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 55.6,
-      "y1": 39.7,
+      "y1": 41.5,
       "x2": 68.2,
-      "y2": 72.6,
+      "y2": 72.0,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 68.2,
-      "y1": 72.6,
+      "y1": 72.0,
       "x2": 80.8,
-      "y2": 102.3,
+      "y2": 99.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 80.8,
-      "y1": 102.3,
+      "y1": 99.4,
       "x2": 93.4,
-      "y2": 128.8,
+      "y2": 123.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 93.4,
-      "y1": 128.8,
+      "y1": 123.9,
       "x2": 106.0,
-      "y2": 152.0,
+      "y2": 145.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 106.0,
-      "y1": 152.0,
+      "y1": 145.4,
       "x2": 118.6,
-      "y2": 172.0,
+      "y2": 163.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 118.6,
-      "y1": 172.0,
+      "y1": 163.9,
       "x2": 131.2,
-      "y2": 188.7,
+      "y2": 179.4,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 131.2,
-      "y1": 188.7,
+      "y1": 179.4,
       "x2": 143.8,
-      "y2": 202.2,
+      "y2": 191.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 143.8,
-      "y1": 202.2,
+      "y1": 191.9,
       "x2": 156.4,
-      "y2": 212.5,
+      "y2": 201.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 156.4,
-      "y1": 212.5,
+      "y1": 201.3,
       "x2": 169.0,
-      "y2": 219.5,
+      "y2": 207.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 169.0,
-      "y1": 219.5,
+      "y1": 207.8,
       "x2": 181.6,
-      "y2": 223.3,
+      "y2": 211.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 181.6,
-      "y1": 223.3,
+      "y1": 211.3,
       "x2": 194.2,
-      "y2": 223.8,
+      "y2": 211.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 194.2,
-      "y1": 223.8,
+      "y1": 211.8,
       "x2": 206.8,
-      "y2": 221.1,
+      "y2": 209.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 206.8,
-      "y1": 221.1,
+      "y1": 209.3,
       "x2": 219.4,
-      "y2": 215.2,
+      "y2": 203.8,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 219.4,
-      "y1": 215.2,
+      "y1": 203.8,
       "x2": 232.0,
-      "y2": 206.0,
+      "y2": 195.3,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "line",
       "x1": 232.0,
-      "y1": 206.0,
+      "y1": 195.3,
       "x2": 244.6,
-      "y2": 193.6,
+      "y2": 183.9,
       "color": "#0284C7",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 106,
-      "cy": 152,
+      "cy": 145.4,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3609,7 +3609,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 112,
-      "y": 148,
+      "y": 141.4,
       "text": "A(−6,18)",
       "size": 11,
       "color": "#E11D48",
@@ -3618,7 +3618,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "circle",
       "cx": 218,
-      "cy": 216,
+      "cy": 204.6,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3626,7 +3626,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 223,
-      "y": 210,
+      "y": 198.6,
       "text": "B(2,2)",
       "size": 11,
       "color": "#E11D48",
@@ -3635,16 +3635,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "line",
       "x1": 44.4,
-      "y1": 16,
+      "y1": 19.6,
       "x2": 190,
-      "y2": 224,
+      "y2": 212.0,
       "color": "#E11D48",
       "width": 2
      },
      {
       "t": "circle",
       "cx": 50,
-      "cy": 24,
+      "cy": 27.0,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -3652,7 +3652,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 58,
-      "y": 30,
+      "y": 33.0,
       "text": "P(−10,50)",
       "size": 11,
       "color": "#E11D48",
@@ -5748,107 +5748,107 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
+      "x1": 70,
+      "y1": 200,
       "x2": 160,
-      "y2": 205,
+      "y2": 200,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
-      "x2": 200,
-      "y2": 175,
+      "y1": 200,
+      "x2": 210,
+      "y2": 160,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 100,
-      "y2": 175,
+      "x1": 210,
+      "y1": 160,
+      "x2": 120,
+      "y2": 160,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 60,
-      "y2": 205,
+      "x1": 120,
+      "y1": 160,
+      "x2": 70,
+      "y2": 200,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 105,
+      "x1": 70,
+      "y1": 110,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 105,
-      "x2": 200,
-      "y2": 75,
+      "y1": 110,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 75,
-      "x2": 100,
-      "y2": 75,
+      "x1": 210,
+      "y1": 70,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 75,
-      "x2": 60,
-      "y2": 105,
+      "x1": 120,
+      "y1": 70,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
-      "x2": 60,
-      "y2": 105,
+      "x1": 70,
+      "y1": 200,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
+      "y1": 200,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 200,
-      "y2": 75,
+      "x1": 210,
+      "y1": 160,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 100,
-      "y2": 75,
+      "x1": 120,
+      "y1": 160,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "label",
-      "x": 52,
-      "y": 217,
+      "x": 62,
+      "y": 212,
       "text": "A",
       "size": 12,
       "color": "#2B2420",
@@ -5858,7 +5858,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 219,
+      "y": 214,
       "text": "B",
       "size": 12,
       "color": "#2B2420",
@@ -5866,8 +5866,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 181,
+      "x": 217,
+      "y": 166,
       "text": "C",
       "size": 12,
       "color": "#2B2420",
@@ -5875,8 +5875,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 181,
+      "x": 114,
+      "y": 166,
       "text": "D",
       "size": 12,
       "color": "#2B2420",
@@ -5885,8 +5885,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 54,
-      "y": 101,
+      "x": 64,
+      "y": 106,
       "text": "E",
       "size": 12,
       "color": "#2B2420",
@@ -5896,7 +5896,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 101,
+      "y": 106,
       "text": "F",
       "size": 12,
       "color": "#2B2420",
@@ -5904,8 +5904,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 73,
+      "x": 217,
+      "y": 68,
       "text": "G",
       "size": 12,
       "color": "#2B2420",
@@ -5913,8 +5913,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 71,
+      "x": 114,
+      "y": 66,
       "text": "H",
       "size": 12,
       "color": "#2B2420",
@@ -5940,16 +5940,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 100.0,
-      "cy": 125.0,
+      "cx": 120.0,
+      "cy": 115.0,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
      },
      {
       "t": "label",
-      "x": 94.0,
-      "y": 129.0,
+      "x": 114.0,
+      "y": 119.0,
       "text": "Q",
       "size": 12,
       "color": "#E11D48",
@@ -5958,8 +5958,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 200,
-      "cy": 175,
+      "cx": 210,
+      "cy": 160,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
@@ -6000,107 +6000,107 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
+      "x1": 70,
+      "y1": 200,
       "x2": 160,
-      "y2": 205,
+      "y2": 200,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
-      "x2": 200,
-      "y2": 175,
+      "y1": 200,
+      "x2": 210,
+      "y2": 160,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 100,
-      "y2": 175,
+      "x1": 210,
+      "y1": 160,
+      "x2": 120,
+      "y2": 160,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 60,
-      "y2": 205,
+      "x1": 120,
+      "y1": 160,
+      "x2": 70,
+      "y2": 200,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 105,
+      "x1": 70,
+      "y1": 110,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 105,
-      "x2": 200,
-      "y2": 75,
+      "y1": 110,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 75,
-      "x2": 100,
-      "y2": 75,
+      "x1": 210,
+      "y1": 70,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 75,
-      "x2": 60,
-      "y2": 105,
+      "x1": 120,
+      "y1": 70,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
-      "x2": 60,
-      "y2": 105,
+      "x1": 70,
+      "y1": 200,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
+      "y1": 200,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 200,
-      "y2": 75,
+      "x1": 210,
+      "y1": 160,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 100,
-      "y2": 75,
+      "x1": 120,
+      "y1": 160,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "label",
-      "x": 52,
-      "y": 217,
+      "x": 62,
+      "y": 212,
       "text": "A",
       "size": 12,
       "color": "#2B2420",
@@ -6110,7 +6110,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 219,
+      "y": 214,
       "text": "B",
       "size": 12,
       "color": "#2B2420",
@@ -6118,8 +6118,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 181,
+      "x": 217,
+      "y": 166,
       "text": "C",
       "size": 12,
       "color": "#2B2420",
@@ -6127,8 +6127,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 181,
+      "x": 114,
+      "y": 166,
       "text": "D",
       "size": 12,
       "color": "#2B2420",
@@ -6137,8 +6137,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 54,
-      "y": 101,
+      "x": 64,
+      "y": 106,
       "text": "E",
       "size": 12,
       "color": "#2B2420",
@@ -6148,7 +6148,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 101,
+      "y": 106,
       "text": "F",
       "size": 12,
       "color": "#2B2420",
@@ -6156,8 +6156,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 73,
+      "x": 217,
+      "y": 68,
       "text": "G",
       "size": 12,
       "color": "#2B2420",
@@ -6165,8 +6165,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 71,
+      "x": 114,
+      "y": 66,
       "text": "H",
       "size": 12,
       "color": "#2B2420",
@@ -6192,16 +6192,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 100.0,
-      "cy": 125.0,
+      "cx": 120.0,
+      "cy": 115.0,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
      },
      {
       "t": "label",
-      "x": 94.0,
-      "y": 129.0,
+      "x": 114.0,
+      "y": 119.0,
       "text": "Q",
       "size": 12,
       "color": "#E11D48",
@@ -6212,23 +6212,23 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "line",
       "x1": 160.0,
       "y1": 155.0,
-      "x2": 100.0,
-      "y2": 125.0,
+      "x2": 120.0,
+      "y2": 115.0,
       "color": "#9333EA",
       "width": 2
      },
      {
       "t": "circle",
-      "cx": 130.0,
-      "cy": 140.0,
+      "cx": 140.0,
+      "cy": 135.0,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
      },
      {
       "t": "label",
-      "x": 136.0,
-      "y": 136.0,
+      "x": 146.0,
+      "y": 131.0,
       "text": "中心",
       "size": 12,
       "color": "#9333EA",
@@ -6260,107 +6260,107 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
+      "x1": 70,
+      "y1": 200,
       "x2": 160,
-      "y2": 205,
+      "y2": 200,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
-      "x2": 200,
-      "y2": 175,
+      "y1": 200,
+      "x2": 210,
+      "y2": 160,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 100,
-      "y2": 175,
+      "x1": 210,
+      "y1": 160,
+      "x2": 120,
+      "y2": 160,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 60,
-      "y2": 205,
+      "x1": 120,
+      "y1": 160,
+      "x2": 70,
+      "y2": 200,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 105,
+      "x1": 70,
+      "y1": 110,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 105,
-      "x2": 200,
-      "y2": 75,
+      "y1": 110,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 75,
-      "x2": 100,
-      "y2": 75,
+      "x1": 210,
+      "y1": 70,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 75,
-      "x2": 60,
-      "y2": 105,
+      "x1": 120,
+      "y1": 70,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 205,
-      "x2": 60,
-      "y2": 105,
+      "x1": 70,
+      "y1": 200,
+      "x2": 70,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
       "x1": 160,
-      "y1": 205,
+      "y1": 200,
       "x2": 160,
-      "y2": 105,
+      "y2": 110,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 200,
-      "y2": 75,
+      "x1": 210,
+      "y1": 160,
+      "x2": 210,
+      "y2": 70,
       "color": "#2B2420"
      },
      {
       "t": "line",
-      "x1": 100,
-      "y1": 175,
-      "x2": 100,
-      "y2": 75,
+      "x1": 120,
+      "y1": 160,
+      "x2": 120,
+      "y2": 70,
       "color": "#2B2420",
       "dashed": true
      },
      {
       "t": "label",
-      "x": 52,
-      "y": 217,
+      "x": 62,
+      "y": 212,
       "text": "A",
       "size": 12,
       "color": "#2B2420",
@@ -6370,7 +6370,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 219,
+      "y": 214,
       "text": "B",
       "size": 12,
       "color": "#2B2420",
@@ -6378,8 +6378,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 181,
+      "x": 217,
+      "y": 166,
       "text": "C",
       "size": 12,
       "color": "#2B2420",
@@ -6387,8 +6387,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 181,
+      "x": 114,
+      "y": 166,
       "text": "D",
       "size": 12,
       "color": "#2B2420",
@@ -6397,8 +6397,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 54,
-      "y": 101,
+      "x": 64,
+      "y": 106,
       "text": "E",
       "size": 12,
       "color": "#2B2420",
@@ -6408,7 +6408,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "label",
       "x": 166,
-      "y": 101,
+      "y": 106,
       "text": "F",
       "size": 12,
       "color": "#2B2420",
@@ -6416,8 +6416,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 207,
-      "y": 73,
+      "x": 217,
+      "y": 68,
       "text": "G",
       "size": 12,
       "color": "#2B2420",
@@ -6425,8 +6425,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "label",
-      "x": 94,
-      "y": 71,
+      "x": 114,
+      "y": 66,
       "text": "H",
       "size": 12,
       "color": "#2B2420",
@@ -6435,8 +6435,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 105,
+      "x1": 70,
+      "y1": 110,
       "x2": 160.0,
       "y2": 155.0,
       "color": "#E11D48",
@@ -6446,26 +6446,26 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "t": "line",
       "x1": 160.0,
       "y1": 155.0,
-      "x2": 200,
-      "y2": 175,
+      "x2": 210,
+      "y2": 160,
       "color": "#E11D48",
       "width": 2
      },
      {
       "t": "line",
-      "x1": 200,
-      "y1": 175,
-      "x2": 100.0,
-      "y2": 125.0,
+      "x1": 210,
+      "y1": 160,
+      "x2": 120.0,
+      "y2": 115.0,
       "color": "#E11D48",
       "width": 2
      },
      {
       "t": "line",
-      "x1": 100.0,
-      "y1": 125.0,
-      "x2": 60,
-      "y2": 105,
+      "x1": 120.0,
+      "y1": 115.0,
+      "x2": 70,
+      "y2": 110,
       "color": "#E11D48",
       "width": 2
      },
@@ -6488,16 +6488,16 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "circle",
-      "cx": 100.0,
-      "cy": 125.0,
+      "cx": 120.0,
+      "cy": 115.0,
       "r": 3,
       "color": "#E11D48",
       "fill": "#E11D48"
      },
      {
       "t": "label",
-      "x": 94.0,
-      "y": 129.0,
+      "x": 114.0,
+      "y": 119.0,
       "text": "Q",
       "size": 12,
       "color": "#E11D48",
@@ -6506,25 +6506,25 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      },
      {
       "t": "line",
-      "x1": 60,
-      "y1": 105,
-      "x2": 200,
-      "y2": 175,
+      "x1": 70,
+      "y1": 110,
+      "x2": 210,
+      "y2": 160,
       "color": "#9333EA",
       "dashed": true
      },
      {
       "t": "circle",
-      "cx": 130.0,
-      "cy": 140.0,
+      "cx": 140.0,
+      "cy": 135.0,
       "r": 3,
       "color": "#9333EA",
       "fill": "#9333EA"
      },
      {
       "t": "label",
-      "x": 136.0,
-      "y": 134.0,
+      "x": 146.0,
+      "y": 129.0,
       "text": "中心",
       "size": 12,
       "color": "#9333EA",
@@ -8055,6 +8055,5482 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "w": 280,
       "h": 30,
       "text": "22.5 ÷ 9 ＝ 2.5 → 一致",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_01": {
+  "caption": "答え　(1) 0.6A　(2) 20Ω",
+  "slides": [
+   {
+    "note": "12V の電源に 30Ω と 60Ω を並列につなぐ。全体の電流と合成抵抗を求める。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 70,
+      "x2": 260,
+      "y2": 70,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 180,
+      "x2": 260,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 70,
+      "x2": 40,
+      "y2": 110,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 140,
+      "x2": 40,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 24,
+      "y": 110,
+      "w": 32,
+      "h": 30,
+      "text": "電源",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 9
+     },
+     {
+      "t": "line",
+      "x1": 130,
+      "y1": 70,
+      "x2": 130,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 130,
+      "y1": 140,
+      "x2": 130,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 112,
+      "y": 100,
+      "w": 36,
+      "h": 40,
+      "text": "30Ω",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 11
+     },
+     {
+      "t": "line",
+      "x1": 230,
+      "y1": 70,
+      "x2": 230,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 230,
+      "y1": 140,
+      "x2": 230,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 212,
+      "y": 100,
+      "w": 36,
+      "h": 40,
+      "text": "60Ω",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 11
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "12V の電源",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "並列では、どの枝にも電源と同じ電圧 12V がかかる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "並列 → どの枝も 12V",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "電流は 電圧 ÷ 抵抗（オームの法則）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "枝ごとに電流を求めて、合計が全体の電流になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "分かれた電流の和 ＝ 全体の電流",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "合成抵抗 ＝ 電圧 ÷ 全体の電流",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "R₁：12÷30＝0.4A。R₂：12÷60＝0.2A。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 70,
+      "x2": 260,
+      "y2": 70,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 180,
+      "x2": 260,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 70,
+      "x2": 40,
+      "y2": 110,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 40,
+      "y1": 140,
+      "x2": 40,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 24,
+      "y": 110,
+      "w": 32,
+      "h": 30,
+      "text": "電源",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 9
+     },
+     {
+      "t": "line",
+      "x1": 130,
+      "y1": 70,
+      "x2": 130,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 130,
+      "y1": 140,
+      "x2": 130,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 112,
+      "y": 100,
+      "w": 36,
+      "h": 40,
+      "text": "30Ω",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 11
+     },
+     {
+      "t": "line",
+      "x1": 230,
+      "y1": 70,
+      "x2": 230,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 230,
+      "y1": 140,
+      "x2": 230,
+      "y2": 180,
+      "color": "#2B2420"
+     },
+     {
+      "t": "box",
+      "x": 212,
+      "y": 100,
+      "w": 36,
+      "h": 40,
+      "text": "60Ω",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 11
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "12V の電源",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 138,
+      "y": 92,
+      "text": "0.4A",
+      "size": 11,
+      "color": "#E11D48"
+     },
+     {
+      "t": "label",
+      "x": 238,
+      "y": 92,
+      "text": "0.2A",
+      "size": 11,
+      "color": "#16A34A"
+     },
+     {
+      "t": "label",
+      "x": 70,
+      "y": 62,
+      "text": "0.6A",
+      "size": 11,
+      "color": "#0284C7"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 232,
+      "text": "0.4A ＋ 0.2A",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "全体の電流＝0.4＋0.2＝0.6A。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "0.4 ＋ 0.2 ＝ 0.6（A）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 0.6 A",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "合成抵抗＝12÷0.6＝20Ω。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "12 ÷ 0.6 ＝ 20（Ω）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 20 Ω",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "20Ω に 12V をかけると 0.6A で一致。小さいほうの 30Ω より小さくなっている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "12 ÷ 20 ＝ 0.6 A",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "30Ω より小さい → 並列として自然",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "並列なのに抵抗を足してしまうまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "30＋60＝90Ω は直列の考え方",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "並列では電圧は分け合わない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_02": {
+  "caption": "答え　(1) 30N　(2) 4m　(3) 15W",
+  "slides": [
+   {
+    "note": "6kg の物体を動滑車 1 個で 2m 引き上げる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 222,
+      "text": "ひもの重さ・摩擦は考えない",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "circle",
+      "cx": 160,
+      "cy": 100,
+      "r": 18,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "line",
+      "x1": 60,
+      "y1": 40,
+      "x2": 260,
+      "y2": 40,
+      "color": "#6E645C",
+      "width": 3
+     },
+     {
+      "t": "line",
+      "x1": 142,
+      "y1": 40,
+      "x2": 142,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 178,
+      "y1": 40,
+      "x2": 178,
+      "y2": 100,
+      "color": "#2B2420"
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 118,
+      "x2": 160,
+      "y2": 150,
+      "color": "#6E645C"
+     },
+     {
+      "t": "box",
+      "x": 120,
+      "y": 150,
+      "w": 80,
+      "h": 34,
+      "text": "6kg",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 12
+     }
+    ]
+   },
+   {
+    "note": "100g で 1N。6kg＝6000g なので 60N。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "6kg ＝ 6000 g",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "6000 ÷ 100 ＝ 60 N",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "動滑車は 2 本のひもで物体を支える。1 本あたりは半分。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "2 本のひもで 60N を支える",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "1 本あたり　60 ÷ 2 ＝ 30 N",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 引く力は 30N。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "60 ÷ 2 ＝ 30 N",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 30 N",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "2m 上げるには、2 本のひもが 2m ずつ縮む。手で引くのは 2×2＝4m。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "2 本 × 2 m ＝ 4 m",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 4 m",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "仕事＝30N×4m＝120J。仕事率＝120÷8＝15W。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "仕事 ＝ 30 × 4 ＝ 120 J",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "仕事率 ＝ 120 ÷ 8 ＝ 15 W",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(3) 15 W",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "道具なしでも 60N×2m＝120J。動滑車でも 30N×4m＝120J。仕事の原理。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "直接：60 × 2 ＝ 120 J",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "動滑車：30 × 4 ＝ 120 J",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "同じ → 仕事の原理",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "引く長さが 2 倍になることを忘れるまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "力が半分 → 長さは 2 倍",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "仕事は減らない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_03": {
+  "caption": "答え　(1) 0.1秒　(2) 80cm/s　(3) 60cm/s",
+  "slides": [
+   {
+    "note": "台車を記録タイマーで記録。5 本のテープを並べる（長さ 2、4、6、8、10cm）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 200,
+      "x2": 300,
+      "y2": 200,
+      "color": "#6E645C"
+     },
+     {
+      "t": "box",
+      "x": 40,
+      "y": 172,
+      "w": 34,
+      "h": 28,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 57,
+      "y": 166,
+      "text": "2.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 94,
+      "y": 144,
+      "w": 34,
+      "h": 56,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 111,
+      "y": 138,
+      "text": "4.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 148,
+      "y": 116,
+      "w": 34,
+      "h": 84,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 165,
+      "y": 110,
+      "text": "6.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 202,
+      "y": 88,
+      "w": 34,
+      "h": 112,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 219,
+      "y": 82,
+      "text": "8.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 256,
+      "y": 60,
+      "w": 34,
+      "h": 140,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 273,
+      "y": 54,
+      "text": "10.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 222,
+      "text": "テープの長さ（cm）",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     }
+    ]
+   },
+   {
+    "note": "1 秒に 50 回の打点なので、打点 1 間隔は 0.02 秒。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "1 ÷ 50 ＝ 0.02（秒）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "5 個ぶん → 0.02 × 5 ＝ 0.1 秒",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "時間がそろっているので、長さで速さがくらべられる。2、4、6…と一定の割合で増える。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "1 本 ＝ 0.1 秒（すべて同じ）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "長さが一定の割合で増える",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 速さも一定の割合で増える",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 1 本ぶんは 0.1 秒。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 0.1 秒",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 4 本目は 8.0cm を 0.1 秒。8.0÷0.1＝80cm/s。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 200,
+      "x2": 300,
+      "y2": 200,
+      "color": "#6E645C"
+     },
+     {
+      "t": "box",
+      "x": 40,
+      "y": 172,
+      "w": 34,
+      "h": 28,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 57,
+      "y": 166,
+      "text": "2.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 94,
+      "y": 144,
+      "w": 34,
+      "h": 56,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 111,
+      "y": 138,
+      "text": "4.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 148,
+      "y": 116,
+      "w": 34,
+      "h": 84,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 165,
+      "y": 110,
+      "text": "6.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 202,
+      "y": 88,
+      "w": 34,
+      "h": 112,
+      "color": "#E11D48",
+      "fill": "#FFE4E6"
+     },
+     {
+      "t": "label",
+      "x": 219,
+      "y": 82,
+      "text": "8.0",
+      "size": 11,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 256,
+      "y": 60,
+      "w": 34,
+      "h": 140,
+      "color": "#0284C7",
+      "fill": "#E0F2FE"
+     },
+     {
+      "t": "label",
+      "x": 273,
+      "y": 54,
+      "text": "10.0",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 232,
+      "text": "8.0 ÷ 0.1 ＝ 80 cm/s",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "(3) 合計 30.0cm を 0.5 秒で。30.0÷0.5＝60cm/s。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "2＋4＋6＋8＋10 ＝ 30（cm）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "0.1 × 5 ＝ 0.5（秒）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "30 ÷ 0.5 ＝ 60（cm/s）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "3 本目（まん中）の速さ 6.0÷0.1＝60cm/s と、(3) が一致する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "3 本目：6.0 ÷ 0.1 ＝ 60 cm/s",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "全体の平均 ＝ まん中の速さ",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 一致",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "5 打点を 0.5 秒と取りちがえるまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "5つぶん ＝ 0.1 秒（0.5 秒ではない）",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "0.5 秒は 5 本ぶんの全体",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_04": {
+  "caption": "答え　(1) 0.4g　(2) 1.6g　(3) 1.6g",
+  "slides": [
+   {
+    "note": "銅 3.2g を加熱すると、とちゅうでやめて 3.6g になった。銅：酸素＝4：1。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "銅の粉末　3.2 g",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "加熱後　3.6 g（途中でやめた）",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "銅 : 酸素 ＝ 4 : 1",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "酸化すると酸素が結びつくので、質量がふえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "ふえた質量 ＝ 結びついた酸素",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 3.6−3.2＝0.4g。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "3.6 − 3.2 ＝ 0.4",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 酸素　0.4 g",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "銅：酸素＝4：1 なので、反応した銅は酸素の 4 倍。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "銅 : 酸素 ＝ 4 : 1",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "反応した銅 ＝ 酸素 × 4",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 0.4×4＝1.6g。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "0.4 × 4 ＝ 1.6",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 反応した銅　1.6 g",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(3) 3.2−1.6＝1.6g が、酸化されずに残っている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "3.2 − 1.6 ＝ 1.6",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(3) 残った銅　1.6 g",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "酸化銅 1.6＋0.4＝2.0g。残った銅 1.6g を足すと 3.6g で一致。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "酸化銅 ＝ 1.6 ＋ 0.4 ＝ 2.0 g",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "2.0 ＋ 1.6 ＝ 3.6 g",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "皿の中の質量と同じ",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "4：1 を銅：酸化銅と取りちがえない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "4 : 1 は 銅 : 酸素",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "銅 : 酸化銅 ＝ 4 : 5",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_05": {
+  "caption": "答え　156g",
+  "slides": [
+   {
+    "note": "60℃の硝酸カリウム飽和水溶液 420g を 20℃に冷やす。出てくる結晶は何g？",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "60℃：水100gに 110g まで溶ける",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "20℃：水100gに 32g まで溶ける",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "60℃の飽和水溶液 420g を冷やす",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "飽和水溶液 210g は「水 100g＋硝酸カリウム 110g」。420g はその 2 組分。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 30,
+      "y": 60,
+      "w": 120,
+      "h": 36,
+      "text": "水 100 g",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 150,
+      "y": 60,
+      "w": 132,
+      "h": 36,
+      "text": "硝酸カリウム 110 g",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 12
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 125,
+      "text": "これで 210 g（1 組）",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 160,
+      "text": "420 ÷ 210 ＝ 2 組分",
+      "size": 13,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "420g の中身：水 200g、硝酸カリウム 220g。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 80,
+      "w": 120,
+      "h": 40,
+      "text": "水 200 g",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 140,
+      "y": 80,
+      "w": 150,
+      "h": 40,
+      "text": "硝酸カリウム 220 g",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 12
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 150,
+      "text": "合わせて 420 g",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle"
+     }
+    ]
+   },
+   {
+    "note": "水は蒸発しないので 200g のまま。20℃で溶けるのは 32×2＝64g。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "水は 200 g のまま",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "20℃：水 200g に溶ける ＝ 32×2 ＝ 64 g",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "冷やすと、溶けきれない分が結晶になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 80,
+      "w": 120,
+      "h": 40,
+      "text": "水 200 g",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 140,
+      "y": 80,
+      "w": 45,
+      "h": 40,
+      "text": "64",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 185,
+      "y": 80,
+      "w": 105,
+      "h": 40,
+      "text": "結晶 156 g",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 12
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 150,
+      "text": "220 g のうち 64 g は溶けたまま",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle"
+     }
+    ]
+   },
+   {
+    "note": "結晶＝220−64＝156g。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "220 − 64 ＝ 156",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "答え　156 g",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "冷やしたあとの水溶液 200＋64＝264g。結晶を足すと 420g で一致。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "200 ＋ 64 ＝ 264 g",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "264 ＋ 156 ＝ 420 g",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "もとの質量と同じ",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "420g を水の質量と取りちがえるまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "420g は水溶液の質量",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "水は 200 g",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_06": {
+  "caption": "答え　(1) 22.5mL　(2) 黄色　(3) B を 2.5mL",
+  "slides": [
+   {
+    "note": "A（塩酸）20mL と B（水酸化ナトリウム水溶液）15mL でちょうど中性。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "A 20 mL ＋ B 15 mL → 中性",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "(1) A 30 mL に必要な B は？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(2) A 30 mL ＋ B 20 mL の BTB 色は？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "A の量が変わっても、ちょうど中和する比は同じ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "A : B ＝ 20 : 15 ＝ 4 : 3",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "A が 1.5 倍 → B も 1.5 倍",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 30÷20＝1.5 倍。B＝15×1.5＝22.5mL。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "30 ÷ 20 ＝ 1.5（倍）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "15 × 1.5 ＝ 22.5",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 22.5 mL",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "必要な B は 22.5mL。20mL しか加えていないので B が足りない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "必要　22.5 mL",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "加えた　20 mL",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "B が足りない → 酸のはたらきが余る",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 酸性なので BTB 溶液は黄色。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "酸性 → BTB は黄色",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "（中性：緑、アルカリ性：青）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 黄色",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(3) 足りない B＝22.5−20＝2.5mL。酸性なので B を加える。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "22.5 − 20 ＝ 2.5",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(3) B を 2.5 mL",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "B は合計 22.5mL になり、(1) と一致。A：B＝30：22.5＝4：3 で同じ比。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "20 ＋ 2.5 ＝ 22.5 mL",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "30 : 22.5 ＝ 4 : 3",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "はじめの比と同じ",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "必要量と加えた量を見比べずに色を決めない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "22.5 と 20 を見比べる",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "少ないのは B → 酸性",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_07": {
+  "caption": "答え　(1) だ液がデンプンを分解した　(2) 煮立たせるとはたらきを失う",
+  "slides": [
+   {
+    "note": "4 本の試験管で、だ液とデンプンの実験。ヨウ素液を加えた結果は A・C・D が青紫、B だけ変化なし。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 50,
+      "w": 280,
+      "h": 30,
+      "text": "A：水＋35℃ → 青紫",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "B：だ液＋35℃ → 変化なし",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 122,
+      "w": 280,
+      "h": 30,
+      "text": "C：だ液＋0℃ → 青紫",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 158,
+      "w": 280,
+      "h": 30,
+      "text": "D：煮立てただ液＋35℃ → 青紫",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "ヨウ素液は、デンプンがあると青紫色になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "青紫 ＝ デンプンが残っている",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "変化なし ＝ デンプンがない",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) B と A のちがいは、だ液の有無だけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "A（水）：デンプンが残る",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "B（だ液）：デンプンがなくなる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "だ液のはたらき！",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) だ液がデンプンを別のもの（糖）に変えた。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "だ液のはたらきで",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "デンプンが分解された",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(1) の答え",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) B と D のちがいは、だ液を煮立たせたかどうかだけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "B（そのまま）：なくなる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "D（煮立てた）：デンプンが残る",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "煮立たせただ液ははたらきを失う。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "加熱するとだ液のはたらきが失われる",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) の答え",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "おまけ：B と C のちがいは温度だけ。0℃ではデンプンが残る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "B（35℃）：なくなる",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "C（0℃）：残る",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "温度でもはたらきが変わる",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「だ液がヨウ素液と反応した」はまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "ヨウ素液と反応するのはデンプン",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "だ液ではない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_08": {
+  "caption": "答え　(1) Aa　(2) 1/4",
+  "slides": [
+   {
+    "note": "丸い株 X × しわの株（aa）。子は丸 51 個、しわ 49 個。X の遺伝子を考える。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "X：丸（AA か Aa かわからない）",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "かけ合わせる相手：しわ（aa）",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "結果：丸 51 ：しわ 49 ＝ ほぼ 1：1",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "しわの株は aa。つくる生殖細胞は a だけ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "aa がつくる生殖細胞 ＝ すべて a",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "子の形は X からもらう遺伝子で決まる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "X が AA なら、子はすべて Aa で丸になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "AA × aa → 子は すべて Aa（丸）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "丸：しわ ＝ 1：0",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "実験と合わない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "X が Aa なら、子は Aa（丸）と aa（しわ）が 1：1。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "Aa × aa → Aa（丸）：aa（しわ）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "＝ 1 : 1",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "51 : 49 に合う",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) X の遺伝子の組み合わせは Aa。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "(1) Aa",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) Aa×Aa。生殖細胞は A と a が 1：1。子は AA：Aa：aa＝1：2：1。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "AA : Aa : aa ＝ 1 : 2 : 1",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "しわ（aa）は 4 つのうち 1 つ",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "しわの割合は 1/4。丸：しわ＝3：1 の基本の割合と一致。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 1/4",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "丸 3 ：しわ 1 と同じ",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "1:1（検定）と 3:1（自家受粉）を混ぜない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "かけ合わせ（aa）：丸：しわ＝1：1",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "自家受粉：丸：しわ＝3：1",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_09": {
+  "caption": "答え　(1) 4900mL　(2) 約60秒",
+  "slides": [
+   {
+    "note": "心臓は 1 分間に 70 回拍動し、1 回に 70mL 送り出す。血液は全部で 4900mL。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "1 分間に 70 回拍動",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "1 回に 70 mL を送り出す",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "体全体の血液　4900 mL",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "1 分間に送り出す量は、1 回の量に回数をかければ出る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "1 分間の量 ＝ 1 回の量 × 回数",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 70×70＝4900mL。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "70 × 70 ＝ 4900（mL）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 4900 mL",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "血液は体の中を回っている。全体の量が、送り出す量の何分ぶんかを見る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "全体の血液 ÷ 1 分間に送り出す量",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "＝ 1 周にかかる時間",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 4900÷4900＝1 分。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "4900 ÷ 4900 ＝ 1（分）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "1 分＝60 秒。約 60 秒で 1 周。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "1 分 ＝ 60 秒",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 約 60 秒",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "4900÷70＝70 回の拍動で全部の血液が送り出される。70 回は 1 分間の回数。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "4900 ÷ 70 ＝ 70（回）",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "70 回 ＝ 1 分間の拍動回数",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 約 60 秒で一致",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "たし算で 140mL にしてしまうまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "70 ＋ 70 は ×",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "かけ算で 4900 mL",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_10": {
+  "caption": "答え　(1) 59%　(2) 16℃　(3) 79%",
+  "slides": [
+   {
+    "note": "25℃の空気 1m³ に水蒸気 13.6g。表で飽和水蒸気量を調べる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "水蒸気　13.6 g/m³（25℃）",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "25℃：23.1　20℃：17.3",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "16℃：13.6　14℃：12.1",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "湿度は、水蒸気の量が飽和水蒸気量の何%か。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "湿度 ＝ 水蒸気量 ÷ 飽和水蒸気量 × 100",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 13.6÷23.1×100＝58.87…≒59%。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "13.6 ÷ 23.1 ＝ 0.5887…",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 約 59 %",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "冷やすと飽和水蒸気量が下がる。13.6g に等しくなる気温が露点。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "冷やしても水蒸気は 13.6 g のまま",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "飽和水蒸気量 ＝ 13.6 になる気温を探す",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 表で 13.6g/m³ になるのは 16℃。露点は 16℃。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "16℃ のとき 13.6 g/m³",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 16 ℃",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(3) 20℃は 16℃より高いので水滴はできない。13.6÷17.3×100＝78.6…≒79%。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "20℃の飽和水蒸気量 ＝ 17.3",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "13.6 ÷ 17.3 ＝ 0.786…",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "(3) 約 79 %",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "25℃：59%、20℃：79%、16℃：100%。冷やすほど湿度が上がる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "25℃：59 %",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "20℃：79 %",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "16℃：100 %（露点）",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "分母は、そのときの気温の飽和水蒸気量。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "20℃のとき分母は 23.1 ではなく 17.3",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "気温が変われば分母も変わる",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_11": {
+  "caption": "答え　(1) 78.4°　(2) 31.6°　(3) 31.6°、北の空",
+  "slides": [
+   {
+    "note": "北緯 35 度の地点。夏至・冬至・南半球の同じ日で、太陽の南中高度を求める。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 190,
+      "x2": 300,
+      "y2": 190,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "circle",
+      "cx": 160,
+      "cy": 190,
+      "r": 4,
+      "color": "#2B2420",
+      "fill": "#2B2420"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "観測地点（北緯35度）",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "label",
+      "x": 290,
+      "y": 184,
+      "text": "南",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "end",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 30,
+      "y": 184,
+      "text": "北",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 232,
+      "text": "地軸のかたむき 23.4°",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "春分・秋分は太陽が赤道の真上。南中高度＝90°−緯度。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "春分・秋分：90° − 35° ＝ 55°",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "夏至：太陽の真下が北へ 23.4°",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "冬至：太陽の真下が南へ 23.4°",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "春分・秋分の高度は 55°。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 190,
+      "x2": 300,
+      "y2": 190,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "circle",
+      "cx": 160,
+      "cy": 190,
+      "r": 4,
+      "color": "#2B2420",
+      "fill": "#2B2420"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "観測地点（北緯35度）",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "label",
+      "x": 290,
+      "y": 184,
+      "text": "南",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "end",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 30,
+      "y": 184,
+      "text": "北",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 235,
+      "y2": 84,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 239,
+      "y": 94,
+      "text": "55°",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "(1) 夏至は 23.4°高いので 78.4°。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 190,
+      "x2": 300,
+      "y2": 190,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "circle",
+      "cx": 160,
+      "cy": 190,
+      "r": 4,
+      "color": "#2B2420",
+      "fill": "#2B2420"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "観測地点（北緯35度）",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "label",
+      "x": 290,
+      "y": 184,
+      "text": "南",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "end",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 30,
+      "y": 184,
+      "text": "北",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 235,
+      "y2": 84,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 239,
+      "y": 94,
+      "text": "55°",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 186,
+      "y2": 63,
+      "color": "#E11D48",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 190,
+      "y": 71,
+      "text": "78.4°（夏至）",
+      "size": 11,
+      "color": "#E11D48",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 232,
+      "text": "55° ＋ 23.4° ＝ 78.4°",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "(2) 冬至は 23.4°低いので 31.6°。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 16,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 20,
+      "y1": 190,
+      "x2": 300,
+      "y2": 190,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "circle",
+      "cx": 160,
+      "cy": 190,
+      "r": 4,
+      "color": "#2B2420",
+      "fill": "#2B2420"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 210,
+      "text": "観測地点（北緯35度）",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "middle"
+     },
+     {
+      "t": "label",
+      "x": 290,
+      "y": 184,
+      "text": "南",
+      "size": 11,
+      "color": "#6E645C",
+      "anchor": "end",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 30,
+      "y": 184,
+      "text": "北",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 235,
+      "y2": 84,
+      "color": "#6E645C",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 239,
+      "y": 94,
+      "text": "55°",
+      "size": 11,
+      "color": "#6E645C",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 186,
+      "y2": 63,
+      "color": "#E11D48",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 190,
+      "y": 69,
+      "text": "78.4°",
+      "size": 11,
+      "color": "#E11D48",
+      "bold": true
+     },
+     {
+      "t": "line",
+      "x1": 160,
+      "y1": 190,
+      "x2": 271,
+      "y2": 122,
+      "color": "#0284C7",
+      "width": 2
+     },
+     {
+      "t": "label",
+      "x": 271,
+      "y": 114,
+      "text": "31.6°（冬至）",
+      "size": 11,
+      "color": "#0284C7",
+      "anchor": "end",
+      "bold": true
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 232,
+      "text": "55° − 23.4° ＝ 31.6°",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     }
+    ]
+   },
+   {
+    "note": "(3) 夏至の日、太陽の真下は北緯 23.4°。南緯 35 度からは 35＋23.4＝58.4°はなれる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "太陽の真下：北緯 23.4°",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "南緯 35 度との差：35 ＋ 23.4 ＝ 58.4°",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "太陽は自分より北にある",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "南中高度＝90°−58.4°＝31.6°。北の空で南中。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "90° − 58.4° ＝ 31.6°",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(3) 31.6°、北の空",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) と (2) の差 78.4−31.6＝46.8° は 23.4°×2 と一致。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "78.4 − 31.6 ＝ 46.8",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "23.4 × 2 ＝ 46.8",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 一致",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_rika_12": {
+  "caption": "答え　(1) 10時15分20秒　(2) 10時16分10秒",
+  "slides": [
+   {
+    "note": "P波は秒速 8km、S波は秒速 4km。A でP波が 10:15:30、初期微動継続時間 10 秒。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "P波 8 km/s、S波 4 km/s",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "A：P波 10時15分30秒",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "A：初期微動継続時間 10 秒",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "距離 d km なら、P波は d÷8 秒、S波は d÷4 秒で届く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "P波：d ÷ 8 秒",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "S波：d ÷ 4 秒",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "差：d÷4 − d÷8 ＝ d÷8 秒",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "初期微動継続時間＝d÷8＝10 秒なので、A までの距離は 80km。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "d ÷ 8 ＝ 10",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "d ＝ 80（km）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "P波が A に届くまで 80÷8＝10 秒。発生は、観測の 10 秒前。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "80 ÷ 8 ＝ 10（秒）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "発生 ＝ 10:15:30 の 10 秒前",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(1) 発生時刻は 10 時 15 分 20 秒。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "10:15:30 − 10秒 ＝ 10:15:20",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(1) 10時15分20秒",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "B までの距離は 80×2.5＝200km。S波は 200÷4＝50 秒で届く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "80 × 2.5 ＝ 200（km）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "200 ÷ 4 ＝ 50（秒）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "(2) 10 時 15 分 20 秒の 50 秒後＝10 時 16 分 10 秒。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "10:15:20 ＋ 50秒 ＝ 10:16:10",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "(2) 10時16分10秒",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "A の S波は 10:15:40 で、P波との差 10 秒。B は 25 秒で、距離が 2.5 倍なので 2.5 倍。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "A：S波 10:15:40（差 10 秒）",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "B：P波 10:15:45、S波 10:16:10",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "差 25 秒 ＝ 10 × 2.5",
       "color": "#B5622E",
       "fill": "#FFF8EC",
       "size": 14
