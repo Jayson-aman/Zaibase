@@ -572,6 +572,26 @@ import { figuresMoshi202612ShakaiChugaku1 } from './figures-moshi-2026-12-shakai
 import { figuresMoshi202612ShakaiChugaku2 } from './figures-moshi-2026-12-shakai-c2';
 import { figuresMoshi202612ShakaiKoko1 } from './figures-moshi-2026-12-shakai-k1';
 import { figuresMoshi202612ShakaiKoko2 } from './figures-moshi-2026-12-shakai-k2';
+import { figuresHonshiken202701EigoChugaku1 } from './figures-honshiken-2027-01-eigo-c1';
+import { figuresHonshiken202701EigoChugaku2 } from './figures-honshiken-2027-01-eigo-c2';
+import { figuresHonshiken202701EigoKoko1 } from './figures-honshiken-2027-01-eigo-k1';
+import { figuresHonshiken202701EigoKoko2 } from './figures-honshiken-2027-01-eigo-k2';
+import { figuresHonshiken202701KokugoChugaku1 } from './figures-honshiken-2027-01-kokugo-c1';
+import { figuresHonshiken202701KokugoChugaku2 } from './figures-honshiken-2027-01-kokugo-c2';
+import { figuresHonshiken202701KokugoKoko1 } from './figures-honshiken-2027-01-kokugo-k1';
+import { figuresHonshiken202701KokugoKoko2 } from './figures-honshiken-2027-01-kokugo-k2';
+import { figuresHonshiken202701RikaChugaku1 } from './figures-honshiken-2027-01-rika-c1';
+import { figuresHonshiken202701RikaChugaku2 } from './figures-honshiken-2027-01-rika-c2';
+import { figuresHonshiken202701RikaKoko1 } from './figures-honshiken-2027-01-rika-k1';
+import { figuresHonshiken202701RikaKoko2 } from './figures-honshiken-2027-01-rika-k2';
+import { figuresHonshiken202701SansuChugaku1 } from './figures-honshiken-2027-01-sansu-c1';
+import { figuresHonshiken202701SansuChugaku2 } from './figures-honshiken-2027-01-sansu-c2';
+import { figuresHonshiken202701SansuKoko1 } from './figures-honshiken-2027-01-sansu-k1';
+import { figuresHonshiken202701SansuKoko2 } from './figures-honshiken-2027-01-sansu-k2';
+import { figuresHonshiken202701ShakaiChugaku1 } from './figures-honshiken-2027-01-shakai-c1';
+import { figuresHonshiken202701ShakaiChugaku2 } from './figures-honshiken-2027-01-shakai-c2';
+import { figuresHonshiken202701ShakaiKoko1 } from './figures-honshiken-2027-01-shakai-k1';
+import { figuresHonshiken202701ShakaiKoko2 } from './figures-honshiken-2027-01-shakai-k2';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -728,6 +748,26 @@ export const figures: Record<string, Figure> = {
   ...figuresMoshi202612ShakaiChugaku2,
   ...figuresMoshi202612ShakaiKoko1,
   ...figuresMoshi202612ShakaiKoko2,
+  ...figuresHonshiken202701EigoChugaku1,
+  ...figuresHonshiken202701EigoChugaku2,
+  ...figuresHonshiken202701EigoKoko1,
+  ...figuresHonshiken202701EigoKoko2,
+  ...figuresHonshiken202701KokugoChugaku1,
+  ...figuresHonshiken202701KokugoChugaku2,
+  ...figuresHonshiken202701KokugoKoko1,
+  ...figuresHonshiken202701KokugoKoko2,
+  ...figuresHonshiken202701RikaChugaku1,
+  ...figuresHonshiken202701RikaChugaku2,
+  ...figuresHonshiken202701RikaKoko1,
+  ...figuresHonshiken202701RikaKoko2,
+  ...figuresHonshiken202701SansuChugaku1,
+  ...figuresHonshiken202701SansuChugaku2,
+  ...figuresHonshiken202701SansuKoko1,
+  ...figuresHonshiken202701SansuKoko2,
+  ...figuresHonshiken202701ShakaiChugaku1,
+  ...figuresHonshiken202701ShakaiChugaku2,
+  ...figuresHonshiken202701ShakaiKoko1,
+  ...figuresHonshiken202701ShakaiKoko2,
 };
 
 export function getFigure(questionId: string): Figure | null {

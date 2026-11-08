@@ -126,6 +126,26 @@ import { moshi202612KokoSansu } from './moshi_2026_12_koko_sansu';
 import { moshi202612KokoSansu2 } from './moshi_2026_12_koko_sansu_2';
 import { moshi202612KokoShakai } from './moshi_2026_12_koko_shakai';
 import { moshi202612KokoShakai2 } from './moshi_2026_12_koko_shakai_2';
+import { honshiken202701ChugakuEigo } from './honshiken_2027_01_chugaku_eigo';
+import { honshiken202701ChugakuEigo2 } from './honshiken_2027_01_chugaku_eigo_2';
+import { honshiken202701ChugakuKokugo } from './honshiken_2027_01_chugaku_kokugo';
+import { honshiken202701ChugakuKokugo2 } from './honshiken_2027_01_chugaku_kokugo_2';
+import { honshiken202701ChugakuRika } from './honshiken_2027_01_chugaku_rika';
+import { honshiken202701ChugakuRika2 } from './honshiken_2027_01_chugaku_rika_2';
+import { honshiken202701ChugakuSansu } from './honshiken_2027_01_chugaku_sansu';
+import { honshiken202701ChugakuSansu2 } from './honshiken_2027_01_chugaku_sansu_2';
+import { honshiken202701ChugakuShakai } from './honshiken_2027_01_chugaku_shakai';
+import { honshiken202701ChugakuShakai2 } from './honshiken_2027_01_chugaku_shakai_2';
+import { honshiken202701KokoEigo } from './honshiken_2027_01_koko_eigo';
+import { honshiken202701KokoEigo2 } from './honshiken_2027_01_koko_eigo_2';
+import { honshiken202701KokoKokugo } from './honshiken_2027_01_koko_kokugo';
+import { honshiken202701KokoKokugo2 } from './honshiken_2027_01_koko_kokugo_2';
+import { honshiken202701KokoRika } from './honshiken_2027_01_koko_rika';
+import { honshiken202701KokoRika2 } from './honshiken_2027_01_koko_rika_2';
+import { honshiken202701KokoSansu } from './honshiken_2027_01_koko_sansu';
+import { honshiken202701KokoSansu2 } from './honshiken_2027_01_koko_sansu_2';
+import { honshiken202701KokoShakai } from './honshiken_2027_01_koko_shakai';
+import { honshiken202701KokoShakai2 } from './honshiken_2027_01_koko_shakai_2';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -3756,6 +3776,26 @@ const baseQuestions: Question[] = [
   ...moshi202612KokoSansu2,
   ...moshi202612KokoShakai,
   ...moshi202612KokoShakai2,
+  ...honshiken202701ChugakuEigo,
+  ...honshiken202701ChugakuEigo2,
+  ...honshiken202701ChugakuKokugo,
+  ...honshiken202701ChugakuKokugo2,
+  ...honshiken202701ChugakuRika,
+  ...honshiken202701ChugakuRika2,
+  ...honshiken202701ChugakuSansu,
+  ...honshiken202701ChugakuSansu2,
+  ...honshiken202701ChugakuShakai,
+  ...honshiken202701ChugakuShakai2,
+  ...honshiken202701KokoEigo,
+  ...honshiken202701KokoEigo2,
+  ...honshiken202701KokoKokugo,
+  ...honshiken202701KokoKokugo2,
+  ...honshiken202701KokoRika,
+  ...honshiken202701KokoRika2,
+  ...honshiken202701KokoSansu,
+  ...honshiken202701KokoSansu2,
+  ...honshiken202701KokoShakai,
+  ...honshiken202701KokoShakai2,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
