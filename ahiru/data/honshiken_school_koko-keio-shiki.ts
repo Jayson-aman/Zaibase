@@ -203,9 +203,9 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "「解放」を選ぶ。文脈（場所を使わせる）を読まない。",
     "memoryTip": "開放＝あける。解放＝しばりをとく。場所や窓や門なら「開」。",
     "choices": [
-      "開放",
       "解放",
       "快方",
+      "開放",
       "介抱"
     ]
   },
@@ -222,10 +222,10 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "「水に流す」と意味を混同する。「落ち着かせる」と考える。",
     "memoryTip": "水をさす＝順調なことにじゃまをする。水に流す＝過去をなかったことにする。",
     "choices": [
-      "うまく進んでいることに、じゃまを入れる。",
       "もめごとやうらみを、なかったことにする。",
       "対立している二人の間に入って、関係を取りもつ。",
-      "相手の実力を、実際に試してみる。"
+      "相手の実力を、実際に試してみる。",
+      "うまく進んでいることに、じゃまを入れる。"
     ]
   },
   {
@@ -280,8 +280,8 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "現代語の音から意味を想像する。前後の文のつながりを見ない。",
     "memoryTip": "さらなり＝言うまでもない（もちろんだ）。「〜も」と並べる文がヒント。",
     "choices": [
-      "言うまでもない",
       "まことに寒い",
+      "言うまでもない",
       "どこかへ去ってゆく",
       "気分がすぐれない"
     ]
@@ -300,10 +300,10 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "「も」を優劣の意味と取る。闇を恐ろしいと決めつける。",
     "memoryTip": "「も」＝並べる。「なほ」＝やはり。月夜も闇夜も、どちらもよい。",
     "choices": [
-      "月のない闇夜でも、やはり螢が飛びかっていると趣がある。",
       "月夜よりも闇夜のほうが、ずっと趣があると感じている。",
       "闇夜は恐ろしいので、やはり月夜のほうがよいと感じている。",
-      "闇夜になると螢が飛ばなくなるので、趣がなくなると感じている。"
+      "闇夜になると螢が飛ばなくなるので、趣がなくなると感じている。",
+      "月のない闇夜でも、やはり螢が飛びかっていると趣がある。"
     ]
   },
   {
@@ -319,9 +319,9 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "「不」を「ない」と口語にする。「乎」を「か」と読む。",
     "memoryTip": "不亦〜乎＝また〜ずや（なんと〜ではないか）。",
     "choices": [
-      "また説ばしからずや",
       "また説ばざるか",
       "また説ばずして乎",
+      "また説ばしからずや",
       "また説ぶにあらずや"
     ]
   },
@@ -339,10 +339,10 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "具体例（自転車）をそのまま理由にする。本文にない気持ちを理由にする。",
     "memoryTip": "理由問題＝傍線部の直前の原因＋指示語の中身。具体例ではなく、一般的な主張を選ぶ。",
     "choices": [
-      "頭で理解することと、自分で再現し説明できる力とのあいだに隔たりがあることに気づかないまま、学び続けるから。",
       "人に説明を聞く機会が少なく、理屈そのものを知らないまま、学び続けるから。",
       "体を使う学習ばかりで、頭で考える機会がないまま、学び続けるから。",
-      "他人に説明すると、まちがいを指摘されるのがこわくて、説明を避け続けるから。"
+      "他人に説明すると、まちがいを指摘されるのがこわくて、説明を避け続けるから。",
+      "頭で理解することと、自分で再現し説明できる力とのあいだに隔たりがあることに気づかないまま、学び続けるから。"
     ]
   },
   {
@@ -606,9 +606,9 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "全国統一の法と考える。武家諸法度と取りちがえる。",
     "memoryTip": "御成敗式目＝1232年・北条泰時・武士の裁判の基準。武家諸法度は江戸時代。",
     "choices": [
-      "源頼朝以来の先例や武士社会の慣習にもとづいて、裁判の基準を定めた。",
       "朝廷の貴族と武士の両方を対象にした、全国統一の法律をつくった。",
       "将軍が大名に対し、儒学にもとづく心得を示した。",
+      "源頼朝以来の先例や武士社会の慣習にもとづいて、裁判の基準を定めた。",
       "元の襲来に備えて、御家人に異国警固番役を課した。"
     ]
   },
@@ -625,10 +625,10 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "田沼意次の株仲間を享保の改革にする。人返しの法（天保）と混ぜる。",
     "memoryTip": "享保＝吉宗（上げ米・公事方御定書・目安箱）、寛政＝松平定信、天保＝水野忠邦。",
     "choices": [
-      "上げ米の制を定めて、幕府の収入を増やそうとした。",
       "株仲間を公認して、営業の税を取った。",
       "江戸に出てきた農民を村へ帰す人返しの法を出した。",
-      "異国船打払令を出して、外国船を追い払うことを命じた。"
+      "異国船打払令を出して、外国船を追い払うことを命じた。",
+      "上げ米の制を定めて、幕府の収入を増やそうとした。"
     ]
   },
   {
@@ -740,8 +740,8 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "参議院の問責決議と混同する。10日を30日や40日と取りちがえる。",
     "memoryTip": "衆議院が不信任を可決→10日以内に「解散」か「総辞職」。解散なら40日以内に総選挙。",
     "choices": [
-      "10日以内に、衆議院を解散するか、総辞職する。",
       "30日以内に、参議院の同意を得る。",
+      "10日以内に、衆議院を解散するか、総辞職する。",
       "10日以内に、国民投票を行う。",
       "60日以内に、天皇があらためて任命する。"
     ]
@@ -759,9 +759,9 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "pitfall": "数字が小さくなったから円安だと考える。円高と円安の向きを逆にする。",
     "memoryTip": "1ドル＝○円の○が小さくなる＝円高。円高だと、輸入品の円での値段は安くなる。",
     "choices": [
-      "円高になり、仕入れ値は1000円安くなる。",
       "円高になり、仕入れ値は1000円高くなる。",
       "円安になり、仕入れ値は1000円安くなる。",
+      "円高になり、仕入れ値は1000円安くなる。",
       "円安になり、仕入れ値は1000円高くなる。"
     ]
   },
@@ -804,15 +804,15 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "course": "koko-keio-shiki",
     "difficulty": "standard",
     "question": "次の英文の空所に入る最も適切なものを選びなさい。\n「彼がどこに住んでいるか知っていますか。」\nDo you know ( )?",
-    "answer": "① where he lives",
+    "answer": "③ where he lives",
     "hint": "know の後ろに入るのは、疑問文の形ではなく、ふつうの文の語順。主語は he、動詞は live。",
-    "explanation": "【何を聞かれているか】間接疑問（疑問詞で始まる節が文の一部になる形）の語順を選ぶ。\n【なぜそうなるのか】「どこに住んでいるか」のように、疑問の内容が、文の一部（know の目的語）になるとき、疑問詞のあとは「主語＋動詞」のふつうの語順になる（間接疑問）。Where does he live? は単独の疑問文で、does が文頭に出るが、Do you know の後ろに入れると、do や does は不要になる。主語 he が3人称単数なので、動詞は lives。\n【ステップ1】文の構造を確認する。Do you know ( )? は、know の目的語に「どこに彼が住んでいるか」が入る形。\n【ステップ2】疑問詞 where のあとは、疑問文の語順（does he live）ではなく、「主語＋動詞」の語順（he lives）にする。これが間接疑問。\n【ステップ3】主語 he は3人称単数・現在なので、動詞は lives（s がつく）。選択肢のうち where he lives が合う。\n【答え】① where he lives\n【確かめ】「彼がどこに住んでいるか」を、I know where he lives.（私は彼がどこに住んでいるか知っている）という文にして確かめる。語順が自然で、where のあとが「主語＋動詞」になっている。\n【よくあるまちがい】where does he live を選んでしまう。単独の疑問文 Where does he live? の語順をそのまま入れてしまうまちがい。また、he live と動詞に s をつけ忘れる。主語が he なら、動詞は lives。",
+    "explanation": "【何を聞かれているか】間接疑問（疑問詞で始まる節が文の一部になる形）の語順を選ぶ。\n【なぜそうなるのか】「どこに住んでいるか」のように、疑問の内容が、文の一部（know の目的語）になるとき、疑問詞のあとは「主語＋動詞」のふつうの語順になる（間接疑問）。Where does he live? は単独の疑問文で、does が文頭に出るが、Do you know の後ろに入れると、do や does は不要になる。主語 he が3人称単数なので、動詞は lives。\n【ステップ1】文の構造を確認する。Do you know ( )? は、know の目的語に「どこに彼が住んでいるか」が入る形。\n【ステップ2】疑問詞 where のあとは、疑問文の語順（does he live）ではなく、「主語＋動詞」の語順（he lives）にする。これが間接疑問。\n【ステップ3】主語 he は3人称単数・現在なので、動詞は lives（s がつく）。選択肢のうち where he lives が合う。\n【答え】③ where he lives\n【確かめ】「彼がどこに住んでいるか」を、I know where he lives.（私は彼がどこに住んでいるか知っている）という文にして確かめる。語順が自然で、where のあとが「主語＋動詞」になっている。\n【よくあるまちがい】where does he live を選んでしまう。単独の疑問文 Where does he live? の語順をそのまま入れてしまうまちがい。また、he live と動詞に s をつけ忘れる。主語が he なら、動詞は lives。",
     "pitfall": "疑問文の語順（does he live）のまま入れる。lives の s を忘れる。",
     "memoryTip": "間接疑問＝疑問詞＋主語＋動詞（疑問文の語順にしない）。",
     "choices": [
-      "① where he lives",
-      "② where does he live",
-      "③ where lives he",
+      "① where does he live",
+      "② where lives he",
+      "③ where he lives",
       "④ where he live"
     ]
   },
@@ -915,16 +915,16 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "difficulty": "standard",
     "question": "次の英文を読んで、あとの問いに答えなさい。\n\n（問）According to the passage, why did only a few students want to help at first?",
     "passage": "Last year, our school started a small vegetable garden behind the gym. At first, only a few students wanted to help because they thought the work would be hard and boring. However, Ms. Tanaka, our science teacher, said, \"Gardens teach us patience.\" Every week, she showed us how to water the plants and how to take out the weeds.\n\nIn summer, we picked tomatoes and cucumbers, and we sold them at the school festival. We earned ten thousand yen. Surprisingly, many students who had never cooked before asked for recipes. Now more than forty students are in the garden club, and next year we plan to give some vegetables to a local children's cafeteria.\n\nBut one problem remains. During the summer vacation, no one comes to school to water the plants, so many of them die. We are now thinking about making a schedule so that students can take turns coming to school.",
-    "answer": "① Because they thought the work would be hard and boring.",
+    "answer": "④ Because they thought the work would be hard and boring.",
     "hint": "第1段落の2文目に、「最初は少数の生徒しか手伝いたがらなかった」理由が書かれている。because のあとを探す。",
-    "explanation": "【何を聞かれているか】本文の理由を述べた部分を探して、答えを選ぶ。\n【なぜそうなるのか】理由を問う設問では、本文の because（なぜなら）や so などの語のあとに、答えが書かれていることが多い。第1段落の At first, only a few students wanted to help because they thought the work would be hard and boring. の because のあとが、理由。「その仕事は大変で退屈だと思ったから」。\n【ステップ1】設問を確認する。「最初は、なぜ手伝いたい生徒が少数だったか」。本文の At first（最初は）の文に注目する。\n【ステップ2】第1段落の2文目。At first, only a few students wanted to help because they thought the work would be hard and boring.（最初は、仕事が大変で退屈だと思ったので、手伝いたい生徒は少数だった。）\n【ステップ3】選択肢を照らす。because のあとの内容が、選択肢①と同じ。②③④は、本文に書かれていない。\n【答え】① Because they thought the work would be hard and boring.\n【確かめ】本文のあとの展開で確かめる。ところが、Ms. Tanaka が「庭は忍耐を教えてくれる」と言い、育て方を見せたあと、トマトやキュウリが収穫できて、いまは40人以上がクラブにいる。最初の理由が「大変そう」だったから、このあと考えが変わったという流れ。\n【よくあるまちがい】本文の別の場所に出てくる語（Ms. Tanaka、vegetables など）を使った選択肢を選んでしまう。設問は「最初に少数の生徒しか手伝いたがらなかった理由」。本文の At first の文だけに書かれている。",
+    "explanation": "【何を聞かれているか】本文の理由を述べた部分を探して、答えを選ぶ。\n【なぜそうなるのか】理由を問う設問では、本文の because（なぜなら）や so などの語のあとに、答えが書かれていることが多い。第1段落の At first, only a few students wanted to help because they thought the work would be hard and boring. の because のあとが、理由。「その仕事は大変で退屈だと思ったから」。\n【ステップ1】設問を確認する。「最初は、なぜ手伝いたい生徒が少数だったか」。本文の At first（最初は）の文に注目する。\n【ステップ2】第1段落の2文目。At first, only a few students wanted to help because they thought the work would be hard and boring.（最初は、仕事が大変で退屈だと思ったので、手伝いたい生徒は少数だった。）\n【ステップ3】選択肢を照らす。because のあとの内容が、選択肢④と同じ。①②③は、本文に書かれていない。\n【答え】④ Because they thought the work would be hard and boring.\n【確かめ】本文のあとの展開で確かめる。ところが、Ms. Tanaka が「庭は忍耐を教えてくれる」と言い、育て方を見せたあと、トマトやキュウリが収穫できて、いまは40人以上がクラブにいる。最初の理由が「大変そう」だったから、このあと考えが変わったという流れ。\n【よくあるまちがい】本文の別の場所に出てくる語（Ms. Tanaka、vegetables など）を使った選択肢を選んでしまう。設問は「最初に少数の生徒しか手伝いたがらなかった理由」。本文の At first の文だけに書かれている。",
     "pitfall": "本文の別の箇所の語を使った選択肢を選ぶ。because のあとを読まない。",
     "memoryTip": "理由問題＝because のあと。At first は「最初は」の合図。",
     "choices": [
-      "① Because they thought the work would be hard and boring.",
-      "② Because Ms. Tanaka told them not to join the project.",
-      "③ Because the garden was too far from the school.",
-      "④ Because they did not like vegetables."
+      "① Because Ms. Tanaka told them not to join the project.",
+      "② Because the garden was too far from the school.",
+      "③ Because they did not like vegetables.",
+      "④ Because they thought the work would be hard and boring."
     ]
   },
   {
@@ -935,14 +935,14 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "difficulty": "advanced",
     "question": "次の英文を読んで、あとの問いに答えなさい。\n\n（問）Which of the following is true about the garden, according to the passage?",
     "passage": "Last year, our school started a small vegetable garden behind the gym. At first, only a few students wanted to help because they thought the work would be hard and boring. However, Ms. Tanaka, our science teacher, said, \"Gardens teach us patience.\" Every week, she showed us how to water the plants and how to take out the weeds.\n\nIn summer, we picked tomatoes and cucumbers, and we sold them at the school festival. We earned ten thousand yen. Surprisingly, many students who had never cooked before asked for recipes. Now more than forty students are in the garden club, and next year we plan to give some vegetables to a local children's cafeteria.\n\nBut one problem remains. During the summer vacation, no one comes to school to water the plants, so many of them die. We are now thinking about making a schedule so that students can take turns coming to school.",
-    "answer": "① More than forty students are in the garden club now.",
+    "answer": "② More than forty students are in the garden club now.",
     "hint": "選択肢の文を1つずつ本文と照らす。数字（forty、ten thousand）や場所（behind the gym）、だれが何をしたか（we sold）に注目する。",
-    "explanation": "【何を聞かれているか】本文の内容と合う選択肢を選ぶ。\n【なぜそうなるのか】内容一致問題は、選択肢を1つずつ、本文のことばと照らして確かめる。数・場所・主語が、本文と少しずつ変えられていることが多い。本文には、Now more than forty students are in the garden club（いまは40人以上がクラブにいる）と書かれていて、これが選択肢①と合う。\n【ステップ1】選択肢①を照らす。第2段落の Now more than forty students are in the garden club。「40人以上」で、本文と合う。\n【ステップ2】選択肢②を照らす。野菜を売ったのは、we sold them at the school festival で、売ったのは生徒たち（we）。Ms. Tanaka ではない。\n【ステップ3】選択肢③④を照らす。稼いだのは ten thousand yen（1万円）で、100000円（one hundred thousand）ではない。庭の場所は behind the gym（体育館のうしろ）で、in front of（前）ではない。\n【答え】① More than forty students are in the garden club now.\n【確かめ】数字と場所を本文で確かめ直す。ten thousand yen（1万円）、behind the gym（体育館のうしろ）、more than forty students（40人以上）。①だけが本文と合い、②③④は一部が変えられている。\n【よくあるまちがい】「前」と「うしろ」、「1万円」と「10万円」のような、1か所だけ変えられた選択肢を、気づかずに選んでしまう。内容が似ていても、数字・場所・主語を1つずつ本文と照らす。また、Ms. Tanaka が売ったと思いこんでしまう。",
+    "explanation": "【何を聞かれているか】本文の内容と合う選択肢を選ぶ。\n【なぜそうなるのか】内容一致問題は、選択肢を1つずつ、本文のことばと照らして確かめる。数・場所・主語が、本文と少しずつ変えられていることが多い。本文には、Now more than forty students are in the garden club（いまは40人以上がクラブにいる）と書かれていて、これが選択肢②と合う。\n【ステップ1】選択肢②を照らす。第2段落の Now more than forty students are in the garden club。「40人以上」で、本文と合う。\n【ステップ2】選択肢①を照らす。野菜を売ったのは、we sold them at the school festival で、売ったのは生徒たち（we）。Ms. Tanaka ではない。\n【ステップ3】選択肢③④を照らす。稼いだのは ten thousand yen（1万円）で、100000円（one hundred thousand）ではない。庭の場所は behind the gym（体育館のうしろ）で、in front of（前）ではない。\n【答え】② More than forty students are in the garden club now.\n【確かめ】数字と場所を本文で確かめ直す。ten thousand yen（1万円）、behind the gym（体育館のうしろ）、more than forty students（40人以上）。②だけが本文と合い、①③④は一部が変えられている。\n【よくあるまちがい】「前」と「うしろ」、「1万円」と「10万円」のような、1か所だけ変えられた選択肢を、気づかずに選んでしまう。内容が似ていても、数字・場所・主語を1つずつ本文と照らす。また、Ms. Tanaka が売ったと思いこんでしまう。",
     "pitfall": "1か所だけ変えた選択肢（in front of、one hundred thousand）を選ぶ。主語を取りちがえる。",
     "memoryTip": "内容一致＝選択肢を1つずつ本文と照らす。数・場所・主語に注意。",
     "choices": [
-      "① More than forty students are in the garden club now.",
-      "② Ms. Tanaka sold the vegetables at the school festival.",
+      "① Ms. Tanaka sold the vegetables at the school festival.",
+      "② More than forty students are in the garden club now.",
       "③ The students earned one hundred thousand yen.",
       "④ The garden is in front of the gym."
     ]
@@ -955,16 +955,16 @@ export const honshikenSchool_koko_keio_shiki: Question[] = [
     "difficulty": "advanced",
     "question": "次の英文を読んで、空所( )に入る語として最も適切なものを選びなさい。",
     "passage": "Digital textbooks have some good points. They are light, and one tablet can hold hundreds of books. ( ), many students say that paper books are better for studying. They can write notes freely, and they can see how much they have read by the thickness of the pages.",
-    "answer": "① However",
+    "answer": "④ However",
     "hint": "空所の前の文は、デジタル教科書の「よい点」。空所のあとは「紙の本のほうがよい」と述べている。前と後で、内容が反対になっている。",
-    "explanation": "【何を聞かれているか】前後の文の関係を考えて、つなぎの言葉（接続の語）を選ぶ。\n【なぜそうなるのか】つなぎの言葉は、前の文と後ろの文の関係を表す。前の文でデジタル教科書の長所（軽い、たくさん入る）を述べ、後ろの文で「紙の本のほうがよい」と反対のことを述べている。内容が反対になるときは、逆接の However（しかしながら）を使う。For example は例をあげる、Therefore は結果を述べる、In addition は同じ方向の内容を付け加える言葉。\n【ステップ1】前の文を読む。Digital textbooks have some good points. They are light, and one tablet can hold hundreds of books.（デジタル教科書の長所）\n【ステップ2】後ろの文を読む。many students say that paper books are better for studying.（紙の本のほうがよい）。前の長所と、反対の内容。\n【ステップ3】反対の内容をつなぐのは、逆接の However。For example、Therefore、In addition は、どれも前後の関係が合わない。\n【答え】① However\n【確かめ】空所に However を入れて通して読む。「デジタル教科書にはよい点がある。軽いし、1台に何百冊も入る。しかし、紙の本のほうが勉強に向いていると言う生徒が多い。」前後が自然につながる。\n【よくあるまちがい】In addition を選んでしまう。「（同じ方向の話を）付け加える」言葉で、前の「よい点」に、別のよい点を足すときに使う。ここは、反対の意見を述べているので合わない。また、Therefore（だから）を、前の文の結果と考えて選ぶ。",
+    "explanation": "【何を聞かれているか】前後の文の関係を考えて、つなぎの言葉（接続の語）を選ぶ。\n【なぜそうなるのか】つなぎの言葉は、前の文と後ろの文の関係を表す。前の文でデジタル教科書の長所（軽い、たくさん入る）を述べ、後ろの文で「紙の本のほうがよい」と反対のことを述べている。内容が反対になるときは、逆接の However（しかしながら）を使う。For example は例をあげる、Therefore は結果を述べる、In addition は同じ方向の内容を付け加える言葉。\n【ステップ1】前の文を読む。Digital textbooks have some good points. They are light, and one tablet can hold hundreds of books.（デジタル教科書の長所）\n【ステップ2】後ろの文を読む。many students say that paper books are better for studying.（紙の本のほうがよい）。前の長所と、反対の内容。\n【ステップ3】反対の内容をつなぐのは、逆接の However。For example、Therefore、In addition は、どれも前後の関係が合わない。\n【答え】④ However\n【確かめ】空所に However を入れて通して読む。「デジタル教科書にはよい点がある。軽いし、1台に何百冊も入る。しかし、紙の本のほうが勉強に向いていると言う生徒が多い。」前後が自然につながる。\n【よくあるまちがい】In addition を選んでしまう。「（同じ方向の話を）付け加える」言葉で、前の「よい点」に、別のよい点を足すときに使う。ここは、反対の意見を述べているので合わない。また、Therefore（だから）を、前の文の結果と考えて選ぶ。",
     "pitfall": "In addition や Therefore を選ぶ。前後の内容が反対かどうかを見ない。",
     "memoryTip": "前後が反対＝However。例＝For example。結果＝Therefore。付け加え＝In addition。",
     "choices": [
-      "① However",
-      "② For example",
-      "③ Therefore",
-      "④ In addition"
+      "① For example",
+      "② Therefore",
+      "③ In addition",
+      "④ However"
     ]
   },
   {

@@ -50,7 +50,7 @@ const textLines = (strs: string[]): E[] => {
   return strs.map((s, i) => {
     const c = s[0];
     const [t, col] = c === '=' ? [s.slice(1), C.green] : c === '~' ? [s.slice(1), C.red] : c === '*' ? [s.slice(1), C.purple] : [s, C.ink];
-    return tx(160, 70 + (i - (n - 1) / 2) * dy + size * 0.35, t, size, col);
+    return lb(160, 70 + (i - (n - 1) / 2) * dy + size * 0.35, t, fit(t, 288, size), col, 'middle', true);
   });
 };
 const P = (note: string, strs: string[], bottom: string[], extra: E[] = []): Slide => SF(note, bottom, [...textLines(strs), ...extra]);
@@ -346,7 +346,7 @@ const s_r02: Figure = show([
   P('確かめ。目の高さが150cmの人なら、目から頭は10cm、目から足は150cm。5＋75＝80cmで同じです。', ['(10÷2)＋(150÷2)', '＝5＋75＝80cm'], ['=目の高さが変わっても同じ ✓']),
 ], '鏡の長さ＝身長の半分＝160÷2＝80cm。');
 
-const tank = (sub: boolean): E[] => [bf(40, 58, 240, 72, '', C.blue, FILL.blue), bf(110, 34, 60, 60, '木片', C.main, FILL.warm, 14), ...(sub ? [bf(110, 58, 60, 36, '', C.red, FILL.red)] : []), ln(98, 34, 98, 94, C.gray, false, 1.5), tx(94, 68, '10cm', 12, C.ink, true, 'end'), tx(240, 50, '水面', 12, C.blue)];
+const tank = (sub: boolean): E[] => [pg([[100, 58], [290, 58], [290, 130], [100, 130]], C.blue, FILL.blue), bf(110, 34, 60, 60, '木片', C.main, FILL.warm, 14), ...(sub ? [pg([[110, 58], [170, 58], [170, 94], [110, 94]], C.red, FILL.red)] : []), ln(98, 34, 98, 94, C.gray, false, 1.5), tx(94, 68, '10cm', 12, C.ink, true, 'end'), tx(240, 50, '水面', 12, C.blue)];
 const s_r03: Figure = show([
   SF('1辺10cm・重さ600gの立方体の木片を、水に浮かべます。水面より下にしずんでいる深さを求めます。', ['木片600g・1辺10cm', 'しずむ深さは？'], [...tank(false), tx(196, 82, '？cm', 14, C.red, true, 'start')]),
   P('理由。浮かんでいるとき、木片の重さ（下向き）と浮力（上向き）はつりあっています。', ['重さ＝浮力', '浮力は600gぶん'], ['浮かんでいる物体：浮力＝重さ']),
@@ -377,7 +377,7 @@ const s_r05: Figure = show([
   P('確かめ。BTB液を入れると、アルカリ性なら青色になります。18cm³でちょうど緑色（中性）、それより多いので青色です。', ['18cm³…緑色（中性）', '30cm³…青色（アルカリ性）'], ['=アルカリ性 ✓']),
 ], '必要18cm³＜加えた30cm³ → あまり12cm³ → アルカリ性。');
 
-const graph = (full: boolean): E[] => [ln(40, 20, 40, 120, C.ink, false, 2), ln(40, 120, 296, 120, C.ink, false, 2), tx(36, 34, '100℃', 11, C.ink, true, 'end'), tx(36, 124, '0', 11, C.ink, true, 'end'), tx(296, 136, '時間', 11, C.ink, true, 'end'),
+const graph = (full: boolean): E[] => [ln(40, 20, 40, 120, C.ink, false, 2), ln(40, 120, 296, 120, C.ink, false, 2), tx(36, 34, '100℃', 11, C.ink, true, 'end'), tx(36, 124, '0', 11, C.ink, true, 'end'), tx(296, 112, '時間', 11, C.ink, true, 'end'),
   ln(40, 120, 142, 120, C.blue, false, 3), tx(91, 112, '氷がとける', 12, C.blue), tx(142, 136, '12分', 12, C.blue),
   ...(full ? [ln(142, 120, 270, 30, C.red, false, 3), tx(206, 90, '水があたたまる', 12, C.red), ln(270, 30, 270, 120, C.gray, true, 1.5), tx(270, 136, '27分', 12, C.red)] : [])];
 const s_r06: Figure = show([
@@ -451,7 +451,7 @@ const temps = ['10℃', '15℃', '20℃', '25℃', '30℃'];
 const bars = (hi: number): E[] => [ln(24, 124, 296, 124, C.ink, false, 2), ...vals.flatMap((v, i) => { const cx = 50 + i * 54, h = v * 3; return [bf(cx - 20, 124 - h, 40, h, '', i === hi ? C.red : C.blue, i === hi ? FILL.red : FILL.blue), tx(cx, 124 - h - 4, String(v), 11, i === hi ? C.red : C.blue), tx(cx, 138, temps[i], 12, C.ink)]; })];
 const s_r12: Figure = show([
   SF('空気1m³がふくむことのできる水蒸気の最大の量（飽和水蒸気量）を、棒グラフにしました。温度が高いほど大きくなります。', ['飽和水蒸気量（g/m³）'], [...bars(-1)]),
-  S('25℃の空気1m³には、水蒸気が12.8gふくまれています。グラフに赤い線で表します。', ['水蒸気12.8g（赤い線）'], [ln(24, 85.6, 296, 85.6, C.red, true, 2), tx(296, 78, '12.8g', 12, C.red, true, 'end')]),
+  S('25℃の空気1m³には、水蒸気が12.8gふくまれています。グラフに赤い線で表します。', ['水蒸気12.8g（赤い線）'], [ln(24, 85.6, 296, 85.6, C.red, true, 2), tx(28, 78, '12.8g', 12, C.red, true, 'start')]),
   P('理由。空気を冷やしても、中の水蒸気の量は変わりません。でも、冷やすほど「ふくめる上限」は小さくなっていきます。', ['水蒸気の量　12.8g（変わらない）', '上限は温度とともに下がる', '上限＝12.8gで水滴ができはじめる'], ['上限が12.8gになる温度は？']),
   SF('表を見ると、飽和水蒸気量が12.8gなのは15℃です。このとき、上限と水蒸気の量がちょうど等しくなります。', ['15℃で上限＝12.8g'], [...bars(1), ln(24, 85.6, 296, 85.6, C.red, true, 2)]),
   ANS('15℃'),
