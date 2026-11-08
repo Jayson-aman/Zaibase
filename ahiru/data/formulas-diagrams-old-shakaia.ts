@@ -37,12 +37,12 @@ const ryoudo: DiagramFigure = show([
     add: fresh(bx(8, 30, 304, 90, undefined, C.blue, FILL.blue), lb(160, 44, '排他的経済水域', 12, C.blue, 'middle', true), bx(24, 62, 80, 34, '外国の船', C.gray, FILL.warm, 12), ar(108, 79, 190, 79, C.green), lb(240, 79, '通ってよい', 13, C.green, 'middle', true), bx(70, 100, 180, 16, '上を飛ぶ飛行機もよい', C.gray, FILL.warm, 10), ...cap('資源を使う権利だけなので、\n外国の船が通っても、飛行機が飛んでもよい', C.green, FILL.green)),
   },
   {
-    note: '❓日本の国土は約38万km²なのに、EEZが約447万km²もあるのはなぜ？→EEZは陸地の広さではなく、島や海岸からの距離で決まるからです。❓日本は？→東西南北のはしに遠い島があり、どの島のまわりにも200海里の海が広がります。',
+    note: '❓日本の国土は約38万km²なのに、領海とEEZを合わせて約447万km²もあるのはなぜ？→EEZは陸地の広さではなく、島や海岸からの距離で決まるからです。❓日本は？→東西南北のはしに遠い島があり、どの島のまわりにも200海里の海が広がります。',
     add: fresh(ci(250, 52, 44, undefined, C.blue, FILL.blue), ci(255, 112, 36, undefined, C.blue, FILL.blue), ci(150, 110, 46, undefined, C.blue, FILL.blue), ci(50, 100, 42, undefined, C.blue, FILL.blue), ci(240, 46, 4, undefined, C.red, C.red), ci(268, 118, 4, undefined, C.red, C.red), ci(150, 120, 4, undefined, C.red, C.red), ci(46, 100, 4, undefined, C.red, C.red), lb(236, 34, '択捉島（北）', 10, C.ink, 'end'), lb(272, 132, '南鳥島（東）', 10, C.ink, 'end'), lb(150, 100, '沖ノ鳥島（南）', 10), lb(48, 84, '与那国島（西）', 10), ...cap('島のまわりに200海里ずつ\n水域が広がる', C.blue, FILL.blue)),
   },
   {
-    note: '❓どれくらい広い？→国土は約38万km²、EEZは約447万km²。10倍以上です。❓だから沖ノ鳥島を守るのはなぜ？→島が水にしずむと、まわりの広い海を失うので、大きな費用をかけて護岸（ごがん）工事をしています。',
-    add: fresh(lb(16, 26, '国土', 12, C.ink, 'start', true), bx(60, 16, 24, 20, undefined, C.green, FILL.green), lb(92, 26, '約38万km²', 11, C.green, 'start'), lb(16, 76, 'EEZ', 12, C.ink, 'start', true), bx(60, 66, 246, 20, undefined, C.blue, FILL.blue), lb(183, 76, '約447万km²', 12, C.blue, 'middle', true), lb(160, 118, '10倍以上！', 15, C.red, 'middle', true), ...cap('沖ノ鳥島を守る＝広い海を守る', C.red, FILL.red, 40)),
+    note: '❓どれくらい広い？→国土は約38万km²、領海とEEZを合わせて約447万km²。10倍以上です。❓だから沖ノ鳥島を守るのはなぜ？→島が水にしずむと、まわりの広い海を失うので、大きな費用をかけて護岸（ごがん）工事をしています。',
+    add: fresh(lb(16, 26, '国土', 12, C.ink, 'start', true), bx(60, 16, 24, 20, undefined, C.green, FILL.green), lb(92, 26, '約38万km²', 11, C.green, 'start'), lb(16, 76, 'EEZ', 12, C.ink, 'start', true), bx(60, 66, 246, 20, undefined, C.blue, FILL.blue), lb(183, 76, '領海＋EEZで約447万km²', 12, C.blue, 'middle', true), lb(160, 118, '10倍以上！', 15, C.red, 'middle', true), ...cap('沖ノ鳥島を守る＝広い海を守る', C.red, FILL.red, 40)),
   },
 ], '領土・領海・領空とEEZ');
 
@@ -450,8 +450,8 @@ const jikyu: DiagramFigure = show([
     add: [bx(60, 20, 200, 34, '国内で作られた分', C.green, FILL.green, 13), ln(60, 66, 260, 66, C.ink, false, 2), bx(60, 78, 200, 34, '国内で食べた全体', C.blue, FILL.blue, 13), lb(160, 130, '自給率＝作った分 ÷ 食べた全体', 12, C.main, 'middle', true), ...cap('カロリーベースで比べる', C.main, FILL.warm, 40)],
   },
   {
-    note: '❓日本はどれくらい？→カロリーベースで約37%（2025年度）です。100のうち国内で作られたのは約37、残りの約63は輸入です。❓ほかの先進国とくらべると？→日本は低いほうです。',
-    add: fresh(...Array.from({ length: 100 }, (_, i) => ci(24 + (i % 20) * 14.5, 24 + Math.floor(i / 20) * 16, 5, undefined, i < 37 ? C.green : C.gray, i < 37 ? FILL.green : FILL.gray)), lb(80, 118, '国内産 約37', 12, C.green, 'middle', true), lb(220, 118, '輸入 約63', 12, C.gray, 'middle', true), ...cap('日本の食料自給率＝約37%', C.red, FILL.red, 40)),
+    note: '❓日本はどれくらい？→カロリーベースで約38%（2024年度）です。100のうち国内で作られたのは約37、残りの約63は輸入です。❓ほかの先進国とくらべると？→日本は低いほうです。',
+    add: fresh(...Array.from({ length: 100 }, (_, i) => ci(24 + (i % 20) * 14.5, 24 + Math.floor(i / 20) * 16, 5, undefined, i < 37 ? C.green : C.gray, i < 37 ? FILL.green : FILL.gray)), lb(80, 118, '国内産 約37', 12, C.green, 'middle', true), lb(220, 118, '輸入 約63', 12, C.gray, 'middle', true), ...cap('日本の食料自給率＝約38%', C.red, FILL.red, 40)),
   },
   {
     note: '❓食べ物ごとに見ると？→米はほぼ自給できますが、小麦と大豆は自給率が低くなっています。❓なぜ小麦が低い？→パンやめん、大豆の食品を食べる量がふえたのに、国内での生産では足りないからです。',
@@ -470,8 +470,8 @@ const jikyu: DiagramFigure = show([
     add: fresh(bx(20, 40, 110, 50, '地元で作る', C.green, FILL.green, 13), ar(134, 65, 180, 65, C.main), bx(184, 40, 116, 50, '地元で食べる', C.blue, FILL.blue, 13), ...cap('地産地消＝地元で作り、地元で食べる', C.green, FILL.green, 40)),
   },
   {
-    note: 'まとめです。❓日本の自給率は？→カロリーベースで約37%と低い。❓米と小麦・大豆は？→米は高く、小麦・大豆は低い。❓取り組みは？→地産地消です。',
-    add: fresh(bx(12, 14, 296, 26, '自給率＝約37%（低い）', C.red, FILL.red, 12), bx(12, 46, 296, 26, '米は高く、小麦・大豆は低い', C.main, FILL.warm, 12), bx(12, 78, 296, 26, '輸入が止まると困る', C.gray, FILL.gray, 12), bx(12, 110, 296, 26, '地産地消の取り組み', C.green, FILL.green, 12), ...cap('自給率は低い→輸入にたよる課題', C.main, FILL.warm, 40)),
+    note: 'まとめです。❓日本の自給率は？→カロリーベースで約38%と低い。❓米と小麦・大豆は？→米は高く、小麦・大豆は低い。❓取り組みは？→地産地消です。',
+    add: fresh(bx(12, 14, 296, 26, '自給率＝約38%（低い）', C.red, FILL.red, 12), bx(12, 46, 296, 26, '米は高く、小麦・大豆は低い', C.main, FILL.warm, 12), bx(12, 78, 296, 26, '輸入が止まると困る', C.gray, FILL.gray, 12), bx(12, 110, 296, 26, '地産地消の取り組み', C.green, FILL.green, 12), ...cap('自給率は低い→輸入にたよる課題', C.main, FILL.warm, 40)),
   },
 ], '食料自給率と輸入');
 

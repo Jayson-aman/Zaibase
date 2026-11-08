@@ -42,6 +42,7 @@ export type CourseKey =
   // ── 高校受験 カテゴリ ──
   | 'koko-general'    // 公立高校 一般
   | 'koko-kankan'     // 関関同立附属高
+  | 'koko-ritsumeikan' // 立命館高校・立命館宇治高校・立命館守山高校
   | 'koko-shitennoji' // 四天王寺高等学校
   | 'koko-top'        // 最難関公立（天王寺・北野）MAXのみ
   // ── 東京 高校受験 ──
@@ -118,8 +119,8 @@ export const ALL_COURSES: CourseInfo[] = [
     emoji: '⛩️',
     color: '#C0392B',
     level: '難関',
-    targetSchools: ['四天王寺学園中', '四天王寺東中'],
-    description: '四天王寺学園入試レベルの高難度問題',
+    targetSchools: ['四天王寺中学校', '四天王寺東中学校'],
+    description: '四天王寺学園入試レベルの高難度問題（四天王寺は女子校、四天王寺東は共学）',
     gender: '女子',
     hensachi: '60〜70',
   },
@@ -270,7 +271,7 @@ export const ALL_COURSES: CourseInfo[] = [
     color: '#880E4F',
     level: '難関',
     targetSchools: ['帝塚山学院中学校', '帝塚山学院泉ヶ丘中学校'],
-    description: '帝塚山学院の入試問題。女子校、国語・英語重視',
+    description: '帝塚山学院の入試問題。帝塚山学院は女子校（泉ヶ丘は共学）、国語・英語重視',
     gender: '女子',
     hensachi: '55〜60',
   },
@@ -285,7 +286,7 @@ export const ALL_COURSES: CourseInfo[] = [
     color: '#F9A825',
     level: '標準〜難関',
     targetSchools: ['金蘭会中学校'],
-    description: '金蘭会の入試問題。女子校、国語・算数の基礎力を重視',
+    description: '金蘭会の入試問題。現在は女子校（2028年4月に共学化・「広尾学園大阪」へ校名変更予定）、国語・算数の基礎力を重視',
     gender: '女子',
     hensachi: '50〜56',
   },
@@ -310,10 +311,10 @@ export const ALL_COURSES: CourseInfo[] = [
     emoji: '⭐',
     color: '#37474F',
     level: '標準〜難関',
-    targetSchools: ['城星学園中学校'],
-    description: '城星学園の入試問題。カトリック系共学、バランス型出題',
+    targetSchools: ['城星学園中学校（2022年度にヴェリタス城星学園へ改称・中学は募集停止、2024年3月閉校）'],
+    description: '城星学園（現ヴェリタス城星学園）の入試傾向問題。カトリック系。中学校は2024年3月に閉校（高校は2025年度から共学）。過去の出題傾向の学習用',
     gender: '共学',
-    hensachi: '48〜54',
+    // 閉校しているため、学校の一覧には出さない（hensachi を持つコースだけが学校として一覧に載る）。問題データは残してある。
   },
   {
     key: 'osaka-jogakuin',
@@ -337,8 +338,8 @@ export const ALL_COURSES: CourseInfo[] = [
     color: '#4A148C',
     level: '標準〜難関',
     targetSchools: ['賢明学院中学校'],
-    description: '賢明学院の入試問題。カトリック系、堺市の女子校',
-    gender: '女子',
+    description: '賢明学院の入試問題。カトリック系、堺市の共学校（2010年度に男女共学化）',
+    gender: '共学',
     hensachi: '46〜52',
   },
   {
@@ -404,6 +405,19 @@ export const ALL_COURSES: CourseInfo[] = [
     level: '難関',
     targetSchools: ['関大一高', '関学高', '同志社高', '立命館高'],
     description: '関関同立附属高校の入試レベル問題',
+    gender: '共学',
+    hensachi: '60〜68',
+  },
+  {
+    key: 'koko-ritsumeikan',
+    examType: 'koko',
+    name: '立命館高校',
+    shortName: '立命館(高)',
+    emoji: '🏫',
+    color: '#B91C1C',
+    level: '難関',
+    targetSchools: ['立命館高校', '立命館宇治高校', '立命館守山高校'],
+    description: '立命館高校・立命館宇治高校・立命館守山高校の入試に合わせた、教科書の単元・入試傾向問題・本試験対策',
     gender: '共学',
     hensachi: '60〜68',
   },
@@ -510,7 +524,7 @@ export const ALL_COURSES: CourseInfo[] = [
     color: '#880E4F',
     level: '難関',
     targetSchools: ['南山中学校男子部', '南山中学校女子部'],
-    description: '南山中学校の入試問題。カトリック系名門校、英語教育に強み',
+    description: '南山中学校の入試問題。男子部・女子部に分かれる併学のカトリック系名門校、英語教育に強み',
     gender: '共学',
     hensachi: '62〜66',
   },
@@ -720,7 +734,7 @@ export const ALL_COURSES: CourseInfo[] = [
     color: '#880E4F',
     level: '難関',
     targetSchools: ['南山高校男子部', '南山高校女子部'],
-    description: '南山高校の入試問題。カトリック系名門校、英語教育に強み',
+    description: '南山高校の入試問題。男子部・女子部に分かれる併学のカトリック系名門校、英語教育に強み',
     maxOnly: true,
     gender: '共学',
     hensachi: '65〜68',
@@ -807,7 +821,7 @@ export const ALL_COURSES: CourseInfo[] = [
     emoji: '🎌',
     color: '#C62828',
     level: '難関',
-    targetSchools: ['明治大学附属明治高校', '法政大学附属高校', '中央大学附属高校'],
+    targetSchools: ['明治大学附属明治高校', '法政大学高等学校', '中央大学附属高校'],
     description: '明大明治・法政・中大附属など私立難関高校入試問題',
     gender: '共学',
     hensachi: '64〜68',

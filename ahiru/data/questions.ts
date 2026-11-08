@@ -106,6 +106,46 @@ import { moshi202611ChugakuSansu2 } from './moshi_2026_11_chugaku_sansu_2';
 import { moshi202611KokoSansu2 } from './moshi_2026_11_koko_sansu_2';
 import { moshi202611ChugakuRika2 } from './moshi_2026_11_chugaku_rika_2';
 import { moshi202611KokoRika2 } from './moshi_2026_11_koko_rika_2';
+import { moshi202612ChugakuEigo } from './moshi_2026_12_chugaku_eigo';
+import { moshi202612ChugakuEigo2 } from './moshi_2026_12_chugaku_eigo_2';
+import { moshi202612ChugakuKokugo } from './moshi_2026_12_chugaku_kokugo';
+import { moshi202612ChugakuKokugo2 } from './moshi_2026_12_chugaku_kokugo_2';
+import { moshi202612ChugakuRika } from './moshi_2026_12_chugaku_rika';
+import { moshi202612ChugakuRika2 } from './moshi_2026_12_chugaku_rika_2';
+import { moshi202612ChugakuSansu } from './moshi_2026_12_chugaku_sansu';
+import { moshi202612ChugakuSansu2 } from './moshi_2026_12_chugaku_sansu_2';
+import { moshi202612ChugakuShakai } from './moshi_2026_12_chugaku_shakai';
+import { moshi202612ChugakuShakai2 } from './moshi_2026_12_chugaku_shakai_2';
+import { moshi202612KokoEigo } from './moshi_2026_12_koko_eigo';
+import { moshi202612KokoEigo2 } from './moshi_2026_12_koko_eigo_2';
+import { moshi202612KokoKokugo } from './moshi_2026_12_koko_kokugo';
+import { moshi202612KokoKokugo2 } from './moshi_2026_12_koko_kokugo_2';
+import { moshi202612KokoRika } from './moshi_2026_12_koko_rika';
+import { moshi202612KokoRika2 } from './moshi_2026_12_koko_rika_2';
+import { moshi202612KokoSansu } from './moshi_2026_12_koko_sansu';
+import { moshi202612KokoSansu2 } from './moshi_2026_12_koko_sansu_2';
+import { moshi202612KokoShakai } from './moshi_2026_12_koko_shakai';
+import { moshi202612KokoShakai2 } from './moshi_2026_12_koko_shakai_2';
+import { honshiken202701ChugakuEigo } from './honshiken_2027_01_chugaku_eigo';
+import { honshiken202701ChugakuEigo2 } from './honshiken_2027_01_chugaku_eigo_2';
+import { honshiken202701ChugakuKokugo } from './honshiken_2027_01_chugaku_kokugo';
+import { honshiken202701ChugakuKokugo2 } from './honshiken_2027_01_chugaku_kokugo_2';
+import { honshiken202701ChugakuRika } from './honshiken_2027_01_chugaku_rika';
+import { honshiken202701ChugakuRika2 } from './honshiken_2027_01_chugaku_rika_2';
+import { honshiken202701ChugakuSansu } from './honshiken_2027_01_chugaku_sansu';
+import { honshiken202701ChugakuSansu2 } from './honshiken_2027_01_chugaku_sansu_2';
+import { honshiken202701ChugakuShakai } from './honshiken_2027_01_chugaku_shakai';
+import { honshiken202701ChugakuShakai2 } from './honshiken_2027_01_chugaku_shakai_2';
+import { honshiken202701KokoEigo } from './honshiken_2027_01_koko_eigo';
+import { honshiken202701KokoEigo2 } from './honshiken_2027_01_koko_eigo_2';
+import { honshiken202701KokoKokugo } from './honshiken_2027_01_koko_kokugo';
+import { honshiken202701KokoKokugo2 } from './honshiken_2027_01_koko_kokugo_2';
+import { honshiken202701KokoRika } from './honshiken_2027_01_koko_rika';
+import { honshiken202701KokoRika2 } from './honshiken_2027_01_koko_rika_2';
+import { honshiken202701KokoSansu } from './honshiken_2027_01_koko_sansu';
+import { honshiken202701KokoSansu2 } from './honshiken_2027_01_koko_sansu_2';
+import { honshiken202701KokoShakai } from './honshiken_2027_01_koko_shakai';
+import { honshiken202701KokoShakai2 } from './honshiken_2027_01_koko_shakai_2';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -274,7 +314,56 @@ import { gradeE3KokugoQuestions } from './grade_e3_kokugo';
 import { gradeE4KokugoBQuestions } from './grade_e4_kokugo_b';
 import { gradeE4KokugoKQuestions } from './grade_e4_kokugo_k';
 import { gradeE3RikaQuestions } from './grade_e3_rika';
+import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
+import { gradeE4ShakaiBQuestions } from './grade_e4_shakai_b';
+import { honshikenSchool_koko_kasei } from './honshiken_school_koko-kasei';
+import { honshikenSchool_koko_ritsumeikan } from './honshiken_school_koko-ritsumeikan';
+import { honshikenSchool_koko_tokai } from './honshiken_school_koko-tokai';
+import { ritsumeikanKoko_sansu } from './ritsumeikan_koko_sansu';
+import { ritsumeikanKoko_kokugo } from './ritsumeikan_koko_kokugo';
+import { ritsumeikanKoko_rika } from './ritsumeikan_koko_rika';
+import { ritsumeikanKoko_shakai } from './ritsumeikan_koko_shakai';
+import { ritsumeikanKoko_eigo } from './ritsumeikan_koko_eigo';
+import { honshikenSchool_fukuoka_kurume } from './honshiken_school_fukuoka-kurume';
+import { honshikenSchool_kaimei } from './honshiken_school_kaimei';
+import { honshikenSchool_kankan } from './honshiken_school_kankan';
+import { honshikenSchool_kansai_hokuyo } from './honshiken_school_kansai-hokuyo';
+import { honshikenSchool_kenmei } from './honshiken_school_kenmei';
+import { honshikenSchool_kindai } from './honshiken_school_kindai';
+import { honshikenSchool_kinrankai } from './honshiken_school_kinrankai';
+import { honshikenSchool_koko_azabu } from './honshiken_school_koko-azabu';
+import { honshikenSchool_koko_hibiya } from './honshiken_school_koko-hibiya';
+import { honshikenSchool_koko_koyo } from './honshiken_school_koko-koyo';
+import { honshikenSchool_koko_meidai } from './honshiken_school_koko-meidai';
+import { honshikenSchool_koko_nada } from './honshiken_school_koko-nada';
+import { honshikenSchool_koko_nishiyamato } from './honshiken_school_koko-nishiyamato';
+import { honshikenSchool_koko_shitennoji } from './honshiken_school_koko-shitennoji';
+import { honshikenSchool_koko_todaiji } from './honshiken_school_koko-todaiji';
+import { honshikenSchool_koko_top } from './honshiken_school_koko-top';
+import { honshikenSchool_koko_waseda } from './honshiken_school_koko-waseda';
+import { honshikenSchool_koko_kankan } from './honshiken_school_koko_kankan';
+import { honshikenSchool_koko_keio } from './honshiken_school_koko_keio';
+import { honshikenSchool_myojo } from './honshiken_school_myojo';
+import { honshikenSchool_nagoya_tokai } from './honshiken_school_nagoya-tokai';
+import { honshikenSchool_nandai } from './honshiken_school_nandai';
+import { honshikenSchool_naniwa } from './honshiken_school_naniwa';
+import { honshikenSchool_osaka_jogakuin } from './honshiken_school_osaka-jogakuin';
+import { honshikenSchool_otani } from './honshiken_school_otani';
+import { honshikenSchool_otemon } from './honshiken_school_otemon';
+import { honshikenSchool_poole } from './honshiken_school_poole';
+import { honshikenSchool_seifu_nankai } from './honshiken_school_seifu-nankai';
+import { honshikenSchool_seifu } from './honshiken_school_seifu';
+import { honshikenSchool_seiko } from './honshiken_school_seiko';
+import { honshikenSchool_shitennoji } from './honshiken_school_shitennoji';
+import { honshikenSchool_takatsuki } from './honshiken_school_takatsuki';
+import { honshikenSchool_tezukayama } from './honshiken_school_tezukayama';
+import { honshikenSchool_toin } from './honshiken_school_toin';
+import { honshikenSchool_tokyo_aoyama } from './honshiken_school_tokyo-aoyama';
+import { honshikenSchool_tokyo_chuo } from './honshiken_school_tokyo-chuo';
+import { honshikenSchool_tokyo_gakushuin } from './honshiken_school_tokyo-gakushuin';
+import { honshikenSchool_tokyo_hosei } from './honshiken_school_tokyo-hosei';
+import { honshikenSchool_tokyo_meidai } from './honshiken_school_tokyo-meidai';
 import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
 import { gradeE6SansuQuestions } from './grade_e6_sansu';
@@ -2065,11 +2154,11 @@ const baseQuestions: Question[] = [
     id: 'shakai_28',
     subject: 'shakai',
     question: '日本の農業における食料自給率（カロリーベース）は現在約何%か？',
-    answer: '約37%（2025年度）',
+    answer: '約38%（2024年度）',
     hint:
       '先進国の中で最低レベルにあり、食料安全保障の課題となっている',
     explanation:
-      '【何を聞かれているか】日本の食料自給率（カロリーベース）の現在のおよその数値である。\n\n【なぜそうなるのか】米はほぼ自給できるが、小麦・大豆・とうもろこし（家畜のえさ）などの多くを輸入に頼っているため、全体の自給率は低くなる。\n\n【ステップ1】カロリーベースで約37%（2025年度）。食べているエネルギーの6割以上を輸入にたよっている。\n\n【ステップ2】食生活が米中心からパン・肉・油の多い洋風に変わったことや、農家の高齢化・農地の減少が主な原因。\n\n【答え】約37%（2025年度）\n\n【確かめ】生産額ベースで計算すると約6割（2025年度は66%）となり、数え方によって数値が変わる点にも注意する。\n\n【よくあるまちがい】日本の米が足りていないと考えてしまう。米はほぼ自給できており、足りないのは小麦・大豆・飼料用の穀物である。\n\n【ここが絶対】「食料自給率（カロリーベース）＝約37%（2025年度）、先進国の中でも低い水準」は地理・公民の最頻出事項。',
+      '【何を聞かれているか】日本の食料自給率（カロリーベース）の現在のおよその数値である。\n\n【なぜそうなるのか】米はほぼ自給できるが、小麦・大豆・とうもろこし（家畜のえさ）などの多くを輸入に頼っているため、全体の自給率は低くなる。\n\n【ステップ1】カロリーベースで約38%（2024年度）。食べているエネルギーの6割以上を輸入にたよっている。\n\n【ステップ2】食生活が米中心からパン・肉・油の多い洋風に変わったことや、農家の高齢化・農地の減少が主な原因。\n\n【答え】約38%（2024年度）\n\n【確かめ】生産額ベースで計算すると約6割（2024年度は64%）となり、数え方によって数値が変わる点にも注意する。\n\n【よくあるまちがい】日本の米が足りていないと考えてしまう。米はほぼ自給できており、足りないのは小麦・大豆・飼料用の穀物である。\n\n【ここが絶対】「食料自給率（カロリーベース）＝約38%（2024年度）、先進国の中でも低い水準」は地理・公民の最頻出事項。',
     difficulty: 'standard',
   },
   {
@@ -2985,10 +3074,10 @@ const baseQuestions: Question[] = [
   {
     id: 'shakai_yotsuya_09',
     subject: 'shakai',
-    question: '日本の農業の課題として「食料自給率の低下」がある。日本のカロリーベース食料自給率はおよそ何%か（2025年度）？また自給率が低い主な理由を2つ答えよ。',
-    answer: '約37%（カロリーベース）。理由: ①小麦・大豆・飼料穀物の大半を輸入に依存 ②農業従事者の高齢化・農地の減少',
+    question: '日本の農業の課題として「食料自給率の低下」がある。日本のカロリーベース食料自給率はおよそ何%か（2024年度）？また自給率が低い主な理由を2つ答えよ。',
+    answer: '約38%（カロリーベース）。理由: ①小麦・大豆・飼料穀物の大半を輸入に依存 ②農業従事者の高齢化・農地の減少',
     explanation:
-      '【何を聞かれているか】日本のカロリーベース食料自給率のおよその数値と、自給率が低い理由を2つ答える。\n\n【なぜそうなるのか】米はほぼ自給できるが小麦・大豆・飼料穀物の大半を輸入に依存しており、さらに農業従事者の高齢化・農地の減少で国内生産力そのものが下がっている。\n\n【ステップ1】カロリーベースで約37%。米はほぼ自給できるが、小麦・大豆・とうもろこしなどは大部分を輸入しており、飼料もほとんどが輸入である。\n\n【ステップ2】農業で働く人の高齢化と減少、あとつぎ不足による耕作放棄地の増加、安い輸入品との競争が国内生産をおさえている。\n\n【答え】約37%（カロリーベース）。理由: ①小麦・大豆・飼料穀物の大半を輸入に依存 ②農業従事者の高齢化・農地の減少\n\n【確かめ】食料を安定して確保する（食料安全保障）ため、自給率を上げることが国の目標になっている。\n\n【よくあるまちがい】国産の肉や卵ならすべて自給に数えられると思ってしまう。えさが輸入なら、その分は自給率の計算から差し引かれる。\n\n【ここが絶対】「食料自給率（カロリーベース）＝約37%、小麦・大豆・飼料の輸入依存が主因」は地理・公民の最頻出事項。',
+      '【何を聞かれているか】日本のカロリーベース食料自給率のおよその数値と、自給率が低い理由を2つ答える。\n\n【なぜそうなるのか】米はほぼ自給できるが小麦・大豆・飼料穀物の大半を輸入に依存しており、さらに農業従事者の高齢化・農地の減少で国内生産力そのものが下がっている。\n\n【ステップ1】カロリーベースで約38%。米はほぼ自給できるが、小麦・大豆・とうもろこしなどは大部分を輸入しており、飼料もほとんどが輸入である。\n\n【ステップ2】農業で働く人の高齢化と減少、あとつぎ不足による耕作放棄地の増加、安い輸入品との競争が国内生産をおさえている。\n\n【答え】約38%（カロリーベース）。理由: ①小麦・大豆・飼料穀物の大半を輸入に依存 ②農業従事者の高齢化・農地の減少\n\n【確かめ】食料を安定して確保する（食料安全保障）ため、自給率を上げることが国の目標になっている。\n\n【よくあるまちがい】国産の肉や卵ならすべて自給に数えられると思ってしまう。えさが輸入なら、その分は自給率の計算から差し引かれる。\n\n【ここが絶対】「食料自給率（カロリーベース）＝約38%、小麦・大豆・飼料の輸入依存が主因」は地理・公民の最頻出事項。',
     difficulty: 'advanced',
   },
   {
@@ -3312,7 +3401,7 @@ const baseQuestions: Question[] = [
     question: '日本の面積最大・最小の都道府県と人口最多・最少の都道府県を答えよ。',
     answer: '面積最大: 北海道・最小: 香川県。人口最多: 東京都・最少: 鳥取県',
     explanation:
-      '【何を聞かれているか】面積最大・最小、人口最多・最少の都道府県。\n【なぜそうなるのか】面積は**北海道が国土の約2割**で最大、**香川県**が最小。人口は政治・経済が集中する**東京都**が最多、**鳥取県**が最少。\n【ステップ1】面積：北海道（約8.3万km²）／香川県（約1877km²）。\n【ステップ2】人口：東京都（約1400万人）／鳥取県（約54万人）。\n【答え】面積最大：北海道、最小：香川県。人口最多：東京都、最少：鳥取県\n【確かめ】人口密度は最高が東京都、最低が北海道。人口2位以下は神奈川・大阪・愛知。\n【よくあるまちがい】面積最小を大阪府とする。**大阪は2番目に小さい**。\n【ここが絶対】面積・人口の「日本一・最少」は超頻出。北海道（面積最大）と東京都（人口最多）を混同せずセットで覚える。',
+      '【何を聞かれているか】面積最大・最小、人口最多・最少の都道府県。\n【なぜそうなるのか】面積は**北海道が国土の約2割**で最大、**香川県**が最小。人口は政治・経済が集中する**東京都**が最多、**鳥取県**が最少。\n【ステップ1】面積：北海道（約8.3万km²）／香川県（約1877km²）。\n【ステップ2】人口：東京都（約1,424万人）／鳥取県（約52万人）。\n【答え】面積最大：北海道、最小：香川県。人口最多：東京都、最少：鳥取県\n【確かめ】人口密度は最高が東京都、最低が北海道。人口2位以下は神奈川・大阪・愛知。\n【よくあるまちがい】面積最小を大阪府とする。**大阪は2番目に小さい**。\n【ここが絶対】面積・人口の「日本一・最少」は超頻出。北海道（面積最大）と東京都（人口最多）を混同せずセットで覚える。',
     difficulty: 'advanced',
   },
   {
@@ -3714,6 +3803,46 @@ const baseQuestions: Question[] = [
   ...moshi202611KokoSansu2,
   ...moshi202611ChugakuRika2,
   ...moshi202611KokoRika2,
+  ...moshi202612ChugakuEigo,
+  ...moshi202612ChugakuEigo2,
+  ...moshi202612ChugakuKokugo,
+  ...moshi202612ChugakuKokugo2,
+  ...moshi202612ChugakuRika,
+  ...moshi202612ChugakuRika2,
+  ...moshi202612ChugakuSansu,
+  ...moshi202612ChugakuSansu2,
+  ...moshi202612ChugakuShakai,
+  ...moshi202612ChugakuShakai2,
+  ...moshi202612KokoEigo,
+  ...moshi202612KokoEigo2,
+  ...moshi202612KokoKokugo,
+  ...moshi202612KokoKokugo2,
+  ...moshi202612KokoRika,
+  ...moshi202612KokoRika2,
+  ...moshi202612KokoSansu,
+  ...moshi202612KokoSansu2,
+  ...moshi202612KokoShakai,
+  ...moshi202612KokoShakai2,
+  ...honshiken202701ChugakuEigo,
+  ...honshiken202701ChugakuEigo2,
+  ...honshiken202701ChugakuKokugo,
+  ...honshiken202701ChugakuKokugo2,
+  ...honshiken202701ChugakuRika,
+  ...honshiken202701ChugakuRika2,
+  ...honshiken202701ChugakuSansu,
+  ...honshiken202701ChugakuSansu2,
+  ...honshiken202701ChugakuShakai,
+  ...honshiken202701ChugakuShakai2,
+  ...honshiken202701KokoEigo,
+  ...honshiken202701KokoEigo2,
+  ...honshiken202701KokoKokugo,
+  ...honshiken202701KokoKokugo2,
+  ...honshiken202701KokoRika,
+  ...honshiken202701KokoRika2,
+  ...honshiken202701KokoSansu,
+  ...honshiken202701KokoSansu2,
+  ...honshiken202701KokoShakai,
+  ...honshiken202701KokoShakai2,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,
@@ -3936,7 +4065,56 @@ const baseQuestions: Question[] = [
   ...gradeE4KokugoBQuestions,
   ...gradeE4KokugoKQuestions,
   ...gradeE3RikaQuestions,
+  ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
+  ...gradeE4ShakaiBQuestions,
+  ...honshikenSchool_koko_kasei,
+  ...honshikenSchool_koko_ritsumeikan,
+  ...honshikenSchool_koko_tokai,
+  ...ritsumeikanKoko_sansu,
+  ...ritsumeikanKoko_kokugo,
+  ...ritsumeikanKoko_rika,
+  ...ritsumeikanKoko_shakai,
+  ...ritsumeikanKoko_eigo,
+  ...honshikenSchool_fukuoka_kurume,
+  ...honshikenSchool_kaimei,
+  ...honshikenSchool_kankan,
+  ...honshikenSchool_kansai_hokuyo,
+  ...honshikenSchool_kenmei,
+  ...honshikenSchool_kindai,
+  ...honshikenSchool_kinrankai,
+  ...honshikenSchool_koko_azabu,
+  ...honshikenSchool_koko_hibiya,
+  ...honshikenSchool_koko_koyo,
+  ...honshikenSchool_koko_meidai,
+  ...honshikenSchool_koko_nada,
+  ...honshikenSchool_koko_nishiyamato,
+  ...honshikenSchool_koko_shitennoji,
+  ...honshikenSchool_koko_todaiji,
+  ...honshikenSchool_koko_top,
+  ...honshikenSchool_koko_waseda,
+  ...honshikenSchool_koko_kankan,
+  ...honshikenSchool_koko_keio,
+  ...honshikenSchool_myojo,
+  ...honshikenSchool_nagoya_tokai,
+  ...honshikenSchool_nandai,
+  ...honshikenSchool_naniwa,
+  ...honshikenSchool_osaka_jogakuin,
+  ...honshikenSchool_otani,
+  ...honshikenSchool_otemon,
+  ...honshikenSchool_poole,
+  ...honshikenSchool_seifu_nankai,
+  ...honshikenSchool_seifu,
+  ...honshikenSchool_seiko,
+  ...honshikenSchool_shitennoji,
+  ...honshikenSchool_takatsuki,
+  ...honshikenSchool_tezukayama,
+  ...honshikenSchool_toin,
+  ...honshikenSchool_tokyo_aoyama,
+  ...honshikenSchool_tokyo_chuo,
+  ...honshikenSchool_tokyo_gakushuin,
+  ...honshikenSchool_tokyo_hosei,
+  ...honshikenSchool_tokyo_meidai,
   ...gradeE4SansuQuestions,
   ...gradeJ1SansuQuestions,
   ...gradeE6SansuQuestions,

@@ -53,7 +53,9 @@ import { lessonsU120E3Kokugo } from '../data/lessons-u120-e3-kokugo';
 import { lessonsU120E4Kokugo } from '../data/lessons-u120-e4-kokugo';
 import { lessonsU120E4KokugoKanji } from '../data/lessons-u120-e4-kokugo-kanji';
 import { lessonsU120E3Rika } from '../data/lessons-u120-e3-rika';
+import { lessonsU120E4Rika } from '../data/lessons-u120-e4-rika';
 import { lessonsU120E3Shakai } from '../data/lessons-u120-e3-shakai';
+import { lessonsU120E4Shakai } from '../data/lessons-u120-e4-shakai';
 
 const FREE_UNITS_PER_CLUSTER = 5;
 // 小1・小2（u120_）は、ためし読みを広げて 最初の10単元まで無料にする（2026/11/5 決定）
@@ -99,7 +101,9 @@ const CLUSTERS = [
   lessonsU120E4Kokugo,
   lessonsU120E4KokugoKanji,
   lessonsU120E3Rika,
+  lessonsU120E4Rika,
   lessonsU120E3Shakai,
+  lessonsU120E4Shakai,
 ];
 
 function genNew20Ids(): string {

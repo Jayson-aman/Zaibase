@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { lessonsRitsumeikan_sansu } from './lessons-ritsumeikan-sansu';
 import { lessonsU120E4Sansu } from './lessons-u120-e4-sansu';
 // 450セッション化（数の性質〜統計まで12ユニット）。既存の22レッスンは
 // 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
@@ -7432,4 +7433,5 @@ export const sansuLessons: Lesson[] = [
   ...lessonsU120E3Sansu,
   ...lessonsU120E4Sansu,
   ...lessonsU120CalcTrivia,
+  ...lessonsRitsumeikan_sansu,
 ];

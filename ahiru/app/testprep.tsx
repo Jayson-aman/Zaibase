@@ -15,7 +15,8 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { subjectInfo, type SubjectKey } from '../data/questions-meta';
-import { TEST_MODES, levelLabel, type TestModeKey, type LevelKey } from '../data/test-modes';
+import { TEST_MODES, HONSHIKEN_SCHOOLS, levelLabel, type TestModeKey, type LevelKey } from '../data/test-modes';
+import { getCourseInfo, type CourseKey } from '../data/courses';
 import { useExamType, examTypeLabel, subjectDisplayName } from '../store/examType';
 import { GRADE_ORDER, GRADE_SHORT_LABELS, examTypeOfGrade, isLowGrade, type GradeKey } from '../data/grades';
 import HomeButton from '../components/HomeButton';
@@ -29,6 +30,7 @@ export default function TestPrepScreen() {
   const [modeKey, setModeKey] = useState<TestModeKey | null>(null);
   const [level, setLevel] = useState<LevelKey>('basic');
   const [grade, setGrade] = useState<GradeKey | null>(null);
+  const [school, setSchool] = useState<CourseKey | null>(null);
 
   const mode = useMemo(() => TEST_MODES.find((m) => m.key === modeKey) ?? null, [modeKey]);
   const et = examType ?? 'chugaku';
@@ -41,7 +43,8 @@ export default function TestPrepScreen() {
     if (!mode) return;
     const lv = mode.key === 'level' ? `&difficulty=${level}` : '';
     const gr = grade ? `&grade=${grade}` : '';
-    router.push(`/quiz/${subject}?testmode=${mode.key}&examType=${et}${lv}${gr}` as any);
+    const sc = mode.key === 'honshiken' && school && HONSHIKEN_SCHOOLS[et].includes(school) ? `&course=${school}` : '';
+    router.push(`/quiz/${subject}?testmode=${mode.key}&examType=${et}${lv}${gr}${sc}` as any);
   }
 
   if (loading) return <SafeAreaView style={styles.root} />;
@@ -137,6 +140,36 @@ export default function TestPrepScreen() {
           </>
         )}
 
+        {mode?.key === 'honshiken' && (
+          <>
+            <Text style={styles.sectionLabel}>③ 志望校の形式に合わせる（任意）</Text>
+            <Text style={styles.hintText}>
+              学校を選ぶと、その学校の出題形式・分野の比率・難しさに合わせた問題が出ます（実際の過去問ではなく、傾向に合わせた自作問題です）。選ばないときは共通の本試験対策です。
+            </Text>
+            <View style={styles.levelRow}>
+              <TouchableOpacity
+                style={[styles.levelBtn, school === null && styles.levelBtnActive]}
+                onPress={() => setSchool(null)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.levelText, school === null && styles.levelTextActive]}>共通</Text>
+              </TouchableOpacity>
+              {HONSHIKEN_SCHOOLS[et].map((c) => (
+                <TouchableOpacity
+                  key={c}
+                  style={[styles.levelBtn, school === c && styles.levelBtnActive]}
+                  onPress={() => setSchool(c)}
+                  activeOpacity={0.85}
+                >
+                  <Text style={[styles.levelText, school === c && styles.levelTextActive]}>
+                    {getCourseInfo(c).shortName}
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </>
+        )}
+
         {mode?.key === 'level' && (
           <>
             <Text style={styles.sectionLabel}>③ 難易度</Text>
@@ -160,7 +193,7 @@ export default function TestPrepScreen() {
         {mode && (
           <>
             <Text style={styles.sectionLabel}>
-              {mode.key === 'level' ? '④' : '③'} 教科を選ぶ
+              {mode.key === 'level' || mode.key === 'honshiken' ? '④' : '③'} 教科を選ぶ
             </Text>
             <View style={styles.subjectGrid}>
               {SUBJECTS.map((k) => (

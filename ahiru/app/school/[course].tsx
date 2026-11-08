@@ -66,7 +66,7 @@ const SCHOOL_META: Record<string, { name: string; emoji: string; hensachi: strin
   'kindai':          { name: '近畿大学附属',   emoji: '🎯', hensachi: '55〜60', region: '大阪' },
   'kansai-hokuyo':   { name: '関西大学北陽',   emoji: '🎓', hensachi: '54〜58', region: '大阪' },
   'myojo':           { name: '明星',           emoji: '✨', hensachi: '56〜62', region: '大阪' },
-  'tezukayama':      { name: '帝塚山学院',     emoji: '🌺', hensachi: '55〜60', region: '奈良' },
+  'tezukayama':      { name: '帝塚山学院',     emoji: '🌺', hensachi: '55〜60', region: '大阪' },
   'kinrankai':       { name: '金蘭会',         emoji: '🌼', hensachi: '50〜56', region: '大阪' },
   'otani':           { name: '大谷',           emoji: '🍁', hensachi: '46〜52', region: '大阪' },
   'naniwa':          { name: '浪速中学校',     emoji: '🌊', hensachi: '50〜56', region: '大阪' },
@@ -100,6 +100,7 @@ const SCHOOL_META: Record<string, { name: string; emoji: string; hensachi: strin
   'koko-nanzan':      { name: '南山高校',            emoji: '🌺', hensachi: '64〜68', region: '愛知' },
   'koko-shitennoji':  { name: '四天王寺高校',        emoji: '🏯', hensachi: '64〜70', region: '大阪' },
   'koko-kankan':      { name: '関関同立系高校',      emoji: '🎓', hensachi: '60〜68', region: '関西' },
+  'koko-ritsumeikan': { name: '立命館高校',          emoji: '🏫', hensachi: '60〜68', region: '京都・滋賀' },
 };
 
 type StageKey = 'textbook' | 'kiso' | 'oyo' | 'mogi' | 'kakomon';
