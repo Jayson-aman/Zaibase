@@ -8649,7 +8649,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 68,
       "w": 280,
       "h": 30,
-      "text": "1番目：笑いをこらえた → ×",
+      "text": "「笑いをこらえた」→ ×",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -8695,7 +8695,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 68,
       "w": 280,
       "h": 30,
-      "text": "2番目：腹を立てた → ×",
+      "text": "「腹を立てた」→ ×",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -8706,7 +8706,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 104,
       "w": 280,
       "h": 30,
-      "text": "4番目：すっかり開き直った → ×",
+      "text": "「すっかり開き直った」→ ×",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -8714,7 +8714,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "3 番目が、直前・直後と合っている。",
+    "note": "「自分の朗読と声の違いに気づいた」が、直前・直後と合っている。",
     "add": [
      {
       "t": "box",
@@ -8763,7 +8763,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 130,
       "w": 280,
       "h": 30,
-      "text": "→ 3番目",
+      "text": "→ これが答え",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 14
@@ -10061,7 +10061,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
   ]
  },
  "honshiken_school_koko_azabu_kokugo_08": {
-  "caption": "答え　2番目（言い直す粘り強さ＋責任を持って決める勇気）",
+  "caption": "答え　言い直す粘り強さと、責任を持って決める勇気",
   "slides": [
    {
     "note": "本文の内容と合うものを一つ選ぶ。",
@@ -10156,7 +10156,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "1 番目：「答えがあるから点数をつけられる」が本文。逆。",
+    "note": "「答えがないので点数がつけられない」は、本文と逆。",
     "add": [
      {
       "t": "box",
@@ -10183,7 +10183,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 68,
       "w": 280,
       "h": 30,
-      "text": "1番目 → ×",
+      "text": "「答えがないので点数がつけられない」",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -10194,7 +10194,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 104,
       "w": 280,
       "h": 30,
-      "text": "本文：答えがあるから点数がつく",
+      "text": "→ ×　本文：答えがあるから点数がつく",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -10202,7 +10202,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "3 番目：「知識の量よりも」とあり、知識が多ければよいとは書いていない。",
+    "note": "「知識が多いほどよい問い」は、本文に書いていない。",
     "add": [
      {
       "t": "box",
@@ -10229,7 +10229,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 68,
       "w": 280,
       "h": 30,
-      "text": "3番目 → ×",
+      "text": "「知識が多いほどよい問い」→ ×",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -10248,7 +10248,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "4 番目：先延ばしと「深める」は違う、と本文は言っている。",
+    "note": "「結論を出さず考え続ける」は、本文の「先延ばし」にあたる。",
     "add": [
      {
       "t": "box",
@@ -10275,7 +10275,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 68,
       "w": 280,
       "h": 30,
-      "text": "4番目 → ×",
+      "text": "「結論を出さず考え続ける」→ ×",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -10294,7 +10294,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "2 番目が、最後の段落の 2 つのこととそのまま合う。",
+    "note": "「言い直しながら考え、責任を持って決める」が、最後の段落と合う。",
     "add": [
      {
       "t": "box",
@@ -10343,7 +10343,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 130,
       "w": 280,
       "h": 30,
-      "text": "→ 2番目",
+      "text": "→ これが答え",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 14
@@ -14863,7 +14863,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "1:1（検定）と 3:1（自家受粉）を混ぜない。",
+    "note": "1:1（しわの株とのかけ合わせ）と 3:1（自家受粉）を混ぜない。",
     "add": [
      {
       "t": "box",
@@ -21618,6 +21618,3155 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "w": 280,
       "h": 30,
       "text": "国民の直接選挙ではない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_01": {
+  "caption": "答え　Some students began to ask questions that had no simple answers.",
+  "slides": [
+   {
+    "note": "Ms. Ota が数か月後に気づいた変化を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "What did Ms. Ota notice",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "after a few months?",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "問いの言葉を本文で探す。after a few months と noticed。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 66,
+      "w": 280,
+      "h": 30,
+      "text": "本文　第 2 段落",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 102,
+      "w": 280,
+      "h": 36,
+      "text": "\"But after a few months,\nMs. Ota noticed a change.\"",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 12
+     }
+    ]
+   },
+   {
+    "note": "直後の文に、変化の中身が書かれている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "Some students began to ask questions",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "that had no simple answers",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「At first」は最初の様子。変化は「But」のあと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "At first … easy ones（最初）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "But after a few months … change（変化）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "「箱を使わなくなった」「名前を書きたがった」は本文にない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "stopped using the box → 本文にない",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "wanted to write names → 本文と逆",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "本文と合う選択肢は、no simple answers の問い。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "Some students began to ask",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "questions that had no simple answers.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "例の \"Why do people study history?\" も、簡単に答えが出ない問い。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "\"Why do people study history?\"",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "→ no simple answers の例",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "At first の内容と取りちがえない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "easy questions は最初の様子",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "変化は But のあと",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_03": {
+  "caption": "答え　すぐに答えを教えず、生徒に考えさせ、会話のきっかけをつくりたかった",
+  "slides": [
+   {
+    "note": "Ms. Ota が「まずあなたの考えを聞きたい」と書いた理由を、50 字以内で説明する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "\"I have my own idea,",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "but I want to hear yours first.\"",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "理由を日本語で 50 字以内",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本語にする。「私にも考えはあるが、先にあなたの考えを聞きたい」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "I have my own idea → 自分の考えはある",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "but I want to hear yours first",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 先に生徒の考えを聞く",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "直前：She did not answer these questions quickly.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "すぐには答えなかった",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "→ 先に教えてしまわない姿勢",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "最後の段落：よい問いは「学びの終わり」ではなく「会話の始まり」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "A good question is not the end of learning.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 12
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "It is the beginning of a conversation.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "2 つをつなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "すぐ答えを教えない",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "→ 生徒に考えさせる",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 会話のきっかけにする",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "41 字にまとめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "10 字 ＋ 13 字 ＋ 18 字 ＝ 41 字",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "五十字以内（句点を含む）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "3 つの要素が入っているか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "① すぐ教えない",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "② 考えさせる",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "③ 会話のきっかけ",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「わからなかったから」はまちがい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "my own idea ＝ 自分の考えはある",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "あえて先に言わない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_05": {
+  "caption": "答え　思い出（祖母との思い出）",
+  "slides": [
+   {
+    "note": "\"I would lose something else\" の something else は何か。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "If I bought a new one,",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "I would have a radio,",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "but I would lose something else.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「something else」はぼかした言い方。中身は最後に出てくる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "something else ＝ ほかの何か",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "中身は、本文の最後で明かされる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "最後の文：What his grandfather would lose was not an old machine but a memory.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "not an old machine",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "but a memory",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "memory ＝ 思い出。機械ではない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "an old machine ＝ 古い機械（ではない）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "a memory ＝ 思い出（これ）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "ラジオは祖母からの贈り物。最後の曲は 2 人の最初の旅行の曲。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "a present from your grandmother",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "the same song we heard on our first trip",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 13
+     }
+    ]
+   },
+   {
+    "note": "答え：思い出（祖母との思い出）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "something else ＝ a memory",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "＝ 思い出（祖母との思い出）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "something else を a memory に入れかえて読む。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "I would lose a memory.",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "意味が通る",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「別のラジオ」や「お金」ではない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "something else ≠ 別のラジオ",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "機械ではなく思い出",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_06": {
+  "caption": "答え　祖父が失うことになるのは、古い機械ではなく思い出だった。",
+  "slides": [
+   {
+    "note": "What his grandfather would lose was not an old machine but a memory. を訳す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "What his grandfather would lose",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "was not an old machine",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "but a memory.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "文の骨組み：What ～ was not A but B。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "What ～ ＝ 〜するもの",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "was not A but B ＝ A ではなく B だった",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語：What his grandfather would lose ＝ 祖父が失うことになるもの。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "what ＝ 〜するもの（疑問詞ではない）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "would lose ＝ 失うことになる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "not an old machine but a memory ＝ 古い機械ではなく、思い出。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "not A but B ＝ A ではなく B",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "A ＝ an old machine（古い機械）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "B ＝ a memory（思い出）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "つなぐ：祖父が失うことになるものは、古い機械ではなく思い出だった。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "祖父が失うことになるものは、",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "古い機械ではなく、思い出だった。",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "自然な日本語に整える。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "祖父が失うことになるのは、",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "古い機械ではなく思い出だった。",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本語を英語にもどして確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "祖父が失うのは機械ではなく思い出",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "→ What … would lose was not … but a memory",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 12
+     }
+    ]
+   },
+   {
+    "note": "What を「何を？」と訳さない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "What は疑問詞ではない",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "「何を祖父は失うか」はまちがい",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_07": {
+  "caption": "答え　It took his grandfather three days to repair the radio.",
+  "slides": [
+   {
+    "note": "「祖父がそのラジオを修理するのに 3 日かかった」を英文にする。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "it / three / his grandfather / took",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "days / to / repair / the radio",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "→ 並べかえる",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "型：It takes ＋人＋時間＋ to ～。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "It takes 人 時間 to 動詞",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "「人が〜するのに時間がかかる」",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "過去の話なので takes → took。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "takes → took",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "文頭の It は大文字",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "人と時間の順：人が先、時間があと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "人 ＝ his grandfather",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "時間 ＝ three days",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "It took his grandfather three days",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "最後に to ＋動詞：to repair the radio。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "to repair the radio",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "（そのラジオを修理するのに）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "全部つなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "It took his grandfather",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "three days to repair the radio.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "8 つの語句をすべて使い、日本語の意味と合っている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "it / took / his grandfather / three",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "days / to / repair / the radio → 全部使った",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 12
+     }
+    ]
+   },
+   {
+    "note": "人と時間を逆にしないこと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "× took three days his grandfather",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "○ took his grandfather three days",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_10": {
+  "caption": "答え　He remembers locking the door.",
+  "slides": [
+   {
+    "note": "「かぎをかけたことを覚えている」の英文を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "彼はドアにかぎをかけたことを",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "覚えている。",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "remember は、後ろの形で意味がかわる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "remember ＋ 〜ing",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "remember ＋ to ～",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "〜ing は、すでにしたことを覚えている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "remember 〜ing",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "＝ 〜したことを覚えている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "（過去のことを思い出す）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "to ～ は、これからすることを忘れない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "remember to ～",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "＝ 忘れずに〜する",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "（これからのこと）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本文は「かけた」＝すでにしたこと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "かぎをかけた → すでに終わった",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "→ remember ＋ 〜ing",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え：He remembers locking the door.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "He remembers locking the door.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本語にもどす。「かぎをかけたことを覚えている」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "locking ＝ かけたこと",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "日本文と合う",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "to ～ と〜ing を取りちがえない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "to lock は「忘れずにかける」",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "「かけたこと」は〜ing",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_11": {
+  "caption": "答え　I don't know whether he will come.",
+  "slides": [
+   {
+    "note": "「彼が来るかどうか、私にはわかりません」を英語にする。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "彼が来るかどうか、",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "私にはわかりません。",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "骨組みは「私は知らない」＋「〜かどうか」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "私は知らない ＝ I don't know",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "〜かどうか ＝ whether ～",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "whether のあとは、主語＋動詞の順。疑問文の語順にしない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "whether ＋ he ＋ will come",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "× whether will he come",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「来る」のはこれから。will come。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "これからのこと",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "→ will come",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "つなぐ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "＋ whether he will come",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答え。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 76,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know whether he will come.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本語にもどして確かめる。or not をつけてもよい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "私は彼が来るかどうか知らない",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "if を使っても同じ意味",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "whether のあとの語順に注意。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "× whether will he come",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "○ whether he will come",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_azabu_eigo_12": {
+  "caption": "答え（例）問いを立てることが大切：理由と例を書く",
+  "slides": [
+   {
+    "note": "「よい問い」と「すばやい答え」のどちらが大切か。40〜50 語で書く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【状況】",
+      "size": 12,
+      "color": "#6E645C",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "ask a good question？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "find an answer quickly？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "意見＋理由＋例",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "書く順番：意見 → 理由 → 具体例。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【手がかり】",
+      "size": 12,
+      "color": "#9333EA",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "① 意見：I think ～ is more important.",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "② 理由：なぜそう思うか",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "③ 例：For example, ～",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "意見：問いを立てるほうが大切。動名詞 asking を主語にする。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【理由】",
+      "size": 12,
+      "color": "#0284C7",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "I think asking a good question",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "is more important.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "理由：すばやい答えは考えを終わらせる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "A quick answer may end our thinking,",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "but a good question makes us think",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "more deeply.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "具体例：空が青い理由を調べた経験。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【計算】",
+      "size": 12,
+      "color": "#16A34A",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "For example, when I asked why",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "the sky is blue, I read many books",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "and learned about light.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "まとめの文で終える。語数は 51 語。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【答え】",
+      "size": 12,
+      "color": "#E11D48",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "That was more interesting",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "than the answer itself.",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "（全体で 51 語）",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "立場・理由・例・時制の 4 点を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【確かめ】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 58,
+      "w": 280,
+      "h": 30,
+      "text": "① 立場がある",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 94,
+      "w": 280,
+      "h": 30,
+      "text": "② 理由がある（but の対比）",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 130,
+      "w": 280,
+      "h": 30,
+      "text": "③ For example の例がある",
+      "color": "#B5622E",
+      "fill": "#FFF8EC",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "理由を書かずに終わらないこと。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF"
+     },
+     {
+      "t": "label",
+      "x": 160,
+      "y": 22,
+      "text": "【まちがい】",
+      "size": 12,
+      "color": "#B5622E",
+      "anchor": "middle",
+      "bold": true
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 68,
+      "w": 280,
+      "h": 30,
+      "text": "I think so. だけは不足",
+      "color": "#B5622E",
+      "fill": "#FEF9C3",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 104,
+      "w": 280,
+      "h": 30,
+      "text": "asking は動名詞にする",
       "color": "#B5622E",
       "fill": "#FEF9C3",
       "size": 14

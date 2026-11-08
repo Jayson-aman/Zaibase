@@ -1,6 +1,32 @@
 import type { Question } from './questions-meta';
 
-// profile TBD
+// ════════════════════════════════════════════════════════════════════
+// 本試験対策（学校別）麻布高校（course: 'koko-azabu'）。高校受験なので国数英理社の5教科×12問＝60問（英語はリスニングを出さない）。
+// 本物の過去問ではなく、その学校の「出題の考え方」に合わせた自作問題。画面には学校名を出さない。
+//
+// 【入試プロフィール】
+// ◇ 確認できた点（ja.wikipedia.org「麻布中学校・高等学校」2026/11/8 取得）
+//   ・東京都港区元麻布の私立男子校。「高等学校において生徒を募集しない完全中高一貫校」。
+//     → 麻布には「高校入試」そのものが無い。実施されるのは中学入試だけ（このアプリの「麻布高校」コースの前提とずれている）。
+//   ・中学入試は2月1日実施。国語・算数・社会・理科の4教科（英語は無い）。国語・算数は60分で60点満点、社会・理科は50分で40点満点。
+//     算数と社会の間に昼食をはさむ。
+//   ・「入試から卒業まで一貫して、文章などを『書く』ことに力を入れている」。定期試験や実力試験でも記述問題が目立つ。
+//   ・中1に、世界地理・世界史・政治経済にまたがる「世界」という分野横断の科目がある。
+//   ・校則が無く、自主・自立の校風のもとで、生徒が自分で考えることを重視する。
+// ◇ 準拠のしかた（このコースの設定「自由な校風を反映した論述・思考型の出題」にそろえた）
+//   ・高校受験（examType: koko）として、最難関私立高校の中学範囲に収まる5教科を作った。高校の範囲（sin/cos・nCr・微積・Σ・ベクトルなど）は使っていない。
+//   ・「書く」重視に合わせ、記述問題を多めにした（国語5問・社会4問・英語6問・理科1問が isWritten。算数は答えに至る筋道を解説で示す型）。
+//   ・算数は、公式をあてはめるより「どう数え上げるか・どこに着目するか」を問う型（約数・場合の数・規則性・整数・図形の切断・面積の分割）を中心にした。
+//   ・国語は、自作の物語文・説明文（答えのない問いの話）と、徒然草 第五十二段（ja.wikisource.org で字句を確認済み）の3題材。説明は字数制限つきの記述を中心にした。
+//   ・理科は、実験の結果から条件を比べて結論を書く型と、データを読んで数値を出す型。社会は、資料の読み取り・理由を書く論述と、世界の動きと日本をつなぐ視点。
+//   ・時事は2026年11月時点の次の事実だけを使った：食料自給率（2024年度）カロリーベース38%・生産額ベース64%／日本の世界遺産27件目＝2026年7月登録の飛鳥・藤原の宮都／内閣総理大臣＝高市早苗（2025年10月就任）。
+// ◇ 知識にもとづく（出典では未確認。断定しない）
+//   ・中学入試の算数は、思考力を要する小問・大問が多く、途中の考え方を書かせる形が見られると言われる。理科・社会は、身近な題材の記述や資料の読み取りが多いと言われる。
+// ◇ 出典で確認できなかった点
+//   ・高校受験としての出題形式・配点・時間・大問数（そもそも実施されない）。
+//   ・中学入試の大問の数・分野ごとの出題比率・記述の字数の上限・合格最低点。
+//   ・この60問は、そのどれにも合わせていない。難度は「最難関私立高校の中学範囲」を目安に自分で決めた。
+// ════════════════════════════════════════════════════════════════════
 
 export const honshikenSchool_koko_azabu: Question[] = [
   {
@@ -175,7 +201,7 @@ export const honshikenSchool_koko_azabu: Question[] = [
     ],
     "answer": "特別な感情をこめず、思ったことをごく自然に伝える言い方。",
     "hint": "「責めるでもなく慰めるでもない」の部分を、そのまま言いかえた選択肢を探す。",
-    "explanation": "【何を聞かれているか】紗代の言い方の特徴を、本文の言い方から読み取る。\n【なぜそうなるのか】傍線部は「A でもなく B でもない」という形で、2 つのことを打ち消している。打ち消されている「責める」「慰める」は、どちらも相手に強い気持ちを向ける言い方。それを両方否定したうえで「天気の話をするような」と例えているので、感情を強くこめず、事実をさらりと言う調子だとわかる。選択肢は、打ち消された内容を含んでいないものを選べばよい。\n【ステップ1】傍線部を分けて読む。「責めるでもなく」（強くとがめない）、「慰めるでもない」（なぐさめもしない）、「ただ天気の話をするような」（ふつうの話題を話すように）。\n【ステップ2】選択肢をくらべる。1番目の「相手の失敗を強くとがめる言い方」は「責めるでもなく」と食いちがう。2番目の「はげまそうとする、明るい言い方」は「慰めるでもない」と食いちがう。4番目の「ばかにする言い方」は本文に根拠がない。\n【ステップ3】3番目の「特別な感情をこめず、思ったことをごく自然に伝える言い方」は、傍線部の言いかえになっている。\n【答え】特別な感情をこめず、思ったことをごく自然に伝える言い方。\n【確かめ】傍線部の直後で、ぼくは「うるさいな」と言い返すが、紗代はそのあとも落ち着いて続けている。感情的な言い方ではなかったことと合っている。\n【よくあるまちがい】「責めるでもなく」の部分だけを見て、ア（強くとがめる）の反対のイ（はげます）を選んでしまう。傍線部は「慰めるでもない」とも言っているので、イも合わない。2 つの打ち消しの両方を満たす選択肢を選ぶ。",
+    "explanation": "【何を聞かれているか】紗代の言い方の特徴を、本文の言い方から読み取る。\n【なぜそうなるのか】傍線部は「A でもなく B でもない」という形で、2 つのことを打ち消している。打ち消されている「責める」「慰める」は、どちらも相手に強い気持ちを向ける言い方。それを両方否定したうえで「天気の話をするような」と例えているので、感情を強くこめず、事実をさらりと言う調子だとわかる。選択肢は、打ち消された内容を含んでいないものを選べばよい。\n【ステップ1】傍線部を分けて読む。「責めるでもなく」（強くとがめない）、「慰めるでもない」（なぐさめもしない）、「ただ天気の話をするような」（ふつうの話題を話すように）。\n【ステップ2】選択肢をくらべる。「相手の失敗を強くとがめる言い方」は、傍線部の「責めるでもなく」と食いちがう。「相手をはげまそうとする、明るい言い方」は「慰めるでもない」と食いちがう。「相手の失敗をばかにする言い方」は本文に根拠がない。\n【ステップ3】「特別な感情をこめず、思ったことをごく自然に伝える言い方」は、傍線部の言いかえになっている。\n【答え】特別な感情をこめず、思ったことをごく自然に伝える言い方。\n【確かめ】傍線部の直後で、ぼくは「うるさいな」と言い返すが、紗代はそのあとも落ち着いて続けている。感情的な言い方ではなかったことと合っている。\n【よくあるまちがい】「責めるでもなく」の部分だけを見て、「強くとがめる」の反対の「はげます」を選んでしまう。傍線部は「慰めるでもない」とも言っているので、「はげます」も合わない。2 つの打ち消しの両方を満たす選択肢を選ぶ。",
     "pitfall": "打ち消しの片方だけを見て、はげます言い方だと考える。",
     "memoryTip": "「AでもなくBでもない」は、AとBの両方を除いて考える。"
   },
@@ -215,7 +241,7 @@ export const honshikenSchool_koko_azabu: Question[] = [
     ],
     "answer": "まちがえないことだけを目指してきた自分の朗読と、まちがえても聞きたくなる声との違いに気づかされたから。",
     "hint": "「ぼく」が気づいたことは、そのあとの一文に書かれている。「まちがえないこと」と「聞いていたくなる声」を対比して読む。",
-    "explanation": "【何を聞かれているか】「ぼく」が言葉を失った理由を、直前・直後の内容から選ぶ。\n【なぜそうなるのか】心情を問う問題では、傍線部の直前・直後に理由がある。傍線部の直前では、紗代が「まちがえてるでしょ。でもこの人の声、ずっと聞いていたくなる」と言っている。直後では、「まちがえないことだけを目指してきた自分の朗読と、この声との間にある距離が、急に見えた気がした」と書かれている。この 2 つを合わせると、理由は「自分の朗読と、まちがえても心に残る声とのちがいに気づいたから」になる。\n【ステップ1】傍線部の直前を見る。紗代は「まちがえてるでしょ。でもこの人の声、ずっと聞いていたくなる」と言った。祖父の声は、まちがえながらも聞き手を引きつける。\n【ステップ2】傍線部の直後を見る。「まちがえないことだけを目指してきた自分の朗読と、この声との間にある距離が、急に見えた気がした」とある。\n【ステップ3】選択肢をくらべる。1番目の「朗読が下手で笑いそうになった」は、「聞いていたくなる」と合わない。2番目の「勝手にテープを聞かされて腹を立てた」は、本文に腹を立てた様子がない。4番目の「祖父のようにまちがえてよいと開き直った」は、ぼくはまだ戸惑っていて、気持ちを決めていない。\n【ステップ4】3番目の「まちがえないことだけを目指してきた自分の朗読と、まちがえても聞きたくなる声との違いに気づかされたから」が、直前・直後の両方と合っている。\n【答え】まちがえないことだけを目指してきた自分の朗読と、まちがえても聞きたくなる声との違いに気づかされたから。\n【確かめ】最後の場面で、ぼくは自分から読み直すことができるようになる。この変化は、傍線部の時点で「違い」に気づいたことが出発点になっていると読める。気づきが先にあって、行動があとから変わるという流れが自然。\n【よくあるまちがい】直前の「ずっと聞いていたくなる」を落とし、直後の「距離が見えた」だけで選んで、「祖父のようになりたいと決意した」と読んでしまう。傍線部の時点では、まだ気づいたばかりで、決意まではしていない。気持ちを言い過ぎている選択肢に注意する。",
+    "explanation": "【何を聞かれているか】「ぼく」が言葉を失った理由を、直前・直後の内容から選ぶ。\n【なぜそうなるのか】心情を問う問題では、傍線部の直前・直後に理由がある。傍線部の直前では、紗代が「まちがえてるでしょ。でもこの人の声、ずっと聞いていたくなる」と言っている。直後では、「まちがえないことだけを目指してきた自分の朗読と、この声との間にある距離が、急に見えた気がした」と書かれている。この 2 つを合わせると、理由は「自分の朗読と、まちがえても心に残る声とのちがいに気づいたから」になる。\n【ステップ1】傍線部の直前を見る。紗代は「まちがえてるでしょ。でもこの人の声、ずっと聞いていたくなる」と言った。祖父の声は、まちがえながらも聞き手を引きつける。\n【ステップ2】傍線部の直後を見る。「まちがえないことだけを目指してきた自分の朗読と、この声との間にある距離が、急に見えた気がした」とある。\n【ステップ3】選択肢をくらべる。「朗読があまりに下手で、笑いをこらえるのに必死だった」は、「聞いていたくなる」と合わない。「紗代が勝手にテープを聞かせたことに腹を立てた」は、本文に腹を立てた様子がない。「祖父のようにまちがえてもよいのだと、すっかり開き直った」は、ぼくはまだ気づいたばかりで、気持ちを決めていない。\n【ステップ4】「まちがえないことだけを目指してきた自分の朗読と、まちがえても聞きたくなる声との違いに気づかされたから」が、直前・直後の両方と合っている。\n【答え】まちがえないことだけを目指してきた自分の朗読と、まちがえても聞きたくなる声との違いに気づかされたから。\n【確かめ】最後の場面で、ぼくは自分から読み直すことができるようになる。この変化は、傍線部の時点で「違い」に気づいたことが出発点になっていると読める。気づきが先にあって、行動があとから変わるという流れが自然。\n【よくあるまちがい】直前の「ずっと聞いていたくなる」を落とし、直後の「距離が見えた」だけで選んで、「祖父のようになりたいと決意した」と読んでしまう。傍線部の時点では、まだ気づいたばかりで、決意まではしていない。気持ちを言い過ぎている選択肢に注意する。",
     "pitfall": "気づいたばかりの「ぼく」が、すでに決意しているかのように読んでしまう。",
     "memoryTip": "心情の理由は、傍線部の直前・直後。言いすぎの選択肢に注意。"
   },
@@ -269,7 +295,7 @@ export const honshikenSchool_koko_azabu: Question[] = [
     ],
     "answer": "問いを言い直してみると、同じ事がらでも、これまで見えなかった別の面が見えてくるということ。",
     "hint": "傍線部の直前の「橋は必要か」の例が、傍線部の具体例になっている。例で何が起きたかを抽象的にまとめる。",
-    "explanation": "【何を聞かれているか】傍線部の意味を、直前の具体例（橋の例）をふまえて選ぶ。\n【なぜそうなるのか】筆者は、傍線部の前で「橋は必要か」という問いの例を挙げている。この問いは、「必要とはだれにとって、いつまでか」「費用はだれが負担するか」と問い直すと、「別の顔を見せはじめる」。つまり、同じ事がらでも、問いの立て方を変えると、見え方が変わる。傍線部は、この例の内容を一般的な言い方にまとめたもの。「答えるものである前に」とは、答えを出すより前に、という意味。\n【ステップ1】傍線部の直前を読む。「必要」とはだれにとって、費用はだれが負担するか、と問い直すと、最初の問いは別の顔を見せはじめる。\n【ステップ2】「別の顔を見せる」を言いかえる。同じ事がらについて、これまで見えなかった別の面が見えてくること。\n【ステップ3】傍線部を言いかえる。問いは、答えるためだけでなく、事がらの見え方を変える働きがある。\n【ステップ4】選択肢をくらべる。2番目の「問いを言い直してみると、同じ事がらでも、これまで見えなかった別の面が見えてくる」が、橋の例と合っている。ほかは、橋の例に根拠がない。\n【答え】問いを言い直してみると、同じ事がらでも、これまで見えなかった別の面が見えてくるということ。\n【確かめ】傍線部の直後の段落では、「問いを深める」ことは「判断の材料を増やしていく作業」と説明されている。見え方が変わることで、材料が増えるという流れとつながる。\n【よくあるまちがい】「問いは答えを出すためのものではない」と、極端に読んでしまう。傍線部は、答えを出す役割を否定していない。答えるものである「前に」、もうひとつの働きがあると言っている。",
+    "explanation": "【何を聞かれているか】傍線部の意味を、直前の具体例（橋の例）をふまえて選ぶ。\n【なぜそうなるのか】筆者は、傍線部の前で「橋は必要か」という問いの例を挙げている。この問いは、「必要とはだれにとって、いつまでか」「費用はだれが負担するか」と問い直すと、「別の顔を見せはじめる」。つまり、同じ事がらでも、問いの立て方を変えると、見え方が変わる。傍線部は、この例の内容を一般的な言い方にまとめたもの。「答えるものである前に」とは、答えを出すより前に、という意味。\n【ステップ1】傍線部の直前を読む。「必要」とはだれにとって、費用はだれが負担するか、と問い直すと、最初の問いは別の顔を見せはじめる。\n【ステップ2】「別の顔を見せる」を言いかえる。同じ事がらについて、これまで見えなかった別の面が見えてくること。\n【ステップ3】傍線部を言いかえる。問いは、答えるためだけでなく、事がらの見え方を変える働きがある。\n【ステップ4】選択肢をくらべる。「問いを言い直してみると、同じ事がらでも、これまで見えなかった別の面が見えてくる」が、橋の例と合っている。ほかは、橋の例に根拠がない。\n【答え】問いを言い直してみると、同じ事がらでも、これまで見えなかった別の面が見えてくるということ。\n【確かめ】傍線部の直後の段落では、「問いを深める」ことは「判断の材料を増やしていく作業」と説明されている。見え方が変わることで、材料が増えるという流れとつながる。\n【よくあるまちがい】「問いは答えを出すためのものではない」と、極端に読んでしまう。傍線部は、答えを出す役割を否定していない。答えるものである「前に」、もうひとつの働きがあると言っている。",
     "pitfall": "「問いは答えを出すものではない」と極端に読んでしまう。",
     "memoryTip": "傍線部は、直前の具体例を一般的にまとめたもの。例から抽象へ。"
   },
@@ -309,7 +335,7 @@ export const honshikenSchool_koko_azabu: Question[] = [
     ],
     "answer": "答えのない問いに対しては、問いを言い直しながら考え、材料がそろったら責任を持って決めることが大切だ。",
     "hint": "最後の段落に、筆者が「求められる」と言っている 2 つのことがある。それぞれの選択肢が、本文のどこと合うか、合わないかを確かめる。",
-    "explanation": "【何を聞かれているか】本文全体の内容と選択肢を、一つずつ照らし合わせて、合うものを選ぶ。\n【なぜそうなるのか】内容合致問題では、選択肢を 1 つずつ本文と照らして、本文に書いてあること・本文と食いちがうこと・本文に書いていないこと、に分ける。どれも、根拠になる本文の箇所をはっきりさせる。筆者の主張は最後の段落にまとまっているので、そこと合うかを最初に確かめるとよい。\n【ステップ1】1 番目「学校で出される問いには答えがないので、点数をつけられない」。本文は「答えがあるから、点数をつけることができる」と言っている。逆なので合わない。\n【ステップ2】2 番目「答えのない問いの前では、問いを言い直す粘り強さと、材料がそろったときに責任を持って決める勇気が求められる」。最後の段落と合っている。\n【ステップ3】3 番目「知識の量が多ければ、よい問いを立てられる」。本文は「知識の量よりも、よい問いを立てる力」と言っていて、知識の量が多ければよいとは書いていない。合わない。\n【ステップ4】4 番目「問いを深めるとは、結論を出さずに考え続けることだ」。本文は、結論を先延ばしにすることとは違う、と言っている。合わない。\n【答え】答えのない問いに対しては、問いを言い直しながら考え、材料がそろったら責任を持って決めることが大切だ。\n【確かめ】筆者の主張は最後の段落の「二つのことが求められる」にまとまっている。選んだ選択肢は、その 2 つ（言い直す粘り強さ・責任を持って決める勇気）をそのまま言いかえている。\n【よくあるまちがい】3 番目を選んでしまう。「知識の量よりも」とあるので、知識が大切でないとまでは言っていないが、「知識が多ければよい問いが立てられる」とも書いていない。本文にない因果関係を足している選択肢に注意する。",
+    "explanation": "【何を聞かれているか】本文全体の内容と選択肢を、一つずつ照らし合わせて、合うものを選ぶ。\n【なぜそうなるのか】内容合致問題では、選択肢を 1 つずつ本文と照らして、本文に書いてあること・本文と食いちがうこと・本文に書いていないこと、に分ける。どれも、根拠になる本文の箇所をはっきりさせる。筆者の主張は最後の段落にまとまっているので、そこと合うかを最初に確かめるとよい。\n【ステップ1】「学校で出される問いには答えがないので、点数をつけることができない」。本文は「答えがあるから、点数をつけることができる」と言っている。逆なので合わない。\n【ステップ2】「答えのない問いに対しては、問いを言い直しながら考え、材料がそろったら責任を持って決めることが大切だ」。最後の段落の「二つのこと」と合っている。\n【ステップ3】「知識の量が多ければ多いほど、よい問いを立てることができる」。本文は「知識の量よりも、よい問いを立てる力」と言っているだけで、知識が多ければよいとは書いていない。合わない。\n【ステップ4】「問いを深めるとは、結論を出さずに、いつまでも考え続けることである」。本文は、結論を先延ばしにすることとは違う、と言っている。合わない。\n【答え】答えのない問いに対しては、問いを言い直しながら考え、材料がそろったら責任を持って決めることが大切だ。\n【確かめ】筆者の主張は最後の段落の「二つのことが求められる」にまとまっている。選んだ選択肢は、その 2 つ（言い直す粘り強さ・責任を持って決める勇気）をそのまま言いかえている。\n【よくあるまちがい】「知識の量が多いほどよい問いが立てられる」を選んでしまう。本文は「知識の量よりも」と言っているだけで、「知識が多ければよい問いが立てられる」とは書いていない。本文にない因果関係を足している選択肢に注意する。",
     "pitfall": "本文にない関係（知識が多ければよい問いが立てられる）を足した選択肢を選ぶ。",
     "memoryTip": "内容合致は、選択肢ごとに根拠の箇所を探す。逆のことを言っている選択肢に注意。"
   },
@@ -468,7 +494,7 @@ export const honshikenSchool_koko_azabu: Question[] = [
     "question": "硝酸カリウムは、水 100g に溶ける最大の質量が、60℃で 110g、20℃で 32g であるとします。60℃の硝酸カリウムの飽和水溶液 420g を 20℃まで冷やしたとき、出てくる結晶は何gですか。ただし、水は蒸発しないものとします。",
     "answer": "156g",
     "hint": "60℃の飽和水溶液は「水 100g＋硝酸カリウム 110g＝210g」を 1 組と見る。420g がその何組分かを出すと、水と溶けている量がわかる。",
-    "explanation": "【何を聞かれているか】飽和水溶液を冷やしたときに出てくる結晶の質量を求める。\n【なぜそうなるのか】飽和水溶液では、水と溶けている物質の質量の比が決まっている。60℃では「水 100g に硝酸カリウム 110g」で水溶液が 210g。420g はこの 2 組分なので、水は 200g、硝酸カリウムは 220g。冷やすと 20℃で溶けられる量が減るので、溶けきれない分が結晶として出てくる。水は蒸発しないので、水 200g のままで 20℃で溶ける量を考えればよい。\n【ステップ1】420g は 210g の何倍か。420÷210＝2 倍。\n【ステップ2】水＝100×2＝200g。硝酸カリウム＝110×2＝220g。\n【ステップ3】20℃で水 200g に溶ける硝酸カリウム＝32×2＝64g。\n【ステップ4】出てくる結晶＝220−64＝156g。\n【答え】156g\n【確かめ】冷やしたあとの水溶液は 200＋64＝264g。これに結晶 156g を足すと 264＋156＝420g で、もとの質量と一致する。また、冷やしたあとの水溶液も飽和水溶液で、64÷264＝0.2424…、32÷132＝0.2424… と濃さが同じ。\n【よくあるまちがい】420g をそのまま 110 と 32 の差 78 に結びつけて、78×(420÷100)＝327.6g などとしてしまう。水の質量は 420g ではなく、水溶液 420g の中の水 200g。水の量を先に決めるのが大事。",
+    "explanation": "【何を聞かれているか】飽和水溶液を冷やしたときに出てくる結晶の質量を求める。\n【なぜそうなるのか】飽和水溶液では、水と溶けている物質の質量の比が決まっている。60℃では「水 100g に硝酸カリウム 110g」で水溶液が 210g。420g はこの 2 組分なので、水は 200g、硝酸カリウムは 220g。冷やすと 20℃で溶けられる量が減るので、溶けきれない分が結晶として出てくる。水は蒸発しないので、水 200g のままで 20℃で溶ける量を考えればよい。\n【ステップ1】420g は 210g の何倍か。420÷210＝2 倍。\n【ステップ2】水＝100×2＝200g。硝酸カリウム＝110×2＝220g。\n【ステップ3】20℃で水 200g に溶ける硝酸カリウム＝32×2＝64g。\n【ステップ4】出てくる結晶＝220−64＝156g。\n【答え】156g\n【確かめ】冷やしたあとの水溶液は 200＋64＝264g。これに結晶 156g を足すと 264＋156＝420g で、もとの質量と一致する。また、冷やしたあとの水溶液も飽和水溶液で、64÷264＝0.2424…、32÷132＝0.2424… と濃さが同じ。\n【よくあるまちがい】420g を水の質量と見て、(110−32)×4.2＝327.6g としてしまう。水の質量は 420g ではなく、水溶液 420g の中の水 200g。水の量を先に決めるのが大事。",
     "pitfall": "水溶液 420g を水の質量と取りちがえる。水は 200g。",
     "memoryTip": "飽和水溶液は「水＋とけた量」の組の何倍かで見る。結晶＝とけていた量−冷やしてとける量。"
   },
@@ -513,8 +539,8 @@ export const honshikenSchool_koko_azabu: Question[] = [
     "question": "エンドウの種子の形で、丸い形（A）はしわの形（a）に対して優性です。丸い種子をつくる株 X の遺伝子の組み合わせはわかっていません。そこで、X を、しわの種子をつくる株とかけ合わせたところ、できた種子は丸が 51 個、しわが 49 個でした。\n(1) X の遺伝子の組み合わせを答えなさい。\n(2) X を自家受粉させたとき、できる種子のうち、しわの種子は全体のおよそ何分のいくつになりますか。",
     "answer": "(1) Aa　(2) 1/4",
     "hint": "しわの株（aa）がつくる生殖細胞は 1 種類だけ。子の形の割合は、X がどんな生殖細胞をどんな割合でつくるかで決まる。",
-    "explanation": "【何を聞かれているか】子の形の割合から、親の遺伝子の組み合わせを推理し、自家受粉でできる子の割合を求める。\n【なぜそうなるのか】しわの株の遺伝子の組み合わせは aa で、つくる生殖細胞はすべて a。すると、子の遺伝子の片方は必ず a で、もう片方は X からもらう。子の形は、X からもらった遺伝子で決まる。X の遺伝子が A なら子は Aa（丸）、a なら aa（しわ）。X が AA なら、すべての子が丸になる。丸としわがほぼ 1：1 でできたということは、X は A と a を同じ数ずつつくる、つまり Aa だとわかる。\n【ステップ1】X の遺伝子の候補は、丸い種子の株なので AA か Aa。\n【ステップ2】AA の場合：X がつくる生殖細胞はすべて A。しわ株（a）とかけ合わせると、子はすべて Aa で丸。丸：しわ＝1：0 になる。\n【ステップ3】Aa の場合：X がつくる生殖細胞は A と a が 1：1。子は Aa（丸）と aa（しわ）が 1：1。実験結果の 51：49 に合う。よって (1) は Aa。\n【ステップ4】(2) Aa を自家受粉させる。生殖細胞は A と a が 1：1 なので、子は AA：Aa：aa＝1：2：1。しわ（aa）は 4 つのうち 1 つで、1/4。\n【答え】(1) Aa　(2) 1/4\n【確かめ】(2) で、丸の割合は AA と Aa で 3/4。丸：しわ＝3：1 は、遺伝の基本の割合と一致する。また、(1) で AA だったとすると子はすべて丸のはずで、しわが 49 個もできたことと矛盾するので、AA ではない。\n【よくあるまちがい】(1) で、「丸としわが半々なので、親は丸としわの両方の遺伝子 Aa」とだけ書き、AA の可能性を消す理由（AA ならしわが出ない）を示さない。また (2) で、しわの割合を 1/2 としてしまう（それは検定のかけ合わせの結果）。自家受粉のときは A と a がそれぞれ 1/2 ずつ組み合わさるので、aa は 1/2×1/2＝1/4。",
-    "pitfall": "検定のかけ合わせの結果（1:1）と、自家受粉の結果（3:1）を混ぜてしまう。",
+    "explanation": "【何を聞かれているか】子の形の割合から、親の遺伝子の組み合わせを推理し、自家受粉でできる子の割合を求める。\n【なぜそうなるのか】しわの株の遺伝子の組み合わせは aa で、つくる生殖細胞はすべて a。すると、子の遺伝子の片方は必ず a で、もう片方は X からもらう。子の形は、X からもらった遺伝子で決まる。X の遺伝子が A なら子は Aa（丸）、a なら aa（しわ）。X が AA なら、すべての子が丸になる。丸としわがほぼ 1：1 でできたということは、X は A と a を同じ数ずつつくる、つまり Aa だとわかる。\n【ステップ1】X の遺伝子の候補は、丸い種子の株なので AA か Aa。\n【ステップ2】AA の場合：X がつくる生殖細胞はすべて A。しわ株（a）とかけ合わせると、子はすべて Aa で丸。丸：しわ＝1：0 になる。\n【ステップ3】Aa の場合：X がつくる生殖細胞は A と a が 1：1。子は Aa（丸）と aa（しわ）が 1：1。実験結果の 51：49 に合う。よって (1) は Aa。\n【ステップ4】(2) Aa を自家受粉させる。生殖細胞は A と a が 1：1 なので、子は AA：Aa：aa＝1：2：1。しわ（aa）は 4 つのうち 1 つで、1/4。\n【答え】(1) Aa　(2) 1/4\n【確かめ】(2) で、丸の割合は AA と Aa で 3/4。丸：しわ＝3：1 は、遺伝の基本の割合と一致する。また、(1) で AA だったとすると子はすべて丸のはずで、しわが 49 個もできたことと矛盾するので、AA ではない。\n【よくあるまちがい】(1) で、「丸としわが半々なので、親は丸としわの両方の遺伝子 Aa」とだけ書き、AA の可能性を消す理由（AA ならしわが出ない）を示さない。また (2) で、しわの割合を 1/2 としてしまう（それは、しわの株とのかけ合わせの結果）。自家受粉のときは A と a がそれぞれ 1/2 ずつ組み合わさるので、aa は 1/2×1/2＝1/4。",
+    "pitfall": "しわの株とのかけ合わせの結果（1:1）と、自家受粉の結果（3:1）を混ぜてしまう。",
     "memoryTip": "子の割合から親を推理。1:1 → Aa×aa、すべて丸 → AA。Aa の自家受粉は AA:Aa:aa＝1:2:1。"
   },
   {
@@ -748,5 +774,240 @@ export const honshikenSchool_koko_azabu: Question[] = [
     "explanation": "【何を聞かれているか】現在の内閣総理大臣の名前と、内閣総理大臣が選ばれる手続きを答える。\n【なぜそうなるのか】日本国憲法では、内閣総理大臣は国会議員の中から、国会の議決で指名する（第 67 条）。指名された人を、天皇が任命する（第 6 条）。天皇の任命は国事行為のひとつで、天皇には政治についての権限がなく、形式的な行為にとどまる。このように、国民が選んだ国会が内閣のトップを決めるしくみを議院内閣制という。2025 年 10 月には、高市早苗氏が国会で指名され、内閣総理大臣に任命された。\n【ステップ1】現在の内閣総理大臣は、2025 年 10 月に就任した高市早苗氏。\n【ステップ2】指名する機関。内閣総理大臣は、国会が国会議員の中から指名する（憲法第 67 条）。\n【ステップ3】任命する人。国会の指名にもとづいて、天皇が任命する（憲法第 6 条）。天皇の仕事は国事行為で、形式的なもの。\n【答え】高市早苗。国会の指名にもとづいて、天皇が任命する。\n【確かめ】内閣総理大臣は、国会議員の中から選ばれ、さらに国務大臣の過半数も国会議員でなければならない。国民が選んだ国会に、内閣が責任を負う議院内閣制になっている。国会が指名し、天皇が任命、という手続きと合っている。\n【よくあるまちがい】「国民が直接選ぶ」と答えてしまう。内閣総理大臣は、国民が直接選挙で選ぶのではなく、国会が指名する。また、「天皇が指名し、国会が任命する」と、指名と任命の役割を逆にしてしまう。",
     "pitfall": "指名と任命の役割を逆にする（指名は国会、任命は天皇）。",
     "memoryTip": "内閣総理大臣：国会が指名（67条）、天皇が任命（6条）。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_01",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "basic",
+    "passage": "At our school library, there is a small blue box next to the desk. Students can put a question in the box without writing their names. Every Friday, the librarian, Ms. Ota, chooses three questions and writes her answers on a board.\nAt first, most of the questions were easy ones, such as \"Where is the dictionary?\" But after a few months, Ms. Ota noticed a change. Some students began to ask questions that had no simple answers, such as \"Why do people study history?\" She did not answer these questions quickly. Instead, she wrote, \"I have my own idea, but I want to hear yours first.\"\nOne day, a student wrote under her note, \"I think we study history to avoid making the same mistakes.\" Soon, many other students added their own ideas, and the board became full of small notes. Ms. Ota says, \"A good question is not the end of learning. It is the beginning of a conversation.\"",
+    "question": "According to the passage, what did Ms. Ota notice after a few months?",
+    "choices": [
+      "Students stopped using the blue box.",
+      "Some students began to ask questions that had no simple answers.",
+      "Students wanted to write their names on their questions.",
+      "Ms. Ota started to answer more questions every week."
+    ],
+    "answer": "Some students began to ask questions that had no simple answers.",
+    "hint": "第 2 段落の「But after a few months, Ms. Ota noticed a change.」のすぐあとに、変化の中身が書かれている。",
+    "explanation": "【何を聞かれているか】本文から、数か月後に Ms. Ota が気づいた変化を選ぶ。\n【なぜそうなるのか】英問英答では、問いの中の言葉（after a few months / noticed）を本文で探して、その直後を読む。本文の第 2 段落に「But after a few months, Ms. Ota noticed a change.」とあり、次の文で「Some students began to ask questions that had no simple answers」と、変化の中身が説明されている。選択肢は、本文の言葉を言いかえていることが多い。\n【ステップ1】問いの言葉を探す。「after a few months」と「noticed」が、第 2 段落にある。\n【ステップ2】その直後を読む。「Some students began to ask questions that had no simple answers, such as \"Why do people study history?\"」。\n【ステップ3】選択肢をくらべる。「Students stopped using the blue box.」は本文に書かれていない。「Students wanted to write their names on their questions.」も、名前を書かなくてよい、という本文と合わない。「Ms. Ota started to answer more questions every week.」も本文にない（毎週 3 つ）。\n【ステップ4】本文と合うのは、「Some students began to ask questions that had no simple answers.」。\n【答え】Some students began to ask questions that had no simple answers.\n【確かめ】本文の「questions that had no simple answers」が、そのまま選択肢に使われている。さらに、直後の「such as \"Why do people study history?\"」という例も、簡単に答えが出ない問いの例になっていて、合っている。\n【よくあるまちがい】「At first, most of the questions were easy ones」を読んで、「簡単な問いがふえた」と考えてしまう。それは最初の様子で、数か月後の変化ではない。変化は「But」のあとに書かれている。",
+    "pitfall": "「At first」（最初）の内容を、数か月後の変化と取りちがえる。",
+    "memoryTip": "英問英答は、問いの語を本文で探し、その直後を読む。「But」のあとに変化が書かれる。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_02",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "standard",
+    "passage": "At our school library, there is a small blue box next to the desk. Students can put a question in the box without writing their names. Every Friday, the librarian, Ms. Ota, chooses three questions and writes her answers on a board.\nAt first, most of the questions were easy ones, such as \"Where is the dictionary?\" But after a few months, Ms. Ota noticed a change. Some students began to ask questions that had no simple answers, such as \"Why do people study history?\" She did not answer these questions quickly. Instead, she wrote, \"I have my own idea, but I want to hear yours first.\"\nOne day, a student wrote under her note, \"I think we study history to avoid making the same mistakes.\" Soon, many other students added their own ideas, and the board became full of small notes. Ms. Ota says, \"A good question is not the end of learning. It is the beginning of a conversation.\"",
+    "question": "Choose the statement that is true about the passage.",
+    "choices": [
+      "Students must write their names when they put questions in the box.",
+      "Ms. Ota writes the answers to all the questions in the box every Friday.",
+      "Ms. Ota answered the difficult questions quickly.",
+      "A student wrote his or her own idea under Ms. Ota's note."
+    ],
+    "answer": "A student wrote his or her own idea under Ms. Ota's note.",
+    "hint": "選択肢の細かい言葉（must / all / quickly）に注意して、本文のその部分と照らし合わせる。",
+    "explanation": "【何を聞かれているか】本文の内容と合う文を、1 つ選ぶ。\n【なぜそうなるのか】内容真偽の問題では、選択肢の中の「must（〜しなければならない）」「all（すべて）」「quickly（すばやく）」のような強い言葉に注意する。本文に「そこまで」書いてあるかを確かめる。本文では、生徒は名前を書かなくてよい。Ms. Ota が毎週答えるのは 3 つの問い。むずかしい問いにはすぐ答えなかった。そして、ある生徒が Ms. Ota のメモの下に自分の考えを書いた。\n【ステップ1】「Students must write their names when they put questions in the box.」本文は「without writing their names」。名前を書かなくてよいので、合わない。\n【ステップ2】「Ms. Ota writes the answers to all the questions in the box every Friday.」本文は「chooses three questions」。すべてではなく 3 つ。合わない。\n【ステップ3】「Ms. Ota answered the difficult questions quickly.」本文は「She did not answer these questions quickly.」。逆なので合わない。\n【ステップ4】「A student wrote his or her own idea under Ms. Ota's note.」本文の「a student wrote under her note, \"I think…\"」と合う。\n【答え】A student wrote his or her own idea under Ms. Ota's note.\n【確かめ】本文の第 3 段落「One day, a student wrote under her note, \"I think we study history to avoid making the same mistakes.\"」と、選択肢の内容が一致する。「note」「wrote under」の言葉も対応している。\n【よくあるまちがい】「Ms. Ota writes the answers to all the questions」を選んでしまう。本文は「three questions」なので、「all」は言いすぎ。選択肢に all・must・always などの強い言葉があるときは、本文に同じ強さの言葉があるかを確かめる。",
+    "pitfall": "選択肢の all や must などの強い言葉を見落とす。",
+    "memoryTip": "内容真偽は、強い言葉（all・must・quickly）と本文の数・否定を確かめる。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_03",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "passage": "At our school library, there is a small blue box next to the desk. Students can put a question in the box without writing their names. Every Friday, the librarian, Ms. Ota, chooses three questions and writes her answers on a board.\nAt first, most of the questions were easy ones, such as \"Where is the dictionary?\" But after a few months, Ms. Ota noticed a change. Some students began to ask questions that had no simple answers, such as \"Why do people study history?\" She did not answer these questions quickly. Instead, she wrote, \"I have my own idea, but I want to hear yours first.\"\nOne day, a student wrote under her note, \"I think we study history to avoid making the same mistakes.\" Soon, many other students added their own ideas, and the board became full of small notes. Ms. Ota says, \"A good question is not the end of learning. It is the beginning of a conversation.\"",
+    "question": "Ms. Ota が \"I have my own idea, but I want to hear yours first.\" と書いたのはなぜですか。本文の内容をふまえて、日本語で五十字以内で説明しなさい。",
+    "answer": "すぐに答えを教えず、まず生徒自身に考えさせて、会話のきっかけをつくりたかったから。",
+    "hint": "最後の段落の Ms. Ota の言葉「A good question is not the end of learning. It is the beginning of a conversation.」を手がかりにする。",
+    "explanation": "【何を聞かれているか】Ms. Ota の書いた言葉の理由を、本文全体の内容から日本語で説明する。\n【なぜそうなるのか】理由を説明する問題では、傍線部の言葉の意味と、本文のほかの部分にある筆者の考えを結びつける。この言葉は、「私にも自分の考えはあるが、先にあなたの考えを聞きたい」という意味。ここには、先に教えてしまわないという姿勢がある。最後に Ms. Ota は、「よい問いは学びの終わりではなく、会話の始まり」と言っている。この 2 つをつなぐと、自分の答えをすぐに示さず、生徒に考えさせて、会話を始めさせたかった、という理由になる。\n【ステップ1】傍線部を日本語にする。「私には私の考えがあるが、まずあなたの考えを聞きたい」。\n【ステップ2】前後を見る。直前に「She did not answer these questions quickly.」（すぐには答えなかった）。\n【ステップ3】最後の段落を見る。「A good question is not the end of learning. It is the beginning of a conversation.」（よい問いは学びの終わりではなく、会話の始まり）。\n【ステップ4】理由をまとめる。「すぐに答えを教えず、まず生徒自身に考えさせて、会話のきっかけをつくりたかったから」。五十字以内（句点も 1 字）に収める。\n【答え】すぐに答えを教えず、まず生徒自身に考えさせて、会話のきっかけをつくりたかったから。\n【確かめ】字数を数える。「すぐに答えを教えず、」で 10 字、「まず生徒自身に考えさせて、」で 13 字、「会話のきっかけをつくりたかったから。」で 18 字、合わせて 41 字で、五十字以内におさまっている。「すぐ答えを教えない」と「生徒に考えさせる」と「会話のきっかけ」の 3 点が入っている。\n【よくあるまちがい】「生徒の意見に興味がなかったから」「答えがわからなかったから」と書いてしまう。Ms. Ota は「my own idea」と書いていて、自分の考えを持っている。わからないのではなく、あえて先に言わないのが理由。",
+    "pitfall": "「答えがわからなかったから」と考えてしまう（自分の考えは持っている）。",
+    "memoryTip": "理由の問題は、傍線部＋前後＋筆者の最終的な考えをつなぐ。",
+    "isWritten": true,
+    "rubricPoints": [
+      "すぐに答えを教えない（先に生徒の考えを聞く）ことが書けている",
+      "生徒に自分で考えさせることが書けている",
+      "会話・やりとりのきっかけをつくりたい、という趣旨が書けている",
+      "五十字以内におさまっている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_04",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "standard",
+    "passage": "At our school library, there is a small blue box next to the desk. Students can put a question in the box without writing their names. Every Friday, the librarian, Ms. Ota, chooses three questions and writes her answers on a board.\nAt first, most of the questions were easy ones, such as \"Where is the dictionary?\" But after a few months, Ms. Ota noticed a change. Some students began to ask questions that had no simple answers, such as \"Why do people study history?\" She did not answer these questions quickly. Instead, she wrote, \"I have my own idea, but I want to hear yours first.\"\nOne day, a student wrote under her note, \"I think we study history to avoid making the same mistakes.\" Soon, many other students added their own ideas, and the board became full of small notes. Ms. Ota says, \"A good question is not the end of learning. It is the beginning of a conversation.\"",
+    "question": "Which is the best title for the passage?",
+    "choices": [
+      "A Librarian Who Hates Easy Questions",
+      "The Box That Starts Conversations",
+      "How to Write Your Name on a Question",
+      "The History of Our School Library"
+    ],
+    "answer": "The Box That Starts Conversations",
+    "hint": "本文全体の内容をひとことでまとめる。「箱」と「会話」が本文のどこに出てくるかを見る。",
+    "explanation": "【何を聞かれているか】本文全体のテーマに合う題名を選ぶ。\n【なぜそうなるのか】題名を選ぶ問題は、本文の一部ではなく、全体に当てはまるものを選ぶ。本文は、青い箱に生徒が問いを入れ、司書が答えを書き、むずかしい問いには考えを返して、生徒どうしの書きこみが広がっていく話。最後に「よい問いは会話の始まり」とまとめられている。つまり「箱」が「会話」のきっかけになっている。題名には、この 2 つの要素が入っているものが合う。\n【ステップ1】本文の流れをまとめる。①青い箱に生徒が問いを入れる。②Ms. Ota が答えを書く。③むずかしい問いには考えを返す。④生徒たちが考えを書きこみ、ボードが小さなメモでいっぱいになる。\n【ステップ2】最後の言葉を見る。「A good question is the beginning of a conversation.」。\n【ステップ3】選択肢をくらべる。「A Librarian Who Hates Easy Questions」は、簡単な問いを嫌うとは書いていない。「How to Write Your Name on a Question」は、名前は書かなくてよい。「The History of Our School Library」は、図書館の歴史の話ではない。\n【ステップ4】「箱」と「会話」の両方を含む「The Box That Starts Conversations」が、本文全体に合う。\n【答え】The Box That Starts Conversations\n【確かめ】題名の「Box」は本文の冒頭に、「Conversations」は最後の言葉に出てくる。本文の最初と最後の両方に対応している。\n【よくあるまちがい】「The History of Our School Library」を選んでしまう。本文には「history」という語が出てくるが、それは問いの例（Why do people study history?）の中の言葉で、本文の主題ではない。同じ単語が出てくるだけで選ばない。",
+    "pitfall": "本文に出てくる単語（history）だけで選んで、主題からずれる。",
+    "memoryTip": "題名は、本文の最初と最後の両方に合うものを選ぶ。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_05",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "passage": "Last summer, Kenta visited his grandfather in a small village. His grandfather was repairing an old radio. \"Why don't you buy a new one?\" Kenta asked. \"It would be much easier.\"\nHis grandfather smiled. \"This radio was a present from your grandmother. If I bought a new one, I would have a radio, but I would lose something else.\"\nKenta did not understand then. For three days, he watched his grandfather open the radio, clean each small part, and put it back. On the last evening, the radio finally began to play soft music. His grandfather closed his eyes and said quietly, \"This is the same song we heard on our first trip together.\"\nAfter he went home, Kenta kept thinking about what his grandfather had said. Now he thought he knew the answer. What his grandfather would lose was not an old machine but a memory.",
+    "question": "本文の下線部 \"I would lose something else\" の something else は、具体的には何を指しますか。本文の最後の文を参考にして、日本語で答えなさい。",
+    "answer": "思い出（祖母との思い出）",
+    "hint": "最後の段落の最後の文「What his grandfather would lose was not an old machine but a ( ).」の空所にあたる言葉を探す。",
+    "explanation": "【何を聞かれているか】代名詞のように使われた something else の中身を、本文の最後から読み取る。\n【なぜそうなるのか】「something else」（ほかの何か）は、そのときは中身がぼかされている。本文は、最後の段落でその中身を明かしている。「What his grandfather would lose was not an old machine but a memory.」。つまり祖父が新しいラジオを買うと失うものは、古い機械ではなく「memory（思い出）」。さらに、このラジオは祖母（your grandmother）からの贈り物で、最後に流れた曲も、2 人の最初の旅行で聞いた曲なので、祖母との思い出だとわかる。\n【ステップ1】傍線部の前後を読む。「If I bought a new one, I would have a radio, but I would lose something else.」。新しいラジオを手に入れても、ほかの何かを失う。\n【ステップ2】最後の文を探す。「What his grandfather would lose was not an old machine but a memory.」。失うのは古い機械ではなく memory。\n【ステップ3】memory を日本語にする。「思い出」。\n【ステップ4】補足。ラジオは祖母（your grandmother）からの贈り物。最後の曲は 2 人の最初の旅行で聞いた曲。だから、祖母との思い出と言える。\n【答え】思い出（祖母との思い出）\n【確かめ】傍線部「something else」を「a memory」に入れかえて読む。「新しいラジオを買えばラジオは手に入るが、思い出を失ってしまう」。意味が通る。\n【よくあるまちがい】「something else」を「別のラジオ」「お金」と考えてしまう。最後の文は「not an old machine but a memory」と言っており、機械ではなく思い出。また「a memory」を「記憶力」と訳してしまう。ここでは「ある具体的な記憶、思い出」の意味。",
+    "pitfall": "something else を「別のもの（物）」と考えてしまう。最後の文は「機械ではなく思い出」と言っている。",
+    "memoryTip": "代名詞の中身は、本文のあとの部分で言いかえられていることがある。",
+    "isWritten": true,
+    "rubricPoints": [
+      "「思い出（記憶）」が書けている",
+      "（できれば）祖母との思い出であることが書けている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_06",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "passage": "Last summer, Kenta visited his grandfather in a small village. His grandfather was repairing an old radio. \"Why don't you buy a new one?\" Kenta asked. \"It would be much easier.\"\nHis grandfather smiled. \"This radio was a present from your grandmother. If I bought a new one, I would have a radio, but I would lose something else.\"\nKenta did not understand then. For three days, he watched his grandfather open the radio, clean each small part, and put it back. On the last evening, the radio finally began to play soft music. His grandfather closed his eyes and said quietly, \"This is the same song we heard on our first trip together.\"\nAfter he went home, Kenta kept thinking about what his grandfather had said. Now he thought he knew the answer. What his grandfather would lose was not an old machine but a memory.",
+    "question": "次の英文を、日本語に訳しなさい。\nWhat his grandfather would lose was not an old machine but a memory.",
+    "answer": "祖父が失うことになるのは、古い機械ではなく思い出だった。",
+    "hint": "文の主語は What で始まるかたまり。「A ではなく B」の形（not A but B）にも注意する。",
+    "explanation": "【何を聞かれているか】関係代名詞 what を含む文を、正しい日本語に訳す。\n【なぜそうなるのか】英文の中心は「What 〜 was not A but B」で、「〜することは（ものは）、A ではなく B だった」と訳す。主語の What his grandfather would lose は、what が「〜するもの」を表すかたまりで、「祖父が失うことになるもの」。would lose は、「もし新しいラジオを買えば、失うことになる」という仮定の気持ちをふくむ言い方。not an old machine but a memory は、「古い機械ではなく、思い出」。\n【ステップ1】主語をとらえる。「What his grandfather would lose」＝「祖父が失うことになるもの」。what は「〜するもの・こと」。\n【ステップ2】動詞と補語。「was not an old machine but a memory」＝「古い機械ではなく、思い出だった」。not A but B は「A ではなく B」。\n【ステップ3】つなぐ。「祖父が失うことになるものは、古い機械ではなく、思い出だった」。\n【ステップ4】自然な日本語に整える。「祖父が失うことになるのは、古い機械ではなく思い出だった。」\n【答え】祖父が失うことになるのは、古い機械ではなく思い出だった。\n【確かめ】日本語を英語にもどす。「祖父が失うのは、機械ではなく思い出」→ What his grandfather would lose was not a machine but a memory。もとの英文と同じ構造になる。\n【よくあるまちがい】「何を祖父は失うでしょうか」と疑問文のように訳してしまう。この What は疑問詞ではなく、「〜するもの」を表すかたまりの先頭。文末が「?」でなく「.」で、動詞 was がそのあとに続いているので、疑問文ではない。また not A but B を「A でも B でもない」と訳すまちがいもある。",
+    "pitfall": "What を疑問詞（何を？）と読んで、疑問文のように訳してしまう。",
+    "memoryTip": "What ～ was ... は「～するものは…だ」。not A but B は「A ではなく B」。",
+    "isWritten": true,
+    "rubricPoints": [
+      "What his grandfather would lose を「祖父が失うことになるもの（こと）」と訳せている",
+      "not A but B を「A ではなく B」と訳せている",
+      "a memory を「思い出（記憶）」と訳せている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_07",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "standard",
+    "question": "次の日本語の意味になるように、（　）内の語句を並べかえて英文を完成させなさい。ただし、文頭にくる語も小文字で示してあります。\n「祖父がそのラジオを修理するのに、3日かかった。」\n（ it / three / his grandfather / took / days / to / repair / the radio ）",
+    "answer": "It took his grandfather three days to repair the radio.",
+    "hint": "「人が〜するのに（時間）かかる」は、It takes 人 時間 to ～ の形。過去の文なので takes が took になる。",
+    "explanation": "【何を聞かれているか】「It takes ＋人＋時間＋ to ～」の型を使って、英文を組み立てる。\n【なぜそうなるのか】「（人が）〜するのに（時間）がかかる」を言うとき、英語では、形式的な主語 It を文頭に置き、「It takes 人 時間 to 動詞」の順に並べる。後ろの「to repair the radio」が、It の中身（何に時間がかかるのか）を表す。過去の話なので、takes ではなく took。人は「かかる時間」の前に置く（his grandfather three days の順）。\n【ステップ1】型を思い出す。It takes ＋人＋時間＋ to ＋動詞の原形。\n【ステップ2】過去形にする。takes → took。文頭の It は大文字にする。\n【ステップ3】人と時間を入れる。「祖父」＝his grandfather、「3日」＝three days。人が先、時間があと。\n【ステップ4】「to ＋動詞」を最後に置く。to repair the radio（そのラジオを修理するのに）。\n【ステップ5】全部をつなぐ。It took his grandfather three days to repair the radio.\n【答え】It took his grandfather three days to repair the radio.\n【確かめ】日本語に直す。「それは祖父に 3 日かかった、そのラジオを修理するのに」→「祖父がそのラジオを修理するのに 3 日かかった」。もとの日本語と合う。語数は、最初に与えられた 8 つの語句をすべて使っている。\n【よくあるまちがい】「It took three days his grandfather to repair the radio.」と、人と時間の順番を逆にしてしまう。「人（誰に）」が先、「時間（どれだけ）」があと。また、took のかわりに take や takes を使う。過去の文なので took。",
+    "pitfall": "人と時間の順番を逆にする（正しくは his grandfather → three days）。",
+    "memoryTip": "It took 人 時間 to ～。人が先、時間があと。過去形は took。",
+    "isWritten": true,
+    "rubricPoints": [
+      "It took his grandfather three days to repair the radio. と正しく並べている",
+      "文頭の It が大文字になっている",
+      "文末にピリオドがある"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_08",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "standard",
+    "question": "Choose the best word to complete the sentence.\nThe girl ( ) under the tree is my cousin.",
+    "choices": [
+      "sit",
+      "sits",
+      "sitting",
+      "sat"
+    ],
+    "answer": "sitting",
+    "hint": "空所の前は the girl、あとは under the tree。「〜している少女」と、名詞のあとから説明をつけるときの形を考える。",
+    "explanation": "【何を聞かれているか】名詞をうしろから説明する、現在分詞（〜している）の形を選ぶ。\n【なぜそうなるのか】文の動詞は is の 1 つだけ。the girl ( ) under the tree が、文全体の主語（少女）にあたる。空所には、動詞（sits）を入れると動詞が 2 つになってしまうので入らない。名詞（the girl）のうしろから「〜している」と説明するときは、現在分詞（〜ing）を使う。「木の下にすわっている少女」の「すわっている」は進行・状態を表すので sitting。過去分詞 sat だと「すわられた」のような受け身の意味になり、合わない。\n【ステップ1】文の動詞を探す。動詞は is。「The girl ( ) under the tree」が主語で、動詞ではない。\n【ステップ2】sit、sits、sat は動詞の形なので、空所に入れると文に動詞が 2 つになる。入らない。\n【ステップ3】名詞を後ろから説明する形を使う。「〜している」なら現在分詞（〜ing）、「〜された」なら過去分詞。\n【ステップ4】「木の下にすわっている」なので、sitting が合う。\n【答え】sitting\n【確かめ】文を日本語にする。「木の下にすわっている少女は、私のいとこです。」意味が通る。「sitting under the tree」が the girl を説明している。\n【よくあるまちがい】sits を選んでしまう。「The girl sits under the tree.」なら正しい文だが、この文にはすでに is という動詞があるので、sits を入れると動詞が 2 つになる。また sat を「過去」と考えて選ぶまちがいも多い。",
+    "pitfall": "動詞が 2 つになる形（sits）を選んでしまう。",
+    "memoryTip": "名詞を後ろから説明する：〜している＝〜ing、〜された＝過去分詞。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_09",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "question": "Choose the best word to complete the sentence.\n( ) surprised me most was his silence.",
+    "choices": [
+      "That",
+      "What",
+      "Which",
+      "Who"
+    ],
+    "answer": "What",
+    "hint": "空所のあとに surprised という動詞が続いている。空所がないと主語が足りない。「驚かせたこと」という意味のかたまりをつくる語は何か。",
+    "explanation": "【何を聞かれているか】主語になる名詞のかたまりをつくる関係代名詞 what を選ぶ。\n【なぜそうなるのか】文全体の動詞は was。「( ) surprised me most」が主語にあたる長いかたまりで、「私を最も驚かせたこと」の意味。このかたまりの先頭には、「〜するもの・こと」を表す what が入る。what は、それ自体に「もの・こと」の意味をふくむので、前にことばがなくても使える。that は先行詞が必要で、文頭では使えない。which は「どれ」の意味か、先行詞が必要。who は人のみ。\n【ステップ1】文の骨組み。「( ) surprised me most」が主語、was が動詞、his silence が補語。\n【ステップ2】空所の働きを考える。surprised の主語になり、かつ「〜したもの・こと」という意味を表す必要がある。\n【ステップ3】what は「〜するもの・こと」を表す。What surprised me most＝「私を最も驚かせたこと」。\n【ステップ4】選択肢をくらべる。That は「その」という指示語で、ここでは主語にならない。Which は先行詞がなく、Who は人にしか使えない。\n【答え】What\n【確かめ】全体を日本語にする。「私を最も驚かせたのは、彼の沈黙だった。」意味が通る。The thing that surprised me most was his silence. と言いかえても同じ意味になるので、What ＝ The thing that と確かめられる。\n【よくあるまちがい】That を選んでしまう。「That surprised me most」だと「あれは私を最も驚かせた」という別の文になり、was が続かない。また、先行詞のない which を入れてしまう。主語になる名詞のかたまりをつくるのは what。",
+    "pitfall": "That を選ぶ（文が成立しない）。",
+    "memoryTip": "What ～ ＝ the thing that ～。文の先頭で「～するもの・こと」。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_10",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "standard",
+    "question": "「彼はドアにかぎをかけたことを覚えている。」という意味を表す英文を、次から選びなさい。",
+    "choices": [
+      "He remembers to lock the door.",
+      "He remembers locking the door.",
+      "He remembers lock the door.",
+      "He remembers locked the door."
+    ],
+    "answer": "He remembers locking the door.",
+    "hint": "remember のあとに〜ing が来るか、to ～ が来るかで意味がちがう。「すでにしたことを覚えている」のはどちらか。",
+    "explanation": "【何を聞かれているか】remember ＋〜ing と remember ＋ to ～ の意味のちがいを使い分ける。\n【なぜそうなるのか】remember は、あとに続く形で意味がかわる。remember ＋〜ing は、「（過去に）〜したことを覚えている」。すでに起こったことを思い出す。remember ＋ to ～ は、「忘れずに〜する」。これから行うことを忘れない。この問題の「かぎをかけたことを覚えている」は、すでにかけたことを覚えている、なので、remember ＋〜ing の形になる。\n【ステップ1】日本文の意味を整理する。「かぎをかけた」＝すでに終わったこと。「覚えている」＝その記憶がある。\n【ステップ2】形を選ぶ。すでにしたことを覚えているのは remember ＋〜ing（動名詞）。\n【ステップ3】選択肢をくらべる。「remembers to lock」は「忘れずにかぎをかける」で、意味がちがう。「remembers lock」と「remembers locked」は、動詞のあとの形がまちがっている。\n【ステップ4】正しい形は「He remembers locking the door.」。\n【答え】He remembers locking the door.\n【確かめ】「remembers locking」を日本語にもどすと「かぎをかけたことを覚えている」。もうひとつの形「remembers to lock」は「忘れずにかぎをかける」になり、日本文とは合わない。\n【よくあるまちがい】「remember to ～」を「〜したことを覚えている」と思い、to lock を選ぶ。to ～ は、これからすることを忘れない、という意味。「〜したことを覚えている」は〜ing。",
+    "pitfall": "to ～ と〜ing の意味を取りちがえる（すでにしたことは〜ing）。",
+    "memoryTip": "remember ＋〜ing ＝ したことを覚えている。remember ＋ to ～ ＝ 忘れずにする。"
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_11",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "question": "次の日本文を、英語に直しなさい。\n「彼が来るかどうか、私にはわかりません。」",
+    "answer": "I don't know whether he will come.",
+    "hint": "「〜かどうか」は、名詞のかたまりをつくる接続詞を使う。know のあとに、その「かたまり」を置く。「来る」は、これからのことなので、未来を表す言い方を使う。",
+    "explanation": "【何を聞かれているか】「〜かどうか」を表す接続詞を使って、英文をつくる。\n【なぜそうなるのか】「彼が来るかどうか」は、「わかりません（know の否定）」の目的語にあたる。「〜かどうか」は、whether（または if）でつくる名詞のかたまり。文の骨組みは「私は知らない」＋「whether ＋ 主語 ＋ 動詞」。「来る」のはこれからの未来のことなので、will come と書く。「わかりません」は、know の否定形 don't know。\n【ステップ1】文の骨組みを決める。「私にはわかりません」＝I don't know。\n【ステップ2】「彼が来るかどうか」を、whether を使って組み立てる。whether ＋ 主語（he）＋ 動詞。\n【ステップ3】時制を決める。「来る」のはこれからなので、will come。\n【ステップ4】つなぐ。I don't know whether he will come.\n【答え】I don't know whether he will come.\n【確かめ】日本語にもどす。「私は、彼が来るかどうかを知らない」。もとの日本文と合う。「whether he will come or not」と or not をつけても正しい。if を使って I don't know if he will come. としても同じ意味になる。\n【よくあるまちがい】「if」を使い、条件の「もし〜なら」と混同して I don't know if he comes. と書く。条件の if のあとは未来のことでも現在形を使うが、「〜かどうか」の if（名詞のかたまり）では will が必要。whether のほうが、まちがいにくい。また、疑問文の語順（whether will he come）にしてしまう人もいる。主語＋動詞の順にする。",
+    "pitfall": "whether のあとを疑問文の語順（will he come）にしてしまう。",
+    "memoryTip": "know whether ＋ 主語＋動詞。〜かどうか＝whether。未来のことは will。",
+    "isWritten": true,
+    "rubricPoints": [
+      "I don't know の形で、わからない、が書けている",
+      "whether（または if）で「〜かどうか」が表せている",
+      "whether のあとが he will come の語順になっている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_azabu_eigo_12",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-azabu",
+    "difficulty": "advanced",
+    "question": "Do you think it is more important to ask a good question or to find an answer quickly? Write your opinion in English in about 40 to 50 words. Give at least one reason or example.",
+    "answer": "I think asking a good question is more important. A quick answer may end our thinking, but a good question makes us think more deeply. For example, when I asked why the sky is blue, I read many books and learned about light. That was more interesting than the answer itself.",
+    "hint": "最初の文で自分の意見をはっきり言う。次に理由、最後に具体例を書く。習った文法・語彙で、まちがえにくい文を使う。",
+    "explanation": "【何を聞かれているか】自分の意見を、理由と具体例をつけて、40〜50 語の英語で書く。\n【なぜそうなるのか】英作文では、むずかしい表現を使うよりも、正しい文で意見・理由・例の順に書くほうが点につながる。「どちらが大切か」と問われているので、最初の 1 文で「I think ～ is more important.」のように立場を決める。次の 1〜2 文で理由（なぜそう思うか）、最後に具体例（For example, ～）を書く。語数が決まっているので、数えて調整する。\n【ステップ1】立場を決める。「問いを立てることのほうが大切」。書き出しは I think asking a good question is more important.\n【ステップ2】理由を書く。A quick answer may end our thinking, but a good question makes us think more deeply.（すばやい答えは考えを終わらせるが、よい問いはもっと深く考えさせる）。\n【ステップ3】具体例を書く。For example, when I asked why the sky is blue, I read many books and learned about light.\n【ステップ4】まとめの文を足し、語数を数える。That was more interesting than the answer itself.　全部で 51 語で、40〜50 語の目安に入る。\n【答え】I think asking a good question is more important. A quick answer may end our thinking, but a good question makes us think more deeply. For example, when I asked why the sky is blue, I read many books and learned about light. That was more interesting than the answer itself.（解答例）\n【確かめ】次の点を確かめる。①最初の文で立場が示されている。②理由（but でつないだ対比）がある。③For example で始まる具体例がある。④主語と動詞が対応していて、時制（現在・過去）がそろっている。語数は 51 語。\n【よくあるまちがい】「I think so.」のように、理由を書かずに終わる。また、日本語をそのまま英語にしようとして、むずかしい表現でつまずく。使い慣れた簡単な文を、正しく組み立てるほうが安全。さらに、「asking」を「ask」のまま主語にして（I think ask a good question…）、動名詞にし忘れるまちがいも多い。",
+    "pitfall": "理由や例を書かずに、意見だけで終わる。",
+    "memoryTip": "英作文：意見 → 理由 → 例。簡単で正しい文を使う。",
+    "isWritten": true,
+    "rubricPoints": [
+      "最初の文で、どちらが大切かという立場がはっきり書けている",
+      "理由が書けている",
+      "具体例（For example など）が書けている",
+      "文法のまちがいが少なく、40〜50 語程度になっている"
+    ]
   }
 ];
