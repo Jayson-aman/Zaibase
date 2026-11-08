@@ -855,7 +855,7 @@ I am good at playing the piano.
 「紅茶とコーヒーでは、どちらが好きですか」とたずねられたときの、Bの答えを選びます。
 
 【なぜそうなるのか】
-Which do you like better, A or B? は、AとBの2つのうち「どちらのほうが好きか」をたずねる文です。Yes・No でこたえる質問ではないので、選んだほうを言って I like A better.（私は A のほうが好きです）と答えます。better は good や like の比べるときの形（比較級）で、「より（もっと）」の意味です。
+Which do you like better, A or B? は、AとBの2つのうち「どちらのほうが好きか」をたずねる文です。Yes・No でこたえる質問ではないので、選んだほうを言って I like A better.（私は A のほうが好きです）と答えます。better は good や well の比べるときの形（比較級）で、「より（もっと）」の意味です。
 
 【ステップ1】
 A の質問は Which ～ tea or coffee?（紅茶とコーヒーのどちら？）で、2つのうちから選ぶ質問です。

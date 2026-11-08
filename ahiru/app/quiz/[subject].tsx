@@ -238,6 +238,14 @@ export default function QuizScreen() {
       let pool = all.filter((q) => (q.examType ?? 'chugaku') === examType);
       if (!(isPro || isMax)) pool = pool.filter((q) => !q.maxOnly);
       pool = pool.filter((q) => inGradeFilter(q.grade, gradeFilter));
+      if (testModeKey === 'honshiken') {
+        // 本試験対策：学校を選んだときはその学校の問題だけ、選ばないときは共通（course なし）の問題だけ
+        const generalKey = examType === 'koko' ? 'koko-general' : 'general';
+        const wantSchool = course !== generalKey ? course : null;
+        pool = wantSchool
+          ? pool.filter((q) => q.course === wantSchool)
+          : pool.filter((q) => !q.course || q.course === generalKey);
+      }
       return buildTestSet(pool, tm, testSeedRef.current + restartKey + 1, difficultyFilter as LevelKey | undefined);
     }
     if (isMock) {

@@ -8,6 +8,7 @@
 
 import type { Question } from './questions-meta';
 import type { ExamType } from '../store/examType';
+import type { CourseKey } from './courses';
 
 export type TestModeKey = 'term' | 'achievement' | 'level' | 'nyushi' | 'moshi' | 'honshiken';
 
@@ -134,6 +135,16 @@ export const TEST_MODES: TestMode[] = [
     moshiOnly: true,
   },
 ];
+
+/**
+ * 本試験対策で「学校別」の問題セットがある学校（courses.ts のキー）。
+ * 学校別の問題は、その学校の公表されている出題形式・分野の比率・配点・難度に合わせた自作問題（実際の過去問ではない）。
+ * 学校を選ばないときは、共通の本試験対策（course なし）から出る。
+ */
+export const HONSHIKEN_SCHOOLS: Record<ExamType, CourseKey[]> = {
+  chugaku: ['nandai', 'seiko', 'seifu-nankai', 'takatsuki', 'kaimei', 'toin', 'tezukayama', 'tokyo-meidai', 'nagoya-tokai', 'fukuoka-kurume'],
+  koko: ['koko-nada', 'koko-koyo', 'koko-nishiyamato', 'koko-todaiji', 'koko-kasei', 'koko-azabu', 'koko-keio', 'koko-hibiya', 'koko-waseda', 'koko-tokai'],
+};
 
 export function getTestMode(key: TestModeKey): TestMode {
   return TEST_MODES.find((m) => m.key === key) ?? TEST_MODES.find((m) => m.key === 'term')!;
