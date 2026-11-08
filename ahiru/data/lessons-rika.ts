@@ -1,5 +1,6 @@
 import type { Lesson } from './lesson-types';
 import { lessonsU120E3Rika } from './lessons-u120-e3-rika';
+import { lessonsU120E4Rika } from './lessons-u120-e4-rika';
 // 450セッション化（植物〜地層まで12ユニット）。既存の22レッスンは
 // 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
 import { rikaExt01Lessons } from './lessons-rika-ext01';
@@ -4571,4 +4572,5 @@ export const rikaLessons: Lesson[] = [
   ...lessonsNew20E5Rika,
   ...lessonsNew20E6Rika,
   ...lessonsU120E3Rika,
+  ...lessonsU120E4Rika,
 ];

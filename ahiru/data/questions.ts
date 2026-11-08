@@ -274,6 +274,7 @@ import { gradeE3KokugoQuestions } from './grade_e3_kokugo';
 import { gradeE4KokugoBQuestions } from './grade_e4_kokugo_b';
 import { gradeE4KokugoKQuestions } from './grade_e4_kokugo_k';
 import { gradeE3RikaQuestions } from './grade_e3_rika';
+import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
 import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
@@ -3936,6 +3937,7 @@ const baseQuestions: Question[] = [
   ...gradeE4KokugoBQuestions,
   ...gradeE4KokugoKQuestions,
   ...gradeE3RikaQuestions,
+  ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
   ...gradeE4SansuQuestions,
   ...gradeJ1SansuQuestions,
