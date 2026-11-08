@@ -9224,10 +9224,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
   ]
  },
  "honshiken_school_koko_waseda_shakai_04": {
-  "caption": "答え　836kcal、154kcal",
+  "caption": "答え　836キロカロリー、154キロカロリー",
   "slides": [
    {
-    "note": "自給率38％、供給熱量を2200kcalと仮に考える。国産の熱量と、45％にするための増加分を求める。",
+    "note": "自給率38％、供給熱量を2200キロカロリーと仮に考える。国産の熱量と、45％にするための増加分を求める。",
     "add": [
      {
       "t": "box",
@@ -9256,7 +9256,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 105,
       "w": 280,
       "h": 30,
-      "text": "供給熱量 2200kcal（仮）",
+      "text": "供給熱量 2200キロカロリー（仮）",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 14
@@ -9312,7 +9312,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "(1) 国産の熱量。2200×0.38＝836kcal。",
+    "note": "(1) 国産の熱量。2200×0.38＝836キロカロリー。",
     "add": [
      {
       "t": "box",
@@ -9341,7 +9341,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 124,
       "w": 280,
       "h": 30,
-      "text": "＝836kcal",
+      "text": "＝836キロカロリー",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -9349,7 +9349,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "(2) 自給率45％のときの国産の熱量。2200×0.45＝990kcal。",
+    "note": "(2) 自給率45％のときの国産の熱量。2200×0.45＝990キロカロリー。",
     "add": [
      {
       "t": "box",
@@ -9378,7 +9378,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 124,
       "w": 280,
       "h": 30,
-      "text": "＝990kcal",
+      "text": "＝990キロカロリー",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 14
@@ -9386,7 +9386,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "いまの 836kcal との差が、増やす量。990−836＝154kcal。",
+    "note": "いまの 836キロカロリー との差が、増やす量。990−836＝154キロカロリー。",
     "add": [
      {
       "t": "box",
@@ -9415,7 +9415,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 124,
       "w": 280,
       "h": 30,
-      "text": "＝154kcal",
+      "text": "＝154キロカロリー",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 14
@@ -9423,7 +9423,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "確かめ。差を割合で見る。45％−38％＝7％。2200×0.07＝154kcal。一致。",
+    "note": "確かめ。差を割合で見る。45％−38％＝7％。2200×0.07＝154キロカロリー。一致。",
     "add": [
      {
       "t": "box",
@@ -9478,7 +9478,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 105,
       "w": 280,
       "h": 30,
-      "text": "答え：増加分 154kcal",
+      "text": "答え：増加分 154キロカロリー",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 14
