@@ -317,6 +317,50 @@ import { gradeE3RikaQuestions } from './grade_e3_rika';
 import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
 import { gradeE4ShakaiBQuestions } from './grade_e4_shakai_b';
+import { ritsumeikanKoko_sansu } from './ritsumeikan_koko_sansu';
+import { ritsumeikanKoko_kokugo } from './ritsumeikan_koko_kokugo';
+import { ritsumeikanKoko_rika } from './ritsumeikan_koko_rika';
+import { ritsumeikanKoko_shakai } from './ritsumeikan_koko_shakai';
+import { ritsumeikanKoko_eigo } from './ritsumeikan_koko_eigo';
+import { honshikenSchool_fukuoka_kurume } from './honshiken_school_fukuoka-kurume';
+import { honshikenSchool_kaimei } from './honshiken_school_kaimei';
+import { honshikenSchool_kankan } from './honshiken_school_kankan';
+import { honshikenSchool_kansai_hokuyo } from './honshiken_school_kansai-hokuyo';
+import { honshikenSchool_kenmei } from './honshiken_school_kenmei';
+import { honshikenSchool_kindai } from './honshiken_school_kindai';
+import { honshikenSchool_kinrankai } from './honshiken_school_kinrankai';
+import { honshikenSchool_koko_azabu } from './honshiken_school_koko-azabu';
+import { honshikenSchool_koko_hibiya } from './honshiken_school_koko-hibiya';
+import { honshikenSchool_koko_koyo } from './honshiken_school_koko-koyo';
+import { honshikenSchool_koko_meidai } from './honshiken_school_koko-meidai';
+import { honshikenSchool_koko_nada } from './honshiken_school_koko-nada';
+import { honshikenSchool_koko_nishiyamato } from './honshiken_school_koko-nishiyamato';
+import { honshikenSchool_koko_shitennoji } from './honshiken_school_koko-shitennoji';
+import { honshikenSchool_koko_todaiji } from './honshiken_school_koko-todaiji';
+import { honshikenSchool_koko_top } from './honshiken_school_koko-top';
+import { honshikenSchool_koko_waseda } from './honshiken_school_koko-waseda';
+import { honshikenSchool_koko_kankan } from './honshiken_school_koko_kankan';
+import { honshikenSchool_koko_keio } from './honshiken_school_koko_keio';
+import { honshikenSchool_myojo } from './honshiken_school_myojo';
+import { honshikenSchool_nagoya_tokai } from './honshiken_school_nagoya-tokai';
+import { honshikenSchool_nandai } from './honshiken_school_nandai';
+import { honshikenSchool_naniwa } from './honshiken_school_naniwa';
+import { honshikenSchool_osaka_jogakuin } from './honshiken_school_osaka-jogakuin';
+import { honshikenSchool_otani } from './honshiken_school_otani';
+import { honshikenSchool_otemon } from './honshiken_school_otemon';
+import { honshikenSchool_poole } from './honshiken_school_poole';
+import { honshikenSchool_seifu_nankai } from './honshiken_school_seifu-nankai';
+import { honshikenSchool_seifu } from './honshiken_school_seifu';
+import { honshikenSchool_seiko } from './honshiken_school_seiko';
+import { honshikenSchool_shitennoji } from './honshiken_school_shitennoji';
+import { honshikenSchool_takatsuki } from './honshiken_school_takatsuki';
+import { honshikenSchool_tezukayama } from './honshiken_school_tezukayama';
+import { honshikenSchool_toin } from './honshiken_school_toin';
+import { honshikenSchool_tokyo_aoyama } from './honshiken_school_tokyo-aoyama';
+import { honshikenSchool_tokyo_chuo } from './honshiken_school_tokyo-chuo';
+import { honshikenSchool_tokyo_gakushuin } from './honshiken_school_tokyo-gakushuin';
+import { honshikenSchool_tokyo_hosei } from './honshiken_school_tokyo-hosei';
+import { honshikenSchool_tokyo_meidai } from './honshiken_school_tokyo-meidai';
 import { gradeE4SansuQuestions } from './grade_e4_sansu';
 import { gradeJ1SansuQuestions } from './grade_j1_sansu';
 import { gradeE6SansuQuestions } from './grade_e6_sansu';
@@ -4021,6 +4065,50 @@ const baseQuestions: Question[] = [
   ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
   ...gradeE4ShakaiBQuestions,
+  ...ritsumeikanKoko_sansu,
+  ...ritsumeikanKoko_kokugo,
+  ...ritsumeikanKoko_rika,
+  ...ritsumeikanKoko_shakai,
+  ...ritsumeikanKoko_eigo,
+  ...honshikenSchool_fukuoka_kurume,
+  ...honshikenSchool_kaimei,
+  ...honshikenSchool_kankan,
+  ...honshikenSchool_kansai_hokuyo,
+  ...honshikenSchool_kenmei,
+  ...honshikenSchool_kindai,
+  ...honshikenSchool_kinrankai,
+  ...honshikenSchool_koko_azabu,
+  ...honshikenSchool_koko_hibiya,
+  ...honshikenSchool_koko_koyo,
+  ...honshikenSchool_koko_meidai,
+  ...honshikenSchool_koko_nada,
+  ...honshikenSchool_koko_nishiyamato,
+  ...honshikenSchool_koko_shitennoji,
+  ...honshikenSchool_koko_todaiji,
+  ...honshikenSchool_koko_top,
+  ...honshikenSchool_koko_waseda,
+  ...honshikenSchool_koko_kankan,
+  ...honshikenSchool_koko_keio,
+  ...honshikenSchool_myojo,
+  ...honshikenSchool_nagoya_tokai,
+  ...honshikenSchool_nandai,
+  ...honshikenSchool_naniwa,
+  ...honshikenSchool_osaka_jogakuin,
+  ...honshikenSchool_otani,
+  ...honshikenSchool_otemon,
+  ...honshikenSchool_poole,
+  ...honshikenSchool_seifu_nankai,
+  ...honshikenSchool_seifu,
+  ...honshikenSchool_seiko,
+  ...honshikenSchool_shitennoji,
+  ...honshikenSchool_takatsuki,
+  ...honshikenSchool_tezukayama,
+  ...honshikenSchool_toin,
+  ...honshikenSchool_tokyo_aoyama,
+  ...honshikenSchool_tokyo_chuo,
+  ...honshikenSchool_tokyo_gakushuin,
+  ...honshikenSchool_tokyo_hosei,
+  ...honshikenSchool_tokyo_meidai,
   ...gradeE4SansuQuestions,
   ...gradeJ1SansuQuestions,
   ...gradeE6SansuQuestions,

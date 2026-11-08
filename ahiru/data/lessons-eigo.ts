@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { lessonsRitsumeikan_eigo } from './lessons-ritsumeikan-eigo';
 import { eigoExt01Lessons } from './lessons-eigo-ext01';
 import { eigoExt02Lessons } from './lessons-eigo-ext02';
 import { eigoExt03Lessons } from './lessons-eigo-ext03';
@@ -5270,4 +5271,5 @@ export const eigoLessons: Lesson[] = [
   ...lessonsNew20E4Eigo,
   ...lessonsNew20E5Eigo,
   ...lessonsNew20E6Eigo,
+  ...lessonsRitsumeikan_eigo,
 ];

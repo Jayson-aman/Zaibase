@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { lessonsRitsumeikan_kokugo } from './lessons-ritsumeikan-kokugo';
 // 450セッション化（漢字〜入試実戦の12ユニット）。既存の22レッスンは
 // 単元の概観として残し、新規セッションはorder 501以降で後ろに続く。
 import { kokugoExt01Lessons } from './lessons-kokugo-ext01';
@@ -4202,4 +4203,5 @@ export const kokugoLessons: Lesson[] = [
   ...lessonsU120E3Kokugo,
   ...lessonsU120E4Kokugo,
   ...lessonsU120E4KokugoKanji,
+  ...lessonsRitsumeikan_kokugo,
 ];

@@ -572,6 +572,50 @@ import { figuresMoshi202612ShakaiChugaku1 } from './figures-moshi-2026-12-shakai
 import { figuresMoshi202612ShakaiChugaku2 } from './figures-moshi-2026-12-shakai-c2';
 import { figuresMoshi202612ShakaiKoko1 } from './figures-moshi-2026-12-shakai-k1';
 import { figuresMoshi202612ShakaiKoko2 } from './figures-moshi-2026-12-shakai-k2';
+import { figuresRitsumeikanKoko_sansu } from './figures-ritsumeikan-koko-sansu';
+import { figuresRitsumeikanKoko_kokugo } from './figures-ritsumeikan-koko-kokugo';
+import { figuresRitsumeikanKoko_rika } from './figures-ritsumeikan-koko-rika';
+import { figuresRitsumeikanKoko_shakai } from './figures-ritsumeikan-koko-shakai';
+import { figuresRitsumeikanKoko_eigo } from './figures-ritsumeikan-koko-eigo';
+import { figuresHonshikenSchool_sansu } from './figures-honshiken-school-fukuoka-kurume';
+import { figuresHonshikenSchool_kaimei } from './figures-honshiken-school-kaimei';
+import { figuresHonshikenSchool_kankan } from './figures-honshiken-school-kankan';
+import { figuresHonshikenSchool_kansai_hokuyo } from './figures-honshiken-school-kansai-hokuyo';
+import { figuresHonshikenSchool_kenmei } from './figures-honshiken-school-kenmei';
+import { figuresHonshikenSchool_kindai } from './figures-honshiken-school-kindai';
+import { figuresHonshikenSchool_kinrankai } from './figures-honshiken-school-kinrankai';
+import { figuresHonshikenSchool_koko_azabu } from './figures-honshiken-school-koko-azabu';
+import { figuresHonshikenSchool_koko_hibiya } from './figures-honshiken-school-koko-hibiya';
+import { figuresHonshikenSchool_koko_koyo } from './figures-honshiken-school-koko-koyo';
+import { figuresHonshikenSchool_koko_meidai } from './figures-honshiken-school-koko-meidai';
+import { figuresHonshikenSchool_koko_nada } from './figures-honshiken-school-koko-nada';
+import { figuresHonshikenSchool_koko_nishiyamato } from './figures-honshiken-school-koko-nishiyamato';
+import { figuresHonshikenSchool_koko_shitennoji } from './figures-honshiken-school-koko-shitennoji';
+import { figuresHonshikenSchool_koko_todaiji } from './figures-honshiken-school-koko-todaiji';
+import { figuresHonshikenSchool_koko_top } from './figures-honshiken-school-koko-top';
+import { figuresHonshikenSchool_koko_waseda } from './figures-honshiken-school-koko-waseda';
+import { figuresHonshikenSchool_koko_kankan } from './figures-honshiken-school-koko-kankan';
+import { figuresHonshikenSchool_koko_keio } from './figures-honshiken-school-koko-keio';
+import { figuresHonshikenSchool_myojo } from './figures-honshiken-school-myojo';
+import { figuresHonshikenSchool_nagoya_tokai } from './figures-honshiken-school-nagoya-tokai';
+import { figuresHonshikenSchool_nandai } from './figures-honshiken-school-nandai';
+import { figuresHonshikenSchool_naniwa } from './figures-honshiken-school-naniwa';
+import { figuresHonshikenSchool_osaka_jogakuin } from './figures-honshiken-school-osaka-jogakuin';
+import { figuresHonshikenSchool_otani } from './figures-honshiken-school-otani';
+import { figuresHonshikenSchool_otemon } from './figures-honshiken-school-otemon';
+import { figuresHonshikenSchool_poole } from './figures-honshiken-school-poole';
+import { figuresHonshikenSchool_seifu_nankai } from './figures-honshiken-school-seifu-nankai';
+import { figuresHonshikenSchool_seifu } from './figures-honshiken-school-seifu';
+import { sansuFigs } from './figures-honshiken-school-seiko';
+import { figuresHonshikenSchool_shitennoji } from './figures-honshiken-school-shitennoji';
+import { figuresHonshikenSchool_takatsuki } from './figures-honshiken-school-takatsuki';
+import { figuresHonshikenSchool_tezukayama } from './figures-honshiken-school-tezukayama';
+import { figuresHonshikenSchool_toin } from './figures-honshiken-school-toin';
+import { figuresHonshikenSchool_tokyo_aoyama } from './figures-honshiken-school-tokyo-aoyama';
+import { figuresHonshikenSchool_tokyo_chuo } from './figures-honshiken-school-tokyo-chuo';
+import { figuresHonshikenSchool_tokyo_gakushuin } from './figures-honshiken-school-tokyo-gakushuin';
+import { figuresHonshikenSchool_tokyo_hosei } from './figures-honshiken-school-tokyo-hosei';
+import { figuresHonshikenSchool_tokyo_meidai } from './figures-honshiken-school-tokyo-meidai';
 import { figuresHonshiken202701EigoChugaku1 } from './figures-honshiken-2027-01-eigo-c1';
 import { figuresHonshiken202701EigoChugaku2 } from './figures-honshiken-2027-01-eigo-c2';
 import { figuresHonshiken202701EigoKoko1 } from './figures-honshiken-2027-01-eigo-k1';
@@ -748,6 +792,50 @@ export const figures: Record<string, Figure> = {
   ...figuresMoshi202612ShakaiChugaku2,
   ...figuresMoshi202612ShakaiKoko1,
   ...figuresMoshi202612ShakaiKoko2,
+  ...figuresRitsumeikanKoko_sansu,
+  ...figuresRitsumeikanKoko_kokugo,
+  ...figuresRitsumeikanKoko_rika,
+  ...figuresRitsumeikanKoko_shakai,
+  ...figuresRitsumeikanKoko_eigo,
+  ...figuresHonshikenSchool_sansu,
+  ...figuresHonshikenSchool_kaimei,
+  ...figuresHonshikenSchool_kankan,
+  ...figuresHonshikenSchool_kansai_hokuyo,
+  ...figuresHonshikenSchool_kenmei,
+  ...figuresHonshikenSchool_kindai,
+  ...figuresHonshikenSchool_kinrankai,
+  ...figuresHonshikenSchool_koko_azabu,
+  ...figuresHonshikenSchool_koko_hibiya,
+  ...figuresHonshikenSchool_koko_koyo,
+  ...figuresHonshikenSchool_koko_meidai,
+  ...figuresHonshikenSchool_koko_nada,
+  ...figuresHonshikenSchool_koko_nishiyamato,
+  ...figuresHonshikenSchool_koko_shitennoji,
+  ...figuresHonshikenSchool_koko_todaiji,
+  ...figuresHonshikenSchool_koko_top,
+  ...figuresHonshikenSchool_koko_waseda,
+  ...figuresHonshikenSchool_koko_kankan,
+  ...figuresHonshikenSchool_koko_keio,
+  ...figuresHonshikenSchool_myojo,
+  ...figuresHonshikenSchool_nagoya_tokai,
+  ...figuresHonshikenSchool_nandai,
+  ...figuresHonshikenSchool_naniwa,
+  ...figuresHonshikenSchool_osaka_jogakuin,
+  ...figuresHonshikenSchool_otani,
+  ...figuresHonshikenSchool_otemon,
+  ...figuresHonshikenSchool_poole,
+  ...figuresHonshikenSchool_seifu_nankai,
+  ...figuresHonshikenSchool_seifu,
+  ...sansuFigs,
+  ...figuresHonshikenSchool_shitennoji,
+  ...figuresHonshikenSchool_takatsuki,
+  ...figuresHonshikenSchool_tezukayama,
+  ...figuresHonshikenSchool_toin,
+  ...figuresHonshikenSchool_tokyo_aoyama,
+  ...figuresHonshikenSchool_tokyo_chuo,
+  ...figuresHonshikenSchool_tokyo_gakushuin,
+  ...figuresHonshikenSchool_tokyo_hosei,
+  ...figuresHonshikenSchool_tokyo_meidai,
   ...figuresHonshiken202701EigoChugaku1,
   ...figuresHonshiken202701EigoChugaku2,
   ...figuresHonshiken202701EigoKoko1,

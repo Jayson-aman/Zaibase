@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { lessonsRitsumeikan_shakai } from './lessons-ritsumeikan-shakai';
 import { lessonsU120E3Shakai } from './lessons-u120-e3-shakai';
 import { lessonsU120E4Shakai } from './lessons-u120-e4-shakai';
 // 450セッション化（地理5・歴史5・公民2の12ユニット）。既存の22レッスンは
@@ -4573,4 +4574,5 @@ export const shakaiLessons: Lesson[] = [
   ...lessonsNew20E6Shakai,
   ...lessonsU120E3Shakai,
   ...lessonsU120E4Shakai,
+  ...lessonsRitsumeikan_shakai,
 ];
