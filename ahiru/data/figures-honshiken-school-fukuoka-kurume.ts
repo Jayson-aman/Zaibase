@@ -315,3 +315,5 @@ export const figuresHonshikenSchool_sansu: Record<string, Figure> = {
   [id('sansu', 1)]: s01, [id('sansu', 2)]: s02, [id('sansu', 3)]: s03, [id('sansu', 4)]: s04, [id('sansu', 5)]: s05, [id('sansu', 6)]: s06,
   [id('sansu', 7)]: s07, [id('sansu', 8)]: s08, [id('sansu', 9)]: s09, [id('sansu', 10)]: s10, [id('sansu', 11)]: s11, [id('sansu', 12)]: s12,
 };
+
+export const figuresHonshikenSchool_fukuoka_kurume: Record<string, Figure> = { ...figuresHonshikenSchool_sansu };
