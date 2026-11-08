@@ -126,6 +126,26 @@ import { moshi202612KokoSansu } from './moshi_2026_12_koko_sansu';
 import { moshi202612KokoSansu2 } from './moshi_2026_12_koko_sansu_2';
 import { moshi202612KokoShakai } from './moshi_2026_12_koko_shakai';
 import { moshi202612KokoShakai2 } from './moshi_2026_12_koko_shakai_2';
+import { honshiken202702ChugakuEigo } from './honshiken_2027_02_chugaku_eigo';
+import { honshiken202702ChugakuEigo2 } from './honshiken_2027_02_chugaku_eigo_2';
+import { honshiken202702ChugakuKokugo } from './honshiken_2027_02_chugaku_kokugo';
+import { honshiken202702ChugakuKokugo2 } from './honshiken_2027_02_chugaku_kokugo_2';
+import { honshiken202702ChugakuRika } from './honshiken_2027_02_chugaku_rika';
+import { honshiken202702ChugakuRika2 } from './honshiken_2027_02_chugaku_rika_2';
+import { honshiken202702ChugakuSansu } from './honshiken_2027_02_chugaku_sansu';
+import { honshiken202702ChugakuSansu2 } from './honshiken_2027_02_chugaku_sansu_2';
+import { honshiken202702ChugakuShakai } from './honshiken_2027_02_chugaku_shakai';
+import { honshiken202702ChugakuShakai2 } from './honshiken_2027_02_chugaku_shakai_2';
+import { honshiken202702KokoEigo } from './honshiken_2027_02_koko_eigo';
+import { honshiken202702KokoEigo2 } from './honshiken_2027_02_koko_eigo_2';
+import { honshiken202702KokoKokugo } from './honshiken_2027_02_koko_kokugo';
+import { honshiken202702KokoKokugo2 } from './honshiken_2027_02_koko_kokugo_2';
+import { honshiken202702KokoRika } from './honshiken_2027_02_koko_rika';
+import { honshiken202702KokoRika2 } from './honshiken_2027_02_koko_rika_2';
+import { honshiken202702KokoSansu } from './honshiken_2027_02_koko_sansu';
+import { honshiken202702KokoSansu2 } from './honshiken_2027_02_koko_sansu_2';
+import { honshiken202702KokoShakai } from './honshiken_2027_02_koko_shakai';
+import { honshiken202702KokoShakai2 } from './honshiken_2027_02_koko_shakai_2';
 import { honshiken202701ChugakuEigo } from './honshiken_2027_01_chugaku_eigo';
 import { honshiken202701ChugakuEigo2 } from './honshiken_2027_01_chugaku_eigo_2';
 import { honshiken202701ChugakuKokugo } from './honshiken_2027_01_chugaku_kokugo';
@@ -3823,6 +3843,26 @@ const baseQuestions: Question[] = [
   ...moshi202612KokoSansu2,
   ...moshi202612KokoShakai,
   ...moshi202612KokoShakai2,
+  ...honshiken202702ChugakuEigo,
+  ...honshiken202702ChugakuEigo2,
+  ...honshiken202702ChugakuKokugo,
+  ...honshiken202702ChugakuKokugo2,
+  ...honshiken202702ChugakuRika,
+  ...honshiken202702ChugakuRika2,
+  ...honshiken202702ChugakuSansu,
+  ...honshiken202702ChugakuSansu2,
+  ...honshiken202702ChugakuShakai,
+  ...honshiken202702ChugakuShakai2,
+  ...honshiken202702KokoEigo,
+  ...honshiken202702KokoEigo2,
+  ...honshiken202702KokoKokugo,
+  ...honshiken202702KokoKokugo2,
+  ...honshiken202702KokoRika,
+  ...honshiken202702KokoRika2,
+  ...honshiken202702KokoSansu,
+  ...honshiken202702KokoSansu2,
+  ...honshiken202702KokoShakai,
+  ...honshiken202702KokoShakai2,
   ...honshiken202701ChugakuEigo,
   ...honshiken202701ChugakuEigo2,
   ...honshiken202701ChugakuKokugo,

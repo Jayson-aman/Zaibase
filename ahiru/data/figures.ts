@@ -619,6 +619,26 @@ import { figuresHonshikenSchool_tokyo_chuo } from './figures-honshiken-school-to
 import { figuresHonshikenSchool_tokyo_gakushuin } from './figures-honshiken-school-tokyo-gakushuin';
 import { figuresHonshikenSchool_tokyo_hosei } from './figures-honshiken-school-tokyo-hosei';
 import { figuresHonshikenSchool_tokyo_meidai } from './figures-honshiken-school-tokyo-meidai';
+import { figuresHonshiken202702EigoChugaku1 } from './figures-honshiken-2027-02-eigo-c1';
+import { figuresHonshiken202702EigoChugaku2 } from './figures-honshiken-2027-02-eigo-c2';
+import { figuresHonshiken202702EigoKoko1 } from './figures-honshiken-2027-02-eigo-k1';
+import { figuresHonshiken202702EigoKoko2 } from './figures-honshiken-2027-02-eigo-k2';
+import { figuresHonshiken202702KokugoChugaku1 } from './figures-honshiken-2027-02-kokugo-c1';
+import { figuresHonshiken202702KokugoChugaku2 } from './figures-honshiken-2027-02-kokugo-c2';
+import { figuresHonshiken202702KokugoKoko1 } from './figures-honshiken-2027-02-kokugo-k1';
+import { figuresHonshiken202702KokugoKoko2 } from './figures-honshiken-2027-02-kokugo-k2';
+import { figuresHonshiken202702RikaChugaku1 } from './figures-honshiken-2027-02-rika-c1';
+import { figuresHonshiken202702RikaChugaku2 } from './figures-honshiken-2027-02-rika-c2';
+import { figuresHonshiken202702RikaKoko1 } from './figures-honshiken-2027-02-rika-k1';
+import { figuresHonshiken202702RikaKoko2 } from './figures-honshiken-2027-02-rika-k2';
+import { figuresHonshiken202702SansuChugaku1 } from './figures-honshiken-2027-02-sansu-c1';
+import { figuresHonshiken202702SansuChugaku2 } from './figures-honshiken-2027-02-sansu-c2';
+import { figuresHonshiken202702SansuKoko1 } from './figures-honshiken-2027-02-sansu-k1';
+import { figuresHonshiken202702SansuKoko2 } from './figures-honshiken-2027-02-sansu-k2';
+import { figuresHonshiken202702ShakaiChugaku1 } from './figures-honshiken-2027-02-shakai-c1';
+import { figuresHonshiken202702ShakaiChugaku2 } from './figures-honshiken-2027-02-shakai-c2';
+import { figuresHonshiken202702ShakaiKoko1 } from './figures-honshiken-2027-02-shakai-k1';
+import { figuresHonshiken202702ShakaiKoko2 } from './figures-honshiken-2027-02-shakai-k2';
 import { figuresHonshiken202701EigoChugaku1 } from './figures-honshiken-2027-01-eigo-c1';
 import { figuresHonshiken202701EigoChugaku2 } from './figures-honshiken-2027-01-eigo-c2';
 import { figuresHonshiken202701EigoKoko1 } from './figures-honshiken-2027-01-eigo-k1';
@@ -842,6 +862,26 @@ export const figures: Record<string, Figure> = {
   ...figuresHonshikenSchool_tokyo_gakushuin,
   ...figuresHonshikenSchool_tokyo_hosei,
   ...figuresHonshikenSchool_tokyo_meidai,
+  ...figuresHonshiken202702EigoChugaku1,
+  ...figuresHonshiken202702EigoChugaku2,
+  ...figuresHonshiken202702EigoKoko1,
+  ...figuresHonshiken202702EigoKoko2,
+  ...figuresHonshiken202702KokugoChugaku1,
+  ...figuresHonshiken202702KokugoChugaku2,
+  ...figuresHonshiken202702KokugoKoko1,
+  ...figuresHonshiken202702KokugoKoko2,
+  ...figuresHonshiken202702RikaChugaku1,
+  ...figuresHonshiken202702RikaChugaku2,
+  ...figuresHonshiken202702RikaKoko1,
+  ...figuresHonshiken202702RikaKoko2,
+  ...figuresHonshiken202702SansuChugaku1,
+  ...figuresHonshiken202702SansuChugaku2,
+  ...figuresHonshiken202702SansuKoko1,
+  ...figuresHonshiken202702SansuKoko2,
+  ...figuresHonshiken202702ShakaiChugaku1,
+  ...figuresHonshiken202702ShakaiChugaku2,
+  ...figuresHonshiken202702ShakaiKoko1,
+  ...figuresHonshiken202702ShakaiKoko2,
   ...figuresHonshiken202701EigoChugaku1,
   ...figuresHonshiken202701EigoChugaku2,
   ...figuresHonshiken202701EigoKoko1,
