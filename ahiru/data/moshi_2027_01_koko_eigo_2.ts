@@ -96,7 +96,7 @@ export const moshi202701KokoEigo2: Question[] = [
     course: 'koko-general',
     examType: 'koko',
     difficulty: "advanced",
-    question: "ケンの家族と友だち6人でスケートに行きます。全員がくつを借りるとき、全部でいくらかかりますか。最も適切なものを選びなさい。\n（ケンは14才、ケンの両親、ケンの弟は10才、ケンの友だちは13才、ケンの妹は5才です。）",
+    question: "ケンの家族5人と友だち1人の6人でスケートに行きます。全員がくつを借りるとき、全部でいくらかかりますか。最も適切なものを選びなさい。\n（ケンは14才、ケンの両親、ケンの弟は10才、ケンの友だちは13才、ケンの妹は5才です。）",
     passage: "[お知らせを読んで答えなさい]\nSakura Ice Rink — Winter Special\nAdmission: Adults (18 and over) ¥1,000 / Students (7 – 17) ¥600 / Children (6 and under) Free\nSkate rental: ¥300 (Children 6 and under: ¥200)\nGroup discount: A group of six or more people gets 10% off the total price (admission and skate rental).\nOpen: 10:00 a.m. – 6:00 p.m.",
     choices: ["① ¥4,770", "② ¥4,950", "③ ¥5,300", "④ ¥5,500"],
     answer: "② ¥4,950",
