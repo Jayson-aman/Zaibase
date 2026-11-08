@@ -572,6 +572,9 @@ import { figuresMoshi202612ShakaiChugaku1 } from './figures-moshi-2026-12-shakai
 import { figuresMoshi202612ShakaiChugaku2 } from './figures-moshi-2026-12-shakai-c2';
 import { figuresMoshi202612ShakaiKoko1 } from './figures-moshi-2026-12-shakai-k1';
 import { figuresMoshi202612ShakaiKoko2 } from './figures-moshi-2026-12-shakai-k2';
+import { figuresHonshikenSchool_koko_kasei } from './figures-honshiken-school-koko-kasei';
+import { figuresHonshikenSchool_koko_ritsumeikan } from './figures-honshiken-school-koko-ritsumeikan';
+import { figuresHonshikenSchool_koko_tokai } from './figures-honshiken-school-koko-tokai';
 import { figuresRitsumeikanKoko_sansu } from './figures-ritsumeikan-koko-sansu';
 import { figuresRitsumeikanKoko_kokugo } from './figures-ritsumeikan-koko-kokugo';
 import { figuresRitsumeikanKoko_rika } from './figures-ritsumeikan-koko-rika';
@@ -792,6 +795,9 @@ export const figures: Record<string, Figure> = {
   ...figuresMoshi202612ShakaiChugaku2,
   ...figuresMoshi202612ShakaiKoko1,
   ...figuresMoshi202612ShakaiKoko2,
+  ...figuresHonshikenSchool_koko_kasei,
+  ...figuresHonshikenSchool_koko_ritsumeikan,
+  ...figuresHonshikenSchool_koko_tokai,
   ...figuresRitsumeikanKoko_sansu,
   ...figuresRitsumeikanKoko_kokugo,
   ...figuresRitsumeikanKoko_rika,

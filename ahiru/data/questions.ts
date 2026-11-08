@@ -317,6 +317,9 @@ import { gradeE3RikaQuestions } from './grade_e3_rika';
 import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
 import { gradeE4ShakaiBQuestions } from './grade_e4_shakai_b';
+import { honshikenSchool_koko_kasei } from './honshiken_school_koko-kasei';
+import { honshikenSchool_koko_ritsumeikan } from './honshiken_school_koko-ritsumeikan';
+import { honshikenSchool_koko_tokai } from './honshiken_school_koko-tokai';
 import { ritsumeikanKoko_sansu } from './ritsumeikan_koko_sansu';
 import { ritsumeikanKoko_kokugo } from './ritsumeikan_koko_kokugo';
 import { ritsumeikanKoko_rika } from './ritsumeikan_koko_rika';
@@ -4065,6 +4068,9 @@ const baseQuestions: Question[] = [
   ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
   ...gradeE4ShakaiBQuestions,
+  ...honshikenSchool_koko_kasei,
+  ...honshikenSchool_koko_ritsumeikan,
+  ...honshikenSchool_koko_tokai,
   ...ritsumeikanKoko_sansu,
   ...ritsumeikanKoko_kokugo,
   ...ritsumeikanKoko_rika,

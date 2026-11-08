@@ -143,7 +143,7 @@ export const TEST_MODES: TestMode[] = [
  */
 export const HONSHIKEN_SCHOOLS: Record<ExamType, CourseKey[]> = {
   chugaku: ['fukuoka-kurume', 'kaimei', 'kankan', 'kansai-hokuyo', 'kenmei', 'kindai', 'kinrankai', 'myojo', 'nagoya-tokai', 'nandai', 'naniwa', 'osaka-jogakuin', 'otani', 'otemon', 'poole', 'seifu', 'seifu-nankai', 'seiko', 'shitennoji', 'takatsuki', 'tezukayama', 'toin', 'tokyo-aoyama', 'tokyo-chuo', 'tokyo-gakushuin', 'tokyo-hosei', 'tokyo-meidai'],
-  koko: ['koko-azabu', 'koko-hibiya', 'koko-kankan', 'koko-keio', 'koko-koyo', 'koko-meidai', 'koko-nada', 'koko-nishiyamato', 'koko-shitennoji', 'koko-todaiji', 'koko-top', 'koko-waseda'],
+  koko: ['koko-azabu', 'koko-hibiya', 'koko-kankan', 'koko-kasei', 'koko-keio', 'koko-koyo', 'koko-meidai', 'koko-nada', 'koko-nishiyamato', 'koko-ritsumeikan', 'koko-shitennoji', 'koko-todaiji', 'koko-tokai', 'koko-top', 'koko-waseda'],
 };
 
 export function getTestMode(key: TestModeKey): TestMode {
