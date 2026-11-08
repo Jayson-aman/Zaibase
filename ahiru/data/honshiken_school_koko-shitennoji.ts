@@ -763,7 +763,7 @@ export const honshikenSchool_koko_shitennoji: Question[] = [
     difficulty: "standard",
     question: "次の2文がほぼ同じ内容を表すように、（　）に適する語を入れなさい。\nI have never seen such a beautiful sunset.\nThis is the（　）（　）sunset I have（　）seen.",
     answer: "most、beautiful、ever",
-    hint: "「こんなに美しい夕日は一度も見たことがない」は、「これは、今まで見た中で最も美しい夕日だ」と言いかえられる。最上級＋現在完了（経験）の形。",
+    hint: "「こんなに美しい夕日は一度も見たことがない」は、最上級と、「いままでに」を表す語を使って言いかえられる。長い形容詞の最上級のつくり方を思い出す。",
     explanation: "【何を聞かれているか】\n「〜したことがない」を、「いままでで最も〜」の形に言いかえる。\n\n【なぜそうなるのか】\n「一度も〜したことがない」と「いままでで最も〜」は、同じ内容をちがう形で表せる。この言いかえは、最上級に、現在完了形の経験（ever：いままでに）をそえる型で表す。形は、This is the＋最上級＋名詞＋I have ever＋過去分詞。beautiful のように長い形容詞の最上級は、most をつけて、most beautiful にする。\n\n【ステップ1】\nもとの文を訳す。I have never seen such a beautiful sunset. は「こんなに美しい夕日は、一度も見たことがない」。つまり、いままでに見た夕日の中で、これが最も美しいということ。\n\n【ステップ2】\n最上級をつくる。beautiful は長い形容詞（3音節以上）なので、-est ではなく most をつける。the most beautiful sunset で「最も美しい夕日」。1つ目の（　）は most、2つ目は beautiful。\n\n【ステップ3】\n経験を表す部分。I have ever seen は「いままでに見た中で」。最上級のあとには、「ever（いままでに）」を使う（否定の never の反対）。3つ目の（　）は ever。完成：This is the most beautiful sunset I have ever seen.\n\n【答え】\nmost、beautiful、ever\n\n【確かめ】\n完成した文を訳して確かめる。「これは、私がいままでに見た中で最も美しい夕日です。」もとの文「こんなに美しい夕日は一度も見たことがない」と、ほぼ同じ内容になっている。「never」が「ever」に変わり、最上級が加わった形。\n\n【よくあるまちがい】\nmost beautiful を、more beautiful（比較級）や the best と書いてしまう。また、ever の位置に never を入れて、This is the most beautiful sunset I have never seen. としてしまう（「見たことがない」になって意味が変わる）。",
     pitfall: "比較級（more）と最上級（most）を取りちがえる。ever と never を取りちがえる。",
     memoryTip: "「一度も〜ない」＝ 最上級＋I have ever＋過去分詞。長い形容詞は most をつける。",
