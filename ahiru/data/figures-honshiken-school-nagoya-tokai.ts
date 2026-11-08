@@ -101,7 +101,7 @@ const sansu05: Figure = show([
 
 // 6 三日月
 const A6: [number, number] = [84, 114], C6: [number, number] = [236, 114], B6: [number, number] = [160, 38];
-const tri6 = (fill = FILL.gray): E => pg([A6, B6, C6], C.ink, fill);
+const tri6 = (fill: string = FILL.gray): E => pg([A6, B6, C6], C.ink, fill);
 const labels6: E[] = [tx(78, 130, 'A', 12), tx(242, 130, 'C', 12), tx(160, 30, 'B', 12), tx(110, 66, '10', 10, C.gray), tx(210, 66, '10', 10, C.gray)];
 const smallL = sc(122, 76, 53.7, 45, 225, C.main, FILL.yellow), smallR = sc(198, 76, 53.7, -45, 135, C.main, FILL.yellow);
 const bigS = (fill: string) => sc(160, 114, 76, 0, 180, C.blue, fill);
@@ -355,7 +355,7 @@ const leaf = (info: E[]): E[] => [
 ];
 const rika03: Figure = show([
   SF('ふ入りの葉を、前の日から暗い場所に置いておき、次の日、A〜Dの部分に日光を数時間あててヨウ素液で調べます。', ['A〜Dの条件のちがい'], leaf([])),
-  SF('前の日から暗所に置くのは、葉の中のデンプンを使い切らせるためです。ヨウ素液は、デンプンがあると青むらさき色になります。', ['ヨウ素液＝デンプンで青むらさき'], leaf([bx(150, 40, 20, 24, undefined, '#FFFFFF', '#FFFFFF')])),
+  SF('前の日から暗所に置くのは、葉の中のデンプンを使い切らせるためです。ヨウ素液は、デンプンがあると青むらさき色になります。', ['ヨウ素液＝デンプンで青むらさき'], leaf([])),
   SF('光合成でデンプンができるのは、緑色の部分に日光があたったAだけです。ほかのB・C・Dはデンプンができません。', ['青むらさきになるのはAだけ'], [bx(30, 30, 110, 44, 'A\n青むらさき', C.purple, FILL.purple, 12), bx(180, 30, 110, 44, 'B\n変化なし', C.gray, FILL.gray, 12), bx(30, 92, 110, 44, 'C\n変化なし', C.gray, FILL.warm, 12), bx(180, 92, 110, 44, 'D\n変化なし', C.gray, FILL.gray, 12)]),
   SF('AとBを比べます。どちらも緑色の部分で、ちがいは「光があたるか」だけ。Aだけ光合成をしたので、光が必要とわかります。', ['A↔B：ちがいは「光」だけ', '→ 光合成には光が必要'], [...leaf([ar(140, 52, 180, 52, C.purple), tx(160, 44, '光？', 11, C.purple)])]),
   SF('AとCを比べます。どちらも光があたりますが、ちがいは「緑色か白色か」だけ。Aだけ光合成をしたので、緑色の部分が必要とわかります。', ['A↔C：ちがいは「葉の色」だけ', '→ 緑色の部分が必要'], [...leaf([ar(85, 74, 85, 92, C.purple), tx(110, 86, '緑？', 11, C.purple)])]),
