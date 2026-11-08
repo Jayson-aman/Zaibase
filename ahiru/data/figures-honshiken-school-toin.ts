@@ -36,20 +36,6 @@ const SF = (note: string, lines: string[], draw: E[]): Slide => ({ note, add: [.
 const poly = (pts: [number, number][], color: string = C.blue, fill: string = FILL.blue): E => pg(pts, color, fill);
 const rect = (x: number, y: number, w: number, h: number, color: string = C.gray, fill: string = FILL.gray): E => bx(x, y, w, h, undefined, color, fill);
 
-// ════════════ 算数01 分数のくふう計算 ════════════
-const sa01: Figure = show([
-  S('9個の分数の和を求めます。通分すると分母が大きくなって大変なので、くふうを考えます。', ['9個の分数の和をくふうして求める'], [tx(160, 40, '1/2 ＋ 1/6 ＋ 1/12 ＋ 1/20 ＋ 1/30', 14, C.ink), tx(160, 66, '＋ 1/42 ＋ 1/56 ＋ 1/72 ＋ 1/90', 14, C.ink)]),
-  SF('手がかり。分母を見ると、どれも「続く2つの整数のかけ算」になっています。', ['分母は 続く2数の積'], [
-    bx(6, 36, 56, 26, '2＝1×2', C.blue, FILL.blue, 10), bx(68, 36, 56, 26, '6＝2×3', C.blue, FILL.blue, 10), bx(130, 36, 56, 26, '12＝3×4', C.blue, FILL.blue, 10), bx(192, 36, 56, 26, '20＝4×5', C.blue, FILL.blue, 10), bx(254, 36, 56, 26, '30＝5×6', C.blue, FILL.blue, 10),
-    bx(6, 70, 56, 26, '42＝6×7', C.blue, FILL.blue, 10), bx(68, 70, 56, 26, '56＝7×8', C.blue, FILL.blue, 10), bx(130, 70, 56, 26, '72＝8×9', C.blue, FILL.blue, 10), bx(192, 70, 56, 26, '90＝9×10', C.blue, FILL.blue, 10)]),
-  SF('理由。続く2数の積が分母の分数は、ひき算に書きかえると、となりどうしが打ち消し合います。', ['ひき算に書きかえる'], [tx(160, 34, '1/2 ＝ 1 − 1/2', 14, C.ink), tx(160, 64, '1/6 ＝ 1/2 − 1/3', 14, C.ink), tx(160, 94, '1/12 ＝ 1/3 − 1/4', 14, C.ink), tx(160, 124, 'たしかめ：1/2−1/3＝6分の1', 11, C.gray)]),
-  SF('9個すべてを、ひき算に書きかえます。', ['9個ぜんぶ書きかえる'], [tx(160, 50, '(1−1/2)＋(1/2−1/3)＋(1/3−1/4)', 13, C.ink), tx(160, 80, '＋ … ＋(1/8−1/9)＋(1/9−1/10)', 13, C.ink)]),
-  SF('となりどうしの −1/2 と ＋1/2、−1/3 と ＋1/3 …が、次々に消えます。のこるのは、最初と最後だけです。', ['となりどうしが消える'], [bx(10, 50, 84, 36, '最初の 1', C.green, FILL.green, 12), bx(118, 50, 84, 36, 'まん中は消える', C.gray, FILL.gray, 11), bx(226, 50, 84, 36, '最後の −1/10', C.red, FILL.red, 11)]),
-  S('のこった 1 と −1/10 を計算します。', ['1−1/10＝10/10−1/10']),
-  S('答えは 9/10 です。', ['=答え　9/10']),
-  S('確かめ。最初の3個だけを通分すると 1/2＋1/6＋1/12＝3/4。書きかえの式では 1−1/4＝3/4 で同じです。', ['1/2＋1/6＋1/12＝9/12＝3/4', '1−1/4＝3/4', '=同じになる ✓']),
-], '1/(□×(□＋1))＝1/□−1/(□＋1)。最初と最後だけ残って 1−1/10＝9/10。');
-
 // ════════════ 算数02 約束記号 ════════════
 const sa02: Figure = show([
   S('記号 ☆ は、A☆B＝A×B−A−B という約束です。(5☆4)☆3 を求めます。', ['A☆B＝A×B−A−B'], [tx(160, 40, 'A☆B ＝ A × B − A − B', 15, C.ink), tx(160, 72, '例：3☆2＝3×2−3−2＝1', 13, C.gray), tx(160, 110, '(5☆4)☆3 ＝ ？', 16, C.blue)]),
@@ -649,7 +635,7 @@ const sh12: Figure = show([
 ], '国会が国会議員の中から指名→天皇が任命（議院内閣制）。');
 
 export const figuresHonshikenSchool_toin: Record<string, Figure> = {
-  honshiken_school_toin_sansu_01: sa01, honshiken_school_toin_sansu_02: sa02, honshiken_school_toin_sansu_03: sa03, honshiken_school_toin_sansu_04: sa04,
+  honshiken_school_toin_sansu_02: sa02, honshiken_school_toin_sansu_03: sa03, honshiken_school_toin_sansu_04: sa04,
   honshiken_school_toin_sansu_05: sa05, honshiken_school_toin_sansu_06: sa06, honshiken_school_toin_sansu_07: sa07, honshiken_school_toin_sansu_08: sa08,
   honshiken_school_toin_sansu_09: sa09, honshiken_school_toin_sansu_10: sa10, honshiken_school_toin_sansu_11: sa11, honshiken_school_toin_sansu_12: sa12,
   honshiken_school_toin_kokugo_05: ko05, honshiken_school_toin_kokugo_07: ko07, honshiken_school_toin_kokugo_08: ko08, honshiken_school_toin_kokugo_09: ko09,

@@ -488,18 +488,6 @@ const rika12: Figure = show([
   S('確かめ。上弦の月は、正午ごろにのぼり、午後6時に南中し、真夜中にしずみます。', ['上弦の月の1日', '正午のぼる→6時南中→0時しずむ', '=一致 ✓']),
 ], '上弦の月：正午ごろにのぼり、午後6時に南中、午前0時ごろに西にしずむ。');
 
-// ════════════ 社会01 縮尺と面積 ════════════
-const shakai01: Figure = show([
-  SF('2万5千分の1の地形図で、縦6cm・横8cmの土地。実際の面積を求めます。', ['地図上 縦6cm・横8cm'], [bx(30, 24, 120, 90, '地図上\n縦6cm・横8cm', C.blue, FILL.blue, 12)]),
-  S('2万5千分の1は、実際の長さを25000分の1に縮めた、という意味です。地図上の1cmは、実際には25000cm＝250mです。', ['地図の1cm＝25000cm', '＝250m'], [tx(230, 60, '1cm → 250m', 14, C.red)]),
-  S('縦は、6×250＝1500m＝1.5kmです。', ['縦：6×250＝1500m＝1.5km'], [tx(160, 134, '縦 1.5km', 12, C.blue)]),
-  S('横は、8×250＝2000m＝2kmです。', ['横：8×250＝2000m＝2km'], [tx(90, 20, '横 2km', 12, C.blue)]),
-  SF('理由。面積は、縦と横の長さをかけて求めます。だから、先に縦と横を実際の長さに直してから、かけ算をします。地図上の面積に25000をかけてはいけません。', ['面積＝縦×横', '実際の長さに直してからかける'], [bx(30, 24, 100, 76, '地図上\n6cm×8cm', C.blue, FILL.blue, 12), ar(134, 62, 168, 62, C.gray), bx(172, 24, 124, 76, '実際の土地\n1.5km×2km', C.green, FILL.green, 12)]),
-  S('1.5×2を計算します。', ['1.5×2＝3km²']),
-  S('答えは3km²です。', ['=答え　3km²']),
-  S('確かめ。地図上の面積は6×8＝48cm²。1cm²は250m×250m＝62500m²なので、48×62500＝3000000m²。1km²は1000000m²なので3km²です。', ['48×62500＝3000000m²', '1km²＝1000000m²', '=3km² ✓']),
-], '縦1.5km×横2km＝3km²。面積は長さに直してからかける。');
-
 // ════════════ 社会02 食料自給率 ════════════
 const shakai02: Figure = show([
   SF('日本の2024年度の食料自給率（カロリーベース）に近いものを選びます。', ['2024年度の食料自給率は？'], [tx(160, 70, '食料自給率＝国内産÷国内で消費', 15, C.ink)]),
@@ -673,7 +661,6 @@ export const figuresHonshikenSchool_kaimei: Record<string, Figure> = {
   honshiken_school_kaimei_rika_10: rika10,
   honshiken_school_kaimei_rika_11: rika11,
   honshiken_school_kaimei_rika_12: rika12,
-  honshiken_school_kaimei_shakai_01: shakai01,
   honshiken_school_kaimei_shakai_02: shakai02,
   honshiken_school_kaimei_shakai_03: shakai03,
   honshiken_school_kaimei_shakai_04: shakai04,

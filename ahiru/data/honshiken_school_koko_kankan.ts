@@ -905,18 +905,13 @@ export const honshikenSchool_koko_kankan: Question[] = [
     "examType": "koko",
     "course": "koko-kankan",
     "difficulty": "standard",
-    "question": "次の英文の（　）に入る最も適切な語を選びなさい。\nThe language ( ) in Brazil is Portuguese.",
-    "choices": [
-      "speaking",
-      "spoken",
-      "speaks",
-      "to speak"
-    ],
-    "answer": "spoken",
-    "hint": "language（言語）と speak（話す）の関係は、「話される」か「話している」か。",
-    "explanation": "【何を聞かれているか】名詞を後ろから説明する分詞の形を選ぶ。\n【なぜそうなるのか】分詞は、名詞を後ろから説明する（修飾する）ことができる。説明される名詞と動詞の関係が「〜している」（能動）なら現在分詞（ing形）、「〜される・された」（受け身）なら過去分詞（ed形など）を使う。language は「話される」ものなので、過去分詞の spoken を使う。\n【ステップ1】名詞 language と、動詞 speak の関係を見る。言語は、自分で話すのではなく、人に話される。つまり、受け身の関係。\n【ステップ2】受け身の関係のとき、後ろから名詞を説明するのは、過去分詞。speak の過去分詞は spoken。\n【ステップ3】\"The language spoken in Brazil is Portuguese.\" ＝ 「ブラジルで話されている言語はポルトガル語だ。」\n【答え】spoken\n【確かめ】関係代名詞を使って書き直して確かめる。\"The language which is spoken in Brazil is Portuguese.\" の \"which is\" をはぶくと、\"The language spoken in Brazil\" になる。同じ意味である。\n【よくあるまちがい】speaking を選んで、「話している言語」と考えてしまう。ing形は「〜している」の意味で、言語が話をするという不自然な意味になる。受け身かどうかで選ぶ。",
-    "pitfall": "現在分詞と過去分詞を取りちがえる。",
-    "memoryTip": "名詞を修飾する分詞：〜している＝ing形　〜される＝過去分詞。"
+    "question": "次の英文の（　）に入る最も適切な語を選びなさい。\nMy brother has been playing the guitar ( ) he was ten years old.",
+    "choices": ["for", "since", "during", "while"],
+    "answer": "since",
+    "hint": "（　）のあとに he was ten years old という文（主語と動詞）が続いている。「〜してから（ずっと）」を表す語はどれか。",
+    "explanation": "【何を聞かれているか】現在完了進行形の文で、「いつから」を表す接続詞を選ぶ。\n【なぜこの考え方か】has been playing は「ずっと〜し続けている」を表す現在完了進行形。この形は、「始まった時点」を since で、「続いた期間の長さ」を for で表す。（　）の後ろには he was ten years old という「主語＋動詞」の形があり、「彼が10才だったとき」という始まりの時点を示している。「〜から」と始点を表すのは since である。\n【ステップ1】文の形を見る。（　）のあとは he was ten years old で、主語と動詞がある。つまり（　）には接続詞が入る。\n【ステップ2】for は「期間の長さ」を表す前置詞で、for ten years のように期間の語句が続く。文（主語＋動詞）はそのあとに続けられないので合わない。\n【ステップ3】during は「〜のあいだ」を表す前置詞で、後ろに名詞が来る。文は続けられないので合わない。\n【ステップ4】while は「〜しているあいだ」を表す接続詞だが、始まりの時点は表せず、現在完了進行形の「いつから」とも合わない。\n【ステップ5】since は「〜してから」を表し、後ろに文を続けられる。since he was ten years old で「彼が10才のときから」となる。\n【答え】since\n【確かめ】文全体の意味は「私の兄は、10才のときからずっとギターをひいている。」で自然な日本語になる。for を入れると for he was ten years old となり、期間でも名詞でもなく不自然。\n【よくあるまちがい】for と since を取りちがえる。for は for ten years（10年間）のように「長さ」、since は since 2015 や since he was ten のように「始まり」を表す。",
+    "pitfall": "forとsinceの取りちがい。後ろが「期間の長さ」ならfor、「始まりの時点（文も可）」ならsince。",
+    "memoryTip": "has been ～ing＋since（始まり）／for（長さ）。since のあとは名詞でも文でもよい。"
   },
   {
     "id": "honshiken_school_koko_kankan_eigo_08",
