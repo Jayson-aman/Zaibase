@@ -301,7 +301,7 @@ const barLine = (): E[] => [ln(lx(0), 76, lx(100), 76, C.ink, false, 5)];
 const wbox = (cm: number, t: string, col: string = C.blue, fill: string = FILL.blue, w = 28, y = 96): E[] => [ln(lx(cm), 78, lx(cm), y, col, false, 1.5), bx(lx(cm) - w / 2, y, w, 22, t, col, fill, 11)];
 const pivot = (): E => pg([[lx(75), 80], [lx(75) - 10, 100], [lx(75) + 10, 100]], C.red, FILL.red);
 const s_r01: Figure = show([
-  SF('長さ100cmの棒を、左はしから75cmのところで支えます。左はしに40g、90cmの位置に100g、右はしに□gをつるして、水平にします。', ['右はしの□gは何g？'], [...barLine(), pivot(), ...wbox(0, '40g', C.blue, FILL.blue, 34), ...wbox(90, '100g', C.green, FILL.green, 36), ...wbox(100, '□g', C.red, FILL.red, 28, 122), tx(lx(75) - 22, 116, '支点', 11, C.red), tx(lx(0) + 10, 62, '0cm', 11, C.gray), tx(lx(100) - 8, 62, '100cm', 11, C.gray)]),
+  SF('長さ100cmの棒を、左はしから75cmのところで支えます。左はしに40g、90cmの位置に100g、右はしに□gをつるして、水平にします。', ['右はしの□gは何g？'], [...barLine(), pivot(), ...wbox(0, '40g', C.blue, FILL.blue, 34), ...wbox(90, '100g', C.green, FILL.green, 36), ...wbox(100, '□g', C.red, FILL.red, 28, 122), tx(lx(75), 114, '支点', 11, C.red), tx(lx(0) + 10, 62, '0cm', 11, C.gray), tx(lx(100) - 8, 62, '100cm', 11, C.gray)]),
   S('太さが一様な棒の重さ200gは、棒の中心（左はしから50cm）の1点にかかっていると考えます。', ['棒の重さ200gは', '中心の50cmにかかる'], [ar(lx(50), 44, lx(50), 72, C.purple), tx(lx(50), 38, '棒 200g', 12, C.purple), tx(lx(50), 94, '50cm', 11, C.gray)]),
   S('支点から中心までは75－50＝25cm。左を回すはたらきは、棒が200×25＝5000、左はしが40×75＝3000。', ['左：200×25＝5000', '　　40×75＝3000'], [tx((lx(50) + lx(75)) / 2, 120, '25cm', 11, C.purple), tx((lx(0) + lx(75)) / 2, 62, '75cm', 11, C.blue)]),
   S('左のはたらきの合計は、5000＋3000＝8000です。', ['左の合計　8000']),
