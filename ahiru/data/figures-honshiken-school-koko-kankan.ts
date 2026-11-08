@@ -8603,8 +8603,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x": 20,
       "y": 30,
       "w": 280,
-      "h": 44,
-      "text": "×　道の面積＝30x＋20x（x²を二重に\n）",
+      "h": 27,
+      "text": "×　道の面積＝30x＋20x（x²を二重に）",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 14
@@ -8612,7 +8612,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "box",
       "x": 20,
-      "y": 82,
+      "y": 65,
       "w": 280,
       "h": 27,
       "text": "端に寄せて長方形にする",
@@ -8623,7 +8623,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
      {
       "t": "box",
       "x": 20,
-      "y": 117,
+      "y": 100,
       "w": 280,
       "h": 27,
       "text": "x＝48は 20より大きいので不適",
@@ -10187,8 +10187,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x": 20,
       "y": 30,
       "w": 280,
-      "h": 60,
-      "text": "答え　選んで言いかえる作業が、内容の\n理解を深め、記憶に残りやすくするから\n。",
+      "h": 44,
+      "text": "答え　選んで言いかえる作業が、内容の\n理解を深め、記憶に残りやすくするから。",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 14
@@ -11408,7 +11408,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 30,
       "w": 280,
       "h": 77,
-      "text": "答え　冒頭の、啓太のボールがリングの\nふちにはね返る描写と対比させることで\n、啓太の悔しさと、大地とのへだたりを\n感じさせている。",
+      "text": "答え　冒頭の、啓太のボールがリングの\nふちにはね返る描写と対比させることで、\n啓太の悔しさと、大地とのへだたりを感\nじさせている。",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 14
