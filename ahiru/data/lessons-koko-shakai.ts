@@ -1562,7 +1562,7 @@ const kokoShakaiOverviewLessons: Lesson[] = [
         mangaId: 'koko_shakai_06_civics_economy_manga4',
         body: `■ 国際連合（United Nations・UN）
 
-  設立：1945年。本部：ニューヨーク。加盟国：193か国（2024年時点）
+  設立：1945年。本部：ニューヨーク。加盟国：193か国（2026年11月時点）
   目的：国際平和と安全の維持、経済・社会・文化協力の促進
 
 【主要機関】
