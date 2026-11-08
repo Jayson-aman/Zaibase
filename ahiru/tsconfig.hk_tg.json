@@ -1,1 +1,0 @@
-{ "extends": "./tsconfig.json", "include": ["data/honshiken_school_tokyo-gakushuin.ts","data/figures-honshiken-school-tokyo-gakushuin.ts"] , "compilerOptions": {"noEmit": true}}
