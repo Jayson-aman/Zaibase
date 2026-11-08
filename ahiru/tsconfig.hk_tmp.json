@@ -1,0 +1,1 @@
+{"extends":"./tsconfig.json","compilerOptions":{"noEmit":true,"skipLibCheck":true},"files":["/home/user/Zaibase/ahiru/data/honshiken_school_nagoya-tokai.ts","/home/user/Zaibase/ahiru/data/figures-honshiken-school-nagoya-tokai.ts"],"include":[]}
