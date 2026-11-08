@@ -289,35 +289,35 @@ Mika is the tallest of the five girls. と読みます。「ミカは5人の女�
     subject: 'eigo',
     examType: 'chugaku',
     difficulty: 'standard',
-    question: "空所に入る最も適切な語（句）を選びなさい。\n「English ______ in many countries.」",
-    choices: ["① speaks","② is spoken","③ is speaking","④ spoke"],
-    answer: "② is spoken",
-    hint: "英語は「話す」側かな、「話される」側かな？ 主語は English だよ。",
+    question: "空所に入る最も適切な語（句）を選びなさい。\n「This book ______ by many students in Japan.」",
+    choices: ["① reads","② is read","③ is reading","④ read"],
+    answer: "② is read",
+    hint: "本は「読む」側かな、「読まれる」側かな？ 主語は This book で、あとに by（～によって）があるよ。",
     explanation: `【何を聞かれているか】
-「英語は多くの国で話されています」という文の、speak の正しい形を選びます。
+「この本は日本の多くの生徒に読まれています」という文の、read の正しい形を選びます。
 
 【なぜそうなるのか】
-主語が「動作を受ける側」のときは、受け身（うけみ）の形、be動詞 ＋ 過去分詞を使います。English は、人に「話される」ものです。English 自身が話すわけではないので、「話す」の形ではなく「話される」の形になります。speak の変化は speak – spoke – spoken で、過去分詞は spoken です。
+主語が「動作を受ける側」のときは、受け身（うけみ）の形、be動詞 ＋ 過去分詞を使います。This book は、生徒に「読まれる」ものです。本が自分で読むわけではないので、「読む」の形ではなく「読まれる」の形になります。また、by many students（多くの生徒によって）は「だれが動作をするか」を表す言い方で、受け身の文で使います。read の変化は read – read – read で、つづりは同じですが、過去分詞の read の発音は「レッド」です。
 
 【ステップ1】
-主語の English（英語）は、人が「話すもの」で、English 自身が話すわけではありません。「話される」という受け身の意味になります。
+主語の This book（この本）は、生徒が「読むもの」で、本自身が読むわけではありません。「読まれる」という受け身の意味になります。by many students も、動作をするのは生徒だと示しています。
 
 【ステップ2】
-受け身の形は be動詞 ＋ 過去分詞です。English は1つで、今のことなので be動詞は is、speak の過去分詞は spoken なので、is spoken になります。
+受け身の形は be動詞 ＋ 過去分詞です。This book は1つで、今のことなので be動詞は is、read の過去分詞は read なので、is read になります。
 
 【ステップ3】
-English is spoken in many countries. と読みます。「英語は多くの国で話されています」と日本語に合います。
+This book is read by many students in Japan. と読みます。「この本は日本の多くの生徒に読まれています」と日本語に合います。
 
 【答え】
-② is spoken（English is spoken in many countries.）
+② is read（This book is read by many students in Japan.）
 
 【確かめ】
-① speaks だと「英語が話す」という意味になってしまいます。③ is speaking は「話している最中」を表す進行形で、「話される」ではありません。④ spoke は過去形で、受け身の形ではありません。
+① reads だと「この本が読む」という意味になり、by many students ともつながりません。③ is reading は「読んでいる最中」を表す進行形で、「読まれる」ではありません。④ read は受け身の形（be動詞 ＋ 過去分詞）になっていません。
 
 【よくあるまちがい】
-日本語の「話されている」を「話している」と読んで、進行形の is speaking を選んでしまうことです。主語が動作を受ける側かどうかを考えましょう。`,
-    pitfall: "主語が動作を受けるときは be ＋ 過去分詞。is speaking（進行形）と区別する。",
-    memoryTip: "受け身 ＝ be動詞 ＋ 過去分詞（～される）。speak – spoke – spoken。",
+日本語の「読まれている」を「読んでいる」と読んで、進行形の is reading を選んでしまうことです。by ～（～によって）があるときは受け身だと考え、主語が動作を受ける側かどうかを確かめましょう。`,
+    pitfall: "主語が動作を受けるときは be ＋ 過去分詞。is reading（進行形）と区別する。by ～があれば受け身。",
+    memoryTip: "受け身 ＝ be動詞 ＋ 過去分詞（～される）。read – read – read（過去分詞は「レッド」）。",
   },
   {
     id: 'honshiken_2027_02_eigo_c10',
