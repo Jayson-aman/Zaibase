@@ -410,7 +410,7 @@ const rika06: Figure = show([
 ], '1gあたり0.4g、40mLの上限1.4g、80mLの上限2.8g。6.0gは0.4×6＝2.4g。');
 
 // ════════════ 理科07 だ液の対照実験 ════════════
-const tube07 = (i: number, t: string, col = C.blue, fill: string = FILL.blue): E => bx(8 + i * 78, 24, 72, 44, t, col, fill, 10);
+const tube07 = (i: number, t: string, col: string = C.blue, fill: string = FILL.blue): E => bx(8 + i * 78, 24, 72, 44, t, col, fill, 10);
 const tubes07 = ['ア\nだ液あり\n約40℃', 'イ\n水\n約40℃', 'ウ\nだ液あり\n約0℃', 'エ\n煮立てただ液\n約40℃'];
 const res07 = ['変化なし', '青むらさき', '青むらさき', '青むらさき'];
 const rika07: Figure = show([
