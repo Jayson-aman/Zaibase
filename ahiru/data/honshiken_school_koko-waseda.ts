@@ -1,6 +1,33 @@
 import type { Question } from './questions-meta';
 
-// プロフィール（仮）
+/*
+ * 入試プロフィール（早稲田大学附属高校 準拠・自作問題）
+ *
+ * 【学校の特定について】courses.ts の koko-waseda は「早稲田大学附属高校」という名称で、男子校・目標校に「早稲田大学高等学院」を挙げている。
+ *   該当する男子校の実在校は 早稲田大学高等学院（東京都練馬区、男子）と考えられるため、その入試の公表情報に準拠した。
+ *
+ * 【出典で確認できたこと】（ja.wikipedia.org「早稲田大学高等学院・中学部」）
+ *   ・高校入試は「自己推薦」と「一般入試」の2種類。
+ *   ・一般入試は、募集定員は男子260人、入試科目は 英語・数学・国語・小論文。試験日は2月11日、合格発表は2月15日。
+ *   ・試験は早稲田大学早稲田キャンパスで実施。
+ *
+ * 【出典で確認できなかったこと】（学校公式サイトに届かないため、以下は未確認。事実として断定しない）
+ *   ・各科目の試験時間・配点・大問の数と並び・年度ごとの頻出分野・合格最低点。
+ *   ・本問題の英語の長文の語数、数学の大問構成、国語の課題文のジャンル配分などは、
+ *     「最難関私立（高校受験）の一般的な出題形式」の知識にもとづく自作の目安であり、同校の実際の数値ではない。
+ *   ・理科・社会は、上記の公表情報では一般入試の科目に含まれていない（英数国＋小論文）。
+ *     本ファイルの理科・社会は、5教科の学力を問う補強問題として、資料の読み取り・計算・記述を重視した型で作った。
+ *
+ * 【準拠のしかた（自作）】
+ *   ・数学：中学範囲のまま、整数・確率・関数と図形・円と相似・空間図形・動点などを、途中の考え方（記述）を要する難度で。高校の内容（三角比・nCr・微積など）は出さない。
+ *   ・国語：評論・小説・古文・漢文・文法・漢字・語句。記述は字数制限つき（句点も1字）。小論文型として、本文をふまえた意見記述（100字）を1問。
+ *   ・英語：長文（読解・内容一致・記述）・整序・文法・英作文（自由英作文を含む）。リスニング形式は出さない。仮定法・関係副詞・分詞構文は中学範囲外として出さない。
+ *   ・理科：計算・グラフ・表の読み取りと、実験の考察（対照実験・比）。
+ *   ・社会：資料（地形図・表）の読み取り、年代・因果の整理、記述、公民の仕組みの計算。
+ *   ・時事は2026年11月時点で、食料自給率（2024年度：カロリーベース38％・生産額ベース64％）のみ使用。
+ *   ・国語の古文（平家物語の冒頭）の字句は、環境の制限（Wikisource が一時的に応答せず）により、一般に流布する本文の知識で書いた。字句の照合は未了。論語の字句は ja.wikisource.org で確認済み。
+ *   ・問題文・解説に学校名は書かない（画面に出さない）。
+ */
 
 export const honshikenSchool_koko_waseda: Question[] = [
   {
@@ -787,7 +814,7 @@ export const honshikenSchool_koko_waseda: Question[] = [
     "question": "Do you think it is good to spend a week without a smartphone? Write your opinion in English in about 30 words. Give one reason.",
     "answer": "I think it is a good idea. If we do not use our smartphones for a week, we can spend more time with our family and read more books.",
     "hint": "最初の文で賛成か反対かを書き、2文目で理由を書く。理由は because や If ... で始めてもよい。",
-    "explanation": "【何を聞かれているか】自分の意見を、理由つきで、30語ほどの英語でまとめる。\n【なぜそうなるのか】自由英作文は、①意見（I think ...）、②理由（because ... / If ...）の2点を、文法の誤りなく書くことが大切。難しい表現より、正確でまとまりのある英文が評価される。解答例は賛成の立場で、理由は『家族との時間や読書の時間が増える』。反対の立場でも、理由がはっきりしていればよい。\n【ステップ1】意見を書く。I think it is a good idea.（よい考えだと思う）。\n【ステップ2】理由を書く。If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【ステップ3】全体の語数を数える。意見の文が7語、理由の文が23語で、合計約30語。\n【ステップ4】文法を確かめる。if の節は現在形（do not use）、主節は can＋動詞の原形（spend, read）。\n【答え】I think it is a good idea. If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【確かめ】語数はおよそ30語。意見と理由がそろい、if 節の中は未来のことでも現在形（do not use）で書けている。\n【よくあるまちがい】理由を書かずに意見だけで終わる誤り。また、If we will not use ... のように、if の中で will を使う誤り。",
+    "explanation": "【何を聞かれているか】自分の意見を、理由つきで、30語ほどの英語でまとめる。\n【なぜそうなるのか】自由英作文は、①意見（I think ...）、②理由（because ... / If ...）の2点を、文法の誤りなく書くことが大切。難しい表現より、正確でまとまりのある英文が評価される。解答例は賛成の立場で、理由は『家族との時間や読書の時間が増える』。反対の立場でも、理由がはっきりしていればよい。\n【ステップ1】意見を書く。I think it is a good idea.（よい考えだと思う）。\n【ステップ2】理由を書く。If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【ステップ3】全体の語数を数える。意見の文が7語、理由の文が22語で、合計29語。\n【ステップ4】文法を確かめる。if の節は現在形（do not use）、主節は can＋動詞の原形（spend, read）。\n【答え】I think it is a good idea. If we do not use our smartphones for a week, we can spend more time with our family and read more books.\n【確かめ】語数はおよそ30語。意見と理由がそろい、if 節の中は未来のことでも現在形（do not use）で書けている。\n【よくあるまちがい】理由を書かずに意見だけで終わる誤り。また、If we will not use ... のように、if の中で will を使う誤り。",
     "pitfall": "意見だけで理由がない。if の中に will を入れる。",
     "memoryTip": "自由英作文＝意見＋理由。時や条件の節の中は未来でも現在形。",
     "isWritten": true,
