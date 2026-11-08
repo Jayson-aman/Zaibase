@@ -106,6 +106,26 @@ import { moshi202611ChugakuSansu2 } from './moshi_2026_11_chugaku_sansu_2';
 import { moshi202611KokoSansu2 } from './moshi_2026_11_koko_sansu_2';
 import { moshi202611ChugakuRika2 } from './moshi_2026_11_chugaku_rika_2';
 import { moshi202611KokoRika2 } from './moshi_2026_11_koko_rika_2';
+import { moshi202612ChugakuEigo } from './moshi_2026_12_chugaku_eigo';
+import { moshi202612ChugakuEigo2 } from './moshi_2026_12_chugaku_eigo_2';
+import { moshi202612ChugakuKokugo } from './moshi_2026_12_chugaku_kokugo';
+import { moshi202612ChugakuKokugo2 } from './moshi_2026_12_chugaku_kokugo_2';
+import { moshi202612ChugakuRika } from './moshi_2026_12_chugaku_rika';
+import { moshi202612ChugakuRika2 } from './moshi_2026_12_chugaku_rika_2';
+import { moshi202612ChugakuSansu } from './moshi_2026_12_chugaku_sansu';
+import { moshi202612ChugakuSansu2 } from './moshi_2026_12_chugaku_sansu_2';
+import { moshi202612ChugakuShakai } from './moshi_2026_12_chugaku_shakai';
+import { moshi202612ChugakuShakai2 } from './moshi_2026_12_chugaku_shakai_2';
+import { moshi202612KokoEigo } from './moshi_2026_12_koko_eigo';
+import { moshi202612KokoEigo2 } from './moshi_2026_12_koko_eigo_2';
+import { moshi202612KokoKokugo } from './moshi_2026_12_koko_kokugo';
+import { moshi202612KokoKokugo2 } from './moshi_2026_12_koko_kokugo_2';
+import { moshi202612KokoRika } from './moshi_2026_12_koko_rika';
+import { moshi202612KokoRika2 } from './moshi_2026_12_koko_rika_2';
+import { moshi202612KokoSansu } from './moshi_2026_12_koko_sansu';
+import { moshi202612KokoSansu2 } from './moshi_2026_12_koko_sansu_2';
+import { moshi202612KokoShakai } from './moshi_2026_12_koko_shakai';
+import { moshi202612KokoShakai2 } from './moshi_2026_12_koko_shakai_2';
 import { kokoKankanEigo20 } from './koko_kankan_eigo_20';
 import { kokoKankanSansu20 } from './koko_kankan_sansu_20';
 import { kokoKankanKokugo20 } from './koko_kankan_kokugo_20';
@@ -3716,6 +3736,26 @@ const baseQuestions: Question[] = [
   ...moshi202611KokoSansu2,
   ...moshi202611ChugakuRika2,
   ...moshi202611KokoRika2,
+  ...moshi202612ChugakuEigo,
+  ...moshi202612ChugakuEigo2,
+  ...moshi202612ChugakuKokugo,
+  ...moshi202612ChugakuKokugo2,
+  ...moshi202612ChugakuRika,
+  ...moshi202612ChugakuRika2,
+  ...moshi202612ChugakuSansu,
+  ...moshi202612ChugakuSansu2,
+  ...moshi202612ChugakuShakai,
+  ...moshi202612ChugakuShakai2,
+  ...moshi202612KokoEigo,
+  ...moshi202612KokoEigo2,
+  ...moshi202612KokoKokugo,
+  ...moshi202612KokoKokugo2,
+  ...moshi202612KokoRika,
+  ...moshi202612KokoRika2,
+  ...moshi202612KokoSansu,
+  ...moshi202612KokoSansu2,
+  ...moshi202612KokoShakai,
+  ...moshi202612KokoShakai2,
   // ── 学校別問題（大阪私学 最難関） ──
   ...seikoQuestions,
   ...seifuNankaiQuestions,

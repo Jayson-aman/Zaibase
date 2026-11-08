@@ -552,6 +552,26 @@ import { figuresMoshi202611SansuChugaku2 } from './figures-moshi-2026-11-sansu-c
 import { figuresMoshi202611SansuKoko2 } from './figures-moshi-2026-11-sansu-k2';
 import { figuresMoshi202611RikaChugaku2 } from './figures-moshi-2026-11-rika-c2';
 import { figuresMoshi202611RikaKoko2 } from './figures-moshi-2026-11-rika-k2';
+import { figuresMoshi202612EigoChugaku1 } from './figures-moshi-2026-12-eigo-c1';
+import { figuresMoshi202612EigoChugaku2 } from './figures-moshi-2026-12-eigo-c2';
+import { figuresMoshi202612EigoKoko1 } from './figures-moshi-2026-12-eigo-k1';
+import { figuresMoshi202612EigoKoko2 } from './figures-moshi-2026-12-eigo-k2';
+import { figuresMoshi202612KokugoChugaku1 } from './figures-moshi-2026-12-kokugo-c1';
+import { figuresMoshi202612KokugoChugaku2 } from './figures-moshi-2026-12-kokugo-c2';
+import { figuresMoshi202612KokugoKoko1 } from './figures-moshi-2026-12-kokugo-k1';
+import { figuresMoshi202612KokugoKoko2 } from './figures-moshi-2026-12-kokugo-k2';
+import { figuresMoshi202612RikaChugaku1 } from './figures-moshi-2026-12-rika-c1';
+import { figuresMoshi202612RikaChugaku2 } from './figures-moshi-2026-12-rika-c2';
+import { figuresMoshi202612RikaKoko1 } from './figures-moshi-2026-12-rika-k1';
+import { figuresMoshi202612RikaKoko2 } from './figures-moshi-2026-12-rika-k2';
+import { figuresMoshi202612SansuChugaku1 } from './figures-moshi-2026-12-sansu-c1';
+import { figuresMoshi202612SansuChugaku2 } from './figures-moshi-2026-12-sansu-c2';
+import { figuresMoshi202612SansuKoko1 } from './figures-moshi-2026-12-sansu-k1';
+import { figuresMoshi202612SansuKoko2 } from './figures-moshi-2026-12-sansu-k2';
+import { figuresMoshi202612ShakaiChugaku1 } from './figures-moshi-2026-12-shakai-c1';
+import { figuresMoshi202612ShakaiChugaku2 } from './figures-moshi-2026-12-shakai-c2';
+import { figuresMoshi202612ShakaiKoko1 } from './figures-moshi-2026-12-shakai-k1';
+import { figuresMoshi202612ShakaiKoko2 } from './figures-moshi-2026-12-shakai-k2';
 
 export const figures: Record<string, Figure> = {
   ...figuresKoushikiOyoC3Tairyoku1,
@@ -688,6 +708,26 @@ export const figures: Record<string, Figure> = {
   ...figuresMoshi202611SansuKoko2,
   ...figuresMoshi202611RikaChugaku2,
   ...figuresMoshi202611RikaKoko2,
+  ...figuresMoshi202612EigoChugaku1,
+  ...figuresMoshi202612EigoChugaku2,
+  ...figuresMoshi202612EigoKoko1,
+  ...figuresMoshi202612EigoKoko2,
+  ...figuresMoshi202612KokugoChugaku1,
+  ...figuresMoshi202612KokugoChugaku2,
+  ...figuresMoshi202612KokugoKoko1,
+  ...figuresMoshi202612KokugoKoko2,
+  ...figuresMoshi202612RikaChugaku1,
+  ...figuresMoshi202612RikaChugaku2,
+  ...figuresMoshi202612RikaKoko1,
+  ...figuresMoshi202612RikaKoko2,
+  ...figuresMoshi202612SansuChugaku1,
+  ...figuresMoshi202612SansuChugaku2,
+  ...figuresMoshi202612SansuKoko1,
+  ...figuresMoshi202612SansuKoko2,
+  ...figuresMoshi202612ShakaiChugaku1,
+  ...figuresMoshi202612ShakaiChugaku2,
+  ...figuresMoshi202612ShakaiKoko1,
+  ...figuresMoshi202612ShakaiKoko2,
 };
 
 export function getFigure(questionId: string): Figure | null {
