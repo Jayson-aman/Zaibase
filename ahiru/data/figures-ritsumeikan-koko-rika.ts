@@ -2720,10 +2720,10 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
   ]
  },
  "ritsumeikan_koko_rika_15": {
-  "caption": "答え　2.64g",
+  "caption": "答え　銅 1.2g",
   "slides": [
    {
-    "note": "塩酸40gでは、石灰石4.0gまで発生量が増え、1.76gで一定。",
+    "note": "銅とマグネシウムの混合物2.4gを完全に酸化させると3.5gになった。",
     "add": [
      {
       "t": "box",
@@ -2742,7 +2742,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 4,
       "w": 262,
       "h": 28,
-      "text": "塩酸40g：石灰石4.0gで\n上限 1.76g",
+      "text": "Cu＋Mg 混合物2.4g\n完全に酸化 → 3.5g",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 10
@@ -2750,7 +2750,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "塩酸が2倍になったとき、石灰石6.0gが足りるかを調べる。",
+    "note": "銅は酸素と4：1、マグネシウムは3：2で結びつく。",
     "add": [
      {
       "t": "box",
@@ -2769,7 +2769,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 37,
       "w": 262,
       "h": 28,
-      "text": "塩酸80g・石灰石6.0g\nどちらが先になくなる？",
+      "text": "Cu:O＝4:1\nMg:O＝3:2",
       "color": "#9333EA",
       "fill": "#F3E8FF",
       "size": 10
@@ -2777,7 +2777,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "塩酸が2倍なら、反応できる石灰石の限界も2倍の8.0g。",
+    "note": "増えた質量は、結びついた酸素の質量。",
     "add": [
      {
       "t": "box",
@@ -2796,7 +2796,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 70,
       "w": 262,
       "h": 28,
-      "text": "限界の石灰石は塩酸に比例\n80gなら 8.0g",
+      "text": "増えた分＝酸素\n1.1g",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 10
@@ -2804,7 +2804,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "表の比例の部分から、1.0gあたりの発生量を読む。",
+    "note": "全部が銅だったと仮定すると、酸素は0.6g。実際より0.5g足りない。",
     "add": [
      {
       "t": "box",
@@ -2823,7 +2823,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 103,
       "w": 262,
       "h": 28,
-      "text": "石灰石1.0gあたり\n0.44g",
+      "text": "全部Cuなら酸素0.6g\n（2.4×1/4）",
       "color": "#B5622E",
       "fill": "#FFF8EC",
       "size": 10
@@ -2831,7 +2831,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "石灰石6.0gは限界より少ないので、すべて反応する。",
+    "note": "置きかえるごとに、酸素が5/12gずつ増える。",
     "add": [
      {
       "t": "box",
@@ -2850,7 +2850,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 136,
       "w": 262,
       "h": 28,
-      "text": "6.0g＜8.0g\n石灰石が先になくなる",
+      "text": "Cu1g→Mg1gで酸素は\n5/12gふえる（2/3−1/4）",
       "color": "#B5622E",
       "fill": "#FFF8EC",
       "size": 10
@@ -2858,7 +2858,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "発生する二酸化炭素は2.64g。",
+    "note": "マグネシウムは1.2g、銅は2.4−1.2＝1.2g。",
     "add": [
      {
       "t": "box",
@@ -2877,7 +2877,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 169,
       "w": 262,
       "h": 28,
-      "text": "0.44×6.0＝2.64g",
+      "text": "Mg＝0.5÷5/12＝1.2g\nCu＝2.4−1.2＝1.2g",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 10
@@ -2885,7 +2885,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
     ]
    },
    {
-    "note": "上限3.52gより小さいので、矛盾しない。",
+    "note": "酸素の合計が1.1gになり、酸化物の合計も3.5gで一致する。",
     "add": [
      {
       "t": "box",
@@ -2904,7 +2904,7 @@ const D: Record<string, { slides: Slide[]; caption: string }> = {
       "y": 202,
       "w": 262,
       "h": 28,
-      "text": "上限は 1.76×2＝3.52g\n2.64g はそれ以下",
+      "text": "Cu1.2→O0.3 Mg1.2→O0.8\n計1.1g 一致",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 10
