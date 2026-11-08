@@ -304,7 +304,6 @@ export const moshi202701ChugakuRika2: Question[] = [
     pitfall: '水温が途中で変わるときは、水温ごとの「水温×日数」を足し合わせて250にします。平均の水温は使えません。',
     memoryTip: 'メダカ：水温×日数≒250でかえる。たまった量を足し算で追いかける。',
   },
-];
   {
     id: 'moshi_2027_01_rika_c38',
     subject: 'rika',
