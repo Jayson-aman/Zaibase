@@ -291,7 +291,7 @@ const c16 = show([
 // c17 湯気
 const kettle = (): DiagramElement[] => [
   bx(20, 100, 70, 44, 'やかん', C.ink, FILL.gray, 12), ln(90, 108, 118, 88, C.ink, false, 4),
-  lb(124, 90, 'ア', 13, C.ink, 'start', true), lb(180, 66, 'イ', 13, C.ink, 'start', true), lb(246, 36, 'ウ', 13, C.ink, 'start', true),
+  lb(124, 90, 'ア', 13, C.ink, 'start', true), lb(212, 50, 'イ', 13, C.ink, 'start', true), lb(246, 36, 'ウ', 13, C.ink, 'start', true),
 ];
 const c17 = show([
   { note: 'やかんの湯をわかしました。注ぎ口のすぐそば（ア）は何も見えず、少し先（イ）は白く、さらに先（ウ）はまた何も見えません。', add: [...kettle(), ...m('ア：見えない　イ：白い')] },
@@ -384,8 +384,8 @@ const c22 = show([
 const cy = (v: number) => 145 - v * 1.3;
 const cylinder = (): DiagramElement[] => [
   ln(130, 15, 130, 145, C.ink, false, 3), ln(170, 15, 170, 145, C.ink, false, 3), ln(130, 145, 170, 145, C.ink, false, 3),
-  ln(130, cy(40), 138, cy(40), C.ink, false, 1.5), ln(130, cy(60), 138, cy(60), C.ink, false, 1.5),
-  lb(124, cy(40) + 4, '40', 10, C.ink, 'end'), lb(124, cy(60) + 4, '60', 10, C.ink, 'end'),
+  ln(130, cy(40), 138, cy(40), C.ink, false, 1.5),
+  lb(124, cy(40) + 4, '40', 10, C.ink, 'end'),
 ];
 const c23 = show([
   { note: '最小目盛り1cm³のメスシリンダーに水を入れ、水面を読むと40cm³でした。', add: [...cylinder(), rect(131, cy(40), 38, 144 - cy(40), C.blue, FILL.blue), ...m('水面は40cm³')] },
