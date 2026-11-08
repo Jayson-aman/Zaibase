@@ -537,6 +537,21 @@ import { figuresSchoolChugaku11 } from './figures-school-chugaku-11';
 import { figuresSchoolChugaku10 } from './figures-school-chugaku-10';
 import { figuresSchoolChugaku08 } from './figures-school-chugaku-08';
 import { figuresSansuGap7 } from './figures-sansu-gap-7';
+import { figuresMoshi202703Kokugo } from './figures-moshi-2027-03-kokugo';
+import { figuresMoshi202703Eigo } from './figures-moshi-2027-03-eigo';
+import { figuresMoshi202703Shakai } from './figures-moshi-2027-03-shakai';
+import { figuresMoshi202703Sansu } from './figures-moshi-2027-03-sansu';
+import { figuresMoshi202703Rika } from './figures-moshi-2027-03-rika';
+import { figuresMoshi202703KokugoChugaku2 } from './figures-moshi-2027-03-kokugo-c2';
+import { figuresMoshi202703KokugoKoko2 } from './figures-moshi-2027-03-kokugo-k2';
+import { figuresMoshi202703EigoChugaku2 } from './figures-moshi-2027-03-eigo-c2';
+import { figuresMoshi202703EigoKoko2 } from './figures-moshi-2027-03-eigo-k2';
+import { figuresMoshi202703ShakaiChugaku2 } from './figures-moshi-2027-03-shakai-c2';
+import { figuresMoshi202703ShakaiKoko2 } from './figures-moshi-2027-03-shakai-k2';
+import { figuresMoshi202703SansuChugaku2 } from './figures-moshi-2027-03-sansu-c2';
+import { figuresMoshi202703SansuKoko2 } from './figures-moshi-2027-03-sansu-k2';
+import { figuresMoshi202703RikaChugaku2 } from './figures-moshi-2027-03-rika-c2';
+import { figuresMoshi202703RikaKoko2 } from './figures-moshi-2027-03-rika-k2';
 import { figuresMoshi202612EigoChugaku1 } from './figures-moshi-2026-12-eigo-c1';
 import { figuresMoshi202612EigoChugaku2 } from './figures-moshi-2026-12-eigo-c2';
 import { figuresMoshi202612EigoKoko1 } from './figures-moshi-2026-12-eigo-k1';
@@ -745,6 +760,21 @@ export const figures: Record<string, Figure> = {
   ...figuresSchoolChugaku10,
   ...figuresSchoolChugaku08,
   ...figuresSansuGap7,
+  ...figuresMoshi202703Kokugo,
+  ...figuresMoshi202703Eigo,
+  ...figuresMoshi202703Shakai,
+  ...figuresMoshi202703Sansu,
+  ...figuresMoshi202703Rika,
+  ...figuresMoshi202703KokugoChugaku2,
+  ...figuresMoshi202703KokugoKoko2,
+  ...figuresMoshi202703EigoChugaku2,
+  ...figuresMoshi202703EigoKoko2,
+  ...figuresMoshi202703ShakaiChugaku2,
+  ...figuresMoshi202703ShakaiKoko2,
+  ...figuresMoshi202703SansuChugaku2,
+  ...figuresMoshi202703SansuKoko2,
+  ...figuresMoshi202703RikaChugaku2,
+  ...figuresMoshi202703RikaKoko2,
   ...figuresMoshi202612EigoChugaku1,
   ...figuresMoshi202612EigoChugaku2,
   ...figuresMoshi202612EigoKoko1,

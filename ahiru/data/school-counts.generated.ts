@@ -12,7 +12,7 @@ export const SCHOOL_COUNTS: Record<string, { total: number; subjects: number }> 
   'kindai': { total: 148, subjects: 5 },
   'kinrankai': { total: 148, subjects: 5 },
   'koko-azabu': { total: 160, subjects: 5 },
-  'koko-general': { total: 3740, subjects: 5 },
+  'koko-general': { total: 3990, subjects: 5 },
   'koko-hibiya': { total: 189, subjects: 5 },
   'koko-kankan': { total: 1415, subjects: 5 },
   'koko-kasei': { total: 186, subjects: 5 },

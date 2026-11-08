@@ -86,6 +86,26 @@ import { moshi202609KokoEigo } from './moshi_2026_09_koko_eigo';
 import { moshi202609KokoShakai } from './moshi_2026_09_koko_shakai';
 import { moshi202609KokoSansu } from './moshi_2026_09_koko_sansu';
 import { moshi202609KokoRika } from './moshi_2026_09_koko_rika';
+import { moshi202703ChugakuKokugo } from './moshi_2027_03_chugaku_kokugo';
+import { moshi202703KokoKokugo } from './moshi_2027_03_koko_kokugo';
+import { moshi202703ChugakuEigo } from './moshi_2027_03_chugaku_eigo';
+import { moshi202703KokoEigo } from './moshi_2027_03_koko_eigo';
+import { moshi202703ChugakuShakai } from './moshi_2027_03_chugaku_shakai';
+import { moshi202703KokoShakai } from './moshi_2027_03_koko_shakai';
+import { moshi202703ChugakuSansu } from './moshi_2027_03_chugaku_sansu';
+import { moshi202703KokoSansu } from './moshi_2027_03_koko_sansu';
+import { moshi202703ChugakuRika } from './moshi_2027_03_chugaku_rika';
+import { moshi202703KokoRika } from './moshi_2027_03_koko_rika';
+import { moshi202703ChugakuKokugo2 } from './moshi_2027_03_chugaku_kokugo_2';
+import { moshi202703KokoKokugo2 } from './moshi_2027_03_koko_kokugo_2';
+import { moshi202703ChugakuEigo2 } from './moshi_2027_03_chugaku_eigo_2';
+import { moshi202703KokoEigo2 } from './moshi_2027_03_koko_eigo_2';
+import { moshi202703ChugakuShakai2 } from './moshi_2027_03_chugaku_shakai_2';
+import { moshi202703KokoShakai2 } from './moshi_2027_03_koko_shakai_2';
+import { moshi202703ChugakuSansu2 } from './moshi_2027_03_chugaku_sansu_2';
+import { moshi202703KokoSansu2 } from './moshi_2027_03_koko_sansu_2';
+import { moshi202703ChugakuRika2 } from './moshi_2027_03_chugaku_rika_2';
+import { moshi202703KokoRika2 } from './moshi_2027_03_koko_rika_2';
 import { moshi202612ChugakuEigo } from './moshi_2026_12_chugaku_eigo';
 import { moshi202612ChugakuEigo2 } from './moshi_2026_12_chugaku_eigo_2';
 import { moshi202612ChugakuKokugo } from './moshi_2026_12_chugaku_kokugo';
@@ -3763,6 +3783,26 @@ const baseQuestions: Question[] = [
   ...moshi202609KokoShakai,
   ...moshi202609KokoSansu,
   ...moshi202609KokoRika,
+  ...moshi202703ChugakuKokugo,
+  ...moshi202703KokoKokugo,
+  ...moshi202703ChugakuEigo,
+  ...moshi202703KokoEigo,
+  ...moshi202703ChugakuShakai,
+  ...moshi202703KokoShakai,
+  ...moshi202703ChugakuSansu,
+  ...moshi202703KokoSansu,
+  ...moshi202703ChugakuRika,
+  ...moshi202703KokoRika,
+  ...moshi202703ChugakuKokugo2,
+  ...moshi202703KokoKokugo2,
+  ...moshi202703ChugakuEigo2,
+  ...moshi202703KokoEigo2,
+  ...moshi202703ChugakuShakai2,
+  ...moshi202703KokoShakai2,
+  ...moshi202703ChugakuSansu2,
+  ...moshi202703KokoSansu2,
+  ...moshi202703ChugakuRika2,
+  ...moshi202703KokoRika2,
   ...moshi202612ChugakuEigo,
   ...moshi202612ChugakuEigo2,
   ...moshi202612ChugakuKokugo,
