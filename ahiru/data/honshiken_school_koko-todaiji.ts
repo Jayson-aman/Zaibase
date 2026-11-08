@@ -1,6 +1,35 @@
 import type { Question } from './questions-meta';
 
-// profile TBD
+// =============================================================================
+// 本試験対策（学校別）東大寺学園高校（course: 'koko-todaiji'）・高校受験 国数英理社 各12問＝60問
+// 本物の過去問・市販問題集の文章・図・数値は使っていない、出題形式に準拠した自作問題。
+// 動く図は data/figures-honshiken-school-koko-todaiji.ts（キー＝問題ID）。結線は呼び出し側で行う。
+//
+// 【入試プロフィール（確認できた範囲だけ）】
+//  ・出典で確認できたこと（ja.wikipedia.org「東大寺学園中学校・高等学校」、2026/11/8取得）：
+//    - 高校からの生徒募集は、2024年度から停止（2023年5月13日に学校サイトで公表と同記事にある）。
+//      したがって、現時点では、高校受験の入試そのものがなく、この問題群は「過去の高校入試の出題形式に
+//      準拠した、最難関校向けの演習」という位置づけになる（画面に学校名の説明は出さない）。
+//  ・プロジェクト内の記録（data/courses.ts）：最難関・偏差値73〜76・男子校・「数理の難度が高い」。
+//  ・出題の型（担当者の知識に基づく。出典では確認できていない）：
+//    - 科目は国語・数学・英語・理科・社会の5教科。リスニングは出さない前提で作った。
+//    - 数学：整数の性質・場合の数と確率・関数と図形（放物線と直線）・平面図形（円・相似・三平方）・
+//      空間図形・規則性を、途中の考え方を重視して問う。12問は、計算1問、整数・規則性3問、確率1問、
+//      関数と図形（動点を含む）2問、図形4問（円と相似・外接円・円すいと球・円と正方形）の構成。
+//    - 国語：評論・小説・古文の読解（本文は自作。古文は徒然草第52段、ja.wikisource.org の校註日本文學大系版で
+//      字句を確認し、教科書に合わせて表記を整えた）、記述は40〜60字、漢字・文法・ことわざの知識問題。
+//    - 理科：物理・化学・生物・地学を3問ずつ。計算（電気・仕事・浮力・質量比・中和・溶解度）と、
+//      実験の考察（蒸散・遺伝・分解）を中心に、中学範囲を超えない。
+//    - 社会：歴史4・地理4・公民4。年代整序・記述（40〜45字）・統計表の読み取り・時事（世界遺産）。
+//    - 英語：長文2題（各3問。内容一致・指示語・英語での記述・要旨・数の読み取り・和訳）と、
+//      整序・書きかえ・和文英訳・自由英作文・文法選択。
+//  ・出典で確認できなかったこと：科目ごとの試験時間・配点・合格最低点、大問の数と並び、
+//    記述の字数の実際の分布、頻出分野の比率（学校公式サイトが許可リスト外のため）。
+//    上の「出題の型」はすべて、実際の出題を確認したものではなく、準拠のしかたの方針である。
+//  ・時事：2026年7月登録の世界遺産（飛鳥・藤原の宮都、日本で27件目）は、プロジェクトの指示書（CLAUDE.md）の
+//    記述に基づく。外部の出典では確認できていない。
+// =============================================================================
+
 export const honshikenSchool_koko_todaiji: Question[] = [
   {
     "id": "honshiken_school_koko_todaiji_sansu_01",
@@ -756,5 +785,223 @@ export const honshikenSchool_koko_todaiji: Question[] = [
     "explanation": "【何を聞かれているか】安全保障理事会の採決の結果を、決議の成立条件に当てはめて判断する。\n【なぜそうなるのか】安全保障理事会は、世界の平和と安全を守る機関で、決定には強い力がある。そのため、常任理事国（アメリカ・イギリス・フランス・ロシア・中国）には、拒否権という特別な権利が認められている。重要な問題の決議には、「15か国のうち9か国以上の賛成」と「常任理事国のどれも反対しないこと」の2つの条件が必要である。賛成の数が多くても、常任理事国が1か国でも反対すれば、決議は成立しない。\n【ステップ1】決議の成立条件を確かめる。実質事項の決議は、①15か国のうち9か国以上が賛成、②常任理事国5か国が、どれも反対しない（拒否権を使わない）。\n【ステップ2】採決結果を①に当てはめる。賛成は13か国で、9か国以上。①は満たしている。\n【ステップ3】②に当てはめる。反対した1か国が常任理事国。常任理事国の反対は、拒否権の行使にあたる。②を満たさない。\n【ステップ4】棄権について確かめる。常任理事国が棄権しても拒否権にはならず、決議の成立をじゃましない（今回の棄権は非常任理事国）。したがって、決議案は成立しない。\n【答え】決議案は成立しない。常任理事国が1か国反対したので、拒否権が使われたことになるから。\n【確かめ】①9か国以上の賛成：13か国で満たす。②常任理事国が反対しない：1か国が反対で満たさない。2つの条件のうち1つを満たさないので、成立しない。「賛成が圧倒的に多くても、1か国の拒否権で止まる」ことは、国連の特徴としてよく出題される。\n【よくあるまちがい】「9か国以上の賛成があれば成立する」と考えて、成立すると答える誤り。9か国以上は必要な条件の1つで、それだけでは足りない。もうひとつは、棄権があると全会一致にならないので否決、と考える誤り。棄権は、拒否権ではない。反対（常任理事国）だけが拒否権になる。",
     "pitfall": "9か国以上の賛成だけで成立と考える。棄権を拒否権と取りちがえる。",
     "memoryTip": "安保理の実質事項：9か国以上の賛成＋常任理事国5か国の反対なし。棄権は拒否権でない。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_01",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "standard",
+    "passage": "Last spring, our school started a small project called the \"Repair Corner.\" Every Friday after school, a few students and a retired engineer, Mr. Tanaka, meet in the science room. They fix broken umbrellas, small radios, and even torn bags that people bring from home. At first, only five students joined, because many of them thought repairing things was boring. However, when they saw an old radio play music again, they were so surprised that they wanted to learn more. Now more than thirty students come every week. Mr. Tanaka says, \"Fixing something teaches you to look carefully at how it is made. That is more important than getting a perfect result.\"",
+    "question": "Why did only five students join the Repair Corner at first?",
+    "answer": "Because many of them thought repairing things was boring.",
+    "choices": [
+      "Because many of them thought repairing things was boring.",
+      "Because Mr. Tanaka did not allow more students to join.",
+      "Because the science room was too small for many students.",
+      "Because they had to bring their own tools from home."
+    ],
+    "hint": "\"At first\" の文を探す。「なぜ」を表す because のあとに理由が書かれている。",
+    "explanation": "【何を聞かれているか】修理クラブに、最初は5人しか入らなかった理由を、本文から選ぶ。\n【なぜそうなるのか】英語の読解で「理由」を問われたら、本文の中の because（〜なので）や so ... that（とても〜なので…）の近くに答えがある。設問の語（only five students, at first）と同じ言葉が出てくる文を探し、その文の because のあとを読む。選択肢は、本文に書かれている内容だけを根拠にして選び、もっともらしい想像は選ばない。\n【ステップ1】設問の手がかりの語を決める。「only five students」「at first（最初は）」。\n【ステップ2】本文から同じ語のある文を探す。\"At first, only five students joined, because many of them thought repairing things was boring.\"\n【ステップ3】because のあとを読む。\"many of them thought repairing things was boring\"（多くの生徒が、ものを直すのはつまらないと思った）。これが理由。\n【ステップ4】他の選択肢を確かめる。「田中さんが入るのを許さなかった」「理科室がせまい」「道具を持ってくる必要がある」は、どれも本文に書かれていない。\n【答え】Because many of them thought repairing things was boring.\n【確かめ】選んだ文を日本語にすると「多くの生徒が、ものを直すのはつまらないと思ったから」。本文の because のあとの内容と同じ意味になっている。他の3つは、本文のどこにも根拠がない。\n【よくあるまちがい】本文に書かれていない常識から、「理科室がせまいから」などの理由を選んでしまう誤り。英語の読解は、本文に書かれていることだけが根拠。また、後半の「もっと学びたくなった」という文を、最初の理由と取りちがえる誤り。それは「今、人が増えた」理由である。",
+    "pitfall": "本文にない想像で理由を選ぶ。「最初」と「今」の理由を混ぜる。",
+    "memoryTip": "理由の設問は「設問の語と同じ語がある文→because のあと」。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_02",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "passage": "Last spring, our school started a small project called the \"Repair Corner.\" Every Friday after school, a few students and a retired engineer, Mr. Tanaka, meet in the science room. They fix broken umbrellas, small radios, and even torn bags that people bring from home. At first, only five students joined, because many of them thought repairing things was boring. However, when they saw an old radio play music again, they were so surprised that they wanted to learn more. Now more than thirty students come every week. Mr. Tanaka says, \"Fixing something teaches you to look carefully at how it is made. That is more important than getting a perfect result.\"",
+    "question": "本文の最後の文 \"That is more important than getting a perfect result.\" の \"That\" は、何を指していますか。日本語で、30字以内で答えなさい。",
+    "answer": "ものがどのように作られているかを、注意深く見ること。",
+    "hint": "指示語は、直前の文の内容を指すことが多い。Mr. Tanaka の言葉の1文目を読む。",
+    "explanation": "【何を聞かれているか】\"That\" が指す内容を、直前の文から見つけて、日本語で書く。\n【なぜそうなるのか】this / that / it などの指示語は、すでに書かれた内容を、短い言葉で受けている。多くの場合、直前の1文（または1つの節）を指す。\"That is more important than ...\" の \"That\" は、田中さんの言葉の1文目 \"Fixing something teaches you to look carefully at how it is made.\" の、「教えてくれるもの」の内容を指す。「それは、完璧な結果を出すことよりも大切だ」という文なので、「大切なもの」が何かを答えればよい。\n【ステップ1】\"That\" の直前の文を読む。\"Fixing something teaches you to look carefully at how it is made.\"（ものを直すことは、それがどのように作られているかを注意深く見ることを教えてくれる）。\n【ステップ2】指す内容を決める。「教えてくれるもの」＝「それがどのように作られているかを、注意深く見ること」。\n【ステップ3】\"That\" を言いかえた文を作って確かめる。「ものがどのように作られているかを注意深く見ることは、完璧な結果を出すことよりも大切だ」。意味が通る。\n【ステップ4】字数を数える。「ものがどのように作られているかを、注意深く見ること。」は26字（句点を含む）で、30字以内に収まる。\n【答え】ものがどのように作られているかを、注意深く見ること。（26字）\n【確かめ】\"That\" の部分に答えを入れて、文を読み直す。「ものがどのように作られているかを、注意深く見ることは、完璧な結果を出すことよりも大切だ」と自然に読める。字数は26字。\n【よくあるまちがい】\"That\" を、1つ前の文全体（Mr. Tanaka says）や、\"a perfect result\"（完璧な結果）と取りちがえる誤り。\"That is more important than a perfect result\" と、比べられるものが \"a perfect result\" なので、\"That\" は別のものである。また、\"Fixing something\"（ものを直すこと）だけを答えて、「注意深く見る」という中身を落とす誤り。",
+    "pitfall": "\"a perfect result\" と同じものだと思う。「ものを直すこと」だけで終わる。",
+    "memoryTip": "指示語は直前の内容。「A is more important than B」の A と B は別のもの。",
+    "isWritten": true,
+    "rubricPoints": [
+      "「ものがどのように作られているか（できているか）」という内容が書かれている",
+      "「注意深く見る」ことが書かれている",
+      "30字以内で書かれている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_03",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "passage": "Last spring, our school started a small project called the \"Repair Corner.\" Every Friday after school, a few students and a retired engineer, Mr. Tanaka, meet in the science room. They fix broken umbrellas, small radios, and even torn bags that people bring from home. At first, only five students joined, because many of them thought repairing things was boring. However, when they saw an old radio play music again, they were so surprised that they wanted to learn more. Now more than thirty students come every week. Mr. Tanaka says, \"Fixing something teaches you to look carefully at how it is made. That is more important than getting a perfect result.\"",
+    "question": "Why do more students come to the Repair Corner now? Answer in English.",
+    "answer": "Because they were surprised when an old radio played music again, and they wanted to learn more.",
+    "hint": "\"However\" から始まる文。so ... that の形（とても〜なので…）の、that 以下の内容を使う。",
+    "explanation": "【何を聞かれているか】参加者がふえた理由を、本文の内容から、英語の1文で答える。\n【なぜそうなるのか】英語で答えるときは、本文の表現をそのまま使うよりも、設問の文に合う形に整えて、主語と動詞がそろった文にする。Why の質問には Because ... で答える。この問題の理由は、\"so surprised that they wanted to learn more\" に書かれている。so ... that は「とても〜なので…」という意味で、「驚いた」→「もっと学びたくなった」という流れを表す。\n【ステップ1】本文から理由の文を探す。\"However, when they saw an old radio play music again, they were so surprised that they wanted to learn more.\"\n【ステップ2】文の意味をとる。「古いラジオが再び音楽を流すのを見たとき、生徒たちはとても驚いたので、もっと学びたくなった」。\n【ステップ3】Because で始まる答えにする。主語は they（生徒たち）。\"they were surprised when an old radio played music again\" と \"they wanted to learn more\" の2つの要素を入れる。\n【ステップ4】過去の文にそろえる。本文の \"play music\"（saw のあとの原形）は、答えの中では過去形 played にする。完成：Because they were surprised when an old radio played music again, and they wanted to learn more.\n【答え】Because they were surprised when an old radio played music again, and they wanted to learn more.\n【確かめ】答えの2つの要素（surprised と wanted to learn more）が入っているか、主語と動詞がそろっているか、時制（過去）がそろっているかを確かめる。they は students を指す。\n【よくあるまちがい】\"Now more than thirty students come every week.\" をそのまま写して答える誤り。これは「人数がふえた」という事実で、理由ではない。また、\"they were so surprised\" だけで終えて、\"wanted to learn more\" を落とす誤り。理由は、驚いたことから、もっと学びたくなったことまでの流れ全体。",
+    "pitfall": "人数がふえたという事実を写す。「驚いた」だけで「学びたい」を落とす。",
+    "memoryTip": "so ... that の文は「原因→結果」。Why の答えは Because＋主語＋動詞。",
+    "isWritten": true,
+    "rubricPoints": [
+      "古いラジオがまた音楽を流したのを見て驚いた（surprised）ことが書かれている",
+      "もっと学びたいと思った（wanted to learn more）ことが書かれている",
+      "主語と動詞がそろった英文になっている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_04",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "standard",
+    "passage": "Some people say that paper books will soon disappear because e-books are cheaper and easier to carry. However, a recent survey in our class showed something different. Of the 30 students, 21 said that they remember a story better when they read it on paper. One student explained, \"When I read a paper book, I can feel how much is left by the weight of the pages in my hand. It helps me keep the whole story in my mind.\" On the other hand, 9 students prefer e-books because they can change the size of the letters and read in the dark. Our teacher says that neither way is better for everyone. What matters is choosing the way that helps you understand and enjoy the story.",
+    "question": "本文の内容に最もよく合うタイトルを選びなさい。",
+    "answer": "Different Readers, Different Choices",
+    "choices": [
+      "Why Paper Books Will Disappear",
+      "Different Readers, Different Choices",
+      "The Best Way to Make E-books",
+      "How to Read Books in the Dark"
+    ],
+    "hint": "筆者の主張は、最後の2文にまとまっている。\"neither way is better for everyone\" の意味を考える。",
+    "explanation": "【何を聞かれているか】文章全体を表すタイトルを選ぶ。\n【なぜそうなるのか】タイトルの問題は、文章の「話題」だけでなく、筆者が最も伝えたいこと（主張）を表しているかで選ぶ。主張は、文章の最初と最後に書かれることが多い。この文章は、最初に「紙の本はなくなる」という意見を出し、調査の結果を示したあと、最後に「どちらがよいかは人による」とまとめている。部分だけをとらえたタイトルや、本文と反対のタイトルは、不適当である。\n【ステップ1】最初の段落の話題を確かめる。「紙の本はなくなる」という意見に対して、\"However\"（しかし）で、クラスの調査結果を示している。\n【ステップ2】調査結果を確かめる。紙の本を好む生徒が21人、電子書籍を好む生徒が9人。人によって、好みが分かれている。\n【ステップ3】最後の文を確かめる。\"neither way is better for everyone\"（どちらの方法も、すべての人にとってよいわけではない）。\"What matters is choosing the way that helps you ...\"（大切なのは、自分に合う方法を選ぶこと）。\n【ステップ4】選択肢を判断する。「読む人がちがえば、選ぶものもちがう（Different Readers, Different Choices）」が、全体の主張と合う。「紙の本はなくなる」は本文と反対。「電子書籍の作り方」や「暗い所での読み方」は、本文の一部の話でもない。\n【答え】Different Readers, Different Choices\n【確かめ】タイトルを日本語にすると「読む人がちがえば、選ぶものもちがう」。本文の最後の主張（人によって合う方法がちがう）と一致する。ほかの3つは、本文と反対か、本文に出てこない話題である。\n【よくあるまちがい】\"in the dark\"（暗い所で読める）という部分を、本文の中心だと考えて「暗い所での読み方」を選んでしまう誤り。これは電子書籍が好まれる理由の1つで、全体の話題ではない。また、最初の文の「紙の本はなくなる」を、筆者の主張だと思いこんで選ぶ誤り。筆者は \"However\" で、それに反対の調査結果を示している。",
+    "pitfall": "一部の話題や、最初に出てくる反対意見を、筆者の主張だと思いこむ。",
+    "memoryTip": "タイトルは「最後のまとめの文」と「however のあとの主張」から選ぶ。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_05",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "passage": "Some people say that paper books will soon disappear because e-books are cheaper and easier to carry. However, a recent survey in our class showed something different. Of the 30 students, 21 said that they remember a story better when they read it on paper. One student explained, \"When I read a paper book, I can feel how much is left by the weight of the pages in my hand. It helps me keep the whole story in my mind.\" On the other hand, 9 students prefer e-books because they can change the size of the letters and read in the dark. Our teacher says that neither way is better for everyone. What matters is choosing the way that helps you understand and enjoy the story.",
+    "question": "本文によると、電子書籍より紙の本を好む生徒は、何人多いですか。数字で答えなさい。",
+    "answer": "12人",
+    "hint": "クラスの生徒数30人のうち、紙の本を好む生徒の数と、電子書籍を好む生徒の数を、それぞれ本文から探す。",
+    "explanation": "【何を聞かれているか】本文の2つの数字を読み取って、その差を求める。\n【なぜそうなるのか】数を問う設問は、本文の数字をそのまま答える問題と、数字を使って計算する問題がある。この問題は、「何人多いか」と聞いているので、2つの数字の差を計算する。数字を探すときは、30、21、9のように複数の数字が出てくるので、それぞれが何の人数なのかを、はっきり区別することが大切である。\n【ステップ1】紙の本を好む生徒の数を探す。\"Of the 30 students, 21 said that they remember a story better when they read it on paper.\"「30人のうち21人が、紙のほうが物語をよく覚えていると答えた」。紙の本が21人。\n【ステップ2】電子書籍を好む生徒の数を探す。\"On the other hand, 9 students prefer e-books ...\" 電子書籍が9人。\n【ステップ3】差を計算する。21−9＝12。\n【ステップ4】確かめ。21＋9＝30で、クラスの生徒数30人と合う。\n【答え】12人\n【確かめ】21＋9＝30で、クラス全員の30人と一致するので、2つの数字の読み取りは正しい。差は 21−9＝12。「30人」を紙の本の人数と取りちがえていないことも、この足し算で確認できる。\n【よくあるまちがい】\"the 30 students\" の30を、紙の本の人数と読みちがえて 30−9＝21 としてしまう誤り。30はクラス全体の人数である。また、「何人多いか」を聞かれているのに、21人をそのまま答える誤り。差を求める問題では、計算が必要。",
+    "pitfall": "30（全体）を紙の本の人数と読む。差を計算せず、21とだけ答える。",
+    "memoryTip": "数の読み取りは、「それぞれの数字が何の人数か」に印をつけてから計算する。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_06",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "passage": "Some people say that paper books will soon disappear because e-books are cheaper and easier to carry. However, a recent survey in our class showed something different. Of the 30 students, 21 said that they remember a story better when they read it on paper. One student explained, \"When I read a paper book, I can feel how much is left by the weight of the pages in my hand. It helps me keep the whole story in my mind.\" On the other hand, 9 students prefer e-books because they can change the size of the letters and read in the dark. Our teacher says that neither way is better for everyone. What matters is choosing the way that helps you understand and enjoy the story.",
+    "question": "本文の最後の文 \"What matters is choosing the way that helps you understand and enjoy the story.\" を、日本語に訳しなさい。",
+    "answer": "大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。",
+    "hint": "What matters＝大切なこと。the way のあとの that は関係代名詞で、「どんな方法か」を説明している。",
+    "explanation": "【何を聞かれているか】関係代名詞を含む文を、文の構造をつかんで日本語にする。\n【なぜそうなるのか】英文を訳すときは、先に文の骨組み（S・V・C）をつかんで、そのあとで飾りの部分を足す。この文の骨組みは、What matters（主語）＋ is（動詞）＋ choosing the way ...（補語）。What matters は「大切なこと」という名詞のかたまり。あとの that helps you ... は、the way を説明する関係代名詞の節で、「あなたが〜するのを助ける（方法）」という意味。説明する部分は、前の語（way）の前に訳して置くと、日本語として自然になる。\n【ステップ1】骨組みをつかむ。What matters（大切なこと）は is（〜だ）、choosing the way ...（その方法を選ぶこと）。\n【ステップ2】「the way that helps you ...」を分解する。the way（方法）＋that helps you understand and enjoy the story（あなたが物語を理解して楽しむのを助ける）。\n【ステップ3】説明を前に置いて訳す。「物語を理解して楽しむのに役立つ方法」。\n【ステップ4】全体をつなぐ。「大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。」\n【答え】大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。\n【確かめ】訳した文を英語にもどして調べる。「大切なのは」＝What matters is、「方法を選ぶこと」＝choosing the way、「物語を理解して楽しむのに役立つ」＝that helps you understand and enjoy the story。3つの部分がすべて訳に入っている。\n【よくあるまちがい】\"What matters\" を「何が大切か」と、疑問の意味に訳してしまう誤り。ここは「大切なこと」という名詞のかたまり。また、\"helps you understand and enjoy\" を「あなたを助けて理解し、楽しむ」のように、help の目的語 you のあとの原形（understand and enjoy）を別の動詞と取りちがえる誤り。help A (to) 原形は「Aが〜するのを助ける」。",
+    "pitfall": "What matters を疑問に訳す。help you 原形 の構造を取りちがえる。",
+    "memoryTip": "訳は「骨組み（S・V・C）→飾り（関係代名詞の節）を前に」。help A 原形＝Aが〜するのを助ける。",
+    "isWritten": true,
+    "rubricPoints": [
+      "「What matters is ～」を「大切なのは～だ」と訳している",
+      "「choosing the way」を「方法を選ぶこと」と訳している",
+      "「that helps you understand and enjoy the story」が「way」を説明していて、「物語を理解して楽しむのに役立つ」と訳している"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_07",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "standard",
+    "question": "次の日本語の意味になるように、（　）内の語を並べかえて、英文を完成しなさい。ただし、文頭の語も小文字で示してあります。\n私が昨日会った男の人は、私の英語の先生でした。\n（ English / I / man / met / my / teacher / the / was / yesterday ）",
+    "answer": "The man I met yesterday was my English teacher.",
+    "hint": "「男の人」を、「私が昨日会った」という説明がうしろから飾る。目的格の関係代名詞は、省略できる。",
+    "explanation": "【何を聞かれているか】語を並べかえて、「私が昨日会った男の人は」を主語にした文をつくる。\n【なぜそうなるのか】「私が昨日会った男の人」のように、名詞（男の人）を、文（私が昨日会った）で説明するときは、英語では名詞の「うしろ」に説明をつける。the man を I met yesterday がうしろから説明する形で、the man I met yesterday となる。この I met yesterday は、man を説明する関係代名詞の節で、本来は the man whom［that］I met yesterday だが、目的格の関係代名詞は省略できる。\n【ステップ1】文の骨組みをつくる。「男の人は、先生でした」＝The man was ... teacher。\n【ステップ2】主語 The man に、説明をつける。「私が昨日会った」＝I met yesterday。これを man のうしろにつなげて、The man I met yesterday。\n【ステップ3】補語をつくる。「私の英語の先生」＝my English teacher。\n【ステップ4】全体をつなぐ。The man I met yesterday was my English teacher.\n【答え】The man I met yesterday was my English teacher.\n【確かめ】使う語を数える。The、man、I、met、yesterday、was、my、English、teacher の9語で、すべての語を1回ずつ使っている。日本語に訳すと「私が昨日会った男の人は、私の英語の先生でした」と、もとの日本語に合う。\n【よくあるまちがい】\"I met yesterday the man\" のように、日本語の語順のまま、「会った」を先に置いてしまう誤り。英語では、説明は名詞のうしろにつく。また、\"was\" を主語のすぐうしろではなく、\"the man was I met ...\" のように、説明の途中に入れてしまう誤り。",
+    "pitfall": "日本語の語順のまま並べる。was を節の途中に入れる。",
+    "memoryTip": "名詞を文で説明するときは、名詞のうしろに置く。目的格の関係代名詞は省略できる。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_08",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "basic",
+    "question": "次の英文の（　）に入る最も適当な語を選びなさい。\nThe girl (　) under the tree is my sister.",
+    "answer": "sitting",
+    "choices": [
+      "sitting",
+      "sat",
+      "sits",
+      "to sit"
+    ],
+    "hint": "the girl を、「木の下にすわっている」という説明がうしろから飾っている。「〜している」を表す形は何か。",
+    "explanation": "【何を聞かれているか】名詞のうしろにつけて、「〜している（人）」と説明する形を選ぶ。\n【なぜそうなるのか】名詞のうしろから「〜している」と説明するときは、現在分詞（動詞の ing 形）を使う。sitting under the tree は、the girl を説明する形容詞のはたらきをして、「木の下にすわっている（少女）」の意味になる。この文には、すでに本動詞 is（is my sister）があるので、もうひとつ動詞（sits など）を入れることはできない。\n【ステップ1】文の動詞を確かめる。この文の動詞は、is（is my sister）。空所に動詞をもう1つ入れると、動詞が2つになって、文の形が成り立たない。\n【ステップ2】空所の働きを確かめる。空所〜under the tree は、the girl を説明するかたまり。\n【ステップ3】説明の形を選ぶ。「〜している」＝現在分詞（ing 形）。「〜された」なら過去分詞。ここは、少女が「すわっている」ので、sitting。\n【ステップ4】他の選択肢を確かめる。sat（過去形）と sits（現在形）は動詞なので不可。to sit は「すわるための」「すわること」の意味になり、ここでは合わない。\n【答え】sitting\n【確かめ】The girl sitting under the tree is my sister. を日本語にすると「木の下にすわっている少女は、私の姉（妹）です」。自然な意味になる。\n【よくあるまちがい】sat を選んで、「すわった」と過去にする誤り。この文の動詞は is で、sat は動詞が2つになる。また、to sit を選んで、「すわるための少女」としてしまう誤りもある。名詞のうしろの「〜している」は ing 形。",
+    "pitfall": "文に動詞が2つになる形（sat・sits）を選ぶ。",
+    "memoryTip": "名詞＋ing形＋語句＝「〜している（名詞）」。文の動詞は1つだけ。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_09",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "standard",
+    "question": "次の文を、too を使って、ほぼ同じ内容の文に書きかえなさい。\nThis box is so heavy that I can't carry it.",
+    "answer": "This box is too heavy for me to carry.",
+    "hint": "so ... that ～ can't は、too ... to ～ に書きかえられる。to のうしろの動詞の目的語に注意。",
+    "explanation": "【何を聞かれているか】so ... that ～ can't の文を、too ... to の文に書きかえる。\n【なぜそうなるのか】too ... to ～ は、「あまりに…なので〜できない」という意味で、so ... that ～ can't とほぼ同じ内容を表す。書きかえの手順は、①that 節の主語（I）を、for ～ で to の前に置く、②can't carry は、to carry にする、③that 節の it は、すでに主語 This box で表されているので、消す。これは、to 不定詞の意味上の目的語が、主語と同じになるため。\n【ステップ1】「too ... to」の形に直す。This box is so heavy → This box is too heavy。\n【ステップ2】that 節の主語 I を、「for me」にして to の前に置く。for me to carry（私が運ぶには）。\n【ステップ3】it を消す。to carry の目的語は、主語の This box なので、it を残すと、「その箱を、それを運ぶ」と二重になる。\n【ステップ4】完成。This box is too heavy for me to carry.\n【答え】This box is too heavy for me to carry.\n【確かめ】元の文は「この箱はとても重いので、私は運べない」、書きかえ後は「この箱は、私が運ぶには重すぎる」。意味が同じになる。carry のうしろに it がなく、二重にならない。\n【よくあるまちがい】\"too heavy for me to carry it\" のように、it を残してしまう誤り。to carry の目的語は、主語 This box と同じなので、it は不要。また、\"too heavy to carry for me\" のように、for me の位置をまちがえる誤り。for me は to の前に置く。",
+    "pitfall": "it を残す。for me の位置をまちがえる。",
+    "memoryTip": "so 形容詞 that S can't V it ＝ too 形容詞 for S to V（it は消す）。"
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_10",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "question": "次の日本語を、英語に直しなさい。\n私が先月買った本は、とてもおもしろかったです。",
+    "answer": "The book I bought last month was very interesting.",
+    "hint": "「私が先月買った」が「本」を説明する。説明は名詞のうしろにつけて、動詞は過去形にそろえる。",
+    "explanation": "【何を聞かれているか】関係代名詞を使った文を、英作文として書く。\n【なぜそうなるのか】日本語の「私が先月買った本」は、「本」を「私が先月買った」が前から説明している。英語では、説明を名詞のうしろにつけるので、the book I bought last month の語順になる。目的格の関係代名詞（that）は省略できる。「おもしろかった」は過去の話なので、was にする。「おもしろい」には interesting（ものがおもしろい）を使い、excited（人がわくわくした）と区別する。\n【ステップ1】主語をつくる。「私が先月買った本」＝the book (that) I bought last month。buy の過去形は bought。\n【ステップ2】動詞をつくる。「〜でした」＝was。過去の話なので、am/is ではなく was。\n【ステップ3】「とてもおもしろい」をつくる。ものが主語なので interesting（おもしろい）。「とても」＝very。\n【ステップ4】全体をつなぐ。The book I bought last month was very interesting.\n【答え】The book I bought last month was very interesting.\n【確かめ】語順は、主語（The book I bought last month）＋動詞（was）＋補語（very interesting）。過去形の bought と was がそろっている。「本がおもしろかった」なので interesting で、「本がわくわくした」の excited ではない。\n【よくあるまちがい】I bought the book last month. と文を2つに分けてしまう誤り（1文にしないといけない）。また、interesting と interested を取りちがえて、\"The book was very interested.\" としてしまう誤り。ものが主語のときは ing 形、人が主語のときは ed 形。",
+    "pitfall": "文を分けてしまう。interesting と interested を取りちがえる。",
+    "memoryTip": "「〜した（名詞）」は名詞のうしろに説明をつける。ものがおもしろい＝interesting。",
+    "isWritten": true,
+    "rubricPoints": [
+      "「私が先月買った本」を the book (that) I bought last month と、名詞のうしろから説明する形で書けている",
+      "動詞が過去形（bought, was）になっている",
+      "「とてもおもしろい」が very interesting などで書けている（interesting と excited を取りちがえていない）",
+      "主語と動詞がそろった1文になっている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_11",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "advanced",
+    "question": "Do you think students should use smartphones at school? Write your opinion in English. Give two reasons. (30語程度)",
+    "answer": "I think students should not use smartphones at school. First, they may not pay attention in class. Second, they can talk with friends face to face during breaks, and that is more fun.",
+    "hint": "賛成でも反対でもよい。立場→理由1→理由2 の順に、簡単な文でまとめる。",
+    "explanation": "【何を聞かれているか】スマートフォンを学校で使うことについて、自分の意見を、理由つきで英語で書く。\n【なぜそうなるのか】自由英作文では、むずかしい表現よりも、「立場・理由・理由」が分かりやすく並んでいるかが大切である。書き出しで立場をはっきり示し（I think ...）、次に First / Second で理由を1つずつ述べる。1文を短くして、確実に正しい文法で書くと、ミスが減る。立場はどちらでもよく、理由が立場とつながっているかが、評価される。\n【ステップ1】立場を決める。ここでは「使うべきではない」（should not）にする。I think students should not use smartphones at school.\n【ステップ2】理由1を考える。授業中に気が散る（pay attention＝注意をはらう）。First, they may not pay attention in class.\n【ステップ3】理由2を考える。休み時間に、友だちと直接話せる。Second, they can talk with friends face to face during breaks, and that is more fun.\n【ステップ4】3つをつなげて、全体を見直す。語数は33語。三単現の s、助動詞のうしろの原形などが、正しく使えているか確かめる。\n【答え】（例）I think students should not use smartphones at school. First, they may not pay attention in class. Second, they can talk with friends face to face during breaks, and that is more fun.\n【確かめ】「立場」「理由1（First）」「理由2（Second）」の3つがそろっているか。may not pay、can talk のように、助動詞のうしろが原形になっているか。語数が30語前後（この例は33語）か、を確かめる。\n【よくあるまちがい】立場を書かずに、理由だけを並べてしまう誤り。また、理由が立場と反対になってしまう誤り（「使うべきではない」と書いて、「便利だから」を理由にするなど）。ほかに、\"students should not to use\" のように、助動詞のうしろに to を入れてしまう誤りもある。",
+    "pitfall": "立場を書かない。理由が立場と食いちがう。助動詞のうしろに to を入れる。",
+    "memoryTip": "自由英作文は「立場→First（理由1）→Second（理由2）」。短い文で確実に書く。",
+    "isWritten": true,
+    "rubricPoints": [
+      "質問に対する立場（賛成または反対）を、I think ... で明確に書いている",
+      "理由が2つ、First / Second などでわかりやすく書かれている",
+      "文法・つづりの大きな誤りがない（主語と動詞、三単現、過去形などがそろっている）",
+      "30語前後の分量で書いている"
+    ]
+  },
+  {
+    "id": "honshiken_school_koko_todaiji_eigo_12",
+    "subject": "eigo",
+    "examType": "koko",
+    "course": "koko-todaiji",
+    "difficulty": "standard",
+    "question": "次の英文の（　）に入る最も適当な語を選びなさい。\nI don't know (　) he will come to the party tomorrow.",
+    "answer": "whether",
+    "choices": [
+      "whether",
+      "that",
+      "what",
+      "where"
+    ],
+    "hint": "「彼が来るかどうか」という意味になる語。know のあとに、「〜かどうか」を表す語を置く。",
+    "explanation": "【何を聞かれているか】know のあとに続く、「〜かどうか」を表す接続詞を選ぶ。\n【なぜそうなるのか】「〜かどうか」を表す接続詞は、whether（または if）である。I don't know whether he will come. は、「彼が来るかどうか、私は知らない」。he will come のうしろに、だれが・何を・どこでなどの情報が不足していないので、what や where は入らない。また、that は「〜ということ」で、事実を述べる文なので、「かどうか」の意味にならない。\n【ステップ1】文の意味を考える。I don't know ... he will come to the party tomorrow. 「（　）、彼が明日パーティーに来る、私は知らない」。\n【ステップ2】空所の意味を決める。「彼が来るかどうか」。来るか来ないか、2つに1つ。\n【ステップ3】「かどうか」を表す語は whether。選択肢の中では whether だけが、この意味をもつ。\n【ステップ4】他の選択肢を確かめる。that は「〜ということ」で、事実の内容を述べる語。what は「何」、where は「どこ」で、he will come to the party の文には、足りない情報が何もなく、入らない。\n【答え】whether\n【確かめ】I don't know whether he will come to the party tomorrow. を日本語にすると「彼が明日パーティーに来るかどうか、私は知りません」。自然な意味になる。\n【よくあるまちがい】that を選んで、「彼が来るということを知らない」と考えてしまう誤り。文の意味が変わってしまう。また、where を選んで「どこにパーティーに来るか」と考える誤り。he will come to the party は、すでに「どこ」が書かれている。",
+    "pitfall": "that を、何にでも使える接続詞だと思う。where や what の意味を文に当てはめない。",
+    "memoryTip": "「〜かどうか」＝whether（if）。know / ask / wonder のあとでよく使う。"
   }
 ];

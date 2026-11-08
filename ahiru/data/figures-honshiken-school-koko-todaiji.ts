@@ -23898,6 +23898,5497 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    }
   ]
+ },
+ "honshiken_school_koko_todaiji_eigo_01": {
+  "caption": "答え　Because many of them thought repairing things was boring.",
+  "slides": [
+   {
+    "note": "修理クラブに、最初は5人しか入らなかった理由を、本文から選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Why only five students",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "joined at first?",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "英語の読解で「理由」を問われたら、本文の中の because（〜なので）や so ... that（とても〜なので…）の近くに答えがある。設問の語（only five students, at first）と同じ言葉が出てくる文を探し、その文の because のあとを読む。選択肢は、本文に書かれている内容だけを根拠にして選び、もっともらしい想像は選ばない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "「理由」は because の近く",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "設問の語を本文から探す",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "本文にある内容だけ選ぶ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "設問の手がかりの語を決める。「only five students」「at first（最初は）」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "手がかりの語",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "only five students",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "at first",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "本文から同じ語のある文を探す。\"At first, only five students joined, because many of them thought repairing things was boring.\"",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "At first, only five",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "students joined, because",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "…",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "because のあとを読む。\"many of them thought repairing things was boring\"（多くの生徒が、ものを直すのはつまらないと思った）。これが理由。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "because のあと",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "many thought repairing",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "was boring",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢を確かめる。「田中さんが入るのを許さなかった」「理科室がせまい」「道具を持ってくる必要がある」は、どれも本文に書かれていない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "他の3つは本文にない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "許可・せまい・道具",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "→根拠なし",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは Because many of them thought repairing things was boring. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "Because many of them thought",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "repairing things was boring.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "選んだ文を日本語にすると「多くの生徒が、ものを直すのはつまらないと思ったから」。本文の because のあとの内容と同じ意味になっている。他の3つは、本文のどこにも根拠がない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "多くの生徒が",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "つまらないと思ったから",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "because のあとと同じ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "他は根拠がない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "本文に書かれていない常識から、「理科室がせまいから」などの理由を選んでしまう誤り。英語の読解は、本文に書かれていることだけが根拠。また、後半の「もっと学びたくなった」という文を、最初の理由と取りちがえる誤り。それは「今、人が増えた」理由である。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "本文にない理由は選ばない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "「最初」と「今」を",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "混ぜない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "今の理由は別の文",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_02": {
+  "caption": "答え　ものがどのように作られているかを、注意深く見ること",
+  "slides": [
+   {
+    "note": "\"That\" が指す内容を、直前の文から見つけて、日本語で書く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "\"That\" が指す内容は？",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "日本語で30字以内",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "this / that / it などの指示語は、すでに書かれた内容を、短い言葉で受けている。多くの場合、直前の1文（または1つの節）を指す。\"That is more important than ...\" の \"That\" は、田中さんの言葉の1文目 \"Fixing something teaches you to look carefully at how it is made.\" の、「教えてくれるもの」の内容を指す。「それは、完璧な結果を出すことよりも大切だ」という文なので、「大切なもの」が何かを答えればよい。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "指示語は直前の内容",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "\"That is more important",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "than a perfect result\"",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"That\" の直前の文を読む。\"Fixing something teaches you to look carefully at how it is made.\"（ものを直すことは、それがどのように作られているかを注意深く見ることを教えてくれる）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "直前の文",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Fixing something teaches",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "you to look carefully",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "at how it is made.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "指す内容を決める。「教えてくれるもの」＝「それがどのように作られているかを、注意深く見ること」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "教えてくれるもの",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "＝ものの作られ方を",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "注意深く見ること",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"That\" を言いかえた文を作って確かめる。「ものがどのように作られているかを注意深く見ることは、完璧な結果を出すことよりも大切だ」。意味が通る。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "言いかえて確かめる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "作られ方を見ることは",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "完璧な結果より大切",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "字数を数える。「ものがどのように作られているかを、注意深く見ること。」は26字（句点を含む）で、30字以内に収まる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "26字（句点を含む）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "30字以内に収まる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "指示語の置きかえ。That の部分に、見つけた内容を入れて、文が自然に読めるかを確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "That＝ものの作られ方を",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "注意深く見ること",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "結果より大切",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "→意味が通る",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは ものがどのように作られているかを、注意深く見ること。（26字） です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "ものがどのように作られて",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "いるかを注意深く見ること",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"That\" の部分に答えを入れて、文を読み直す。「ものがどのように作られているかを、注意深く見ることは、完璧な結果を出すことよりも大切だ」と自然に読める。字数は26字。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "That に答えを入れる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "完璧な結果より大切",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "自然に読める",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "26字　30字以内",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"That\" を、1つ前の文全体（Mr. Tanaka says）や、\"a perfect result\"（完璧な結果）と取りちがえる誤り。\"That is more important than a perfect result\" と、比べられるものが \"a perfect result\" なので、\"That\" は別のものである。また、\"Fixing something\"（ものを直すこと）だけを答えて、「注意深く見る」という中身を落とす誤り。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "a perfect result ではない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "比べる相手は別のもの",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "「直すこと」だけは不足",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "「注意深く見る」を入れる",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_03": {
+  "caption": "答え　they were surprised and wanted to learn more",
+  "slides": [
+   {
+    "note": "参加者がふえた理由を、本文の内容から、英語の1文で答える。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "Why do more students",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "come now?",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "Answer in English.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "英語で答えるときは、本文の表現をそのまま使うよりも、設問の文に合う形に整えて、主語と動詞がそろった文にする。Why の質問には Because ... で答える。この問題の理由は、\"so surprised that they wanted to learn more\" に書かれている。so ... that は「とても〜なので…」という意味で、「驚いた」→「もっと学びたくなった」という流れを表す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "Why → Because で答える",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "so ... that＝原因→結果",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "主語と動詞をそろえる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "本文から理由の文を探す。\"However, when they saw an old radio play music again, they were so surprised that they wanted to learn more.\"",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "However, when they saw",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "an old radio play music again,",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "they were so surprised that",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "they wanted to learn more.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "文の意味をとる。「古いラジオが再び音楽を流すのを見たとき、生徒たちはとても驚いたので、もっと学びたくなった」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "古いラジオがまた鳴り",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "とても驚いたので",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "もっと学びたくなった",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "Because で始まる答えにする。主語は they（生徒たち）。\"they were surprised when an old radio played music again\" と \"they wanted to learn more\" の2つの要素を入れる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "Because they were surprised",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "…and they wanted to learn more",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "要素は2つ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "過去の文にそろえる。本文の \"play music\"（saw のあとの原形）は、答えの中では過去形 played にする。完成：Because they were surprised when an old radio played music again, and they wanted to learn more.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "play → played",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "過去形にそろえる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "文を完成させる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは Because they were surprised when an old radio played music again, and they wanted to learn more. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Because they were surprised",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "when an old radio played music",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "again, and wanted to learn more.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えの2つの要素（surprised と wanted to learn more）が入っているか、主語と動詞がそろっているか、時制（過去）がそろっているかを確かめる。they は students を指す。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "surprised がある",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "wanted to learn more がある",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "主語と動詞がそろう",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "時制は過去",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"Now more than thirty students come every week.\" をそのまま写して答える誤り。これは「人数がふえた」という事実で、理由ではない。また、\"they were so surprised\" だけで終えて、\"wanted to learn more\" を落とす誤り。理由は、驚いたことから、もっと学びたくなったことまでの流れ全体。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "人数がふえた事実は理由でない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Now more than thirty…",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "「驚いた」だけは不足",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "学びたいまで書く",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_04": {
+  "caption": "答え　Different Readers, Different Choices",
+  "slides": [
+   {
+    "note": "文章全体を表すタイトルを選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "Which title fits the passage?",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "タイトルを選ぶ",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "タイトルの問題は、文章の「話題」だけでなく、筆者が最も伝えたいこと（主張）を表しているかで選ぶ。主張は、文章の最初と最後に書かれることが多い。この文章は、最初に「紙の本はなくなる」という意見を出し、調査の結果を示したあと、最後に「どちらがよいかは人による」とまとめている。部分だけをとらえたタイトルや、本文と反対のタイトルは、不適当である。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "タイトル＝筆者の主張",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "主張は最後にまとまる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "一部の話題は不適当",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "最初の段落の話題を確かめる。「紙の本はなくなる」という意見に対して、\"However\"（しかし）で、クラスの調査結果を示している。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "最初の意見",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "paper books will disappear",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "However…で反対の調査",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "調査結果を確かめる。紙の本を好む生徒が21人、電子書籍を好む生徒が9人。人によって、好みが分かれている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "調査の結果",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "paper 21人　e-book 9人",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "好みは分かれる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "最後の文を確かめる。\"neither way is better for everyone\"（どちらの方法も、すべての人にとってよいわけではない）。\"What matters is choosing the way that helps you ...\"（大切なのは、自分に合う方法を選ぶこと）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "最後の主張",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "neither way is better",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "for everyone",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "選択肢を判断する。「読む人がちがえば、選ぶものもちがう（Different Readers, Different Choices）」が、全体の主張と合う。「紙の本はなくなる」は本文と反対。「電子書籍の作り方」や「暗い所での読み方」は、本文の一部の話でもない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "Different Readers,",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "Different Choices",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "＝全体の主張と合う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは Different Readers, Different Choices です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "Different Readers,",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "Different Choices",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "タイトルを日本語にすると「読む人がちがえば、選ぶものもちがう」。本文の最後の主張（人によって合う方法がちがう）と一致する。ほかの3つは、本文と反対か、本文に出てこない話題である。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "読む人がちがえば",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "選ぶものもちがう",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "最後の主張と一致",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "他は反対か話題外",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"in the dark\"（暗い所で読める）という部分を、本文の中心だと考えて「暗い所での読み方」を選んでしまう誤り。これは電子書籍が好まれる理由の1つで、全体の話題ではない。また、最初の文の「紙の本はなくなる」を、筆者の主張だと思いこんで選ぶ誤り。筆者は \"However\" で、それに反対の調査結果を示している。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "in the dark は一部",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "最初の意見は主張でない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "However に注意",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "最後のまとめを見る",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_05": {
+  "caption": "答え　12人",
+  "slides": [
+   {
+    "note": "本文の2つの数字を読み取って、その差を求める。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "How many more students",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "prefer paper books",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "than e-books?",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "数を問う設問は、本文の数字をそのまま答える問題と、数字を使って計算する問題がある。この問題は、「何人多いか」と聞いているので、2つの数字の差を計算する。数字を探すときは、30、21、9のように複数の数字が出てくるので、それぞれが何の人数なのかを、はっきり区別することが大切である。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "数字が3つ出てくる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "30＝全体　21＝紙　9＝電子",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "「何人多い」は差を求める",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "紙の本を好む生徒の数を探す。\"Of the 30 students, 21 said that they remember a story better when they read it on paper.\"「30人のうち21人が、紙のほうが物語をよく覚えていると答えた」。紙の本が21人。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "21 said they remember",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "a story better on paper",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "紙の本＝21人",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "電子書籍を好む生徒の数を探す。\"On the other hand, 9 students prefer e-books ...\" 電子書籍が9人。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "9 students prefer e-books",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "電子書籍＝9人",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "差を計算する。21−9＝12。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "差を計算する",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "21−9＝12",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "確かめ。21＋9＝30で、クラスの生徒数30人と合う。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "確かめ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "21＋9＝30",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "全体の30人と合う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは 12人 です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "答え　12人",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "21＋9＝30で、クラス全員の30人と一致するので、2つの数字の読み取りは正しい。差は 21−9＝12。「30人」を紙の本の人数と取りちがえていないことも、この足し算で確認できる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "21＋9＝30",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "全体の30人と一致",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "読み取りは正しい",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "差は21−9＝12",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"the 30 students\" の30を、紙の本の人数と読みちがえて 30−9＝21 としてしまう誤り。30はクラス全体の人数である。また、「何人多いか」を聞かれているのに、21人をそのまま答える誤り。差を求める問題では、計算が必要。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "30は全体の人数",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "紙の人数ではない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "「多い」は差を求める",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "21だけは不足",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_06": {
+  "caption": "答え　大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。",
+  "slides": [
+   {
+    "note": "関係代名詞を含む文を、文の構造をつかんで日本語にする。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "What matters is choosing",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "the way that helps you",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "understand and enjoy the story.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "日本語に訳す",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "英文を訳すときは、先に文の骨組み（S・V・C）をつかんで、そのあとで飾りの部分を足す。この文の骨組みは、What matters（主語）＋ is（動詞）＋ choosing the way ...（補語）。What matters は「大切なこと」という名詞のかたまり。あとの that helps you ... は、the way を説明する関係代名詞の節で、「あなたが〜するのを助ける（方法）」という意味。説明する部分は、前の語（way）の前に訳して置くと、日本語として自然になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "まず骨組みをつかむ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "S・V・C",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "飾りの部分は後で足す",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "骨組みをつかむ。What matters（大切なこと）は is（〜だ）、choosing the way ...（その方法を選ぶこと）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "What matters＝大切なこと",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "is＝〜だ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "choosing the way＝方法を選ぶこと",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「the way that helps you ...」を分解する。the way（方法）＋that helps you understand and enjoy the story（あなたが物語を理解して楽しむのを助ける）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "the way＝方法",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "that helps you … the story",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "＝物語を理解し楽しむのを助ける",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "説明を前に置いて訳す。「物語を理解して楽しむのに役立つ方法」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "説明を前に置く",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "物語を理解して楽しむのに",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "役立つ方法",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "全体をつなぐ。「大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。」",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "大切なのは、物語を",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "理解して楽しむのに役立つ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "方法を選ぶことだ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは 大切なのは、物語を理解して楽しむのに役立つ方法を選ぶことだ。 です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "大切なのは、物語を理解して",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "楽しむのに役立つ方法を選ぶことだ。",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "訳した文を英語にもどして調べる。「大切なのは」＝What matters is、「方法を選ぶこと」＝choosing the way、「物語を理解して楽しむのに役立つ」＝that helps you understand and enjoy the story。3つの部分がすべて訳に入っている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "大切なのは＝What matters is",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "方法を選ぶ＝choosing the way",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "役立つ＝helps you …",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "3つとも入っている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"What matters\" を「何が大切か」と、疑問の意味に訳してしまう誤り。ここは「大切なこと」という名詞のかたまり。また、\"helps you understand and enjoy\" を「あなたを助けて理解し、楽しむ」のように、help の目的語 you のあとの原形（understand and enjoy）を別の動詞と取りちがえる誤り。help A (to) 原形は「Aが〜するのを助ける」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "What matters は疑問でない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "「大切なこと」の名詞句",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "help A 原形の構造",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "原形は別の動詞でない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_07": {
+  "caption": "答え　The man I met yesterday was my English teacher.",
+  "slides": [
+   {
+    "note": "語を並べかえて、「私が昨日会った男の人は」を主語にした文をつくる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "語を並べかえる",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "私が昨日会った男の人は",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "私の英語の先生でした",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「私が昨日会った男の人」のように、名詞（男の人）を、文（私が昨日会った）で説明するときは、英語では名詞の「うしろ」に説明をつける。the man を I met yesterday がうしろから説明する形で、the man I met yesterday となる。この I met yesterday は、man を説明する関係代名詞の節で、本来は the man whom［that］I met yesterday だが、目的格の関係代名詞は省略できる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "名詞は文で説明できる",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "説明は名詞のうしろ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "目的格の関係代名詞は省略可",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "文の骨組みをつくる。「男の人は、先生でした」＝The man was ... teacher。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "骨組み",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "The man was … teacher",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語 The man に、説明をつける。「私が昨日会った」＝I met yesterday。これを man のうしろにつなげて、The man I met yesterday。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "the man ← I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "補語をつくる。「私の英語の先生」＝my English teacher。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "補語",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "my English teacher",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "全体をつなぐ。The man I met yesterday was my English teacher.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "完成",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "was my English teacher.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "説明の位置。「私が昨日会った」は、日本語では名詞の前、英語では名詞のうしろにつく。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "The man",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "was",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "my English teacher",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは The man I met yesterday was my English teacher. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "was my English teacher.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "使う語を数える。The、man、I、met、yesterday、was、my、English、teacher の9語で、すべての語を1回ずつ使っている。日本語に訳すと「私が昨日会った男の人は、私の英語の先生でした」と、もとの日本語に合う。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "9語をすべて使う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "The man I met yesterday",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "was my English teacher",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "日本語と合う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"I met yesterday the man\" のように、日本語の語順のまま、「会った」を先に置いてしまう誤り。英語では、説明は名詞のうしろにつく。また、\"was\" を主語のすぐうしろではなく、\"the man was I met ...\" のように、説明の途中に入れてしまう誤り。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "日本語の語順にしない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "説明は名詞のうしろ",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "was は説明の後",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "節の途中に入れない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_08": {
+  "caption": "答え　sitting",
+  "slides": [
+   {
+    "note": "名詞のうしろにつけて、「〜している（人）」と説明する形を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "The girl (　) under the tree",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "is my sister.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "名詞のうしろから「〜している」と説明するときは、現在分詞（動詞の ing 形）を使う。sitting under the tree は、the girl を説明する形容詞のはたらきをして、「木の下にすわっている（少女）」の意味になる。この文には、すでに本動詞 is（is my sister）があるので、もうひとつ動詞（sits など）を入れることはできない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "名詞のうしろから説明",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "「〜している」＝ing形",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "文の動詞は is の1つだけ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "文の動詞を確かめる。この文の動詞は、is（is my sister）。空所に動詞をもう1つ入れると、動詞が2つになって、文の形が成り立たない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "この文の動詞は is",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "空所に動詞は入らない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "空所の働きを確かめる。空所〜under the tree は、the girl を説明するかたまり。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "(　)under the tree",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "＝the girl を説明する",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "説明の形を選ぶ。「〜している」＝現在分詞（ing 形）。「〜された」なら過去分詞。ここは、少女が「すわっている」ので、sitting。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "「〜している」",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "＝現在分詞（ing形）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "sitting",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢を確かめる。sat（過去形）と sits（現在形）は動詞なので不可。to sit は「すわるための」「すわること」の意味になり、ここでは合わない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "sat・sits は動詞",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "to sit は意味が違う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "sitting が正解",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは sitting です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "答え　sitting",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "The girl sitting under the tree is my sister. を日本語にすると「木の下にすわっている少女は、私の姉（妹）です」。自然な意味になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "The girl sitting under",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "the tree is my sister.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "木の下にすわっている少女",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "自然な意味になる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "sat を選んで、「すわった」と過去にする誤り。この文の動詞は is で、sat は動詞が2つになる。また、to sit を選んで、「すわるための少女」としてしまう誤りもある。名詞のうしろの「〜している」は ing 形。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "sat は動詞が2つになる",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "sits も同じ",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "to sit は意味が合わない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "名詞のうしろはing形",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_09": {
+  "caption": "答え　This box is too heavy for me to carry.",
+  "slides": [
+   {
+    "note": "so ... that ～ can't の文を、too ... to の文に書きかえる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "so heavy that I can't carry it",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "＝ too heavy ...",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "too ... to ～ は、「あまりに…なので〜できない」という意味で、so ... that ～ can't とほぼ同じ内容を表す。書きかえの手順は、①that 節の主語（I）を、for ～ で to の前に置く、②can't carry は、to carry にする、③that 節の it は、すでに主語 This box で表されているので、消す。これは、to 不定詞の意味上の目的語が、主語と同じになるため。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "too … to ～＝あまりに…で～できない",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "so … that ～ can't と同じ内容",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "手順は3つ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「too ... to」の形に直す。This box is so heavy → This box is too heavy。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "so heavy → too heavy",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "that 節の主語 I を、「for me」にして to の前に置く。for me to carry（私が運ぶには）。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "that節の主語 I",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "→ for me to carry",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "it を消す。to carry の目的語は、主語の This box なので、it を残すと、「その箱を、それを運ぶ」と二重になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "it は消す",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "to carry の目的語は",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "主語の This box",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "完成。This box is too heavy for me to carry.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "完成",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "This box is too heavy",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "for me to carry.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "書きかえの対応。so heavy が too heavy に、that I can't carry it が for me to carry に変わる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "so heavy → too heavy",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "I → for me",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "can't carry it → to carry",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは This box is too heavy for me to carry. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "This box is too heavy",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "for me to carry.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "元の文は「この箱はとても重いので、私は運べない」、書きかえ後は「この箱は、私が運ぶには重すぎる」。意味が同じになる。carry のうしろに it がなく、二重にならない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "元：重いので運べない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "後：運ぶには重すぎる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "意味が同じ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "it が残っていない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "\"too heavy for me to carry it\" のように、it を残してしまう誤り。to carry の目的語は、主語 This box と同じなので、it は不要。また、\"too heavy to carry for me\" のように、for me の位置をまちがえる誤り。for me は to の前に置く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "it を残さない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "二重になる",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "for me は to の前",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "to carry for me は誤り",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_10": {
+  "caption": "答え　The book I bought last month was very interesting.",
+  "slides": [
+   {
+    "note": "関係代名詞を使った文を、英作文として書く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "私が先月買った本は、",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "とてもおもしろかった",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "英語に直す",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "日本語の「私が先月買った本」は、「本」を「私が先月買った」が前から説明している。英語では、説明を名詞のうしろにつけるので、the book I bought last month の語順になる。目的格の関係代名詞（that）は省略できる。「おもしろかった」は過去の話なので、was にする。「おもしろい」には interesting（ものがおもしろい）を使い、excited（人がわくわくした）と区別する。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "説明は名詞のうしろ",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "過去の話は過去形",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "ものがおもしろい＝interesting",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "主語をつくる。「私が先月買った本」＝the book (that) I bought last month。buy の過去形は bought。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "私が先月買った本",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "the book I bought last month",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "buy→bought",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "動詞をつくる。「〜でした」＝was。過去の話なので、am/is ではなく was。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "〜でした",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "was（過去形）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「とてもおもしろい」をつくる。ものが主語なので interesting（おもしろい）。「とても」＝very。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "とてもおもしろい",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "very interesting",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "ものが主語→ing形",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "全体をつなぐ。The book I bought last month was very interesting.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "完成",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The book I bought last month",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "was very interesting.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "語順の確認。主語、動詞、補語の順に並べる。主語のかたまりは、the book が先で、説明がうしろにつく。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "The book",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "I bought last month",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "was",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "very interesting",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは The book I bought last month was very interesting. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "The book I bought last month",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "was very interesting.",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "語順は、主語（The book I bought last month）＋動詞（was）＋補語（very interesting）。過去形の bought と was がそろっている。「本がおもしろかった」なので interesting で、「本がわくわくした」の excited ではない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "主語＋動詞＋補語",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "bought と was",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "interesting（ing形）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "1文になっている",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "I bought the book last month. と文を2つに分けてしまう誤り（1文にしないといけない）。また、interesting と interested を取りちがえて、\"The book was very interested.\" としてしまう誤り。ものが主語のときは ing 形、人が主語のときは ed 形。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "文を2つに分けない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "interested は誤り",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "ものが主語は ing形",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "人が主語は ed形",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_11": {
+  "caption": "答え　立場→理由1→理由2 の3段で書く",
+  "slides": [
+   {
+    "note": "スマートフォンを学校で使うことについて、自分の意見を、理由つきで英語で書く。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "スマートフォンは",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "学校で使うべきか",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "立場と理由2つを英語で",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "自由英作文では、むずかしい表現よりも、「立場・理由・理由」が分かりやすく並んでいるかが大切である。書き出しで立場をはっきり示し（I think ...）、次に First / Second で理由を1つずつ述べる。1文を短くして、確実に正しい文法で書くと、ミスが減る。立場はどちらでもよく、理由が立場とつながっているかが、評価される。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "立場・理由・理由の順",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "1文は短く",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "確実な文法で書く",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "立場を決める。ここでは「使うべきではない」（should not）にする。I think students should not use smartphones at school.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "立場",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "I think students should not",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "use smartphones at school.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "理由1を考える。授業中に気が散る（pay attention＝注意をはらう）。First, they may not pay attention in class.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "理由1",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "First, they may not",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "pay attention in class.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "理由2を考える。休み時間に、友だちと直接話せる。Second, they can talk with friends face to face during breaks, and that is more fun.",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "理由2",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "Second, they can talk with",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "friends face to face.",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "3つをつなげて、全体を見直す。語数は33語。三単現の s、助動詞のうしろの原形などが、正しく使えているか確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "見直し",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "33語（30語程度）",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "助動詞のうしろは原形",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは （例）I think students should not use smartphones at school. First, they may not pay attention in class. Second, they can talk with friends face to face during breaks, and that is more fun. です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "答え（例）",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "立場＋理由1＋理由2",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "の3段でまとめる",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「立場」「理由1（First）」「理由2（Second）」の3つがそろっているか。may not pay、can talk のように、助動詞のうしろが原形になっているか。語数が30語前後（この例は33語）か、を確かめる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "立場がある",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "First と Second",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "助動詞＋原形",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "33語で30語前後",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "立場を書かずに、理由だけを並べてしまう誤り。また、理由が立場と反対になってしまう誤り（「使うべきではない」と書いて、「便利だから」を理由にするなど）。ほかに、\"students should not to use\" のように、助動詞のうしろに to を入れてしまう誤りもある。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "立場を書かない",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "理由が立場と反対",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "should not to は誤り",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "助動詞＋原形",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
+ },
+ "honshiken_school_koko_todaiji_eigo_12": {
+  "caption": "答え　whether",
+  "slides": [
+   {
+    "note": "know のあとに続く、「〜かどうか」を表す接続詞を選ぶ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "I don't know (　) he will",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "come to the party tomorrow.",
+      "color": "#6E645C",
+      "fill": "#F1EFEA",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「〜かどうか」を表す接続詞は、whether（または if）である。I don't know whether he will come. は、「彼が来るかどうか、私は知らない」。he will come のうしろに、だれが・何を・どこでなどの情報が不足していないので、what や where は入らない。また、that は「〜ということ」で、事実を述べる文なので、「かどうか」の意味にならない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "「かどうか」を表す語",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "＝whether（if）",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "文の意味から空所を決める",
+      "color": "#9333EA",
+      "fill": "#F3E8FF",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "文の意味を考える。I don't know ... he will come to the party tomorrow. 「（　）、彼が明日パーティーに来る、私は知らない」。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "「彼が明日パーティーに",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "来る、私は知らない」",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "空所に何が入る？",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "空所の意味を決める。「彼が来るかどうか」。来るか来ないか、2つに1つ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "来るか来ないかの2つ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "＝「かどうか」",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "「かどうか」を表す語は whether。選択肢の中では whether だけが、この意味をもつ。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "「かどうか」＝whether",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "選択肢では whether だけ",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "他の選択肢を確かめる。that は「〜ということ」で、事実の内容を述べる語。what は「何」、where は「どこ」で、he will come to the party の文には、足りない情報が何もなく、入らない。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 67,
+      "w": 280,
+      "h": 30,
+      "text": "that は意味が違う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "what・where は不要",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 143,
+      "w": 280,
+      "h": 30,
+      "text": "whether が正解",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "答えは whether です。ここまでの流れを、もう一度たどって確かめましょう。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 105,
+      "w": 280,
+      "h": 30,
+      "text": "答え　whether",
+      "color": "#16A34A",
+      "fill": "#DCFCE7",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "I don't know whether he will come to the party tomorrow. を日本語にすると「彼が明日パーティーに来るかどうか、私は知りません」。自然な意味になる。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "彼が来るかどうか",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "私は知らない",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "自然な意味になる",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "他の3つは意味が違う",
+      "color": "#0284C7",
+      "fill": "#E0F2FE",
+      "size": 14
+     }
+    ]
+   },
+   {
+    "note": "that を選んで、「彼が来るということを知らない」と考えてしまう誤り。文の意味が変わってしまう。また、where を選んで「どこにパーティーに来るか」と考える誤り。he will come to the party は、すでに「どこ」が書かれている。",
+    "add": [
+     {
+      "t": "box",
+      "x": 0,
+      "y": 0,
+      "w": 320,
+      "h": 240,
+      "color": "#FFFFFF",
+      "fill": "#FFFFFF",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 48,
+      "w": 280,
+      "h": 30,
+      "text": "that は「〜ということ」",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 86,
+      "w": 280,
+      "h": 30,
+      "text": "事実の内容を述べる語",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 124,
+      "w": 280,
+      "h": 30,
+      "text": "where は「どこ」",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     },
+     {
+      "t": "box",
+      "x": 20,
+      "y": 162,
+      "w": 280,
+      "h": 30,
+      "text": "文に情報が足りている",
+      "color": "#E11D48",
+      "fill": "#FFE4E6",
+      "size": 14
+     }
+    ]
+   }
+  ]
  }
 };
 
