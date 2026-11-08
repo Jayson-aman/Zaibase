@@ -167,7 +167,7 @@ export default function QuizScreen() {
   const testModeKey: TestModeKey | null =
     testModeParam === 'term' || testModeParam === 'achievement' ||
     testModeParam === 'level' || testModeParam === 'nyushi' ||
-    testModeParam === 'moshi'
+    testModeParam === 'moshi' || testModeParam === 'honshiken'
       ? testModeParam
       : null;
   const course: CourseKey = courseParam && isCourseKey(courseParam) ? courseParam : 'general';

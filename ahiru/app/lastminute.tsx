@@ -74,6 +74,13 @@ export default function LastMinuteScreen() {
         >
           <Text style={styles.goText}>📅 11月の模試を {subjectDisplayName(info.name, et)} から とく</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.go, { backgroundColor: '#0F766E', marginTop: 10 }]}
+          onPress={() => router.push(`/quiz/${subject}?testmode=honshiken&examType=${et}` as any)}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.goText}>🎓 1月・2月の本試験対策を {subjectDisplayName(info.name, et)} から とく</Text>
+        </TouchableOpacity>
         <Text style={styles.note}>くわしい理由は、各単元と、模試の解説（動く図解）で確かめられます。</Text>
       </ScrollView>
     </SafeAreaView>

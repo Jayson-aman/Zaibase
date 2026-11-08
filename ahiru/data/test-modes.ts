@@ -9,7 +9,7 @@
 import type { Question } from './questions-meta';
 import type { ExamType } from '../store/examType';
 
-export type TestModeKey = 'term' | 'achievement' | 'level' | 'nyushi' | 'moshi';
+export type TestModeKey = 'term' | 'achievement' | 'level' | 'nyushi' | 'moshi' | 'honshiken';
 
 export type LevelKey = 'basic' | 'standard' | 'advanced';
 
@@ -42,9 +42,27 @@ export type TestMode = {
   termOnly?: boolean;
   /** 月例模試の問題（moshi_YYYY_MM_ で始まるID、当月分）だけに絞るか */
   moshiOnly?: boolean;
+  /** 本試験対策（honshiken_YYYY_MM_ で始まるID。1月号・2月号をまとめて）だけに絞るか */
+  honshikenOnly?: boolean;
 };
 
 export const TEST_MODES: TestMode[] = [
+  {
+    key: 'honshiken',
+    title: '本試験対策（1月・2月の入試本番）',
+    summary: '入試本番と同じ形式・難易度。月例模試とは別の、本試験専用の問題',
+    detail:
+      '1月・2月に行われる入試の本番に向けた、本試験対策の専用問題です。月例模試とは別に作られていて、' +
+      '入試本番と同じ型・難易度・分量に合わせています（基礎に偏らず、本番で差がつく標準〜発展が中心）。' +
+      '1月号・2月号の問題をまとめて、毎回ちがう20問が出ます。解説は動く図解つき。' +
+      '終わったあと「まちがえた問題だけ もう一度」で、まちがえた問題だけをやり直せます。',
+    emoji: '🎓',
+    color: '#0F766E',
+    count: 20,
+    mix: { basic: 0.1, standard: 0.4, advanced: 0.5 },
+    writtenRatio: 0.2,
+    honshikenOnly: true,
+  },
   {
     key: 'term',
     title: '学期末テスト対策',
@@ -118,7 +136,7 @@ export const TEST_MODES: TestMode[] = [
 ];
 
 export function getTestMode(key: TestModeKey): TestMode {
-  return TEST_MODES.find((m) => m.key === key) ?? TEST_MODES[0];
+  return TEST_MODES.find((m) => m.key === key) ?? TEST_MODES.find((m) => m.key === 'term')!;
 }
 
 /** 活用型（記述式・複数小問）かどうか */
@@ -134,6 +152,11 @@ export function isTermQuestion(q: Question): boolean {
 /** 月例模試として作られた問題かどうか（moshi_2026_09_ のようなID） */
 export function isMoshiQuestion(q: Question): boolean {
   return q.id.startsWith('moshi_');
+}
+
+/** 本試験対策（1月・2月）として作られた問題かどうか（honshiken_2027_01_ のようなID）。月例模試とは別。 */
+export function isHonshikenQuestion(q: Question): boolean {
+  return q.id.startsWith('honshiken_');
 }
 
 function moshiPrefixOf(id: string): string | null {
@@ -204,6 +227,12 @@ export function buildTestSet(
     // 無料ユーザーはmaxOnlyで事前に絞られてsrcが5問程度になることがあるため、
     // 閾値を高く取ると無料ユーザー分だけ常にフォールバックしてしまう（実際にあったバグ）。
     if (moshiOnes.length > 0) src = moshiOnes;
+  }
+
+  if (mode.honshikenOnly) {
+    // 本試験対策は、配信されている号（1月号・2月号）をまとめて使う。まだ無い教科だけ通常の入試対策相当から出す。
+    const honshikenOnes = src.filter(isHonshikenQuestion);
+    if (honshikenOnes.length > 0) src = honshikenOnes;
   }
 
   const mix: Record<LevelKey, number> =
