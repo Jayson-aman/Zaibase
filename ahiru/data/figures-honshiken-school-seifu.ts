@@ -2,7 +2,7 @@
 // どの図も：状況 → 手がかり → 理由 → 計算 → 答え → 確かめ の順に7枚以上で動く。
 // 座標は 320×240。上（y<142）に図、下の帯（y≧146）に式を置き、文字が図と重ならないようにしてある。
 import type { DiagramElement, Figure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, band, fresh, flow } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, show, band, fresh, flow, cover } from './diagram-kit';
 import type { Slide } from './diagram-kit';
 
 type E = DiagramElement;
