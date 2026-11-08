@@ -72,7 +72,7 @@ export default function LastMinuteScreen() {
           onPress={() => router.push(`/quiz/${subject}?testmode=moshi&examType=${et}` as any)}
           activeOpacity={0.85}
         >
-          <Text style={styles.goText}>📅 11月の模試を {subjectDisplayName(info.name, et)} から とく</Text>
+          <Text style={styles.goText}>📅 今月の模試を {subjectDisplayName(info.name, et)} から とく</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.go, { backgroundColor: '#0F766E', marginTop: 10 }]}
