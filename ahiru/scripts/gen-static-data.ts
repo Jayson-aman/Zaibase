@@ -58,6 +58,7 @@ import { lessonsU120E4Rika } from '../data/lessons-u120-e4-rika';
 import { lessonsU120E1Shakai } from '../data/lessons-u120-e1-shakai';
 import { lessonsU120E3Shakai } from '../data/lessons-u120-e3-shakai';
 import { lessonsU120E4Shakai } from '../data/lessons-u120-e4-shakai';
+import { lessonsU120E3Eigo } from '../data/lessons-u120-e3-eigo';
 import { lessonsU120E4Eigo } from '../data/lessons-u120-e4-eigo';
 
 const FREE_UNITS_PER_CLUSTER = 5;
@@ -109,6 +110,7 @@ const CLUSTERS = [
   lessonsU120E1Shakai,
   lessonsU120E3Shakai,
   lessonsU120E4Shakai,
+  lessonsU120E3Eigo,
   lessonsU120E4Eigo,
 ];
 
