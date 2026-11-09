@@ -142,8 +142,8 @@ export const TEST_MODES: TestMode[] = [
  * 学校を選ばないときは、共通の本試験対策（course なし）から出る。
  */
 export const HONSHIKEN_SCHOOLS: Record<ExamType, CourseKey[]> = {
-  chugaku: ['fukuoka-kurume', 'hakuryo', 'kaimei', 'kankan', 'kansai-hokuyo', 'kenmei', 'kindai', 'kinrankai', 'kobe-jogakuin', 'myojo', 'nagoya-tokai', 'nandai', 'naniwa', 'osaka-jogakuin', 'otani', 'otemon', 'poole', 'rakunan', 'rokko', 'seifu', 'seifu-nankai', 'seiko', 'shitennoji', 'takatsuki', 'tezukayama', 'toin', 'tokyo-aoyama', 'tokyo-azabu', 'tokyo-chuo', 'tokyo-eiko', 'tokyo-gakushuin', 'tokyo-hosei', 'tokyo-joshigakuin', 'tokyo-kaisei', 'tokyo-komaba-toho', 'tokyo-meidai', 'tokyo-oin', 'tokyo-seiko-yokohama', 'tokyo-tsukuba-komaba'],
-  koko: ['koko-hibiya', 'koko-kankan', 'koko-kasei', 'koko-keio', 'koko-keio-shiki', 'koko-meidai', 'koko-nada', 'koko-nishiyamato', 'koko-rakunan', 'koko-ritsumeikan', 'koko-shitennoji', 'koko-tokai', 'koko-top', 'koko-waseda'],
+  chugaku: ['fukuoka-kurume', 'hakuryo', 'kaimei', 'kankan', 'kansai-hokuyo', 'kenmei', 'kindai', 'kinrankai', 'kobe-jogakuin', 'myojo', 'nagoya-tokai', 'nandai', 'naniwa', 'osaka-jogakuin', 'otani', 'otemon', 'poole', 'rakunan', 'rakusei', 'rokko', 'seifu', 'seifu-nankai', 'seiko', 'shitennoji', 'suma', 'takatsuki', 'tezukayama', 'toin', 'tokyo-aoyama', 'tokyo-asano', 'tokyo-azabu', 'tokyo-chuo', 'tokyo-eiko', 'tokyo-ferris', 'tokyo-futaba', 'tokyo-gakushuin', 'tokyo-hosei', 'tokyo-joshigakuin', 'tokyo-kaijo', 'tokyo-kaisei', 'tokyo-kichijoji', 'tokyo-komaba-toho', 'tokyo-meidai', 'tokyo-musashi', 'tokyo-oin', 'tokyo-seiko-yokohama', 'tokyo-shibumaku', 'tokyo-toshimagaoka', 'tokyo-tsukuba-komaba'],
+  koko: ['koko-hibiya', 'koko-kankan', 'koko-kasei', 'koko-keio', 'koko-keio-shiki', 'koko-meidai', 'koko-nada', 'koko-nishiyamato', 'koko-rakunan', 'koko-ritsumeikan', 'koko-shibumaku', 'koko-shitennoji', 'koko-tokai', 'koko-top', 'koko-tsukuba', 'koko-waseda', 'koko-waseda-jitsugyo'],
 };
 
 export function getTestMode(key: TestModeKey): TestMode {

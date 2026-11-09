@@ -600,6 +600,32 @@ import { figuresHonshikenSchool_tokyo_joshigakuin } from './figures-honshiken-sc
 import { figuresHonshikenSchool_tokyo_joshigakuin_B } from './figures-honshiken-school-tokyo-joshigakuin-B';
 import { figuresHonshikenSchool_tokyo_joshigakuin_A } from './figures-honshiken-school-tokyo-joshigakuin-A';
 import { figuresHonshikenSchool_tokyo_kaisei } from './figures-honshiken-school-tokyo-kaisei';
+import { figuresHonshikenSchool_tokyo_musashi_A } from './figures-honshiken-school-tokyo-musashi-A';
+import { figuresHonshikenSchool_tokyo_musashi_B } from './figures-honshiken-school-tokyo-musashi-B';
+import { figuresHonshikenSchool_tokyo_kaijo_A } from './figures-honshiken-school-tokyo-kaijo-A';
+import { figuresHonshikenSchool_tokyo_kaijo_B } from './figures-honshiken-school-tokyo-kaijo-B';
+import { figuresHonshikenSchool_tokyo_toshimagaoka_A } from './figures-honshiken-school-tokyo-toshimagaoka-A';
+import { figuresHonshikenSchool_tokyo_toshimagaoka_B } from './figures-honshiken-school-tokyo-toshimagaoka-B';
+import { figuresHonshikenSchool_tokyo_futaba_A } from './figures-honshiken-school-tokyo-futaba-A';
+import { figuresHonshikenSchool_tokyo_futaba_B } from './figures-honshiken-school-tokyo-futaba-B';
+import { figuresHonshikenSchool_tokyo_kichijoji_A } from './figures-honshiken-school-tokyo-kichijoji-A';
+import { figuresHonshikenSchool_tokyo_kichijoji_B } from './figures-honshiken-school-tokyo-kichijoji-B';
+import { figuresHonshikenSchool_tokyo_shibumaku_A } from './figures-honshiken-school-tokyo-shibumaku-A';
+import { figuresHonshikenSchool_tokyo_shibumaku_B } from './figures-honshiken-school-tokyo-shibumaku-B';
+import { figuresHonshikenSchool_tokyo_asano_A } from './figures-honshiken-school-tokyo-asano-A';
+import { figuresHonshikenSchool_tokyo_asano_B } from './figures-honshiken-school-tokyo-asano-B';
+import { figuresHonshikenSchool_tokyo_ferris_A } from './figures-honshiken-school-tokyo-ferris-A';
+import { figuresHonshikenSchool_tokyo_ferris_B } from './figures-honshiken-school-tokyo-ferris-B';
+import { figuresHonshikenSchool_rakusei_A } from './figures-honshiken-school-rakusei-A';
+import { figuresHonshikenSchool_rakusei_B } from './figures-honshiken-school-rakusei-B';
+import { figuresHonshikenSchool_suma_A } from './figures-honshiken-school-suma-A';
+import { figuresHonshikenSchool_suma_B } from './figures-honshiken-school-suma-B';
+import { figuresHonshikenSchool_koko_tsukuba_A } from './figures-honshiken-school-koko-tsukuba-A';
+import { figuresHonshikenSchool_koko_tsukuba_B } from './figures-honshiken-school-koko-tsukuba-B';
+import { figuresHonshikenSchool_koko_shibumaku_A } from './figures-honshiken-school-koko-shibumaku-A';
+import { figuresHonshikenSchool_koko_shibumaku_B } from './figures-honshiken-school-koko-shibumaku-B';
+import { figuresHonshikenSchool_koko_waseda_jitsugyo_A } from './figures-honshiken-school-koko-waseda-jitsugyo-A';
+import { figuresHonshikenSchool_koko_waseda_jitsugyo_B } from './figures-honshiken-school-koko-waseda-jitsugyo-B';
 import { figuresHonshikenSchool_tokyo_kaisei_B } from './figures-honshiken-school-tokyo-kaisei-B';
 import { figuresHonshikenSchool_tokyo_kaisei_A } from './figures-honshiken-school-tokyo-kaisei-A';
 import { figuresHonshikenSchool_tokyo_komaba_toho } from './figures-honshiken-school-tokyo-komaba-toho';
@@ -885,6 +911,32 @@ export const figures: Record<string, Figure> = {
   ...figuresHonshikenSchool_tokyo_joshigakuin_B,
   ...figuresHonshikenSchool_tokyo_joshigakuin_A,
   ...figuresHonshikenSchool_tokyo_kaisei,
+  ...figuresHonshikenSchool_tokyo_musashi_A,
+  ...figuresHonshikenSchool_tokyo_musashi_B,
+  ...figuresHonshikenSchool_tokyo_kaijo_A,
+  ...figuresHonshikenSchool_tokyo_kaijo_B,
+  ...figuresHonshikenSchool_tokyo_toshimagaoka_A,
+  ...figuresHonshikenSchool_tokyo_toshimagaoka_B,
+  ...figuresHonshikenSchool_tokyo_futaba_A,
+  ...figuresHonshikenSchool_tokyo_futaba_B,
+  ...figuresHonshikenSchool_tokyo_kichijoji_A,
+  ...figuresHonshikenSchool_tokyo_kichijoji_B,
+  ...figuresHonshikenSchool_tokyo_shibumaku_A,
+  ...figuresHonshikenSchool_tokyo_shibumaku_B,
+  ...figuresHonshikenSchool_tokyo_asano_A,
+  ...figuresHonshikenSchool_tokyo_asano_B,
+  ...figuresHonshikenSchool_tokyo_ferris_A,
+  ...figuresHonshikenSchool_tokyo_ferris_B,
+  ...figuresHonshikenSchool_rakusei_A,
+  ...figuresHonshikenSchool_rakusei_B,
+  ...figuresHonshikenSchool_suma_A,
+  ...figuresHonshikenSchool_suma_B,
+  ...figuresHonshikenSchool_koko_tsukuba_A,
+  ...figuresHonshikenSchool_koko_tsukuba_B,
+  ...figuresHonshikenSchool_koko_shibumaku_A,
+  ...figuresHonshikenSchool_koko_shibumaku_B,
+  ...figuresHonshikenSchool_koko_waseda_jitsugyo_A,
+  ...figuresHonshikenSchool_koko_waseda_jitsugyo_B,
   ...figuresHonshikenSchool_tokyo_kaisei_B,
   ...figuresHonshikenSchool_tokyo_kaisei_A,
   ...figuresHonshikenSchool_tokyo_komaba_toho,

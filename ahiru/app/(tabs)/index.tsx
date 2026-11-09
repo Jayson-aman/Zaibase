@@ -14,6 +14,7 @@ import { useRouter } from 'expo-router';
 import SubjectCard from '../../components/SubjectCard';
 import ListenMode from '../../components/ListenMode';
 import Paywall from '../../components/Paywall';
+import WelcomeTrialBanner from '../../components/WelcomeTrialBanner';
 import { useBetaAccess } from '../../hooks/useBetaAccess';
 import { useProGate } from '../../hooks/useProGate';
 import { useSubscription } from '../../hooks/useSubscription';
@@ -310,6 +311,7 @@ export default function HomeScreen() {
         showsVerticalScrollIndicator={false}
       >
         {/* お試し中・解約ずみ・期限切れのとき、いつまで使えるかを一番上に出す */}
+        {!listenPickerActive && <WelcomeTrialBanner onAction={() => setPaywallVisible(true)} />}
         {!listenPickerActive && <PlanStatusBanner onAction={() => setPaywallVisible(true)} />}
 
         {/* 無料のまま何日か続けて使っている人にだけ、プランの案内を小さく出す（閉じたら7日は出さない） */}
