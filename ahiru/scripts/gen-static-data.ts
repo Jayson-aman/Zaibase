@@ -56,6 +56,7 @@ import { lessonsU120E1Rika } from '../data/lessons-u120-e1-rika';
 import { lessonsU120E3Rika } from '../data/lessons-u120-e3-rika';
 import { lessonsU120E4Rika } from '../data/lessons-u120-e4-rika';
 import { lessonsU120E1Shakai } from '../data/lessons-u120-e1-shakai';
+import { lessonsU120E2Shakai } from '../data/lessons-u120-e2-shakai';
 import { lessonsU120E3Shakai } from '../data/lessons-u120-e3-shakai';
 import { lessonsU120E4Shakai } from '../data/lessons-u120-e4-shakai';
 import { lessonsU120E3Eigo } from '../data/lessons-u120-e3-eigo';
@@ -108,6 +109,7 @@ const CLUSTERS = [
   lessonsU120E3Rika,
   lessonsU120E4Rika,
   lessonsU120E1Shakai,
+  lessonsU120E2Shakai,
   lessonsU120E3Shakai,
   lessonsU120E4Shakai,
   lessonsU120E3Eigo,
