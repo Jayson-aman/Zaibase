@@ -642,7 +642,7 @@ export const honshikenSchool_koko_keio_shiki_A: Question[] = [
     "subject": "eigo",
     "examType": "koko",
     "course": "koko-keio-shiki",
-    "difficulty": "standard",
+    "difficulty": "advanced",
     "question": "次の英文の空所に入る最も適切なものを選びなさい。\nThe teacher told us ( ) our phones in class.",
     "answer": "② not to use",
     "hint": "〈tell＋人＋to＋動詞〉は「人に〜するように言う」。「〜しないように」と言いたいときは、to のどこに not を入れるか。",
