@@ -74,7 +74,7 @@ const polyLine = (pts: [number, number][], color: string = C.ink, w = 2.5): E[] 
 
 // 11 放物線上の2点と三角形の面積
 const g11 = (x: number, y: number): [number, number] => [100 + 22 * x, 130 - 6.5 * y];
-const axes11 = (): E[] => [ar(20, 130, 300, 130, C.gray), ar(100, 138, 100, 4, C.gray), tx(304, 134, 'x', 12, C.gray), tx(112, 12, 'y', 12, C.gray), tx(90, 142, 'O', 11, C.gray)];
+const axes11 = (): E[] => [ar(20, 130, 300, 130, C.gray), ar(100, 138, 100, 4, C.gray), tx(304, 134, 'x', 12, C.gray), tx(112, 17, 'y', 12, C.gray), tx(90, 142, 'O', 11, C.gray)];
 const para11 = (): E[] => { const pts: [number, number][] = []; for (let k = 0; k <= 46; k++) { const x = -3.4 + k * 0.2; const y = 0.5 * x * x; if (y <= 18.6) pts.push(g11(x, y)); } return polyLine(pts, C.gray, 2); };
 const a11 = g11(-2, 2), b11 = g11(6, 18), c11 = g11(0, 6), o11 = g11(0, 0);
 const base11 = (): E[] => [...axes11(), ...para11(), dot(a11, 3.5, C.blue), dot(b11, 3.5, C.red), tx(a11[0] - 4, a11[1] - 8, 'A', 13, C.blue, true, 'end'), tx(b11[0] - 8, b11[1] + 4, 'B', 13, C.red, true, 'end')];
@@ -82,8 +82,8 @@ const s_s11: Figure = show([
   SF('放物線 y＝(1/2)x² の上に、x座標が−2の点Aと、x座標が6の点Bがあります。直線ABの式と、△OABの面積を求めます。', ['A のx座標 −2　B のx座標 6'], base11()),
   S('手がかり。点のy座標は、x座標を式に入れれば出ます。A は y＝(1/2)×4＝2、B は y＝(1/2)×36＝18。', ['A(−2, 2)　B(6, 18)'], [tx(a11[0] + 6, a11[1] + 14, '(−2, 2)', 11, C.blue, true, 'start'), tx(b11[0] - 12, b11[1] + 16, '(6, 18)', 11, C.red, true, 'end')]),
   P('直線の傾きは、yの増加量÷xの増加量です。', ['傾き＝(18−2)÷(6＋2)', '＝16÷8＝2'], ['A(−2, 2) から B(6, 18) へ']),
-  S('A(−2, 2) を通るので 2＝2×(−2)＋b、b＝6。直線は y＝2x＋6。y軸との交点が C(0, 6)。', ['(1) y＝2x＋6　C(0, 6)'], [seg(g11(-3, 0), g11(6.5, 19), C.purple, false, 2.5), dot(c11, 3.5, C.green), tx(c11[0] + 8, c11[1] + 4, 'C', 13, C.green, true, 'start')]),
-  S('理由。△OABは、OCを共通の底辺とする2つの三角形に分けられます。OC＝6。', ['OC を底辺に　△OAC と △OBC'], [P2([o11, a11, c11], C.blue, FILL.blue), P2([o11, b11, c11], C.green, FILL.green), seg(o11, c11, C.ink, false, 2.5), seg(o11, a11, C.ink, false, 2), seg(o11, b11, C.ink, false, 2), seg(a11, b11, C.purple, false, 2.5)]),
+  SF('A(−2, 2) を通るので 2＝2×(−2)＋b、b＝6。直線は y＝2x＋6。y軸との交点が C(0, 6)。', ['(1) y＝2x＋6　C(0, 6)'], [...base11(), seg(g11(-3, 0), g11(6.5, 19), C.purple, false, 2.5), dot(c11, 3.5, C.green), tx(c11[0] + 8, c11[1] + 4, 'C', 13, C.green, true, 'start')]),
+  S('理由。△OABは、OCを共通の底辺とする2つの三角形に分けられます。OC＝6。', ['OC を底辺に　△OAC と △OBC'], [P2([o11, a11, c11], C.blue, FILL.blue), P2([o11, b11, c11], C.green, FILL.green), seg(o11, c11, C.ink, false, 2.5), seg(o11, a11, C.ink, false, 2), seg(o11, b11, C.ink, false, 2), seg(a11, b11, C.purple, false, 2.5), dot(a11, 3.5, C.blue), dot(b11, 3.5, C.red)]),
   P('高さは、AとBのx座標の絶対値（y軸までの距離）です。', ['△OAC＝6×2÷2＝6', '△OBC＝6×6÷2＝18'], ['高さ：A は 2、B は 6']),
   ANS('(1) y＝2x＋6　(2) 24', '(2) は 6＋18＝24 です。'),
   P('確かめ。A、Bから x軸へ垂線をおろし、台形から2つの三角形をひきます。', ['台形 (2＋18)×8÷2＝80', '80−2−54＝24'], ['=別の方法でも24 ✓']),
@@ -93,7 +93,7 @@ const s_s11: Figure = show([
 const g13 = (x: number, y: number): [number, number] => [160 + 55 * x, 128 - 25 * y];
 const para13 = (): E[] => { const pts: [number, number][] = []; for (let k = 0; k <= 42; k++) { const x = -2.1 + k * 0.1; pts.push(g13(x, x * x)); } return polyLine(pts, C.gray, 2); };
 const a13 = g13(Math.sqrt(3), 3), b13 = g13(-Math.sqrt(3), 3), o13 = g13(0, 0), m13 = g13(0, 3);
-const base13 = (): E[] => [ar(20, 128, 300, 128, C.gray), ar(160, 136, 160, 6, C.gray), tx(304, 132, 'x', 12, C.gray), tx(172, 12, 'y', 12, C.gray), tx(150, 142, 'O', 12), ...para13(), dot(a13, 3.5, C.blue), dot(b13, 3.5, C.blue), tx(a13[0] + 8, a13[1] - 6, 'A', 13, C.blue, true, 'start'), tx(b13[0] - 8, b13[1] - 6, 'B', 13, C.blue, true, 'end')];
+const base13 = (): E[] => [ar(20, 128, 300, 128, C.gray), ar(160, 136, 160, 6, C.gray), tx(304, 132, 'x', 12, C.gray), tx(172, 17, 'y', 12, C.gray), tx(150, 142, 'O', 12), ...para13(), dot(a13, 3.5, C.blue), dot(b13, 3.5, C.blue), tx(a13[0] + 8, a13[1] - 6, 'A', 13, C.blue, true, 'start'), tx(b13[0] - 8, b13[1] - 6, 'B', 13, C.blue, true, 'end')];
 const s_s13: Figure = show([
   SF('放物線 y＝x² 上に、左右対称な2点 A(a, a²)、B(−a, a²) があります。原点Oとで正三角形OABができるときの a を求めます。', ['A(a, a²)　B(−a, a²)　△OABは正三角形'], base13()),
   S('△OABをかきます。ABはx軸と平行で、y軸に関して対称です。', ['△OAB'], [P2([o13, a13, b13], C.red, FILL.red), seg(a13, b13, C.red, false, 2.5)]),
@@ -109,27 +109,27 @@ const s_s13: Figure = show([
 const g14 = (x: number, y: number): [number, number] => [110 + 36 * x, 130 - 13 * y];
 const para14 = (): E[] => { const pts: [number, number][] = []; for (let k = 0; k <= 47; k++) { const x = -1.6 + k * 0.1; pts.push(g14(x, x * x)); } return polyLine(pts, C.gray, 2); };
 const a14 = g14(-1, 1), b14 = g14(3, 9), o14 = g14(0, 0), m14 = g14(1, 5);
-const base14 = (): E[] => [ar(20, 130, 300, 130, C.gray), ar(110, 138, 110, 4, C.gray), tx(304, 134, 'x', 12, C.gray), tx(122, 12, 'y', 12, C.gray), tx(100, 142, 'O', 12), ...para14(), dot(a14, 3.5, C.blue), dot(b14, 3.5, C.blue), tx(a14[0] - 8, a14[1] - 4, 'A', 13, C.blue, true, 'end'), tx(b14[0] + 8, b14[1] + 4, 'B', 13, C.blue, true, 'start')];
+const base14 = (): E[] => [ar(20, 130, 300, 130, C.gray), ar(110, 138, 110, 4, C.gray), tx(304, 134, 'x', 12, C.gray), tx(122, 17, 'y', 12, C.gray), tx(100, 142, 'O', 12), ...para14(), dot(a14, 3.5, C.blue), dot(b14, 3.5, C.blue), tx(a14[0] - 8, a14[1] - 4, 'A', 13, C.blue, true, 'end'), tx(b14[0] + 8, b14[1] + 4, 'B', 13, C.blue, true, 'start')];
 const s_s14: Figure = show([
   SF('放物線 y＝x² 上に A(−1, 1)、B(3, 9)。原点Oを通って、△OABの面積を2等分する直線の式を求めます。', ['A(−1, 1)　B(3, 9)　O を通る直線で面積を半分に'], base14()),
   S('△OABをかきます。', ['△OAB'], [P2([o14, a14, b14], C.ink, FILL.warm), seg(o14, a14, C.ink, false, 2.5), seg(o14, b14, C.ink, false, 2.5), seg(a14, b14, C.ink, false, 2.5)]),
   S('手がかり。三角形の頂点と、向かいの辺の中点を結ぶ線（中線）は、面積を2等分します。ABの中点を M とします。', ['ABの中点 M を探す'], [dot(m14, 4, C.green), tx(m14[0] + 8, m14[1] + 12, 'M', 13, C.green, true, 'start')]),
   P('中点の座標は、x座標どうし、y座標どうしの平均です。', ['x＝(−1＋3)÷2＝1', 'y＝(1＋9)÷2＝5'], ['M(1, 5)']),
-  S('理由。△OAM と △OMB は、底辺AM＝MB で、Oからの高さも同じなので、面積が等しい。', ['△OAM＝△OMB'], [P2([o14, a14, m14], C.blue, FILL.blue), P2([o14, m14, b14], C.green, FILL.green), seg(o14, m14, C.red, false, 3), seg(a14, b14, C.ink, false, 2.5)]),
+  SF('理由。△OAM と △OMB は、底辺AM＝MB で、Oからの高さも同じなので、面積が等しい。', ['△OAM＝△OMB'], [...base14(), dot(m14, 4, C.green), tx(m14[0] + 8, m14[1] + 12, 'M', 13, C.green, true, 'start'), P2([o14, a14, m14], C.blue, FILL.blue), P2([o14, m14, b14], C.green, FILL.green), seg(o14, m14, C.red, false, 3), seg(a14, b14, C.ink, false, 2.5), seg(o14, a14, C.ink, false, 2), seg(o14, b14, C.ink, false, 2)]),
   P('直線OMは原点を通るので、y＝mx とおけます。(1, 5) を通るので m＝5。', ['y＝mx に (1, 5) を入れる', '5＝m×1　m＝5'], ['原点を通る直線']),
   ANS('y＝5x'),
   P('確かめ。直線 y＝5x は O(0, 0) と M(1, 5) を通ります。', ['5×1＝5 ✓', '5×0＝0 ✓'], ['=M も O も直線の上にある ✓']),
 ], 'ABの中点 M(1, 5) を通る。y＝5x。');
 
 // 15 動点と三角形の面積
-const A15: [number, number] = [50, 10], B15: [number, number] = [50, 130], C15: [number, number] = [250, 130], D15: [number, number] = [250, 10];
-const rect15 = (): E[] => [P2([A15, B15, C15, D15], C.ink, FILL.warm), tx(40, 10, 'A', 13, C.ink, true, 'end'), tx(40, 138, 'B', 13, C.ink, true, 'end'), tx(260, 138, 'C', 13, C.ink, true, 'start'), tx(260, 12, 'D', 13, C.ink, true, 'start'), tx(150, 142, '10cm', 11, C.gray), tx(40, 74, '6cm', 11, C.gray, true, 'end')];
+const A15: [number, number] = [50, 24], B15: [number, number] = [50, 130], C15: [number, number] = [250, 130], D15: [number, number] = [250, 24];
+const rect15 = (): E[] => [P2([A15, B15, C15, D15], C.ink, FILL.warm), tx(40, 26, 'A', 13, C.ink, true, 'end'), tx(40, 138, 'B', 13, C.ink, true, 'end'), tx(260, 138, 'C', 13, C.ink, true, 'start'), tx(260, 26, 'D', 13, C.ink, true, 'start'), tx(150, 142, '10cm', 11, C.gray), tx(40, 80, '6cm', 11, C.gray, true, 'end')];
 const s_s15: Figure = show([
   SF('縦6cm、横10cmの長方形ABCD。点Pは、Bから B→C→D→A の順に毎秒2cmで動きます。△ABPの面積が24cm²になる時刻をすべて求めます。', ['点Pは B→C→D→A（毎秒2cm）'], rect15()),
   S('場面1。PがBC上にいるとき。出発してt秒後、BP＝2t cm。底辺AB＝6、高さBP。', ['BC上：△ABP＝6×2t÷2＝6t'], [P2([A15, B15, [50 + 160, 130]], C.blue, FILL.blue), dot([210, 130], 4, C.red), tx(210, 124, 'P', 13, C.red, true, 'middle')]),
   P('6t＝24 を解きます。BC上にいるのは 0〜5秒（BCは10cm）なので、範囲に合います。', ['6t＝24', 't＝4'], ['4秒後：BP＝8cm']),
-  S('場面2。PがCD上にいるとき。底辺AB＝6、高さは BC＝10 のまま変わらないので、面積はずっと30。24にはなりません。', ['CD上：面積はいつも30'], [P2([A15, B15, [250, 70]], C.purple, FILL.purple), dot([250, 70], 4, C.red)]),
-  S('場面3。PがDA上にいるとき。AP＝(Aまでの残り)。底辺AB＝6、高さAP。Aに近づくほど面積が小さくなります。', ['DA上：△ABP＝6×AP÷2'], [P2([A15, B15, [210, 10]], C.green, FILL.green), dot([210, 10], 4, C.red), tx(210, 26, 'P', 13, C.red, true, 'middle')]),
+  SF('場面2。PがCD上にいるとき。底辺AB＝6、高さは BC＝10 のまま変わらないので、面積はずっと30。24にはなりません。', ['CD上：面積はいつも30'], [...rect15(), P2([A15, B15, [250, 77]], C.purple, FILL.purple), dot([250, 77], 4, C.red)]),
+  S('場面3。PがDA上にいるとき。AP＝(Aまでの残り)。底辺AB＝6、高さAP。Aに近づくほど面積が小さくなります。', ['DA上：△ABP＝6×AP÷2'], [P2([A15, B15, [210, 24]], C.green, FILL.green), dot([210, 24], 4, C.red), tx(210, 40, 'P', 13, C.red, true, 'middle')]),
   P('B→C→Dで 10＋6＝16cm 進むのは8秒後。8秒後からは DA上で、t秒後の AP＝10−2(t−8)＝26−2t。面積＝6×(26−2t)÷2＝78−6t。', ['78−6t＝24', 't＝9'], ['DA上は 8〜13秒']),
   ANS('4秒後と9秒後'),
   P('確かめ。9秒後：16cm＋2cm＝18cm 進むので、D から 2cm 進み AP＝8cm。', ['△ABP＝6×8÷2＝24 ✓', '4秒後：6×8÷2＝24 ✓'], ['=どちらも24cm² ✓']),
@@ -149,7 +149,7 @@ const s_s17: Figure = show([
   SF('円周上に4点 A、B、C、D がこの順にあり、弧AB：弧BC：弧CD：弧DA＝2：3：5：2。ACとBDの交点をEとして、∠AEBを求めます。', ['弧の比　AB：BC：CD：DA＝2：3：5：2'], base17()),
   S('弦ACと弦BDをひき、交点をEとします。', ['AC と BD の交点が E'], [seg(pA17, pC17, C.blue, false, 2.5), seg(pB17, pD17, C.green, false, 2.5), dot(E17, 3.5, C.red), tx(E17[0] + 10, E17[1] - 4, 'E', 13, C.red, true, 'start')]),
   P('手がかり。円周全体は360°。比の合計は 2＋3＋5＋2＝12。', ['AB 60°　BC 90°', 'CD 150°　DA 60°'], ['360°×2/12＝60°、×3/12＝90°、×5/12＝150°']),
-  S('理由。∠BAC は、弧BC（90°）に対する円周角。円周角は、見ている弧の中心角の半分なので 45°。', ['∠BAC＝90°÷2＝45°'], [...polyLine(arcPts(O17.x, O17.y, O17.r, 180, 270), C.green, 4), seg(pA17, pB17, C.red, false, 2.5), seg(pA17, pC17, C.red, false, 2.5)]),
+  SF('理由。∠BAC は、弧BC（90°）に対する円周角。円周角は、見ている弧の中心角の半分なので 45°。', ['∠BAC＝90°÷2＝45°'], [...base17(), seg(pB17, pD17, C.green, false, 2), dot(E17, 3.5, C.red), ...polyLine(arcPts(O17.x, O17.y, O17.r, 180, 270), C.green, 4), seg(pA17, pB17, C.red, false, 2.5), seg(pA17, pC17, C.red, false, 2.5)]),
   SF('∠ABD は、弧DA（60°）に対する円周角。30°。', ['∠ABD＝60°÷2＝30°'], [...base17(), seg(pA17, pC17, C.blue, false, 2), seg(pB17, pD17, C.green, false, 2), ...polyLine(arcPts(O17.x, O17.y, O17.r, 60, 120), C.purple, 4), seg(pB17, pA17, C.red, false, 2.5), seg(pB17, pD17, C.red, false, 2.5)]),
   SF('△ABEの内角の和は180°です。∠BAE＝45°、∠ABE＝30°。', ['∠AEB＝180°−45°−30°'], [...base17(), P2([pA17, pB17, E17], C.purple, FILL.purple), seg(pA17, pC17, C.blue, false, 2), seg(pB17, pD17, C.green, false, 2), dot(E17, 3.5, C.red)]),
   ANS('105°'),
@@ -160,14 +160,15 @@ const s_s17: Figure = show([
 const A18: [number, number] = [100, 26], D18: [number, number] = [180, 26], B18: [number, number] = [40, 126], C18: [number, number] = [240, 126];
 const O18 = lerp(A18, C18, 2 / 7);
 const base18t = (): E[] => [P2([A18, B18, C18, D18], C.ink, FILL.warm), tx(92, 24, 'A', 13, C.ink, true, 'end'), tx(188, 24, 'D', 13, C.ink, true, 'start'), tx(32, 134, 'B', 13, C.ink, true, 'end'), tx(248, 134, 'C', 13, C.ink, true, 'start'), tx(140, 20, '4cm', 11, C.gray), tx(140, 142, '10cm', 11, C.gray)];
-const diag18 = (): E[] => [seg(A18, C18, C.ink, false, 2.5), seg(B18, D18, C.ink, false, 2.5), dot(O18, 3.5, C.red), tx(O18[0] + 10, O18[1] - 4, 'O', 13, C.red, true, 'start')];
+const dseg18 = (): E[] => [seg(A18, C18, C.ink, false, 2.5), seg(B18, D18, C.ink, false, 2.5)];
+const diag18 = (): E[] => [...dseg18(), dot(O18, 3.5, C.red), tx(O18[0] + 10, O18[1] - 4, 'O', 13, C.red, true, 'start')];
 const s_s18t: Figure = show([
   SF('AD∥BCの台形ABCD。AD＝4cm、BC＝10cm、面積98cm²。対角線の交点をOとして、△DOCの面積を求めます。', ['AD＝4　BC＝10　台形の面積98'], base18t()),
   S('対角線ACとBDをひき、交点をOとします。台形が4つの三角形に分かれます。', ['△AOD　△AOB　△BOC　△DOC'], diag18()),
-  S('手がかり。AD∥BC なので、△AOD と △COB は相似（錯角が等しい）。相似比は AD：BC＝4：10＝2：5。', ['△AOD ∽ △COB　相似比 2：5'], [P2([A18, D18, O18], C.blue, FILL.blue), P2([B18, C18, O18], C.green, FILL.green), ...diag18()]),
+  S('手がかり。AD∥BC なので、△AOD と △COB は相似（錯角が等しい）。相似比は AD：BC＝4：10＝2：5。', ['△AOD ∽ △COB　相似比 2：5'], [P2([A18, D18, O18], C.blue, FILL.blue), P2([B18, C18, O18], C.green, FILL.green), ...dseg18()]),
   P('理由。面積比は、相似比を2回かけた比です。', ['△AOD：△COB＝2²：5²', '＝4：25'], ['△AOD＝4k とすると △COB＝25k']),
-  S('△AOD と △AOB は、Aから対角線BDにおろした高さが同じなので、面積比は底辺の比 DO：BO＝2：5。△AOB＝4k×5/2＝10k。', ['△AOB＝10k'], [P2([A18, B18, O18], C.purple, FILL.purple), ...diag18()]),
-  S('△DOC も同じ10k です。（△ABD＝△ACD で、共通の△AODをひくと △AOB＝△DOC）', ['△DOC＝△AOB＝10k'], [P2([D18, C18, O18], C.red, FILL.red), ...diag18()]),
+  SF('△AOD と △AOB は、Aから対角線BDにおろした高さが同じなので、面積比は底辺の比 DO：BO＝2：5。△AOB＝4k×5/2＝10k。', ['△AOB＝10k'], [...base18t(), P2([A18, B18, O18], C.purple, FILL.purple), ...diag18()]),
+  S('△DOC も同じ10k です。（△ABD＝△ACD で、共通の△AODをひくと △AOB＝△DOC）', ['△DOC＝△AOB＝10k'], [P2([D18, C18, O18], C.red, FILL.red), ...dseg18()]),
   P('4つの三角形の面積の和が台形全体の98cm²です。', ['4k＋25k＋10k＋10k＝49k＝98', 'k＝2'], ['△DOC＝10×2＝20']),
   ANS('20cm²'),
   P('確かめ。△AOD＝8、△COB＝50、△AOB＝△DOC＝20。', ['8＋50＋20＋20＝98 ✓'], ['=台形の面積と一致 ✓']),
@@ -216,7 +217,7 @@ const s_s21: Figure = show([
   S('Pから接線PA、PBをひきます。', ['接線 PA と PB'], [seg(P21, A21, C.blue, false, 2.5), seg(P21, B21, C.blue, false, 2.5), dot(A21, 3.5, C.blue), dot(B21, 3.5, C.blue), tx(A21[0] - 4, A21[1] - 8, 'A', 13, C.blue), tx(B21[0] - 4, B21[1] + 18, 'B', 13, C.blue)]),
   S('手がかり。接線は、接点を通る半径と垂直です。OA⊥PA なので、△OAP は ∠OAP＝90°の直角三角形。', ['OA⊥PA　△OAP は直角三角形'], [seg(O21, A21, C.green, false, 2.5), seg(O21, P21, C.ink, true, 1.5), tx(94, 40, '5', 12, C.green, true, 'middle'), tx(160, 126, '13', 12, C.gray)]),
   P('三平方の定理で PA を求めます。', ['PA＝√(13²−5²)', '＝√144＝12'], ['△OAP：OA＝5、OP＝13']),
-  S('OPとABの交点をHとします。PA＝PB、OA＝OB なので、AB⊥OP で、AH＝BH。', ['AB⊥OP　AH＝BH'], [seg(A21, B21, C.purple, false, 2.5), dot(H21, 3, C.purple), tx(H21[0] + 8, H21[1] + 14, 'H', 12, C.purple, true, 'start')]),
+  SF('OPとABの交点をHとします。PA＝PB、OA＝OB なので、AB⊥OP で、AH＝BH。', ['AB⊥OP　AH＝BH'], [...base21(), seg(P21, A21, C.blue, false, 2.5), seg(P21, B21, C.blue, false, 2.5), dot(A21, 3.5, C.blue), dot(B21, 3.5, C.blue), tx(A21[0] - 4, A21[1] - 8, 'A', 13, C.blue), tx(B21[0] - 4, B21[1] + 18, 'B', 13, C.blue), seg(O21, A21, C.green, false, 2.5), seg(O21, P21, C.ink, true, 1.5), seg(A21, B21, C.purple, false, 2.5), dot(H21, 3, C.purple), tx(H21[0] + 8, H21[1] + 14, 'H', 12, C.purple, true, 'start')]),
   P('理由。△OAPの面積は、「直角をはさむ2辺 OA、PA」でも、「底辺OPと高さAH」でも表せます。', ['5×12÷2＝13×AH÷2', '60＝13×AH'], ['面積を2通りで表す']),
   P('AH＝60/13。ABはAHの2倍です。', ['AH＝60/13', 'AB＝2×60/13＝120/13'], ['AB＝2AH']),
   ANS('120/13cm'),
@@ -226,10 +227,13 @@ const s_s21: Figure = show([
 // 立方体（斜投影）
 const pc = (x: number, y: number, z: number): [number, number] => [100 + 14 * x + 7 * y, 134 - 13 * z - 5 * y];
 const cA = pc(0, 0, 0), cB = pc(6, 0, 0), cC = pc(6, 6, 0), cD = pc(0, 6, 0), cE = pc(0, 0, 6), cF = pc(6, 0, 6), cG = pc(6, 6, 6), cH = pc(0, 6, 6);
-const cubeBase = (): E[] => [
+const cubeEdges = (): E[] => [
   seg(cA, cB), seg(cB, cC), seg(cC, cD, C.ink, true, 1.5), seg(cD, cA, C.ink, true, 1.5),
   seg(cE, cF), seg(cF, cG), seg(cG, cH), seg(cH, cE),
   seg(cA, cE), seg(cB, cF), seg(cC, cG), seg(cD, cH, C.ink, true, 1.5),
+];
+const cubeBase = (): E[] => [
+  ...cubeEdges(),
   tx(cA[0] - 8, cA[1] + 8, 'A', 13, C.ink, true, 'end'), tx(cB[0] + 8, cB[1] + 8, 'B', 13, C.ink, true, 'start'), tx(cC[0] + 8, cC[1] + 6, 'C', 13, C.ink, true, 'start'), tx(cD[0] - 6, cD[1] + 14, 'D', 13, C.ink, true, 'end'),
   tx(cE[0] - 8, cE[1] + 2, 'E', 13, C.ink, true, 'end'), tx(cF[0] - 4, cF[1] + 16, 'F', 13, C.ink, true, 'end'), tx(cG[0] + 8, cG[1] + 4, 'G', 13, C.ink, true, 'start'), tx(cH[0] - 6, cH[1] - 4, 'H', 13, C.ink, true, 'end'),
 ];
@@ -239,9 +243,9 @@ const pP = pc(6, 0, 3), pQ = pc(0, 6, 3);
 const s_s23t: Figure = show([
   SF('1辺6cmの立方体ABCD−EFGH。辺BFの中点をP、辺DHの中点をQとして、4点A、P、G、Qを通る平面で切った切り口の面積を求めます。', ['辺BFの中点P　辺DHの中点Q　切り口は A、P、G、Q'], cubeBase()),
   S('PとQをとります。BP＝PF＝3cm、DQ＝QH＝3cm。', ['P は BF の中点　Q は DH の中点'], [dot(pP, 3.5, C.red), dot(pQ, 3.5, C.red), tx(pP[0] + 8, pP[1] + 4, 'P', 13, C.red, true, 'start'), tx(pQ[0] - 8, pQ[1] + 4, 'Q', 13, C.red, true, 'end')]),
-  S('A→P→G→Q と結ぶと、切り口の四角形ができます。', ['切り口 APGQ'], [P2([cA, pP, cG, pQ], C.purple, FILL.purple), seg(cA, pP, C.purple, false, 2.5), seg(pP, cG, C.purple, false, 2.5), seg(cG, pQ, C.purple, false, 2.5), seg(pQ, cA, C.purple, false, 2.5)]),
+  S('A→P→G→Q と結ぶと、切り口の四角形ができます。', ['切り口 APGQ'], [P2([cA, pP, cG, pQ], C.purple, FILL.purple), seg(cA, pP, C.purple, false, 2.5), seg(pP, cG, C.purple, false, 2.5), seg(cG, pQ, C.purple, false, 2.5), seg(pQ, cA, C.purple, false, 2.5), ...cubeEdges(), dot(pP, 3.5, C.red), dot(pQ, 3.5, C.red)]),
   P('手がかり。AP は、直角をはさむ2辺が 6cm と 3cm の直角三角形の斜辺です。PG、GQ、QA も同じ形です。', ['AP＝√(36＋9)＝√45', 'PG＝GQ＝QA＝√45'], ['4つの辺がすべて等しい']),
-  S('理由。4辺が等しい四角形はひし形です。ひし形の面積は、2本の対角線の長さの積の半分。対角線は AG と PQ。', ['ひし形　面積＝AG×PQ÷2'], [seg(cA, cG, C.blue, false, 2.5), seg(pP, pQ, C.green, false, 2.5)]),
+  SF('理由。4辺が等しい四角形はひし形です。ひし形の面積は、2本の対角線の長さの積の半分。対角線は AG と PQ。', ['ひし形　面積＝AG×PQ÷2'], [...cubeBase(), dot(pP, 3.5, C.red), dot(pQ, 3.5, C.red), tx(pP[0] + 8, pP[1] + 4, 'P', 13, C.red, true, 'start'), tx(pQ[0] - 8, pQ[1] + 4, 'Q', 13, C.red, true, 'end'), P2([cA, pP, cG, pQ], C.purple, FILL.purple), ...cubeEdges(), seg(cA, cG, C.blue, false, 2.5), seg(pP, pQ, C.green, false, 2.5), dot(pP, 3.5, C.red), dot(pQ, 3.5, C.red)]),
   P('AG は立方体の対角線です。底面の対角線AC＝6√2 と、高さ CG＝6 で三平方の定理を使います。', ['AG＝√((6√2)²＋6²)', '＝√108＝6√3'], ['立方体の対角線は 1辺×√3']),
   P('PQ は BD と平行で、長さが等しい（PとQの高さはどちらも3cm）。BD は底面の対角線です。', ['PQ＝BD＝6√2'], ['底面の対角線']),
   ANS('18√6 cm²', '面積は 6√3×6√2÷2＝18√6 です。'),
@@ -271,7 +275,7 @@ const pyr26 = (): E[] => [seg(Vb[0], Vb[1]), seg(Vb[1], Vb[2]), seg(Vb[2], Vb[3]
 const s_s26: Figure = show([
   SF('底面が1辺6cmの正方形で、高さが4cmの正四角すい。体積と表面積を求めます。', ['底面は1辺6cmの正方形　高さ4cm'], [...pyr26(), tx(156, 138, '6cm', 11, C.gray), seg(V26, cen26, C.red, true, 1.5), dot(cen26, 3, C.red), tx(166, 74, '4cm', 11, C.red, true, 'start')]),
   P('体積は、底面積×高さ÷3 です。', ['6×6×4÷3', '＝48'], ['体積 48cm³']),
-  S('手がかり。側面は合同な二等辺三角形が4つ。その高さ（斜高）は、見えていません。底面の中心Oと辺の中点Mと頂点Vで、直角三角形をつくります。', ['△VOM は ∠VOM＝90°の直角三角形'], [seg(V26, M26, C.green, false, 3), seg(cen26, M26, C.purple, false, 3), dot(M26, 3.5, C.green), tx(M26[0] - 6, M26[1] + 14, 'M', 13, C.green, true, 'end'), tx(cen26[0] + 6, cen26[1] + 2, 'O', 12, C.red, true, 'start')]),
+  SF('手がかり。側面は合同な二等辺三角形が4つ。その高さ（斜高）は、見えていません。底面の中心Oと辺の中点Mと頂点Vで、直角三角形をつくります。', ['△VOM は ∠VOM＝90°の直角三角形'], [...pyr26(), seg(V26, cen26, C.red, true, 1.5), dot(cen26, 3, C.red), seg(V26, M26, C.green, false, 3), seg(cen26, M26, C.purple, false, 3), dot(M26, 3.5, C.green), tx(M26[0] - 6, M26[1] + 14, 'M', 13, C.green, true, 'end'), tx(cen26[0] + 6, cen26[1] + 2, 'O', 12, C.red, true, 'start')]),
   P('OM は、底面の辺の長さの半分で 3cm。VO＝4cm。三平方の定理で VM を求めます。', ['VM＝√(4²＋3²)', '＝5（斜高）'], ['3：4：5 の直角三角形']),
   P('側面1つは、底辺6cm、高さ5cmの三角形です。', ['6×5÷2＝15', '4つで 15×4＝60'], ['側面積60cm²']),
   P('底面積を、たします。', ['底面積＝6×6＝36', '表面積＝36＋60＝96'], ['底面積＋側面積']),
@@ -318,8 +322,8 @@ const s_s28: Figure = show([
 const H29 = pc(2, 2, 2);
 const s_s29: Figure = show([
   SF('1辺6cmの立方体ABCD−EFGH。頂点Aから△BDEにおろした垂線の長さを求めます。', ['1辺6cm　A から △BDE へ垂線'], cubeBase()),
-  S('B、D、E を結んで △BDE をつくります。三角すい A−BDE ができます。', ['三角すい A−BDE'], [P2([cB, cD, cE], C.purple, FILL.purple), seg(cB, cD, C.purple, false, 2.5), seg(cD, cE, C.purple, false, 2.5), seg(cE, cB, C.purple, false, 2.5)]),
-  S('手がかり。この三角すいの体積を、2通りに表します。1つ目は、△ABD を底面、AE を高さと見る方法。AE は底面ABDに垂直です。', ['底面△ABD　高さ AE＝6'], [P2([cA, cB, cD], C.blue, FILL.blue), seg(cA, cE, C.red, false, 3)]),
+  S('B、D、E を結んで △BDE をつくります。三角すい A−BDE ができます。', ['三角すい A−BDE'], [P2([cB, cD, cE], C.purple, FILL.purple), ...cubeEdges(), seg(cB, cD, C.purple, false, 2.5), seg(cD, cE, C.purple, false, 2.5), seg(cE, cB, C.purple, false, 2.5)]),
+  S('手がかり。この三角すいの体積を、2通りに表します。1つ目は、△ABD を底面、AE を高さと見る方法。AE は底面ABDに垂直です。', ['底面△ABD　高さ AE＝6'], [P2([cA, cB, cD], C.blue, FILL.blue), ...cubeEdges(), seg(cA, cE, C.red, false, 3)]),
   P('△ABD は直角二等辺三角形。', ['△ABD＝6×6÷2＝18', '体積＝18×6÷3＝36'], ['体積 36cm³']),
   P('2つ目は、△BDE を底面と見る方法。BD＝DE＝EB＝6√2（どれも面の対角線）の正三角形です。', ['高さ＝6√2×√3/2＝3√6', '△BDE＝6√2×3√6÷2＝18√3'], ['正三角形の高さは 1辺×√3/2']),
   P('求める垂線の長さを h とすると、体積＝△BDE×h÷3。', ['18√3×h÷3＝36', '6√3h＝36　h＝6/√3＝2√3'], ['h＝2√3 cm']),
@@ -346,11 +350,11 @@ const s_s30: Figure = show([
 const g39 = (x: number, y: number): [number, number] => [160 + 30 * x, 125 - 11 * y];
 const para39 = (): E[] => { const pts: [number, number][] = []; for (let k = 0; k <= 34; k++) { const x = -3.3 + k * 0.18; const y = x * x; if (y <= 10.2) pts.push(g39(x, y)); } return polyLine(pts, C.gray, 2); };
 const a39 = g39(-3, 9), b39 = g39(2, 4), p39 = g39(-0.5, 0.25), l39 = g39(-0.5, 6.5);
-const base39 = (): E[] => [ar(20, 125, 300, 125, C.gray), ar(160, 133, 160, 6, C.gray), tx(304, 129, 'x', 12, C.gray), tx(172, 12, 'y', 12, C.gray), tx(150, 140, 'O', 11, C.gray), ...para39(), seg(g39(-3.4, 9.4), g39(2.6, 3.4), C.ink, false, 2.5), dot(a39, 3.5, C.blue), dot(b39, 3.5, C.blue), tx(a39[0] - 8, a39[1] - 4, 'A', 13, C.blue, true, 'end'), tx(b39[0] + 8, b39[1] - 6, 'B', 13, C.blue, true, 'start')];
+const base39 = (): E[] => [ar(20, 125, 300, 125, C.gray), ar(160, 133, 160, 6, C.gray), tx(304, 129, 'x', 12, C.gray), tx(172, 17, 'y', 12, C.gray), tx(150, 140, 'O', 11, C.gray), ...para39(), seg(g39(-3.4, 9.4), g39(2.6, 3.4), C.ink, false, 2.5), dot(a39, 3.5, C.blue), dot(b39, 3.5, C.blue), tx(a39[0] - 8, a39[1] - 4, 'A', 13, C.blue, true, 'end'), tx(b39[0] + 8, b39[1] - 6, 'B', 13, C.blue, true, 'start')];
 const s_s39: Figure = show([
   SF('放物線 y＝x² と直線 y＝−x＋6 が2点A、Bで交わります。AとBの間の放物線上に点Pをとり、△PABの面積が最大になるときを求めます。', ['y＝x² と y＝−x＋6　交点 A、B'], base39()),
   P('手がかり。まず、交点を求めます。x²＝−x＋6 より x²＋x−6＝0。', ['(x＋3)(x−2)＝0', 'A(−3, 9)　B(2, 4)'], ['AとBのx座標の差は 2−(−3)＝5']),
-  S('P(t, t²) をとり、Pと同じx座標の直線上の点を考えます。2点のたての距離が、△PABの高さのかわりになります。', ['P(t, t²)　たての距離を考える'], [dot(p39, 3.5, C.red), tx(p39[0] + 8, p39[1] + 14, 'P', 13, C.red, true, 'start'), seg(p39, l39, C.purple, false, 3), P2([a39, b39, p39], C.red, FILL.red)]),
+  SF('P(t, t²) をとり、Pと同じx座標の直線上の点を考えます。2点のたての距離が、△PABの高さのかわりになります。', ['P(t, t²)　たての距離を考える'], [...base39(), dot(p39, 3.5, C.red), tx(p39[0] + 8, p39[1] + 14, 'P', 13, C.red, true, 'start'), seg(p39, l39, C.purple, false, 3), P2([a39, b39, p39], C.red, FILL.red)]),
   P('理由。ABの底辺の目安（x座標の差5）は一定なので、面積はたての距離に比例します。たての距離が最大のとき、面積も最大です。', ['たての距離＝(−t＋6)−t²', '＝−t²−t＋6'], ['面積＝5×(たての距離)÷2']),
   P('平方完成します。(t＋1/2)² は 0 以上なので、t＝−1/2 のとき、たての距離が最大です。', ['−t²−t＋6＝−(t＋1/2)²＋25/4', 't＝−1/2 で最大 25/4'], ['−3＜t＜2 に入っている ✓']),
   P('t＝−1/2 のとき、Pのy座標は t²＝1/4。面積は、x座標の差5×たての距離25/4÷2。', ['P(−1/2, 1/4)', '5×25/4÷2＝125/8'], ['面積 125/8（＝15.625）']),
@@ -367,7 +371,7 @@ const s_s40: Figure = show([
   SF('半径6cmの円O。∠AOB＝120°となる2点A、B。弦ABと劣弧ABでかこまれた部分（弓形）の面積を求めます。', ['半径6cm　∠AOB＝120°　弓形の面積は？'], base40()),
   S('手がかり。おうぎ形OABから、△OABをのぞくと、弓形が残ります。', ['弓形＝おうぎ形OAB−△OAB'], [P2([O40, ...arc40()], C.blue, FILL.blue), seg(O40, a40, C.ink, false, 2), seg(O40, b40, C.ink, false, 2)]),
   P('おうぎ形OABは、円の 120/360＝1/3 です。', ['π×6²×1/3', '＝12π'], ['おうぎ形 12π cm²']),
-  S('OからABに垂線OHをひきます。△OAB は二等辺三角形なので、OH は ∠AOB を2等分し、ABを2等分します。', ['∠AOH＝60°　OH⊥AB'], [seg(O40, h40, C.green, false, 3), seg(a40, b40, C.purple, false, 2.5), dot(h40, 3, C.green), tx(h40[0] + 8, h40[1] + 14, 'H', 12, C.green, true, 'start')]),
+  SF('OからABに垂線OHをひきます。△OAB は二等辺三角形なので、OH は ∠AOB を2等分し、ABを2等分します。', ['∠AOH＝60°　OH⊥AB'], [...base40(), seg(O40, h40, C.green, false, 3), seg(a40, b40, C.purple, false, 2.5), dot(h40, 3, C.green), tx(h40[0] + 8, h40[1] + 14, 'H', 12, C.green, true, 'start')]),
   P('理由。△OAH は 30°、60°、90°の直角三角形で、辺の比は 1：2：√3。斜辺OA＝6なので、OH＝3、AH＝3√3。', ['OH＝6÷2＝3', 'AH＝3×√3＝3√3'], ['AB＝2×3√3＝6√3']),
   P('△OAB は、底辺AB、高さOHの三角形です。', ['6√3×3÷2＝9√3'], ['△OAB＝9√3 cm²']),
   SF('弓形は、おうぎ形から三角形をひいた、この部分です。', ['弓形＝12π−9√3'], [P2(arc40(), C.purple, FILL.purple), P2(circPts(O40[0], O40[1], 56), C.gray), seg(a40, b40, C.purple, false, 2.5), dot(a40, 3.5, C.blue), dot(b40, 3.5, C.blue), dot(O40, 3, C.ink)]),
