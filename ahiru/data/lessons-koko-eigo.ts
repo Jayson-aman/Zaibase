@@ -1,4 +1,5 @@
 import type { Lesson } from './lesson-types';
+import { lessonsU120J1Eigo } from './lessons-u120-j1-eigo';
 import { kokoEigoExt01Lessons } from './lessons-koko-eigo-ext01';
 import { kokoEigoExt02Lessons } from './lessons-koko-eigo-ext02';
 import { kokoEigoExt03Lessons } from './lessons-koko-eigo-ext03';
@@ -4466,4 +4467,5 @@ export const kokoEigoLessons: Lesson[] = [
   ...lessonsNew20J1Eigo,
   ...lessonsNew20J2Eigo,
   ...lessonsNew20J3Eigo,
+  ...lessonsU120J1Eigo,
 ];
