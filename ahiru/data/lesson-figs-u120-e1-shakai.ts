@@ -587,7 +587,7 @@ export const lessonFigsU120E1Shakai: Record<string, Figure> = {
     { note: "ゆうびんきょくから まっすぐ 下に 見る。", add: [ar(140, 86, 140, 140, C.red, false)] },
     { note: "そこに ある たてものは 学校。", add: [bx(118, 142, 84, 36, "学校", C.red, FILL.red, 14)] },
     { note: "こたえ：学校。", add: [...fresh(lb(160, 93, "ゆうびんきょくの まっすぐ 下", 20, C.ink, 'middle', true),lb(160, 147, "学校", 36, C.red, 'middle', true))] },
-    { note: "たしかめ：下は 学校、左は ゆうびんきょく。", add: [...fresh(lb(160, 74, "ゆうびんきょくの 下は 学校", 22, C.red, 'middle', true),lb(160, 120, "えきの 左は ゆうびんきょく", 22, C.blue, 'middle', true),lb(160, 166, "上・下・左・右で つたえる", 22, C.ink, 'middle', true))] },
+    { note: "たしかめ：ゆうびんきょくの 下は 学校、えきの 左は ゆうびんきょく。", add: [...fresh(lb(160, 74, "ゆうびんきょくの 下は 学校", 22, C.red, 'middle', true),lb(160, 120, "えきの 左は ゆうびんきょく", 22, C.blue, 'middle', true),lb(160, 166, "上・下・左・右で つたえる", 22, C.ink, 'middle', true))] },
   ], "うごかして、1つずつ たしかめよう"),
   u120e1sh_059_a: show([
     { note: "たんけんの もちもの。ノート・えんぴつ・ぼうし・水とう。", add: [...fresh(lb(160, 18, "たんけんの もちもの", 16, C.blue, 'middle', true),bx(20, 40, 130, 44, "ノート", C.main, FILL.warm, 16),bx(170, 40, 130, 44, "えんぴつ", C.main, FILL.warm, 16),bx(20, 110, 130, 44, "ぼうし", C.main, FILL.warm, 16),bx(170, 110, 130, 44, "水とう", C.main, FILL.warm, 16),lb(160, 190, "じゅんびを して 出かけよう", 16, C.red, 'middle', true))] },
