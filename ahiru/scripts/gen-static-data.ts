@@ -53,6 +53,7 @@ import { lessonsU120E3Kokugo } from '../data/lessons-u120-e3-kokugo';
 import { lessonsU120E4Kokugo } from '../data/lessons-u120-e4-kokugo';
 import { lessonsU120E4KokugoKanji } from '../data/lessons-u120-e4-kokugo-kanji';
 import { lessonsU120E1Rika } from '../data/lessons-u120-e1-rika';
+import { lessonsU120E2Rika } from '../data/lessons-u120-e2-rika';
 import { lessonsU120E3Rika } from '../data/lessons-u120-e3-rika';
 import { lessonsU120E4Rika } from '../data/lessons-u120-e4-rika';
 import { lessonsU120E1Shakai } from '../data/lessons-u120-e1-shakai';
@@ -106,6 +107,7 @@ const CLUSTERS = [
   lessonsU120E4Kokugo,
   lessonsU120E4KokugoKanji,
   lessonsU120E1Rika,
+  lessonsU120E2Rika,
   lessonsU120E3Rika,
   lessonsU120E4Rika,
   lessonsU120E1Shakai,
