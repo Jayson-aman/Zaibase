@@ -210,10 +210,16 @@ import { lessonFigsU120E2Kokugo } from './lesson-figs-u120-e2-kokugo';
 import { lessonFigsU120E3Kokugo } from './lesson-figs-u120-e3-kokugo';
 import { lessonFigsU120E4Kokugo } from './lesson-figs-u120-e4-kokugo';
 import { lessonFigsU120E4KokugoKanji } from './lesson-figs-u120-e4-kokugo-kanji';
+import { lessonFigsU120E1Rika } from './lesson-figs-u120-e1-rika';
+import { lessonFigsU120E2Rika } from './lesson-figs-u120-e2-rika';
 import { lessonFigsU120E3Rika } from './lesson-figs-u120-e3-rika';
 import { lessonFigsU120E4Rika } from './lesson-figs-u120-e4-rika';
+import { lessonFigsU120E1Shakai } from './lesson-figs-u120-e1-shakai';
+import { lessonFigsU120E2Shakai } from './lesson-figs-u120-e2-shakai';
 import { lessonFigsU120E3Shakai } from './lesson-figs-u120-e3-shakai';
 import { lessonFigsU120E4Shakai } from './lesson-figs-u120-e4-shakai';
+import { lessonFigsU120E3Eigo } from './lesson-figs-u120-e3-eigo';
+import { lessonFigsU120E4Eigo } from './lesson-figs-u120-e4-eigo';
 import { lessonFigsRitsumeikan_sansu } from './lesson-figs-ritsumeikan-sansu';
 import { lessonFigsRitsumeikan_kokugo } from './lesson-figs-ritsumeikan-kokugo';
 import { lessonFigsRitsumeikan_rika } from './lesson-figs-ritsumeikan-rika';
@@ -277,10 +283,16 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsU120E3Kokugo,
   ...lessonFigsU120E4Kokugo,
   ...lessonFigsU120E4KokugoKanji,
+  ...lessonFigsU120E1Rika,
+  ...lessonFigsU120E2Rika,
   ...lessonFigsU120E3Rika,
   ...lessonFigsU120E4Rika,
+  ...lessonFigsU120E1Shakai,
+  ...lessonFigsU120E2Shakai,
   ...lessonFigsU120E3Shakai,
   ...lessonFigsU120E4Shakai,
+  ...lessonFigsU120E3Eigo,
+  ...lessonFigsU120E4Eigo,
   ...lessonFigsRitsumeikan_sansu,
   ...lessonFigsRitsumeikan_kokugo,
   ...lessonFigsRitsumeikan_rika,
