@@ -375,7 +375,7 @@ const s_s13: Figure = show([
 ], '地形図1cm＝実際250m。5cm＝1250m。標高差250m→100mで20m。');
 
 // 16 漁業
-const bxs = (n: number, t: string, col = C.blue, fill = FILL.blue): E[] => {
+const bxs = (n: number, t: string, col: string = C.blue, fill: string = FILL.blue): E[] => {
   const y = 6 + n * 33;
   return [...(n > 0 ? [ar(160, y - 7, 160, y)] : []), bx(30, y, 260, 24, t, col, fill, 12)];
 };
@@ -470,7 +470,7 @@ const s_s33: Figure = show([
 ], '太閤検地＋刀狩→兵農分離。身分が分かれ、年貢の仕組みが整う。');
 
 // 34 4つの窓口
-const win = (i: number, a: string, b: string, col = C.blue, fill = FILL.blue): E[] => [bx(10, 40 + i * 24, 100, 22, a, col, fill, 12), ar(112, 51 + i * 24, 198, 51 + i * 24, col), bx(200, 40 + i * 24, 110, 22, b, col, fill, 12)];
+const win = (i: number, a: string, b: string, col: string = C.blue, fill: string = FILL.blue): E[] => [bx(10, 40 + i * 24, 100, 22, a, col, fill, 12), ar(112, 51 + i * 24, 198, 51 + i * 24, col), bx(200, 40 + i * 24, 110, 22, b, col, fill, 12)];
 const head34 = (): E => bx(10, 8, 300, 24, '鎖国の中の4つの窓口', C.ink, FILL.warm, 13);
 const s_s34: Figure = show([
   SF('江戸幕府は、鎖国をしながら、4つの窓口で、外国や周辺の人々と交流をもっていました。', ['4つの窓口'], [head34()]),
@@ -533,7 +533,7 @@ const s_s40: Figure = show([
 ], '解散→40日以内に総選挙→30日以内に特別会。最長70日。');
 
 // 42 三審制
-const court = (n: number, t: string, col = C.blue, fill = FILL.blue): E[] => [...(n > 0 ? [ar(160, 12 + n * 48 - 8, 160, 12 + n * 48)] : []), bx(50, 12 + n * 48, 220, 28, t, col, fill, 13)];
+const court = (n: number, t: string, col: string = C.blue, fill: string = FILL.blue): E[] => [...(n > 0 ? [ar(160, 12 + n * 48 - 8, 160, 12 + n * 48)] : []), bx(50, 12 + n * 48, 220, 28, t, col, fill, 13)];
 const s_s42: Figure = show([
   SF('民事裁判の第一審は、地方裁判所で行われます。', ['第一審　地方裁判所'], court(0, '第一審　地方裁判所')),
   S('第一審の判決に不服なときは、控訴します。第二審は、高等裁判所です。', ['不服　→　控訴', '第二審　高等裁判所'], [...court(1, '第二審　高等裁判所', C.green, FILL.green), tx(210, 44, '控訴', 12, C.red)]),
