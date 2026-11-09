@@ -132,7 +132,7 @@ const REGIONS: { key: RegionKey; label: string; icon: string; color: string }[] 
 ];
 
 // 高校の学校は、key だけでは地域が決まらないので、ここに書く。
-const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu', 'koko-keio-shiki']);
+const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu', 'koko-keio-shiki', 'koko-tsukuba', 'koko-shibumaku', 'koko-waseda-jitsugyo']);
 const TOKAI_KOKO = new Set(['koko-tokai', 'koko-taki', 'koko-nanzan']);
 const KYUSHU_KOKO = new Set(['koko-kurume', 'koko-seinan', 'koko-ohori']);
 
