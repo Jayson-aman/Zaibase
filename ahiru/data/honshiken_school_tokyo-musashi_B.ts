@@ -1219,7 +1219,7 @@ export const honshikenSchool_tokyo_musashi_B: Question[] = [
     subject: "shakai",
     examType: "chugaku",
     course: "tokyo-musashi",
-    difficulty: "standard",
+    difficulty: "advanced",
     question: "税金について答えなさい。(1) 税を納める人と、実際に負担する人が同じ税を、何といいますか。(2) 税ぬき800円の弁当を、持ち帰りで買うと、軽減税率8%がかかり、いくらになりますか。(3) 同じ弁当を、店内で食べるときの、消費税10%がかかった代金は、いくらですか。",
     answer: "(1) 直接税　(2) 864円　(3) 880円",
     hint: "(1) 所得税や法人税が、この仲間です。消費税は、税を納める人と、負担する人がちがいます。(2)(3) 税ぬきの値段に、「1＋税率」をかけます。",
