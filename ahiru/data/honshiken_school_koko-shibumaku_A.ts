@@ -1117,7 +1117,7 @@ DE∥BC のとき、△ADE と △ABC は相似です。相似比が a：b の�
     subject: 'sansu',
     examType: 'koko',
     course: 'koko-shibumaku',
-    difficulty: 'advanced',
+    difficulty: 'standard',
     question: '連続する2つの正の奇数の積が143になります。この2つの奇数の和を求めなさい。',
     answer: '24',
     hint: '小さいほうの奇数を n とすると、大きいほうは n＋2。',
