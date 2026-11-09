@@ -96,13 +96,13 @@ const cube16 = (): E[] => {
     ln(...q.A, ...q.Bf, C.ink, false, 2), ln(...q.Bf, ...q.Cf, C.ink, false, 2), ln(...q.Cf, ...q.Df, C.ink, false, 2), ln(...q.Df, ...q.A, C.ink, false, 2),
     ln(...q.Df, ...q.Db, C.ink, false, 2), ln(...q.Db, ...q.Cb, C.ink, false, 2), ln(...q.Cb, ...q.Cf, C.ink, false, 2), ln(...q.Bb, ...q.Cb, C.ink, false, 2), ln(...q.Bf, ...q.Bb, C.ink, false, 2),
     ln(...q.A, ...q.Ab, C.gray, true, 1), ln(...q.Ab, ...q.Bb, C.gray, true, 1), ln(...q.Ab, ...q.Db, C.gray, true, 1),
-    tx(28, 138, 'A', 14, C.red), tx(262, 70, '1辺 6cm', 13, C.ink),
+    tx(130, 46, 'A', 14, C.red), tx(236, 90, '1辺 6cm', 13, C.ink),
   ];
 };
-const M16: [number, number][] = [[80, 130], [40, 90], [60, 115]];
+const M16: [number, number][] = [[80, 50], [120, 90], [140, 35]];
 const a16: Figure = show([
   SF('1辺6cmの立方体の頂点Aのまわりを、切り落とします。残った立体の体積を求めます。', ['残った体積は？'], cube16()),
-  S('Aから出る3本の辺の、真ん中の点（Aから3cm）を通る平面で、Aのまわりを切り落とします。', ['Aから3cmの3点を通る平面'], [pg(M16, C.red, FILL.red), ...M16.map(([x, y]) => ci(x, y, 3, undefined, C.red, C.red)), tx(80, 144 - 6, '3cm', 11, C.red), tx(24, 94, '3cm', 11, C.red, true, 'end')]),
+  S('Aから出る3本の辺の、真ん中の点（Aから3cm）を通る平面で、Aのまわりを切り落とします。', ['Aから3cmの3点を通る平面'], [pg(M16, C.red, FILL.red), ...M16.map(([x, y]) => ci(x, y, 3, undefined, C.red, C.red)), tx(80, 43, '3cm', 11, C.red), tx(128, 96, '3cm', 11, C.red, true, 'start'), tx(150, 34, '3cm', 11, C.red, true, 'start')]),
   S('切り落とした部分は、Aが先端の三角すいです。Aに集まる3本の辺は、たがいに直角で、どれも3cmです。', ['切り落とす部分＝三角すい']),
   S('まず、もとの立方体の体積は、6×6×6＝216cm³です。', ['立方体 6×6×6＝216cm³']),
   S('理由。すいの体積は「底面積×高さ÷3」です。同じ底面と高さの柱の、ちょうど1/3になるからです。底面は、Aのまわりの直角三角形（3cmと3cm）、高さは3cmです。', ['底面 3×3÷2＝4.5cm²', '高さ 3cm']),
@@ -129,11 +129,11 @@ const a19: Figure = show([
 
 // 22 ニュートン算
 const rect22 = (x0: number, y0: number, w: number, h: number, col: string, fill: string): E => pg([[x0, y0], [x0 + w, y0], [x0 + w, y0 + h], [x0, y0 + h]], col, fill);
-const area22 = (): E[] => [rect22(40, 80, 120, 40, C.blue, FILL.blue), rect22(40, 60, 60, 60, C.green, FILL.green), tx(34, 124, '0', 11, C.gray, true, 'end'), tx(100, 134, '10日', 11, C.green), tx(160, 134, '20日', 11, C.blue), tx(168, 100, 'A 10頭×20日', 11, C.blue, true, 'start'), tx(168, 116, '＝200', 12, C.blue, true, 'start'), tx(104, 74, 'B 15頭', 11, C.green, true, 'start'), tx(104, 88, '×10日＝150', 11, C.green, true, 'start')];
+const area22 = (): E[] => [rect22(60, 70, 120, 40, C.blue, FILL.blue), rect22(60, 50, 60, 60, C.green, FILL.green), tx(54, 114, '0', 11, C.gray, true, 'end'), tx(120, 126, '10日', 11, C.green), tx(180, 126, '20日', 11, C.blue), tx(90, 86, 'B', 14, C.green), tx(150, 94, 'A', 14, C.blue), tx(192, 76, 'A：10頭×20日', 11, C.blue, true, 'start'), tx(192, 90, '＝200', 11, C.blue, true, 'start'), tx(192, 108, 'B：15頭×10日', 11, C.green, true, 'start'), tx(192, 122, '＝150', 11, C.green, true, 'start')];
 const a22: Figure = show([
   SF('草が毎日一定の量ずつ生える牧場があります。牛10頭だと20日、15頭だと10日で、草を食べつくします。25頭だと何日？', ['25頭だと何日？'], [bl(20, 30, 130, 36, '10頭 → 20日', 14), gn(170, 30, 130, 36, '15頭 → 10日', 14), tx(160, 100, '25頭だと…？', 16, C.purple)]),
   SF('牛1頭が1日に食べる草を1とします。食べた量＝頭数×日数。Aは10×20＝200、Bは15×10＝150です。', ['A＝10×20＝200', 'B＝15×10＝150'], area22()),
-  S('理由。草は毎日生えます。20日のほうが10日長いので、そのぶん生えた草が多いはずです。食べた量の差が、そのまま増えた草です。', ['200−150＝50は 10日ぶんの増えた草'], [ln(100, 128, 160, 128, C.red, false, 3), tx(130, 142 - 5, '10日ぶん', 11, C.red)]),
+  S('理由。草は毎日生えます。20日のほうが10日長いので、そのぶん生えた草が多いはずです。食べた量の差が、そのまま増えた草です。', ['200−150＝50は 10日ぶんの増えた草'], [ln(120, 64, 180, 64, C.red, false, 3), tx(150, 57, '10日ぶん', 11, C.red)]),
   S('1日に生える草は、50÷10＝5です。', ['1日に生える草＝50÷10＝5']),
   S('はじめにあった草は、150−5×10＝100です。（20日のほうでも、200−5×20＝100で同じ。）', ['はじめの草 150−5×10＝100']),
   SF('25頭だと、1日に25食べて、5生えます。差し引き、1日に20ずつ、へっていきます。', ['25−5＝20ずつへる'], [gn(20, 30, 130, 40, '食べる 25/日', 14), rd(170, 30, 130, 40, '生える 5/日', 14), pu(90, 92, 140, 36, 'へる 20/日', 15)]),
@@ -164,11 +164,11 @@ const a23: Figure = show([
 
 // 25 直角三角形を斜辺で回転
 const T25 = { A: [40, 90] as [number, number], C: [140, 90] as [number, number], B: [76, 42] as [number, number], H: [76, 90] as [number, number], B2: [76, 138] as [number, number] };
-const tri25 = (): E[] => [ln(...T25.A, ...T25.B, C.ink, false, 2), ln(...T25.B, ...T25.C, C.ink, false, 2), ln(...T25.C, ...T25.A, C.ink, false, 2), tx(30, 96, 'A', 13), tx(150, 96, 'C', 13), tx(70, 36, 'B', 13), tx(48, 62, '3', 12, C.blue, true, 'end'), tx(114, 56, '4', 12, C.blue, true, 'start'), tx(90, 108, '5', 12, C.blue)];
+const tri25 = (): E[] => [ln(...T25.A, ...T25.B, C.ink, false, 2), ln(...T25.B, ...T25.C, C.ink, false, 2), ln(...T25.C, ...T25.A, C.ink, false, 2), tx(30, 96, 'A', 13), tx(150, 96, 'C', 13), tx(70, 36, 'B', 13), tx(48, 62, '3', 12, C.blue, true, 'end'), tx(114, 56, '4', 12, C.blue, true, 'start'), tx(108, 108, '5', 12, C.blue)];
 const a25: Figure = show([
   SF('直角三角形ABC（3cm、4cm、5cm）を、斜辺ACを軸にして1回転させます。できる立体の体積を求めます。', ['斜辺を軸に1回転した体積は？'], [...tri25(), tx(240, 66, 'Bが直角', 13, C.gray)]),
   S('三角形を、軸の反対側にも写してみます。回すと、Bは円をえがき、2つの円すいが底面でくっついた形になります。', ['円すい2つが底面でくっつく'], [ln(...T25.A, ...T25.B2, C.gray, true, 1), ln(...T25.B2, ...T25.C, C.gray, true, 1), ln(...T25.B, ...T25.B2, C.gray, true, 1)]),
-  S('Bから斜辺ACにおろした垂線BHが、2つの円すいに共通の、底面の半径です。', ['底面の半径＝BH'], [ln(...T25.B, ...T25.H, C.red, false, 3), tx(86, 70, 'BH', 13, C.red, true, 'start'), tx(76, 106, 'H', 12, C.red)]),
+  S('Bから斜辺ACにおろした垂線BHが、2つの円すいに共通の、底面の半径です。', ['底面の半径＝BH'], [ln(...T25.B, ...T25.H, C.red, false, 3), tx(82, 80, 'BH', 12, C.red, true, 'start'), tx(70, 106, 'H', 12, C.red)]),
   S('理由。三角形の面積を2通りで表します。3×4÷2＝6cm²。斜辺5cmを底辺と見ると、5×BH÷2＝6です。', ['5×BH÷2＝6', 'BH＝6×2÷5＝2.4cm']),
   S('底面の円の面積は、2.4×2.4×3.14＝5.76×3.14＝18.0864cm²です。', ['底面積 2.4×2.4×3.14', '＝18.0864cm²']),
   S('理由。2つの円すいは底面が共通で、高さの合計は軸の長さAC＝5cm。だから、まとめて「底面積×5÷3」で求められます。', ['体積＝18.0864×5÷3']),
@@ -216,7 +216,7 @@ const arcs29 = (): E[] => [...arc(120, 108, 30, 150, 270, C.red, 3), ...arc(180,
 const a29: Figure = show([
   SF('半径5cmの缶3つを、三角形の形にならべて、ひもで1周まきます。ひもの長さを求めます。', ['ひもの長さは？'], cans29()),
   S('ひもを、まっすぐな部分と、缶にそった曲がった部分に分けて考えます。まず、まっすぐな部分です。', ['まっすぐ部分＋曲がった部分'], straight29()),
-  S('理由。まっすぐな部分は、となり合う缶の中心を結ぶ線と平行で、同じ長さです。中心どうしの間は、半径2つぶんで10cmです。', ['まっすぐ部分は10cmが3本'], [ln(120, 108, 180, 108, C.gray, true, 1), ln(180, 108, 150, 56.04, C.gray, true, 1), ln(150, 56.04, 120, 108, C.gray, true, 1), tx(150, 104, '10cm', 11, C.gray)]),
+  S('理由。まっすぐな部分は、となり合う缶の中心を結ぶ線と平行で、同じ長さです。中心どうしの間は、半径2つぶんで10cmです。', ['まっすぐ部分は10cmが3本'], [ln(120, 108, 180, 108, C.gray, true, 1), ln(180, 108, 150, 56.04, C.gray, true, 1), ln(150, 56.04, 120, 108, C.gray, true, 1), tx(150, 124, '10cm', 11, C.gray)]),
   S('まっすぐな部分の合計は、10×3＝30cmです。', ['まっすぐ部分＝10×3＝30cm']),
   S('曲がった部分の角度。缶の中心のまわり360度から、三角形の内角60度と、ひもがまっすぐ出ていく直角2つぶん（90度×2）を引きます。', ['360−60−90−90＝120度'], arcs29()),
   S('3つの缶で、120度×3＝360度。曲がった部分を合わせると、ちょうど円1個ぶんの円周になります。', ['120度×3缶＝360度＝円1個ぶん']),
@@ -234,7 +234,7 @@ const a32: Figure = show([
   S('DEFのまわりに、3つの三角形ADE、BEF、CDFができます。60から、この3つを引けば、DEFが出ます。', ['DEF＝60−(ADE＋BEF＋CDF)'], [ln(...PD32, ...PE32, C.purple, false, 3), ln(...PE32, ...PF32, C.purple, false, 3), ln(...PF32, ...PD32, C.purple, false, 3)]),
   S('ADE。AEはABの半分です。対角線BDで半分に分けた三角形ABDは30cm²なので、ADE＝30÷2＝15cm²。', ['ADE＝30÷2＝15cm²'], [pg([PA32, PD32, PE32], C.blue, FILL.blue), tx(107, 102, '15', 15, C.blue)]),
   S('CDF。CFはBCの2/3です。三角形BCDは30cm²で、頂点Dが同じなので、CDF＝30×2/3＝20cm²。', ['CDF＝30×2/3＝20cm²'], [pg([PD32, PC32, PF32], C.green, FILL.green), tx(212, 66, '20', 15, C.green)]),
-  S('BEF。三角形BECは、三角形ABC（30cm²）の半分で15cm²。BFはBCの1/3なので、BEF＝15×1/3＝5cm²。', ['BEF＝15×1/3＝5cm²'], [pg([PB32, PE32, PF32], C.red, FILL.red), tx(200, 118, '5', 14, C.red)]),
+  S('BEF。三角形BECは、三角形ABC（30cm²）の半分で15cm²。BFはBCの1/3なので、BEF＝15×1/3＝5cm²。', ['BEF＝15×1/3＝5cm²'], [pg([PB32, PE32, PF32], C.red, FILL.red), tx(205, 122, '5', 13, C.red)]),
   S('3つの三角形を合わせると、15＋20＋5＝40cm²です。', ['15＋20＋5＝40cm²']),
   S('三角形DEFは、60−40＝20cm²です。', ['60−40＝20cm²'], [tx(165, 100, 'DEF', 13, C.purple), tx(165, 114, '20', 15, C.purple)]),
   S('答えは20cm²です。', ['=答え　20cm²']),
@@ -286,7 +286,7 @@ const a34: Figure = show([
 
 // 36 影
 const LX = 60, GR = 120, PXA = 204;
-const scene36 = (): E[] => [ln(20, GR, 300, GR, C.ink, false, 2), ln(LX, GR, LX, 39, C.ink, false, 4), ci(LX, 35, 4, undefined, C.main, C.main), ln(PXA, GR, PXA, 93, C.blue, false, 4), ci(PXA, 89, 4, undefined, C.blue, C.blue), tx(LX - 8, 84, '4.5m', 12, C.ink, true, 'end'), tx(PXA + 8, 108, '1.5m', 12, C.blue, true, 'start'), ar(LX, 130, PXA, 130, C.green), tx(132, 142 - 3, '8m', 12, C.green)];
+const scene36 = (): E[] => [ln(20, GR, 300, GR, C.ink, false, 2), ln(LX, GR, LX, 39, C.ink, false, 4), ci(LX, 35, 4, undefined, C.main, C.main), ln(PXA, GR, PXA, 93, C.blue, false, 4), ci(PXA, 89, 4, undefined, C.blue, C.blue), tx(LX - 8, 84, '4.5m', 12, C.ink, true, 'end'), tx(PXA - 8, 108, '1.5m', 12, C.blue, true, 'end'), ar(LX, 130, PXA, 130, C.green), tx(132, 142 - 3, '8m', 12, C.green)];
 const a36: Figure = show([
   SF('高さ4.5mの街灯の真下から、身長1.5mの人が、遠ざかるように8m歩きました。影の先は、街灯の真下から何mはなれたところ？', ['街灯から影の先まで？'], scene36()),
   S('街灯のてっぺんから、人の頭の上を通る光の線が、地面にとどいたところが、影の先です。', ['光の線が影の先を決める'], [ln(LX, 39, 276, GR, C.red, true, 2), ci(276, GR, 4, undefined, C.red, C.red)]),
@@ -335,8 +335,8 @@ const hex46 = (): E[] => [pg([HX.A, HX.B, HX.C, HX.D, HX.E, HX.F], C.ink), tx(40
 const a46: Figure = show([
   SF('面積90cm²の正六角形ABCDEF。三角形ACDの面積を求めます。', ['三角形ACD＝？'], [...hex46(), tx(250, 72, '90cm²', 14, C.gray)]),
   S('中心Oと6つの頂点を結ぶと、6つの同じ正三角形に分かれます。1つの面積は、90÷6＝15cm²です。', ['正三角形1個＝90÷6＝15cm²'], ['A', 'B', 'C', 'D', 'E', 'F'].map((k) => ln(...HX.O, ...HX[k], C.gray, true, 1))),
-  S('三角形ACDの辺ADは、中心Oを通ります。Oで、三角形ACOと三角形OCDの2つに分けます。', ['ACD＝ACO＋OCD'], [pg([HX.A, HX.C, HX.O], C.blue, FILL.blue), pg([HX.O, HX.C, HX.D], C.green, FILL.green), tx(104, 88, 'ACO', 11, C.blue), tx(142, 66, 'OCD', 11, C.green)]),
-  S('OCDは、6つの正三角形のうちの1個です。面積は15cm²です。', ['OCDは正三角形1個 → 15cm²'], [tx(142, 80, '15', 14, C.green)]),
+  S('三角形ACDの辺ADは、中心Oを通ります。Oで、三角形ACOと三角形OCDの2つに分けます。', ['ACD＝ACO＋OCD'], [pg([HX.A, HX.C, HX.O], C.blue, FILL.blue), pg([HX.O, HX.C, HX.D], C.green, FILL.green), tx(98, 56, 'ACO', 11, C.blue), tx(140, 46, 'OCD', 11, C.green)]),
+  S('OCDは、6つの正三角形のうちの1個です。面積は15cm²です。', ['OCDは正三角形1個 → 15cm²'], [tx(140, 64, '15', 14, C.green)]),
   S('ACOは、ひし形OABCを、対角線ACで半分にした三角形。ひし形は、正三角形OABとOBCの2つ分で15＋15＝30cm²。半分で15cm²です。', ['ひし形OABC＝15＋15＝30', 'ACO＝30÷2＝15cm²'], [ln(...HX.O, ...HX.B, C.red, true, 2), ln(...HX.A, ...HX.B, C.red, false, 2), ln(...HX.B, ...HX.C, C.red, false, 2)]),
   S('三角形ACDは、15＋15＝30cm²です。', ['ACD＝15＋15＝30cm²']),
   S('答えは30cm²です。', ['=答え　30cm²']),
