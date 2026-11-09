@@ -144,16 +144,17 @@ const circum = (a: [number, number], b: [number, number], c: [number, number]) =
   const uy = ((a[0] ** 2 + a[1] ** 2) * (c[0] - b[0]) + (b[0] ** 2 + b[1] ** 2) * (a[0] - c[0]) + (c[0] ** 2 + c[1] ** 2) * (b[0] - a[0])) / d;
   return { cx: ux, cy: uy, r: Math.hypot(a[0] - ux, a[1] - uy) };
 };
-const P24: [number, number] = [26, 70];
-const d1 = (t: number): [number, number] => [P24[0] + t * Math.cos((-16 * Math.PI) / 180), P24[1] + t * Math.sin((-16 * Math.PI) / 180)];
-const d2 = (t: number): [number, number] => [P24[0] + t * Math.cos((24 * Math.PI) / 180), P24[1] + t * Math.sin((24 * Math.PI) / 180)];
-const u24 = 8.4;
+const P24: [number, number] = [24, 66];
+const d1 = (t: number): [number, number] => [P24[0] + t * Math.cos((-28 * Math.PI) / 180), P24[1] + t * Math.sin((-28 * Math.PI) / 180)];
+const d2 = (t: number): [number, number] => [P24[0] + t * Math.cos((28 * Math.PI) / 180), P24[1] + t * Math.sin((28 * Math.PI) / 180)];
+const u24 = 11;
 const A24 = d1(4 * u24), B24 = d1(9 * u24), C24 = d2(3 * u24), D24 = d2(12 * u24);
 const cc24 = circum(A24, B24, C24);
 const draw24 = (): E[] => [
   pg(Array.from({ length: 60 }, (_, k) => { const a = (k / 60) * 2 * Math.PI; return [cc24.cx + cc24.r * Math.cos(a), cc24.cy + cc24.r * Math.sin(a)] as [number, number]; }), C.gray),
   ln(P24[0], P24[1], B24[0], B24[1], C.ink, false, 2), ln(P24[0], P24[1], D24[0], D24[1], C.ink, false, 2),
   dot(P24[0], P24[1], C.ink), dot(A24[0], A24[1], C.blue), dot(B24[0], B24[1], C.blue), dot(C24[0], C24[1], C.red), dot(D24[0], D24[1], C.red),
+  tx(d1(2 * u24)[0] - 6, d1(2 * u24)[1] - 6, '4', 12, C.gray), tx(d1(6.5 * u24)[0] - 2, d1(6.5 * u24)[1] - 8, '5', 12, C.gray), tx(d2(1.5 * u24)[0] - 8, d2(1.5 * u24)[1] + 4, '3', 12, C.gray),
   tx(P24[0] - 4, P24[1] + 16, 'P', 13), tx(A24[0] - 2, A24[1] - 9, 'A', 13, C.blue), tx(B24[0] + 4, B24[1] - 8, 'B', 13, C.blue), tx(C24[0] - 6, C24[1] + 17, 'C', 13, C.red), tx(D24[0] + 8, D24[1] + 14, 'D', 13, C.red),
 ];
 const s_s24: Figure = show([
