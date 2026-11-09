@@ -396,15 +396,15 @@ const reg = (n: number, f: Figure) => { figuresHonshikenSchool_tokyo_musashi_A['
   const dg = (): E[] => [ln(A[0], A[1], Cp[0], Cp[1], C.gray, false, 1.8), ln(Bp[0], Bp[1], D[0], D[1], C.gray, false, 1.8), ci(P[0], P[1], 3, undefined, C.ink, C.ink)];
   const pent = (): E[] => [pg(V, C.ink, FILL.warm), tx(110, 18, 'A', 12), tx(f1(Bp[0] + 8), f1(Bp[1] - 2), 'B', 12, C.ink, true, 'start'), tx(f1(Cp[0] + 8), f1(Cp[1] + 10), 'C', 12, C.ink, true, 'start'), tx(f1(D[0] - 8), f1(D[1] + 10), 'D', 12, C.ink, true, 'end'), tx(f1(Ep[0] - 8), f1(Ep[1] - 2), 'E', 12, C.ink, true, 'end')];
   reg(43, show([
-    SF('正五角形ABCDEで、対角線ACとBDが交わる点をPとします。角APBの大きさを求めます。', ['正五角形の1つの角は108°', '角APBは何度？'], [...pent(), tx(252, 44, '正五角形', 12), tx(252, 66, '1つの角108°', 12, C.gray)]),
-    S('対角線ACとBDをひき、交わる点をPとします。', ['角APBを求める'], [ln(A[0], A[1], Cp[0], Cp[1], C.gray, false, 1.8), ln(Bp[0], Bp[1], D[0], D[1], C.gray, false, 1.8), ci(P[0], P[1], 3, undefined, C.ink, C.ink), tx(f1(P[0] + 8), f1(P[1] - 4), 'P', 12, C.red, true, 'start')]),
+    SF('正五角形ABCDEで、対角線ACとBDが交わる点をPとします。三角形ABPの3つの角を求めて、いちばん大きい角を答えます。', ['正五角形の1つの角は108°', '三角形ABPの角を全部求める'], [...pent(), tx(252, 44, '正五角形', 12), tx(252, 66, '1つの角108°', 12, C.gray)]),
+    S('対角線ACとBDをひき、交わる点をPとします。三角形ABPの3つの角は、角PAB、角PBA、角APBです。', ['角PAB・角PBA・角APB'], [ln(A[0], A[1], Cp[0], Cp[1], C.gray, false, 1.8), ln(Bp[0], Bp[1], D[0], D[1], C.gray, false, 1.8), ci(P[0], P[1], 3, undefined, C.ink, C.ink), tx(f1(P[0] + 8), f1(P[1] - 4), 'P', 12, C.red, true, 'start')]),
     S('手がかり。三角形ABCはAB＝BCの二等辺三角形で、頂角Bは108度。底角は (180−108)÷2＝36度なので、角BACは36度です。', ['底角＝(180−108)÷2＝36°', '角BAC＝36°'], [pg([A, Bp, Cp], C.blue, FILL.blue), ...dg(), tx(252, 88, '角BAC＝36°', 12, C.blue)]),
     S('三角形BCDも同じ形の二等辺三角形。角CBDも36度です。', ['角CBD＝36°'], [pg([Bp, Cp, D], C.purple, FILL.purple), ...dg(), tx(252, 108, '角CBD＝36°', 12, C.purple)]),
     S('理由。角ABDは、角ABC108度から角CBD36度を引いた大きさ。108−36＝72度です。', ['角ABD＝108−36＝72°'], [pg([A, Bp, P], C.red, FILL.red), ...dg(), tx(252, 128, '角ABD＝72°', 12, C.red)]),
-    S('三角形ABPの内角の和は180度。角APB＝180−36−72 です。', ['角APB＝180−36−72＝72°']),
-    S('角APBは72度です。', ['=答え　72度']),
+    S('三角形ABPの内角の和は180度。角APB＝180−36−72＝72度。3つの角は36度、72度、72度です。', ['角APB＝180−36−72＝72°', '36°、72°、72°']),
+    S('いちばん大きい角は72度です。', ['=答え　72度']),
     S('確かめ。三角形ABPは、角PAB＝36度、角PBA＝72度、角APB＝72度。72度が2つあるので、AB＝APの二等辺三角形で、正五角形の形とも合います。', ['36°＋72°＋72°＝180°', '2つの角が72°で二等辺', '=形も合う ✓']),
-  ], '底角36°→角ABD＝108−36＝72°。180−36−72＝72度。'));
+  ], '底角36°→角ABD＝108−36＝72°。3つの角は36°・72°・72°。'));
 }
 
 // 44 三角形の内側の三角形

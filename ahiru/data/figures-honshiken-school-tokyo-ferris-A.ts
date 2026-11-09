@@ -145,16 +145,15 @@ const f21: Figure = show([
 const pA: [number, number] = [110, 20], pB: [number, number] = [165.2, 60.1], pC: [number, number] = [144.1, 124.9], pD: [number, number] = [75.9, 124.9], pE: [number, number] = [54.8, 60.1], pP: [number, number] = [131.1, 84.8];
 const pentBase = (): E[] => [pg([pA, pB, pC, pD, pE], C.ink, FILL.warm), tx(110, 15, 'A', 12), tx(173, 60, 'B', 12, C.ink, true, 'start'), tx(150, 138, 'C', 12, C.ink, true, 'start'), tx(70, 138, 'D', 12, C.ink, true, 'end'), tx(47, 60, 'E', 12, C.ink, true, 'end')];
 const f22: Figure = show([
-  SF('正五角形ABCDEの対角線ACとBDが交わる点をPとします。角APBの大きさを求めます。', ['対角線AC・BDの交点P', '角APB＝？'], pentBase()),
+  SF('正五角形ABCDEで、対角線ACとBDが交わる点をPとします。三角形PBCの角BPCの大きさを求めます。', ['対角線AC・BDの交点P', '角BPC＝？'], pentBase()),
   S('まず、正五角形の1つの内角を求めます。内角の和は180×(5−2)＝540度。', ['540÷5＝108度（1つの内角）']),
-  S('対角線ACとBDをひき、交わる点をPとします。', ['AC・BDをひく'], [ln(pA[0], pA[1], pC[0], pC[1], C.gray, false, 1.8), ln(pB[0], pB[1], pD[0], pD[1], C.gray, false, 1.8), ci(pP[0], pP[1], 3, undefined, C.red, C.red), tx(pP[0] + 6, pP[1] - 4, 'P', 12, C.red, true, 'start')]),
-  S('手がかり。三角形ABCは、AB＝BCの二等辺三角形で、頂角Bが108度です。', ['底角＝(180−108)÷2＝36度', '角BAC＝36度'], [pg([pA, pB, pC], C.blue, FILL.blue), tx(114, 38, '36°', 11, C.blue, true, 'start')]),
-  S('三角形BCDも同じ形。角CBD＝36度です。', ['角CBD＝36度'], [pg([pB, pC, pD], C.purple, FILL.purple), tx(160, 100, '36°', 11, C.purple, true, 'end')]),
-  S('理由。角ABPは、角ABC108度から、角CBD36度を引いた大きさです。', ['角ABP＝108−36＝72度'], [pg([pA, pB, pP], C.red, FILL.red)]),
-  S('三角形ABPの内角の和は180度です。角BAP＝36度、角ABP＝72度なので、角APBが出ます。', ['角APB＝180−36−72＝72度']),
-  S('答えは72度です。', ['=答え　72度']),
-  S('確かめ。三角形PBCで 角PBC＝36度、角PCB＝36度、角BPC＝108度。角APB＝180−108＝72度で同じです。', ['36＋36＋108＝180', '角APB＝180−108＝72', '=同じ答え ✓']),
-], '二等辺三角形の底角36°。角APB＝180−36−72＝72°。');
+  S('対角線ACとBDをひき、交わる点をPとします。三角形PBCに注目します。', ['AC・BDをひく'], [ln(pA[0], pA[1], pC[0], pC[1], C.gray, false, 1.8), ln(pB[0], pB[1], pD[0], pD[1], C.gray, false, 1.8), ci(pP[0], pP[1], 3, undefined, C.red, C.red), tx(pP[0] - 6, pP[1] - 6, 'P', 12, C.red, true, 'end'), pg([pB, pC, pP], C.purple, FILL.purple)]),
+  S('手がかり。三角形ABCは、AB＝BCの二等辺三角形で、頂角Bが108度です。底角を求めると、角BCA（角PCB）が出ます。', ['底角＝(180−108)÷2＝36度', '角PCB＝36度'], [pg([pA, pB, pC], C.blue, FILL.blue), tx(140, 112, '36°', 11, C.blue, true, 'end')]),
+  S('三角形BCDも同じ形の二等辺三角形。頂角Cが108度なので、角CBD（角PBC）も36度です。', ['角PBC＝36度'], [tx(160, 78, '36°', 11, C.purple, true, 'end')]),
+  S('理由。三角形の内角の和は180度です。三角形PBCの2つの角が36度ずつと分かったので、残りの角BPCが出ます。', ['角BPC＝180−36−36＝108度'], [tx(pP[0] + 6, pP[1] + 22, '108°', 12, C.red, true, 'start')]),
+  S('答えは108度です。', ['=答え　108度']),
+  S('確かめ。角APB＝180−36−72＝72度（三角形ABP）。角APBと角BPCは一直線上にならぶので、72＋108＝180度で合っています。', ['角APB＝180−36−72＝72', '72＋108＝180', '=一直線の角 ✓']),
+], '底角36°ずつ。角BPC＝180−36−36＝108°。');
 
 // 23 4つの半円（花びら）
 const sq0 = { x: 60, y: 28, s: 100 };
