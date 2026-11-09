@@ -63,7 +63,6 @@ const curve = (t: Tr, f: (x: number) => number, x0: number, x1: number, n = 24, 
 const O: Pt = [0, 0];
 
 // ════════════════ 09 放物線と直線の三角形の面積 ════════════════
-{ /* scope */ }
 const t09 = pl(120, 128, 10);
 const a09: Figure = show([
   SF('放物線 y＝½x² と、その上の2点 A、B でできる三角形 OAB の面積を求めます。', ['y＝½x² 上に A と B'],
@@ -172,7 +171,7 @@ const a16: Figure = show([
 // ════════════════ 18 平行線と面積比 ════════════════
 const a18: Figure = show([
   SF('△ABC で DE∥BC です。AD：DB＝3：2。', ['DE∥BC　AD：DB＝3：2'],
-    [pg([[120, 18], [40, 126], [230, 126]], C.ink, FILL.warm), ln(72, 82.8, 186, 82.8, C.ink, false, 1.8), tx(120, 12, '', 1), tx(120, 14, 'A', 12), tx(28, 130, 'B', 12), tx(242, 130, 'C', 12), tx(58, 80, 'D', 12), tx(200, 80, 'E', 12)]),
+    [pg([[120, 18], [40, 126], [230, 126]], C.ink, FILL.warm), ln(72, 82.8, 186, 82.8, C.ink, false, 1.8), tx(120, 14, 'A', 12), tx(28, 130, 'B', 12), tx(242, 130, 'C', 12), tx(58, 80, 'D', 12), tx(200, 80, 'E', 12)]),
   S('AD を3、DB を2とすると、AB 全体は 5。AD：AB＝3：5。', ['AD：AB＝3：5'], [tx(94, 44, '3', 12, C.blue), tx(40, 104, '2', 12, C.red)]),
   S('理由。DE∥BC なので、△ADE と △ABC は相似です。相似比は 3：5。', ['*△ADE∽△ABC', '相似比 3：5'], [pg([[120, 18], [72, 82.8], [186, 82.8]], C.green, FILL.green)]),
   S('面積比は、相似比を2回かけます。', ['面積比＝3×3：5×5', '＝9：25']),
@@ -228,3 +227,106 @@ const a22: Figure = show([
   S('体積は 48/5π cm³ です。', ['=答え　48/5πcm³']),
   S('確かめ。r＝2.4、r²＝5.76。5.76π×5÷3＝9.6π＝48/5π です。', ['5.76π×5÷3＝9.6π', '=48/5π ✓']),
 ], '半径12/5の2つの円錐。π×(144/25)×5÷3＝48/5π。');
+
+// ════════════════ 23 接線と弦 ════════════════
+const t23 = pl(70, 80, 8);
+const A23: Pt = [25 / 13, 60 / 13];
+const B23: Pt = [25 / 13, -60 / 13];
+const a23: Figure = show([
+  SF('中心Oの円の外の点Pから、接線PA、PBを引きます。', ['外の点Pから接線PA・PB'],
+    [ci(70, 80, 40, undefined, C.blue, 'rgba(2,132,199,0.06)'), seg(t23, [13, 0], A23, C.ink), seg(t23, [13, 0], B23, C.ink), dot(t23, O, C.blue), nm(t23, O, 'O', -10, 4, C.blue), nm(t23, [13, 0], 'P', 12, 4), nm(t23, A23, 'A', -4, -9), nm(t23, B23, 'B', -4, 15)]),
+  S('OP＝13cm、PA＝12cm です。半径OA、OBを引きます。', ['PA＝12　OP＝13'], [seg(t23, O, A23, C.green), seg(t23, O, B23, C.green), seg(t23, O, [13, 0], C.gray, true)]),
+  S('理由。円の接線は、接点を通る半径と垂直です。△OAP は A が直角の直角三角形になります。', ['*接線と半径は垂直', '△OAPはAが直角']),
+  S('三平方の定理で、半径OAを求めます。', ['OA²＝13²−12²＝25', 'OA＝5']),
+  S('ABとOPの交点を H とします。AB⊥OP で、H は AB の真ん中です。', ['ABはOPと垂直に交わる', 'AHを求める'], [seg(t23, A23, B23, C.red, false, 2), dot(t23, [25 / 13, 0], C.red), nm(t23, [25 / 13, 0], 'H', 4, 13, C.red)]),
+  S('△OAP と △AHP は、直角と共通の角が等しいので相似です。対応する辺の比から AH が出ます。', ['△OAP∽△AHP', 'AH：OA＝PA：OP'], [poly(t23, [[13, 0], A23, [25 / 13, 0]], C.purple, FILL.purple)]),
+  S('AH を求めます。', ['AH＝5×12÷13＝60/13']),
+  S('AB は AH の2倍です。', ['AB＝2×AH＝120/13']),
+  S('答えは 120/13 cm です。', ['=答え　120/13cm']),
+  S('確かめ。△OAP の面積は 5×12÷2＝30。OP を底辺とすると 13×(60/13)÷2＝30 で一致。', ['5×12÷2＝30', '=13×(60/13)÷2＝30 ✓']),
+], 'OA＝5。△OAP∽△AHP でAH＝60/13。AB＝120/13。');
+
+// ════════════════ 26 中点を結んだ四角形 ════════════════
+const t26 = pl(110, 88, 8);
+const q26: Pt[] = [[-4, 0], [1, -5], [6, 0], [1, 9]];
+const mid = (a: Pt, b: Pt): Pt => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+const E26 = mid(q26[0], q26[1]); const F26 = mid(q26[1], q26[2]); const G26 = mid(q26[2], q26[3]); const H26 = mid(q26[3], q26[0]);
+const a26: Figure = show([
+  SF('四角形ABCDの対角線 AC と BD は垂直で、AC＝10cm、BD＝14cm です。', ['AC＝10　BD＝14', 'AC⊥BD'],
+    [poly(t26, q26, C.ink, FILL.warm), seg(t26, q26[0], q26[2], C.gray, true), seg(t26, q26[1], q26[3], C.gray, true), nm(t26, q26[0], 'A', -10, 4), nm(t26, q26[1], 'B', 0, 14), nm(t26, q26[2], 'C', 10, 4), nm(t26, q26[3], 'D', 0, -6)]),
+  S('4つの辺の中点を、E、F、G、H とします。', ['E・F・G・H は中点'], [dot(t26, E26, C.red), dot(t26, F26, C.red), dot(t26, G26, C.red), dot(t26, H26, C.red), nm(t26, E26, 'E', -9, 8, C.red), nm(t26, F26, 'F', 11, 8, C.red), nm(t26, G26, 'G', 12, 0, C.red), nm(t26, H26, 'H', -12, 0, C.red)]),
+  S('中点を順に結ぶと、四角形 EFGH ができます。どんな四角形でしょうか。', ['EFGH はどんな四角形？'], [poly(t26, [E26, F26, G26, H26], C.red, FILL.red)]),
+  S('理由。△ABC で、E、F はAB、BC の中点。中点連結定理より EF∥AC、EF＝AC÷2。', ['*中点連結定理', 'EF∥AC　EF＝5'], [seg(t26, E26, F26, C.red, false, 3), seg(t26, q26[0], q26[2], C.blue, false, 2)]),
+  S('同じように △ABD で EH∥BD、EH＝BD÷2。', ['EH∥BD　EH＝7'], [seg(t26, E26, H26, C.green, false, 3), seg(t26, q26[1], q26[3], C.green, false, 2)]),
+  S('AC⊥BD なので、EF⊥EH。ほかの角も直角で、EFGH は長方形です。', ['EF⊥EH（AC⊥BD）', 'EFGH は長方形']),
+  S('長方形の面積は、たて×横です。', ['面積＝5×7＝35cm²']),
+  S('答えは 35cm² です。', ['=答え　35cm²']),
+  S('確かめ。ABCD＝10×14÷2＝70。中点を結んだ四角形は、もとの半分です。', ['ABCD＝10×14÷2＝70', '=70÷2＝35 ✓']),
+], 'EF＝5、EH＝7の長方形。面積35cm²。');
+
+// ════════════════ 27 正六角形 ════════════════
+const hex = (k: number): Pt => [110 + 64 * Math.cos((k * Math.PI) / 3), 80 - 64 * Math.sin((k * Math.PI) / 3)];
+const hv: Pt[] = [0, 1, 2, 3, 4, 5].map(hex);
+const a27: Figure = show([
+  SF('1辺が4cmの正六角形の面積を求めます。', ['1辺4cmの正六角形'],
+    [pg(hv, C.ink, FILL.warm), tx(142, 44, '4', 12, C.blue)]),
+  S('中心Oと6つの頂点を結びます。', ['中心と頂点を結ぶ'], [...hv.map((p) => ln(110, 80, p[0], p[1], C.gray, true)), ci(110, 80, 3, undefined, C.ink, C.ink)]),
+  S('理由。中心の角は 360÷6＝60°。2辺は同じ長さなので、できる三角形は正三角形です。6個あります。', ['*中心の角 360÷6＝60°', '正三角形が6個'], [pg([[110, 80], hv[1], hv[2]], C.green, FILL.green), tx(110, 66, '60°', 11, C.green)]),
+  S('正三角形を半分にすると、辺の比が 1：2：√3 の直角三角形。高さは 4×√3÷2＝2√3。', ['高さ＝4×√3÷2＝2√3'], [ln(110, 80, 110, 24.6, C.red, true, 2), tx(124, 56, '2√3', 11, C.red, true, 'start')]),
+  S('正三角形1個の面積は、底辺×高さ÷2 です。', ['4×2√3÷2＝4√3']),
+  S('正三角形は6個です。', ['4√3×6＝24√3'], [pg([[110, 80], hv[2], hv[3]], C.blue, FILL.blue), pg([[110, 80], hv[3], hv[4]], C.red, FILL.red), pg([[110, 80], hv[4], hv[5]], C.purple, FILL.purple), pg([[110, 80], hv[5], hv[0]], C.green, FILL.green), pg([[110, 80], hv[0], hv[1]], C.blue, FILL.blue)]),
+  S('面積は 24√3 cm² です。', ['=答え　24√3cm²']),
+  S('確かめ。正三角形の面積の式 (√3/4)×4²＝4√3 でも同じです。', ['(√3/4)×4²＝4√3', '=6倍して24√3 ✓']),
+], '正三角形6個。1個は4√3。6倍して24√3cm²。');
+
+// ════════════════ 30 中空の正方形（はば2個） ════════════════
+const X0 = 108; const Y0 = 30; const CELL = 13;
+const ringDots: E[] = [];
+for (let i = 0; i < 8; i++) for (let j = 0; j < 8; j++) {
+  if (i >= 2 && i <= 5 && j >= 2 && j <= 5) continue;
+  ringDots.push(ci(X0 + i * CELL, Y0 + j * CELL, 4, undefined, C.blue, C.blue));
+}
+const a30: Figure = show([
+  SF('碁石を、はばが2個の中空の正方形に並べます。図は1辺が8個の場合です。', ['外側の大きな正方形', 'n×n'],
+    [bx(X0 - 9, Y0 - 9, 109, 109, undefined, C.gray, FILL.warm), tx(X0 + 45, Y0 - 14, 'n個', 12, C.gray), tx(X0 - 24, Y0 + 48, 'n個', 12, C.gray)]),
+  S('碁石は、外側の2周分に並びます。', ['碁石は外側の輪の部分'], ringDots),
+  S('理由。はばが2個なので、左右から2個ずつ、合わせて4個を引いた分が、中の空洞の1辺です。', ['*中の空洞は (n−4)×(n−4)', '左右で2個ずつ引く'], [bx(X0 + 2 * CELL - 8, Y0 + 2 * CELL - 8, 3 * CELL + 16, 3 * CELL + 16, undefined, C.red, FILL.red), tx(X0 + 3.5 * CELL, Y0 + 3.5 * CELL + 4, '空洞', 12, C.red)]),
+  S('碁石の数は、外側の正方形から、空洞を引いて求めます。', ['碁石＝外側−空洞', 'n²−(n−4)²']),
+  S('展開して整理します。', ['＝n²−(n²−8n＋16)', '＝8n−16']),
+  S('碁石が112個なので、8n−16＝112 を解きます。', ['8n−16＝112', 'n＝16']),
+  S('1辺は16個です。', ['=答え　n＝16']),
+  S('確かめ。16×16＝256、空洞は 12×12＝144。256−144＝112 です。', ['256−144＝112', '=問題どおり ✓']),
+], '外側n²−空洞(n−4)²＝8n−16。112で n＝16。');
+
+// ════════════════ 39 弓形の面積 ════════════════
+const a39: Figure = show([
+  SF('半径6cmの円の中心をOとし、円周上の2点A、Bを ∠AOB＝90° となるようにとります。', ['半径6　∠AOB＝90°'],
+    [ln(100, 125, 184, 125, C.ink, false, 1.8), ln(100, 125, 100, 41, C.ink, false, 1.8), ln(184, 125, 100, 41, C.ink, false, 1.8), tx(88, 138, 'O', 12), tx(194, 130, 'A', 12), tx(92, 36, 'B', 12), tx(142, 140, '6', 11, C.blue), tx(86, 86, '6', 11, C.blue)]),
+  S('おうぎ形 OAB（弧ABと半径OA、OBで囲まれた部分）をぬります。', ['おうぎ形OABは円の1/4'], [sc(100, 125, 84, 0, 90, C.blue, FILL.yellow)]),
+  S('三角形 OAB をぬります。直角をはさむ2辺が6cmの、直角二等辺三角形です。', ['△OABは直角二等辺三角形'], [pg([[100, 125], [184, 125], [100, 41]], C.green, FILL.green)]),
+  S('理由。弓形は、おうぎ形OABの中から、三角形OABを取り除いた残りです。', ['*弓形＝おうぎ形−△OAB']),
+  S('おうぎ形は、円の 90/360＝1/4 です。', ['おうぎ形＝π×6²×1/4', '＝9π']),
+  S('三角形OABは、直角をはさむ2辺6cmと6cmです。', ['△OAB＝6×6÷2＝18']),
+  S('引き算します。', ['9π−18']),
+  S('弓形の面積は (9π−18) cm² です。', ['=答え　(9π−18)cm²']),
+  S('確かめ。9π≒28.26 なので、28.26−18＝10.26 で正の値。弓形が三角形より小さいことは図とも合います。', ['9π≒28.26', '28.26−18＝10.26 ✓']),
+], 'おうぎ形9π−三角形18＝9π−18。');
+
+export const figuresHonshikenSchool_koko_shibumaku_A: Record<string, Figure> = {
+  honshiken_school_koko_shibumaku_sansu_09: a09,
+  honshiken_school_koko_shibumaku_sansu_10: a10,
+  honshiken_school_koko_shibumaku_sansu_12: a12,
+  honshiken_school_koko_shibumaku_sansu_13: a13,
+  honshiken_school_koko_shibumaku_sansu_14: a14,
+  honshiken_school_koko_shibumaku_sansu_15: a15,
+  honshiken_school_koko_shibumaku_sansu_16: a16,
+  honshiken_school_koko_shibumaku_sansu_18: a18,
+  honshiken_school_koko_shibumaku_sansu_19: a19,
+  honshiken_school_koko_shibumaku_sansu_21: a21,
+  honshiken_school_koko_shibumaku_sansu_22: a22,
+  honshiken_school_koko_shibumaku_sansu_23: a23,
+  honshiken_school_koko_shibumaku_sansu_26: a26,
+  honshiken_school_koko_shibumaku_sansu_27: a27,
+  honshiken_school_koko_shibumaku_sansu_30: a30,
+  honshiken_school_koko_shibumaku_sansu_39: a39,
+};
