@@ -1,5 +1,6 @@
 import type { Lesson } from './lesson-types';
 import { lessonsRitsumeikan_rika } from './lessons-ritsumeikan-rika';
+import { lessonsU120E1Rika } from './lessons-u120-e1-rika';
 import { lessonsU120E3Rika } from './lessons-u120-e3-rika';
 import { lessonsU120E4Rika } from './lessons-u120-e4-rika';
 // 450セッション化（植物〜地層まで12ユニット）。既存の22レッスンは
@@ -4572,6 +4573,7 @@ export const rikaLessons: Lesson[] = [
   ...lessonsNew20E4Rika,
   ...lessonsNew20E5Rika,
   ...lessonsNew20E6Rika,
+  ...lessonsU120E1Rika,
   ...lessonsU120E3Rika,
   ...lessonsU120E4Rika,
   ...lessonsRitsumeikan_rika,

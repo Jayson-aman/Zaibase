@@ -155,7 +155,7 @@ export default function TextbookScreen() {
   // （早期returnより前に置くこと。フックの呼び出し順が変わってしまう）
   // 選んだ教科×受験種別の単元だけ（約4MB）を、教科を選んでから読みこむ（読みこみ中は null）
   const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
-  const lowActive = lowMode && (selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai') && examType === 'chugaku';
+  const lowActive = lowMode && (selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai' || selectedSubject === 'eigo') && examType === 'chugaku';
   const lessons = useMemo(
     () =>
       (chunk ?? []).filter((l) => {
@@ -294,12 +294,18 @@ export default function TextbookScreen() {
         })}
       </View>
 
-      {(selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai') && examType === 'chugaku' && (
+      {(selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai' || selectedSubject === 'eigo') && examType === 'chugaku' && (
         <View style={styles.examTypeRow}>
           {([
             { g: null as GradeKey | null, label: 'ふつうの 単元' },
-            ...(selectedSubject === 'rika' || selectedSubject === 'shakai'
-              ? [{ g: 'e3' as GradeKey | null, label: selectedSubject === 'rika' ? '🌱 小3の 理科' : '🌱 小3の 社会' }]
+            ...(selectedSubject === 'eigo'
+              ? [{ g: 'e3' as GradeKey | null, label: '🌱 小3の 英語' }]
+              : selectedSubject === 'rika' || selectedSubject === 'shakai'
+              ? [
+                  { g: 'e1' as GradeKey | null, label: selectedSubject === 'rika' ? '🌱 小1の 理科' : '🌱 小1の 社会' },
+                  { g: 'e2' as GradeKey | null, label: selectedSubject === 'rika' ? '🌱 小2の 理科' : '🌱 小2の 社会' },
+                  { g: 'e3' as GradeKey | null, label: selectedSubject === 'rika' ? '🌱 小3の 理科' : '🌱 小3の 社会' },
+                ]
               : [
                   { g: 'e1' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小1の 国語' : '🌱 小1の 算数' },
                   { g: 'e2' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小2の 国語' : '🌱 小2の 算数' },
