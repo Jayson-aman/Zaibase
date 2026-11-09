@@ -94,7 +94,7 @@ const s13: Figure = show([
 const g14 = (x: number, y: number): [number, number] => [150 + 26 * x, 130 - 12.5 * y];
 const par14 = (): E[] => { const pts: [number, number][] = []; for (let k = 0; k <= 58; k++) { const x = -2.7 + k * 0.1; pts.push(g14(x, x * x)); } return polyLine(pts, C.gray, 2); };
 const A14 = g14(-2, 4), B14 = g14(3, 9), M14 = g14(0.5, 6.5), O14 = g14(0, 0);
-const base14 = (): E[] => [ar(40, 130, 290, 130, C.gray), ar(150, 138, 150, 6, C.gray), tx(298, 134, 'x', 12, C.gray), tx(160, 12, 'y', 12, C.gray), tx(140, 142, 'O', 12, C.gray), ...par14(), seg(g14(-3, 3), g14(3.3, 9.3), C.blue, false, 2.5), dot(A14, 3.5, C.red), dot(B14, 3.5, C.red), tx(92, 76, 'A', 14, C.red, true, 'end'), tx(236, 22, 'B', 14, C.red, true, 'start')];
+const base14 = (): E[] => [ar(40, 130, 290, 130, C.gray), ar(150, 138, 150, 6, C.gray), tx(298, 134, 'x', 12, C.gray), tx(160, 18, 'y', 12, C.gray), tx(140, 142, 'O', 12, C.gray), ...par14(), seg(g14(-3, 3), g14(3.3, 9.3), C.blue, false, 2.5), dot(A14, 3.5, C.red), dot(B14, 3.5, C.red), tx(92, 76, 'A', 14, C.red, true, 'end'), tx(236, 22, 'B', 14, C.red, true, 'start')];
 const s14: Figure = show([
   SF('放物線 y＝x² と直線 y＝x＋6 が、2点A、Bで交わっています。原点Oを通って、△OABの面積を2等分する直線の式を求めます。', ['y＝x² と y＝x＋6 の交点 A、B'], base14()),
   S('交点のx座標は、x²＝x＋6 を解いて求めます。x²−x−6＝0、(x−3)(x＋2)＝0 より x＝−2、3。', ['x＝−2、3　A(−2, 4)　B(3, 9)'], [tx(98, 94, '(−2, 4)', 11, C.red), tx(232, 36, '(3, 9)', 11, C.red, true, 'start')]),
@@ -125,7 +125,7 @@ const s16: Figure = show([
 
 // 17 ダイヤグラム（追いつく）
 const g17 = (t: number, d: number): [number, number] => [44 + 11 * t, 128 - d * 0.07];
-const ax17 = (): E[] => [ar(44, 128, 290, 128, C.gray), ar(44, 134, 44, 6, C.gray), tx(300, 132, '分', 12, C.gray), tx(52, 12, 'm', 12, C.gray, true, 'start'), tx(34, 132, '0', 11, C.gray, true, 'end')];
+const ax17 = (): E[] => [ar(44, 128, 290, 128, C.gray), ar(44, 134, 44, 6, C.gray), tx(300, 132, '分', 12, C.gray), tx(52, 18, 'm', 12, C.gray, true, 'start'), tx(34, 132, '0', 11, C.gray, true, 'end')];
 const X17 = g17(15, 1200);
 const s17: Figure = show([
   SF('兄は午前9時に家を出て分速80m。弟は9時9分に出発して分速200mで追いかけます。弟が兄に追いつく地点を、グラフで考えます。', ['横軸：兄が出発してからの時間　縦軸：家からの道のり'], [...ax17(), tx(143, 142, '9', 11, C.gray), tx(209, 142, '15', 11, C.gray)]),
@@ -148,7 +148,7 @@ const s18: Figure = show([
   S('点C、Dをとって、四角形ABCDをかきます。AからCを見る角が∠CAB＝32°です。', ['∠CAB＝32°'], [...lab18().slice(2), dot(pC18, 3.5), dot(pD18, 3.5), P2([pA18, pB18, pC18, pD18], C.ink), seg(pA18, pC18, C.red, false, 2.5), tx(132, 70, '32°', 12, C.red, true, 'start')]),
   S('手がかり。直径に対する円周角は 90°。だから ∠ACB＝90°です。', ['直径ABに対する円周角　∠ACB＝90°'], [seg(pB18, pC18, C.purple, false, 2.5), tx(176, 40, '90°', 12, C.purple, true, 'end')]),
   S('△ABCの内角の和は180°。∠ABC＝180°−90°−32°＝58°です。', ['∠ABC＝180°−90°−32°＝58°'], [tx(214, 66, '58°', 12, C.green, true, 'end')]),
-  S('理由。円に内接する四角形では、向かいあう角の和が180°になります。∠ABCと∠ADCは向かいあう角です。', ['内接四角形：向かいあう角の和＝180°', '∠ABC＋∠ADC＝180°'], [tx(150, 50, '?', 14, C.red)]),
+  S('理由。円に内接する四角形では、向かいあう角の和が180°になります。∠ABCと∠ADCは向かいあう角です。', ['内接四角形：向かいあう角の和＝180°', '∠ABC＋∠ADC＝180°']),
   S('∠ADC＝180°−58°＝122°。', ['∠ADC＝180°−58°＝122°'], [tx(150, 50, '122°', 12, C.red)]),
   ANS('122°'),
   S('確かめ。弧BCに対する円周角が32°なので、弧BCの中心角は64°。弧ABC＝180°＋64°＝244°。その円周角は 244÷2＝122°。', ['弧ABCの中心角 180°＋64°＝244°', '=円周角 244÷2＝122° ✓']),
@@ -187,7 +187,7 @@ const s20: Figure = show([
 
 // 21 円の接線
 const O21: [number, number] = [80, 75], P21: [number, number] = [216, 75], A21: [number, number] = [110.1, 18.5], B21: [number, number] = [110.1, 131.5];
-const circ21 = (): E[] => [P2(circPts(80, 75, 64, 72), C.gray), tx(70, 86, 'O', 14, C.ink, true, 'end'), tx(224, 79, 'P', 14, C.ink, true, 'start'), tx(104, 14, 'A', 14, C.ink, true, 'end'), tx(104, 140, 'B', 14, C.ink, true, 'end')];
+const circ21 = (): E[] => [P2(circPts(80, 75, 64, 72), C.gray), tx(70, 86, 'O', 14, C.ink, true, 'end'), tx(224, 79, 'P', 14, C.ink, true, 'start'), tx(104, 20, 'A', 14, C.ink, true, 'end'), tx(104, 140, 'B', 14, C.ink, true, 'end')];
 const s21: Figure = show([
   SF('円Oの外側の点Pから、円に2本の接線PA、PBをひきました。PO＝17cm、PA＝15cm。四角形PAOBの面積を求めます。', ['PO＝17　PA＝15　四角形PAOB の面積は？'], [...circ21(), seg(P21, A21, C.blue, false, 2.5), seg(P21, B21, C.blue, false, 2.5), dot(A21, 3.5), dot(B21, 3.5), dot(O21, 3, C.gray)]),
   S('半径OA、OBと、OPをひきます。', ['半径 OA、OB と OP'], [seg(O21, A21, C.red, false, 2.5), seg(O21, B21, C.red, false, 2.5), seg(O21, P21, C.gray, true, 1.5)]),
@@ -218,7 +218,7 @@ const s22: Figure = show([
 // 23 斜辺を軸に回転
 const P23: [number, number] = [95, 76], Q23: [number, number] = [225, 76], H23: [number, number] = [141.8, 76], R23: [number, number] = [141.8, 13.6], R2_23: [number, number] = [141.8, 138.4];
 const s23: Figure = show([
-  SF('直角をはさむ辺が6cm、8cm、斜辺が10cmの直角三角形を、斜辺を軸に1回転させます。できる立体の体積を求めます。', ['辺6・8・10の直角三角形を、斜辺を軸に回転'], [P2([P23, Q23, R23], C.ink, FILL.warm), tx(88, 80, 'P', 14, C.ink, true, 'end'), tx(232, 80, 'Q', 14, C.ink, true, 'start'), tx(148, 14, 'R', 14, C.ink, true, 'start'), tx(106, 40, '6', 13, C.red, true, 'end'), tx(190, 40, '8', 13, C.red, true, 'start'), tx(160, 94, '10', 13, C.red)]),
+  SF('直角をはさむ辺が6cm、8cm、斜辺が10cmの直角三角形を、斜辺を軸に1回転させます。できる立体の体積を求めます。', ['辺6・8・10の直角三角形を、斜辺を軸に回転'], [P2([P23, Q23, R23], C.ink, FILL.warm), tx(88, 80, 'P', 14, C.ink, true, 'end'), tx(232, 80, 'Q', 14, C.ink, true, 'start'), tx(148, 20, 'R', 14, C.ink, true, 'start'), tx(106, 40, '6', 13, C.red, true, 'end'), tx(190, 40, '8', 13, C.red, true, 'start'), tx(160, 94, '10', 13, C.red)]),
   S('手がかり。Rから斜辺PQに垂線RHをおろします。回転させると、RHが底面の円の半径になります。', ['RH ＝ 底面の円の半径'], [seg(R23, H23, C.green, true, 2.5), dot(H23, 3, C.green), tx(146, 90, 'H', 13, C.green, true, 'start')]),
   S('RHの長さは、三角形の面積を2通りに表して求めます。面積は 1/2×6×8＝24。また 1/2×10×RH＝24。', ['1/2×10×RH＝24', 'RH＝4.8cm'], [tx(150, 52, '4.8', 12, C.green, true, 'start')]),
   S('斜辺を軸に回転させると、三角形の下側にも同じ形ができて、円すいが2つ底面でくっついた立体になります。', ['円すいが2つ　底面の半径は4.8cm'], [P2([P23, R2_23, Q23], C.gray, FILL.gray), seg(P23, R2_23, C.gray, true, 1.5), seg(R2_23, Q23, C.gray, true, 1.5), seg(R23, R2_23, C.green, true, 2)]),
