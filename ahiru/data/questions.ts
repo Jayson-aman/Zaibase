@@ -343,6 +343,45 @@ import { gradeE4EigoBQuestions } from './grade_e4_eigo_b';
 import { schoolTokyoKaisei } from './school_tokyo-kaisei';
 import { schoolTokyoAzabu } from './school_tokyo-azabu';
 import { schoolTokyoOin } from './school_tokyo-oin';
+import { schoolTokyoMusashi } from './school_tokyo-musashi';
+import { honshikenSchool_tokyo_musashi_A } from './honshiken_school_tokyo-musashi_A';
+import { honshikenSchool_tokyo_musashi_B } from './honshiken_school_tokyo-musashi_B';
+import { schoolTokyoKaijo } from './school_tokyo-kaijo';
+import { honshikenSchool_tokyo_kaijo_A } from './honshiken_school_tokyo-kaijo_A';
+import { honshikenSchool_tokyo_kaijo_B } from './honshiken_school_tokyo-kaijo_B';
+import { schoolTokyoToshimagaoka } from './school_tokyo-toshimagaoka';
+import { honshikenSchool_tokyo_toshimagaoka_A } from './honshiken_school_tokyo-toshimagaoka_A';
+import { honshikenSchool_tokyo_toshimagaoka_B } from './honshiken_school_tokyo-toshimagaoka_B';
+import { schoolTokyoFutaba } from './school_tokyo-futaba';
+import { honshikenSchool_tokyo_futaba_A } from './honshiken_school_tokyo-futaba_A';
+import { honshikenSchool_tokyo_futaba_B } from './honshiken_school_tokyo-futaba_B';
+import { schoolTokyoKichijoji } from './school_tokyo-kichijoji';
+import { honshikenSchool_tokyo_kichijoji_A } from './honshiken_school_tokyo-kichijoji_A';
+import { honshikenSchool_tokyo_kichijoji_B } from './honshiken_school_tokyo-kichijoji_B';
+import { schoolTokyoShibumaku } from './school_tokyo-shibumaku';
+import { honshikenSchool_tokyo_shibumaku_A } from './honshiken_school_tokyo-shibumaku_A';
+import { honshikenSchool_tokyo_shibumaku_B } from './honshiken_school_tokyo-shibumaku_B';
+import { schoolTokyoAsano } from './school_tokyo-asano';
+import { honshikenSchool_tokyo_asano_A } from './honshiken_school_tokyo-asano_A';
+import { honshikenSchool_tokyo_asano_B } from './honshiken_school_tokyo-asano_B';
+import { schoolTokyoFerris } from './school_tokyo-ferris';
+import { honshikenSchool_tokyo_ferris_A } from './honshiken_school_tokyo-ferris_A';
+import { honshikenSchool_tokyo_ferris_B } from './honshiken_school_tokyo-ferris_B';
+import { schoolRakusei } from './school_rakusei';
+import { honshikenSchool_rakusei_A } from './honshiken_school_rakusei_A';
+import { honshikenSchool_rakusei_B } from './honshiken_school_rakusei_B';
+import { schoolSuma } from './school_suma';
+import { honshikenSchool_suma_A } from './honshiken_school_suma_A';
+import { honshikenSchool_suma_B } from './honshiken_school_suma_B';
+import { schoolKokoTsukuba } from './school_koko-tsukuba';
+import { honshikenSchool_koko_tsukuba_A } from './honshiken_school_koko-tsukuba_A';
+import { honshikenSchool_koko_tsukuba_B } from './honshiken_school_koko-tsukuba_B';
+import { schoolKokoShibumaku } from './school_koko-shibumaku';
+import { honshikenSchool_koko_shibumaku_A } from './honshiken_school_koko-shibumaku_A';
+import { honshikenSchool_koko_shibumaku_B } from './honshiken_school_koko-shibumaku_B';
+import { schoolKokoWasedaJitsugyo } from './school_koko-waseda-jitsugyo';
+import { honshikenSchool_koko_waseda_jitsugyo_A } from './honshiken_school_koko-waseda-jitsugyo_A';
+import { honshikenSchool_koko_waseda_jitsugyo_B } from './honshiken_school_koko-waseda-jitsugyo_B';
 import { schoolTokyoKomabaToho } from './school_tokyo-komaba-toho';
 import { schoolTokyoJoshigakuin } from './school_tokyo-joshigakuin';
 import { schoolTokyoTsukubaKomaba } from './school_tokyo-tsukuba-komaba';
@@ -4174,6 +4213,45 @@ const baseQuestions: Question[] = [
   ...schoolTokyoKaisei,
   ...schoolTokyoAzabu,
   ...schoolTokyoOin,
+  ...schoolTokyoMusashi,
+  ...honshikenSchool_tokyo_musashi_A,
+  ...honshikenSchool_tokyo_musashi_B,
+  ...schoolTokyoKaijo,
+  ...honshikenSchool_tokyo_kaijo_A,
+  ...honshikenSchool_tokyo_kaijo_B,
+  ...schoolTokyoToshimagaoka,
+  ...honshikenSchool_tokyo_toshimagaoka_A,
+  ...honshikenSchool_tokyo_toshimagaoka_B,
+  ...schoolTokyoFutaba,
+  ...honshikenSchool_tokyo_futaba_A,
+  ...honshikenSchool_tokyo_futaba_B,
+  ...schoolTokyoKichijoji,
+  ...honshikenSchool_tokyo_kichijoji_A,
+  ...honshikenSchool_tokyo_kichijoji_B,
+  ...schoolTokyoShibumaku,
+  ...honshikenSchool_tokyo_shibumaku_A,
+  ...honshikenSchool_tokyo_shibumaku_B,
+  ...schoolTokyoAsano,
+  ...honshikenSchool_tokyo_asano_A,
+  ...honshikenSchool_tokyo_asano_B,
+  ...schoolTokyoFerris,
+  ...honshikenSchool_tokyo_ferris_A,
+  ...honshikenSchool_tokyo_ferris_B,
+  ...schoolRakusei,
+  ...honshikenSchool_rakusei_A,
+  ...honshikenSchool_rakusei_B,
+  ...schoolSuma,
+  ...honshikenSchool_suma_A,
+  ...honshikenSchool_suma_B,
+  ...schoolKokoTsukuba,
+  ...honshikenSchool_koko_tsukuba_A,
+  ...honshikenSchool_koko_tsukuba_B,
+  ...schoolKokoShibumaku,
+  ...honshikenSchool_koko_shibumaku_A,
+  ...honshikenSchool_koko_shibumaku_B,
+  ...schoolKokoWasedaJitsugyo,
+  ...honshikenSchool_koko_waseda_jitsugyo_A,
+  ...honshikenSchool_koko_waseda_jitsugyo_B,
   ...schoolTokyoKomabaToho,
   ...schoolTokyoJoshigakuin,
   ...schoolTokyoTsukubaKomaba,

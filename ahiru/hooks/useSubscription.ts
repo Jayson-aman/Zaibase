@@ -22,6 +22,8 @@ export interface SubscriptionState {
   welcomeTrial: boolean;
   /** 体験の残り日数（体験中でなければ 0） */
   welcomeTrialDaysLeft: number;
+  /** 体験を始めたあと3日が過ぎたか（終わりの案内を出すのに使う） */
+  welcomeTrialEnded: boolean;
 }
 
 export function useSubscription(): SubscriptionState {
@@ -112,5 +114,6 @@ export function useSubscription(): SubscriptionState {
     plan,
     welcomeTrial,
     welcomeTrialDaysLeft: welcomeTrialDaysLeft(trialStart),
+    welcomeTrialEnded: trialStart != null && !welcomeTrial,
   };
 }
