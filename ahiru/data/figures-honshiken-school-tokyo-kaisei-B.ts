@@ -93,7 +93,7 @@ const r13 = run([
 // 14 輪軸
 const r14 = run([
   { f: true, n: '半径20cmの輪と、半径5cmの軸の輪軸。輪に150gをつるして、軸につるす重さでつり合わせます。', b: ['軸のおもりは何g？'],
-    d: [ci(160, 66, 50, undefined, C.blue, FILL.blue), ci(160, 66, 18, '軸', C.purple, FILL.purple, 11), ln(160, 66, 110, 66, C.red, false, 2), ln(160, 66, 178, 66, C.red, false, 2), L(135, 60, '20cm', C.red, 10), L(190, 62, '5cm', C.red, 10),
+    d: [ci(160, 66, 50, undefined, C.blue, FILL.blue), ci(160, 66, 18, '軸', C.purple, FILL.purple, 11), ln(160, 66, 110, 66, C.red, false, 2), ln(160, 66, 178, 66, C.red, false, 2), L(264, 62, '輪の半径　20cm', C.red, 11), L(264, 82, '軸の半径　5cm', C.red, 11),
          ln(110, 66, 110, 118, C.ink, false, 1.5), ln(178, 66, 178, 118, C.ink, false, 1.5), bx(90, 118, 40, 22, '150g', C.blue, FILL.warm, 12), bx(158, 118, 40, 22, '□g', C.purple, FILL.warm, 12)] },
   { n: '輪軸は、中心を支点にしたてこと同じ。「重さ×半径」が両側で等しいと、つり合います。', b: ['重さ×半径が等しい'] },
   { f: true, n: '輪の側が回そうとするはたらきは、150×20＝3000です。', b: ['輪の側　150×20＝3000'], r: ['輪の側　150 × 20 ＝ 3000', 'b'] },

@@ -138,7 +138,7 @@ const sp = (cx: number, cy: number, R: number) => {
   const tips = [54, -18, -90, -162, 126].map((d) => at(cx, cy, a + h, d));
   return { v, tips };
 };
-const star = sp(160, 78, 32);
+const star = sp(160, 72, 24.4);
 const pent = (): E => P2(star.v as [number, number][], C.blue, FILL.blue);
 const tipTris = (): E[] => star.tips.map((t, i) => P2([star.v[i], star.v[(i + 1) % 5], t] as [number, number][], C.purple, FILL.purple));
 const s_s22: Figure = show([
@@ -354,8 +354,8 @@ const s_s46: Figure = show([
 ], '底面の円周÷大きい円の円周＝1/3。360°×1/3＝120°。');
 
 // 47 長方形の内側を回る円
-const rc = { x: 60, y: 16, k: 20 };
-const rect47 = (): E[] => [bx(rc.x, rc.y, 10 * rc.k, 6 * rc.k, '', C.ink, FILL.warm), tx(rc.x - 4, rc.y + 3 * rc.k + 5, 'たて6', 12, C.ink, true, 'end'), tx(rc.x + 5 * rc.k, rc.y + 6 * rc.k + 14, 'よこ10cm', 12, C.ink)];
+const rc = { x: 60, y: 22, k: 20 };
+const rect47 = (): E[] => [bx(rc.x, rc.y, 10 * rc.k, 6 * rc.k, '', C.ink, FILL.warm), tx(rc.x - 4, rc.y + 3 * rc.k + 5, 'たて6', 12, C.ink, true, 'end'), tx(rc.x + 5 * rc.k, rc.y - 4, 'よこ10cm', 12, C.ink)];
 const s_s47: Figure = show([
   SF('たて6cm、よこ10cmの長方形の内側を、半径1cmの円が、かべにそって1周します。通った部分の面積を求めます。', ['円が通った部分の面積'], [...rect47(), ci(rc.x + 20, rc.y + 100, 20, undefined, C.blue, FILL.blue)]),
   S('円の中心は、かべから1cm内側の線の上を動きます。この線は、たて4cm・よこ8cmの長方形です。', ['中心が動く線　4cm×8cm'], [ln(rc.x + 20, rc.y + 20, rc.x + 180, rc.y + 20, C.purple, true, 2), ln(rc.x + 180, rc.y + 20, rc.x + 180, rc.y + 100, C.purple, true, 2), ln(rc.x + 180, rc.y + 100, rc.x + 20, rc.y + 100, C.purple, true, 2), ln(rc.x + 20, rc.y + 100, rc.x + 20, rc.y + 20, C.purple, true, 2)]),

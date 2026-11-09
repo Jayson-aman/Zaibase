@@ -1,1 +1,0 @@
-{ "extends": "./tsconfig.json", "compilerOptions": {"noEmit": true, "skipLibCheck": true}, "include": ["data/honshiken_school_tokyo-oin_A.ts","data/figures-honshiken-school-tokyo-oin-A.ts"] }
