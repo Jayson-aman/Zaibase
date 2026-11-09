@@ -173,7 +173,7 @@ const s19: Figure = show([
 // 20 正四角すい
 const pA20: [number, number] = [90, 118], pB20: [number, number] = [200, 118], pC20: [number, number] = [240, 92], pD20: [number, number] = [130, 92];
 const pH20: [number, number] = [165, 105], pO20: [number, number] = [165, 24];
-const pyr20 = (): E[] => [P2([pA20, pB20, pC20, pD20], C.ink, FILL.warm), seg(pO20, pA20, C.ink), seg(pO20, pB20, C.ink), seg(pO20, pC20, C.ink), seg(pO20, pD20, C.gray, true, 1.5), tx(172, 22, 'O', 14, C.ink, true, 'start'), tx(84, 124, 'A', 14, C.ink, true, 'end'), tx(206, 126, 'B', 14, C.ink, true, 'start'), tx(246, 94, 'C', 14, C.ink, true, 'start'), tx(124, 88, 'D', 14, C.ink, true, 'end'), tx(145, 136, '8', 13, C.red), tx(112, 66, '9', 13, C.red, true, 'end')];
+const pyr20 = (): E[] => [P2([pA20, pB20, pC20, pD20], C.ink, FILL.warm), seg(pO20, pA20, C.ink), seg(pO20, pB20, C.ink), seg(pO20, pC20, C.ink), seg(pO20, pD20, C.gray, true, 1.5), tx(172, 22, 'O', 14, C.ink, true, 'start'), tx(84, 124, 'A', 14, C.ink, true, 'end'), tx(206, 126, 'B', 14, C.ink, true, 'start'), tx(246, 94, 'C', 14, C.ink, true, 'start'), tx(138, 90, 'D', 14, C.ink, true, 'start'), tx(145, 136, '8', 13, C.red), tx(112, 66, '9', 13, C.red, true, 'end')];
 const s20: Figure = show([
   SF('底面が1辺8cmの正方形で、側面の辺がすべて9cmの正四角すいです。体積は 1/3×底面積×高さ。高さがまだわかりません。', ['底面 8×8　辺 9cm　高さは？'], pyr20()),
   S('頂点Oから底面にまっすぐおろした垂線をOHとします。Hは正方形の中心（対角線の交点）です。', ['垂線OH ＝ 高さ（Hは底面の中心）'], [seg(pO20, pH20, C.green, true, 2.5), dot(pH20, 3.5, C.green), tx(172, 108, 'H', 13, C.green, true, 'start')]),
@@ -218,7 +218,7 @@ const s22: Figure = show([
 // 23 斜辺を軸に回転
 const P23: [number, number] = [95, 76], Q23: [number, number] = [225, 76], H23: [number, number] = [141.8, 76], R23: [number, number] = [141.8, 13.6], R2_23: [number, number] = [141.8, 138.4];
 const s23: Figure = show([
-  SF('直角をはさむ辺が6cm、8cm、斜辺が10cmの直角三角形を、斜辺を軸に1回転させます。できる立体の体積を求めます。', ['辺6・8・10の直角三角形を、斜辺を軸に回転'], [P2([P23, Q23, R23], C.ink, FILL.warm), tx(88, 80, 'P', 14, C.ink, true, 'end'), tx(232, 80, 'Q', 14, C.ink, true, 'start'), tx(148, 20, 'R', 14, C.ink, true, 'start'), tx(106, 40, '6', 13, C.red, true, 'end'), tx(190, 40, '8', 13, C.red, true, 'start'), tx(160, 94, '10', 13, C.red)]),
+  SF('直角をはさむ辺が6cm、8cm、斜辺が10cmの直角三角形を、斜辺を軸に1回転させます。できる立体の体積を求めます。', ['辺6・8・10の直角三角形を、斜辺を軸に回転'], [P2([P23, Q23, R23], C.ink, FILL.warm), tx(88, 80, 'P', 14, C.ink, true, 'end'), tx(232, 80, 'Q', 14, C.ink, true, 'start'), tx(148, 20, 'R', 14, C.ink, true, 'start'), tx(106, 40, '6', 13, C.red, true, 'end'), tx(190, 40, '8', 13, C.red, true, 'start'), tx(196, 94, '10', 13, C.red)]),
   S('手がかり。Rから斜辺PQに垂線RHをおろします。回転させると、RHが底面の円の半径になります。', ['RH ＝ 底面の円の半径'], [seg(R23, H23, C.green, true, 2.5), dot(H23, 3, C.green), tx(146, 90, 'H', 13, C.green, true, 'start')]),
   S('RHの長さは、三角形の面積を2通りに表して求めます。面積は 1/2×6×8＝24。また 1/2×10×RH＝24。', ['1/2×10×RH＝24', 'RH＝4.8cm'], [tx(150, 52, '4.8', 12, C.green, true, 'start')]),
   S('斜辺を軸に回転させると、三角形の下側にも同じ形ができて、円すいが2つ底面でくっついた立体になります。', ['円すいが2つ　底面の半径は4.8cm'], [P2([P23, R2_23, Q23], C.gray, FILL.gray), seg(P23, R2_23, C.gray, true, 1.5), seg(R2_23, Q23, C.gray, true, 1.5), seg(R23, R2_23, C.green, true, 2)]),
@@ -242,10 +242,10 @@ const pP25 = cross(pA25, pC25, pB25, pD25);
 const base25 = (): E[] => [P2(V25, C.ink, FILL.warm), tx(160, 16, 'A', 14), tx(92, 60, 'B', 14, C.ink, true, 'end'), tx(116, 138, 'C', 14, C.ink, true, 'end'), tx(204, 138, 'D', 14, C.ink, true, 'start'), tx(228, 60, 'E', 14, C.ink, true, 'start')];
 const s25: Figure = show([
   SF('正五角形ABCDEの対角線ACとBDの交点をPとします。∠APBの大きさを求めます。', ['正五角形　対角線ACとBDの交点P　∠APB＝？'], base25()),
-  S('正五角形の内角の和は 180°×(5−2)＝540°。だから1つの内角は 540°÷5＝108°です。', ['1つの内角＝540°÷5＝108°'], [tx(102, 70, '108°', 11, C.red, true, 'start')]),
-  S('対角線ACをひきます。AB＝BC なので △ABC は二等辺三角形で、底角は (180°−108°)÷2＝36°。', ['△ABC は二等辺三角形', '∠BAC＝(180°−108°)÷2＝36°'], [seg(pA25, pC25, C.blue, false, 2.5), tx(160, 40, '36°', 11, C.blue)]),
-  S('対角線BDをひきます。同じ理由で △BCD も二等辺三角形なので、∠CBD＝36°。', ['△BCD も二等辺三角形　∠CBD＝36°'], [seg(pB25, pD25, C.red, false, 2.5), tx(124, 112, '36°', 11, C.red, true, 'end')]),
-  S('理由。∠ABC＝108° のうち、∠CBD が 36° なので、残りの ∠ABD＝108°−36°＝72°。', ['∠ABD＝108°−36°＝72°'], [tx(120, 62, '72°', 11, C.purple, true, 'start')]),
+  S('正五角形の内角の和は 180°×(5−2)＝540°。だから1つの内角は 540°÷5＝108°です。', ['1つの内角＝540°÷5＝108°'], []),
+  S('対角線ACをひきます。AB＝BC なので △ABC は二等辺三角形で、底角は (180°−108°)÷2＝36°。', ['△ABC は二等辺三角形', '∠BAC＝(180°−108°)÷2＝36°'], [seg(pA25, pC25, C.blue, false, 2.5), tx(146, 50, '36°', 11, C.blue, true, 'end')]),
+  S('対角線BDをひきます。同じ理由で △BCD も二等辺三角形なので、∠CBD＝36°。', ['△BCD も二等辺三角形　∠CBD＝36°'], [seg(pB25, pD25, C.red, false, 2.5), tx(126, 100, '36°', 11, C.red, true, 'start')]),
+  S('理由。∠ABC＝108° のうち、∠CBD が 36° なので、残りの ∠ABD＝108°−36°＝72°。', ['∠ABD＝108°−36°＝72°'], [tx(122, 64, '72°', 11, C.purple, true, 'start')]),
   S('△ABP の内角の和は180°。∠PAB＝36°、∠PBA＝72° なので、∠APB＝180°−36°−72°＝72°。', ['∠APB＝180°−36°−72°'], [P2([pA25, pB25, pP25], C.purple, FILL.purple), seg(pA25, pC25, C.blue, false, 2.5), seg(pB25, pD25, C.red, false, 2.5), seg(pA25, pB25, C.ink)]),
   ANS('72°'),
   S('確かめ。△ABPで ∠ABP＝∠APB＝72° なので、AB＝AP の二等辺三角形です。正五角形の対角線の性質と合います。', ['∠ABP＝∠APB＝72°　→　AB＝AP', '=二等辺三角形になる ✓']),
@@ -257,7 +257,7 @@ const rect26 = (): E[] => [P2([A26, B26, C26, D26], C.ink, FILL.warm), tx(60, 13
 const s26: Figure = show([
   SF('AB＝10cm、BC＝6cmの長方形ABCDがあります。頂点Cが辺AB上の点Eに重なるように、Dを通る折り目DFで折ります。CFの長さを求めます。', ['AB＝10　BC＝6　CF＝？'], rect26()),
   S('Cが辺AB上のEに重なるように折ります。折り目はDFです。', ['C が E に重なるように、DF で折る'], [seg(D26, F26, C.red, true, 2.5), dot(E26, 3.5, C.green), dot(F26, 3.5, C.red), tx(212, 141, 'E', 14, C.green), tx(256, 90, 'F', 14, C.red, true, 'start'), seg(D26, E26, C.green, false, 2.5), seg(F26, E26, C.green, false, 2.5)]),
-  S('手がかり。折り返すと、重なる図形は合同です。だから DE＝DC＝10、FE＝FC です。', ['折り返し → DE＝DC＝10　FE＝FC']),
+  S('手がかり。折り返すと、重なる図形は合同です。だから DE＝DC＝10、FE＝FC です。', ['折り返し → DE＝DC＝10　FE＝FC'], [seg(D26, C26, C.green, true, 3)]),
   S('△ADEは∠A＝90°の直角三角形。AD＝6、DE＝10 なので、AE²＝10²−6²＝64、AE＝8。', ['AE²＝10²−6²＝64　AE＝8'], [P2([A26, E26, D26], C.purple, FILL.purple), seg(A26, E26, C.purple, false, 2.5), seg(D26, E26, C.green, false, 2.5), seg(A26, D26, C.ink)]),
   S('EB＝AB−AE＝10−8＝2。', ['EB＝10−8＝2'], [seg(E26, B26, C.blue, false, 4)]),
   S('CF＝x とおくと、FE＝x、BF＝6−x。直角三角形EBFで三平方の定理を使います。', ['CF＝FE＝x　BF＝6−x', 'EB²＋BF²＝FE²'], [P2([E26, B26, F26], C.blue, FILL.blue), seg(E26, B26, C.blue, false, 2.5), seg(B26, F26, C.ink), seg(F26, E26, C.green, false, 2.5)]),
@@ -272,7 +272,7 @@ const nl29 = (): E[] => [ln(30, 70, 292, 70, C.gray, false, 2), ln(x29(6), 63, x
 const s29: Figure = show([
   SF('6%の食塩水と15%の食塩水を混ぜて、10%の食塩水を450gつくります。15%の食塩水は何g必要でしょうか。', ['6%と15%を混ぜて10%にする　15%は何g？'], nl29()),
   S('10%と、それぞれの濃さとの差を調べます。6%とは4、15%とは5ちがいます。', ['10−6＝4　15−10＝5'], [ar(x29(10), 90, x29(6) + 2, 90, C.blue), ar(x29(10), 90, x29(15) - 2, 90, C.red), tx(93, 108, '差 4', 13, C.blue), tx(213, 108, '差 5', 13, C.red)]),
-  S('てんびんの形で考えます。10%が支点。6%の食塩水（x g）が左、15%の食塩水（y g）が右にのっています。', ['支点が10%　左に x g　右に y g'], [pg([[x29(10) - 9, 128], [x29(10) + 9, 128], [x29(10), 114]], C.ink, FILL.gray), bx(14, 20, 70, 26, '6% x g', C.blue, FILL.blue, 12), bx(236, 20, 70, 26, '15% y g', C.red, FILL.red, 12)]),
+  S('てんびんの形で考えます。10%が支点。6%の食塩水（x g）が左、15%の食塩水（y g）が右にのっています。', ['支点が10%　左に x g　右に y g'], [pg([[x29(10) - 9, 128], [x29(10) + 9, 128], [x29(10), 114]], C.ink, FILL.gray), bx(14, 8, 70, 26, '6% x g', C.blue, FILL.blue, 12), bx(236, 8, 70, 26, '15% y g', C.red, FILL.red, 12)]),
   S('理由。てんびんは、支点からの距離が長いほうが軽く、短いほうが重くてつりあいます。だから重さの比は、距離の比の逆。x:y＝5:4（距離は 4:5）。', ['重さの比は、差の逆比　x:y＝5:4']),
   S('15%の食塩水は、全体450gの 4/9 です。450×4/9＝200。', ['450×4/9＝200（g）']),
   ANS('200g'),
