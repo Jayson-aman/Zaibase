@@ -334,6 +334,24 @@ import { gradeE3KokugoQuestions } from './grade_e3_kokugo';
 import { gradeE4KokugoBQuestions } from './grade_e4_kokugo_b';
 import { gradeE4KokugoKQuestions } from './grade_e4_kokugo_k';
 import { gradeE3RikaQuestions } from './grade_e3_rika';
+import { gradeE1RikaBQuestions } from './grade_e1_rika_b';
+import { gradeE1ShakaiBQuestions } from './grade_e1_shakai_b';
+import { gradeE2RikaBQuestions } from './grade_e2_rika_b';
+import { gradeE2ShakaiBQuestions } from './grade_e2_shakai_b';
+import { gradeE3EigoBQuestions } from './grade_e3_eigo_b';
+import { gradeE4EigoBQuestions } from './grade_e4_eigo_b';
+import { schoolTokyoKaisei } from './school_tokyo-kaisei';
+import { schoolTokyoAzabu } from './school_tokyo-azabu';
+import { schoolTokyoOin } from './school_tokyo-oin';
+import { schoolTokyoKomabaToho } from './school_tokyo-komaba-toho';
+import { schoolTokyoJoshigakuin } from './school_tokyo-joshigakuin';
+import { schoolTokyoTsukubaKomaba } from './school_tokyo-tsukuba-komaba';
+import { schoolTokyoEiko } from './school_tokyo-eiko';
+import { schoolTokyoSeikoYokohama } from './school_tokyo-seiko-yokohama';
+import { schoolRakunan } from './school_rakunan';
+import { schoolHakuryo } from './school_hakuryo';
+import { schoolRokko } from './school_rokko';
+import { schoolKobeJogakuin } from './school_kobe-jogakuin';
 import { gradeE4RikaBQuestions } from './grade_e4_rika_b';
 import { gradeE3ShakaiQuestions } from './grade_e3_shakai';
 import { gradeE4ShakaiBQuestions } from './grade_e4_shakai_b';
@@ -4119,6 +4137,24 @@ const baseQuestions: Question[] = [
   ...gradeE4KokugoBQuestions,
   ...gradeE4KokugoKQuestions,
   ...gradeE3RikaQuestions,
+  ...gradeE1RikaBQuestions,
+  ...gradeE1ShakaiBQuestions,
+  ...gradeE2RikaBQuestions,
+  ...gradeE2ShakaiBQuestions,
+  ...gradeE3EigoBQuestions,
+  ...gradeE4EigoBQuestions,
+  ...schoolTokyoKaisei,
+  ...schoolTokyoAzabu,
+  ...schoolTokyoOin,
+  ...schoolTokyoKomabaToho,
+  ...schoolTokyoJoshigakuin,
+  ...schoolTokyoTsukubaKomaba,
+  ...schoolTokyoEiko,
+  ...schoolTokyoSeikoYokohama,
+  ...schoolRakunan,
+  ...schoolHakuryo,
+  ...schoolRokko,
+  ...schoolKobeJogakuin,
   ...gradeE4RikaBQuestions,
   ...gradeE3ShakaiQuestions,
   ...gradeE4ShakaiBQuestions,
