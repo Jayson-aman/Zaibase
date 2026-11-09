@@ -1,4 +1,4 @@
-// 本試験対策（学校別・追加分A）栄光学園コース の動く図解（算数 13〜50 のうち20問）。問題は data/honshiken_school_tokyo-eiko_A.ts に同じIDで置く。
+// 本試験対策（学校別・追加分A）栄光学園コース の動く図解（算数 13〜50 のうち19問）。問題は data/honshiken_school_tokyo-eiko_A.ts に同じIDで置く。
 // どの図も：状況 → 手がかり → 理由 → 計算 → 答え → 確かめ の順に7枚以上で動く。
 // 座標は 320×240 の内部座標。上（y<142）に図、下の帯（y≧146）に式を置き、文字が図と重ならないようにしてある。
 import type { DiagramElement, Figure } from './figures';
@@ -168,23 +168,6 @@ const sansu28: Figure = show([
   S('答えは1440cm³です。', ['=答え　1440cm³']),
   S('確かめ。1440÷1728＝5/6。切り落とした分は 288÷1728＝1/6。立方体の6分の1を切り落としたので、のこりは6分の5で、ぴったり合います。', ['288÷1728＝1/6', '1−1/6＝5/6', '=1440cm³ ✓']),
 ], 'すいの体積＝底面積×高さ÷3。重ならないように切るなら、1つ分×個数を引く。');
-
-// ════════════ 算数29 正方形と正三角形の角度 ════════════
-const sqPts = { A: [90, 124] as P, B: [190, 124] as P, C: [190, 24] as P, D: [90, 24] as P, E: [140, 124 - 86.6] as P };
-const sqBase = (): E[] => [
-  pg([sqPts.A, sqPts.B, sqPts.C, sqPts.D], C.ink, '#FFFFFF'), pg([sqPts.A, sqPts.B, sqPts.E], C.blue, FILL.blue),
-  tx(78, 132, 'A', 13), tx(202, 132, 'B', 13), tx(202, 22, 'C', 13), tx(78, 22, 'D', 13), tx(140, 70, 'E', 13, C.red),
-];
-const sansu29: Figure = show([
-  S('正方形ABCDの内側に、辺ABを1辺とする正三角形ABEをかきます。角DECの大きさを求めます。', ['角DECは何度？'], sqBase()),
-  S('手がかり。正方形の辺と正三角形の辺は、どれもABと同じ長さ。だからAD＝AE＝AB、BC＝BEです。', ['AD＝AE、BC＝BE'], [tx(262, 70, 'AD＝AE\nBC＝BE', 12, C.red)]),
-  S('三角形ADEは、AD＝AEの二等辺三角形。頂角DAEは、90°−60°＝30°です。', ['角DAE＝90−60＝30°'], [tx(112, 100, '30°', 12, C.purple)]),
-  S('二等辺三角形の底角は等しいので、角AED＝(180−30)÷2＝75°です。', ['角AED＝75°'], [tx(112, 50, '75°', 12, C.green)]),
-  S('同じように、三角形BCEもBC＝BEの二等辺三角形。角BEC＝75°です。', ['角BEC＝75°'], [tx(168, 50, '75°', 12, C.green)]),
-  S('Eのまわりの角を合わせると360°。角AEBは60°なので、角DEC＝360−60−75−75＝150°です。', ['360−60−75−75＝150°'], [tx(140, 100, '60°', 12, C.blue), tx(140, 20, '150°', 12, C.red)]),
-  S('答えは150度です。', ['=答え　150度']),
-  S('確かめ。Eのまわりの4つの角を合わせると 75＋60＋75＋150＝360°。ちょうど一周になります。', ['75＋60＋75＋150', '＝360°', '=150度 ✓']),
-], '正方形と正三角形の辺が等しい→二等辺三角形。底角＝(180−頂角)÷2。点のまわりは360°。');
 
 // ════════════ 算数30 4つの半円の花びら ════════════
 const cs: Record<string, P> = { b: [160, 138], r: [220, 78], t: [160, 18], l: [100, 78] };
@@ -451,7 +434,7 @@ const sansu50: Figure = show([
 export const figuresHonshikenSchool_tokyo_eiko_A: Record<string, Figure> = {
   honshiken_school_tokyo_eiko_sansu_22: sansu22, honshiken_school_tokyo_eiko_sansu_23: sansu23, honshiken_school_tokyo_eiko_sansu_24: sansu24,
   honshiken_school_tokyo_eiko_sansu_25: sansu25, honshiken_school_tokyo_eiko_sansu_26: sansu26, honshiken_school_tokyo_eiko_sansu_28: sansu28,
-  honshiken_school_tokyo_eiko_sansu_29: sansu29, honshiken_school_tokyo_eiko_sansu_30: sansu30, honshiken_school_tokyo_eiko_sansu_31: sansu31,
+  honshiken_school_tokyo_eiko_sansu_30: sansu30, honshiken_school_tokyo_eiko_sansu_31: sansu31,
   honshiken_school_tokyo_eiko_sansu_32: sansu32, honshiken_school_tokyo_eiko_sansu_33: sansu33, honshiken_school_tokyo_eiko_sansu_35: sansu35,
   honshiken_school_tokyo_eiko_sansu_40: sansu40, honshiken_school_tokyo_eiko_sansu_42: sansu42, honshiken_school_tokyo_eiko_sansu_45: sansu45,
   honshiken_school_tokyo_eiko_sansu_46: sansu46, honshiken_school_tokyo_eiko_sansu_47: sansu47, honshiken_school_tokyo_eiko_sansu_48: sansu48,
