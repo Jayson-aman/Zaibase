@@ -114,7 +114,7 @@ const pent = (): E[] => [pg(['A', 'B', 'C', 'D', 'E'].map((k) => PENT[k]), C.ink
 const pentLabels = (): E[] => [vl(PENT.A[0] - 10, PENT.A[1] + 12, 'A'), vl(PENT.B[0] + 10, PENT.B[1] + 12, 'B'), vl(PENT.C[0] + 12, PENT.C[1] + 2, 'C'), vl(PENT.D[0], PENT.D[1] - 7, 'D'), vl(PENT.E[0] - 12, PENT.E[1] + 2, 'E')];
 const s27 = show([
   SF('正五角形ABCDEで、対角線ACとBEが点Pで交わっています。角APBを求めます。', ['角APBは何度？'], [...pent(), ...pentLabels()]),
-  S('対角線ACとBEをかきます。交わる点がPです。', ['対角線ACとBE'], [ln(PENT.A[0], PENT.A[1], PENT.C[0], PENT.C[1], C.blue, false, 2.5), ln(PENT.B[0], PENT.B[1], PENT.E[0], PENT.E[1], C.red, false, 2.5), vl(ptP[0] + 12, ptP[1] - 4, 'P', C.purple)]),
+  S('対角線ACとBEをかきます。交わる点がPです。', ['対角線ACとBE'], [ln(PENT.A[0], PENT.A[1], PENT.C[0], PENT.C[1], C.blue, false, 2.5), ln(PENT.B[0], PENT.B[1], PENT.E[0], PENT.E[1], C.red, false, 2.5), vl(ptP[0] + 18, ptP[1] + 4, 'P', C.purple)]),
   S('手がかり。正五角形の内角の和は 180×3＝540度。1つの内角は 540÷5＝108度です。', ['1つの内角 540÷5＝108度'], [tx(PENT.E[0] + 24, PENT.E[1] + 4, '108°', 11, C.green)]),
   S('三角形ABCは、AB＝BCの二等辺三角形。頂角が108度なので、底角は (180−108)÷2＝36度。角BAC＝36度です。', ['角BAC＝(180−108)÷2＝36度'], [tx(PENT.A[0] + 22, PENT.A[1] - 8, '36°', 11, C.blue)]),
   S('三角形ABEも、AB＝AEの二等辺三角形。頂角が108度なので、角ABE＝36度です。', ['角ABE＝(180−108)÷2＝36度'], [tx(PENT.B[0] - 14, PENT.B[1] - 8, '36°', 11, C.red)]),
