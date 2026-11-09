@@ -8,6 +8,8 @@ import {
   SubscriptionTier,
 } from '../services/subscription';
 import { planStatusFromCustomerInfo, type PlanStatus } from '../utils/planStatus';
+import { useAuthUser } from './useAuthUser';
+import { ensureWelcomeTrialStart, isWelcomeTrialActive, welcomeTrialDaysLeft } from '../services/welcomeTrial';
 
 export interface SubscriptionState {
   tier: SubscriptionTier;
@@ -16,6 +18,10 @@ export interface SubscriptionState {
   isMax: boolean;
   /** 契約の状態（お試し中・終了間近・期限切れなど）。画面に案内を出すのに使う */
   plan: PlanStatus;
+  /** 初回ログイン後の3日間の全開放の体験中か（isPro に含まれる）。課金したわけではない */
+  welcomeTrial: boolean;
+  /** 体験の残り日数（体験中でなければ 0） */
+  welcomeTrialDaysLeft: number;
 }
 
 export function useSubscription(): SubscriptionState {
@@ -27,6 +33,26 @@ export function useSubscription(): SubscriptionState {
   };
   const [loading, setLoading] = useState(true);
   const mounted = useRef(true);
+
+  // 初回ログイン後の3日間は、教材の中身を全部開く（課金の入口を広げるため）。
+  // 匿名のままでは開けない（ログインが前提）。開始時刻はサーバーの時刻で1度だけ記録する。
+  const { user: authUser } = useAuthUser();
+  const trialUid = authUser && !authUser.isAnonymous ? authUser.uid : null;
+  const [trialStart, setTrialStart] = useState<number | null>(null);
+  useEffect(() => {
+    let alive = true;
+    if (!trialUid) {
+      setTrialStart(null);
+      return;
+    }
+    ensureWelcomeTrialStart(trialUid).then((t) => {
+      if (alive) setTrialStart(t);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [trialUid]);
+  const welcomeTrial = isWelcomeTrialActive(trialStart);
 
   useEffect(() => {
     mounted.current = true;
@@ -81,8 +107,10 @@ export function useSubscription(): SubscriptionState {
   return {
     tier,
     loading,
-    isPro: tier === 'pro' || tier === 'max',
+    isPro: tier === 'pro' || tier === 'max' || welcomeTrial,
     isMax: tier === 'max',
     plan,
+    welcomeTrial,
+    welcomeTrialDaysLeft: welcomeTrialDaysLeft(trialStart),
   };
 }
