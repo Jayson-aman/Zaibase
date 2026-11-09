@@ -175,7 +175,7 @@ const r23: Figure = show([
 
 const gAxes = (): E[] => [ln(40, 20, 40, 120, C.ink, false, 2), ln(40, 120, 296, 120, C.ink, false, 2), tx(36, 126, '0', 10, C.ink, true, 'end'), tx(36, 58, '1000', 10, C.ink, true, 'end'), tx(36, 26, '1500', 10, C.ink, true, 'end'), tx(160, 12, '縦：二酸化炭素 cm³　横：石灰石 g', 10, C.gray), tx(40 + 6 * 42 - 6, 134, '6', 10, C.ink), tx(40 + 4 * 42, 134, '4', 10, C.ink), tx(40 + 2 * 42, 134, '2', 10, C.ink)];
 const gx = (g: number) => 40 + g * 42, gy = (v: number) => 120 - v * 0.065;
-const co2Line50 = (): E[] => [ln(gx(0), gy(0), gx(4), gy(960), C.blue, false, 3), ln(gx(4), gy(960), gx(4.1667), gy(1000), C.blue, false, 3), ln(gx(4.1667), gy(1000), gx(6), gy(1000), C.blue, false, 3), tx(gx(5.2), gy(1000) - 6, '塩酸50cm³', 11, C.blue)];
+const co2Line50 = (): E[] => [ln(gx(0), gy(0), gx(4), gy(960), C.blue, false, 3), ln(gx(4), gy(960), gx(4.1667), gy(1000), C.blue, false, 3), ln(gx(4.1667), gy(1000), gx(6), gy(1000), C.blue, false, 3), tx(gx(5.2), gy(1000) + 16, '塩酸50cm³', 11, C.blue)];
 const r25: Figure = show([
   P('塩酸50cm³に石灰石を加えたときの発生量は、1gごとに240、480、720、960、1000、1000cm³でした。', ['塩酸50cm³のとき', '石灰石1〜6gの発生量'], ['塩酸75cm³・石灰石6gは？']),
   SF('グラフにすると、4gまでは比例して、そのあとは1000cm³で横ばいです。', ['4gまでは比例、あとは一定'], [...gAxes(), ...co2Line50()]),
@@ -427,7 +427,7 @@ const h39: Figure = show([
 const tbl = (marks: Record<number, [string, string]>): E[] => {
   const rows: [string, string, string][] = [['100円', '800個', '200個'], ['150円', '650個', '350個'], ['200円', '500個', '500個'], ['250円', '350個', '650個'], ['300円', '200個', '800個']];
   const out: E[] = [];
-  rows.forEach((r, i) => { const m = marks[i]; if (m) out.push(bx(14, 32 + i * 20, 292, 19, '', m[0], m[1])); });
+  rows.forEach((r, i) => { const m = marks[i]; if (m) out.push(rect(14, 32 + i * 20, 306, 51 + i * 20, m[0], m[1])); });
   out.push(tx(60, 20, '価格', 13, C.purple), tx(160, 20, '需要量', 13, C.purple), tx(260, 20, '供給量', 13, C.purple), ln(10, 26, 310, 26, C.gray, false, 1.5));
   rows.forEach((r, i) => { const m = marks[i]; r.forEach((t, j) => out.push(tx(60 + j * 100, 46 + i * 20, t, 14, m ? m[0] : C.ink))); });
   return out;

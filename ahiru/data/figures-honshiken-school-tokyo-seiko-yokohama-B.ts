@@ -2,7 +2,7 @@
 // どの図も：状況 → 手がかり → 理由 → 計算 → 答え → 確かめ の順に7枚以上で動く。理科18枚・社会18枚（各38問のうち4割以上）。
 // 座標は 320×240 の内部座標。上（y<142）に図、下の帯（y≧146）に式を置き、文字が図と重ならないようにしてある。
 import type { DiagramElement, Figure } from './figures';
-import { C, FILL, bx, lb, ar, ln, ci, pg, show, band, fresh, cover, flow } from './diagram-kit';
+import { C, FILL, bx, lb, ar, ln, ci, pg, show, band, fresh, flow } from './diagram-kit';
 import type { Slide } from './diagram-kit';
 
 type E = DiagramElement;
@@ -32,8 +32,6 @@ const B = (lines: string[]): E[] => {
 };
 const S = (note: string, lines: string[], add: E[] = []): Slide => ({ note, add: [...add, ...B(lines)] });
 const SF = (note: string, lines: string[], draw: E[]): Slide => ({ note, add: [...fresh(...draw), ...B(lines)] });
-/** 文字を縦に並べる（中央そろえ） */
-const rows = (texts: string[], y0: number, dy: number, size = 15, color: string = C.ink, x = 160): E[] => texts.map((t, i) => tx(x, y0 + i * dy, t, size, color));
 /** 表（rows[行][列]）。hl に行番号を入れると、その行を黄色で強調する。 */
 const tbl = (x0: number, y0: number, widths: number[], rh: number, data: string[][], hl: number[] = [], size = 11): E[] => {
   const out: E[] = [];

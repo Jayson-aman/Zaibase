@@ -57,12 +57,12 @@ const P = (x: number, y: number, t: string, size = 11, color: string = C.ink): E
 // 19 仕事算（3本の管）
 const s19: Figure = show([
   SF('空の水そうに、A管・B管で水を入れ、C管で水をぬきます。3本を同時に開くと何分で満水？', ['A管12分・B管20分で満水', 'C管は満水から30分で空'],
-    [bx(10, 24, 76, 28, 'A管 12分', C.blue, FILL.blue, 12), bx(10, 62, 76, 28, 'B管 20分', C.green, FILL.green, 12), bx(10, 100, 76, 28, 'C管 30分', C.red, FILL.red, 12), bx(180, 30, 110, 96, '水そう\n満水まで', C.ink, FILL.warm, 14)]),
-  S('容量が書かれていないので、12・20・30の最小公倍数の60Lとおきます。', ['12・20・30の最小公倍数＝60'], [P(235, 112, '60Lとおく', 12, C.purple)]),
+    [bx(10, 24, 76, 28, 'A管 12分', C.blue, FILL.blue, 12), bx(10, 62, 76, 28, 'B管 20分', C.green, FILL.green, 12), bx(10, 100, 76, 28, 'C管 30分', C.red, FILL.red, 12), bx(180, 30, 110, 96, '水そう', C.ink, FILL.warm, 14)]),
+  S('容量が書かれていないので、12・20・30の最小公倍数の60Lとおきます。', ['12・20・30の最小公倍数＝60'], [P(235, 100, '60Lとおく', 12, C.purple)]),
   S('A管は60÷12＝5Lずつ入ります。', ['A管：60÷12＝5L／分（入る）'], [lb(94, 42, '毎分5L入る', 12, C.blue, 'start', true)]),
   S('B管は60÷20＝3Lずつ入ります。', ['B管：60÷20＝3L／分（入る）'], [lb(94, 80, '毎分3L入る', 12, C.green, 'start', true)]),
   S('C管は60÷30＝2Lずつぬけます。ぬく管は、あとでひき算にします。', ['~C管：60÷30＝2L／分（ぬける）'], [lb(94, 118, '毎分2Lぬける', 12, C.red, 'start', true)]),
-  S('3本同時では、入る量の合計5＋3から、ぬける量2をひきます。', ['5＋3−2＝6L／分（ふえる）'], [P(235, 92, '毎分6Lふえる', 12, C.green)]),
+  S('3本同時では、入る量の合計5＋3から、ぬける量2をひきます。', ['5＋3−2＝6L／分（ふえる）'], [P(235, 118, '毎分6Lふえる', 12, C.green)]),
   S('60Lが満水なので、60÷6＝10分です。', ['60÷6＝10分']),
   S('答えは10分です。', ['=答え　10分']),
   S('確かめ。10分で、A管50L＋B管30Lが入り、C管20Lがぬけます。', ['50＋30−20＝60L', '=満水 ✓']),
@@ -102,7 +102,7 @@ const s21: Figure = show([
 const rx = 64, ry = 24, rw = 202, rh2 = 115;
 const s23: Figure = show([
   SF('たて48cm、横84cmの長方形の紙を、あまりが出ないように同じ大きさの正方形に切ります。', ['たて48cm・横84cm', 'できるだけ大きい正方形で切る'],
-    [bx(rx, ry, rw, rh2, undefined, C.ink, FILL.warm), P(rx + rw / 2, 16, '横84cm', 12), lb(34, 84, 'たて', 11, C.ink, 'middle', true), lb(34, 98, '48cm', 11, C.ink, 'middle', true)]),
+    [pg([[rx, ry], [rx + rw, ry], [rx + rw, ry + rh2], [rx, ry + rh2]], C.ink, FILL.warm), P(rx + rw / 2, 16, '横84cm', 12), lb(34, 84, 'たて', 11, C.ink, 'middle', true), lb(34, 98, '48cm', 11, C.ink, 'middle', true)]),
   S('たてにも横にもあまりなく並べるには、1辺は48と84の公約数。いちばん大きくするので最大公約数です。', ['1辺は48と84の公約数', 'できるだけ大きい→最大公約数']),
   S('48と84を12でわると4と7。4と7には、1のほかに共通の約数がないので、最大公約数は12。', ['48÷12＝4、84÷12＝7', '4と7に共通の約数なし→12']),
   S('1辺12cmの正方形で切ります。', ['正方形の1辺＝12cm'], [...[1, 2, 3, 4, 5, 6].map((i) => ln(rx + (rw / 7) * i, ry, rx + (rw / 7) * i, ry + rh2, C.blue, false, 1.4)), ...[1, 2, 3].map((j) => ln(rx, ry + (rh2 / 4) * j, rx + rw, ry + (rh2 / 4) * j, C.blue, false, 1.4))]),
@@ -143,7 +143,7 @@ const s25: Figure = show([
 // 26 時計算
 const hand = (cx: number, cy: number, len: number, deg: number): [number, number] => [cx + len * Math.sin((deg * Math.PI) / 180), cy - len * Math.cos((deg * Math.PI) / 180)];
 const ccx = 160, ccy = 80, ccr = 56;
-const clockFace = (): E[] => [ci(ccx, ccy, ccr, undefined, C.ink, '#FFFFFF'), P(ccx, ccy - 40, '12', 12), P(ccx + 44, ccy + 4, '3', 12), P(ccx, ccy + 48, '6', 12), P(ccx - 44, ccy + 4, '9', 12)];
+const clockFace = (): E[] => [pg(Array.from({ length: 48 }, (_, i): [number, number] => [ccx + ccr * Math.cos((i * Math.PI) / 24), ccy + ccr * Math.sin((i * Math.PI) / 24)]), C.ink, '#FFFFFF'), P(ccx, ccy - 40, '12', 12), P(ccx + 44, ccy + 4, '3', 12), P(ccx, ccy + 48, '6', 12), P(ccx - 44, ccy + 4, '9', 12)];
 const hands = (longDeg: number, shortDeg: number): E[] => {
   const [lx, ly] = hand(ccx, ccy, 40, longDeg), [sx, sy] = hand(ccx, ccy, 28, shortDeg);
   return [ln(ccx, ccy, lx, ly, C.blue, false, 3), ln(ccx, ccy, sx, sy, C.red, false, 5)];
