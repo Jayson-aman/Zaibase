@@ -47,11 +47,15 @@ import { lessonsU120E1Sansu } from '../data/lessons-u120-e1-sansu';
 import { lessonsU120E2Sansu } from '../data/lessons-u120-e2-sansu';
 import { lessonsU120E3Sansu } from '../data/lessons-u120-e3-sansu';
 import { lessonsU120E4Sansu } from '../data/lessons-u120-e4-sansu';
+import { lessonsU120E6Sansu } from '../data/lessons-u120-e6-sansu';
+import { lessonsU120J1Sansu } from '../data/lessons-u120-j1-sansu';
+import { lessonsU120J1Eigo } from '../data/lessons-u120-j1-eigo';
 import { lessonsU120E1Kokugo } from '../data/lessons-u120-e1-kokugo';
 import { lessonsU120E2Kokugo } from '../data/lessons-u120-e2-kokugo';
 import { lessonsU120E3Kokugo } from '../data/lessons-u120-e3-kokugo';
 import { lessonsU120E4Kokugo } from '../data/lessons-u120-e4-kokugo';
 import { lessonsU120E4KokugoKanji } from '../data/lessons-u120-e4-kokugo-kanji';
+import { lessonsU120J1Kokugo } from '../data/lessons-u120-j1-kokugo';
 import { lessonsU120E1Rika } from '../data/lessons-u120-e1-rika';
 import { lessonsU120E2Rika } from '../data/lessons-u120-e2-rika';
 import { lessonsU120E3Rika } from '../data/lessons-u120-e3-rika';
@@ -61,6 +65,8 @@ import { lessonsU120E2Shakai } from '../data/lessons-u120-e2-shakai';
 import { lessonsU120E3Shakai } from '../data/lessons-u120-e3-shakai';
 import { lessonsU120E4Shakai } from '../data/lessons-u120-e4-shakai';
 import { lessonsU120E3Eigo } from '../data/lessons-u120-e3-eigo';
+import { lessonsU120E1Eigo } from '../data/lessons-u120-e1-eigo';
+import { lessonsU120E2Eigo } from '../data/lessons-u120-e2-eigo';
 import { lessonsU120E4Eigo } from '../data/lessons-u120-e4-eigo';
 
 const FREE_UNITS_PER_CLUSTER = 5;
@@ -101,11 +107,15 @@ const CLUSTERS = [
   lessonsU120E2Sansu,
   lessonsU120E3Sansu,
   lessonsU120E4Sansu,
+  lessonsU120E6Sansu,
+  lessonsU120J1Sansu,
+  lessonsU120J1Eigo,
   lessonsU120E1Kokugo,
   lessonsU120E2Kokugo,
   lessonsU120E3Kokugo,
   lessonsU120E4Kokugo,
   lessonsU120E4KokugoKanji,
+  lessonsU120J1Kokugo,
   lessonsU120E1Rika,
   lessonsU120E2Rika,
   lessonsU120E3Rika,
@@ -115,6 +125,8 @@ const CLUSTERS = [
   lessonsU120E3Shakai,
   lessonsU120E4Shakai,
   lessonsU120E3Eigo,
+  lessonsU120E1Eigo,
+  lessonsU120E2Eigo,
   lessonsU120E4Eigo,
 ];
 

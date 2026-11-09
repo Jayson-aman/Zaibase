@@ -299,7 +299,11 @@ export default function TextbookScreen() {
           {([
             { g: null as GradeKey | null, label: 'ふつうの 単元' },
             ...(selectedSubject === 'eigo'
-              ? [{ g: 'e3' as GradeKey | null, label: '🌱 小3の 英語' }]
+              ? [
+                  { g: 'e1' as GradeKey | null, label: '🌱 小1の 英語' },
+                  { g: 'e2' as GradeKey | null, label: '🌱 小2の 英語' },
+                  { g: 'e3' as GradeKey | null, label: '🌱 小3の 英語' },
+                ]
               : selectedSubject === 'rika' || selectedSubject === 'shakai'
               ? [
                   { g: 'e1' as GradeKey | null, label: selectedSubject === 'rika' ? '🌱 小1の 理科' : '🌱 小1の 社会' },

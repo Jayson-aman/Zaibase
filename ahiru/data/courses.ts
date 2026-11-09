@@ -79,6 +79,19 @@ export type CourseKey =
   | 'kobe-jogakuin'        // 神戸女学院中学部
   | 'koko-rakunan'        // 洛南高等学校
   | 'koko-keio-shiki'        // 慶應義塾志木高等学校
+  | 'tokyo-musashi'        // 武蔵中学校
+  | 'tokyo-kaijo'        // 海城中学校
+  | 'tokyo-toshimagaoka'        // 豊島岡女子学園中学校
+  | 'tokyo-futaba'        // 雙葉中学校
+  | 'tokyo-kichijoji'        // 吉祥女子中学校
+  | 'tokyo-shibumaku'        // 渋谷教育学園幕張中学校
+  | 'tokyo-asano'        // 浅野中学校
+  | 'tokyo-ferris'        // フェリス女学院中学校
+  | 'rakusei'        // 洛星中学校
+  | 'suma'        // 須磨学園中学校
+  | 'koko-tsukuba'        // 筑波大学附属高等学校
+  | 'koko-shibumaku'        // 渋谷教育学園幕張高等学校
+  | 'koko-waseda-jitsugyo'        // 早稲田実業学校高等部
   | 'koko-ohori';     // 福岡大附属大濠高校（難関）
 
 export type CourseLevel = '基礎〜標準' | '標準' | '標準〜難関' | '難関' | '最難関';
@@ -94,7 +107,7 @@ export type CourseInfo = {
   targetSchools: string[];
   description: string;
   maxOnly?: boolean;
-  gender?: '男子' | '女子' | '共学';
+  gender?: '男子' | '女子' | '共学' | '男女別学' | '各校による';
   hensachi?: string; // 偏差値帯
 };
 
@@ -135,7 +148,7 @@ export const ALL_COURSES: CourseInfo[] = [
     level: '難関',
     targetSchools: ['四天王寺中学校', '四天王寺東中学校'],
     description: '四天王寺学園入試レベルの高難度問題（四天王寺は女子校、四天王寺東は共学）',
-    gender: '女子',
+    gender: '各校による',
     hensachi: '60〜70',
   },
   {
@@ -286,7 +299,7 @@ export const ALL_COURSES: CourseInfo[] = [
     level: '難関',
     targetSchools: ['帝塚山学院中学校', '帝塚山学院泉ヶ丘中学校'],
     description: '帝塚山学院の入試問題。帝塚山学院は女子校（泉ヶ丘は共学）、国語・英語重視',
-    gender: '女子',
+    gender: '各校による',
     hensachi: '55〜60',
   },
 
@@ -539,7 +552,7 @@ export const ALL_COURSES: CourseInfo[] = [
     level: '難関',
     targetSchools: ['南山中学校男子部', '南山中学校女子部'],
     description: '南山中学校の入試問題。男子部・女子部に分かれる併学のカトリック系名門校、英語教育に強み',
-    gender: '共学',
+    gender: '男女別学',
     hensachi: '62〜66',
   },
   {
@@ -635,7 +648,7 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '甲陽学院高校の入試問題。数学の論証力・思考力が問われる',
     maxOnly: true,
     gender: '男子',
-    hensachi: '75〜77',
+    // hensachi を外して一覧から隠す（高校入試がない完全中高一貫校のため。2026/11/9）: hensachi: '75〜77',
   },
   {
     key: 'koko-nishiyamato',
@@ -663,7 +676,7 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '東大寺学園高校の入試問題。理系・医系進学者多数、数理の難度が高い',
     maxOnly: true,
     gender: '男子',
-    hensachi: '73〜76',
+    // hensachi を外して一覧から隠す（高校入試がない完全中高一貫校のため。2026/11/9）: hensachi: '73〜76',
   },
 
   // ─────── 東京 私立高校受験 ───────
@@ -692,7 +705,7 @@ export const ALL_COURSES: CourseInfo[] = [
     targetSchools: ['慶應義塾高校', '慶應義塾志木高校', '慶應義塾女子高校'],
     description: '慶應義塾高校の入試問題。英語・数学・国語の総合力が高水準で求められる',
     maxOnly: true,
-    gender: '男子',
+    gender: '各校による',
     hensachi: '74〜76',
   },
   {
@@ -707,7 +720,7 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '麻布高校の入試問題。自由な校風を反映した論述・思考型の出題',
     maxOnly: true,
     gender: '男子',
-    hensachi: '74〜76',
+    // hensachi を外して一覧から隠す（高校入試がない完全中高一貫校のため。2026/11/9）: hensachi: '74〜76',
   },
 
   // ─────── 名古屋 私立高校受験 ───────
@@ -750,7 +763,7 @@ export const ALL_COURSES: CourseInfo[] = [
     targetSchools: ['南山高校男子部', '南山高校女子部'],
     description: '南山高校の入試問題。男子部・女子部に分かれる併学のカトリック系名門校、英語教育に強み',
     maxOnly: true,
-    gender: '共学',
+    gender: '男女別学',
     hensachi: '65〜68',
   },
 
@@ -1021,6 +1034,175 @@ export const ALL_COURSES: CourseInfo[] = [
     description: '慶應義塾志木高等学校の入試レベルの問題。埼玉の男子最難関、英語・数学の応用',
     gender: '男子',
     hensachi: '72〜75',
+  },
+  {
+    key: 'tokyo-musashi',
+    examType: 'chugaku',
+    name: '武蔵中学校',
+    shortName: '武蔵(中)',
+    emoji: '🌲',
+    color: '#2E7D32',
+    level: '最難関',
+    targetSchools: ['武蔵中学校'],
+    description: '武蔵中学校の入試レベルの問題。東京の難関校、自分で考える力と記述・資料の読み取り',
+    gender: '男子',
+    hensachi: '66〜70',
+  },
+  {
+    key: 'tokyo-kaijo',
+    examType: 'chugaku',
+    name: '海城中学校',
+    shortName: '海城(中)',
+    emoji: '🌊',
+    color: '#1565C0',
+    level: '最難関',
+    targetSchools: ['海城中学校'],
+    description: '海城中学校の入試レベルの問題。東京の男子難関、算数の思考力と理科・社会の知識',
+    gender: '男子',
+    hensachi: '64〜68',
+  },
+  {
+    key: 'tokyo-toshimagaoka',
+    examType: 'chugaku',
+    name: '豊島岡女子学園中学校',
+    shortName: '豊島岡',
+    emoji: '🌺',
+    color: '#AD1457',
+    level: '最難関',
+    targetSchools: ['豊島岡女子学園中学校'],
+    description: '豊島岡女子学園中学校の入試レベルの問題。東京の女子難関、計算力と正確さ',
+    gender: '女子',
+    hensachi: '66〜70',
+  },
+  {
+    key: 'tokyo-futaba',
+    examType: 'chugaku',
+    name: '雙葉中学校',
+    shortName: '雙葉',
+    emoji: '🌷',
+    color: '#6A1B9A',
+    level: '最難関',
+    targetSchools: ['雙葉中学校'],
+    description: '雙葉中学校の入試レベルの問題。東京の女子難関、基礎の定着と記述',
+    gender: '女子',
+    hensachi: '65〜69',
+  },
+  {
+    key: 'tokyo-kichijoji',
+    examType: 'chugaku',
+    name: '吉祥女子中学校',
+    shortName: '吉祥女子',
+    emoji: '🍀',
+    color: '#00897B',
+    level: '難関',
+    targetSchools: ['吉祥女子中学校'],
+    description: '吉祥女子中学校の入試レベルの問題。東京の女子難関、標準〜発展の応用力',
+    gender: '女子',
+    hensachi: '60〜64',
+  },
+  {
+    key: 'tokyo-shibumaku',
+    examType: 'chugaku',
+    name: '渋谷教育学園幕張中学校',
+    shortName: '渋幕(中)',
+    emoji: '🚀',
+    color: '#0277BD',
+    level: '最難関',
+    targetSchools: ['渋谷教育学園幕張中学校'],
+    description: '渋谷教育学園幕張中学校の入試レベルの問題。千葉の共学最難関、思考力と記述',
+    gender: '共学',
+    hensachi: '70〜73',
+  },
+  {
+    key: 'tokyo-asano',
+    examType: 'chugaku',
+    name: '浅野中学校',
+    shortName: '浅野',
+    emoji: '🌅',
+    color: '#E65100',
+    level: '最難関',
+    targetSchools: ['浅野中学校'],
+    description: '浅野中学校の入試レベルの問題。神奈川の男子難関、算数・理科の応用力',
+    gender: '男子',
+    hensachi: '66〜69',
+  },
+  {
+    key: 'tokyo-ferris',
+    examType: 'chugaku',
+    name: 'フェリス女学院中学校',
+    shortName: 'フェリス',
+    emoji: '🎵',
+    color: '#C62828',
+    level: '難関',
+    targetSchools: ['フェリス女学院中学校'],
+    description: 'フェリス女学院中学校の入試レベルの問題。神奈川の女子難関、国語・算数の記述',
+    gender: '女子',
+    hensachi: '62〜66',
+  },
+  {
+    key: 'rakusei',
+    examType: 'chugaku',
+    name: '洛星中学校',
+    shortName: '洛星',
+    emoji: '⭐',
+    color: '#283593',
+    level: '難関',
+    targetSchools: ['洛星中学校'],
+    description: '洛星中学校の入試レベルの問題。京都の難関、算数と国語の記述',
+    gender: '男子',
+    hensachi: '62〜65',
+  },
+  {
+    key: 'suma',
+    examType: 'chugaku',
+    name: '須磨学園中学校',
+    shortName: '須磨学園',
+    emoji: '🌊',
+    color: '#00695C',
+    level: '難関',
+    targetSchools: ['須磨学園中学校'],
+    description: '須磨学園中学校の入試レベルの問題。兵庫の共学難関、基礎〜応用',
+    gender: '共学',
+    hensachi: '60〜64',
+  },
+  {
+    key: 'koko-tsukuba',
+    examType: 'koko',
+    name: '筑波大学附属高等学校',
+    shortName: '筑附(高)',
+    emoji: '🎓',
+    color: '#37474F',
+    level: '最難関',
+    targetSchools: ['筑波大学附属高等学校'],
+    description: '筑波大学附属高等学校の入試レベルの問題。東京の国立最難関、数学・英語の思考力',
+    gender: '共学',
+    hensachi: '73〜76',
+  },
+  {
+    key: 'koko-shibumaku',
+    examType: 'koko',
+    name: '渋谷教育学園幕張高等学校',
+    shortName: '渋幕(高)',
+    emoji: '🚀',
+    color: '#0277BD',
+    level: '最難関',
+    targetSchools: ['渋谷教育学園幕張高等学校'],
+    description: '渋谷教育学園幕張高等学校の入試レベルの問題。千葉の最難関、英語・数学の応用',
+    gender: '共学',
+    hensachi: '72〜75',
+  },
+  {
+    key: 'koko-waseda-jitsugyo',
+    examType: 'koko',
+    name: '早稲田実業学校高等部',
+    shortName: '早実(高)',
+    emoji: '🏫',
+    color: '#B71C1C',
+    level: '最難関',
+    targetSchools: ['早稲田実業学校高等部'],
+    description: '早稲田実業学校高等部の入試レベルの問題。東京の難関私立、数学・英語・国語',
+    gender: '共学',
+    hensachi: '71〜74',
   },
 ];
 

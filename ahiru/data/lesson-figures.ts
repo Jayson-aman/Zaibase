@@ -204,12 +204,16 @@ import { lessonFigsU120E1Sansu } from './lesson-figs-u120-e1-sansu';
 import { lessonFigsU120E2Sansu } from './lesson-figs-u120-e2-sansu';
 import { lessonFigsU120E3Sansu } from './lesson-figs-u120-e3-sansu';
 import { lessonFigsU120E4Sansu } from './lesson-figs-u120-e4-sansu';
+import { lessonFigsU120E6Sansu } from './lesson-figs-u120-e6-sansu';
+import { lessonFigsU120J1Sansu } from './lesson-figs-u120-j1-sansu';
+import { lessonFigsU120J1Eigo } from './lesson-figs-u120-j1-eigo';
 import { lessonFigsU120CalcTrivia } from './lesson-figs-calc-trivia';
 import { lessonFigsU120E1Kokugo } from './lesson-figs-u120-e1-kokugo';
 import { lessonFigsU120E2Kokugo } from './lesson-figs-u120-e2-kokugo';
 import { lessonFigsU120E3Kokugo } from './lesson-figs-u120-e3-kokugo';
 import { lessonFigsU120E4Kokugo } from './lesson-figs-u120-e4-kokugo';
 import { lessonFigsU120E4KokugoKanji } from './lesson-figs-u120-e4-kokugo-kanji';
+import { lessonFigsU120J1Kokugo } from './lesson-figs-u120-j1-kokugo';
 import { lessonFigsU120E1Rika } from './lesson-figs-u120-e1-rika';
 import { lessonFigsU120E2Rika } from './lesson-figs-u120-e2-rika';
 import { lessonFigsU120E3Rika } from './lesson-figs-u120-e3-rika';
@@ -219,6 +223,8 @@ import { lessonFigsU120E2Shakai } from './lesson-figs-u120-e2-shakai';
 import { lessonFigsU120E3Shakai } from './lesson-figs-u120-e3-shakai';
 import { lessonFigsU120E4Shakai } from './lesson-figs-u120-e4-shakai';
 import { lessonFigsU120E3Eigo } from './lesson-figs-u120-e3-eigo';
+import { lessonFigsU120E1Eigo } from './lesson-figs-u120-e1-eigo';
+import { lessonFigsU120E2Eigo } from './lesson-figs-u120-e2-eigo';
 import { lessonFigsU120E4Eigo } from './lesson-figs-u120-e4-eigo';
 import { lessonFigsRitsumeikan_sansu } from './lesson-figs-ritsumeikan-sansu';
 import { lessonFigsRitsumeikan_kokugo } from './lesson-figs-ritsumeikan-kokugo';
@@ -277,12 +283,16 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsU120E2Sansu,
   ...lessonFigsU120E3Sansu,
   ...lessonFigsU120E4Sansu,
+  ...lessonFigsU120E6Sansu,
+  ...lessonFigsU120J1Sansu,
+  ...lessonFigsU120J1Eigo,
   ...lessonFigsU120CalcTrivia,
   ...lessonFigsU120E1Kokugo,
   ...lessonFigsU120E2Kokugo,
   ...lessonFigsU120E3Kokugo,
   ...lessonFigsU120E4Kokugo,
   ...lessonFigsU120E4KokugoKanji,
+  ...lessonFigsU120J1Kokugo,
   ...lessonFigsU120E1Rika,
   ...lessonFigsU120E2Rika,
   ...lessonFigsU120E3Rika,
@@ -292,6 +302,8 @@ export const lessonFigures: Record<string, Figure> = {
   ...lessonFigsU120E3Shakai,
   ...lessonFigsU120E4Shakai,
   ...lessonFigsU120E3Eigo,
+  ...lessonFigsU120E1Eigo,
+  ...lessonFigsU120E2Eigo,
   ...lessonFigsU120E4Eigo,
   ...lessonFigsRitsumeikan_sansu,
   ...lessonFigsRitsumeikan_kokugo,

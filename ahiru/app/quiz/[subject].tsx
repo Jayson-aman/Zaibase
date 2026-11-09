@@ -28,6 +28,8 @@ import { getQuickTrick } from '../../data/quick-tricks';
 // 個別の問題にmaxOnlyを付けて絞れない。代わりに1回のセッションで
 // 最初のN問だけを無料にする（セッションをまたいだ累計ではない）。
 const SESSION_FREE_LIMIT = 15;
+// 本試験対策は、各教科の頭10問まで無料（通算）。それ以降はPro/Max。
+const HONSHIKEN_FREE_LIMIT = 10;
 const SESSION_LIMITED_MODES: TestModeKey[] = ['level', 'nyushi'];
 
 // 予備の解説（data/explanations_*.ts）は2026/9/15に配線を外した。
@@ -43,7 +45,7 @@ import Paywall from '../../components/Paywall';
 import { saveProgress } from '../../store/progress';
 import { recordStudy, useStudyStats, DAILY_GOAL } from '../../store/studyStreak';
 import { incrementTrialQuestions, isTrialExpired } from '../../store/trial';
-import { getSessionFreeUsed, incrementSessionFreeUsed } from '../../store/sessionLimit';
+import { getSessionFreeUsed, incrementSessionFreeUsed, getTotalFreeUsed, incrementTotalFreeUsed } from '../../store/sessionLimit';
 import { logAccessEvent, type AccessTier } from '../../services/analytics';
 import { submitRankingScore } from '../../services/ranking';
 import { maybeRequestReview } from '../../services/reviewPrompt';
@@ -395,7 +397,9 @@ export default function QuizScreen() {
     (async () => {
       const sessionLimited = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
       const used = sessionLimited ? await getSessionFreeUsed(`${testModeKey}_${subjectKey}`) : 0;
-      const blocked = (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired(subjectKey));
+      const blocked = testModeKey === 'honshiken'
+        ? (await getTotalFreeUsed(`honshiken_${subjectKey}`)) >= HONSHIKEN_FREE_LIMIT
+        : (sessionLimited && used >= SESSION_FREE_LIMIT) || (await isTrialExpired(subjectKey));
       if (cancelled || !blocked) return;
       setTrialBlocked(true);
       setShowPaywall(true);
@@ -570,7 +574,16 @@ export default function QuizScreen() {
       // レベル別ドリル・入試対策は、アプリ全体の累計トライアルとは別に、
       // 1日あたり最初のSESSION_FREE_LIMIT問だけ無料にする（永続化された消費数で判定）。
       const isSessionLimitedMode = testModeKey != null && SESSION_LIMITED_MODES.includes(testModeKey);
-      if (isSessionLimitedMode && sessionFreeUsedRef.current >= SESSION_FREE_LIMIT) {
+      if (testModeKey === 'honshiken') {
+        // 本試験対策：各教科の頭10問まで無料（通算）。全体のお試し回数とは別に数える。
+        const used = await getTotalFreeUsed(`honshiken_${subjectKey}`);
+        if (used >= HONSHIKEN_FREE_LIMIT) {
+          hitLimit = true;
+          logAccessEvent('trial_limit_paywall_shown', { mode: 'honshiken', subject: subjectKey, examType, tier: 'free' });
+        } else {
+          await incrementTotalFreeUsed(`honshiken_${subjectKey}`);
+        }
+      } else if (isSessionLimitedMode && sessionFreeUsedRef.current >= SESSION_FREE_LIMIT) {
         hitLimit = true;
         logAccessEvent('session_limit_paywall_shown', {
           mode: testModeKey ?? 'unknown',

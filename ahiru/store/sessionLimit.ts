@@ -33,3 +33,29 @@ export async function incrementSessionFreeUsed(id: string): Promise<number> {
   }
   return next;
 }
+
+// 本試験対策の「各教科、頭10問まで無料」。1日ごとではなく、通算で数える（日が変わっても戻らない）。
+function totalKey(id: string): string {
+  return `total_free_used_${id}`;
+}
+
+export async function getTotalFreeUsed(id: string): Promise<number> {
+  try {
+    const val = await AsyncStorage.getItem(totalKey(id));
+    if (!val) return 0;
+    const n = parseInt(val, 10);
+    return Number.isFinite(n) && n >= 0 ? n : 0;
+  } catch {
+    return 0;
+  }
+}
+
+export async function incrementTotalFreeUsed(id: string): Promise<number> {
+  const next = (await getTotalFreeUsed(id)) + 1;
+  try {
+    await AsyncStorage.setItem(totalKey(id), String(next));
+  } catch {
+    // 保存に失敗しても回数だけは返す
+  }
+  return next;
+}

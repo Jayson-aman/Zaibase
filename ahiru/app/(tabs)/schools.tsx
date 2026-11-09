@@ -75,7 +75,7 @@ const BASE_SCHOOL_GROUPS: SchoolGroup[] = [
     schools: [
       { key: 'kansai-hokuyo', name: '関西大学北陽', emoji: '🎓', hensachi: '54〜58', gender: '共学', tier: 'pro' },
       { key: 'myojo',         name: '明星',         emoji: '✨', hensachi: '56〜62', gender: '男子', tier: 'pro' },
-      { key: 'tezukayama',    name: '帝塚山学院',   emoji: '🌺', hensachi: '55〜60', gender: '女子', tier: 'pro' },
+      { key: 'tezukayama',    name: '帝塚山学院',   emoji: '🌺', hensachi: '55〜60', gender: '各校による', tier: 'pro' },
       { key: 'kinrankai',     name: '金蘭会',       emoji: '🌼', hensachi: '50〜56', gender: '女子', tier: 'pro' },
       { key: 'otani',         name: '大谷',         emoji: '🍁', hensachi: '46〜52', gender: '女子', tier: 'pro' },
     ],
@@ -132,7 +132,7 @@ const REGIONS: { key: RegionKey; label: string; icon: string; color: string }[] 
 ];
 
 // 高校の学校は、key だけでは地域が決まらないので、ここに書く。
-const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu', 'koko-keio-shiki']);
+const KANTO_KOKO = new Set(['koko-hibiya', 'koko-waseda', 'koko-meidai', 'koko-kasei', 'koko-keio', 'koko-azabu', 'koko-keio-shiki', 'koko-tsukuba', 'koko-shibumaku', 'koko-waseda-jitsugyo']);
 const TOKAI_KOKO = new Set(['koko-tokai', 'koko-taki', 'koko-nanzan']);
 const KYUSHU_KOKO = new Set(['koko-kurume', 'koko-seinan', 'koko-ohori']);
 

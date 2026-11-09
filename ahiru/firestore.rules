@@ -87,6 +87,17 @@ service cloud.firestore {
       allow write: if false;
     }
 
+    // ── 初回ログイン後3日間の全開放の体験（開始時刻だけ。一度書いたら変えられない） ──
+    // 自分の分を1度だけ、サーバー時刻で作れる。匿名ログインでは作れない（ログインが前提）。
+    match /welcomeTrial/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+      allow create: if request.auth != null && request.auth.uid == uid
+        && request.auth.token.firebase.sign_in_provider != 'anonymous'
+        && request.resource.data.keys().hasOnly(['startedAt'])
+        && request.resource.data.startedAt == request.time;
+      allow update, delete: if false;
+    }
+
     // ── 保護者向けフィードバック（感想・要望）の送信回数カウンタ（Cloud Functions専用） ──
     match /feedbackUsage/{uid} {
       allow read, write: if false;
