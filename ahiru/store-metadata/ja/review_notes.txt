@@ -1,4 +1,4 @@
-Thank you for reviewing Zaibase受験 (Ver. 2.2.10).
+Thank you for reviewing Zaibase受験 (Ver. 2.2.11).
 
 [About the app]
 An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams): a textbook with animated diagrams, a formula collection, about 16,000 practice questions in five subjects and school-specific courses. Japanese only. Not affiliated with any school (stated in the description).
@@ -6,7 +6,12 @@ An exam-preparation app for Japanese students (elementary school students prepar
 [Sign-in]
 Most content works without an account. Sign-in is required only before buying a one-time (consumable) item, so the unlocked content is saved to the user's account. Buying a PRO/MAX subscription does not require sign-in. To test the one-time items, please sign in with the demo account in the App Review Information section.
 
-[What is new in 2.2.10]
+[What is new in 2.2.11]
+- A 3-day welcome period: after a user signs in with an email account for the first time, all lessons, formulas, questions and school-specific courses are readable for 3 days (AI features and Max-only advanced questions are excluded). Nothing is charged automatically; afterwards the app returns to the free range. Signed-out users see a card on the Home screen explaining this. To test, sign in with a NEW email account (the welcome period starts at the first sign-in of an account; the demo account in App Review Information may have already used it).
+- Content for early elementary grades (grades 1-3: arithmetic, Japanese, science, social studies, English) and more lessons for other grades. Same existing PRO/MAX subscriptions and one-time items; no new products, permissions or SDKs.
+- More practice questions for school-specific courses; image display fixes. Prices are unchanged.
+
+[What was new in 2.2.10]
 - "Textbook for school exams" (定期テストの教科書) for junior-high students. Where: Home -> "テスト対策" (Test prep) -> tap "定期テストの教科書（中1〜中3）". Pick a grade (中1/中2/中3) and a subject, then open a unit: an animated explanation (12+ slides), worked examples and check questions. Free users can read the first 2 slides and the first section of each unit; the rest is part of the existing PRO/MAX subscriptions (no new product).
 - "やさしい問題から" (start from easy questions): on the same screen, tap the "やさしい問題から 50問" card. 50 basic questions per grade and subject, in three steps (easy, normal, test-like). Free users can try the first 5 questions of step 1; the rest is part of PRO/MAX.
 - "おさらい" (review of earlier lessons) for all subjects: a collapsible box at the top of each textbook unit and the slide "つまずいたら、ここ" in answer explanations. Plain educational text, free.
