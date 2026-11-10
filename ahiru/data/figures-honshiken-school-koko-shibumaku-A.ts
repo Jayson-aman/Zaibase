@@ -49,7 +49,7 @@ const nm = (t: Tr, p: Pt, text: string, dx: number, dy: number, color: string = 
 const poly = (t: Tr, pts: Pt[], color: string, fill: string): E => pg(pts.map((p) => t(p[0], p[1])), color, fill);
 const axes = (t: Tr, x0: number, x1: number, y0: number, y1: number): E[] => {
   const [ox, oy] = t(0, 0);
-  return [seg(t, [x0, 0], [x1, 0], C.gray), seg(t, [0, y0], [0, y1], C.gray), tx(ox - 9, oy + 12, 'O', 11, C.gray), nm(t, [x1, 0], 'x', 0, 13, C.gray, 11), nm(t, [0, y1], 'y', 10, 4, C.gray, 11)];
+  return [seg(t, [x0, 0], [x1, 0], C.gray), seg(t, [0, y0], [0, y1], C.gray), tx(ox - 9, oy + 9, 'O', 11, C.gray), nm(t, [x1, 0], 'x', 0, 9, C.gray, 11), nm(t, [0, y1], 'y', 10, 4, C.gray, 11)];
 };
 const curve = (t: Tr, f: (x: number) => number, x0: number, x1: number, n = 24, color: string = C.purple): E[] => {
   const out: E[] = [];
@@ -143,8 +143,8 @@ const a14: Figure = show([
 const t15 = pl(60, 132, 13);
 const a15: Figure = show([
   SF('直線 y＝−2x＋8 と x軸、y軸で囲まれた直角三角形の中に、原点Oを頂点とする正方形をかきます。', ['y＝−2x＋8 と軸で三角形'],
-    [...axes(t15, -1, 6, -1, 9.5), seg(t15, [0, 8], [4, 0], C.blue, false, 2), nm(t15, [0, 8], '8', 10, 0, C.gray, 11), nm(t15, [4, 0], '4', 0, 14, C.gray, 11), tx(190, 70, 'y＝−2x＋8', 12, C.blue)]),
-  S('Oを頂点にして、2辺が軸の上にある正方形を考えます。1辺を s とします。', ['1辺 s の正方形'], [poly(t15, [O, [2.67, 0], [2.67, 2.67], [0, 2.67]], C.green, FILL.green), nm(t15, [1.3, 0], 's', 0, 14, C.green, 11), nm(t15, [0, 1.3], 's', -9, 4, C.green, 11)]),
+    [...axes(t15, -1, 6, -1, 9.5), seg(t15, [0, 8], [4, 0], C.blue, false, 2), nm(t15, [0, 8], '8', 10, 0, C.gray, 11), nm(t15, [4, 0], '4', 0, 10, C.gray, 11), tx(190, 70, 'y＝−2x＋8', 12, C.blue)]),
+  S('Oを頂点にして、2辺が軸の上にある正方形を考えます。1辺を s とします。', ['1辺 s の正方形'], [poly(t15, [O, [2.67, 0], [2.67, 2.67], [0, 2.67]], C.green, FILL.green), nm(t15, [1.3, 0], 's', 0, 10, C.green, 11), nm(t15, [0, 1.3], 's', -9, 4, C.green, 11)]),
   S('Oの向かいの頂点を Q とします。縦と横が同じ長さ s なので、Q は (s, s) です。', ['*縦も横も s', 'Q(s, s)'], [dot(t15, [2.67, 2.67], C.red, 4), nm(t15, [2.67, 2.67], 'Q', 11, -6, C.red)]),
   S('手がかり。Q は直線 y＝−2x＋8 の上にあります。', ['Qは直線の上']),
   S('Q の座標を、直線の式に代入します。', ['s＝−2s＋8']),

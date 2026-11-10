@@ -295,7 +295,7 @@ const a40: Figure = show([
 const gx = (i: number) => 30 + 50 * i;
 const gy = (j: number) => 116 - 30 * j;
 const gridLines = (): E[] => { const out: E[] = []; for (let i = 0; i <= 4; i++) out.push(ln(gx(i), gy(0), gx(i), gy(3), C.gray, false, 1.5)); for (let j = 0; j <= 3; j++) out.push(ln(gx(0), gy(j), gx(4), gy(j), C.gray, false, 1.5)); out.push(ci(gx(0), gy(0), 3, undefined, C.ink, C.ink), ci(gx(4), gy(3), 3, undefined, C.ink, C.ink), tx(gx(0) - 8, gy(0) + 14, 'A', 12), tx(gx(4) + 8, gy(3) - 6, 'B', 12)); return out; };
-const nums = (cells: [number, number, number][], col: string): E[] => cells.map(([i, j, n]) => tx(gx(i), gy(j) - 8, String(n), 11, col));
+const nums = (cells: [number, number, number][], col: string): E[] => cells.map(([i, j, n]) => tx(gx(i) - 8, gy(j) - 9, String(n), 11, col));
 const a43: Figure = show([
   SF('東へ4区画、北へ3区画の道。AからBまで最短で進むとき、点Pを通る道順の数を求めます。', ['Pを通る最短の道順'], gridLines()),
   S('Aから東に2区画、北に1区画進んだところが、点Pです。', ['P（東2・北1）'], [ci(gx(2), gy(1), 4, undefined, C.red, C.red), tx(gx(2) + 8, gy(1) + 16, 'P', 12, C.red)]),
