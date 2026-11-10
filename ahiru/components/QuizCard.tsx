@@ -177,7 +177,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
             <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
-            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
+            <Image source={illustration} style={styles.subjectImage} resizeMode="contain" />
           ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
@@ -310,7 +310,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {figure != null && !FIGURE_IS_ANSWER.has(question.id) ? (
             <FigureView figure={maskFigureForProblem(figure, question)} hideAnswerText />
           ) : illustration != null ? (
-            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
+            <Image source={illustration} style={styles.subjectImage} resizeMode="contain" />
           ) : question.figureDescription != null ? (
             <View style={styles.figureBox}>
               <Text style={styles.figureLabel}>📐 図・表</Text>
@@ -373,7 +373,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
           {figure != null ? (
             <FigureView figure={figure} animated question={question} />
           ) : illustration != null ? (
-            <Image source={illustration} style={styles.subjectImage} resizeMode="cover" />
+            <Image source={illustration} style={styles.subjectImage} resizeMode="contain" />
           ) : null}
           {video != null && <VideoPlayer url={video.url} title={video.title} />}
           {!hideExplanation && (question.explanation != null || question.hint != null) && (
@@ -756,9 +756,11 @@ const styles = StyleSheet.create({
   subjectImage: {
     // 正方形だと1画面をイラストだけで埋めてしまい、問題文も「タップして答えを見る」も
     // 画面外に押し出されてしまうので、横長に抑えて高さに上限をつける。
+    // 絵は正方形が多い。16:10 に切ると上下が切れるので、正方形のまま小さめに中央へ置く。
     width: '100%',
-    aspectRatio: 16 / 10,
-    maxHeight: 190,
+    maxWidth: 230,
+    aspectRatio: 1,
+    alignSelf: 'center',
     borderRadius: 12,
     marginTop: 10,
     marginBottom: 4,
