@@ -133,7 +133,7 @@ const FEATURES = [
 const CONTENT_FACTS = [
   {
     text: '算数・国語・理科・社会・英語の5科目を、基礎から発展まで難易度別に収録。まちがえた問題は自動で記録され、あとから復習できます。',
-    name: '5科目 16,000問以上',
+    name: '5科目 30,000問以上',
     result: '収録問題数',
   },
   {
@@ -202,7 +202,7 @@ export default function FeaturesPage() {
 
             <Text style={styles.heroSub}>
               中学受験・高校受験の対策アプリ。{'\n'}
-              算数・国語・理科・社会・英語の5科目 16,000問以上 × 動く図解 × 学校別コース。{'\n'}
+              算数・国語・理科・社会・英語の5科目 30,000問以上 × 動く図解 × 学校別コース。{'\n'}
               AI弱点コーチで志望校合格を目指す。
             </Text>
 
@@ -214,7 +214,7 @@ export default function FeaturesPage() {
             {/* スタッツ */}
             <View style={[styles.heroStats, glassBlur]}>
               {[
-                { num: '16,000', unit: '問+', label: '問題数' },
+                { num: '30,000', unit: '問+', label: '問題数' },
                 { num: '5', unit: '科目', label: '対応科目' },
                 { num: '動く', unit: '図解', label: '解説アニメ' },
                 { num: 'AI', unit: '搭載', label: '弱点分析' },
@@ -406,7 +406,7 @@ export default function FeaturesPage() {
             {[
               '✓ 無料プランの全機能',
               '✓ 聞き流しモード（全5科目）',
-              '✓ 全16,000問＋難関校の発展問題',
+              '✓ 全30,000問＋難関校の発展問題',
               '✓ 学校別コース50校（各校100問以上）',
               '✓ くわしい解説・覚え方つき',
             ].map((f) => (
