@@ -12,7 +12,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "やぎょうと わぎょうには あいて いる ところが あるよ。", add: [...fresh(lb(160, 22, "や ぎょう", 18, C.blue, 'middle', true),bx(34, 38, 44, 44, "や", C.main, FILL.warm, 28),bx(86, 38, 44, 44, "", C.gray, FILL.gray, 32),bx(138, 38, 44, 44, "ゆ", C.main, FILL.warm, 28),bx(190, 38, 44, 44, "", C.gray, FILL.gray, 32),bx(242, 38, 44, 44, "よ", C.main, FILL.warm, 28),lb(160, 112, "わ ぎょう", 18, C.blue, 'middle', true),bx(34, 128, 44, 44, "わ", C.main, FILL.warm, 28),bx(86, 128, 44, 44, "", C.gray, FILL.gray, 32),bx(138, 128, 44, 44, "", C.gray, FILL.gray, 32),bx(190, 128, 44, 44, "", C.gray, FILL.gray, 32),bx(242, 128, 44, 44, "を", C.main, FILL.warm, 28),lb(160, 205, "あいて いる ところは 字が ない", 18, C.red, 'middle', true))] },
     { note: "5字の ぎょうが 8つ で 40字。ぜんぶ たすと 46字！", add: [...fresh(lb(160, 64, "5字の ぎょう ×8 ＝ 40字", 22, C.ink, 'middle', true),lb(160, 100, "やぎょう 3字・わぎょう 2字", 22, C.ink, 'middle', true),lb(160, 135, "「ん」 1字", 22, C.ink, 'middle', true),lb(160, 173, "40＋3＋2＋1 ＝ 46字", 26, C.red, 'middle', true))] },
     { note: "こたえ：あ・か・さ・た・な の つぎは はぎょう。", add: [...fresh(bx(24, 28, 48, 48, "あ", C.main, FILL.warm, 30),bx(80, 28, 48, 48, "か", C.main, FILL.warm, 30),bx(136, 28, 48, 48, "さ", C.main, FILL.warm, 30),bx(192, 28, 48, 48, "た", C.main, FILL.warm, 30),bx(248, 28, 48, 48, "な", C.main, FILL.warm, 30),lb(160, 100, "↓ つぎは？", 22, C.blue, 'middle', true),bx(24, 130, 48, 48, "は", C.red, FILL.red, 30),bx(80, 130, 48, 48, "ひ", C.red, FILL.red, 30),bx(136, 130, 48, 48, "ふ", C.red, FILL.red, 30),bx(192, 130, 48, 48, "へ", C.red, FILL.red, 30),bx(248, 130, 48, 48, "ほ", C.red, FILL.red, 30),lb(160, 210, "はぎょう", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_002_a: show([
     { note: "「か」に てんてんを つけると どうなるかな？", add: [...fresh(lb(160, 71, "か", 70, C.ink, 'middle', true),lb(160, 139, "＋ てんてん", 26, C.blue, 'middle', true),lb(160, 188, "＝ ？", 40, C.red, 'middle', true))] },
     { note: "「が」！ てんてんを つけると「が」と よむよ。", add: [...fresh(lb(95, 100, "か", 80, C.ink, 'middle', true),lb(160, 100, "→", 40, C.blue, 'middle', true),lb(225, 100, "が", 80, C.red, 'middle', true),lb(160, 190, "にごる 音", 28, C.blue, 'middle', true))] },
@@ -21,7 +21,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "が・ざ・だ・ば の 4つの ぎょうが にごるよ。", add: [...fresh(bx(44, 30, 52, 52, "か", C.main, FILL.warm, 30),bx(104, 30, 52, 52, "さ", C.main, FILL.warm, 30),bx(164, 30, 52, 52, "た", C.main, FILL.warm, 30),bx(224, 30, 52, 52, "は", C.main, FILL.warm, 30),lb(160, 112, "↓ てんてん", 22, C.blue, 'middle', true),bx(44, 140, 52, 52, "が", C.red, FILL.red, 30),bx(104, 140, 52, 52, "ざ", C.red, FILL.red, 30),bx(164, 140, 52, 52, "だ", C.red, FILL.red, 30),bx(224, 140, 52, 52, "ば", C.red, FILL.red, 30))] },
     { note: "ことばも かわるよ。「さる」と「ざる」。", add: [...fresh(lb(90, 65, "さる", 44, C.ink, 'middle', true),lb(230, 65, "ざる", 44, C.red, 'middle', true),lb(90, 120, "どうぶつ", 20, C.blue, 'middle', true),lb(230, 120, "みずを きる", 20, C.blue, 'middle', true),lb(160, 190, "てんてん ひとつで いみが かわる", 20, C.ink, 'middle', true))] },
     { note: "こたえは「ざる」。さ ＋ てんてん ＝ ざ。", add: [...fresh(lb(160, 55, "さ ＋ てんてん", 30, C.ink, 'middle', true),lb(160, 125, "＝ ざ", 60, C.red, 'middle', true),lb(160, 200, "ざる", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_003_a: show([
     { note: "はぎょうの 字には、もう ひとつ ちがう よみが あるよ。", add: [...fresh(bx(14, 75, 52, 52, "は", C.main, FILL.warm, 30),bx(74, 75, 52, 52, "ひ", C.main, FILL.warm, 30),bx(134, 75, 52, 52, "ふ", C.main, FILL.warm, 30),bx(194, 75, 52, 52, "へ", C.main, FILL.warm, 30),bx(254, 75, 52, 52, "ほ", C.main, FILL.warm, 30),lb(160, 165, "は ぎょう", 24, C.blue, 'middle', true))] },
     { note: "てんてんを つけると「ば・び・ぶ・べ・ぼ」。", add: [...fresh(bx(24, 30, 48, 48, "は", C.main, FILL.warm, 28),bx(80, 30, 48, 48, "ひ", C.main, FILL.warm, 28),bx(136, 30, 48, 48, "ふ", C.main, FILL.warm, 28),bx(192, 30, 48, 48, "へ", C.main, FILL.warm, 28),bx(248, 30, 48, 48, "ほ", C.main, FILL.warm, 28),lb(160, 106, "＋ てんてん", 22, C.blue, 'middle', true),bx(24, 130, 48, 48, "ば", C.blue, FILL.blue, 28),bx(80, 130, 48, 48, "び", C.blue, FILL.blue, 28),bx(136, 130, 48, 48, "ぶ", C.blue, FILL.blue, 28),bx(192, 130, 48, 48, "べ", C.blue, FILL.blue, 28),bx(248, 130, 48, 48, "ぼ", C.blue, FILL.blue, 28))] },
@@ -30,7 +30,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "は・ば・ぱ で ことばが かわるよ。", add: [...fresh(lb(160, 50, "はん", 36, C.ink, 'middle', true),lb(160, 110, "ばん", 36, C.blue, 'middle', true),lb(160, 170, "ぱん", 36, C.red, 'middle', true),lb(160, 212, "どれも ちがう ことば", 18, C.ink, 'middle', true))] },
     { note: "むかしは はぎょうの 音が「ぱ」に ちかかった と いわれて いるよ。", add: [...fresh(lb(160, 60, "むかし", 26, C.blue, 'middle', true),lb(160, 110, "はぎょうは「ぱ」に ちかい 音", 22, C.ink, 'middle', true),lb(160, 160, "は・ば・ぱ は なかま", 24, C.red, 'middle', true))] },
     { note: "こたえは「ふ」。ふ ＋ まる ＝ ぷ。", add: [...fresh(lb(160, 55, "ふ ＋ まる", 30, C.ink, 'middle', true),lb(160, 125, "＝ ぷ", 60, C.red, 'middle', true),lb(160, 200, "ぷかぷか", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_004_a: show([
     { note: "「がっこう」を ゆっくり いって みよう。", add: [...fresh(lb(160, 100, "が っ こ う", 50, C.ink, 'middle', true),lb(160, 180, "まん中で いきを とめるよ", 22, C.blue, 'middle', true))] },
     { note: "「が」と「こ」の あいだで いきを つまらせる。", add: [...fresh(bx(36, 70, 56, 56, "が", C.main, FILL.warm, 34),bx(100, 70, 56, 56, "っ", C.red, FILL.red, 18),bx(164, 70, 56, 56, "こ", C.main, FILL.warm, 34),bx(228, 70, 56, 56, "う", C.main, FILL.warm, 34),lb(160, 165, "ちいさい「っ」", 24, C.red, 'middle', true),lb(160, 200, "ここで 音が つまる", 20, C.blue, 'middle', true))] },
@@ -39,7 +39,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "よこかきは、ますの 左がわの 下に 小さく。", add: [...fresh(bx(110, 45, 100, 100, "", C.main, FILL.warm, 20),lb(138, 125, "っ", 36, C.red, 'middle', true),lb(160, 190, "ますの 左下に 小さく", 22, C.ink, 'middle', true))] },
     { note: "小さい「っ」の あとは か・さ・た・ぱ ぎょうが おおいよ。", add: [...fresh(lb(160, 45, "か：がっこう", 26, C.ink, 'middle', true),lb(160, 95, "さ：ざっし", 26, C.ink, 'middle', true),lb(160, 145, "た：ばった", 26, C.ink, 'middle', true),lb(160, 195, "ぱ：いっぱい", 26, C.ink, 'middle', true))] },
     { note: "こたえ：が・っ・こ・う で 4つの 音。", add: [...fresh(bx(36, 70, 56, 56, "が", C.main, FILL.warm, 34),bx(100, 70, 56, 56, "っ", C.red, FILL.red, 18),bx(164, 70, 56, 56, "こ", C.main, FILL.warm, 34),bx(228, 70, 56, 56, "う", C.main, FILL.warm, 34),lb(64, 150, "1", 24, C.red, 'middle', true),lb(128, 150, "2", 24, C.red, 'middle', true),lb(192, 150, "3", 24, C.red, 'middle', true),lb(256, 150, "4", 24, C.red, 'middle', true),lb(160, 200, "4つ", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_005_a: show([
     { note: "き ＋ 小さい「ゃ」で「きゃ」。1つの 音に なるよ。", add: [...fresh(lb(160, 50, "き ＋ ゃ", 40, C.ink, 'middle', true),lb(160, 125, "＝ きゃ", 56, C.red, 'middle', true),lb(160, 195, "1つの 音", 24, C.blue, 'middle', true))] },
     { note: "「ゅ」で「きゅ」、「ょ」で「きょ」。", add: [...fresh(bx(45, 80, 70, 70, "きゃ", C.main, FILL.warm, 30),bx(125, 80, 70, 70, "きゅ", C.main, FILL.warm, 30),bx(205, 80, 70, 70, "きょ", C.main, FILL.warm, 30),lb(160, 180, "小さい ゃ・ゅ・ょ", 22, C.blue, 'middle', true))] },
@@ -48,7 +48,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「おちゃ」は「お」と「ちゃ」で 2つの 音。", add: [...fresh(bx(85, 55, 70, 70, "お", C.main, FILL.warm, 30),bx(165, 55, 70, 70, "ちゃ", C.main, FILL.warm, 30),lb(120, 150, "1", 24, C.red, 'middle', true),lb(200, 150, "2", 24, C.red, 'middle', true),lb(160, 200, "字は 3つ、音は 2つ", 22, C.blue, 'middle', true))] },
     { note: "字の かずと 音の かずは ちがう ことが あるよ。", add: [...fresh(lb(160, 55, "しゅくだい", 40, C.ink, 'middle', true),lb(160, 125, "字は 5つ", 26, C.blue, 'middle', true),lb(160, 175, "音は 4つ", 26, C.red, 'middle', true))] },
     { note: "こたえ：しゅ・く・だ・い で 4つの 音。", add: [...fresh(bx(20, 60, 64, 64, "しゅ", C.main, FILL.warm, 28),bx(92, 60, 64, 64, "く", C.main, FILL.warm, 30),bx(164, 60, 64, 64, "だ", C.main, FILL.warm, 30),bx(236, 60, 64, 64, "い", C.main, FILL.warm, 30),lb(52, 140, "1", 24, C.red, 'middle', true),lb(124, 140, "2", 24, C.red, 'middle', true),lb(196, 140, "3", 24, C.red, 'middle', true),lb(268, 140, "4", 24, C.red, 'middle', true),lb(160, 195, "4つ", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_006_a: show([
     { note: "「おかあさん」を ゆっくり いって みよう。", add: [...fresh(lb(160, 100, "おかーさん", 46, C.ink, 'middle', true),lb(160, 180, "か の あとが のびるね", 22, C.blue, 'middle', true))] },
     { note: "お・か・あ・さ・ん。「あ」が のばす 音だよ。", add: [...fresh(bx(14, 60, 52, 52, "お", C.main, FILL.warm, 28),bx(74, 60, 52, 52, "か", C.main, FILL.warm, 28),bx(134, 60, 52, 52, "あ", C.red, FILL.red, 28),bx(194, 60, 52, 52, "さ", C.main, FILL.warm, 28),bx(254, 60, 52, 52, "ん", C.main, FILL.warm, 28),lb(40, 135, "1", 20, C.ink, 'middle', true),lb(100, 135, "2", 20, C.ink, 'middle', true),lb(160, 135, "3", 20, C.ink, 'middle', true),lb(220, 135, "4", 20, C.ink, 'middle', true),lb(280, 135, "5", 20, C.ink, 'middle', true),lb(160, 190, "5つぶん", 26, C.blue, 'middle', true))] },
@@ -57,7 +57,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "う の だんの 字には「う」を かき たす。", add: [...fresh(lb(160, 55, "く ＋ う ＝ くう", 30, C.ink, 'middle', true),lb(160, 115, "ふ ＋ う ＝ ふう", 30, C.ink, 'middle', true),lb(160, 180, "くうき・ふうせん", 22, C.red, 'middle', true))] },
     { note: "？ なぜ かき たすの？ のばす 音も 1つぶん。", add: [...fresh(lb(160, 45, "なぜ？", 40, C.red, 'middle', true),lb(160, 105, "「か」の おわりの「あ」を", 20, C.ink, 'middle', true),lb(160, 140, "ながく いって いるから", 20, C.ink, 'middle', true),lb(160, 190, "おなじ 音の 字を かく", 22, C.blue, 'middle', true))] },
     { note: "こたえ：「じ」は い の だん。のばす 音は「い」。", add: [...fresh(bx(14, 55, 52, 52, "お", C.main, FILL.warm, 28),bx(74, 55, 52, 52, "じ", C.main, FILL.warm, 28),bx(134, 55, 52, 52, "い", C.red, FILL.red, 28),bx(194, 55, 52, 52, "さ", C.main, FILL.warm, 28),bx(254, 55, 52, 52, "ん", C.main, FILL.warm, 28),lb(160, 150, "じ ＋ い ＝ じい", 28, C.red, 'middle', true),lb(160, 200, "のばす 音は「い」", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_007_a: show([
     { note: "この 文の「は・を」は、どう よむかな？", add: [...fresh(lb(160, 100, "ぼくは ほんを よむ。", 30, C.ink, 'middle', true),lb(160, 170, "「は」と「を」を 見て みよう", 20, C.blue, 'middle', true))] },
     { note: "「は」は「わ」と よむよ。", add: [...fresh(lb(160, 55, "ぼくは", 40, C.ink, 'middle', true),lb(160, 115, "↓", 30, C.blue, 'middle', true),lb(160, 175, "ぼく わ", 40, C.red, 'middle', true))] },
@@ -66,7 +66,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "むかしの かきかたが のこって いるから だよ。", add: [...fresh(lb(160, 50, "むかし：かいた とおりに よむ", 20, C.blue, 'middle', true),lb(160, 110, "いま：音だけ かわった", 20, C.blue, 'middle', true),lb(160, 170, "かきかたは そのまま", 24, C.red, 'middle', true))] },
     { note: "ことばの 中の「は・へ」は ふつうに よむよ。", add: [...fresh(lb(160, 55, "はな → は と よむ", 26, C.ink, 'middle', true),lb(160, 115, "へや → へ と よむ", 26, C.ink, 'middle', true),lb(160, 180, "こんにちは の「は」も「は」", 20, C.red, 'middle', true))] },
     { note: "こたえ：ぼくは えきへ いきました。", add: [...fresh(lb(160, 70, "ぼくは", 36, C.red, 'middle', true),lb(160, 125, "えきへ", 36, C.red, 'middle', true),lb(160, 180, "いきました。", 36, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_008_a: show([
     { note: "「を」は「〜を」の ときだけ つかう 字だよ。", add: [...fresh(lb(160, 55, "ほんを よむ", 30, C.ink, 'middle', true),lb(160, 110, "みずを のむ", 30, C.ink, 'middle', true),lb(160, 175, "「を」は ことばの あと", 22, C.red, 'middle', true))] },
     { note: "ほかの「お」の 音は ぜんぶ「お」。", add: [...fresh(lb(160, 50, "おと", 34, C.ink, 'middle', true),lb(160, 105, "おかし", 34, C.ink, 'middle', true),lb(160, 160, "おもちゃ", 34, C.ink, 'middle', true),lb(160, 210, "ことばの はじまりは「お」", 18, C.blue, 'middle', true))] },
@@ -75,7 +75,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "？ でも「おおきい」は「お」。なぜ かな？", add: [...fresh(lb(160, 55, "おおきい", 44, C.ink, 'middle', true),lb(160, 125, "なぜ「お」なの？", 28, C.red, 'middle', true),lb(160, 180, "わけが あるよ", 24, C.blue, 'middle', true))] },
     { note: "むかしは「ほ」と かいて いた ことばだよ。", add: [...fresh(lb(160, 45, "おほきい → おおきい", 24, C.ink, 'middle', true),lb(160, 100, "とほい → とおい", 24, C.ink, 'middle', true),lb(160, 155, "こほり → こおり", 24, C.ink, 'middle', true),lb(160, 205, "いまは「お」と かく", 22, C.red, 'middle', true))] },
     { note: "「お」で かく 6つ。「こおり」も その 1つ。", add: [...fresh(lb(160, 45, "おおきい・おおい", 26, C.ink, 'middle', true),lb(160, 95, "とおい・とおる", 26, C.ink, 'middle', true),lb(160, 145, "こおり・おおかみ", 26, C.red, 'middle', true),lb(160, 200, "こたえ：こおり", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_009_a: show([
     { note: "ふつうは「ず」と「じ」を つかうよ。", add: [...fresh(lb(160, 50, "みず", 34, C.ink, 'middle', true),lb(160, 100, "ずかん", 34, C.ink, 'middle', true),lb(160, 150, "じかん", 34, C.ink, 'middle', true),lb(160, 205, "ふつうは「ず」「じ」", 22, C.red, 'middle', true))] },
     { note: "「ぢ」と「づ」は とくべつな ときだけ。", add: [...fresh(lb(100, 100, "ぢ", 80, C.red, 'middle', true),lb(220, 100, "づ", 80, C.red, 'middle', true),lb(160, 185, "とくべつな ときだけ", 24, C.blue, 'middle', true))] },
@@ -84,7 +84,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "？ なぜ にごったの？ あとの ことばが にごるよ。", add: [...fresh(lb(160, 55, "なぜ？", 44, C.red, 'middle', true),lb(160, 115, "くっつくと", 24, C.ink, 'middle', true),lb(160, 150, "あとの ことばの はじめが", 22, C.ink, 'middle', true),lb(160, 190, "にごる ことが ある", 22, C.blue, 'middle', true))] },
     { note: "みかづき・こづつみも おなじ きまりだよ。", add: [...fresh(lb(160, 55, "みか ＋ つき ＝ みかづき", 22, C.ink, 'middle', true),lb(160, 115, "こ ＋ つつみ ＝ こづつみ", 22, C.ink, 'middle', true),lb(160, 180, "もとの 字を のこす", 22, C.red, 'middle', true))] },
     { note: "こたえ：「はな」と「ち」だから「ぢ」。", add: [...fresh(lb(160, 55, "はな ＋ ち", 34, C.ink, 'middle', true),lb(160, 125, "＝ はなぢ", 50, C.red, 'middle', true),lb(160, 195, "「ち」が にごって「ぢ」", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_010_a: show([
     { note: "ことばを 音に わけて 手を たたこう。「きゅうり」。", add: [...fresh(lb(160, 90, "きゅうり", 50, C.ink, 'middle', true),lb(160, 170, "手を たたく：パン パン パン", 22, C.blue, 'middle', true))] },
     { note: "「きゅ・う・り」。3かい たたいたね。", add: [...fresh(bx(54, 55, 64, 64, "きゅ", C.main, FILL.warm, 28),bx(128, 55, 64, 64, "う", C.main, FILL.warm, 30),bx(202, 55, 64, 64, "り", C.main, FILL.warm, 30),lb(86, 135, "1", 24, C.red, 'middle', true),lb(160, 135, "2", 24, C.red, 'middle', true),lb(234, 135, "3", 24, C.red, 'middle', true),lb(160, 190, "3つの 音", 28, C.blue, 'middle', true))] },
@@ -94,7 +94,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "しりとり：おわりの 音が つぎの はじめの 音。", add: [...fresh(lb(160, 40, "いちご → ごりら", 28, C.ink, 'middle', true),lb(160, 90, "ごりら → らっぱ", 28, C.ink, 'middle', true),lb(160, 140, "らっぱ → ぱんだ", 28, C.ink, 'middle', true),lb(160, 195, "つなぎ目の 音が おなじ", 20, C.blue, 'middle', true))] },
     { note: "「ん」で おわったら まけ。「ん」で はじまる ことばは ない。", add: [...fresh(lb(160, 55, "ぱんだ → だいこん", 28, C.ink, 'middle', true),lb(160, 115, "「ん」で おわった！", 26, C.red, 'middle', true),lb(160, 175, "つづけられない", 24, C.blue, 'middle', true))] },
     { note: "こたえ：きゅうりは 3つの 音。", add: [...fresh(bx(54, 55, 64, 64, "きゅ", C.red, FILL.red, 28),bx(128, 55, 64, 64, "う", C.main, FILL.warm, 30),bx(202, 55, 64, 64, "り", C.main, FILL.warm, 30),lb(86, 135, "1", 24, C.red, 'middle', true),lb(160, 135, "2", 24, C.red, 'middle', true),lb(234, 135, "3", 24, C.red, 'middle', true),lb(160, 190, "3つ", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_011_a: show([
     { note: "カタカナも ぜんぶで 46字。ひらがなと おなじ 音だよ。", add: [...fresh(lb(100, 70, "あ", 60, C.ink, 'middle', true),lb(160, 70, "＝", 36, C.blue, 'middle', true),lb(220, 70, "ア", 60, C.red, 'middle', true),lb(160, 160, "おなじ 音、ちがう かたち", 24, C.blue, 'middle', true))] },
     { note: "ア・イ・ウ・エ・オ。ひらがなと おなじ 音だよ。", add: [...fresh(bx(34, 35, 44, 44, "あ", C.main, FILL.warm, 26),bx(86, 35, 44, 44, "い", C.main, FILL.warm, 26),bx(138, 35, 44, 44, "う", C.main, FILL.warm, 26),bx(190, 35, 44, 44, "え", C.main, FILL.warm, 26),bx(242, 35, 44, 44, "お", C.main, FILL.warm, 26),lb(160, 108, "↓ おなじ 音", 20, C.blue, 'middle', true),bx(34, 130, 44, 44, "ア", C.red, FILL.red, 26),bx(86, 130, 44, 44, "イ", C.red, FILL.red, 26),bx(138, 130, 44, 44, "ウ", C.red, FILL.red, 26),bx(190, 130, 44, 44, "エ", C.red, FILL.red, 26),bx(242, 130, 44, 44, "オ", C.red, FILL.red, 26))] },
@@ -103,7 +103,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "どちらも かんじから できた。くずしかたが ちがう。", add: [...fresh(lb(160, 50, "ひらがな：かんじを まるく くずす", 18, C.blue, 'middle', true),lb(160, 110, "カタカナ：かんじの 一ぶを とる", 18, C.red, 'middle', true),lb(160, 175, "だから カタカナは かどばる", 22, C.ink, 'middle', true))] },
     { note: "かたちが ちがうだけ。音は おなじ。い→イ、ぬ→ヌ。", add: [...fresh(lb(160, 55, "い → イ", 36, C.ink, 'middle', true),lb(160, 115, "ぬ → ヌ", 36, C.ink, 'middle', true),lb(160, 185, "音は 1つずつ おなじ", 24, C.blue, 'middle', true))] },
     { note: "こたえ：「いぬ」は「イヌ」。", add: [...fresh(bx(99, 40, 56, 56, "い", C.main, FILL.warm, 32),bx(165, 40, 56, 56, "ぬ", C.main, FILL.warm, 32),lb(160, 150, "↓ カタカナに", 22, C.blue, 'middle', true),lb(160, 200, "イヌ", 44, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_012_a: show([
     { note: "にている 字が あるよ。シ と ツ。", add: [...fresh(lb(100, 100, "シ", 90, C.ink, 'middle', true),lb(220, 100, "ツ", 90, C.red, 'middle', true),lb(160, 195, "どこが ちがう？", 24, C.blue, 'middle', true))] },
     { note: "さいごの ながい せんの むきを 見よう。", add: [...fresh(lb(160, 55, "シ：下から 上へ はらう", 24, C.blue, 'middle', true),lb(160, 125, "ツ：上から 下へ はらう", 24, C.red, 'middle', true),lb(160, 190, "むきが ぎゃく", 26, C.ink, 'middle', true))] },
@@ -112,7 +112,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ウ と ワ。ウには 上に てんが あるよ。", add: [...fresh(lb(100, 95, "ウ", 80, C.red, 'middle', true),lb(220, 95, "ワ", 80, C.blue, 'middle', true),lb(100, 170, "うえに てん", 22, C.red, 'middle', true),lb(220, 170, "てん なし", 22, C.blue, 'middle', true))] },
     { note: "ク と タ。タは クに てんが ひとつ ふえた かたち。", add: [...fresh(lb(100, 95, "ク", 80, C.ink, 'middle', true),lb(160, 95, "→", 36, C.blue, 'middle', true),lb(220, 95, "タ", 80, C.red, 'middle', true),lb(160, 180, "中に てんが ひとつ", 24, C.blue, 'middle', true))] },
     { note: "こたえ：「ツクシ」の ツ は 上から 下、シ は 下から 上。", add: [...fresh(lb(160, 55, "ツ ク シ", 56, C.ink, 'middle', true),lb(160, 125, "1ばんめ ツ：上から 下", 22, C.red, 'middle', true),lb(160, 175, "3ばんめ シ：下から 上", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_013_a: show([
     { note: "「コーヒー」を ゆっくり いって みよう。", add: [...fresh(lb(160, 100, "こーひー", 50, C.ink, 'middle', true),lb(160, 180, "のびる ところが ふたつ", 22, C.blue, 'middle', true))] },
     { note: "コ・ー・ヒ・ー。「ー」で 音を のばす。", add: [...fresh(bx(33, 60, 56, 56, "コ", C.main, FILL.warm, 30),bx(99, 60, 56, 56, "ー", C.red, FILL.red, 30),bx(165, 60, 56, 56, "ヒ", C.main, FILL.warm, 30),bx(231, 60, 56, 56, "ー", C.red, FILL.red, 30),lb(61, 135, "1", 20, C.ink, 'middle', true),lb(127, 135, "2", 20, C.ink, 'middle', true),lb(193, 135, "3", 20, C.ink, 'middle', true),lb(259, 135, "4", 20, C.ink, 'middle', true),lb(160, 190, "4つぶん", 26, C.blue, 'middle', true))] },
@@ -121,7 +121,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "よこかきは よこぼう。たてかきは たてぼう。", add: [...fresh(lb(160, 60, "よこかき：ケーキ", 28, C.ink, 'middle', true),lb(160, 130, "たてかきは たてに かく", 24, C.blue, 'middle', true),lb(160, 190, "ぼうの むきが かわる", 22, C.ink, 'middle', true))] },
     { note: "ほかにも あるよ。ノート・スーパー・カレー。", add: [...fresh(lb(160, 55, "ノート", 34, C.ink, 'middle', true),lb(160, 110, "スーパー", 34, C.ink, 'middle', true),lb(160, 165, "カレー", 34, C.ink, 'middle', true),lb(160, 215, "「ー」も 1つぶん", 20, C.red, 'middle', true))] },
     { note: "こたえ：「ー」は 2つ。コの お と ヒの い を のばす。", add: [...fresh(lb(160, 50, "コー ヒー", 44, C.ink, 'middle', true),lb(160, 120, "コー ＝ お を のばす", 22, C.red, 'middle', true),lb(160, 170, "ヒー ＝ い を のばす", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_014_a: show([
     { note: "「キャベツ」を ゆっくり いって みよう。", add: [...fresh(lb(160, 100, "キャベツ", 50, C.ink, 'middle', true),lb(160, 180, "いくつの 音 かな？", 24, C.blue, 'middle', true))] },
     { note: "キャ・ベ・ツ。3かい たたいたね。", add: [...fresh(bx(54, 55, 64, 64, "キャ", C.main, FILL.warm, 28),bx(128, 55, 64, 64, "ベ", C.main, FILL.warm, 30),bx(202, 55, 64, 64, "ツ", C.main, FILL.warm, 30),lb(86, 135, "1", 24, C.red, 'middle', true),lb(160, 135, "2", 24, C.red, 'middle', true),lb(234, 135, "3", 24, C.red, 'middle', true),lb(160, 190, "3つの 音", 28, C.blue, 'middle', true))] },
@@ -130,7 +130,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "小さい「ッ」は つまる 音。ロケット：ロ・ケ・ッ・ト。", add: [...fresh(lb(160, 55, "ロ・ケ・ッ・ト", 34, C.ink, 'middle', true),lb(160, 115, "4つの 音", 28, C.red, 'middle', true),lb(160, 175, "「ッ」も 1つぶん", 22, C.blue, 'middle', true))] },
     { note: "ひらがなと おなじ きまり。ジュース＝ジュ・ー・ス。", add: [...fresh(lb(160, 55, "ジュース", 40, C.ink, 'middle', true),lb(160, 115, "ジュ・ー・ス", 30, C.blue, 'middle', true),lb(160, 175, "3つの 音", 28, C.red, 'middle', true))] },
     { note: "こたえ：字は 4つ、音は 3つ。", add: [...fresh(lb(160, 55, "キャベツ", 44, C.ink, 'middle', true),lb(160, 125, "字は 4つ", 30, C.blue, 'middle', true),lb(160, 180, "音は 3つ", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_015_a: show([
     { note: "パン・テレビ・コップ。どれも がいこくから きた ことば。", add: [...fresh(lb(160, 55, "パン", 36, C.ink, 'middle', true),lb(160, 110, "テレビ", 36, C.ink, 'middle', true),lb(160, 165, "コップ", 36, C.ink, 'middle', true),lb(160, 210, "がいらいご", 22, C.red, 'middle', true))] },
     { note: "もとの くにを 見て みよう。", add: [...fresh(lb(160, 40, "パン ← ポルトガル", 24, C.ink, 'middle', true),lb(160, 90, "ピアノ ← イタリア", 24, C.ink, 'middle', true),lb(160, 140, "テレビ ← えいご", 24, C.ink, 'middle', true),lb(160, 190, "ランドセル ← オランダ", 24, C.ink, 'middle', true))] },
@@ -139,7 +139,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "日本の もとからの ことばと ひとめで 見わけられるよ。", add: [...fresh(lb(160, 55, "いぬ・つくえ → ひらがな", 22, C.ink, 'middle', true),lb(160, 115, "パン・ランドセル → カタカナ", 20, C.red, 'middle', true),lb(160, 180, "ひとめで わかる", 24, C.blue, 'middle', true))] },
     { note: "ひらがなと カタカナに わけて みよう。", add: [...fresh(lb(160, 50, "いぬ  パン", 30, C.ink, 'middle', true),lb(160, 105, "つくえ  ランドセル", 30, C.ink, 'middle', true),lb(160, 170, "どれが がいらいご？", 24, C.blue, 'middle', true))] },
     { note: "こたえ：パン と ランドセル が カタカナ。", add: [...fresh(lb(160, 60, "パン", 44, C.red, 'middle', true),lb(160, 125, "ランドセル", 44, C.red, 'middle', true),lb(160, 195, "どちらも がいらいご", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_016_a: show([
     { note: "どうぶつの なまえは カタカナで かく ことが おおいよ。", add: [...fresh(lb(160, 55, "ライオン", 36, C.ink, 'middle', true),lb(160, 110, "キリン", 36, C.ink, 'middle', true),lb(160, 165, "ゾウ", 36, C.ink, 'middle', true),lb(160, 210, "どうぶつ", 22, C.red, 'middle', true))] },
     { note: "たべものの なまえも。ハンバーグ・カレー・サラダ。", add: [...fresh(lb(160, 55, "ハンバーグ", 34, C.ink, 'middle', true),lb(160, 110, "カレー", 34, C.ink, 'middle', true),lb(160, 165, "サラダ", 34, C.ink, 'middle', true),lb(160, 210, "たべもの", 22, C.red, 'middle', true))] },
@@ -148,7 +148,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "がいこくから きた たべものは がいらいご。カタカナ。", add: [...fresh(lb(160, 60, "ハンバーグ", 36, C.red, 'middle', true),lb(160, 125, "がいこくから きた", 24, C.ink, 'middle', true),lb(160, 175, "→ カタカナ", 26, C.blue, 'middle', true))] },
     { note: "日本の たべものは ひらがなが おおいよ。", add: [...fresh(lb(160, 60, "おにぎり", 36, C.ink, 'middle', true),lb(160, 120, "みそしる", 36, C.ink, 'middle', true),lb(160, 185, "日本の たべもの → ひらがな", 22, C.blue, 'middle', true))] },
     { note: "こたえ：ぱ→パ、ん→ン、だ→ダ で「パンダ」。", add: [...fresh(lb(160, 50, "ぱ → パ", 28, C.ink, 'middle', true),lb(160, 95, "ん → ン", 28, C.ink, 'middle', true),lb(160, 140, "だ → ダ", 28, C.ink, 'middle', true),lb(160, 200, "パンダ", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_017_a: show([
     { note: "音を あらわす ことば。いぬは「ワンワン」。", add: [...fresh(lb(160, 70, "いぬ", 30, C.blue, 'middle', true),lb(160, 140, "ワンワン", 50, C.red, 'middle', true))] },
     { note: "あめが ふる 音は「ザーザー」。", add: [...fresh(lb(160, 70, "あめ", 30, C.blue, 'middle', true),lb(160, 140, "ザーザー", 50, C.red, 'middle', true))] },
@@ -157,7 +157,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ようすの ことば（ふわふわ・ぴかぴか）は ひらがなが おおいよ。", add: [...fresh(lb(160, 60, "ふわふわ", 34, C.ink, 'middle', true),lb(160, 115, "ぴかぴか", 34, C.ink, 'middle', true),lb(160, 180, "音では なく ようす", 24, C.blue, 'middle', true))] },
     { note: "音か ようすか。「耳で きこえる？」と きいて みよう。", add: [...fresh(lb(160, 60, "ワンワン → きこえる", 24, C.red, 'middle', true),lb(160, 120, "ふわふわ → きこえない", 24, C.blue, 'middle', true),lb(160, 180, "きこえる ＝ 音の ことば", 22, C.ink, 'middle', true))] },
     { note: "こたえ：でんしゃが はしる 音は ガタンゴトン。", add: [...fresh(lb(160, 70, "でんしゃ", 30, C.blue, 'middle', true),lb(160, 140, "ガタンゴトン", 44, C.red, 'middle', true),lb(160, 200, "カタカナで かく", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_018_a: show([
     { note: "がいこくの くにの 名まえ。アメリカ・イギリス・フランス。", add: [...fresh(lb(160, 55, "アメリカ", 34, C.ink, 'middle', true),lb(160, 110, "イギリス", 34, C.ink, 'middle', true),lb(160, 165, "フランス", 34, C.ink, 'middle', true),lb(160, 210, "くにの 名まえ", 22, C.red, 'middle', true))] },
     { note: "ほかにも ブラジル・カナダ・イタリア。", add: [...fresh(lb(160, 55, "ブラジル", 34, C.ink, 'middle', true),lb(160, 110, "カナダ", 34, C.ink, 'middle', true),lb(160, 165, "イタリア", 34, C.ink, 'middle', true))] },
@@ -166,7 +166,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "日本の 名まえは ひらがな・かんじだよ。", add: [...fresh(lb(160, 55, "にほん", 34, C.ink, 'middle', true),lb(160, 110, "とうきょう", 34, C.ink, 'middle', true),lb(160, 165, "たろう", 34, C.ink, 'middle', true),lb(160, 210, "カタカナ では ない", 22, C.blue, 'middle', true))] },
     { note: "「いたりあ」を カタカナに。い→イ た→タ り→リ あ→ア。", add: [...fresh(lb(160, 55, "い た り あ", 36, C.ink, 'middle', true),lb(160, 110, "↓", 28, C.blue, 'middle', true),lb(160, 170, "イ タ リ ア", 36, C.red, 'middle', true))] },
     { note: "こたえ：「イタリア」。", add: [...fresh(lb(160, 70, "いたりあ", 34, C.ink, 'middle', true),lb(160, 130, "＝ イタリア", 50, C.red, 'middle', true),lb(160, 195, "がいこくの くにの 名まえ", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_019_a: show([
     { note: "ひらがなと カタカナには つかいわけが あるよ。", add: [...fresh(lb(100, 100, "ひらがな", 30, C.blue, 'middle', true),lb(220, 100, "カタカナ", 30, C.red, 'middle', true),lb(160, 180, "どっちを つかう？", 24, C.ink, 'middle', true))] },
     { note: "ふつうの ことばは ひらがな。", add: [...fresh(lb(160, 55, "いぬ", 34, C.ink, 'middle', true),lb(160, 110, "はしる", 34, C.ink, 'middle', true),lb(160, 165, "おおきい", 34, C.ink, 'middle', true),lb(160, 210, "日本の ことば → ひらがな", 20, C.blue, 'middle', true))] },
@@ -175,7 +175,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "がいこくの くにや 人の 名まえも カタカナ。", add: [...fresh(lb(160, 60, "アメリカ", 34, C.ink, 'middle', true),lb(160, 120, "ジョン", 34, C.ink, 'middle', true),lb(160, 185, "がいこくの 名まえ", 22, C.red, 'middle', true))] },
     { note: "？ なぜ つかいわけるの？ ひとめで わかるから。", add: [...fresh(lb(160, 55, "なぜ？", 44, C.red, 'middle', true),lb(160, 125, "カタカナが 目に とまる", 24, C.ink, 'middle', true),lb(160, 175, "よむ ヒントに なる", 24, C.blue, 'middle', true))] },
     { note: "こたえ：ぼくは パンダを みて、ケーキを たべた。", add: [...fresh(lb(160, 70, "ぼくは パンダを みて、", 24, C.ink, 'middle', true),lb(160, 125, "ケーキを たべた。", 24, C.ink, 'middle', true),lb(160, 190, "カタカナは 2つ", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_020_a: show([
     { note: "ロボットは カタカナで はなす ことが おおいよ。", add: [...fresh(lb(160, 70, "ロボット", 44, C.blue, 'middle', true),lb(160, 150, "ワタシ ハ ロボット デス", 22, C.red, 'middle', true))] },
     { note: "「ワタシ ハ ロボット デス。」を よんで みよう。", add: [...fresh(lb(160, 100, "ワタシ ハ ロボット デス。", 24, C.ink, 'middle', true),lb(160, 170, "ぜんぶ カタカナ", 24, C.blue, 'middle', true))] },
@@ -184,7 +184,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「ハ」は「わ」と よむ。「ヲ」は「お」と よむよ。", add: [...fresh(lb(160, 55, "ハ → わ", 36, C.red, 'middle', true),lb(160, 115, "ヲ → お", 36, C.red, 'middle', true),lb(160, 180, "ひらがなの は・を と おなじ", 20, C.blue, 'middle', true))] },
     { note: "ふつうの 文では、がいらいごだけ カタカナ。", add: [...fresh(lb(160, 55, "ワタシ → わたし", 28, C.ink, 'middle', true),lb(160, 110, "ハ → は   デス → です", 26, C.ink, 'middle', true),lb(160, 170, "ロボット は カタカナ", 28, C.red, 'middle', true))] },
     { note: "こたえ：わたしは ロボットです。", add: [...fresh(lb(160, 70, "わたしは", 34, C.ink, 'middle', true),lb(160, 125, "ロボットです。", 34, C.red, 'middle', true),lb(160, 190, "カタカナは ロボットだけ", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_021_a: show([
     { note: "かん字は ずっと むかしの 中国（ちゅうごく）で うまれた。絵（え）から できたよ。", add: [...fresh(lb(160, 70, "かん字は", 28, C.ink, 'middle', true),lb(160, 115, "ものの かたちから できた", 24, C.red, 'middle', true),lb(160, 170, "え → じ", 36, C.blue, 'middle', true))] },
     { note: "「日」は まるい お日さまの かたち。", add: [...fresh(ci(88, 100, 38, undefined, C.main, FILL.yellow),ci(88, 100, 7, undefined, C.red, FILL.red),lb(168, 100, "→", 32, C.ink, 'middle', true),lb(245, 100, "日", 80, C.red, 'middle', true),lb(160, 207, "お日さまの かたち → 日", 19, C.ink, 'middle', true))] },
@@ -197,7 +197,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ 絵（え）は かくのに じかんが かかる。だから 字に なった。", add: [...fresh(lb(160, 50, "なぜ？", 28, C.red, 'middle', true),lb(160, 100, "絵は かくのに じかんが かかる", 19, C.ink, 'middle', true),lb(160, 140, "はやく かいて だれにも わかる ように", 16, C.ink, 'middle', true),lb(160, 190, "かんたんな せんの かたちに", 20, C.blue, 'middle', true))] },
     { note: "もんだい。「山」は なにの かたち？", add: [...fresh(lb(160, 100, "山", 96, C.red, 'middle', true),lb(160, 205, "なにの かたちから できたかな？", 19, C.ink, 'middle', true))] },
     { note: "こたえ：山の みねが ならんだ かたち。", add: [...fresh(pg([[8, 145], [34, 103], [50, 119], [66, 55], [82, 119], [98, 103], [124, 145]], C.main, FILL.green),lb(146, 95, "＝", 28, C.ink, 'middle', true),lb(235, 95, "山", 80, C.red, 'middle', true),lb(160, 190, "山の みねが ならんだ かたち", 21, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_022_a: show([
     { note: "「山」は 2とおりに よめる。やま？ サン？", add: [...fresh(lb(160, 75, "山", 90, C.red, 'middle', true),lb(160, 185, "やま ？　サン ？", 30, C.ink, 'middle', true))] },
     { note: "おんよみは 中国（ちゅうごく）の 音、くんよみは 日本の ことば。", add: [...fresh(bx(20, 40, 130, 90, "おんよみ\nサン", C.blue, FILL.blue, 26),bx(170, 40, 130, 90, "くんよみ\nやま", C.main, FILL.warm, 26),lb(85, 165, "ちゅうごくの 音に\nにた よみ", 15, C.blue, 'middle', true),lb(235, 165, "日本の ことばの\nよみ", 15, C.main, 'middle', true))] },
@@ -207,7 +207,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "みわけかた：ふたつ ならぶ ことばは おんよみ、おくりがなが つくと くんよみ。", add: [...fresh(lb(160, 40, "みわけの コツ", 22, C.red, 'middle', true),lb(160, 88, "ふたつ ならぶ ことば → おんよみが おおい", 14, C.ink, 'middle', true),lb(160, 122, "火山（かざん）　水中（すいちゅう）", 17, C.blue, 'middle', true),lb(160, 162, "1字＋おくりがな → くんよみが おおい", 16, C.ink, 'middle', true),lb(160, 196, "高い（たかい）　走る（はしる）", 17, C.main, 'middle', true))] },
     { note: "もんだい。「火山」は なんと よむ？", add: [...fresh(lb(160, 80, "「火山」は", 30, C.ink, 'middle', true),lb(160, 135, "なんと よむ？", 30, C.ink, 'middle', true))] },
     { note: "こたえ：火（カ）と 山（サン）で、にごって かざん。", add: [...fresh(lb(160, 50, "火（カ）＋ 山（サン）", 24, C.ink, 'middle', true),lb(160, 100, "サンが ザンに にごる", 22, C.ink, 'middle', true),lb(160, 170, "かざん", 50, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_023_a: show([
     { note: "画数（かくすう）は せんの かず。はなさず かく せんが 1かく。", add: [...fresh(lb(160, 60, "画数（かくすう）＝ せんの かず", 19, C.ink, 'middle', true),lb(160, 115, "えんぴつを はなさずに", 22, C.ink, 'middle', true),lb(160, 165, "ひとつづきで かく せん ＝ 1かく", 19, C.red, 'middle', true))] },
     { note: "「口」の 1かくめは たて。", add: [...fresh(ln(110, 50, 110, 150, C.blue, false, 6),lb(92, 100, "1", 22, C.blue, 'middle', true))] },
@@ -218,7 +218,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "木は 4かく。林は 8かく。森は 12かく。たしざんで わかる。", add: [...fresh(lb(160, 42, "木は 4かく", 24, C.main, 'middle', true),lb(160, 88, "林＝木＋木", 24, C.blue, 'middle', true),lb(160, 118, "4＋4＝8かく", 24, C.blue, 'middle', true),lb(160, 160, "森＝木＋木＋木", 24, C.green, 'middle', true),lb(160, 190, "4＋4＋4＝12かく", 24, C.red, 'middle', true))] },
     { note: "もんだい。「校」は なんかく？", add: [...fresh(lb(160, 90, "校", 90, C.red, 'middle', true),lb(160, 185, "左は 木（4かく）　右は 交（6かく）", 17, C.ink, 'middle', true),lb(160, 215, "あわせて いくつ？", 20, C.ink, 'middle', true))] },
     { note: "こたえ：4＋6＝10。「校」は 10かく。", add: [...fresh(lb(80, 80, "校", 80, C.red, 'middle', true),lb(235, 60, "木 4", 28, C.main, 'middle', true),lb(235, 100, "＋ 交 6", 28, C.blue, 'middle', true),lb(160, 178, "4＋6＝10", 28, C.ink, 'middle', true),lb(160, 222, "10かく", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_024_a: show([
     { note: "きまり① 上から 下へ。「三」の 1かくめは 上の よこ。", add: [...fresh(ln(110, 70, 210, 70, C.blue, false, 6),lb(92, 70, "1", 22, C.blue, 'middle', true),lb(160, 200, "上から 下へ", 24, C.red, 'middle', true))] },
     { note: "2かくめは まんなかの よこ。", add: [ln(110, 110, 210, 110, C.red, false, 6), lb(92, 110, "2", 22, C.red, 'middle', true)] },
@@ -227,7 +227,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "きまり② 左から 右へ。「林」は 左の 木 → 右の 木。", add: [...fresh(bx(30, 60, 100, 100, "木", C.blue, FILL.blue, 60),bx(190, 60, 100, 100, "木", C.red, FILL.red, 60),lb(80, 42, "1", 22, C.blue, 'middle', true),lb(240, 42, "2", 22, C.red, 'middle', true),lb(160, 200, "林は 左から 右へ", 22, C.ink, 'middle', true))] },
     { note: "もんだい。「川」の 3本を、かく じゅんに ならべよう。", add: [...fresh(ln(110, 60, 106, 150, C.main, false, 6),ln(160, 60, 160, 150, C.main, false, 6),ln(210, 60, 214, 150, C.main, false, 6),lb(160, 200, "どれから かく？", 24, C.ink, 'middle', true))] },
     { note: "こたえ：左 → まんなか → 右。", add: [...fresh(ln(110, 60, 106, 150, C.blue, false, 6),ln(160, 60, 160, 150, C.red, false, 6),ln(210, 60, 214, 150, C.green, false, 6),lb(106, 42, "1", 22, C.blue, 'middle', true),lb(160, 42, "2", 22, C.red, 'middle', true),lb(214, 42, "3", 22, C.green, 'middle', true),lb(160, 190, "左 → まんなか → 右", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_025_a: show([
     { note: "ぶしゅ ＝ かん字の なかまの しるし。", add: [...fresh(lb(160, 70, "ぶしゅ", 40, C.red, 'middle', true),lb(160, 130, "＝ かん字の なかまの しるし", 21, C.ink, 'middle', true),lb(160, 185, "へん（左）　かんむり（上）", 22, C.blue, 'middle', true))] },
     { note: "海（うみ）・池（いけ）は 左がわが さんずい。", add: [...fresh(lb(95, 70, "海", 56, C.main, 'middle', true),lb(225, 70, "池", 56, C.main, 'middle', true),lb(160, 150, "左がわの しるしは おなじ", 18, C.ink, 'middle', true),lb(160, 190, "さんずい（水）", 26, C.red, 'middle', true))] },
@@ -239,7 +239,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "答（こた）え・算（さん）は 上が たけかんむり。", add: [...fresh(lb(95, 70, "答", 56, C.main, 'middle', true),lb(225, 70, "算", 56, C.main, 'middle', true),lb(160, 150, "上の しるしは おなじ", 18, C.ink, 'middle', true),lb(160, 190, "たけかんむり（竹）", 26, C.red, 'middle', true))] },
     { note: "もんだい。「海」と「池」の おなじ ぶしゅは？", add: [...fresh(lb(95, 85, "海", 70, C.main, 'middle', true),lb(225, 85, "池", 70, C.main, 'middle', true),lb(160, 185, "どんな ぶしゅが ある？", 24, C.ink, 'middle', true))] },
     { note: "こたえ：さんずい。水に かんけいの ある ぶしゅ。", add: [...fresh(lb(95, 70, "海", 56, C.main, 'middle', true),lb(225, 70, "池", 56, C.main, 'middle', true),lb(160, 150, "水に かんけいの ある ぶしゅ", 20, C.ink, 'middle', true),lb(160, 190, "さんずい", 34, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_026_a: show([
     { note: "おなじ よみで ちがう かん字が ある。", add: [...fresh(lb(160, 70, "おなじ よみ", 30, C.ink, 'middle', true),lb(160, 120, "ちがう かん字", 30, C.ink, 'middle', true),lb(160, 180, "ひ ＝ 日？ 火？", 32, C.red, 'middle', true))] },
     { note: "「ひ」と よむ 字は 日と 火。", add: [...fresh(bx(20, 40, 130, 110, "日\nお日さま", C.red, FILL.red, 26),bx(170, 40, 130, 110, "火\nもえる ひ", C.blue, FILL.blue, 26),lb(160, 195, "ひ と よむ かん字は 2つ", 19, C.ink, 'middle', true))] },
@@ -250,7 +250,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ にほんごは 音の かずが すくない。", add: [...fresh(lb(160, 50, "なぜ？ おなじ よみが おおい", 21, C.red, 'middle', true),lb(160, 100, "にほんごは 音の かずが すくない", 19, C.ink, 'middle', true),lb(160, 145, "だから おなじ 音の ことばが ふえる", 17, C.ink, 'middle', true),lb(160, 195, "かん字で 目で わけられる", 19, C.blue, 'middle', true))] },
     { note: "もんだい。「□を つけて あるこう」の □は 木？ 気？", add: [...fresh(lb(160, 70, "「□を つけて あるこう」", 24, C.ink, 'middle', true),lb(160, 125, "ちゅうい する いみ", 22, C.ink, 'middle', true),lb(160, 180, "木 ？　気 ？", 32, C.red, 'middle', true))] },
     { note: "こたえ：気。「気を つけて あるこう」。", add: [...fresh(lb(160, 70, "「気を つけて あるこう」", 24, C.red, 'middle', true),lb(160, 130, "こたえ：気（き）", 30, C.red, 'middle', true),lb(160, 185, "木では いみが とおらない", 19, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_027_a: show([
     { note: "かん字の あとの ひらがなが おくりがな。書（か）く の「く」。", add: [...fresh(lb(160, 60, "かん字の あとの ひらがな", 22, C.ink, 'middle', true),lb(160, 110, "＝ おくりがな", 30, C.red, 'middle', true),lb(160, 165, "書く の「く」", 28, C.ink, 'middle', true))] },
     { note: "「書（か）く」は「か」＋ おくりがな「く」。", add: [...fresh(bx(80, 50, 70, 70, "書", C.red, FILL.red, 44),bx(170, 50, 70, 70, "く", C.blue, FILL.blue, 44),lb(115, 150, "かん字\n「か」", 16, C.red, 'middle', true),lb(205, 150, "おくりがな\n「く」", 16, C.blue, 'middle', true),lb(160, 208, "書く ＝ か ＋ く", 24, C.ink, 'middle', true))] },
@@ -260,7 +260,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ おくりがなが よみを きめて くれる。", add: [...fresh(lb(160, 60, "なぜ おくりがな？", 24, C.red, 'middle', true),lb(160, 115, "「生」だけだと よみが きまらない", 18, C.ink, 'middle', true),lb(160, 165, "おくりがなが よみを きめる", 20, C.blue, 'middle', true))] },
     { note: "もんだい。「おしえる」を かん字と おくりがなで かこう。", add: [...fresh(lb(160, 80, "「おしえる」を", 28, C.ink, 'middle', true),lb(160, 135, "かん字と おくりがなで", 24, C.ink, 'middle', true),lb(160, 180, "かこう", 24, C.ink, 'middle', true))] },
     { note: "こたえ：教（おし）える。「おし」＋ おくりがな「える」。", add: [...fresh(bx(70, 50, 80, 80, "教", C.red, FILL.red, 46),bx(170, 50, 90, 80, "える", C.blue, FILL.blue, 36),lb(160, 170, "教える ＝ おし ＋ える", 24, C.ink, 'middle', true),lb(160, 210, "教える", 34, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_028_a: show([
     { note: "かん字＋かん字＝じゅくご。森林（しんりん）は 森＋林。", add: [...fresh(lb(160, 60, "かん字 ＋ かん字", 28, C.ink, 'middle', true),lb(160, 110, "＝ じゅくご（ことば）", 28, C.red, 'middle', true),lb(160, 170, "森 ＋ 林 ＝ 森林", 32, C.ink, 'middle', true))] },
     { note: "はんたいの いみ：上と 下で「じょうげ」。", add: [...fresh(bx(20, 40, 100, 70, "上\nうえ", C.red, FILL.red, 24),lb(160, 75, "⇔", 28, C.ink, 'middle', true),bx(200, 40, 100, 70, "下\nした", C.blue, FILL.blue, 24),lb(160, 155, "上下（じょうげ）", 28, C.ink, 'middle', true),lb(160, 200, "はんたいの いみの かん字", 19, C.main, 'middle', true))] },
@@ -271,7 +271,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "くわしく する：大きな 木で「大木（たいぼく）」。", add: [...fresh(bx(20, 40, 100, 70, "大\n大きい", C.red, FILL.red, 24),lb(160, 75, "＋", 28, C.ink, 'middle', true),bx(200, 40, 100, 70, "木\nき", C.main, FILL.warm, 24),lb(160, 155, "大木（たいぼく）", 28, C.red, 'middle', true),lb(160, 200, "大きな 木", 19, C.main, 'middle', true))] },
     { note: "もんだい。「上下」の よみと いみは？", add: [...fresh(lb(160, 80, "「上下」の よみは？", 26, C.ink, 'middle', true),lb(160, 140, "いみは？", 26, C.ink, 'middle', true))] },
     { note: "こたえ：上（ジョウ）＋ 下（ゲ）で じょうげ。うえと した。", add: [...fresh(lb(160, 55, "上（ジョウ）＋ 下（ゲ）", 24, C.ink, 'middle', true),lb(160, 120, "じょうげ", 46, C.red, 'middle', true),lb(160, 185, "うえと した", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_029_a: show([
     { note: "小1で ならった かずの かん字を ふりかえろう。", add: [...fresh(bx(37, 45, 46, 46, "一", C.main, FILL.warm, 28),bx(87, 45, 46, 46, "二", C.main, FILL.warm, 28),bx(137, 45, 46, 46, "三", C.main, FILL.warm, 28),bx(187, 45, 46, 46, "四", C.main, FILL.warm, 28),bx(237, 45, 46, 46, "五", C.main, FILL.warm, 28),bx(37, 107, 46, 46, "六", C.main, FILL.warm, 28),bx(87, 107, 46, 46, "七", C.main, FILL.warm, 28),bx(137, 107, 46, 46, "八", C.main, FILL.warm, 28),bx(187, 107, 46, 46, "九", C.main, FILL.warm, 28),bx(237, 107, 46, 46, "十", C.main, FILL.warm, 28),lb(160, 200, "ぜんぶ よめるかな？", 22, C.red, 'middle', true))] },
     { note: "一・二・三は せんの かずと かくすうが おなじ。", add: [...fresh(bx(20, 45, 80, 100, "一\n1かく", C.main, FILL.warm, 28),bx(120, 45, 80, 100, "二\n2かく", C.main, FILL.warm, 28),bx(220, 45, 80, 100, "三\n3かく", C.main, FILL.warm, 28),lb(160, 190, "せんの かず ＝ かずの かん字", 20, C.red, 'middle', true))] },
@@ -281,7 +281,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "いろの かん字。赤・青・白は「〜い」と おくりがなが つく。", add: [...fresh(bx(10, 40, 88, 90, "赤\nあかい", C.red, FILL.red, 24),bx(116, 40, 88, 90, "青\nあおい", C.blue, FILL.blue, 24),bx(222, 40, 88, 90, "白\nしろい", C.gray, FILL.gray, 24),lb(160, 175, "赤い・青い・白い", 22, C.ink, 'middle', true),lb(160, 210, "おくりがな「い」", 18, C.main, 'middle', true))] },
     { note: "もんだい。「四」は なんかく？ なんと よむ？", add: [...fresh(lb(160, 85, "四", 96, C.red, 'middle', true),lb(160, 195, "なんかく？ なんと よむ？", 22, C.ink, 'middle', true))] },
     { note: "こたえ：5かく。よみは シ（よっつ）。", add: [...fresh(lb(80, 85, "四", 90, C.red, 'middle', true),lb(235, 70, "5かく", 36, C.red, 'middle', true),lb(235, 120, "シ・よっつ", 24, C.blue, 'middle', true),lb(160, 200, "5かく、シ（よっつ）", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_030_a: show([
     { note: "からだの かん字。よみと かくすうを たしかめよう。", add: [...fresh(bx(14, 45, 52, 52, "目", C.main, FILL.warm, 30),lb(40.0, 123, "め\n5かく", 15, C.ink, 'middle', true),bx(74, 45, 52, 52, "耳", C.main, FILL.warm, 30),lb(100.0, 123, "みみ\n6かく", 15, C.ink, 'middle', true),bx(134, 45, 52, 52, "口", C.main, FILL.warm, 30),lb(160.0, 123, "くち\n3かく", 15, C.ink, 'middle', true),bx(194, 45, 52, 52, "手", C.main, FILL.warm, 30),lb(220.0, 123, "て\n4かく", 15, C.ink, 'middle', true),bx(254, 45, 52, 52, "足", C.main, FILL.warm, 30),lb(280.0, 123, "あし\n7かく", 15, C.ink, 'middle', true))] },
     { note: "からだの かん字 その2。力・人・男・女・子。", add: [...fresh(bx(14, 45, 52, 52, "力", C.main, FILL.warm, 30),lb(40.0, 123, "ちから\n2かく", 15, C.ink, 'middle', true),bx(74, 45, 52, 52, "人", C.main, FILL.warm, 30),lb(100.0, 123, "ひと\n2かく", 15, C.ink, 'middle', true),bx(134, 45, 52, 52, "男", C.main, FILL.warm, 30),lb(160.0, 123, "おとこ\n7かく", 15, C.ink, 'middle', true),bx(194, 45, 52, 52, "女", C.main, FILL.warm, 30),lb(220.0, 123, "おんな\n3かく", 15, C.ink, 'middle', true),bx(254, 45, 52, 52, "子", C.main, FILL.warm, 30),lb(280.0, 123, "こ\n3かく", 15, C.ink, 'middle', true))] },
@@ -291,7 +291,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "しぜんの かん字④。天・空・雨・気・夕。", add: [...fresh(bx(14, 45, 52, 52, "天", C.main, FILL.warm, 30),lb(40.0, 123, "テン\n4かく", 15, C.ink, 'middle', true),bx(74, 45, 52, 52, "空", C.main, FILL.warm, 30),lb(100.0, 123, "そら\n8かく", 15, C.ink, 'middle', true),bx(134, 45, 52, 52, "雨", C.main, FILL.warm, 30),lb(160.0, 123, "あめ\n8かく", 15, C.ink, 'middle', true),bx(194, 45, 52, 52, "気", C.main, FILL.warm, 30),lb(220.0, 123, "キ\n6かく", 15, C.ink, 'middle', true),bx(254, 45, 52, 52, "夕", C.main, FILL.warm, 30),lb(280.0, 123, "ゆう\n3かく", 15, C.ink, 'middle', true))] },
     { note: "もんだい。「森」は なんかく？", add: [...fresh(lb(160, 90, "森", 96, C.red, 'middle', true),lb(160, 195, "木は 4かく。木が 3つ。", 22, C.ink, 'middle', true))] },
     { note: "こたえ：4＋4＋4＝12。「森」は 12かく。", add: [...fresh(lb(80, 80, "森", 80, C.red, 'middle', true),lb(235, 60, "木 4", 28, C.main, 'middle', true),lb(235, 100, "木 4", 28, C.main, 'middle', true),lb(235, 140, "木 4", 28, C.main, 'middle', true),lb(160, 205, "4＋4＋4＝12　12かく", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_031_a: show([
     { note: "学校の かん字。よみと かくすうを たしかめよう。", add: [...fresh(bx(44, 45, 52, 52, "学", C.main, FILL.warm, 30),lb(70.0, 123, "まなぶ\n8かく", 15, C.ink, 'middle', true),bx(104, 45, 52, 52, "校", C.main, FILL.warm, 30),lb(130.0, 123, "コウ\n10かく", 15, C.ink, 'middle', true),bx(164, 45, 52, 52, "先", C.main, FILL.warm, 30),lb(190.0, 123, "さき\n6かく", 15, C.ink, 'middle', true),bx(224, 45, 52, 52, "生", C.main, FILL.warm, 30),lb(250.0, 123, "いきる\n5かく", 15, C.ink, 'middle', true))] },
     { note: "学校の かん字 その2。字・文・本・名。", add: [...fresh(bx(44, 45, 52, 52, "字", C.main, FILL.warm, 30),lb(70.0, 123, "ジ\n6かく", 15, C.ink, 'middle', true),bx(104, 45, 52, 52, "文", C.main, FILL.warm, 30),lb(130.0, 123, "ブン\n4かく", 15, C.ink, 'middle', true),bx(164, 45, 52, 52, "本", C.main, FILL.warm, 30),lb(190.0, 123, "もと\n5かく", 15, C.ink, 'middle', true),bx(224, 45, 52, 52, "名", C.main, FILL.warm, 30),lb(250.0, 123, "な\n6かく", 15, C.ink, 'middle', true))] },
@@ -302,7 +302,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ はんたいの いみの かん字は ペアで おぼえる。", add: [...fresh(lb(160, 50, "なぜ？ ペアで おぼえる", 24, C.red, 'middle', true),lb(160, 105, "左 ⇔ 右", 30, C.blue, 'middle', true),lb(160, 150, "上 ⇔ 下", 30, C.main, 'middle', true),lb(160, 195, "大 ⇔ 小", 30, C.green, 'middle', true))] },
     { note: "もんだい。「左」と「右」の かきはじめは？", add: [...fresh(lb(80, 80, "左", 80, C.blue, 'middle', true),lb(240, 80, "右", 80, C.red, 'middle', true),lb(160, 180, "どちらも 5かく", 24, C.ink, 'middle', true),lb(160, 215, "はじめの せんは？", 20, C.ink, 'middle', true))] },
     { note: "こたえ：左は よこぼうが 先、右は ノが 先。", add: [...fresh(lb(80, 60, "左", 70, C.blue, 'middle', true),lb(240, 60, "右", 70, C.red, 'middle', true),lb(160, 135, "左は よこぼうが 先", 24, C.blue, 'middle', true),lb(160, 180, "右は ノが 先", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_032_a: show([
     { note: "しらない かん字！ どう よむ？", add: [...fresh(lb(160, 70, "しらない かん字！", 28, C.ink, 'middle', true),lb(160, 130, "どう よむ？", 34, C.red, 'middle', true))] },
     { note: "よみかたを しらべる 4つの ほうほう。", add: [...fresh(lb(160, 48, "① まえと うしろの ことば", 20, C.blue, 'middle', true),lb(160, 98, "② かん字の ぶぶんの ヒント", 20, C.blue, 'middle', true),lb(160, 148, "③ かん字じてん", 20, C.blue, 'middle', true),lb(160, 198, "④ 先生・おうちの 人に きく", 20, C.blue, 'middle', true))] },
@@ -312,7 +312,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ちゅうい：ヒントが あたらない ことも ある。海（カイ）と 毎（マイ）。", add: [...fresh(lb(160, 45, "ヒントが あたらない ことも", 20, C.red, 'middle', true),bx(40, 85, 70, 70, "海", C.main, FILL.warm, 34),lb(160, 120, "≠", 30, C.ink, 'middle', true),bx(210, 85, 70, 70, "毎", C.main, FILL.warm, 34),lb(160, 200, "海（カイ）と 毎（マイ）は ちがう", 18, C.ink, 'middle', true))] },
     { note: "もんだい。「晴」の おんよみは？ ヒント：右がわは「青」。", add: [...fresh(lb(160, 55, "「晴」の おんよみは？", 24, C.ink, 'middle', true),lb(160, 110, "ヒント：右がわは「青」", 22, C.ink, 'middle', true),lb(160, 160, "青は「セイ」", 22, C.ink, 'middle', true))] },
     { note: "こたえ：セイ。青が セイだから、晴も セイ。", add: [...fresh(lb(160, 50, "晴 ＝ 日 ＋ 青", 26, C.ink, 'middle', true),lb(160, 110, "青は「セイ」だから", 22, C.ink, 'middle', true),lb(160, 170, "晴も「セイ」", 40, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_033_a: show([
     { note: "きょうは 12この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(12, 50, 46, 46, "今", C.main, FILL.warm, 26),bx(62, 50, 46, 46, "午", C.main, FILL.warm, 26),bx(112, 50, 46, 46, "前", C.main, FILL.warm, 26),bx(162, 50, 46, 46, "後", C.main, FILL.warm, 26),bx(212, 50, 46, 46, "夜", C.main, FILL.warm, 26),bx(262, 50, 46, 46, "昼", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "朝", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "夕", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "週", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "曜", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "毎", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "時", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 12この かん字", 20, C.red, 'middle', true))] },
     { note: "今（コン／いま）は 4かく。いま。いまの とき。", add: [...fresh(lb(70, 100, "今", 92, C.red, 'middle', true),lb(138, 56, "おん　コン", 19, C.blue, 'start', true),lb(138, 92, "くん　いま", 19, C.blue, 'start', true),lb(138, 128, "4かく", 22, C.main, 'start', true),lb(160, 172, "いみ：いま。いまの とき。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：今月（こんげつ）", 17, C.ink, 'middle', true))] },
@@ -331,7 +331,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ようびは お日さまと 月、空の 五つの 星（ほし）から。", add: [...fresh(bx(15, 70, 38, 38, "日", C.main, FILL.warm, 24),bx(57, 70, 38, 38, "月", C.main, FILL.warm, 24),bx(99, 70, 38, 38, "火", C.main, FILL.warm, 24),bx(141, 70, 38, 38, "水", C.main, FILL.warm, 24),bx(183, 70, 38, 38, "木", C.main, FILL.warm, 24),bx(225, 70, 38, 38, "金", C.main, FILL.warm, 24),bx(267, 70, 38, 38, "土", C.main, FILL.warm, 24),lb(160, 150, "お日さま・月・五つの 星の 名前", 18, C.ink, 'middle', true),lb(160, 180, "日 月 火 水 木 金 土 ＝ 7つ", 18, C.red, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "「ごご」を", 24, C.ink, 'middle', true),lb(160, 98, "かん字で かこう", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。午（ひるの 12じ）と 後（あと）で、午後。", add: [...fresh(lb(160, 46, "「ごご」を", 22, C.ink, 'middle', true),lb(160, 82, "かん字で かこう", 22, C.ink, 'middle', true),lb(160, 150, "午後", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_034_a: show([
     { note: "きょうは 13この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(8, 50, 40, 40, "回", C.main, FILL.warm, 26),bx(52, 50, 40, 40, "数", C.main, FILL.warm, 26),bx(96, 50, 40, 40, "半", C.main, FILL.warm, 26),bx(140, 50, 40, 40, "何", C.main, FILL.warm, 26),bx(184, 50, 40, 40, "万", C.main, FILL.warm, 26),bx(228, 50, 40, 40, "分", C.main, FILL.warm, 26),bx(272, 50, 40, 40, "長", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "多", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "少", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "計", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "才", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "番", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "点", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 13この かん字", 20, C.red, 'middle', true))] },
     { note: "回（カイ／まわる）は 6かく。まわる。くりかえす かず。", add: [...fresh(lb(70, 100, "回", 92, C.red, 'middle', true),lb(138, 56, "おん　カイ", 19, C.blue, 'start', true),lb(138, 92, "くん　まわる", 19, C.blue, 'start', true),lb(138, 128, "6かく", 22, C.main, 'start', true),lb(160, 172, "いみ：まわる。くりかえす かず。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：一回（いっかい）", 17, C.ink, 'middle', true))] },
@@ -351,7 +351,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "はんたいの いみで ペアに して おぼえよう。", add: [...fresh(bx(30, 70, 100, 64, "多い\nおおい", C.red, FILL.red, 24),bx(190, 70, 100, 64, "少ない\nすくない", C.blue, FILL.blue, 24),lb(160, 102, "⇔", 28, C.ink, 'middle', true),lb(160, 190, "多い ⇔ 少ない", 22, C.ink, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "半分は？", 24, C.ink, 'middle', true),lb(160, 98, "五分は？", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。半分は ものを わける 1つ（ぶん）、五分は じかん（ふん）。", add: [...fresh(lb(160, 46, "半分は？", 22, C.ink, 'middle', true),lb(160, 82, "五分は？", 22, C.ink, 'middle', true),lb(160, 150, "ぶん", 28, C.red, 'middle', true),lb(160, 188, "ふん", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_035_a: show([
     { note: "きょうは 12この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(12, 50, 46, 46, "東", C.main, FILL.warm, 26),bx(62, 50, 46, 46, "西", C.main, FILL.warm, 26),bx(112, 50, 46, 46, "南", C.main, FILL.warm, 26),bx(162, 50, 46, 46, "北", C.main, FILL.warm, 26),bx(212, 50, 46, 46, "内", C.main, FILL.warm, 26),bx(262, 50, 46, 46, "外", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "高", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "遠", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "近", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "場", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "方", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "地", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 12この かん字", 20, C.red, 'middle', true))] },
     { note: "東（トウ／ひがし）は 8かく。ひがし。お日さまが のぼる ほう。", add: [...fresh(lb(70, 100, "東", 92, C.red, 'middle', true),lb(138, 56, "おん　トウ", 19, C.blue, 'start', true),lb(138, 92, "くん　ひがし", 19, C.blue, 'start', true),lb(138, 128, "8かく", 22, C.main, 'start', true),lb(160, 172, "いみ：ひがし。お日さまが のぼる ほう。", 15, C.ink, 'middle', true),lb(160, 204, "ことば：東（ひがし）", 17, C.ink, 'middle', true))] },
@@ -370,7 +370,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "はんたいの いみの かん字は ペアで おぼえよう。", add: [...fresh(bx(104, 60, 52, 52, "東", C.main, FILL.warm, 28),bx(164, 60, 52, 52, "西", C.main, FILL.warm, 28),bx(104, 130, 52, 52, "南", C.blue, FILL.blue, 28),bx(164, 130, 52, 52, "北", C.blue, FILL.blue, 28),lb(160, 206, "東⇔西　南⇔北　内⇔外　遠⇔近", 17, C.ink, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "北の", 24, C.ink, 'middle', true),lb(160, 98, "はんたいは？", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。北の はんたいは 南（みなみ）。", add: [...fresh(lb(160, 46, "北の", 22, C.ink, 'middle', true),lb(160, 82, "はんたいは？", 22, C.ink, 'middle', true),lb(160, 150, "南", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_036_a: show([
     { note: "きょうは 13この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(8, 50, 40, 40, "雲", C.main, FILL.warm, 26),bx(52, 50, 40, 40, "雪", C.main, FILL.warm, 26),bx(96, 50, 40, 40, "風", C.main, FILL.warm, 26),bx(140, 50, 40, 40, "星", C.main, FILL.warm, 26),bx(184, 50, 40, 40, "晴", C.main, FILL.warm, 26),bx(228, 50, 40, 40, "海", C.main, FILL.warm, 26),bx(272, 50, 40, 40, "池", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "谷", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "岩", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "原", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "光", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "里", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "野", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 13この かん字", 20, C.red, 'middle', true))] },
     { note: "雲（ウン／くも）は 12かく。そらに うかぶ くも。", add: [...fresh(lb(70, 100, "雲", 92, C.red, 'middle', true),lb(138, 56, "おん　ウン", 19, C.blue, 'start', true),lb(138, 92, "くん　くも", 19, C.blue, 'start', true),lb(138, 128, "12かく", 22, C.main, 'start', true),lb(160, 172, "いみ：そらに うかぶ くも。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：雲（くも）", 17, C.ink, 'middle', true))] },
@@ -391,7 +391,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "海と 池には 水の しるし「さんずい」。", add: [...fresh(bx(120, 36, 80, 56, "水", C.blue, FILL.blue, 34),ln(140, 94, 100, 130, C.ink, false, 2),ln(180, 94, 220, 130, C.ink, false, 2),bx(60, 132, 80, 56, "海", C.main, FILL.warm, 34),bx(180, 132, 80, 56, "池", C.main, FILL.warm, 34),lb(160, 218, "水に かんけい → さんずい", 16, C.ink, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "上に「雨」が", 24, C.ink, 'middle', true),lb(160, 98, "ある 字は？", 24, C.ink, 'middle', true),lb(160, 136, "雲 星 雪 光", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。雲と 雪には 上に 雨が ある。星と 光には ない。", add: [...fresh(lb(160, 46, "上に「雨」が", 22, C.ink, 'middle', true),lb(160, 82, "ある 字は？", 22, C.ink, 'middle', true),lb(160, 118, "雲 星 雪 光", 22, C.ink, 'middle', true),lb(160, 150, "雲と 雪", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_037_a: show([
     { note: "きょうは 12この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(12, 50, 46, 46, "牛", C.main, FILL.warm, 26),bx(62, 50, 46, 46, "馬", C.main, FILL.warm, 26),bx(112, 50, 46, 46, "鳥", C.main, FILL.warm, 26),bx(162, 50, 46, 46, "鳴", C.main, FILL.warm, 26),bx(212, 50, 46, 46, "魚", C.main, FILL.warm, 26),bx(262, 50, 46, 46, "羽", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "毛", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "角", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "肉", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "麦", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "米", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "茶", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 12この かん字", 20, C.red, 'middle', true))] },
     { note: "牛（ギュウ／うし）は 4かく。うし。", add: [...fresh(lb(70, 100, "牛", 92, C.red, 'middle', true),lb(138, 56, "おん　ギュウ", 19, C.blue, 'start', true),lb(138, 92, "くん　うし", 19, C.blue, 'start', true),lb(138, 128, "4かく", 22, C.main, 'start', true),lb(160, 172, "いみ：うし。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：牛（うし）", 17, C.ink, 'middle', true))] },
@@ -410,7 +410,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "絵（え）から できた かん字が いっぱい。", add: [...fresh(bx(62, 40, 46, 46, "牛", C.main, FILL.warm, 28),bx(112, 40, 46, 46, "馬", C.main, FILL.warm, 28),bx(162, 40, 46, 46, "魚", C.main, FILL.warm, 28),bx(212, 40, 46, 46, "鳥", C.main, FILL.warm, 28),bx(62, 102, 46, 46, "羽", C.main, FILL.warm, 28),bx(112, 102, 46, 46, "毛", C.main, FILL.warm, 28),bx(162, 102, 46, 46, "角", C.main, FILL.warm, 28),bx(212, 102, 46, 46, "肉", C.main, FILL.warm, 28),lb(160, 196, "どうぶつや からだの かたちから", 18, C.red, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "鳴は 何と 何？", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。鳴は 口と 鳥。とりが 口で なく ようす。", add: [...fresh(lb(160, 46, "鳴は 何と 何？", 22, C.ink, 'middle', true),lb(160, 150, "口＋鳥", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_038_a: show([
     { note: "きょうは 11この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(12, 50, 46, 46, "顔", C.main, FILL.warm, 26),bx(62, 50, 46, 46, "首", C.main, FILL.warm, 26),bx(112, 50, 46, 46, "頭", C.main, FILL.warm, 26),bx(162, 50, 46, 46, "体", C.main, FILL.warm, 26),bx(212, 50, 46, 46, "心", C.main, FILL.warm, 26),bx(262, 50, 46, 46, "思", C.main, FILL.warm, 26),bx(37, 112, 46, 46, "考", C.main, FILL.warm, 26),bx(87, 112, 46, 46, "声", C.main, FILL.warm, 26),bx(137, 112, 46, 46, "食", C.main, FILL.warm, 26),bx(187, 112, 46, 46, "歩", C.main, FILL.warm, 26),bx(237, 112, 46, 46, "走", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 11この かん字", 20, C.red, 'middle', true))] },
     { note: "顔（ガン／かお）は 18かく。かお。", add: [...fresh(lb(70, 100, "顔", 92, C.red, 'middle', true),lb(138, 56, "おん　ガン", 19, C.blue, 'start', true),lb(138, 92, "くん　かお", 19, C.blue, 'start', true),lb(138, 128, "18かく", 22, C.main, 'start', true),lb(160, 172, "いみ：かお。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：顔（かお）", 17, C.ink, 'middle', true))] },
@@ -428,7 +428,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "体は 人と 本を あわせた かたち。", add: [...fresh(bx(10, 60, 72, 80, "人", C.red, FILL.red, 40),lb(100, 100, "＋", 26, C.ink, 'middle', true),bx(118, 60, 72, 80, "本", C.blue, FILL.blue, 40),lb(208, 100, "＝", 26, C.ink, 'middle', true),bx(232, 60, 72, 80, "体", C.main, FILL.warm, 40),lb(160, 180, "体は「人」と「本」の かたち", 18, C.ink, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "おもう", 24, C.ink, 'middle', true),lb(160, 98, "かんがえる", 24, C.ink, 'middle', true),lb(160, 136, "を かん字で", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。思う（おもう）、考える（かんがえる）。", add: [...fresh(lb(160, 46, "おもう", 22, C.ink, 'middle', true),lb(160, 82, "かんがえる", 22, C.ink, 'middle', true),lb(160, 118, "を かん字で", 22, C.ink, 'middle', true),lb(160, 150, "思う", 28, C.red, 'middle', true),lb(160, 188, "考える", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_039_a: show([
     { note: "きょうは 12この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(12, 50, 46, 46, "教", C.main, FILL.warm, 26),bx(62, 50, 46, 46, "答", C.main, FILL.warm, 26),bx(112, 50, 46, 46, "科", C.main, FILL.warm, 26),bx(162, 50, 46, 46, "図", C.main, FILL.warm, 26),bx(212, 50, 46, 46, "算", C.main, FILL.warm, 26),bx(262, 50, 46, 46, "語", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "読", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "書", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "室", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "記", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "画", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "工", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 12この かん字", 20, C.red, 'middle', true))] },
     { note: "教（キョウ／おしえる）は 11かく。おしえる。", add: [...fresh(lb(70, 100, "教", 92, C.red, 'middle', true),lb(138, 56, "おん　キョウ", 19, C.blue, 'start', true),lb(138, 92, "くん　おしえる", 19, C.blue, 'start', true),lb(138, 128, "11かく", 22, C.main, 'start', true),lb(160, 172, "いみ：おしえる。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：教える（おしえる）", 17, C.ink, 'middle', true))] },
@@ -447,7 +447,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "きょうかの なまえも かん字で かこう。", add: [...fresh(bx(20, 50, 130, 56, "国語\nこくご", C.main, FILL.warm, 22),bx(170, 50, 130, 56, "算数\nさんすう", C.blue, FILL.blue, 22),bx(20, 124, 130, 56, "理科\nりか", C.green, FILL.green, 22),bx(170, 124, 130, 56, "図工\nずこう", C.red, FILL.red, 22),lb(160, 214, "学校の きょうかの なまえ", 17, C.ink, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "よむ・かく・", 24, C.ink, 'middle', true),lb(160, 98, "こたえる を", 24, C.ink, 'middle', true),lb(160, 136, "かん字で", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。読む（よむ）、書く（かく）、答える（こたえる）。", add: [...fresh(lb(160, 46, "よむ・かく・", 22, C.ink, 'middle', true),lb(160, 82, "こたえる を", 22, C.ink, 'middle', true),lb(160, 118, "かん字で", 22, C.ink, 'middle', true),lb(160, 150, "読む 書く", 28, C.red, 'middle', true),lb(160, 188, "答える", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_040_a: show([
     { note: "きょうは 13この かん字を ならうよ。じゅんに 見ていこう。", add: [...fresh(bx(8, 50, 40, 40, "家", C.main, FILL.warm, 26),bx(52, 50, 40, 40, "店", C.main, FILL.warm, 26),bx(96, 50, 40, 40, "門", C.main, FILL.warm, 26),bx(140, 50, 40, 40, "間", C.main, FILL.warm, 26),bx(184, 50, 40, 40, "戸", C.main, FILL.warm, 26),bx(228, 50, 40, 40, "公", C.main, FILL.warm, 26),bx(272, 50, 40, 40, "園", C.main, FILL.warm, 26),bx(12, 112, 46, 46, "交", C.main, FILL.warm, 26),bx(62, 112, 46, 46, "通", C.main, FILL.warm, 26),bx(112, 112, 46, 46, "道", C.main, FILL.warm, 26),bx(162, 112, 46, 46, "市", C.main, FILL.warm, 26),bx(212, 112, 46, 46, "京", C.main, FILL.warm, 26),bx(262, 112, 46, 46, "寺", C.main, FILL.warm, 26),lb(160, 196, "ぜんぶで 13この かん字", 20, C.red, 'middle', true))] },
     { note: "家（カ／いえ・や）は 10かく。いえ。すむ ところ。", add: [...fresh(lb(70, 100, "家", 92, C.red, 'middle', true),lb(138, 56, "おん　カ", 19, C.blue, 'start', true),lb(138, 92, "くん　いえ・や", 19, C.blue, 'start', true),lb(138, 128, "10かく", 22, C.main, 'start', true),lb(160, 172, "いみ：いえ。すむ ところ。", 17, C.ink, 'middle', true),lb(160, 204, "ことば：家（いえ）", 17, C.ink, 'middle', true))] },
@@ -467,7 +467,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "道を すすむ 字には「しんにょう」が つく。", add: [...fresh(bx(36, 60, 56, 56, "道", C.main, FILL.warm, 30),bx(100, 60, 56, 56, "通", C.main, FILL.warm, 30),bx(164, 60, 56, 56, "近", C.main, FILL.warm, 30),bx(228, 60, 56, 56, "遠", C.main, FILL.warm, 30),lb(160, 150, "道を すすむ ことに かんけい", 20, C.ink, 'middle', true),lb(160, 190, "みんな「しんにょう」の なかま", 18, C.red, 'middle', true))] },
     { note: "もんだいに ちょうせん。まず よく 見て、かんがえよう。", add: [...fresh(lb(160, 60, "「こうえん」を", 24, C.ink, 'middle', true),lb(160, 98, "かん字で かこう", 24, C.ink, 'middle', true))] },
     { note: "こたえあわせ。公（みんなの）＋園（にわ）で 公園。", add: [...fresh(lb(160, 46, "「こうえん」を", 22, C.ink, 'middle', true),lb(160, 82, "かん字で かこう", 22, C.ink, 'middle', true),lb(160, 150, "公園", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_041_a: show([
     { note: "かぞくと ともだちの かんじ 10こ。1つずつ 見ていこう。", add: [...fresh(bx(8, 50, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 70, "父", 24, C.red, 'middle', true),lb(36.0, 92, "ちち", 11, C.ink, 'middle', true),bx(70, 50, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 70, "母", 24, C.red, 'middle', true),lb(98.0, 92, "はは", 11, C.ink, 'middle', true),bx(132, 50, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 70, "兄", 24, C.red, 'middle', true),lb(160.0, 92, "あに", 11, C.ink, 'middle', true),bx(194, 50, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 70, "弟", 24, C.red, 'middle', true),lb(222.0, 92, "おとうと", 11, C.ink, 'middle', true),bx(256, 50, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 70, "姉", 24, C.red, 'middle', true),lb(284.0, 92, "あね", 11, C.ink, 'middle', true),bx(8, 114, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 134, "妹", 24, C.red, 'middle', true),lb(36.0, 156, "いもうと", 11, C.ink, 'middle', true),bx(70, 114, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 134, "親", 24, C.red, 'middle', true),lb(98.0, 156, "おや", 11, C.ink, 'middle', true),bx(132, 114, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 134, "友", 24, C.red, 'middle', true),lb(160.0, 156, "とも", 11, C.ink, 'middle', true),bx(194, 114, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 134, "合", 24, C.red, 'middle', true),lb(222.0, 156, "あう", 11, C.ink, 'middle', true),bx(256, 114, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 134, "当", 24, C.red, 'middle', true),lb(284.0, 156, "あたる", 11, C.ink, 'middle', true))] },
     { note: "父（ちち）は 4かく。おとうさん。", add: [...fresh(lb(160, 52, "父", 64, C.red, 'middle', true),lb(160, 112, "音 フ　くん ちち", 18, C.blue, 'middle', true),lb(160, 142, "4かく", 20, C.red, 'middle', true),lb(160, 176, "おとうさん", 16, C.ink, 'middle', true),lb(160, 206, "父（ちち）・父母（ふぼ）", 16, C.main, 'middle', true))] },
@@ -486,7 +486,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓くんよみは？ 日本の ことばを 当（あ）てた よみかた。", add: [...fresh(lb(160, 60, "日本の ことば「あに」", 24, C.main, 'middle', true),lb(160, 115, "かんじの いみに 当てる", 20, C.ink, 'middle', true),lb(160, 170, "→ くんよみ", 30, C.red, 'middle', true))] },
     { note: "「兄弟」を 読（よ）もう。ならんだ ことばは 音よみ。", add: [...fresh(lb(160, 55, "兄（キョウ）＋ 弟（ダイ）", 23, C.blue, 'middle', true),lb(160, 115, "キョウ ＋ ダイ", 30, C.ink, 'middle', true),lb(160, 175, "つなげて 言（い）おう", 20, C.ink, 'middle', true))] },
     { note: "答（こた）え：きょうだい。音よみで 読（よ）む。", add: [...fresh(lb(160, 90, "兄弟 ＝ きょうだい", 32, C.red, 'middle', true),lb(160, 160, "2つ ならぶ → 音よみ", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_042_a: show([
     { note: "きせつ・いろ・かたちの かんじ 15こ。1つずつ 見ていこう。", add: [...fresh(bx(8, 34, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 54, "春", 24, C.red, 'middle', true),lb(36.0, 76, "はる", 11, C.ink, 'middle', true),bx(70, 34, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 54, "夏", 24, C.red, 'middle', true),lb(98.0, 76, "なつ", 11, C.ink, 'middle', true),bx(132, 34, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 54, "秋", 24, C.red, 'middle', true),lb(160.0, 76, "あき", 11, C.ink, 'middle', true),bx(194, 34, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 54, "冬", 24, C.red, 'middle', true),lb(222.0, 76, "ふゆ", 11, C.ink, 'middle', true),bx(256, 34, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 54, "色", 24, C.red, 'middle', true),lb(284.0, 76, "いろ", 11, C.ink, 'middle', true),bx(8, 98, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 118, "黄", 24, C.red, 'middle', true),lb(36.0, 140, "き", 11, C.ink, 'middle', true),bx(70, 98, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 118, "黒", 24, C.red, 'middle', true),lb(98.0, 140, "くろ", 11, C.ink, 'middle', true),bx(132, 98, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 118, "丸", 24, C.red, 'middle', true),lb(160.0, 140, "まる", 11, C.ink, 'middle', true),bx(194, 98, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 118, "形", 24, C.red, 'middle', true),lb(222.0, 140, "かたち", 11, C.ink, 'middle', true),bx(256, 98, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 118, "太", 24, C.red, 'middle', true),lb(284.0, 140, "ふとい", 11, C.ink, 'middle', true),bx(8, 162, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 182, "細", 24, C.red, 'middle', true),lb(36.0, 204, "ほそい", 11, C.ink, 'middle', true),bx(70, 162, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 182, "広", 24, C.red, 'middle', true),lb(98.0, 204, "ひろい", 11, C.ink, 'middle', true),bx(132, 162, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 182, "弱", 24, C.red, 'middle', true),lb(160.0, 204, "よわい", 11, C.ink, 'middle', true),bx(194, 162, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 182, "強", 24, C.red, 'middle', true),lb(222.0, 204, "つよい", 11, C.ink, 'middle', true),bx(256, 162, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 182, "明", 24, C.red, 'middle', true),lb(284.0, 204, "あかるい", 11, C.ink, 'middle', true))] },
     { note: "春（はる）は 9かく。あたたかい きせつ。", add: [...fresh(lb(160, 52, "春", 64, C.red, 'middle', true),lb(160, 112, "音 シュン　くん はる", 18, C.blue, 'middle', true),lb(160, 142, "9かく", 20, C.red, 'middle', true),lb(160, 176, "あたたかい きせつ", 16, C.ink, 'middle', true),lb(160, 206, "春（はる）・立春（りっしゅん）", 16, C.main, 'middle', true))] },
@@ -510,7 +510,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓では、なぜ「立」が つくの？「立」は「はじまる」の いみ。", add: [...fresh(lb(160, 60, "立春 ＝ 春の はじまりの 日", 22, C.main, 'middle', true),lb(160, 120, "立夏 ＝ 夏の はじまりの 日", 22, C.main, 'middle', true),lb(160, 180, "立冬 ＝ 冬の はじまりの 日", 22, C.main, 'middle', true))] },
     { note: "「立冬」を 読（よ）もう。「立」は りつ、「冬」は トウ。", add: [...fresh(lb(160, 55, "立（りつ）＋ 冬（トウ）", 25, C.blue, 'middle', true),lb(160, 115, "りつ ＋ とう", 28, C.ink, 'middle', true),lb(160, 175, "つが つまる よ", 20, C.red, 'middle', true))] },
     { note: "答（こた）え：りっとう。「つ」が 小さい「っ」に かわる。", add: [...fresh(lb(160, 90, "立冬 ＝ りっとう", 34, C.red, 'middle', true),lb(160, 160, "冬の はじまりの 日", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_043_a: show([
     { note: "うごきと はなす かんじ 15こ。1つずつ 見ていこう。", add: [...fresh(bx(8, 34, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 54, "引", 24, C.red, 'middle', true),lb(36.0, 76, "ひく", 11, C.ink, 'middle', true),bx(70, 34, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 54, "切", 24, C.red, 'middle', true),lb(98.0, 76, "きる", 11, C.ink, 'middle', true),bx(132, 34, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 54, "止", 24, C.red, 'middle', true),lb(160.0, 76, "とまる", 11, C.ink, 'middle', true),bx(194, 34, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 54, "行", 24, C.red, 'middle', true),lb(222.0, 76, "いく", 11, C.ink, 'middle', true),bx(256, 34, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 54, "来", 24, C.red, 'middle', true),lb(284.0, 76, "くる", 11, C.ink, 'middle', true),bx(8, 98, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 118, "帰", 24, C.red, 'middle', true),lb(36.0, 140, "かえる", 11, C.ink, 'middle', true),bx(70, 98, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 118, "歌", 24, C.red, 'middle', true),lb(98.0, 140, "うた", 11, C.ink, 'middle', true),bx(132, 98, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 118, "組", 24, C.red, 'middle', true),lb(160.0, 140, "くみ", 11, C.ink, 'middle', true),bx(194, 98, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 118, "活", 24, C.red, 'middle', true),lb(222.0, 140, "かつ", 11, C.ink, 'middle', true),bx(256, 98, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 118, "作", 24, C.red, 'middle', true),lb(284.0, 140, "つくる", 11, C.ink, 'middle', true),bx(8, 162, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 182, "直", 24, C.red, 'middle', true),lb(36.0, 204, "なおす", 11, C.ink, 'middle', true),bx(70, 162, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 182, "知", 24, C.red, 'middle', true),lb(98.0, 204, "しる", 11, C.ink, 'middle', true),bx(132, 162, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 182, "聞", 24, C.red, 'middle', true),lb(160.0, 204, "きく", 11, C.ink, 'middle', true),bx(194, 162, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 182, "話", 24, C.red, 'middle', true),lb(222.0, 204, "はなす", 11, C.ink, 'middle', true),bx(256, 162, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 182, "言", 24, C.red, 'middle', true),lb(284.0, 204, "いう", 11, C.ink, 'middle', true))] },
     { note: "引（ひく）は 4かく。ひっぱる。", add: [...fresh(lb(160, 52, "引", 64, C.red, 'middle', true),lb(160, 112, "音 イン　くん ひく", 18, C.blue, 'middle', true),lb(160, 142, "4かく", 20, C.red, 'middle', true),lb(160, 176, "ひっぱる", 16, C.ink, 'middle', true),lb(160, 206, "引く（ひく）・引力（いんりょく）", 16, C.main, 'middle', true))] },
@@ -534,7 +534,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓では「中止」の いみは？ とちゅうで やめる こと。", add: [...fresh(lb(160, 60, "中（とちゅう）＋ 止（やめる）", 20, C.main, 'middle', true),lb(160, 120, "＝ とちゅうで やめる", 26, C.blue, 'middle', true),lb(160, 180, "読みと いみが つながる", 18, C.ink, 'middle', true))] },
     { note: "「中止」を 読（よ）もう。中は チュウ、止は シ。", add: [...fresh(lb(160, 55, "中（チュウ）＋ 止（シ）", 25, C.blue, 'middle', true),lb(160, 115, "チュウ ＋ シ", 30, C.ink, 'middle', true),lb(160, 175, "つなげて 言（い）おう", 20, C.ink, 'middle', true))] },
     { note: "答（こた）え：ちゅうし。音よみで 読（よ）む。", add: [...fresh(lb(160, 90, "中止 ＝ ちゅうし", 34, C.red, 'middle', true),lb(160, 160, "とちゅうで やめる", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_044_a: show([
     { note: "ものと おんがくの かんじ 11こ。1つずつ 見ていこう。", add: [...fresh(bx(8, 34, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 54, "絵", 24, C.red, 'middle', true),lb(36.0, 76, "え", 11, C.ink, 'middle', true),bx(70, 34, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 54, "楽", 24, C.red, 'middle', true),lb(98.0, 76, "たのしい", 11, C.ink, 'middle', true),bx(132, 34, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 54, "汽", 24, C.red, 'middle', true),lb(160.0, 76, "き", 11, C.ink, 'middle', true),bx(194, 34, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 54, "弓", 24, C.red, 'middle', true),lb(222.0, 76, "ゆみ", 11, C.ink, 'middle', true),bx(256, 34, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 54, "刀", 24, C.red, 'middle', true),lb(284.0, 76, "かたな", 11, C.ink, 'middle', true),bx(8, 98, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 118, "矢", 24, C.red, 'middle', true),lb(36.0, 140, "や", 11, C.ink, 'middle', true),bx(70, 98, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 118, "紙", 24, C.red, 'middle', true),lb(98.0, 140, "かみ", 11, C.ink, 'middle', true),bx(132, 98, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 118, "船", 24, C.red, 'middle', true),lb(160.0, 140, "ふね", 11, C.ink, 'middle', true),bx(194, 98, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 118, "線", 24, C.red, 'middle', true),lb(222.0, 140, "せん", 11, C.ink, 'middle', true),bx(256, 98, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 118, "台", 24, C.red, 'middle', true),lb(284.0, 140, "だい", 11, C.ink, 'middle', true),bx(132, 162, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 182, "電", 24, C.red, 'middle', true),lb(160.0, 204, "でん", 11, C.ink, 'middle', true))] },
     { note: "絵（え）は 12かく。え・かいた もの。", add: [...fresh(lb(160, 52, "絵", 64, C.red, 'middle', true),lb(160, 112, "音 カイ・エ　くん なし", 18, C.blue, 'middle', true),lb(160, 142, "12かく", 20, C.red, 'middle', true),lb(160, 176, "え・かいた もの", 16, C.ink, 'middle', true),lb(160, 206, "絵（え）・絵本（えほん）", 16, C.main, 'middle', true))] },
@@ -554,7 +554,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓なぜ「きしゃ」と 音よみ？ 汽には くんよみが ない。", add: [...fresh(lb(160, 60, "汽 ＝ キ（音よみだけ）", 24, C.blue, 'middle', true),lb(160, 115, "車 ＝ シャ", 24, C.blue, 'middle', true),lb(160, 175, "つなぐと きしゃ", 28, C.red, 'middle', true))] },
     { note: "「汽車」を 読（よ）もう。汽は キ、車は シャ。", add: [...fresh(lb(160, 55, "汽（キ）＋ 車（シャ）", 26, C.blue, 'middle', true),lb(160, 115, "キ ＋ シャ", 30, C.ink, 'middle', true),lb(160, 175, "つなげて 言（い）おう", 20, C.ink, 'middle', true))] },
     { note: "答（こた）え：きしゃ。くんよみの ない 汽は 音よみ。", add: [...fresh(lb(160, 90, "汽車 ＝ きしゃ", 34, C.red, 'middle', true),lb(160, 160, "ゆげで すすむ 車", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_045_a: show([
     { note: "くらしと しゃかいの かんじ 12こ。1つずつ 見ていこう。", add: [...fresh(bx(8, 34, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 54, "会", 24, C.red, 'middle', true),lb(36.0, 76, "あう", 11, C.ink, 'middle', true),bx(70, 34, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 54, "売", 24, C.red, 'middle', true),lb(98.0, 76, "うる", 11, C.ink, 'middle', true),bx(132, 34, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 54, "買", 24, C.red, 'middle', true),lb(160.0, 76, "かう", 11, C.ink, 'middle', true),bx(194, 34, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 54, "古", 24, C.red, 'middle', true),lb(222.0, 76, "ふるい", 11, C.ink, 'middle', true),bx(256, 34, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 54, "新", 24, C.red, 'middle', true),lb(284.0, 76, "あたら", 11, C.ink, 'middle', true),bx(8, 98, 56, 54, "", C.main, FILL.warm, 16),lb(36.0, 118, "用", 24, C.red, 'middle', true),lb(36.0, 140, "よう", 11, C.ink, 'middle', true),bx(70, 98, 56, 54, "", C.main, FILL.warm, 16),lb(98.0, 118, "理", 24, C.red, 'middle', true),lb(98.0, 140, "り", 11, C.ink, 'middle', true),bx(132, 98, 56, 54, "", C.main, FILL.warm, 16),lb(160.0, 118, "国", 24, C.red, 'middle', true),lb(160.0, 140, "くに", 11, C.ink, 'middle', true),bx(194, 98, 56, 54, "", C.main, FILL.warm, 16),lb(222.0, 118, "元", 24, C.red, 'middle', true),lb(222.0, 140, "もと", 11, C.ink, 'middle', true),bx(256, 98, 56, 54, "", C.main, FILL.warm, 16),lb(284.0, 118, "同", 24, C.red, 'middle', true),lb(284.0, 140, "おなじ", 11, C.ink, 'middle', true),bx(101, 162, 56, 54, "", C.main, FILL.warm, 16),lb(129.0, 182, "社", 24, C.red, 'middle', true),lb(129.0, 204, "しゃ", 11, C.ink, 'middle', true),bx(163, 162, 56, 54, "", C.main, FILL.warm, 16),lb(191.0, 182, "自", 24, C.red, 'middle', true),lb(191.0, 204, "じ", 11, C.ink, 'middle', true))] },
     { note: "会（あう）は 6かく。あう・あつまり。", add: [...fresh(lb(160, 52, "会", 64, C.red, 'middle', true),lb(160, 112, "音 カイ・エ　くん あう", 18, C.blue, 'middle', true),lb(160, 142, "6かく", 20, C.red, 'middle', true),lb(160, 176, "あう・あつまり", 16, C.ink, 'middle', true),lb(160, 206, "会う（あう）・会社（かいしゃ）", 16, C.main, 'middle', true))] },
@@ -575,7 +575,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓いみも ちがう？ そう、ちがう ことばだよ。", add: [...fresh(lb(160, 60, "会社 ＝ しごとを する ところ", 20, C.blue, 'middle', true),lb(160, 120, "社会 ＝ みんなの くらす よのなか", 18, C.blue, 'middle', true),lb(160, 180, "じゅんばんで いみが かわる", 20, C.red, 'middle', true))] },
     { note: "「会社」と「社会」を 読（よ）もう。左から じゅんに。", add: [...fresh(lb(160, 55, "会社 ＝ カイ ＋ シャ", 24, C.blue, 'middle', true),lb(160, 115, "社会 ＝ シャ ＋ カイ", 24, C.blue, 'middle', true),lb(160, 175, "声（こえ）に 出して いおう", 20, C.ink, 'middle', true))] },
     { note: "答（こた）え：会社は かいしゃ、社会は しゃかい。", add: [...fresh(lb(160, 80, "会社 ＝ かいしゃ", 32, C.red, 'middle', true),lb(160, 140, "社会 ＝ しゃかい", 32, C.red, 'middle', true),lb(160, 195, "じゅんばんで ちがう", 20, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_046_a: show([
     { note: "かんじには 2つの 読（よ）み方（かた）が ある。音よみと くんよみ。", add: [...fresh(lb(160, 40, "音よみ ＝ ちゅうごくふうの よみ", 18, C.blue, 'middle', true),lb(160, 95, "くんよみ ＝ 日本の ことばの よみ", 18, C.red, 'middle', true),lb(160, 160, "新（シン／あたら）", 28, C.main, 'middle', true),lb(160, 205, "どちらで よむか 見わけよう", 18, C.ink, 'middle', true))] },
     { note: "コツ①：おくりがなが あれば くんよみ。", add: [...fresh(lb(160, 55, "行く（いく）", 32, C.red, 'middle', true),lb(160, 110, "新しい（あたらしい）", 28, C.red, 'middle', true),lb(160, 170, "ひらがなが ついて いる", 20, C.ink, 'middle', true))] },
@@ -586,7 +586,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "れいがい：2つ ならんでも くんよみ どうし。", add: [...fresh(lb(160, 55, "手紙（てがみ）", 30, C.main, 'middle', true),lb(160, 115, "春休み（はるやすみ）", 28, C.main, 'middle', true),lb(160, 175, "手＝て　紙＝かみ", 20, C.ink, 'middle', true))] },
     { note: "「新年」を 読（よ）もう。2つ ならんで いるよ。", add: [...fresh(lb(160, 55, "新（シン）＋ 年（ネン）", 25, C.blue, 'middle', true),lb(160, 115, "シン ＋ ネン", 30, C.ink, 'middle', true),lb(160, 175, "おくりがな なし", 20, C.red, 'middle', true))] },
     { note: "答（こた）え：しんねん。音よみ。", add: [...fresh(lb(160, 90, "新年 ＝ しんねん", 34, C.red, 'middle', true),lb(160, 160, "2つ ならぶ → 音よみ", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_047_a: show([
     { note: "池（いけ）と 地（ち）。左がわが ちがう。", add: [...fresh(lb(90, 50, "池", 60, C.red, 'middle', true),lb(230, 50, "地", 60, C.blue, 'middle', true),lb(90, 100, "いけ　6かく", 15, C.red, 'middle', true),lb(230, 100, "ち　6かく", 15, C.blue, 'middle', true),lb(160, 150, "左が ちがう", 20, C.ink, 'middle', true),lb(160, 185, "池＝さんずい（水）", 16, C.main, 'middle', true),lb(160, 212, "地＝つちへん（土）", 16, C.main, 'middle', true))] },
     { note: "晴（はれ）と 時（じ）。右がわが ちがう。", add: [...fresh(lb(90, 50, "晴", 60, C.red, 'middle', true),lb(230, 50, "時", 60, C.blue, 'middle', true),lb(90, 100, "はれ　12かく", 15, C.red, 'middle', true),lb(230, 100, "じ　10かく", 15, C.blue, 'middle', true),lb(160, 150, "右が ちがう", 20, C.ink, 'middle', true),lb(160, 185, "晴＝右が「青」", 16, C.main, 'middle', true),lb(160, 212, "時＝右が「寺（てら）」", 16, C.main, 'middle', true))] },
@@ -602,7 +602,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "時（じ）も 同（おな）じ。右の「寺」は ジ。", add: [...fresh(lb(160, 45, "時 ＝ 日 ＋ 寺", 24, C.blue, 'middle', true),lb(160, 95, "寺の 音 ＝ ジ", 22, C.ink, 'middle', true),lb(160, 145, "時の 音 ＝ ジ", 22, C.red, 'middle', true),lb(160, 195, "校＝交（コウ）　理＝里（リ）", 18, C.ink, 'middle', true))] },
     { note: "「晴」と「時」。右がわが「青」なのは どっち？", add: [...fresh(lb(160, 55, "晴 ＝ 日 ＋ ？", 28, C.blue, 'middle', true),lb(160, 110, "時 ＝ 日 ＋ ？", 28, C.blue, 'middle', true),lb(160, 170, "青の 音は セイ", 22, C.ink, 'middle', true))] },
     { note: "答（こた）え：晴。青の 音「セイ」と 晴の 音「セイ」が 同じ。", add: [...fresh(lb(160, 80, "日 ＋ 青 ＝ 晴", 34, C.red, 'middle', true),lb(160, 140, "日 ＋ 寺 ＝ 時", 34, C.blue, 'middle', true),lb(160, 195, "右がわが ヒント", 20, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_048_a: show([
     { note: "おわりの かたちは 3つ。とめる・はねる・はらう。", add: [...fresh(lb(160, 40, "字の おわりかた", 24, C.red, 'middle', true),lb(160, 95, "とめる", 28, C.blue, 'middle', true),lb(160, 140, "はねる", 28, C.main, 'middle', true),lb(160, 185, "はらう", 28, C.red, 'middle', true))] },
     { note: "とめる：たての ぼうを 下で ぴたっと とめる。", add: [...fresh(lb(160, 55, "木　本　日", 44, C.blue, 'middle', true),lb(160, 115, "白　田", 44, C.blue, 'middle', true),lb(160, 180, "ぴたっと とめる", 22, C.ink, 'middle', true))] },
@@ -614,7 +614,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "しんにょうの 字。しんにょうは 3かく、てんは 1つ。", add: [...fresh(lb(160, 40, "近（7）　道（12）", 28, C.blue, 'middle', true),lb(160, 95, "通（10）　週（11）", 28, C.blue, 'middle', true),lb(160, 150, "遠（13）", 28, C.blue, 'middle', true),lb(160, 200, "左下の しんにょうに 気を つけよう", 16, C.ink, 'middle', true))] },
     { note: "「木」に 1本 足して「本」。かくすうは いくつ？", add: [...fresh(lb(160, 55, "木 ＝ 4かく", 30, C.blue, 'middle', true),lb(160, 115, "本 ＝ 木 ＋ 1本", 30, C.blue, 'middle', true),lb(160, 175, "4 ＋ 1 ＝ ？", 28, C.red, 'middle', true))] },
     { note: "答（こた）え：5かく。足した 1本ぶん ふえる。", add: [...fresh(lb(160, 80, "木 ＝ 4かく", 32, C.blue, 'middle', true),lb(160, 140, "本 ＝ 5かく", 34, C.red, 'middle', true),lb(160, 195, "4 ＋ 1 ＝ 5", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_049_a: show([
     { note: "まわりの ものには、ぜんぶ なまえが あるよ。", add: [...fresh(lb(160, 45, "ひと　どうぶつ", 28, C.blue, 'middle', true),lb(160, 100, "たべもの　ばしょ", 28, C.blue, 'middle', true),lb(160, 160, "ぜんぶ なまえが ある", 22, C.red, 'middle', true))] },
     { note: "ひと：先生・ともだち・おかあさん。", add: [...fresh(lb(160, 60, "ひとの なまえ", 28, C.main, 'middle', true),lb(160, 120, "先生　ともだち", 30, C.red, 'middle', true),lb(160, 180, "おかあさん", 30, C.red, 'middle', true))] },
@@ -624,7 +624,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「だれが」→ 犬。「なにを」→ 水。", add: [...fresh(lb(160, 50, "犬が 水を のむ。", 28, C.ink, 'middle', true),lb(160, 110, "「だれが」→ 犬", 28, C.red, 'middle', true),lb(160, 165, "「なにを」→ 水", 28, C.red, 'middle', true))] },
     { note: "「のむ」は「どうする」。うごきの ことばだよ。", add: [...fresh(lb(160, 60, "犬が 水を のむ。", 28, C.ink, 'middle', true),lb(160, 125, "のむ ＝ うごき", 30, C.blue, 'middle', true),lb(160, 180, "なまえでは ない", 22, C.ink, 'middle', true))] },
     { note: "こたえ：ものの なまえは「犬」と「水」。", add: [...fresh(lb(160, 80, "犬　水", 54, C.red, 'middle', true),lb(160, 160, "ものの なまえの ことば", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_050_a: show([
     { note: "まいにち、いろいろな うごきを して いるね。", add: [...fresh(lb(160, 45, "はしる　あるく　とぶ", 26, C.red, 'middle', true),lb(160, 100, "たべる　のむ　よむ", 26, C.red, 'middle', true),lb(160, 160, "ねる　おきる　あそぶ", 26, C.red, 'middle', true))] },
     { note: "ぶんで 見よう。「ぼくは 本を よむ。」", add: [...fresh(lb(160, 60, "ぼくは 本を よむ。", 32, C.ink, 'middle', true),lb(160, 130, "どれが うごき？", 24, C.blue, 'middle', true))] },
@@ -634,7 +634,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ねる・すわる も うごきの ことば。", add: [...fresh(lb(160, 55, "ねる　すわる　とまる", 28, C.blue, 'middle', true),lb(160, 115, "「どうする」に あたる", 24, C.ink, 'middle', true),lb(160, 175, "うごかなくても うごき", 22, C.red, 'middle', true))] },
     { note: "「ねこが さかなを たべた。」うごきは どれ？", add: [...fresh(lb(160, 60, "ねこが さかなを たべた。", 24, C.ink, 'middle', true),lb(160, 130, "ねこは どうした？", 26, C.blue, 'middle', true))] },
     { note: "こたえ：うごきの ことばは「たべた」。", add: [...fresh(lb(160, 80, "たべた", 54, C.red, 'middle', true),lb(160, 160, "ねこは どうした？ → たべた", 21, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_051_a: show([
     { note: "ものには、いろいろな ようすが あるね。", add: [...fresh(lb(160, 45, "あかい　しろい　あおい", 26, C.red, 'middle', true),lb(160, 100, "おおきい　ちいさい", 26, C.red, 'middle', true),lb(160, 160, "うれしい　たのしい", 26, C.red, 'middle', true))] },
     { note: "ぶんで 見よう。「あかい 花が さく。」", add: [...fresh(lb(160, 60, "あかい 花が さく。", 32, C.ink, 'middle', true),lb(160, 130, "どれが ようす？", 24, C.blue, 'middle', true))] },
@@ -644,7 +644,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「い」で おわる ことばと「だ」で おわる ことば。", add: [...fresh(lb(160, 55, "あかい　おおきい", 28, C.blue, 'middle', true),lb(160, 115, "しずかだ　きれいだ", 28, C.red, 'middle', true),lb(160, 175, "どちらも ようす", 22, C.ink, 'middle', true))] },
     { note: "「しろい くもが うかぶ。」ようすは どれ？", add: [...fresh(lb(160, 60, "しろい くもが うかぶ。", 26, C.ink, 'middle', true),lb(160, 130, "どんな くも？", 26, C.blue, 'middle', true))] },
     { note: "こたえ：ようすの ことばは「しろい」。", add: [...fresh(lb(160, 80, "しろい", 54, C.red, 'middle', true),lb(160, 160, "どんな くも？ → しろい", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_052_a: show([
     { note: "文には「だれが」に あたる ことばが あるよ。", add: [...fresh(lb(160, 55, "ぼくが はしる。", 34, C.ink, 'middle', true),lb(160, 125, "「だれが」→ ぼくが", 28, C.red, 'middle', true),lb(160, 180, "これが しゅご", 24, C.blue, 'middle', true))] },
     { note: "「なにが」に あたる ことばも しゅご。", add: [...fresh(lb(160, 55, "花が さく。", 34, C.ink, 'middle', true),lb(160, 125, "「なにが」→ 花が", 28, C.red, 'middle', true),lb(160, 180, "これも しゅご", 24, C.blue, 'middle', true))] },
@@ -654,7 +654,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。「ねこが さかなを たべる。」", add: [...fresh(lb(160, 60, "ねこが さかなを たべる。", 24, C.ink, 'middle', true),lb(160, 130, "おわりは「たべる」", 26, C.blue, 'middle', true))] },
     { note: "「だれが たべる？」と きく。", add: [...fresh(lb(160, 55, "ねこが さかなを たべる。", 24, C.ink, 'middle', true),lb(160, 115, "「だれが たべる？」", 28, C.blue, 'middle', true),lb(160, 170, "→ ねこ", 34, C.red, 'middle', true))] },
     { note: "こたえ：しゅごは「ねこが」。", add: [...fresh(lb(160, 80, "ねこが", 54, C.red, 'middle', true),lb(160, 160, "「だれが たべる？」→ ねこ", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_053_a: show([
     { note: "文の おわりの ほうに、だいじな ことばが あるよ。", add: [...fresh(lb(160, 55, "犬が はしる。", 34, C.ink, 'middle', true),lb(160, 125, "「どうする」→ はしる", 28, C.red, 'middle', true),lb(160, 180, "これが じゅつご", 24, C.blue, 'middle', true))] },
     { note: "「どんなだ」に あたる ことばも じゅつご。", add: [...fresh(lb(160, 55, "花が あかい。", 34, C.ink, 'middle', true),lb(160, 125, "「どんなだ」→ あかい", 28, C.red, 'middle', true),lb(160, 180, "これも じゅつご", 24, C.blue, 'middle', true))] },
@@ -664,7 +664,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。「空が あおい。」", add: [...fresh(lb(160, 60, "空が あおい。", 36, C.ink, 'middle', true),lb(160, 130, "じゅつごは どれ？", 26, C.blue, 'middle', true))] },
     { note: "おわりの ことばを 見て「空は どんなだ？」", add: [...fresh(lb(160, 55, "空が あおい。", 30, C.ink, 'middle', true),lb(160, 115, "「空は どんなだ？」", 28, C.blue, 'middle', true),lb(160, 170, "→ あおい", 34, C.red, 'middle', true))] },
     { note: "こたえ：じゅつごは「あおい」。", add: [...fresh(lb(160, 80, "あおい", 54, C.red, 'middle', true),lb(160, 160, "「どんなだ」に あたる", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_054_a: show([
     { note: "「いつ」を あらわす ことばが あるよ。", add: [...fresh(lb(160, 45, "あさ　ひる　よる", 28, C.blue, 'middle', true),lb(160, 100, "きのう　きょう　あした", 26, C.blue, 'middle', true),lb(160, 160, "じかんや ひを あらわす", 22, C.red, 'middle', true))] },
     { note: "「どこで」を あらわす ことばも あるよ。", add: [...fresh(lb(160, 45, "学校で　うちで", 28, C.blue, 'middle', true),lb(160, 100, "こうえんで　うみで", 28, C.blue, 'middle', true),lb(160, 160, "ばしょに「で」", 22, C.red, 'middle', true))] },
@@ -674,7 +674,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "❓なぜ「いつ」「どこで」が ひつよう？", add: [...fresh(lb(160, 50, "「本を よんだ。」だけ", 26, C.ink, 'middle', true),lb(160, 105, "いつ？ どこで？", 26, C.ink, 'middle', true),lb(160, 160, "わからない！", 28, C.red, 'middle', true))] },
     { note: "ためして みよう。「きょう、うみで およいだ。」", add: [...fresh(lb(160, 60, "きょう、うみで およいだ。", 23, C.ink, 'middle', true),lb(160, 130, "いつ？　どこで？", 26, C.blue, 'middle', true))] },
     { note: "こたえ：いつは「きょう」、どこでは「うみで」。", add: [...fresh(lb(160, 70, "いつ ＝ きょう", 32, C.red, 'middle', true),lb(160, 130, "どこで ＝ うみで", 32, C.red, 'middle', true),lb(160, 190, "くわしく なった！", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_055_a: show([
     { note: "むかしばなしの はじまりを おもいだして みよう。", add: [...fresh(lb(160, 50, "むかし むかし、", 26, C.ink, 'middle', true),lb(160, 110, "おじいさん□ いました。", 25, C.ink, 'middle', true),lb(160, 170, "□に 入る のは？", 24, C.blue, 'middle', true))] },
     { note: "おじいさんは はじめて 出て きたよ。だから「が」。", add: [...fresh(lb(160, 60, "おじいさんが いました。", 25, C.red, 'middle', true),lb(160, 130, "はじめて 出る ひと", 26, C.blue, 'middle', true),lb(160, 185, "→ が", 36, C.red, 'middle', true))] },
@@ -684,7 +684,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "こたえにも「が」を つかうよ。", add: [...fresh(lb(160, 55, "ぼくが しました。", 34, C.red, 'middle', true),lb(160, 125, "「だれが」の こたえ → が", 23, C.blue, 'middle', true))] },
     { note: "ためして みよう。「おばあさん□ いました。おばあさん□ 川へ いきました。」", add: [...fresh(lb(160, 60, "おばあさん□ いました。", 25, C.ink, 'middle', true),lb(160, 125, "おばあさん□ 川へ いきました。", 19, C.ink, 'middle', true))] },
     { note: "こたえ：1つめは「が」、2つめは「は」。", add: [...fresh(lb(160, 70, "おばあさんが いました。", 25, C.red, 'middle', true),lb(160, 130, "おばあさんは 川へ いきました。", 19, C.red, 'middle', true),lb(160, 190, "はじめて → が　もう 出た → は", 18, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_056_a: show([
     { note: "ことばの あとの ちいさな ことばを 見よう。", add: [...fresh(lb(160, 45, "本を よむ", 30, C.red, 'middle', true),lb(160, 100, "学校に いく", 30, C.red, 'middle', true),lb(160, 155, "こうえんで あそぶ", 30, C.red, 'middle', true),lb(160, 205, "を・に・で", 22, C.blue, 'middle', true))] },
     { note: "「を」は うごきを うける もの。", add: [...fresh(lb(160, 55, "本を よむ", 36, C.red, 'middle', true),lb(160, 120, "水を のむ", 36, C.red, 'middle', true),lb(160, 180, "「なにを」に あたる", 22, C.blue, 'middle', true))] },
@@ -694,7 +694,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ちいさな ことばで いみが はっきりする。", add: [...fresh(lb(160, 60, "ともだちに あげる", 32, C.red, 'middle', true),lb(160, 125, "ともだち → あいて", 26, C.blue, 'middle', true),lb(160, 180, "だから「に」", 28, C.red, 'middle', true))] },
     { note: "ためして みよう。「学校□ 本□ よむ。」", add: [...fresh(lb(160, 60, "学校□ 本□ よむ。", 32, C.ink, 'middle', true),lb(160, 130, "どこで？　なにを？", 26, C.blue, 'middle', true))] },
     { note: "こたえ：「学校で 本を よむ。」", add: [...fresh(lb(160, 80, "学校で 本を よむ。", 32, C.red, 'middle', true),lb(160, 150, "どこで ＝ で　なにを ＝ を", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_057_a: show([
     { note: "ものを ならべる ことばが 2つ あるよ。", add: [...fresh(lb(160, 55, "りんごと みかん", 34, C.blue, 'middle', true),lb(160, 125, "りんごや みかん", 34, C.red, 'middle', true),lb(160, 185, "どこが ちがう？", 24, C.ink, 'middle', true))] },
     { note: "「と」はならべた ものが ぜんぶ。", add: [...fresh(lb(160, 55, "りんごと みかん", 34, C.blue, 'middle', true),lb(160, 120, "りんご ＋ みかん", 28, C.ink, 'middle', true),lb(160, 180, "この 2つ ぜんぶ", 26, C.red, 'middle', true))] },
@@ -704,7 +704,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。ほかにも ありそうなのは？", add: [...fresh(lb(160, 55, "ノートと えんぴつ", 32, C.blue, 'middle', true),lb(160, 120, "ノートや えんぴつ", 32, C.red, 'middle', true),lb(160, 180, "どちら？", 26, C.ink, 'middle', true))] },
     { note: "「や」は れいを あげる ことば。", add: [...fresh(lb(160, 55, "ノートや えんぴつ", 34, C.red, 'middle', true),lb(160, 125, "けしゴムも あるかも", 26, C.blue, 'middle', true))] },
     { note: "こたえ：ほかにも あるかも しれないのは「や」。", add: [...fresh(lb(160, 70, "ノートや えんぴつ", 34, C.red, 'middle', true),lb(160, 140, "「や」＝れい", 28, C.blue, 'middle', true),lb(160, 195, "「と」＝ぜんぶ", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_058_a: show([
     { note: "ものを さして いう ことばが あるよ。", add: [...fresh(lb(160, 45, "これ　それ　あれ　どれ", 26, C.red, 'middle', true),lb(160, 110, "「こ」「そ」「あ」「ど」", 24, C.blue, 'middle', true),lb(160, 170, "こそあど ことば", 28, C.ink, 'middle', true))] },
     { note: "「こ」は じぶんに ちかい もの。", add: [...fresh(lb(160, 55, "これ　ここ　この", 34, C.red, 'middle', true),lb(160, 125, "じぶんの 手の ちかく", 26, C.blue, 'middle', true))] },
@@ -714,7 +714,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。ともだちの 手の ほんを さす。", add: [...fresh(lb(160, 60, "（　）は なんの ほん？", 26, C.ink, 'middle', true),lb(160, 130, "あいてに ちかい もの", 26, C.blue, 'middle', true))] },
     { note: "あいてに ちかいのは「そ」の ことば。", add: [...fresh(lb(160, 60, "あいてに ちかい", 28, C.blue, 'middle', true),lb(160, 125, "→ 「そ」", 36, C.red, 'middle', true),lb(160, 180, "それ・そこ・その", 24, C.ink, 'middle', true))] },
     { note: "こたえ：「それ」。", add: [...fresh(lb(160, 80, "それは なんの ほん？", 29, C.red, 'middle', true),lb(160, 150, "あいてに ちかい もの", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_059_a: show([
     { note: "文と 文を つなぐ ことばが あるよ。", add: [...fresh(lb(160, 55, "だから　でも", 38, C.red, 'middle', true),lb(160, 120, "文と 文を つなぐ", 28, C.ink, 'middle', true),lb(160, 180, "どちらが どんな はたらき？", 22, C.blue, 'middle', true))] },
     { note: "「だから」は わけ → けっか。", add: [...fresh(lb(160, 55, "雨が ふって いる。", 28, C.ink, 'middle', true),lb(160, 115, "だから かさを さす。", 28, C.red, 'middle', true),lb(160, 180, "わけ → けっか", 26, C.blue, 'middle', true))] },
@@ -724,7 +724,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。「雨が ふって いる。（　）かさを さす。」", add: [...fresh(lb(160, 60, "雨が ふって いる。", 28, C.ink, 'middle', true),lb(160, 125, "（　）かさを さす。", 28, C.ink, 'middle', true))] },
     { note: "雨が わけで、かさが けっか。", add: [...fresh(lb(160, 55, "雨 → わけ", 30, C.blue, 'middle', true),lb(160, 115, "かさを さす → けっか", 27, C.blue, 'middle', true),lb(160, 175, "わけ → けっか", 30, C.red, 'middle', true))] },
     { note: "こたえ：「だから」。", add: [...fresh(lb(160, 80, "だから", 54, C.red, 'middle', true),lb(160, 160, "わけ → けっか", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_060_a: show([
     { note: "3つの つなぐ ことばを くらべよう。", add: [...fresh(lb(160, 50, "そして", 34, C.blue, 'middle', true),lb(160, 105, "それから", 34, C.red, 'middle', true),lb(160, 160, "しかし", 34, C.main, 'middle', true),lb(160, 205, "それぞれ はたらきが ちがう", 20, C.ink, 'middle', true))] },
     { note: "「そして」は つけたし。", add: [...fresh(lb(160, 55, "こうえんで あそんだ。", 26, C.ink, 'middle', true),lb(160, 115, "そして 日が くれた。", 28, C.blue, 'middle', true),lb(160, 180, "つづけて たす", 26, C.red, 'middle', true))] },
@@ -734,7 +734,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。「手を あらった。（　）、ごはんを たべた。」", add: [...fresh(lb(160, 60, "手を あらった。", 30, C.ink, 'middle', true),lb(160, 125, "（　）ごはんを たべた。", 25, C.ink, 'middle', true))] },
     { note: "「つぎに」と いう じゅんばんだね。", add: [...fresh(lb(160, 60, "手を あらう → ごはん", 27, C.blue, 'middle', true),lb(160, 125, "じゅんばん", 34, C.red, 'middle', true),lb(160, 180, "→ それから", 30, C.red, 'middle', true))] },
     { note: "こたえ：「それから」。", add: [...fresh(lb(160, 80, "それから", 54, C.red, 'middle', true),lb(160, 160, "じゅんばんを あらわす", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_061_a: show([
     { note: "はんたいの ことばの ペアを 見てみよう。", add: [...fresh(bx(24, 14, 112, 44, "大きい", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "小さい", C.main, FILL.warm, 20),lb(160, 43, "⇔", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "上", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "下", C.main, FILL.warm, 20),lb(160, 99, "⇔", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "右", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "左", C.main, FILL.warm, 20),lb(160, 155, "⇔", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "出る", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "入る", C.main, FILL.warm, 20),lb(160, 211, "⇔", 22, C.red, 'middle', true))] },
     { note: "「大きい」は なにを くらべる ことば？", add: [...fresh(lb(160, 97, "大きい", 36, C.red, 'middle', true),lb(160, 143, "なにを くらべる？", 24, C.blue, 'middle', true))] },
@@ -745,7 +745,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ながさの ものさしで はんたいの はしを さがす。", add: [...fresh(lb(160, 45, "ながさの ものさし", 22, C.blue, 'middle', true),ln(50, 110, 270, 110, C.ink, false, 4),ln(50, 96, 50, 124, C.ink, false, 2),ln(270, 96, 270, 124, C.ink, false, 2),lb(50, 160, "みじかい", 22, C.red, 'middle', true),lb(270, 160, "ながい", 22, C.red, 'middle', true))] },
     { note: "こたえは「みじかい」。", add: [...fresh(lb(160, 120, "ながい ⇔ みじかい", 34, C.red, 'middle', true))] },
     { note: "文に して たしかめよう。いみが ひっくりかえる。", add: [...fresh(lb(160, 74, "ながい えんぴつ", 26, C.ink, 'middle', true),lb(160, 120, "みじかい えんぴつ", 26, C.ink, 'middle', true),lb(160, 166, "ながい ⇔ みじかい", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_062_a: show([
     { note: "いみが にている ことばの ペア。", add: [...fresh(bx(24, 14, 112, 44, "きれい", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "うつくしい", C.main, FILL.warm, 20),lb(160, 43, "＝", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "たくさん", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "いっぱい", C.main, FILL.warm, 20),lb(160, 99, "＝", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "とても", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "たいへん", C.main, FILL.warm, 20),lb(160, 155, "＝", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "だいじ", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "たいせつ", C.main, FILL.warm, 20),lb(160, 211, "＝", 22, C.red, 'middle', true))] },
     { note: "「きれい」も「うつくしい」も 花に つかえる。", add: [...fresh(lb(160, 74, "きれいな 花", 30, C.ink, 'middle', true),lb(160, 120, "うつくしい 花", 30, C.ink, 'middle', true),lb(160, 166, "いみは にている", 24, C.blue, 'middle', true))] },
@@ -755,7 +755,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "3つの ことばを いれかえて みよう。", add: [...fresh(lb(160, 74, "たいへん 大きい → おなじ", 24, C.red, 'middle', true),lb(160, 120, "ちいさい 大きい → へん", 24, C.ink, 'middle', true),lb(160, 166, "すこし 大きい → よわく なる", 24, C.ink, 'middle', true))] },
     { note: "こたえは「たいへん」。", add: [...fresh(lb(160, 120, "とても ＝ たいへん", 34, C.red, 'middle', true))] },
     { note: "よみくらべて たしかめよう。", add: [...fresh(lb(160, 74, "とても おもしろい", 26, C.ink, 'middle', true),lb(160, 120, "たいへん おもしろい", 26, C.ink, 'middle', true),lb(160, 166, "いみは かわらない", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_063_a: show([
     { note: "おなじ なかまの ことばを まとめよう。", add: [...fresh(lb(160, 97, "りんご みかん ぶどう", 28, C.ink, 'middle', true),lb(160, 143, "→ くだもの", 32, C.red, 'middle', true))] },
     { note: "でんしゃ バス ふね も まとめられる。", add: [...fresh(lb(160, 97, "でんしゃ バス ふね", 28, C.ink, 'middle', true),lb(160, 143, "→ のりもの", 32, C.red, 'middle', true))] },
@@ -765,7 +765,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「どれも くだもの」と いえるかな？", add: [...fresh(lb(160, 74, "バナナ ○ りんご ○", 28, C.ink, 'middle', true),lb(160, 120, "みかん ○", 28, C.ink, 'middle', true),lb(160, 166, "にんじん ？", 28, C.red, 'middle', true))] },
     { note: "こたえは「にんじん」。", add: [...fresh(lb(160, 97, "にんじん ＝ やさい", 32, C.red, 'middle', true),lb(160, 143, "あとの 3つ ＝ くだもの", 24, C.blue, 'middle', true))] },
     { note: "「くだもの」と まとめて たしかめよう。", add: [...fresh(lb(160, 74, "バナナも りんごも", 26, C.ink, 'middle', true),lb(160, 120, "みかんも くだもの", 26, C.ink, 'middle', true),lb(160, 166, "にんじんは やさい", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_064_a: show([
     { note: "ものに よって かぞえかたが ちがう。", add: [...fresh(bx(24, 14, 112, 44, "いぬ ねこ", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "1ひき", C.main, FILL.warm, 20),lb(160, 43, "→", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "えんぴつ", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "1ぽん", C.main, FILL.warm, 20),lb(160, 99, "→", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "かみ", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "1まい", C.main, FILL.warm, 20),lb(160, 155, "→", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "くるま", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "1だい", C.main, FILL.warm, 20),lb(160, 211, "→", 22, C.red, 'middle', true))] },
     { note: "なぜ ちがうの？ かたちや しゅるいが ちがう。", add: [...fresh(lb(160, 74, "なぜ？", 32, C.blue, 'middle', true),lb(160, 120, "かたちや しゅるいで", 24, C.ink, 'middle', true),lb(160, 166, "かぞえかたが きまる", 24, C.ink, 'middle', true))] },
@@ -775,7 +775,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "かみは うすくて ひらたい もの。", add: [...fresh(lb(160, 97, "かみ ＝ うすい", 30, C.red, 'middle', true),lb(160, 143, "うすい ものは「まい」", 24, C.ink, 'middle', true))] },
     { note: "こたえは「3まい」。", add: [...fresh(lb(160, 120, "かみが 3まい", 34, C.red, 'middle', true))] },
     { note: "ちがいを たしかめよう。", add: [...fresh(lb(160, 74, "えんぴつ 3ぼん", 28, C.ink, 'middle', true),lb(160, 120, "かみ 3まい", 28, C.ink, 'middle', true),lb(160, 166, "ほん 3さつ", 28, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_065_a: show([
     { note: "音を まねた ことば。", add: [...fresh(bx(24, 14, 112, 44, "ワンワン", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "いぬ", C.main, FILL.warm, 20),lb(160, 43, "は", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "ニャーニャー", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "ねこ", C.main, FILL.warm, 20),lb(160, 99, "は", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "ザーザー", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "あめ", C.main, FILL.warm, 20),lb(160, 155, "は", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "ゴロゴロ", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "かみなり", C.main, FILL.warm, 20),lb(160, 211, "は", 22, C.red, 'middle', true))] },
     { note: "なぜ 音を まねるの？", add: [...fresh(lb(160, 74, "なぜ？", 34, C.red, 'middle', true),lb(160, 120, "きこえた 音を もじで うつす", 22, C.ink, 'middle', true),lb(160, 166, "よむ 人が 音を おもいうかべる", 22, C.ink, 'middle', true))] },
@@ -785,7 +785,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "あめの 音に にて いるのは どれ？", add: [...fresh(lb(160, 74, "ゴロゴロ ＝ かみなり", 24, C.ink, 'middle', true),lb(160, 120, "ワンワン ＝ いぬ", 24, C.ink, 'middle', true),lb(160, 166, "ザーザー ＝ あめ", 24, C.red, 'middle', true))] },
     { note: "こたえは「ザーザー」。", add: [...fresh(lb(160, 120, "あめが ザーザー ふる", 30, C.red, 'middle', true))] },
     { note: "こえに 出して たしかめよう。", add: [...fresh(lb(160, 97, "ザーザー ザーザー", 30, C.ink, 'middle', true),lb(160, 143, "あめの 音が きこえた！", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_066_a: show([
     { note: "ようすを あらわす ことば。", add: [...fresh(bx(24, 14, 112, 44, "にこにこ", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "わらった かお", C.main, FILL.warm, 20),lb(160, 43, "＝", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "きらきら", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "ひかる ほし", C.main, FILL.warm, 20),lb(160, 99, "＝", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "ふわふわ", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "かるい わた", C.main, FILL.warm, 20),lb(160, 155, "＝", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "ぐるぐる", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "まわる", C.main, FILL.warm, 20),lb(160, 211, "＝", 22, C.red, 'middle', true))] },
     { note: "ようすの ことばは 音が しない。", add: [...fresh(lb(160, 74, "にこにこ", 32, C.red, 'middle', true),lb(160, 120, "音は きこえない", 24, C.ink, 'middle', true),lb(160, 166, "かおの ようす", 24, C.blue, 'middle', true))] },
@@ -795,7 +795,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ほしは 音を 出さない。ようすの ことばを えらぶ。", add: [...fresh(lb(160, 97, "ほしは 音を 出さない", 24, C.ink, 'middle', true),lb(160, 143, "→ ようすの ことば", 26, C.red, 'middle', true))] },
     { note: "こたえは「きらきら」。", add: [...fresh(lb(160, 120, "ほしが きらきら ひかる", 30, C.red, 'middle', true))] },
     { note: "こえに 出して たしかめよう。", add: [...fresh(lb(160, 97, "きらきら ひかる ほし", 28, C.ink, 'middle', true),lb(160, 143, "ようすが 見えた！", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_067_a: show([
     { note: "おなじ「あそぶ」でも かたちが ちがう。", add: [...fresh(lb(160, 74, "あそぶ", 28, C.ink, 'middle', true),lb(160, 120, "あそんだ", 28, C.red, 'middle', true),lb(160, 166, "あそんでいる", 28, C.blue, 'middle', true))] },
     { note: "あそんだ ＝ もう すんだ こと。", add: [...fresh(lb(160, 97, "きのう あそんだ", 30, C.red, 'middle', true),lb(160, 143, "もう おわった こと", 24, C.ink, 'middle', true))] },
@@ -805,7 +805,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "てがかりの ことば「いま」を さがす。", add: [...fresh(lb(160, 97, "いま → つづいて いる", 28, C.red, 'middle', true),lb(160, 143, "→「〜ている」", 28, C.red, 'middle', true))] },
     { note: "こたえは「いる」。", add: [...fresh(lb(160, 97, "いま、いぬが", 28, C.ink, 'middle', true),lb(160, 143, "はしって いる。", 30, C.red, 'middle', true))] },
     { note: "くらべて たしかめよう。", add: [...fresh(lb(160, 74, "いま はしって いる", 26, C.red, 'middle', true),lb(160, 120, "きのう はしって いた", 26, C.ink, 'middle', true),lb(160, 166, "てがかりで かたちが かわる", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_068_a: show([
     { note: "ふつうの いいかたと ていねいな いいかた。", add: [...fresh(bx(24, 14, 112, 44, "いく", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "いきます", C.main, FILL.warm, 20),lb(160, 43, "→", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "たべる", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "たべます", C.main, FILL.warm, 20),lb(160, 99, "→", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "ほんだ", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "ほんです", C.main, FILL.warm, 20),lb(160, 155, "→", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "ある", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "あります", C.main, FILL.warm, 20),lb(160, 211, "→", 22, C.red, 'middle', true))] },
     { note: "ていねいな いいかたは「です・ます」。", add: [...fresh(lb(160, 97, "です ・ ます", 34, C.red, 'middle', true),lb(160, 143, "ていねいな いいかた", 24, C.blue, 'middle', true))] },
@@ -815,7 +815,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "おわりの「いく」を「いきます」に かえる。", add: [...fresh(lb(160, 97, "いく → いきます", 30, C.red, 'middle', true),lb(160, 143, "のこりは かえない", 24, C.ink, 'middle', true))] },
     { note: "こたえは「いきます」。", add: [...fresh(lb(160, 97, "わたしは 学校へ", 28, C.ink, 'middle', true),lb(160, 143, "いきます。", 34, C.red, 'middle', true))] },
     { note: "おわりを こえに 出して たしかめよう。", add: [...fresh(lb(160, 97, "わたしは 学校へ いきます。", 24, C.ink, 'middle', true),lb(160, 143, "「ます」で おわった！", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_069_a: show([
     { note: "はなす ことばと かく ことばは ちがう。", add: [...fresh(lb(160, 74, "「あのね、ぼくね…」", 26, C.ink, 'middle', true),lb(160, 120, "↓", 26, C.red, 'middle', true),lb(160, 166, "「ぼくは…」", 26, C.red, 'middle', true))] },
     { note: "はなす とき：あいてが 目の まえ。", add: [...fresh(lb(160, 74, "はなす とき", 28, C.blue, 'middle', true),lb(160, 120, "あいてが 目の まえに いる", 24, C.ink, 'middle', true),lb(160, 166, "こえや かおで つたわる", 24, C.ink, 'middle', true))] },
@@ -825,7 +825,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「あのね」「ね」を とる。「ぼくは」に する。", add: [...fresh(lb(160, 74, "とる：あのね ね ね", 26, C.ink, 'middle', true),lb(160, 120, "ぼくね → ぼくは", 26, C.red, 'middle', true),lb(160, 166, "いったの → いきました", 26, C.red, 'middle', true))] },
     { note: "こたえは「ぼくは きのう、プールへ いきました。」", add: [...fresh(lb(160, 97, "ぼくは きのう、", 28, C.red, 'middle', true),lb(160, 143, "プールへ いきました。", 28, C.red, 'middle', true))] },
     { note: "こえに 出して たしかめよう。", add: [...fresh(lb(160, 74, "ぼくは きのう、", 26, C.ink, 'middle', true),lb(160, 120, "プールへ いきました。", 26, C.ink, 'middle', true),lb(160, 166, "あいてが いなくても つたわる", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_070_a: show([
     { note: "「。」と「、」の やくわり。", add: [...fresh(lb(160, 97, "。 ＝ 文の おわり", 28, C.red, 'middle', true),lb(160, 143, "、 ＝ 文の 中の きれめ", 28, C.blue, 'middle', true))] },
     { note: "なぜ「、」を うつの？", add: [...fresh(lb(160, 74, "なぜ？", 34, C.red, 'middle', true),lb(160, 120, "よむ とき ひとやすみ", 24, C.ink, 'middle', true),lb(160, 166, "いみの きれめを しめす", 24, C.ink, 'middle', true))] },
@@ -834,7 +834,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ことばを わける。「ここで」で きる。", add: [...fresh(lb(160, 97, "ここで ／ はきものを ／ ぬぐ", 24, C.ink, 'middle', true),lb(160, 143, "「ここで」で ひと いき", 24, C.red, 'middle', true))] },
     { note: "こたえは「ここで、はきものを ぬぐ。」", add: [...fresh(lb(160, 120, "ここで、はきものを ぬぐ。", 28, C.red, 'middle', true))] },
     { note: "「、」の ばしょを かえると いみが かわる。", add: [...fresh(lb(160, 74, "ここで、はきものを ぬぐ。", 24, C.red, 'middle', true),lb(160, 120, "ここでは、きものを ぬぐ。", 24, C.ink, 'middle', true),lb(160, 166, "いみが ちがう", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_071_a: show([
     { note: "文には はじまりと おわりが ある。", add: [...fresh(lb(160, 97, "はじまり", 30, C.blue, 'middle', true),lb(160, 143, "おわり（。）", 30, C.red, 'middle', true))] },
     { note: "ノートの ますめ。さいしょの 1ますを あける。", add: [...fresh(bx(18, 100, 32, 32, "", C.main, FILL.warm, 22),bx(54, 100, 32, 32, "き", C.main, FILL.warm, 22),bx(90, 100, 32, 32, "ょ", C.main, FILL.warm, 22),bx(126, 100, 32, 32, "う", C.main, FILL.warm, 22),bx(162, 100, 32, 32, "、", C.main, FILL.warm, 22),bx(198, 100, 32, 32, "わ", C.main, FILL.warm, 22),bx(234, 100, 32, 32, "た", C.main, FILL.warm, 22),bx(270, 100, 32, 32, "し", C.main, FILL.warm, 22),lb(160, 190, "1ますめを あける", 22, C.red, 'middle', true))] },
@@ -844,7 +844,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "1ます あけて、「。」を うつ。", add: [...fresh(lb(160, 97, "1ます あける", 28, C.red, 'middle', true),lb(160, 143, "いきました ＋「。」", 28, C.red, 'middle', true))] },
     { note: "こたえ。1ます あけて かきはじめ、「。」で おわる。", add: [...fresh(bx(9, 90, 30, 30, "", C.main, FILL.warm, 20),bx(43, 90, 30, 30, "き", C.main, FILL.warm, 20),bx(77, 90, 30, 30, "ょ", C.main, FILL.warm, 20),bx(111, 90, 30, 30, "う", C.main, FILL.warm, 20),bx(145, 90, 30, 30, "、", C.main, FILL.warm, 20),bx(179, 90, 30, 30, "わ", C.main, FILL.warm, 20),bx(213, 90, 30, 30, "た", C.main, FILL.warm, 20),bx(247, 90, 30, 30, "し", C.main, FILL.warm, 20),bx(281, 90, 30, 30, "は", C.main, FILL.warm, 20),lb(160, 160, "こうえんに いきました。", 26, C.red, 'middle', true))] },
     { note: "たしかめよう。", add: [...fresh(lb(160, 74, "1ますめが あいている", 24, C.ink, 'middle', true),lb(160, 120, "おわりに「。」がある", 24, C.ink, 'middle', true),lb(160, 166, "「いきました」で おわる", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_072_a: show([
     { note: "人が はなした ことばは「」に いれる。", add: [...fresh(lb(160, 97, "「おはよう」", 36, C.red, 'middle', true),lb(160, 143, "ぼくが はなした ことば", 24, C.ink, 'middle', true))] },
     { note: "「」の 中が はなした ことば、そとは せつめい。", add: [...fresh(lb(160, 74, "ぼくが", 24, C.ink, 'middle', true),lb(160, 120, "「おはよう」", 30, C.red, 'middle', true),lb(160, 166, "と いいました。", 24, C.ink, 'middle', true))] },
@@ -853,7 +853,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "だれが はなした？ なにを はなした？", add: [...fresh(lb(160, 97, "だれが → おかあさん", 26, C.blue, 'middle', true),lb(160, 143, "なにを →「ごはんだよ」", 26, C.red, 'middle', true))] },
     { note: "こたえは「ごはんだよ」を かこむ。", add: [...fresh(lb(160, 74, "おかあさんが", 24, C.ink, 'middle', true),lb(160, 120, "「ごはんだよ」", 32, C.red, 'middle', true),lb(160, 166, "と いいました。", 24, C.ink, 'middle', true))] },
     { note: "たしかめよう。「」の 中は はなした ことばだけ。", add: [...fresh(lb(160, 97, "「ごはんだよ」", 30, C.red, 'middle', true),lb(160, 143, "「おかあさんが」は 入らない", 22, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_073_a: show([
     { note: "みじかい 文が つづくと よみにくい。", add: [...fresh(lb(160, 74, "あさ おきました。", 26, C.ink, 'middle', true),lb(160, 120, "かおを あらいました。", 26, C.ink, 'middle', true),lb(160, 166, "ぶつぶつ きれている", 22, C.red, 'middle', true))] },
     { note: "つなげると ながれが 見える。", add: [...fresh(lb(160, 74, "あさ おきて、", 26, C.red, 'middle', true),lb(160, 120, "かおを あらいました。", 26, C.red, 'middle', true),lb(160, 166, "ひとつの 文に なった", 22, C.blue, 'middle', true))] },
@@ -863,7 +863,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "1つ目の おわりを「おきて」に かえる。", add: [...fresh(lb(160, 97, "おきました → おきて", 26, C.red, 'middle', true),lb(160, 143, "2つ目を つづける", 24, C.ink, 'middle', true))] },
     { note: "こたえは「あさ おきて、かおを あらいました。」", add: [...fresh(lb(160, 97, "あさ おきて、", 28, C.red, 'middle', true),lb(160, 143, "かおを あらいました。", 28, C.red, 'middle', true))] },
     { note: "たしかめよう。「。」は 1つだけ。", add: [...fresh(lb(160, 74, "あさ おきて、", 26, C.ink, 'middle', true),lb(160, 120, "かおを あらいました。", 26, C.ink, 'middle', true),lb(160, 166, "「。」が 1つだけ", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_074_a: show([
     { note: "5つの ことばで 文が できる。", add: [...fresh(lb(160, 74, "いつ ・ どこで ・ だれが", 24, C.ink, 'middle', true),lb(160, 120, "なにを ・ どうした", 24, C.ink, 'middle', true),lb(160, 166, "→ 5つ そろえよう", 24, C.red, 'middle', true))] },
     { note: "5つの ことばを、ひとつずつ 見よう。", add: [...fresh(bx(24, 14, 100, 36, "いつ", C.main, FILL.warm, 18),bx(136, 14, 160, 36, "（ここに かく）", C.red, FILL.warm, 18),bx(24, 58, 100, 36, "どこで", C.main, FILL.warm, 18),bx(136, 58, 160, 36, "（ここに かく）", C.red, FILL.warm, 18),bx(24, 102, 100, 36, "だれが", C.main, FILL.warm, 18),bx(136, 102, 160, 36, "（ここに かく）", C.red, FILL.warm, 18),bx(24, 146, 100, 36, "なにを", C.main, FILL.warm, 18),bx(136, 146, 160, 36, "（ここに かく）", C.red, FILL.warm, 18),bx(24, 190, 100, 36, "どうした", C.main, FILL.warm, 18),bx(136, 190, 160, 36, "（ここに かく）", C.red, FILL.warm, 18))] },
@@ -872,7 +872,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "じゅんに ならべて つなぐ。", add: [...fresh(lb(160, 74, "けさ、にわで", 28, C.red, 'middle', true),lb(160, 120, "おとうとが みずを", 28, C.red, 'middle', true),lb(160, 166, "まきました。", 28, C.red, 'middle', true))] },
     { note: "こたえは「けさ、にわで おとうとが みずを まきました。」", add: [...fresh(lb(160, 97, "けさ、にわで おとうとが", 22, C.red, 'middle', true),lb(160, 143, "みずを まきました。", 26, C.red, 'middle', true))] },
     { note: "5つ そろって いるか たしかめよう。", add: [...fresh(lb(160, 74, "けさ、にわで おとうとが", 22, C.ink, 'middle', true),lb(160, 120, "みずを まきました。", 22, C.ink, 'middle', true),lb(160, 166, "5つ ぜんぶ そろった！", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_075_a: show([
     { note: "「はなが さいて いた。」だけでは えが うかばない。", add: [...fresh(lb(160, 97, "はなが さいて いた。", 28, C.ink, 'middle', true),lb(160, 143, "どんな はな？", 26, C.red, 'middle', true))] },
     { note: "くわしくする コツ。つけたす ことば。", add: [...fresh(lb(160, 97, "いろ ・ 大きさ ・ かず", 26, C.red, 'middle', true),lb(160, 143, "かたち ・ ようす", 26, C.blue, 'middle', true))] },
@@ -881,7 +881,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "1つずつ つけたす。", add: [...fresh(lb(160, 74, "赤くて ← いろ", 26, C.red, 'middle', true),lb(160, 120, "小さい ← 大きさ", 26, C.red, 'middle', true),lb(160, 166, "3つ ← かず", 26, C.red, 'middle', true))] },
     { note: "こたえは「赤くて 小さい はなが 3つ さいて いた。」", add: [...fresh(lb(160, 97, "赤くて 小さい はなが", 24, C.red, 'middle', true),lb(160, 143, "3つ さいて いた。", 28, C.red, 'middle', true))] },
     { note: "目を とじて たしかめよう。えが うかぶ。", add: [...fresh(lb(160, 74, "赤くて 小さい はなが", 24, C.ink, 'middle', true),lb(160, 120, "3つ さいて いた。", 24, C.ink, 'middle', true),lb(160, 166, "えが うかんだ！", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_076_a: show([
     { note: "気もちを あらわす ことば。", add: [...fresh(bx(24, 14, 112, 44, "もらった", C.main, FILL.warm, 20),bx(184, 14, 112, 44, "うれしい", C.main, FILL.warm, 20),lb(160, 43, "→", 22, C.red, 'middle', true),bx(24, 70, 112, 44, "まけた", C.main, FILL.warm, 20),bx(184, 70, 112, 44, "くやしい", C.main, FILL.warm, 20),lb(160, 99, "→", 22, C.red, 'middle', true),bx(24, 126, 112, 44, "いなくなる", C.main, FILL.warm, 20),bx(184, 126, 112, 44, "さびしい", C.main, FILL.warm, 20),lb(160, 155, "→", 22, C.red, 'middle', true),bx(24, 182, 112, 44, "大きな 音", C.main, FILL.warm, 20),bx(184, 182, 112, 44, "びっくり", C.main, FILL.warm, 20),lb(160, 211, "→", 22, C.red, 'middle', true))] },
     { note: "なぜ ことばで かくの？ 気もちは 見えない。", add: [...fresh(lb(160, 74, "なぜ？", 34, C.red, 'middle', true),lb(160, 120, "気もちは 目に 見えない", 24, C.ink, 'middle', true),lb(160, 166, "かかないと つたわらない", 24, C.ink, 'middle', true))] },
@@ -890,7 +890,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なにが あった？ どう なった？", add: [...fresh(lb(160, 97, "まけた → のぞみが かなわない", 22, C.ink, 'middle', true),lb(160, 143, "なきそう → つらい 気もち", 22, C.ink, 'middle', true))] },
     { note: "こたえは「くやしい」。", add: [...fresh(lb(160, 97, "ゲームに まけて、", 26, C.ink, 'middle', true),lb(160, 143, "くやしかった。", 34, C.red, 'middle', true))] },
     { note: "よんで たしかめよう。気もちが つたわる。", add: [...fresh(lb(160, 97, "まけて くやしかった", 28, C.red, 'middle', true),lb(160, 143, "「うれしかった」は おかしい", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_077_a: show([
     { note: "にっきの かたち。", add: [...fresh(lb(160, 97, "10月5日　てんき：はれ", 24, C.blue, 'middle', true),lb(160, 143, "できごとを かく", 26, C.red, 'middle', true))] },
     { note: "にっきに かく こと。", add: [...fresh(lb(160, 74, "①日づけ と てんき", 26, C.ink, 'middle', true),lb(160, 120, "②できごと", 26, C.red, 'middle', true),lb(160, 166, "いつ・どこで・だれと・なにを", 22, C.ink, 'middle', true))] },
@@ -900,7 +900,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "じゅんに ならべて かく。", add: [...fresh(lb(160, 97, "きょう、学校で ともだちと", 22, C.red, 'middle', true),lb(160, 143, "なわとびを しました。", 26, C.red, 'middle', true))] },
     { note: "こたえ。できた ことも かく。", add: [...fresh(lb(160, 74, "きょう、学校で ともだちと", 22, C.ink, 'middle', true),lb(160, 120, "なわとびを しました。", 24, C.ink, 'middle', true),lb(160, 166, "10かい とべました。", 26, C.red, 'middle', true))] },
     { note: "たしかめよう。ぜんぶ 入って いるか。", add: [...fresh(lb(160, 74, "いつ ○ どこで ○", 24, C.ink, 'middle', true),lb(160, 120, "だれと ○ なにを ○", 24, C.ink, 'middle', true),lb(160, 166, "できた こと ○", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_078_a: show([
     { note: "にっきは できごとだけでは もったいない。", add: [...fresh(lb(160, 74, "できごと", 30, C.blue, 'middle', true),lb(160, 120, "＋", 28, C.ink, 'middle', true),lb(160, 166, "気もち", 30, C.red, 'middle', true))] },
     { note: "見本。できごとと 気もちを かく。", add: [...fresh(lb(160, 97, "なわとびを 10かい とべた。", 24, C.ink, 'middle', true),lb(160, 143, "とても うれしかった。", 26, C.red, 'middle', true))] },
@@ -910,7 +910,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "気もちを かく。りゆうを かく。", add: [...fresh(lb(160, 74, "気もち → うれしかった", 24, C.red, 'middle', true),lb(160, 120, "りゆう → おてつだいが", 24, C.ink, 'middle', true),lb(160, 166, "できたと おもったから", 24, C.ink, 'middle', true))] },
     { note: "こたえは 3つの 文。", add: [...fresh(lb(160, 74, "ともだちに「ありがとう」と", 22, C.ink, 'middle', true),lb(160, 120, "いわれました。うれしかったです。", 22, C.red, 'middle', true),lb(160, 166, "おてつだいが できたと おもったからです。", 18, C.red, 'middle', true))] },
     { note: "たしかめよう。3つ そろった。", add: [...fresh(lb(160, 74, "できごと ○", 26, C.ink, 'middle', true),lb(160, 120, "気もち ○", 26, C.ink, 'middle', true),lb(160, 166, "りゆう ○", 26, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_079_a: show([
     { note: "かんさつは、見る・さわる・かぐ。", add: [...fresh(lb(160, 74, "目で 見る", 26, C.blue, 'middle', true),lb(160, 120, "手で さわる", 26, C.red, 'middle', true),lb(160, 166, "はなで かぐ", 26, C.ink, 'middle', true))] },
     { note: "目で 見る → いろ・かたち・大きさ。", add: [...fresh(lb(160, 97, "見ると、", 28, C.blue, 'middle', true),lb(160, 143, "オレンジいろで まるい", 26, C.ink, 'middle', true))] },
@@ -920,7 +920,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "やってみよう。さわって 気づいた こと。", add: [...fresh(lb(160, 97, "みかんの かわを", 26, C.ink, 'middle', true),lb(160, 143, "さわって みよう", 26, C.red, 'middle', true))] },
     { note: "こたえ。さわって わかった ことを かく。", add: [...fresh(lb(160, 74, "さわると、かわは", 26, C.red, 'middle', true),lb(160, 120, "でこぼこ して いて、", 26, C.red, 'middle', true),lb(160, 166, "つぶつぶが ある。", 26, C.red, 'middle', true))] },
     { note: "たしかめよう。さわった ことだけ かいた。", add: [...fresh(lb(160, 97, "「さわると」と かいた", 24, C.ink, 'middle', true),lb(160, 143, "見た こと ではない", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_080_a: show([
     { note: "じゅんばんを あらわす ことば。", add: [...fresh(lb(160, 74, "はじめに", 28, C.red, 'middle', true),lb(160, 120, "つぎに", 28, C.blue, 'middle', true),lb(160, 166, "さいごに", 28, C.ink, 'middle', true))] },
     { note: "なぜ いるの？ じゅんばんが わからないと まよう。", add: [...fresh(lb(160, 74, "なぜ？", 32, C.red, 'middle', true),lb(160, 120, "じゅんばんが だいじ", 24, C.ink, 'middle', true),lb(160, 166, "よむ 人が まよわない", 24, C.ink, 'middle', true))] },
@@ -930,7 +930,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「それから」は まだ つづく とき。", add: [...fresh(lb(160, 97, "それから ＝ そのあと", 26, C.red, 'middle', true),lb(160, 143, "おわりは「さいごに」", 26, C.blue, 'middle', true))] },
     { note: "こたえ。3つの 文に ことばを つける。", add: [...fresh(lb(160, 74, "はじめに、水で ぬらす", 24, C.red, 'middle', true),lb(160, 120, "つぎに、せっけんで こする", 24, C.red, 'middle', true),lb(160, 166, "さいごに、ながして ふく", 24, C.red, 'middle', true))] },
     { note: "たしかめよう。じゅんばんを かえると おかしい。", add: [...fresh(lb(160, 97, "はじめ → つぎ → さいご", 26, C.ink, 'middle', true),lb(160, 143, "じゅんに ならんで いる", 24, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_081_a: show([
     { note: "手紙は 5つの ならびで 書く。まず びんせんを 見よう。", add: [...fresh(bx(20, 8, 280, 224, "", C.main, FILL.yellow, 10))] },
     { note: "まず あいての 名前。だれへの 手紙か しらせる。", add: [lb(36, 36, "ゆうなさんへ", 18, C.blue, 'start', true)] },
@@ -940,7 +940,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "さいごに 日づけと 名前。だれが いつ 書いたか わかる。", add: [lb(288, 196, "11月6日", 15, C.red, 'end', true), lb(288, 218, "はるより", 15, C.red, 'end', true)] },
     { note: "なぜ この じゅんばん？ かおが 見えないから。", add: [...fresh(lb(160, 51, "なぜ この じゅんばん？", 24, C.red, 'middle', true),lb(160, 87, "かおを 見ながら 話せない から", 17, C.ink, 'middle', true),lb(160, 118, "まず「だれに」を しらせて、", 17, C.blue, 'middle', true),lb(160, 149, "あいさつ→はなし→むすび と つなぐ", 17, C.blue, 'middle', true))] },
     { note: "こたえ：イ → エ → ウ → ア。", add: [...fresh(bx(18, 16, 284, 44, "1 イ「ゆうなさんへ」", C.blue, FILL.blue, 17),bx(18, 68, 284, 44, "2 エ「こんにちは。」", C.green, FILL.green, 17),bx(18, 120, 284, 44, "3 ウ「…ありがとう。」", C.main, FILL.warm, 17),bx(18, 172, 284, 44, "4 ア「また あそぼうね。」", C.purple, FILL.purple, 17))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_082_a: show([
     { note: "はがきの おもて。「とどける ため」の ところ。", add: [...fresh(bx(40, 14, 240, 176, "", C.main, FILL.warm, 10),lb(160, 212, "おもて", 22, C.blue, 'middle', true))] },
     { note: "切手は 右上に はる。はらないと ふつう おくれない。", add: [bx(232, 22, 40, 44, "切手", C.red, FILL.red, 14)] },
@@ -950,7 +950,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "うらは あいてが 読む ところ。つたえたい ことを 書く。", add: [...fresh(bx(40, 14, 240, 176, "", C.main, FILL.yellow, 10),lb(160, 48, "ゆうなさんへ", 17, C.blue, 'middle', true),lb(160, 82, "きのうは ありがとう。", 17, C.ink, 'middle', true),lb(160, 114, "また あそぼうね。", 17, C.purple, 'middle', true),lb(250, 160, "11月6日 はる", 14, C.red, 'end', true),lb(160, 212, "うら", 22, C.blue, 'middle', true))] },
     { note: "なぜ 分ける？ おもては とどける ため、うらは つたえる ため。", add: [...fresh(lb(160, 54, "なぜ おもてと うらを 分ける？", 22, C.red, 'middle', true),lb(160, 103, "おもて ＝ とどける ため", 22, C.blue, 'middle', true),lb(160, 153, "うら ＝ つたえる ため", 22, C.green, 'middle', true))] },
     { note: "こたえ：うらに 書くのは イ。", add: [...fresh(lb(160, 44, "うらに 書く もの", 22, C.ink, 'middle', true),lb(160, 109, "イ", 60, C.red, 'middle', true),lb(160, 171, "ありがとうの きもちを つたえる 文", 17, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_083_a: show([
     { note: "さくぶんの だいは、さくぶんの なまえ。", add: [...fresh(bx(60, 14, 200, 40, "だい", C.red, FILL.red, 20),bx(30, 70, 260, 150, "ここに 話を 書く", C.main, FILL.warm, 18))] },
     { note: "「えんそく」だけだと、何の 話か わからない。", add: [...fresh(lb(160, 36, "だい：えんそく", 26, C.red, 'middle', true),bx(20, 96, 90, 48, "バスの\n話？", C.gray, FILL.gray, 13),bx(120, 96, 90, 48, "おべんとうの\n話？", C.gray, FILL.gray, 13),bx(220, 96, 90, 48, "どんぐりの\n話？", C.gray, FILL.gray, 13),lb(160, 180, "どれか わからない…", 18, C.gray, 'middle', true))] },
@@ -960,7 +960,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "コツ③ ひとことで いえる ながさに する。", add: [...fresh(lb(160, 86, "どんぐり ひろいの 一日", 26, C.red, 'middle', true),lb(160, 134, "ひとことで いえる ながさ", 18, C.green, 'middle', true))] },
     { note: "アと イを くらべる。イは 何の 話か わかる。", add: [...fresh(bx(20, 40, 280, 56, "ア「きのう」  ×", C.gray, FILL.gray, 20),bx(20, 112, 280, 72, "イ「ジェットコースターに\nのった ひ」 ○", C.green, FILL.green, 18))] },
     { note: "こたえ：イ「ジェットコースターに のった ひ」。", add: [...fresh(lb(160, 44, "こたえ", 22, C.ink, 'middle', true),lb(160, 109, "イ", 60, C.red, 'middle', true),lb(160, 172, "ジェットコースターに のった ひ", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_084_a: show([
     { note: "作文を 書いた。「できた！」で おしまい？", add: [...fresh(lb(160, 78, "わたしわ きのう こうえんえ いって、", 17, C.ink, 'middle', true),lb(160, 112, "ぶらんこお こぎました。", 17, C.ink, 'middle', true),lb(160, 180, "読み直すと まちがいが 見つかる", 16, C.red, 'middle', true))] },
     { note: "声に 出して ゆっくり 読む。ここに 3つ まちがい。", add: [...fresh(bx(12, 60, 70, 28, "わたしわ", C.red, FILL.red, 15),bx(88, 60, 55, 28, "きのう", C.main, FILL.warm, 15),bx(148, 60, 85, 28, "こうえんえ", C.red, FILL.red, 15),bx(238, 60, 70, 28, "いって、", C.main, FILL.warm, 15),bx(65, 100, 85, 28, "ぶらんこお", C.red, FILL.red, 15),bx(155, 100, 100, 28, "こぎました。", C.main, FILL.warm, 15),lb(160, 170, "あかい ところが まちがい", 16, C.red, 'middle', true))] },
@@ -969,7 +969,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「こうえんえ」→「こうえんへ」。行く ところは「へ」。", add: [...fresh(bx(12, 60, 70, 28, "わたしは", C.green, FILL.green, 15),bx(88, 60, 55, 28, "きのう", C.main, FILL.warm, 15),bx(148, 60, 85, 28, "こうえんえ", C.red, FILL.red, 15),bx(238, 60, 70, 28, "いって、", C.main, FILL.warm, 15),bx(65, 100, 85, 28, "ぶらんこお", C.main, FILL.warm, 15),bx(155, 100, 100, 28, "こぎました。", C.main, FILL.warm, 15),lb(160, 160, "え → へ", 28, C.red, 'middle', true))] },
     { note: "「ぶらんこお」→「ぶらんこを」。ものを あらわす「を」。", add: [...fresh(bx(12, 60, 70, 28, "わたしは", C.green, FILL.green, 15),bx(88, 60, 55, 28, "きのう", C.main, FILL.warm, 15),bx(148, 60, 85, 28, "こうえんへ", C.green, FILL.green, 15),bx(238, 60, 70, 28, "いって、", C.main, FILL.warm, 15),bx(65, 100, 85, 28, "ぶらんこお", C.red, FILL.red, 15),bx(155, 100, 100, 28, "こぎました。", C.main, FILL.warm, 15),lb(160, 160, "お → を", 28, C.red, 'middle', true))] },
     { note: "こたえ：なおした 文を もう 一ど 読んで たしかめる。", add: [...fresh(bx(12, 60, 70, 28, "わたしは", C.green, FILL.green, 15),bx(88, 60, 55, 28, "きのう", C.main, FILL.warm, 15),bx(148, 60, 85, 28, "こうえんへ", C.green, FILL.green, 15),bx(238, 60, 70, 28, "いって、", C.main, FILL.warm, 15),bx(65, 100, 85, 28, "ぶらんこを", C.green, FILL.green, 15),bx(155, 100, 100, 28, "こぎました。", C.main, FILL.warm, 15),lb(160, 170, "わたしは きのう こうえんへ いって、", 14, C.green, 'middle', true),lb(160, 194, "ぶらんこを こぎました。", 14, C.green, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_085_a: show([
     { note: "こえは とおくへ いく ほど 小さく なる。", add: [...fresh(lb(60, 110, "こえ", 36, C.red, 'middle', true),lb(130, 110, "こえ", 26, C.red, 'middle', true),lb(200, 110, "こえ", 18, C.red, 'middle', true),lb(265, 110, "こえ", 12, C.red, 'middle', true),lb(60, 160, "ちかい", 14, C.blue, 'middle', true),lb(265, 160, "とおい", 14, C.blue, 'middle', true),ar(80, 190, 250, 190, C.blue, false))] },
     { note: "なぜ 大きく する？ うしろの 人に とどく ため。", add: [...fresh(lb(160, 65, "なぜ 大きな こえ？", 24, C.red, 'middle', true),lb(160, 105, "うしろの 人に とどかないと", 17, C.ink, 'middle', true),lb(160, 140, "話が つたわらない から", 17, C.ink, 'middle', true))] },
@@ -978,7 +978,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "コツ③ さいごまで いいきる。", add: [...fresh(lb(160, 70, "カレーで…", 30, C.gray, 'middle', true),lb(160, 100, "× さいごが 小さく なる", 15, C.gray, 'middle', true),lb(160, 160, "カレーです。", 30, C.green, 'middle', true),lb(160, 190, "○ 「す」まで いう", 15, C.green, 'middle', true))] },
     { note: "アと イを くらべる。", add: [...fresh(bx(20, 36, 280, 56, "ア 下を むいて 小さな こえ  ×", C.gray, FILL.gray, 16),bx(20, 120, 280, 66, "イ みんなを 見て、口を あけて、\nゆっくり、さいごまで  ○", C.green, FILL.green, 16))] },
     { note: "こたえ：イ。", add: [...fresh(lb(160, 38, "こたえ", 22, C.ink, 'middle', true),lb(160, 99, "イ", 60, C.red, 'middle', true),lb(160, 156, "みんなを 見て、口を あけて、", 16, C.ink, 'middle', true),lb(160, 186, "ゆっくり、さいごまで", 16, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_086_a: show([
     { note: "話したい ことを カードに 書く。ばらばらに ならんで いる。", add: [...fresh(bx(20, 30, 130, 60, "ア かたづける", C.main, FILL.warm, 16),bx(170, 30, 130, 60, "イ たべる", C.main, FILL.warm, 16),bx(20, 120, 130, 60, "ウ バスで いく", C.main, FILL.warm, 16),bx(170, 120, 130, 60, "エ シートを しく", C.main, FILL.warm, 16))] },
     { note: "じゅんばんが ばらばらだと、聞く 人は まよう。", add: [...fresh(lb(160, 100, "？", 80, C.red, 'middle', true),lb(160, 180, "ア イ ウ エ …どれが さき？", 18, C.gray, 'middle', true))] },
@@ -987,7 +987,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "つぎに ついて じゅんび。エ。", add: [bx(12, 20, 296, 40, "はじめに ウ バスで こうえんに いく", C.blue, FILL.blue, 15), bx(12, 68, 296, 40, "つぎに エ シートを しく", C.green, FILL.green, 15)] },
     { note: "それから イ。さいごに ア。", add: [bx(12, 20, 296, 40, "はじめに ウ バスで こうえんに いく", C.blue, FILL.blue, 15), bx(12, 68, 296, 40, "つぎに エ シートを しく", C.green, FILL.green, 15), bx(12, 116, 296, 40, "それから イ おべんとうを たべる", C.main, FILL.warm, 15), bx(12, 164, 296, 40, "さいごに ア かたづける", C.purple, FILL.purple, 15)] },
     { note: "こたえ：ウ → エ → イ → ア。", add: [...fresh(lb(160, 74, "こたえ", 22, C.ink, 'middle', true),lb(160, 130, "ウ → エ → イ → ア", 36, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_087_a: show([
     { note: "先生の 話。あとで わすれないように メモする。", add: [...fresh(lb(160, 40, "あしたは えんそくです。", 17, C.ink, 'middle', true),lb(160, 76, "あさ、八じに 学校の にわに", 17, C.ink, 'middle', true),lb(160, 112, "あつまります。", 17, C.ink, 'middle', true),lb(160, 148, "もって くる ものは、おべんとうと", 17, C.ink, 'middle', true),lb(160, 184, "すいとうと ぼうしです。", 17, C.ink, 'middle', true))] },
     { note: "まず「いつ」。あした、八じ。", add: [...fresh(bx(20, 8, 280, 224, "", C.main, FILL.yellow, 10),lb(160, 28, "メモ", 16, C.gray, 'middle', true),bx(34, 48, 252, 38, "いつ：あした・八じ", C.blue, FILL.blue, 17))] },
@@ -996,7 +996,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ みじかく？ 話は どんどん すすむから。", add: [...fresh(lb(160, 48, "なぜ みじかく 書く？", 22, C.red, 'middle', true),lb(160, 84, "話は どんどん すすむ。", 17, C.ink, 'middle', true),lb(160, 117, "ながい 文を 書くと", 17, C.ink, 'middle', true),lb(160, 151, "つぎが 聞けなく なる", 17, C.ink, 'middle', true))] },
     { note: "もちものの 数も たしかめる。3つ。", add: [...fresh(bx(60, 20, 200, 40, "おべんとう", C.main, FILL.warm, 17),bx(60, 68, 200, 40, "すいとう", C.main, FILL.warm, 17),bx(60, 116, 200, 40, "ぼうし", C.main, FILL.warm, 17),lb(160, 200, "3つ そろって いる", 18, C.red, 'middle', true))] },
     { note: "こたえ：メモは これ。", add: [...fresh(bx(20, 8, 280, 224, "", C.main, FILL.yellow, 10),lb(160, 42, "あした えんそく", 20, C.ink, 'middle', true),lb(160, 82, "八じ", 20, C.ink, 'middle', true),lb(160, 120, "学校の にわ", 20, C.ink, 'middle', true),lb(160, 158, "おべんとう・すいとう・ぼうし", 18, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_088_a: show([
     { note: "しつもんの 6つの ことば。", add: [...fresh(bx(14, 40, 92, 52, "いつ", C.blue, FILL.blue, 20),bx(114, 40, 92, 52, "どこで", C.green, FILL.green, 20),bx(214, 40, 92, 52, "だれが", C.main, FILL.warm, 20),bx(14, 110, 92, 52, "なにを", C.purple, FILL.purple, 20),bx(114, 110, 92, 52, "なぜ", C.red, FILL.red, 20),bx(214, 110, 92, 52, "どう", C.gray, FILL.gray, 20))] },
     { note: "「いつ」には とき を こたえる。", add: [...fresh(bx(20, 40, 130, 50, "いつ？", C.blue, FILL.blue, 22),ar(155, 65, 180, 65, C.ink, false),bx(185, 40, 120, 50, "きのう", C.green, FILL.green, 22),lb(160, 140, "ときを こたえる", 20, C.ink, 'middle', true))] },
@@ -1005,7 +1005,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "「はい・いいえ」の しつもんは 話が おわる。", add: [...fresh(bx(20, 40, 280, 50, "たのしかった？ → うん", C.gray, FILL.gray, 20),bx(20, 110, 280, 66, "何を して あそんだの？\n→ くわしい 話が 聞ける", C.green, FILL.green, 17))] },
     { note: "アと イを くらべる。イは くわしく 聞ける。", add: [...fresh(bx(20, 36, 280, 56, "ア「たのしかった？」 ×", C.gray, FILL.gray, 20),bx(20, 120, 280, 56, "イ「何を して あそんだの？」 ○", C.green, FILL.green, 18))] },
     { note: "こたえ：イ。", add: [...fresh(lb(160, 44, "こたえ", 22, C.ink, 'middle', true),lb(160, 109, "イ", 60, C.red, 'middle', true),lb(160, 172, "「何を して あそんだの？」", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_089_a: show([
     { note: "話しあいには 4つの きまりが ある。", add: [...fresh(bx(15, 16, 290, 44, "① 手を あげて 一人ずつ 話す", C.blue, FILL.blue, 17),bx(15, 68, 290, 44, "② 人の 話を さいごまで 聞く", C.green, FILL.green, 17),bx(15, 120, 290, 44, "③ 「〜と 思います。わけは〜」", C.main, FILL.warm, 17),bx(15, 172, 290, 44, "④ ちがう 考えも わらわない", C.purple, FILL.purple, 17))] },
     { note: "きまり① 手を あげて 一人ずつ。", add: [...fresh(lb(160, 90, "手を あげる", 36, C.blue, 'middle', true),lb(160, 150, "あてられて から 話す", 20, C.ink, 'middle', true))] },
@@ -1014,7 +1014,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "きまり④ ちがう 考えも わらわない。", add: [...fresh(lb(160, 90, "「なるほど」", 34, C.purple, 'middle', true),lb(160, 150, "まず 聞いて みる", 20, C.ink, 'middle', true))] },
     { note: "なぜ きまりが 大切？ いっぺんに 話すと 聞こえない。", add: [...fresh(lb(160, 48, "なぜ きまりが 大切？", 22, C.red, 'middle', true),lb(160, 84, "みんなが いっぺんに 話すと", 17, C.ink, 'middle', true),lb(160, 117, "だれの 話も 聞こえない", 17, C.ink, 'middle', true),lb(160, 150, "一人ずつなら どの 考えも とどく", 16, C.blue, 'middle', true))] },
     { note: "こたえ：おわるまで まつ → 手を あげる → わけを 話す。", add: [...fresh(bx(12, 30, 296, 44, "1 ゆうたさんの 話が おわるまで まつ", C.blue, FILL.blue, 16),bx(12, 86, 296, 44, "2 手を あげる", C.green, FILL.green, 16),bx(12, 142, 296, 44, "3 わけを つけて 話す", C.main, FILL.warm, 16))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_090_a: show([
     { note: "はっぴょうは 3つの まとまり。", add: [...fresh(bx(20, 24, 280, 52, "はじめ：何を 話すか", C.blue, FILL.blue, 20),bx(20, 90, 280, 52, "中：くわしく 話す", C.green, FILL.green, 20),bx(20, 156, 280, 52, "おわり：まとめと あいさつ", C.main, FILL.warm, 20))] },
     { note: "はじめ：何を 話すか 言う。", add: [...fresh(bx(20, 20, 280, 40, "はじめ", C.blue, FILL.blue, 20),lb(160, 120, "ウ「わたしが 話すのは、", 17, C.ink, 'middle', true),lb(160, 148, "すきな きゅうしょくの ことです。」", 17, C.ink, 'middle', true))] },
@@ -1023,7 +1023,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "おわり：まとめの あいさつ。", add: [...fresh(bx(20, 20, 280, 40, "おわり", C.main, FILL.warm, 20),lb(160, 130, "ア「これで わたしの", 17, C.ink, 'middle', true),lb(160, 158, "はっぴょうを おわります。」", 17, C.ink, 'middle', true))] },
     { note: "なぜ 3つに 分ける？ 聞く 人が 話を つかめる。", add: [...fresh(lb(160, 48, "なぜ 3つに 分ける？", 22, C.red, 'middle', true),lb(160, 84, "はじめに 何の 話か わかると", 17, C.ink, 'middle', true),lb(160, 117, "中の 話を つかみやすい", 17, C.ink, 'middle', true),lb(160, 151, "おわりで まとめが わかる", 17, C.blue, 'middle', true))] },
     { note: "こたえ：ウ → イ → エ → ア。", add: [...fresh(lb(160, 74, "こたえ", 22, C.ink, 'middle', true),lb(160, 130, "ウ → イ → エ → ア", 36, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_091_a: show([
     { note: "せつめいの 文は 3つの まとまり。", add: [...fresh(bx(20, 24, 280, 52, "はじめ（とい）", C.blue, FILL.blue, 20),bx(20, 90, 280, 52, "中（くわしい せつめい）", C.green, FILL.green, 20),bx(20, 156, 280, 52, "おわり（まとめ）", C.main, FILL.warm, 20))] },
     { note: "はじめ：とい。何の 話か わかる。", add: [...fresh(bx(10, 20, 300, 100, "みなさんは、まいにち はを みがいて\nいますか。どうして はを みがくの\nでしょうか。", C.blue, FILL.blue, 15),lb(160, 160, "はじめ ＝ とい", 24, C.blue, 'middle', true))] },
@@ -1032,7 +1032,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "おわり：まとめ。", add: [...fresh(bx(10, 14, 300, 80, "このように、むしばを ふせぐ ために、\nまいにち はを みがく ことが 大切です。", C.main, FILL.warm, 15),lb(160, 140, "おわり ＝ まとめ", 24, C.main, 'middle', true))] },
     { note: "「このように…大切です」は どこ？", add: [...fresh(bx(10, 40, 300, 80, "このように、むしばを ふせぐ ために、\nまいにち はを みがく ことが 大切です。", C.red, FILL.red, 15),lb(160, 170, "「このように」＝ まとめの ことば", 17, C.red, 'middle', true))] },
     { note: "こたえ：おわり。", add: [...fresh(lb(160, 44, "こたえ", 22, C.ink, 'middle', true),lb(160, 106, "おわり", 56, C.red, 'middle', true),lb(160, 167, "まとめの 文だから", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_092_a: show([
     { note: "わけと けっか。さむい→てぶくろ。", add: [...fresh(bx(14, 70, 130, 70, "わけ\nさむい", C.blue, FILL.blue, 22),ar(148, 105, 172, 105, C.ink, false),bx(176, 70, 130, 70, "けっか\nてぶくろ", C.green, FILL.green, 22))] },
     { note: "「だから」が めじるし。前が わけ、あとが けっか。", add: [...fresh(lb(160, 70, "ふゆは さむい。", 26, C.blue, 'middle', true),lb(160, 118, "だから、", 28, C.red, 'middle', true),lb(160, 166, "てぶくろを する。", 26, C.green, 'middle', true))] },
@@ -1041,7 +1041,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "文を 読む。「だから」を さがす。", add: [...fresh(lb(160, 60, "ふゆは、そとの くうきが つめたく なります。", 14, C.ink, 'middle', true),lb(160, 106, "手が つめたく なると、いたく なって しまいます。", 14, C.ink, 'middle', true),lb(160, 152, "だから、てぶくろを して 手を あたためるのです。", 14, C.red, 'middle', true))] },
     { note: "「だから」の 前の 文が わけ。", add: [...fresh(bx(10, 30, 300, 66, "手が つめたく なると、\nいたく なって しまいます。", C.blue, FILL.blue, 17),lb(160, 118, "↓ だから", 20, C.red, 'middle', true),bx(10, 140, 300, 66, "てぶくろを して\n手を あたためるのです。", C.green, FILL.green, 17))] },
     { note: "こたえ：手が つめたく なると、いたく なるから。", add: [...fresh(lb(160, 54, "こたえ", 22, C.ink, 'middle', true),lb(160, 96, "手が つめたく なると、", 20, C.red, 'middle', true),lb(160, 137, "いたく なるから。", 20, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_093_a: show([
     { note: "おにぎりの つくりかた。じゅんばんが ある。", add: [...fresh(lb(160, 100, "おにぎり", 44, C.main, 'middle', true),lb(160, 160, "つくりかたには じゅんばんが ある", 17, C.ink, 'middle', true))] },
     { note: "まず：手を あらう。", add: [...fresh(bx(15, 20, 290, 40, "まず 手を あらう", C.blue, FILL.blue, 17))] },
@@ -1050,7 +1050,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "さいごに：のりを まく。", add: [bx(15, 20, 290, 40, "まず 手を あらう", C.blue, FILL.blue, 17), bx(15, 68, 290, 40, "つぎに ごはんを ちゃわんに とる", C.green, FILL.green, 17), bx(15, 116, 290, 40, "それから しおを つけて むすぶ", C.red, FILL.red, 17), bx(15, 164, 290, 40, "さいごに のりを まく", C.purple, FILL.purple, 17)] },
     { note: "なぜ じゅんばん？ のりが さきだと むすべない。", add: [...fresh(lb(160, 48, "なぜ じゅんばんが だいじ？", 22, C.red, 'middle', true),lb(160, 84, "のりを まいて から むすぶと", 17, C.ink, 'middle', true),lb(160, 117, "ごはんが ばらばらに なる", 17, C.ink, 'middle', true),lb(160, 150, "じゅんばんは うまく できる ため", 16, C.blue, 'middle', true))] },
     { note: "こたえ：「それから」の あと → しおを つけて むすぶ。", add: [...fresh(lb(160, 62, "「それから」の あとは", 20, C.ink, 'middle', true),lb(160, 107, "手に しおを つけて、", 26, C.red, 'middle', true),lb(160, 156, "ごはんを むすぶ", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_094_a: show([
     { note: "もぐらの くらしを せつめいした 文。", add: [...fresh(lb(160, 34, "もぐらは、つちの 中に あなを ほって", 15, C.ink, 'middle', true),lb(160, 66, "くらして います。", 15, C.ink, 'middle', true),lb(160, 98, "まえあしは 大きくて、", 15, C.ink, 'middle', true),lb(160, 130, "つちを ほるのに むいて います。", 15, C.ink, 'middle', true),lb(160, 162, "目は 小さくて、あまり 見えません。", 15, C.ink, 'middle', true),lb(160, 194, "食べものは、ミミズなどの 虫です。", 15, C.ink, 'middle', true))] },
     { note: "とい：目は どんな 目？ だいじな ことばは「目」。", add: [...fresh(lb(160, 100, "とい：もぐらの 目は どんな 目ですか。", 16, C.ink, 'middle', true),lb(160, 150, "だいじな ことば ＝「目」", 26, C.red, 'middle', true))] },
@@ -1059,7 +1059,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "その まわりの 文が 答え。文の おわりまで 書く。", add: [...fresh(lb(160, 70, "目は 小さくて、あまり 見えません。", 17, C.red, 'middle', true),lb(160, 120, "↓ 文の おわりまで つかって", 16, C.ink, 'middle', true),lb(160, 170, "小さくて、あまり 見えない 目です。", 17, C.green, 'middle', true))] },
     { note: "本文と 見くらべて たしかめる。", add: [...fresh(bx(10, 20, 300, 64, "本文：\n目は 小さくて、あまり 見えません。", C.blue, FILL.blue, 16),lb(160, 108, "＝ おなじ ことば", 18, C.red, 'middle', true),bx(10, 140, 300, 64, "答え：\n小さくて、あまり 見えない 目です。", C.green, FILL.green, 16))] },
     { note: "こたえ：小さくて、あまり 見えない 目です。", add: [...fresh(lb(160, 54, "こたえ", 22, C.ink, 'middle', true),lb(160, 98, "小さくて、あまり", 24, C.red, 'middle', true),lb(160, 144, "見えない 目です。", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_095_a: show([
     { note: "しつもんの 文を 読む。まず おわりを 見る。", add: [...fresh(lb(160, 90, "もぐらは どこで", 24, C.ink, 'middle', true),lb(160, 126, "くらして いますか。", 24, C.red, 'middle', true),lb(160, 180, "おわりは「〜ですか」→ 聞いて いる", 16, C.ink, 'middle', true))] },
     { note: "聞く ことば「どこで」に ○を つける。", add: [...fresh(lb(160, 70, "もぐらは", 22, C.ink, 'middle', true),ci(160, 120, 38, "どこで", C.red, FILL.red, 20),lb(160, 180, "くらして いますか。", 22, C.ink, 'middle', true))] },
@@ -1068,7 +1068,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "だれ → 人。何 → もの。", add: [...fresh(bx(14, 30, 120, 44, "だれ", C.blue, FILL.blue, 20),ar(138, 52, 160, 52, C.ink, false),bx(166, 30, 140, 44, "人", C.main, FILL.warm, 20),bx(14, 100, 120, 44, "なに", C.green, FILL.green, 20),ar(138, 122, 160, 122, C.ink, false),bx(166, 100, 140, 44, "もの・こと", C.main, FILL.warm, 20))] },
     { note: "なぜ → わけ。どう → ようす。", add: [...fresh(bx(14, 30, 120, 44, "なぜ", C.red, FILL.red, 20),ar(138, 52, 160, 52, C.ink, false),bx(166, 30, 140, 44, "わけ（〜から）", C.main, FILL.warm, 17),bx(14, 100, 120, 44, "どう", C.purple, FILL.purple, 20),ar(138, 122, 160, 122, C.ink, false),bx(166, 100, 140, 44, "ようす", C.main, FILL.warm, 20))] },
     { note: "こたえ：イ（ばしょ）。", add: [...fresh(lb(160, 42, "「どこで」は", 20, C.ink, 'middle', true),lb(160, 104, "ばしょ", 56, C.red, 'middle', true),lb(160, 166, "を 聞いて いる（イ）", 20, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_096_a: show([
     { note: "ひまわりの 花。1つの 大きな 花に 見える。", add: [...fresh(ci(214, 112, 12, "", C.main, FILL.yellow, 14),ci(207, 139, 12, "", C.main, FILL.yellow, 14),ci(187, 159, 12, "", C.main, FILL.yellow, 14),ci(160, 166, 12, "", C.main, FILL.yellow, 14),ci(133, 159, 12, "", C.main, FILL.yellow, 14),ci(113, 139, 12, "", C.main, FILL.yellow, 14),ci(106, 112, 12, "", C.main, FILL.yellow, 14),ci(113, 85, 12, "", C.main, FILL.yellow, 14),ci(133, 65, 12, "", C.main, FILL.yellow, 14),ci(160, 58, 12, "", C.main, FILL.yellow, 14),ci(187, 65, 12, "", C.main, FILL.yellow, 14),ci(207, 85, 12, "", C.main, FILL.yellow, 14),ci(160, 112, 34, "", C.main, FILL.gray, 14),lb(160, 205, "1つの 大きな 花に 見える", 17, C.ink, 'middle', true))] },
     { note: "まんなかの まるい ところを 見よう。", add: [...fresh(ci(214, 112, 12, "", C.main, FILL.yellow, 14),ci(207, 139, 12, "", C.main, FILL.yellow, 14),ci(187, 159, 12, "", C.main, FILL.yellow, 14),ci(160, 166, 12, "", C.main, FILL.yellow, 14),ci(133, 159, 12, "", C.main, FILL.yellow, 14),ci(113, 139, 12, "", C.main, FILL.yellow, 14),ci(106, 112, 12, "", C.main, FILL.yellow, 14),ci(113, 85, 12, "", C.main, FILL.yellow, 14),ci(133, 65, 12, "", C.main, FILL.yellow, 14),ci(160, 58, 12, "", C.main, FILL.yellow, 14),ci(187, 65, 12, "", C.main, FILL.yellow, 14),ci(207, 85, 12, "", C.main, FILL.yellow, 14),ci(160, 112, 34, "", C.red, FILL.red, 14),lb(160, 205, "まんなかの まるい ところ", 17, C.red, 'middle', true))] },
@@ -1077,7 +1077,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ 「じつは」の あとに だいじな こと。", add: [...fresh(lb(160, 48, "なぜ「じつは」に ちゅうい？", 22, C.red, 'middle', true),lb(160, 84, "「見えますが、じつは」の", 17, C.ink, 'middle', true),lb(160, 117, "あとに ほんとうの", 17, C.ink, 'middle', true),lb(160, 151, "つくりが 書いて ある", 17, C.ink, 'middle', true))] },
     { note: "文と 絵を くらべる。まんなかは 小さな 花。", add: [...fresh(bx(10, 20, 300, 64, "文：まんなかの まるい ところには、\n小さな 花が ぎっしり ならんで います", C.blue, FILL.blue, 15),lb(160, 110, "＝", 24, C.red, 'middle', true),bx(10, 140, 300, 64, "絵：まんなかに\n小さな つぶが たくさん", C.green, FILL.green, 17))] },
     { note: "こたえ：小さな 花。", add: [...fresh(lb(160, 41, "まんなかの まるい ところは", 18, C.ink, 'middle', true),lb(160, 98, "小さな 花", 50, C.red, 'middle', true),lb(160, 154, "が あつまって できて いる", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_097_a: show([
     { note: "ふくろうは よるに うごく とり。", add: [...fresh(ci(250, 50, 24, "", C.main, FILL.yellow, 14),lb(160, 110, "よる", 50, C.blue, 'middle', true),lb(160, 170, "ひるま：木の あなで やすむ", 17, C.ink, 'middle', true))] },
     { note: "よるに なると、ねずみなどを さがして とぶ。", add: [...fresh(bx(14, 40, 140, 56, "ふくろう", C.main, FILL.warm, 22),ar(158, 68, 190, 68, C.ink, false),bx(194, 40, 112, 56, "ねずみ", C.green, FILL.green, 22),lb(160, 150, "よるに さがして とぶ", 20, C.ink, 'middle', true))] },
@@ -1086,7 +1086,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ？ はねの ふちが やわらかい → 音が しない。", add: [...fresh(bx(14, 40, 140, 56, "はねの ふちが\nやわらかい", C.blue, FILL.blue, 16),ar(158, 68, 180, 68, C.ink, false),bx(184, 40, 122, 56, "音が ほとんど\nしない", C.green, FILL.green, 16),lb(160, 150, "ねずみに 気づかれにくい（と 考えられる）", 15, C.red, 'middle', true),lb(160, 180, "（とくちょうと くらしの つながり）", 14, C.gray, 'middle', true))] },
     { note: "くらしと とくちょうを つなげて 読む。", add: [...fresh(lb(160, 48, "よるに えものを とる", 20, C.ink, 'middle', true),lb(160, 82, "↓ だから", 18, C.red, 'middle', true),lb(160, 114, "くらい ところで 見える 目", 17, C.blue, 'middle', true),lb(160, 145, "音の しない はね", 17, C.blue, 'middle', true))] },
     { note: "こたえ：とぶ ときに 音が ほとんど しない。", add: [...fresh(lb(160, 54, "こたえ", 22, C.ink, 'middle', true),lb(160, 101, "とぶ ときに", 28, C.red, 'middle', true),lb(160, 152, "音が ほとんど しない", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_098_a: show([
     { note: "ものさしは 長さを はかる どうぐ。", add: [...fresh(bx(30, 110, 270, 34, "", C.main, FILL.yellow, 10),ln(40, 110, 40, 124, C.ink, false, 2),lb(40, 134, "0", 10, C.gray, 'middle', true),ln(60, 110, 60, 124, C.ink, false, 2),lb(60, 134, "1", 10, C.gray, 'middle', true),ln(80, 110, 80, 124, C.ink, false, 2),lb(80, 134, "2", 10, C.gray, 'middle', true),ln(100, 110, 100, 124, C.ink, false, 2),lb(100, 134, "3", 10, C.gray, 'middle', true),ln(120, 110, 120, 124, C.ink, false, 2),lb(120, 134, "4", 10, C.gray, 'middle', true),ln(140, 110, 140, 124, C.ink, false, 2),lb(140, 134, "5", 10, C.gray, 'middle', true),ln(160, 110, 160, 124, C.ink, false, 2),lb(160, 134, "6", 10, C.gray, 'middle', true),ln(180, 110, 180, 124, C.ink, false, 2),lb(180, 134, "7", 10, C.gray, 'middle', true),ln(200, 110, 200, 124, C.ink, false, 2),lb(200, 134, "8", 10, C.gray, 'middle', true),ln(220, 110, 220, 124, C.ink, false, 2),lb(220, 134, "9", 10, C.gray, 'middle', true),ln(240, 110, 240, 124, C.ink, false, 2),lb(240, 134, "10", 10, C.gray, 'middle', true),ln(260, 110, 260, 124, C.ink, false, 2),lb(260, 134, "11", 10, C.gray, 'middle', true),ln(280, 110, 280, 124, C.ink, false, 2),lb(280, 134, "12", 10, C.gray, 'middle', true),lb(160, 60, "ものさし", 28, C.main, 'middle', true),lb(160, 190, "長さを はかる どうぐ", 18, C.ink, 'middle', true))] },
     { note: "まず、0の めもりを ものの はしに あわせる。", add: [...fresh(bx(30, 110, 270, 34, "", C.main, FILL.yellow, 10),ln(40, 110, 40, 124, C.ink, false, 2),lb(40, 134, "0", 10, C.gray, 'middle', true),ln(60, 110, 60, 124, C.ink, false, 2),lb(60, 134, "1", 10, C.gray, 'middle', true),ln(80, 110, 80, 124, C.ink, false, 2),lb(80, 134, "2", 10, C.gray, 'middle', true),ln(100, 110, 100, 124, C.ink, false, 2),lb(100, 134, "3", 10, C.gray, 'middle', true),ln(120, 110, 120, 124, C.ink, false, 2),lb(120, 134, "4", 10, C.gray, 'middle', true),ln(140, 110, 140, 124, C.ink, false, 2),lb(140, 134, "5", 10, C.gray, 'middle', true),ln(160, 110, 160, 124, C.ink, false, 2),lb(160, 134, "6", 10, C.gray, 'middle', true),ln(180, 110, 180, 124, C.ink, false, 2),lb(180, 134, "7", 10, C.gray, 'middle', true),ln(200, 110, 200, 124, C.ink, false, 2),lb(200, 134, "8", 10, C.gray, 'middle', true),ln(220, 110, 220, 124, C.ink, false, 2),lb(220, 134, "9", 10, C.gray, 'middle', true),ln(240, 110, 240, 124, C.ink, false, 2),lb(240, 134, "10", 10, C.gray, 'middle', true),ln(260, 110, 260, 124, C.ink, false, 2),lb(260, 134, "11", 10, C.gray, 'middle', true),ln(280, 110, 280, 124, C.ink, false, 2),lb(280, 134, "12", 10, C.gray, 'middle', true),bx(40, 70, 100, 30, "けしゴム", C.blue, FILL.blue, 15),ar(40, 175, 40, 148, C.red, false),lb(60, 190, "0に あわせる", 14, C.red, 'start', true))] },
@@ -1095,7 +1095,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ まうえから？ ななめだと ずれて 見える。", add: [...fresh(lb(160, 48, "なぜ まうえから 見る？", 22, C.red, 'middle', true),lb(160, 84, "ななめから 見ると", 17, C.ink, 'middle', true),lb(160, 117, "めもりが ずれて 見える", 17, C.ink, 'middle', true),lb(160, 150, "ずれると 長さを まちがえる", 16, C.blue, 'middle', true))] },
     { note: "めもりの まうえから 見る。", add: [...fresh(bx(30, 110, 270, 34, "", C.main, FILL.yellow, 10),ln(40, 110, 40, 124, C.ink, false, 2),lb(40, 134, "0", 10, C.gray, 'middle', true),ln(60, 110, 60, 124, C.ink, false, 2),lb(60, 134, "1", 10, C.gray, 'middle', true),ln(80, 110, 80, 124, C.ink, false, 2),lb(80, 134, "2", 10, C.gray, 'middle', true),ln(100, 110, 100, 124, C.ink, false, 2),lb(100, 134, "3", 10, C.gray, 'middle', true),ln(120, 110, 120, 124, C.ink, false, 2),lb(120, 134, "4", 10, C.gray, 'middle', true),ln(140, 110, 140, 124, C.ink, false, 2),lb(140, 134, "5", 10, C.gray, 'middle', true),ln(160, 110, 160, 124, C.ink, false, 2),lb(160, 134, "6", 10, C.gray, 'middle', true),ln(180, 110, 180, 124, C.ink, false, 2),lb(180, 134, "7", 10, C.gray, 'middle', true),ln(200, 110, 200, 124, C.ink, false, 2),lb(200, 134, "8", 10, C.gray, 'middle', true),ln(220, 110, 220, 124, C.ink, false, 2),lb(220, 134, "9", 10, C.gray, 'middle', true),ln(240, 110, 240, 124, C.ink, false, 2),lb(240, 134, "10", 10, C.gray, 'middle', true),ln(260, 110, 260, 124, C.ink, false, 2),lb(260, 134, "11", 10, C.gray, 'middle', true),ln(280, 110, 280, 124, C.ink, false, 2),lb(280, 134, "12", 10, C.gray, 'middle', true),ar(140, 40, 140, 104, C.red, false),lb(140, 24, "まうえから 見る", 16, C.red, 'middle', true))] },
     { note: "こたえ：まうえから 見る。ななめだと ずれるから。", add: [...fresh(lb(160, 44, "こたえ", 22, C.ink, 'middle', true),lb(160, 90, "まうえから 見る", 32, C.red, 'middle', true),lb(160, 133, "ななめから 見ると、", 18, C.ink, 'middle', true),lb(160, 167, "ずれて 見えるから", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_099_a: show([
     { note: "あさがおの めが 出た ところの 図。", add: [...fresh(ln(100, 200, 220, 200, C.main, false, 3),ln(160, 200, 160, 100, C.green, false, 3),pg([[160, 158], [138, 144], [112, 156], [138, 170], [160, 164]], C.green, FILL.green),pg([[160, 158], [182, 144], [208, 156], [182, 170], [160, 164]], C.green, FILL.green),pg([[150, 100], [160, 70], [170, 100]], C.green, FILL.green),lb(100, 150, "ア", 18, C.blue, 'middle', true),lb(236, 150, "ア", 18, C.blue, 'middle', true),lb(190, 80, "イ", 18, C.blue, 'middle', true),lb(160, 220, "ア と イの 2つが ある", 15, C.ink, 'middle', true))] },
     { note: "ア：くきの 下に 2まい ならんで ついて いる。", add: [...fresh(ln(100, 200, 220, 200, C.main, false, 3),ln(160, 200, 160, 100, C.green, false, 3),pg([[160, 158], [138, 144], [112, 156], [138, 170], [160, 164]], C.red, FILL.red),pg([[160, 158], [182, 144], [208, 156], [182, 170], [160, 164]], C.red, FILL.red),pg([[150, 100], [160, 70], [170, 100]], C.green, FILL.green),lb(100, 150, "ア", 18, C.blue, 'middle', true),lb(236, 150, "ア", 18, C.blue, 'middle', true),lb(190, 80, "イ", 18, C.blue, 'middle', true),lb(160, 220, "ア ＝ 下の 2まい", 17, C.red, 'middle', true))] },
@@ -1104,7 +1104,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ くらべる？ 文だけ、図だけでは わかりにくい。", add: [...fresh(lb(160, 48, "なぜ 図と 文を くらべる？", 22, C.red, 'middle', true),lb(160, 84, "文だけだと ふたばが", 17, C.ink, 'middle', true),lb(160, 117, "どんな ものか わかりにくい", 17, C.ink, 'middle', true),lb(160, 151, "図で 見ると よく わかる", 17, C.blue, 'middle', true))] },
     { note: "「まず 出る 2まい」＝ 下の 2まい ＝ ア。", add: [...fresh(ln(100, 200, 220, 200, C.main, false, 3),ln(160, 200, 160, 100, C.green, false, 3),pg([[160, 158], [138, 144], [112, 156], [138, 170], [160, 164]], C.red, FILL.red),pg([[160, 158], [182, 144], [208, 156], [182, 170], [160, 164]], C.red, FILL.red),pg([[150, 100], [160, 70], [170, 100]], C.green, FILL.green),lb(100, 150, "ア", 18, C.blue, 'middle', true),lb(236, 150, "ア", 18, C.blue, 'middle', true),lb(190, 80, "イ", 18, C.blue, 'middle', true),lb(160, 220, "文の「まず 出る 2まい」＝ ア", 15, C.red, 'middle', true))] },
     { note: "こたえ：ふたばは ア。", add: [...fresh(lb(160, 40, "ふたばは", 22, C.ink, 'middle', true),lb(160, 109, "ア", 70, C.red, 'middle', true),lb(160, 176, "下に 2まい ならんだ は", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_100_a: show([
     { note: "しゃぼんだまを せつめいした 文。", add: [...fresh(lb(160, 32, "しゃぼんだまは、なぜ まるいのでしょうか。", 14, C.ink, 'middle', true),lb(160, 62, "しゃぼんだまの まくは、", 14, C.ink, 'middle', true),lb(160, 92, "ゴムのように ちぢもうと します。", 14, C.ink, 'middle', true),lb(160, 122, "ちぢもうとすると、いちばん ちぢまった", 14, C.ink, 'middle', true),lb(160, 152, "かたち、つまり まるに なります。", 14, C.ink, 'middle', true),lb(160, 182, "だから、しゃぼんだまは まるいのです。", 14, C.ink, 'middle', true))] },
     { note: "「〜でしょうか」は とい の 文。答えでは ない。", add: [...fresh(bx(8, 16, 304, 30, "", C.blue, FILL.blue, 10),lb(160, 32, "しゃぼんだまは、なぜ まるいのでしょうか。", 14, C.blue, 'middle', true),lb(160, 62, "しゃぼんだまの まくは、", 14, C.ink, 'middle', true),lb(160, 92, "ゴムのように ちぢもうと します。", 14, C.ink, 'middle', true),lb(160, 122, "ちぢもうとすると、いちばん ちぢまった", 14, C.ink, 'middle', true),lb(160, 152, "かたち、つまり まるに なります。", 14, C.ink, 'middle', true),lb(160, 182, "だから、しゃぼんだまは まるいのです。", 14, C.ink, 'middle', true))] },
@@ -1113,7 +1113,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ 引きすぎない？ しるしの いみが なくなる。", add: [...fresh(lb(160, 48, "なぜ 引きすぎない？", 22, C.red, 'middle', true),lb(160, 84, "ぜんぶに 引くと", 17, C.ink, 'middle', true),lb(160, 117, "どこが だいじか わからない", 17, C.ink, 'middle', true),lb(160, 150, "しぼると 話の ながれが つかめる", 16, C.blue, 'middle', true))] },
     { note: "ぜんぶに 引くと どこが だいじか わからない。", add: [...fresh(lb(160, 70, "ぜんぶに 線 ＝ どこが だいじ？", 20, C.gray, 'middle', true),lb(160, 110, "（わからない）", 20, C.ink, 'middle', true),lb(160, 170, "だいじな ところだけ 線を 引く", 20, C.green, 'middle', true))] },
     { note: "こたえ：ウに 線を 引く。", add: [...fresh(lb(160, 44, "こたえ", 22, C.ink, 'middle', true),lb(160, 109, "ウ", 60, C.red, 'middle', true),lb(160, 170, "だから、しゃぼんだまは まるいのです。", 15, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_101_a: show([
     { note: "お話（はなし）の ばめんは 3つの ことで つかむよ。", add: [...fresh(lb(160, 97, "ばめん", 44, C.red, 'middle', true),lb(160, 155, "いつ・どこ・だれ", 28, C.blue, 'middle', true))] },
     { note: "この お話の ばめんを つかまえよう。", add: [...fresh(lb(160, 85, "ふゆの あさ、", 24, C.ink, 'middle', true),lb(160, 124, "ゆうきは がっこうの にわで", 22, C.ink, 'middle', true),lb(160, 159, "ゆきだるまを つくって いました。", 18, C.ink, 'middle', true))] },
@@ -1123,7 +1123,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "さいごに「だれ」。お話に 出て くる 人。", add: [...fresh(bx(94, 65, 132, 68, "ゆうき", C.red, FILL.warm, 36),lb(160, 157, "＝ だれ", 24, C.blue, 'middle', true))] },
     { note: "ばめんが かわると、3つの どれかが かわるよ。", add: [...fresh(lb(160, 98, "ゆうきが うちに かえると…", 22, C.ink, 'middle', true),lb(160, 139, "「どこ」が かわる", 26, C.blue, 'middle', true))] },
     { note: "ばめんの こたえ。", add: [...fresh(lb(160, 76, "いつ：ふゆの あさ", 26, C.red, 'middle', true),lb(160, 120, "どこ：がっこうの にわ", 26, C.red, 'middle', true),lb(160, 164, "だれ：ゆうき", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_102_a: show([
     { note: "お話（はなし）に 出る 人や どうぶつを さがそう。", add: [...fresh(lb(160, 100, "とうじょうじんぶつ", 33, C.red, 'middle', true),lb(160, 147, "だれが 出て くるかな？", 24, C.blue, 'middle', true))] },
     { note: "お話を 読（よ）もう。", add: [...fresh(lb(160, 68, "くまの ポポは、もりの 木の 下で", 19, C.ink, 'middle', true),lb(160, 102, "ねて いました。そこへ、", 20, C.ink, 'middle', true),lb(160, 137, "うさぎの ミミが", 20, C.ink, 'middle', true),lb(160, 172, "はしって きました。", 20, C.ink, 'middle', true))] },
@@ -1132,7 +1132,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ もりと 木は ちがうの？", add: [...fresh(lb(160, 84, "なぜ？", 34, C.red, 'middle', true),lb(160, 131, "もりと 木は", 22, C.ink, 'middle', true),lb(160, 167, "はなしも しないし なにも しない", 19, C.ink, 'middle', true))] },
     { note: "話したり、なにかを する ものが とうじょうじんぶつ。", add: [...fresh(lb(160, 100, "はなす・なにかを する", 26, C.blue, 'middle', true),lb(160, 142, "→ とうじょうじんぶつ", 24, C.red, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 79, "ふたり", 24, C.blue, 'middle', true),bx(28, 102, 264, 76, "ポポ と ミミ", C.red, FILL.warm, 40))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_103_a: show([
     { note: "じんぶつの したことを 見つけよう。", add: [...fresh(lb(160, 100, "したこと", 44, C.red, 'middle', true),lb(160, 155, "だれが なにを どうした", 24, C.blue, 'middle', true))] },
     { note: "お話（はなし）を 読（よ）もう。", add: [...fresh(lb(160, 88, "ミミは ポポの そばへ はしりました。", 17, C.ink, 'middle', true),lb(160, 121, "ポポの かたを ゆすりました。", 20, C.ink, 'middle', true),lb(160, 153, "そして、おおきな こえで いいました。", 16, C.ink, 'middle', true))] },
@@ -1141,7 +1141,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "3つめ。こえを どうした？", add: [...fresh(lb(160, 81, "1 そばへ はしった", 22, C.ink, 'middle', true),lb(160, 119, "2 かたを ゆすった", 22, C.ink, 'middle', true),lb(160, 158, "3 おおきな こえで いった", 24, C.red, 'middle', true))] },
     { note: "なぜ したことを 読むの？", add: [...fresh(lb(160, 84, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "したことが あとの 気もちの", 20, C.ink, 'middle', true),lb(160, 165, "手がかりに なるから", 22, C.ink, 'middle', true))] },
     { note: "こたえ。ミミが した ことは…", add: [...fresh(lb(160, 77, "①そばへ はしった", 26, C.red, 'middle', true),lb(160, 121, "②かたを ゆすった", 26, C.red, 'middle', true),lb(160, 164, "③おおきな こえで いった", 25, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_104_a: show([
     { note: "気もちは 文に 書（か）いて ない ことが おおい。", add: [...fresh(lb(160, 98, "気もち", 44, C.red, 'middle', true),lb(160, 155, "手がかりを さがそう", 26, C.blue, 'middle', true))] },
     { note: "お話（はなし）を 読（よ）もう。", add: [...fresh(lb(160, 82, "100てんの テストを もって", 22, C.ink, 'middle', true),lb(160, 120, "とぶように かえりました。", 22, C.ink, 'middle', true),lb(160, 158, "「おかあさん、 見て！」", 22, C.ink, 'middle', true))] },
@@ -1150,7 +1150,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ そう 考（かんが）えるの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "うれしい ときは", 22, C.ink, 'middle', true),lb(160, 167, "からだが かるく なるから", 22, C.ink, 'middle', true))] },
     { note: "ふたつを あわせて 考える。", add: [...fresh(lb(160, 92, "したこと ＋ ことば", 26, C.blue, 'middle', true),lb(160, 142, "→ うれしい", 34, C.red, 'middle', true))] },
     { note: "こたえ。ゆうきの 気もちは…", add: [...fresh(bx(52, 57, 216, 91, "うれしい", C.red, FILL.warm, 48),lb(160, 169, "（100てんを 早く 見せたい）", 20, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_105_a: show([
     { note: "人の ことばは「 」に 入れるよ。", add: [...fresh(lb(160, 101, "「 」", 50, C.red, 'middle', true),lb(160, 159, "人の ことばは かぎに 入れる", 22, C.blue, 'middle', true))] },
     { note: "もとの 文。", add: [...fresh(lb(160, 101, "ミミは いっしょに あそぼうと", 20, C.ink, 'middle', true),lb(160, 138, "いいました。", 22, C.ink, 'middle', true))] },
@@ -1159,7 +1159,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ かぎを つかうの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "人の ことばだと", 22, C.ink, 'middle', true),lb(160, 167, "すぐに わかるから", 22, C.ink, 'middle', true))] },
     { note: "前（まえ）と うしろの ことばを つける。", add: [...fresh(lb(160, 81, "ミミは", 24, C.ink, 'middle', true),lb(160, 120, "「いっしょに あそぼう。」", 22, C.red, 'middle', true),lb(160, 159, "と いいました。", 24, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(bx(16, 83, 288, 32, "ミミは「いっしょに あそぼう。」", C.red, FILL.warm, 17),lb(160, 139, "と いいました。", 24, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_106_a: show([
     { note: "気もちが かわる ところを 見つけよう。", add: [...fresh(lb(160, 98, "気もちが かわる", 34, C.red, 'middle', true),lb(160, 148, "ところを 見つけよう", 26, C.blue, 'middle', true))] },
     { note: "前（まえ）の 気もち。", add: [...fresh(lb(160, 70, "ぐらぐら ゆれて", 22, C.ink, 'middle', true),lb(160, 107, "こわくて 手が ふるえた", 22, C.red, 'middle', true),bx(80, 129, 159, 57, "→ こわい", C.blue, FILL.warm, 30))] },
@@ -1168,7 +1168,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "あとの 気もち。", add: [...fresh(lb(160, 67, "おちついて きた", 26, C.red, 'middle', true),lb(160, 110, "「やった！」", 26, C.red, 'middle', true),bx(66, 135, 189, 57, "→ うれしい", C.blue, FILL.warm, 30))] },
     { note: "前 → できごと → あと。", add: [...fresh(bx(14, 100, 79, 40, "こわい", C.main, FILL.warm, 21),bx(100, 100, 100, 40, "ところが", C.main, FILL.warm, 21),bx(206, 100, 100, 40, "うれしい", C.main, FILL.warm, 21))] },
     { note: "こたえ。", add: [...fresh(lb(160, 73, "かわったのは", 22, C.blue, 'middle', true),bx(10, 95, 300, 55, "「ところが」の あと", C.red, FILL.warm, 29),lb(160, 170, "こわい → おちついた → うれしい", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_107_a: show([
     { note: "お話（はなし）の 3つの ぶぶん。", add: [...fresh(lb(160, 94, "はじめ・中・おわり", 30, C.red, 'middle', true),bx(46, 122, 88, 46, "はじめ", C.main, FILL.warm, 24),bx(140, 122, 40, 46, "中", C.main, FILL.warm, 24),bx(186, 122, 88, 46, "おわり", C.main, FILL.warm, 24))] },
     { note: "はじめ：いつ・どこ・だれ。", add: [...fresh(lb(160, 100, "はじめ", 36, C.red, 'middle', true),lb(160, 149, "いつ・どこ・だれ", 24, C.blue, 'middle', true))] },
@@ -1177,7 +1177,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "ためして みよう。", add: [...fresh(lb(160, 98, "「モモが あなを ふさいで くれた」", 18, C.ink, 'middle', true),lb(160, 136, "どこかな？", 26, C.blue, 'middle', true))] },
     { note: "なぜ 中かな？", add: [...fresh(lb(160, 85, "なぜ？", 34, C.red, 'middle', true),lb(160, 130, "こまった ことが おこって", 20, C.ink, 'middle', true),lb(160, 165, "たすけが 出て くるから", 20, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 60, "こたえ", 22, C.blue, 'middle', true),bx(118, 82, 84, 114, "中", C.red, FILL.warm, 60))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_108_a: show([
     { note: "むかしばなしは こう はじまる。", add: [...fresh(lb(160, 97, "むかし むかし", 34, C.red, 'middle', true),lb(160, 148, "あるところに", 28, C.red, 'middle', true))] },
     { note: "ふたりが 出て くる お話（はなし）が おおい。", add: [...fresh(lb(160, 100, "おじいさんと おばあさんが", 20, C.ink, 'middle', true),lb(160, 138, "いました。", 24, C.ink, 'middle', true))] },
@@ -1186,7 +1186,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "おばあさんは どこへ？", add: [...fresh(lb(160, 100, "おばあさん", 30, C.red, 'middle', true),lb(160, 145, "→ 川へ せんたく", 24, C.blue, 'middle', true))] },
     { note: "まちがえやすい ところ。", add: [...fresh(lb(160, 88, "川で ももを ひろったのは", 20, C.ink, 'middle', true),bx(73, 109, 174, 57, "おばあさん", C.red, FILL.warm, 30))] },
     { note: "こたえ。", add: [...fresh(lb(160, 101, "おじいさん → 山 しばかり", 22, C.red, 'middle', true),lb(160, 139, "おばあさん → 川 せんたく", 22, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_109_a: show([
     { note: "同（おな）じ ことが なんかいも 出て くる。", add: [...fresh(lb(160, 100, "おなじ ことが 3かい", 28, C.red, 'middle', true),lb(160, 143, "3かいめだけ ちがう", 24, C.blue, 'middle', true))] },
     { note: "1ぴきめ。", add: [...fresh(lb(160, 100, "わらの いえ", 30, C.red, 'middle', true),lb(160, 145, "→ ふきとばされた", 24, C.ink, 'middle', true))] },
@@ -1195,7 +1195,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ くりかえすの？", add: [...fresh(lb(160, 84, "なぜ？", 34, C.red, 'middle', true),lb(160, 130, "おぼえやすい", 22, C.ink, 'middle', true),lb(160, 167, "3かいめの ちがいが ひきたつ", 20, C.ink, 'middle', true))] },
     { note: "同じ ところと ちがう ところ。", add: [...fresh(bx(58, 81, 64, 46, "わら", C.main, FILL.warm, 24),bx(128, 81, 40, 46, "木", C.main, FILL.warm, 24),bx(174, 81, 88, 46, "れんが", C.main, FILL.warm, 24),lb(160, 146, "1・2は ふきとばされ、3は ちがう", 18, C.blue, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(bx(28, 73, 264, 57, "わら・木・れんが", C.red, FILL.warm, 30),lb(160, 152, "ふきとばされない → れんが", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_110_a: show([
     { note: "じんぶつに 手紙（てがみ）を 書（か）こう。", add: [...fresh(lb(160, 98, "てがみ", 44, C.red, 'middle', true),lb(160, 155, "チチに かく", 26, C.blue, 'middle', true))] },
     { note: "1 あいての 名まえ。", add: [...fresh(bx(88, 62, 144, 76, "チチへ", C.red, FILL.warm, 40),lb(160, 161, "はじめに かく", 24, C.blue, 'middle', true))] },
@@ -1204,7 +1204,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "3 じぶんの 思（おも）い出も 入れる。", add: [...fresh(lb(160, 101, "「ぼくも…」", 30, C.red, 'middle', true),lb(160, 145, "じぶんの おもいで", 22, C.ink, 'middle', true))] },
     { note: "4 おわりに じぶんの 名まえ。", add: [...fresh(bx(58, 65, 204, 68, "ゆうきより", C.red, FILL.warm, 36),lb(160, 157, "おわりに かく", 24, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 101, "はじめ：あいての 名まえ", 22, C.red, 'middle', true),lb(160, 139, "おわり：じぶんの 名まえ", 22, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_111_a: show([
     { note: "しを 声（こえ）に 出して 読（よ）もう。", add: [...fresh(lb(160, 100, "しを こえに 出して よもう", 24, C.red, 'middle', true),lb(160, 140, "リズムを たのしもう", 24, C.blue, 'middle', true))] },
     { note: "「雨の 音」の しを 読もう。", add: [...fresh(lb(160, 56, "ぽつん ぽつん", 28, C.ink, 'middle', true),lb(160, 100, "まどに あたる", 24, C.ink, 'middle', true),lb(160, 143, "ぴちゃ ぴちゃ ぴちゃ", 28, C.ink, 'middle', true),lb(160, 187, "水たまりが わらう", 24, C.ink, 'middle', true))] },
@@ -1213,7 +1213,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ くりかえすの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "音が つづくと", 22, C.ink, 'middle', true),lb(160, 167, "リズムに なるから", 22, C.ink, 'middle', true))] },
     { note: "行（ぎょう）の おわりは ちょっと 休む。", add: [...fresh(lb(160, 81, "ぽつん ぽつん ／", 26, C.ink, 'middle', true),lb(160, 124, "まどに あたる ／", 26, C.ink, 'middle', true),lb(160, 164, "（ちょっと 休む）", 20, C.blue, 'middle', true))] },
     { note: "こたえ。くりかえし。", add: [...fresh(lb(160, 95, "ぽつん ぽつん", 30, C.red, 'middle', true),lb(160, 145, "ぴちゃ ぴちゃ ぴちゃ", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_112_a: show([
     { note: "音と ようすの ことば。", add: [...fresh(lb(160, 100, "音と ようす", 40, C.red, 'middle', true),lb(160, 152, "ことばで ちがいが 出る", 24, C.blue, 'middle', true))] },
     { note: "ちいさな 雨。", add: [...fresh(lb(160, 101, "ぽつぽつ", 44, C.red, 'middle', true),lb(160, 155, "すこし ふる", 22, C.ink, 'middle', true))] },
@@ -1222,7 +1222,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ ことばで ちがうの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "音の ひびきが", 22, C.ink, 'middle', true),lb(160, 167, "ようすを あらわすから", 22, C.ink, 'middle', true))] },
     { note: "雪（ゆき）の 朝（あさ）。「しん」は？", add: [...fresh(lb(160, 101, "しんと しずか", 34, C.red, 'middle', true),lb(160, 148, "音が しない ようす", 22, C.blue, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 57, "しとしと", 30, C.red, 'middle', true),lb(160, 101, "＝ しずかに ふる", 22, C.ink, 'middle', true),lb(160, 145, "ざあざあ", 30, C.red, 'middle', true),lb(160, 188, "＝ はげしく ふる", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_113_a: show([
     { note: "はいくは 五・七・五。", add: [...fresh(lb(160, 92, "はいく", 40, C.red, 'middle', true),lb(160, 152, "五・七・五", 34, C.blue, 'middle', true))] },
     { note: "まず「ふるいけや」。5音。", add: [...fresh(bx(43, 75, 42, 49, "ふ", C.red, FILL.warm, 26),bx(91, 75, 42, 49, "る", C.red, FILL.warm, 26),bx(139, 75, 42, 49, "い", C.red, FILL.warm, 26),bx(187, 75, 42, 49, "け", C.red, FILL.warm, 26),bx(235, 75, 42, 49, "や", C.red, FILL.warm, 26),lb(160, 148, "5音", 24, C.blue, 'middle', true))] },
@@ -1231,7 +1231,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ 五七五なの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "みみに きもちよい", 22, C.ink, 'middle', true),lb(160, 167, "リズムだから", 22, C.ink, 'middle', true))] },
     { note: "小さい「ゃ」は 前（まえ）と 1音。", add: [...fresh(lb(160, 98, "しゃ・し・ん", 34, C.red, 'middle', true),lb(160, 148, "＝ 3音", 26, C.blue, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 76, "ふるいけや（5）", 26, C.red, 'middle', true),lb(160, 120, "かわずとびこむ（7）", 26, C.red, 'middle', true),lb(160, 164, "みずのおと（5）", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_114_a: show([
     { note: "ことわざは むかしの 人の ちえ。", add: [...fresh(lb(160, 100, "ことわざ", 44, C.red, 'middle', true),lb(160, 155, "むかしの 人の ちえ", 24, C.blue, 'middle', true))] },
     { note: "1つ めの ことわざ。", add: [...fresh(bx(38, 70, 245, 65, "ねこに こばん", C.red, FILL.warm, 34),lb(160, 155, "ことばの とおりでは ない", 20, C.blue, 'middle', true))] },
@@ -1240,7 +1240,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "人に あてはめる。", add: [...fresh(lb(160, 103, "ねうちの わからない 人に", 22, C.ink, 'middle', true),lb(160, 139, "たいせつな ものを あげても むだ", 19, C.red, 'middle', true))] },
     { note: "ほかの ことわざ。", add: [...fresh(lb(160, 65, "さるも きから おちる", 24, C.ink, 'middle', true),lb(160, 102, "＝ とくいな 人も しっぱい", 20, C.blue, 'middle', true),lb(160, 140, "七ころび 八おき", 24, C.ink, 'middle', true),lb(160, 178, "＝ なんども がんばる", 20, C.blue, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 84, "ねこに こばん", 30, C.red, 'middle', true),lb(160, 128, "ねうちの わからない 人に", 22, C.ink, 'middle', true),lb(160, 164, "たいせつな ものを あげても むだ", 19, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_115_a: show([
     { note: "3つの ことばあそび。", add: [...fresh(lb(160, 104, "ことばあそび", 40, C.red, 'middle', true),lb(160, 152, "なぞなぞ・しりとり・かいぶん", 18, C.blue, 'middle', true))] },
     { note: "なぞなぞ。", add: [...fresh(lb(160, 75, "パンは パンでも", 24, C.ink, 'middle', true),lb(160, 116, "たべられない パンは？", 24, C.ink, 'middle', true),lb(160, 161, "→ フライパン", 30, C.red, 'middle', true))] },
@@ -1249,7 +1249,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ 同（おな）じなの？", add: [...fresh(lb(160, 84, "なぜ？", 34, C.red, 'middle', true),lb(160, 130, "まんなかの「ぶ」を", 22, C.ink, 'middle', true),lb(160, 167, "ちゅうしんに 左と 右が おなじ", 20, C.ink, 'middle', true))] },
     { note: "1字ずつ くらべる。", add: [...fresh(lb(160, 79, "1と 7 ＝ た", 24, C.ink, 'middle', true),lb(160, 120, "2と 6 ＝ け", 24, C.ink, 'middle', true),lb(160, 161, "3と 5 ＝ や", 24, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 100, "たけやぶ やけた", 30, C.red, 'middle', true),lb(160, 145, "＝ かいぶん（おなじ）", 24, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_116_a: show([
     { note: "音が にて いて、いみが ちがう。", add: [...fresh(lb(160, 100, "だじゃれ", 44, C.red, 'middle', true),lb(160, 155, "にた 音で ちがう いみ", 24, C.blue, 'middle', true))] },
     { note: "ふとんが ふっとんだ。", add: [...fresh(lb(160, 92, "ふとんが", 34, C.ink, 'middle', true),lb(160, 148, "ふっとんだ", 34, C.red, 'middle', true))] },
@@ -1258,7 +1258,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ おもしろいの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "音は にて いるのに", 22, C.ink, 'middle', true),lb(160, 167, "いみが ちがうから", 22, C.ink, 'middle', true))] },
     { note: "ほかの れい。", add: [...fresh(lb(160, 81, "いるかが いるか", 26, C.red, 'middle', true),lb(160, 124, "イカは いかが？", 26, C.red, 'middle', true),lb(160, 164, "人を ばかに しない", 20, C.blue, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(lb(160, 100, "ふとん と ふっとんだ", 28, C.red, 'middle', true),lb(160, 143, "音が にて いる", 24, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_117_a: show([
     { note: "こくごじてんは ことばの いみが わかる 本。", add: [...fresh(lb(160, 101, "こくごじてん", 34, C.red, 'middle', true),lb(160, 148, "ことばの いみが わかる 本", 22, C.blue, 'middle', true))] },
     { note: "あいうえお じゅんに ならんで いる。", add: [...fresh(bx(43, 68, 42, 49, "あ", C.main, FILL.warm, 26),bx(91, 68, 42, 49, "か", C.main, FILL.warm, 26),bx(139, 68, 42, 49, "さ", C.main, FILL.warm, 26),bx(187, 68, 42, 49, "た", C.main, FILL.warm, 26),bx(235, 68, 42, 49, "な", C.main, FILL.warm, 26),bx(43, 123, 42, 49, "は", C.main, FILL.warm, 26),bx(91, 123, 42, 49, "ま", C.main, FILL.warm, 26),bx(139, 123, 42, 49, "や", C.main, FILL.warm, 26),bx(187, 123, 42, 49, "ら", C.main, FILL.warm, 26),bx(235, 123, 42, 49, "わ", C.main, FILL.warm, 26))] },
@@ -1267,7 +1267,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "2字めを 見る。", add: [...fresh(lb(160, 79, "たいこ → い", 24, C.ink, 'middle', true),lb(160, 120, "たから → か", 24, C.ink, 'middle', true),lb(160, 161, "たぬき → ぬ", 24, C.ink, 'middle', true))] },
     { note: "なぜ この じゅん？", add: [...fresh(lb(160, 84, "なぜ？", 34, C.red, 'middle', true),lb(160, 130, "い・か・ぬは", 22, C.ink, 'middle', true),lb(160, 167, "あいうえおの じゅんだから", 20, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(bx(12, 100, 297, 40, "たいこ → たから → たぬき", C.red, FILL.warm, 21))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_118_a: show([
     { note: "としょかんの 本は しゅるいごと。", add: [...fresh(lb(160, 101, "としょかん", 40, C.red, 'middle', true),lb(160, 152, "本は しゅるいごとに ならぶ", 22, C.blue, 'middle', true))] },
     { note: "たなの しゅるい。", add: [...fresh(bx(53, 75, 126, 42, "ものがたり", C.main, FILL.warm, 22),bx(185, 75, 82, 42, "えほん", C.main, FILL.warm, 22),bx(48, 123, 82, 42, "ずかん", C.main, FILL.warm, 22),bx(136, 123, 137, 42, "しらべる 本", C.main, FILL.warm, 22))] },
@@ -1276,7 +1276,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "たなの ひょうじを 見る。", add: [...fresh(bx(36, 93, 248, 53, "ずかん ＞ こん虫", C.red, FILL.warm, 28))] },
     { note: "かりる ときの きまり。", add: [...fresh(lb(160, 84, "しずかに する", 22, C.ink, 'middle', true),lb(160, 120, "きめられた 日までに かえす", 20, C.ink, 'middle', true),lb(160, 156, "たいせつに つかう", 22, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(bx(38, 69, 245, 65, "ずかんの たな", C.red, FILL.warm, 34),lb(160, 155, "（こん虫ずかん など）", 22, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_119_a: show([
     { note: "かんそうを 書（か）こう。", add: [...fresh(lb(160, 101, "かんそう", 44, C.red, 'middle', true),lb(160, 155, "本を よんだ 気もち", 22, C.blue, 'middle', true))] },
     { note: "かんそうの 4つの ぶぶん。", add: [...fresh(bx(11, 97, 64, 46, "だい", C.main, FILL.warm, 24),bx(81, 97, 64, 46, "すき", C.main, FILL.warm, 24),bx(151, 97, 64, 46, "わけ", C.main, FILL.warm, 24),bx(221, 97, 88, 46, "おもい", C.main, FILL.warm, 24))] },
@@ -1285,7 +1285,7 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "なぜ わけを 書くの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "どうして すきかが", 22, C.ink, 'middle', true),lb(160, 167, "つたわるから", 22, C.ink, 'middle', true))] },
     { note: "3 わけ。", add: [...fresh(lb(160, 102, "ひとりぼっちの ほしが", 20, C.ink, 'middle', true),lb(160, 138, "うれしそうだったから", 20, C.red, 'middle', true))] },
     { note: "こたえ。ならべる じゅんは…", add: [...fresh(bx(13, 78, 294, 51, "イ → エ → ウ → ア", C.red, FILL.warm, 27),lb(160, 149, "本・すきな ところ・わけ・おもい", 18, C.ink, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120k2_120_a: show([
     { note: "1年の ふりかえり。", add: [...fresh(lb(160, 101, "1年の ふりかえり", 30, C.red, 'middle', true),lb(160, 145, "こくごで ならった こと", 22, C.blue, 'middle', true))] },
     { note: "1年で ならった こと。", add: [...fresh(bx(53, 51, 104, 42, "ひらがな", C.main, FILL.warm, 22),bx(163, 51, 104, 42, "カタカナ", C.main, FILL.warm, 22),bx(86, 99, 82, 42, "かんじ", C.main, FILL.warm, 22),bx(174, 99, 60, 42, "ぶん", C.main, FILL.warm, 22),bx(97, 147, 60, 42, "よむ", C.main, FILL.warm, 22),bx(163, 147, 60, 42, "かく", C.main, FILL.warm, 22))] },
@@ -1294,5 +1294,5 @@ export const lessonFigsU120E2Kokugo: Record<string, Figure> = {
     { note: "つぎに「え」。", add: [...fresh(bx(10, 79, 300, 44, "がっこうえ → がっこうへ", C.red, FILL.warm, 23),lb(160, 145, "よむ ときは「え」", 22, C.blue, 'middle', true))] },
     { note: "なぜ なおすの？", add: [...fresh(lb(160, 82, "なぜ？", 34, C.red, 'middle', true),lb(160, 129, "かく ときの きまりだから", 22, C.ink, 'middle', true),lb(160, 167, "文が ただしく つたわる", 22, C.ink, 'middle', true))] },
     { note: "こたえ。", add: [...fresh(bx(13, 103, 294, 34, "ぼくは がっこうへ いきました。", C.red, FILL.warm, 18))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
 };

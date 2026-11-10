@@ -11,7 +11,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "一の くらいを 5に かえる。", add: [cover(71, 70, 35, 26), cover(143, 70, 35, 26), cover(215, 70, 35, 26), cover(0, 70, 320, 110), bx(58, 100, 60, 64, "1", C.main, FILL.warm, 34), lb(88.0, 86, "百", 15, C.blue, 'middle', true), bx(130, 100, 60, 64, "0", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 60, 64, "5", C.main, FILL.warm, 34), lb(232.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "だから 105（ひゃくご）。", add: [cover(7, 176, 306, 44), lb(160, 215, "100と 5 ＝ 105", 26, C.red, 'middle', true)] },
     { note: "105は 3けたの 数。4けたに ならないように ちゅうい！", add: [cover(57, 31, 207, 37), lb(160, 40, "3けた", 28, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_002_a: show([
     { note: "3けたの 数を よむ。234 を 見てみよう。", add: [bx(54, 100, 64, 64, "2", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "3", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "4", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "百の くらいは 2。「二百（にひゃく）」。", add: [cover(69, 70, 35, 26), cover(143, 70, 35, 26), cover(217, 70, 35, 26), cover(0, 80, 320, 120), bx(54, 100, 64, 64, "2", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "3", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "4", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true), lb(160, 195, "二百", 28, C.red, 'middle', true)] },
@@ -20,7 +20,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "305の ように、十の くらいが 0の ときも ある。", add: [cover(69, 70, 35, 26), cover(143, 70, 35, 26), cover(217, 70, 35, 26), cover(0, 60, 320, 180), bx(54, 100, 64, 64, "3", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "0", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "5", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "0は よまない。「三百五（さんびゃく ご）」。", add: [cover(30, 164, 259, 48), lb(160, 195, "三百 五", 28, C.red, 'middle', true)] },
     { note: "0の くらいを わすれずに、3けたで かこう。", add: [lb(160, 40, "305", 30, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_003_a: show([
     { note: "357を 百・十・一の くらいに 分けよう。", add: [bx(54, 100, 64, 64, "3", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "5", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "7", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "百の くらいの 3は、100が 3こ。", add: [lb(160, 195, "3 → 300", 28, C.red, 'middle', true)] },
@@ -29,7 +29,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせると、300 ＋ 50 ＋ 7。", add: [cover(65, 164, 190, 48), cover(0, 175, 320, 50), lb(160, 195, "300 ＋ 50 ＋ 7", 28, C.red, 'middle', true)] },
     { note: "357に なったね。", add: [cover(0, 164, 320, 48), cover(0, 175, 320, 50), lb(160, 195, "＝ 357", 32, C.blue, 'middle', true)] },
     { note: "同じ 数字でも、くらいが ちがうと 大きさが かわる。", add: [lb(160, 40, "5 ＝ 500、50、5", 24, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_004_a: show([
     { note: "100が 2こ、10が 4こ、1が 6こ。いくつに なるかな？", add: [bx(114, 70, 44, 26, "100", C.main, FILL.warm, 16), bx(162, 70, 44, 26, "100", C.main, FILL.warm, 16), bx(96, 120, 30, 26, "10", C.main, FILL.warm, 13), bx(128, 120, 30, 26, "10", C.main, FILL.warm, 13), bx(162, 120, 30, 26, "10", C.main, FILL.warm, 13), bx(194, 120, 30, 26, "10", C.main, FILL.warm, 13), bx(86, 170, 22, 26, "1", C.main, FILL.warm, 12), bx(112, 170, 22, 26, "1", C.main, FILL.warm, 12), bx(136, 170, 22, 26, "1", C.main, FILL.warm, 12), bx(162, 170, 22, 26, "1", C.main, FILL.warm, 12), bx(186, 170, 22, 26, "1", C.main, FILL.warm, 12), bx(212, 170, 22, 26, "1", C.main, FILL.warm, 12)] },
     { note: "100が 2こ ＝ 200。", add: [cover(0, 50, 320, 165), bx(54, 100, 64, 64, "2", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
@@ -38,7 +38,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせて 246。", add: [lb(160, 205, "200 ＋ 40 ＋ 6 ＝ 246", 24, C.red, 'middle', true)] },
     { note: "10が 24こ の ときは？ 10が 10こで 100。", add: [cover(0, 50, 320, 190), bx(16, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(46, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(74, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(104, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(132, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(162, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(190, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(220, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(248, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(278, 100, 26, 26, "10", C.main, FILL.warm, 13), bx(16, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(46, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(74, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(104, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(132, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(162, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(190, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(220, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(248, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(278, 135, 26, 26, "10", C.main, FILL.warm, 13), bx(104, 170, 26, 26, "10", C.main, FILL.warm, 13), bx(132, 170, 26, 26, "10", C.main, FILL.warm, 13), bx(162, 170, 26, 26, "10", C.main, FILL.warm, 13), bx(190, 170, 26, 26, "10", C.main, FILL.warm, 13)] },
     { note: "だから 10が 24こ ＝ 240。", add: [lb(160, 40, "10が 24こ ＝ 240", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_005_a: show([
     { note: "459の つぎは いくつ？ 459、□。", add: [bx(54, 100, 64, 64, "4", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "5", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "9", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "一の くらいの 9の つぎは 0。十の くらいが 1 ふえる。", add: [cover(69, 70, 35, 26), cover(143, 70, 35, 26), cover(217, 70, 35, 26), cover(0, 80, 320, 120), bx(54, 100, 64, 64, "4", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "6", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "0", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
@@ -47,7 +47,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十と 一が 0に なり、百の くらいが 1 ふえる。", add: [cover(69, 70, 35, 26), cover(143, 70, 35, 26), cover(217, 70, 35, 26), cover(0, 80, 320, 120), bx(54, 100, 64, 64, "4", C.main, FILL.warm, 34), lb(86.0, 86, "百", 15, C.blue, 'middle', true), bx(128, 100, 64, 64, "0", C.main, FILL.warm, 34), lb(160.0, 86, "十", 15, C.blue, 'middle', true), bx(202, 100, 64, 64, "0", C.main, FILL.warm, 34), lb(234.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "399の つぎは 400。", add: [cover(7, 176, 306, 44), lb(160, 205, "399 → 400", 26, C.red, 'middle', true)] },
     { note: "500の 前は 499。つぎ・前は 1 ふやす・へらす。", add: [cover(0, 80, 320, 160), lb(160, 140, "499 ← 500", 34, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_006_a: show([
     { note: "356と 365を くらべよう。", add: [bx(83, 50, 46, 44, "3", C.main, FILL.warm, 28), lb(106.0, 36, "百", 15, C.blue, 'middle', true), bx(137, 50, 46, 44, "5", C.main, FILL.warm, 28), lb(160.0, 36, "十", 15, C.blue, 'middle', true), bx(191, 50, 46, 44, "6", C.main, FILL.warm, 28), lb(214.0, 36, "一", 15, C.blue, 'middle', true), bx(83, 112, 46, 44, "3", C.main, FILL.warm, 28), bx(137, 112, 46, 44, "6", C.main, FILL.warm, 28), bx(191, 112, 46, 44, "5", C.main, FILL.warm, 28)] },
     { note: "まず 百の くらいを くらべる。3と 3 で 同じ。", add: [lb(160, 195, "百：3 と 3 → 同じ", 22, C.blue, 'middle', true)] },
@@ -56,7 +56,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "「＞」は 大きい 方に 口を 向ける。", add: [cover(0, 164, 320, 48), cover(0, 175, 320, 40), lb(160, 195, "365 ＞ 356", 28, C.blue, 'middle', true)] },
     { note: "「＜」も おなじ。口は 大きい 方へ。", add: [cover(0, 164, 320, 48), cover(0, 175, 320, 40), lb(160, 195, "356 ＜ 365", 28, C.blue, 'middle', true)] },
     { note: "かならず 上の くらい（百）から くらべる！", add: [cover(0, 164, 320, 48), cover(0, 175, 320, 40), lb(160, 195, "百 → 十 → 一", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_007_a: show([
     { note: "0から 1000までの 数の 線。", add: [ln(30, 130, 290, 130, C.ink, false, 3), ln(30, 118, 30, 142, C.ink, false, 2), ln(56, 118, 56, 142, C.ink, false, 2), ln(82, 118, 82, 142, C.ink, false, 2), ln(108, 118, 108, 142, C.ink, false, 2), ln(134, 118, 134, 142, C.ink, false, 2), ln(160, 118, 160, 142, C.ink, false, 2), ln(186, 118, 186, 142, C.ink, false, 2), ln(212, 118, 212, 142, C.ink, false, 2), ln(238, 118, 238, 142, C.ink, false, 2), ln(264, 118, 264, 142, C.ink, false, 2), ln(290, 118, 290, 142, C.ink, false, 2), lb(30, 160, "0", 16, C.ink, 'middle', true), lb(290, 160, "1000", 16, C.ink, 'middle', true)] },
     { note: "大きな めもり 1つ分は 100。", add: [lb(160, 60, "1めもり ＝ 100", 24, C.red, 'middle', true)] },
@@ -65,7 +65,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "600と 700の まんなかは？ 100の 半分は 50。", add: [cover(3, 34, 314, 41), cover(0, 40, 320, 40), lb(160, 60, "100の 半分 ＝ 50", 24, C.red, 'middle', true)] },
     { note: "600 ＋ 50 ＝ 650。", add: [lb(199.0, 180, "650", 22, C.red, 'middle', true)] },
     { note: "650が まんなか。右へ 行くほど 大きい。", add: [cover(0, 34, 320, 41), cover(0, 40, 320, 40), lb(160, 60, "右へ → 大きい", 24, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_008_a: show([
     { note: "350から 10ずつ ふえる ならび。", add: [bx(28, 100, 60, 26, "350", C.main, FILL.warm, 20), bx(96, 100, 60, 26, "360", C.main, FILL.warm, 20), bx(164, 100, 60, 26, "370", C.main, FILL.warm, 20), bx(232, 100, 60, 26, "？", C.main, FILL.warm, 20)] },
     { note: "350 → 360。十の くらいが 5から 6。", add: [lb(160, 170, "10 ふえた", 22, C.red, 'middle', true)] },
@@ -74,7 +74,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "だから ？ は 380。", add: [cover(0, 70, 320, 60), bx(28, 100, 60, 26, "350", C.main, FILL.warm, 20), bx(96, 100, 60, 26, "360", C.main, FILL.warm, 20), bx(164, 100, 60, 26, "370", C.main, FILL.warm, 20), bx(232, 100, 60, 26, "380", C.main, FILL.warm, 20)] },
     { note: "100ずつ ふえる ときは、百の くらいが 1 ふえる。", add: [cover(0, 70, 320, 150), bx(28, 100, 60, 26, "200", C.main, FILL.warm, 20), bx(96, 100, 60, 26, "300", C.main, FILL.warm, 20), bx(164, 100, 60, 26, "400", C.main, FILL.warm, 20), bx(232, 100, 60, 26, "500", C.main, FILL.warm, 20)] },
     { note: "きまりを 見つければ、先も 言える。", add: [cover(70, 146, 180, 37), lb(160, 170, "百の くらいが 1ずつ", 22, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_009_a: show([
     { note: "100が 10こ あつまると いくつ？", add: [bx(16, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(46, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(74, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(104, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(132, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(162, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(190, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(220, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(248, 100, 26, 26, "100", C.main, FILL.warm, 11), bx(278, 100, 26, 26, "100", C.main, FILL.warm, 11)] },
     { note: "ひとつ めの 100。", add: [lb(160, 170, "100", 28, C.blue, 'middle', true)] },
@@ -83,7 +83,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "10こで 1000（せん）！", add: [cover(100, 139, 120, 48), cover(0, 150, 320, 40), lb(160, 170, "1000", 38, C.red, 'middle', true)] },
     { note: "999の つぎは 1000。4けたに なる。", add: [cover(0, 70, 320, 150), bx(33, 100, 56, 64, "1", C.main, FILL.warm, 30), lb(61.0, 86, "千", 15, C.blue, 'middle', true), bx(99, 100, 56, 64, "0", C.main, FILL.warm, 30), lb(127.0, 86, "百", 15, C.blue, 'middle', true), bx(165, 100, 56, 64, "0", C.main, FILL.warm, 30), lb(193.0, 86, "十", 15, C.blue, 'middle', true), bx(231, 100, 56, 64, "0", C.main, FILL.warm, 30), lb(259.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "1000は 4けた。0が 3つ。", add: [lb(160, 40, "0が 3つ", 24, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_010_a: show([
     { note: "4けたの 数 3524 を 見よう。", add: [bx(33, 100, 56, 64, "3", C.main, FILL.warm, 30), lb(61.0, 86, "千", 15, C.blue, 'middle', true), bx(99, 100, 56, 64, "5", C.main, FILL.warm, 30), lb(127.0, 86, "百", 15, C.blue, 'middle', true), bx(165, 100, 56, 64, "2", C.main, FILL.warm, 30), lb(193.0, 86, "十", 15, C.blue, 'middle', true), bx(231, 100, 56, 64, "4", C.main, FILL.warm, 30), lb(259.0, 86, "一", 15, C.blue, 'middle', true)] },
     { note: "千の くらいは 3。「三千（さんぜん）」。", add: [lb(160, 195, "三千", 26, C.red, 'middle', true)] },
@@ -92,7 +92,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "一の くらいは 4。「四（よん）」。", add: [cover(23, 166, 274, 44), cover(0, 175, 320, 50), lb(160, 195, "三千 五百 二十 四", 26, C.red, 'middle', true)] },
     { note: "1000が 10こ あつまると 10000（一万）。", add: [cover(0, 60, 320, 170), bx(22, 100, 52, 26, "1000", C.main, FILL.warm, 13), bx(78, 100, 52, 26, "1000", C.main, FILL.warm, 13), bx(134, 100, 52, 26, "1000", C.main, FILL.warm, 13), bx(190, 100, 52, 26, "1000", C.main, FILL.warm, 13), bx(246, 100, 52, 26, "1000", C.main, FILL.warm, 13), bx(22, 135, 52, 26, "1000", C.main, FILL.warm, 13), bx(78, 135, 52, 26, "1000", C.main, FILL.warm, 13), bx(134, 135, 52, 26, "1000", C.main, FILL.warm, 13), bx(190, 135, 52, 26, "1000", C.main, FILL.warm, 13), bx(246, 135, 52, 26, "1000", C.main, FILL.warm, 13)] },
     { note: "9999の つぎは 10000。一万と よむ。", add: [cover(0, 166, 320, 44), lb(160, 195, "10000 ＝ 一万", 30, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_011_a: show([
     { note: "くらいを そろえて かく。23 ＋ 14。", add: [lb(150, 105, "2", 34, C.ink, 'middle', true), lb(190, 105, "3", 34, C.ink, 'middle', true), lb(150, 145, "1", 34, C.ink, 'middle', true), lb(190, 145, "4", 34, C.ink, 'middle', true), lb(70, 145, "＋", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。3 ＋ 4。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -101,7 +101,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "2＋1＝3。十の くらいに 3 を かく。", add: [lb(150, 198, "3", 34, C.red, 'middle', true)] },
     { note: "もう くり上がりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 37。", add: [lb(160, 230, "23 ＋ 14 ＝ 37", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_012_a: show([
     { note: "くらいを そろえて かく。32 ＋ 45。", add: [lb(150, 105, "3", 34, C.ink, 'middle', true), lb(190, 105, "2", 34, C.ink, 'middle', true), lb(150, 145, "4", 34, C.ink, 'middle', true), lb(190, 145, "5", 34, C.ink, 'middle', true), lb(70, 145, "＋", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。2 ＋ 5。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -110,7 +110,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3＋4＝7。十の くらいに 7 を かく。", add: [lb(150, 198, "7", 34, C.red, 'middle', true)] },
     { note: "もう くり上がりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 77。", add: [lb(160, 230, "32 ＋ 45 ＝ 77", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_013_a: show([
     { note: "くらいを そろえて かく。28 ＋ 35。", add: [lb(150, 105, "2", 34, C.ink, 'middle', true), lb(190, 105, "8", 34, C.ink, 'middle', true), lb(150, 145, "3", 34, C.ink, 'middle', true), lb(190, 145, "5", 34, C.ink, 'middle', true), lb(70, 145, "＋", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。8 ＋ 5。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -119,7 +119,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "2＋3＋1＝6。十の くらいに 6 を かく。", add: [lb(150, 198, "6", 34, C.red, 'middle', true)] },
     { note: "もう くり上がりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 63。", add: [lb(160, 230, "28 ＋ 35 ＝ 63", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_014_a: show([
     { note: "くらいを そろえて かく。52 ＋ 71。", add: [lb(150, 105, "5", 34, C.ink, 'middle', true), lb(190, 105, "2", 34, C.ink, 'middle', true), lb(150, 145, "7", 34, C.ink, 'middle', true), lb(190, 145, "1", 34, C.ink, 'middle', true), lb(70, 145, "＋", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。2 ＋ 1。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -128,7 +128,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "5＋7＝12。十の くらいに 2、百の くらいに くり上げ。", add: [lb(150, 198, "2", 34, C.red, 'middle', true)] },
     { note: "百の くらいに くり上がった 1 を おろす。", add: [cover(126, 119, 48, 10), lb(110, 198, "1", 34, C.red, 'middle', true)] },
     { note: "答えは 123。", add: [lb(160, 230, "52 ＋ 71 ＝ 123", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_015_a: show([
     { note: "くらいを そろえて かく。68 ＋ 57。", add: [lb(150, 105, "6", 34, C.ink, 'middle', true), lb(190, 105, "8", 34, C.ink, 'middle', true), lb(150, 145, "5", 34, C.ink, 'middle', true), lb(190, 145, "7", 34, C.ink, 'middle', true), lb(70, 145, "＋", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。8 ＋ 7。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -137,7 +137,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "6＋5＋1＝12。十の くらいに 2、百の くらいに くり上げ。", add: [lb(150, 198, "2", 34, C.red, 'middle', true)] },
     { note: "百の くらいに くり上がった 1 を おろす。", add: [cover(126, 119, 48, 10), lb(110, 198, "1", 34, C.red, 'middle', true)] },
     { note: "答えは 125。", add: [lb(160, 230, "68 ＋ 57 ＝ 125", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_016_a: show([
     { note: "23＋15＋31 を 計算しよう。", add: [lb(160, 50, "23 ＋ 15 ＋ 31", 26, C.ink, 'middle', true)] },
     { note: "まず 左の 2つを たす。", add: [lb(160, 90, "23 ＋ 15 ＝ 38", 26, C.blue, 'middle', true)] },
@@ -146,7 +146,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "一の くらい 8＋1＝9、十の くらい 3＋3＝6 で 69。", add: [lb(160, 210, "答えは 69", 26, C.red, 'middle', true)] },
     { note: "たす 順を かえても 同じか たしかめよう。", add: [...fresh(lb(160, 120, "15 ＋ 31 ＝ 46", 26, C.blue, 'middle', true))] },
     { note: "23＋46 も 69。同じに なった。", add: [lb(160, 50, "23 ＋ 46 ＝ 69", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_017_a: show([
     { note: "28＋35 の 答えを たしかめよう。", add: [lb(160, 50, "28 ＋ 35 ＝ 63", 26, C.ink, 'middle', true)] },
     { note: "答えの 63 から 35 を ひく。", add: [lb(160, 90, "63 − 35", 26, C.blue, 'middle', true)] },
@@ -155,7 +155,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 28。もとの 数と 同じ！", add: [lb(160, 210, "63 − 35 ＝ 28", 26, C.red, 'middle', true)] },
     { note: "もう1つの 方法。数を 入れかえて たす。", add: [...fresh(lb(160, 120, "35 ＋ 28 ＝ 63", 26, C.blue, 'middle', true))] },
     { note: "同じ 答えに なった。たし算は 合っている。", add: [lb(160, 50, "合っている！", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_018_a: show([
     { note: "文章を 読もう。男の子 47人、女の子 38人。", add: [lb(160, 50, "男 47人、女 38人", 26, C.ink, 'middle', true)] },
     { note: "何を 聞かれて いるかな。「あわせて 何人」。", add: [lb(160, 90, "あわせて 何人？", 26, C.blue, 'middle', true)] },
@@ -164,7 +164,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 4＋3＋1＝8。", add: [lb(160, 210, "4 ＋ 3 ＋ 1 ＝ 8", 26, C.gray, 'middle', true)] },
     { note: "答えは 85。単位の「人」を わすれずに。", add: [...fresh(lb(160, 120, "答え 85人", 26, C.red, 'middle', true))] },
     { note: "ひき算で たしかめる。85−38＝47。", add: [lb(160, 50, "85 − 38 ＝ 47", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_019_a: show([
     { note: "みかんが 56こ あるよ。", add: [lb(160, 50, "はじめ 56こ", 26, C.ink, 'middle', true)] },
     { note: "17こ ふえたよ。", add: [lb(160, 90, "ふえた 17こ", 26, C.blue, 'middle', true)] },
@@ -173,7 +173,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 5＋1＋1＝7。", add: [lb(160, 210, "5 ＋ 1 ＋ 1 ＝ 7", 26, C.gray, 'middle', true)] },
     { note: "答えは 73こ。", add: [...fresh(lb(160, 120, "答え 73こ", 26, C.red, 'middle', true))] },
     { note: "73−17＝56 で たしかめ。", add: [lb(160, 50, "73 − 17 ＝ 56", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_020_a: show([
     { note: "38＋27 を 暗算で とこう。", add: [lb(160, 50, "38 ＋ 27", 26, C.ink, 'middle', true)] },
     { note: "38 は あと 2 で 40 に なる。", add: [lb(160, 90, "38 ＋ 2 ＝ 40", 26, C.blue, 'middle', true)] },
@@ -182,7 +182,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "40＋25＝65。", add: [lb(160, 210, "＝ 65", 26, C.red, 'middle', true)] },
     { note: "ひっ算でも たしかめよう。8＋7＝15。", add: [...fresh(lb(160, 120, "8 ＋ 7 ＝ 15", 26, C.gray, 'middle', true))] },
     { note: "3＋2＋1＝6。同じ 65！", add: [lb(160, 50, "答え 65", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_021_a: show([
     { note: "くらいを そろえて かく。78 − 45。", add: [lb(150, 105, "7", 34, C.ink, 'middle', true), lb(190, 105, "8", 34, C.ink, 'middle', true), lb(150, 145, "4", 34, C.ink, 'middle', true), lb(190, 145, "5", 34, C.ink, 'middle', true), lb(70, 145, "−", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。8 − 5。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -191,7 +191,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "7−4＝3。十の くらいに 3 を かく。", add: [lb(150, 198, "3", 34, C.red, 'middle', true)] },
     { note: "百の くらいは ない。のこりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 33。", add: [lb(160, 230, "78 − 45 ＝ 33", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_022_a: show([
     { note: "くらいを そろえて かく。52 − 27。", add: [lb(150, 105, "5", 34, C.ink, 'middle', true), lb(190, 105, "2", 34, C.ink, 'middle', true), lb(150, 145, "2", 34, C.ink, 'middle', true), lb(190, 145, "7", 34, C.ink, 'middle', true), lb(70, 145, "−", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。2 − 7。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -200,7 +200,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4−2＝2。十の くらいに 2 を かく。", add: [lb(150, 198, "2", 34, C.red, 'middle', true)] },
     { note: "百の くらいは ない。のこりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 25。", add: [lb(160, 230, "52 − 27 ＝ 25", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_023_a: show([
     { note: "くらいを そろえて かく。63 − 28。", add: [lb(150, 105, "6", 34, C.ink, 'middle', true), lb(190, 105, "3", 34, C.ink, 'middle', true), lb(150, 145, "2", 34, C.ink, 'middle', true), lb(190, 145, "8", 34, C.ink, 'middle', true), lb(70, 145, "−", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。3 − 8。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -209,7 +209,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "5−2＝3。十の くらいに 3 を かく。", add: [lb(150, 198, "3", 34, C.red, 'middle', true)] },
     { note: "百の くらいは ない。のこりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 35。", add: [lb(160, 230, "63 − 28 ＝ 35", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_024_a: show([
     { note: "くらいを そろえて かく。40 − 13。", add: [lb(150, 105, "4", 34, C.ink, 'middle', true), lb(190, 105, "0", 34, C.ink, 'middle', true), lb(150, 145, "1", 34, C.ink, 'middle', true), lb(190, 145, "3", 34, C.ink, 'middle', true), lb(70, 145, "−", 30, C.main, 'middle', true), ln(55, 166, 215, 166, C.ink, false, 3)] },
     { note: "まず 一の くらい。0 − 3。", add: [ln(172, 124, 208, 124, C.red, false, 5)] },
@@ -218,7 +218,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3−1＝2。十の くらいに 2 を かく。", add: [lb(150, 198, "2", 34, C.red, 'middle', true)] },
     { note: "百の くらいは ない。のこりは ない。", add: [cover(126, 119, 48, 10)] },
     { note: "答えは 27。", add: [lb(160, 230, "40 − 13 ＝ 27", 20, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_025_a: show([
     { note: "63−28 の 答えを たしかめよう。", add: [lb(160, 50, "63 − 28 ＝ 35", 26, C.ink, 'middle', true)] },
     { note: "答えの 35 に ひいた 28 を たす。", add: [lb(160, 90, "35 ＋ 28", 26, C.blue, 'middle', true)] },
@@ -227,7 +227,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "63 に なった。もとの 数と 同じ！", add: [lb(160, 210, "35 ＋ 28 ＝ 63", 26, C.red, 'middle', true)] },
     { note: "ひき算は 合っている。", add: [...fresh(lb(160, 120, "合っている！", 26, C.red, 'middle', true))] },
     { note: "たしかめは まちがいを 見つける 大事な 方法。", add: [lb(160, 50, "たしかめよう", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_026_a: show([
     { note: "あめが 82こ あるよ。", add: [lb(160, 50, "ぜんぶ 82こ", 26, C.ink, 'middle', true)] },
     { note: "37こ たべたよ。", add: [lb(160, 90, "たべた 37こ", 26, C.blue, 'middle', true)] },
@@ -236,7 +236,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 8−1−3＝4。", add: [lb(160, 210, "8 − 1 − 3 ＝ 4", 26, C.gray, 'middle', true)] },
     { note: "答えは 45こ。", add: [...fresh(lb(160, 120, "答え 45こ", 26, C.red, 'middle', true))] },
     { note: "45＋37＝82 で たしかめ。", add: [lb(160, 50, "45 ＋ 37 ＝ 82", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_027_a: show([
     { note: "あおいさん 75まい、ゆうたさん 48まい。", add: [lb(160, 50, "75まい と 48まい", 26, C.ink, 'middle', true)] },
     { note: "ちがいを 聞かれて いる。大きい 数から ひく。", add: [lb(160, 90, "75 − 48", 26, C.red, 'middle', true)] },
@@ -245,7 +245,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 27まい。", add: [lb(160, 210, "答え 27まい", 26, C.red, 'middle', true)] },
     { note: "27＋48＝75 で たしかめ。", add: [...fresh(lb(160, 120, "27 ＋ 48 ＝ 75", 26, C.blue, 'middle', true))] },
     { note: "ちがいも ひき算で もとめられる。", add: [lb(160, 50, "ちがい ＝ 大 − 小", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_028_a: show([
     { note: "28＋35＝63。この 式から ひき算を つくろう。", add: [lb(160, 50, "28 ＋ 35 ＝ 63", 26, C.ink, 'middle', true)] },
     { note: "63 が ぜんぶ（全体）。", add: [lb(160, 90, "全体 ＝ 63", 26, C.red, 'middle', true)] },
@@ -254,7 +254,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "1つの 式から 3つの 式が できた。", add: [lb(160, 210, "3つの 式", 26, C.red, 'middle', true)] },
     { note: "ひき算から たし算も つくれる。", add: [...fresh(lb(160, 120, "28 ＋ 35 ＝ 63", 26, C.gray, 'middle', true))] },
     { note: "部分 ＋ 部分 ＝ 全体。", add: [lb(160, 50, "部分＋部分＝全体", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_029_a: show([
     { note: "□に あてはまる 数を もとめよう。", add: [lb(160, 50, "□ ＋ 17 ＝ 45", 26, C.ink, 'middle', true)] },
     { note: "ぜんぶ（全体）は 45。", add: [lb(160, 90, "全体 ＝ 45", 26, C.red, 'middle', true)] },
@@ -263,7 +263,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "計算すると 28。", add: [lb(160, 210, "＝ 28", 26, C.red, 'middle', true)] },
     { note: "もとの 式に 入れて たしかめる。", add: [...fresh(lb(160, 120, "28 ＋ 17", 26, C.gray, 'middle', true))] },
     { note: "28＋17＝45。合っている。", add: [lb(160, 50, "＝ 45", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_030_a: show([
     { note: "□−18＝34。□を もとめよう。", add: [lb(160, 50, "□ − 18 ＝ 34", 26, C.ink, 'middle', true)] },
     { note: "□は もとの 数。18 を とって 34 のこった。", add: [lb(160, 90, "18 を とって 34", 26, C.blue, 'middle', true)] },
@@ -272,7 +272,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 3＋1＋1＝5。", add: [lb(160, 210, "3 ＋ 1 ＋ 1 ＝ 5", 26, C.gray, 'middle', true)] },
     { note: "□＝52。", add: [...fresh(lb(160, 120, "□ ＝ 52", 26, C.red, 'middle', true))] },
     { note: "52−18＝34 で たしかめ。", add: [lb(160, 50, "52 − 18 ＝ 34", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_031_a: show([
     { note: "ものさしを 見よう。1cm の ところ。", add: [lb(160, 50, "1cm", 26, C.ink, 'middle', true)] },
     { note: "1cm の 中に 小さな めもりが ある。", add: [lb(160, 90, "小さな めもり", 26, C.blue, 'middle', true)] },
@@ -281,7 +281,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "だから 1cm は 10mm。", add: [lb(160, 210, "1cm ＝ 10mm", 26, C.red, 'middle', true)] },
     { note: "2cm は 20mm。", add: [...fresh(lb(160, 120, "2cm ＝ 20mm", 26, C.gray, 'middle', true))] },
     { note: "3cm は 30mm。10ずつ ふえる。", add: [lb(160, 50, "3cm ＝ 30mm", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_032_a: show([
     { note: "えんぴつの 長さを はかろう。", add: [lb(160, 50, "ものさしに 当てる", 26, C.ink, 'middle', true)] },
     { note: "左はしを 0 に そろえる。", add: [lb(160, 90, "左はし ＝ 0", 26, C.red, 'middle', true)] },
@@ -290,7 +290,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3めもり ＝ 3mm。", add: [lb(160, 210, "3mm", 26, C.gray, 'middle', true)] },
     { note: "長さは 8cm3mm。", add: [...fresh(lb(160, 120, "8cm3mm", 26, C.red, 'middle', true))] },
     { note: "mm だけで 言うと 83mm。", add: [lb(160, 50, "83mm", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_033_a: show([
     { note: "72mm を cm と mm に なおそう。", add: [lb(160, 50, "72mm", 26, C.ink, 'middle', true)] },
     { note: "10mm ごとに 1cm。72 を 70 と 2 に 分ける。", add: [lb(160, 90, "70 ＋ 2", 26, C.blue, 'middle', true)] },
@@ -299,7 +299,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせて 7cm2mm。", add: [lb(160, 210, "72mm ＝ 7cm2mm", 26, C.red, 'middle', true)] },
     { note: "ぎゃくに 5cm6mm を mm に。5cm は 50mm。", add: [...fresh(lb(160, 120, "50 ＋ 6 ＝ 56", 26, C.blue, 'middle', true))] },
     { note: "5cm6mm ＝ 56mm。", add: [lb(160, 50, "56mm", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_034_a: show([
     { note: "3cm5mm と 2cm8mm を あわせよう。", add: [lb(160, 50, "3cm5mm ＋ 2cm8mm", 26, C.ink, 'middle', true)] },
     { note: "mm どうしを たす。5＋8＝13。", add: [lb(160, 90, "5mm ＋ 8mm ＝ 13mm", 26, C.blue, 'middle', true)] },
@@ -308,7 +308,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "くり上げた 1cm も たす。5＋1＝6。", add: [lb(160, 210, "5cm ＋ 1cm ＝ 6cm", 26, C.red, 'middle', true)] },
     { note: "答えは 6cm3mm。", add: [...fresh(lb(160, 120, "6cm3mm", 26, C.red, 'middle', true))] },
     { note: "mm に そろえた たしかめ：35＋28＝63。", add: [lb(160, 50, "63mm ＝ 6cm3mm", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_035_a: show([
     { note: "長い ものは m で あらわす。", add: [lb(160, 50, "1m", 26, C.ink, 'middle', true)] },
     { note: "1m は 100cm。", add: [lb(160, 90, "1m ＝ 100cm", 26, C.red, 'middle', true)] },
@@ -317,7 +317,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "2m は 1m が 2こ。", add: [lb(160, 210, "1m ＋ 1m", 26, C.blue, 'middle', true)] },
     { note: "100＋100＝200。", add: [...fresh(lb(160, 120, "2m ＝ 200cm", 26, C.red, 'middle', true))] },
     { note: "3m なら 300cm。100ずつ ふえる。", add: [lb(160, 50, "3m ＝ 300cm", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_036_a: show([
     { note: "150cm を m と cm に なおそう。", add: [lb(160, 50, "150cm", 26, C.ink, 'middle', true)] },
     { note: "100cm ごとに 1m。150 を 100 と 50 に 分ける。", add: [lb(160, 90, "100 ＋ 50", 26, C.blue, 'middle', true)] },
@@ -326,7 +326,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせて 1m50cm。", add: [lb(160, 210, "150cm ＝ 1m50cm", 26, C.red, 'middle', true)] },
     { note: "ぎゃくに 2m30cm を cm に。2m＝200cm。", add: [...fresh(lb(160, 120, "200 ＋ 30", 26, C.blue, 'middle', true))] },
     { note: "2m30cm ＝ 230cm。", add: [lb(160, 50, "230cm", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_037_a: show([
     { note: "1m20cm と 125cm を くらべよう。", add: [lb(160, 50, "1m20cm と 125cm", 26, C.ink, 'middle', true)] },
     { note: "たんいが ちがう。そろえよう。", add: [lb(160, 90, "たんいを そろえる", 26, C.red, 'middle', true)] },
@@ -335,7 +335,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "125 の ほうが 大きい。", add: [lb(160, 210, "125 ＞ 120", 26, C.red, 'middle', true)] },
     { note: "だから 125cm の ほうが 長い。", add: [...fresh(lb(160, 120, "125cm が 長い", 26, C.red, 'middle', true))] },
     { note: "ちがいは 5cm。", add: [lb(160, 50, "125−120＝5", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_038_a: show([
     { note: "自分の 手を ものさしに しよう。", add: [lb(160, 50, "手の 長さ", 26, C.ink, 'middle', true)] },
     { note: "手を ひろげた 長さは 約 15cm。", add: [lb(160, 90, "約 15cm", 26, C.red, 'middle', true)] },
@@ -344,7 +344,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "15＋15＝30、30＋30＝60。", add: [lb(160, 210, "＝ 60", 26, C.red, 'middle', true)] },
     { note: "約 60cm と 見当が つく。", add: [...fresh(lb(160, 120, "約 60cm", 26, C.red, 'middle', true))] },
     { note: "ものさしで たしかめよう。", add: [lb(160, 50, "はかって たしかめる", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_039_a: show([
     { note: "6cm の 直線を ひこう。", add: [lb(160, 50, "6cm の 直線", 26, C.ink, 'middle', true)] },
     { note: "まず 点Aを うつ。", add: [lb(160, 90, "点 A", 26, C.blue, 'middle', true)] },
@@ -353,7 +353,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ふちに そって A から B へ ひく。", add: [lb(160, 210, "A → B", 26, C.red, 'middle', true)] },
     { note: "6cm の 直線が できた。", add: [...fresh(lb(160, 120, "6cm", 26, C.red, 'middle', true))] },
     { note: "はかって たしかめる。", add: [lb(160, 50, "0 から 6", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_040_a: show([
     { note: "赤 1m20cm と 青 85cm。ちがいを もとめよう。", add: [lb(160, 50, "1m20cm と 85cm", 26, C.ink, 'middle', true)] },
     { note: "たんいを cm に そろえる。", add: [lb(160, 90, "1m20cm ＝ 120cm", 26, C.red, 'middle', true)] },
@@ -362,7 +362,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 11−8＝3。", add: [lb(160, 210, "11 − 8 ＝ 3", 26, C.gray, 'middle', true)] },
     { note: "ちがいは 35cm。", add: [...fresh(lb(160, 120, "35cm", 26, C.red, 'middle', true))] },
     { note: "たし算で たしかめ。35＋85＝120。", add: [lb(160, 50, "35 ＋ 85 ＝ 120", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_041_a: show([
     { note: "かさを あらわす たんいを 学ぼう。", add: [lb(160, 50, "かさ", 26, C.ink, 'middle', true)] },
     { note: "牛乳パック 1本 ＝ 1L。", add: [lb(160, 90, "1L", 26, C.red, 'middle', true)] },
@@ -371,7 +371,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "2L なら 20dL。", add: [lb(160, 210, "2L ＝ 20dL", 26, C.gray, 'middle', true)] },
     { note: "3L なら 30dL。10ずつ ふえる。", add: [...fresh(lb(160, 120, "3L ＝ 30dL", 26, C.gray, 'middle', true))] },
     { note: "大きな かさは L、小さな かさは dL。", add: [lb(160, 50, "L と dL", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_042_a: show([
     { note: "もっと 小さな かさの たんい。", add: [lb(160, 50, "mL", 26, C.ink, 'middle', true)] },
     { note: "1dL は 100mL。", add: [lb(160, 90, "1dL ＝ 100mL", 26, C.blue, 'middle', true)] },
@@ -380,7 +380,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "だから 1L は 1000mL。", add: [lb(160, 210, "1L ＝ 1000mL", 26, C.red, 'middle', true)] },
     { note: "500mL は 1L の はんぶん。", add: [...fresh(lb(160, 120, "500mL ＝ 半分", 26, C.gray, 'middle', true))] },
     { note: "小さな かさを あらわす ときに 使う。", add: [lb(160, 50, "mL", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_043_a: show([
     { note: "2L3dL と 1L5dL を あわせよう。", add: [lb(160, 50, "2L3dL ＋ 1L5dL", 26, C.ink, 'middle', true)] },
     { note: "dL どうしを たす。", add: [lb(160, 90, "3dL ＋ 5dL ＝ 8dL", 26, C.blue, 'middle', true)] },
@@ -389,7 +389,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "dL に そろえた たしかめ。23＋15＝38。", add: [lb(160, 210, "38dL ＝ 3L8dL", 26, C.gray, 'middle', true)] },
     { note: "ひき算も 同じ。42dL−15dL。", add: [...fresh(lb(160, 120, "42 − 15 ＝ 27", 26, C.blue, 'middle', true))] },
     { note: "27dL ＝ 2L7dL。", add: [lb(160, 50, "2L7dL", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_044_a: show([
     { note: "1L2dL と 13dL を くらべよう。", add: [lb(160, 50, "1L2dL と 13dL", 26, C.ink, 'middle', true)] },
     { note: "たんいを そろえる。", add: [lb(160, 90, "たんいを そろえる", 26, C.red, 'middle', true)] },
@@ -398,7 +398,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "13 の ほうが 大きい。", add: [lb(160, 210, "13 ＞ 12", 26, C.red, 'middle', true)] },
     { note: "だから 13dL の ほうが 多い。", add: [...fresh(lb(160, 120, "13dL が 多い", 26, C.red, 'middle', true))] },
     { note: "ちがいは 1dL。", add: [lb(160, 50, "13−12＝1", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_045_a: show([
     { note: "時計を 見よう。2つの はりが ある。", add: [lb(160, 50, "時計", 26, C.ink, 'middle', true)] },
     { note: "みじかい はりは「時」。3 を すぎて いる。", add: [lb(160, 90, "3時", 26, C.red, 'middle', true)] },
@@ -407,7 +407,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせて 3時25分。", add: [lb(160, 210, "3時25分", 26, C.red, 'middle', true)] },
     { note: "ながい はりが 6 なら 30分。", add: [...fresh(lb(160, 120, "6 → 30分", 26, C.gray, 'middle', true))] },
     { note: "ながい はりが 12 なら ちょうど。", add: [lb(160, 50, "12 → 0分", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_046_a: show([
     { note: "1日は 24時間。", add: [lb(160, 50, "1日 ＝ 24時間", 26, C.ink, 'middle', true)] },
     { note: "夜の 0時から 正午までが 午前。", add: [lb(160, 90, "午前", 26, C.red, 'middle', true)] },
@@ -416,7 +416,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "午前11時の 1時間後は？", add: [lb(160, 210, "午前11時 ＋ 1時間", 26, C.ink, 'middle', true)] },
     { note: "正午の 後なので 午後0時。", add: [...fresh(lb(160, 120, "午後0時", 26, C.red, 'middle', true))] },
     { note: "朝は 午前、昼からは 午後。", add: [lb(160, 50, "午前 → 午後", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_047_a: show([
     { note: "「時間」は 時こくと 時こくの あいだの ながさ。", add: [lb(160, 50, "時間 ＝ ながさ", 26, C.ink, 'middle', true)] },
     { note: "1時間 ＝ 60分。", add: [lb(160, 90, "1時間 ＝ 60分", 26, C.red, 'middle', true)] },
@@ -425,7 +425,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "150分。", add: [lb(160, 210, "＝ 150分", 26, C.red, 'middle', true)] },
     { note: "3時10分から 4時40分は？", add: [...fresh(lb(160, 120, "3:10 → 4:40", 26, C.ink, 'middle', true))] },
     { note: "1時間と 30分で 1時間30分。", add: [lb(160, 50, "1時間30分", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_048_a: show([
     { note: "午前9時から 午後3時までを 数えよう。", add: [lb(160, 50, "午前9時 → 午後3時", 26, C.ink, 'middle', true)] },
     { note: "まず 正午を 目印に する。", add: [lb(160, 90, "正午 ＝ 12時", 26, C.red, 'middle', true)] },
@@ -434,7 +434,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3時間 ＋ 3時間。", add: [lb(160, 210, "3 ＋ 3", 26, C.gray, 'middle', true)] },
     { note: "あわせて 6時間。", add: [...fresh(lb(160, 120, "6時間", 26, C.red, 'middle', true))] },
     { note: "24時間の 時計で 午後3時は 15時。15−9＝6。", add: [lb(160, 50, "15 − 9 ＝ 6", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_049_a: show([
     { note: "8時30分に 出て、9時10分に 着く。", add: [lb(160, 50, "8:30 → 9:10", 26, C.ink, 'middle', true)] },
     { note: "「いつ」は 時こく、「どのくらい」は 時間。", add: [lb(160, 90, "時こく ／ 時間", 26, C.red, 'middle', true)] },
@@ -443,7 +443,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "つぎに 9時から 9時10分まで。", add: [lb(160, 210, "9:00 → 9:10", 26, C.blue, 'middle', true)] },
     { note: "10分。", add: [...fresh(lb(160, 120, "10分", 26, C.gray, 'middle', true))] },
     { note: "あわせて 40分。", add: [lb(160, 50, "30 ＋ 10 ＝ 40分", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_050_a: show([
     { note: "10時20分に はじめ、1時間45分 かかる。", add: [lb(160, 50, "10:20 ＋ 1時間45分", 26, C.ink, 'middle', true)] },
     { note: "まず 1時間を 足す。", add: [lb(160, 90, "10:20 ＋ 1時間 ＝ 11:20", 26, C.blue, 'middle', true)] },
@@ -452,7 +452,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "のこりは 5分。", add: [lb(160, 210, "12:00 ＋ 5分", 26, C.gray, 'middle', true)] },
     { note: "おわりは 12時5分。", add: [...fresh(lb(160, 120, "12時5分", 26, C.red, 'middle', true))] },
     { note: "ひき算で たしかめよう。", add: [lb(160, 50, "12:05 − 1時間45分", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_051_a: show([
     { note: "1さらに 3こずつ、4さら。ぜんぶで なんこ？", add: [...dots(3, (160 - 112/2), 55, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 100, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 145, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 190, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined })] },
     { note: "1さらは 3こ。これが 1つぶん。", add: [lb(260, 55, "3こ", 22, C.red, 'middle', true)] },
@@ -461,7 +461,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "計算すると 12。", add: [...fresh(lb(160, 80, "3 ＋ 3 ＋ 3 ＋ 3", 26, C.blue, 'middle', true),lb(160, 140, "＝ 12", 36, C.red, 'middle', true))] },
     { note: "かけ算なら もっと みじかく 書ける。", add: [...fresh(lb(160, 120, "3 × 4 ＝ 12", 38, C.red, 'middle', true))] },
     { note: "「3が 4つ分」を 3×4 と かく。", add: [...fresh(lb(160, 80, "3が 4つ分", 26, C.blue, 'middle', true),lb(160, 140, "3 × 4", 38, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_052_a: show([
     { note: "1ふくろに 5こ、3ふくろ ある。", add: [lb(160, 50, "1ふくろ 5こ、3ふくろ", 26, C.ink, 'middle', true)] },
     { note: "1つぶんの 数は 5。", add: [lb(160, 90, "1つぶん ＝ 5", 26, C.blue, 'middle', true)] },
@@ -470,7 +470,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "たし算に もどす と 5＋5＋5。", add: [lb(160, 210, "5 ＋ 5 ＋ 5", 26, C.gray, 'middle', true)] },
     { note: "答えは 15。", add: [...fresh(lb(160, 120, "5 × 3 ＝ 15", 26, C.red, 'middle', true))] },
     { note: "「ご かける さん は じゅうご」。", add: [lb(160, 50, "ごさんじゅうご", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_053_a: show([
     { note: "2の だんを おぼえよう。2が 1こ分。", add: [lb(160, 50, "2 × 1 ＝ 2", 26, C.blue, 'middle', true)] },
     { note: "2が 2こ分。2ふえる。", add: [lb(160, 90, "2 × 2 ＝ 4", 26, C.blue, 'middle', true)] },
@@ -479,7 +479,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "2が 5こ分。", add: [lb(160, 210, "2 × 5 ＝ 10", 26, C.blue, 'middle', true)] },
     { note: "2が 9こ分まで 2ずつ ふえて いく。", add: [...fresh(lb(160, 120, "2 × 9 ＝ 18", 26, C.red, 'middle', true))] },
     { note: "2の だんは 2ずつ ふえる。", add: [lb(160, 50, "2ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_054_a: show([
     { note: "5の だんを おぼえよう。5が 1こ分。", add: [lb(160, 50, "5 × 1 ＝ 5", 26, C.blue, 'middle', true)] },
     { note: "5が 2こ分。5ふえる。", add: [lb(160, 90, "5 × 2 ＝ 10", 26, C.blue, 'middle', true)] },
@@ -488,7 +488,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "5が 5こ分。", add: [lb(160, 210, "5 × 5 ＝ 25", 26, C.blue, 'middle', true)] },
     { note: "5が 9こ分まで 5ずつ ふえて いく。", add: [...fresh(lb(160, 120, "5 × 9 ＝ 45", 26, C.red, 'middle', true))] },
     { note: "5の だんは 5ずつ ふえる。", add: [lb(160, 50, "5ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_055_a: show([
     { note: "3の だんを おぼえよう。3が 1こ分。", add: [lb(160, 50, "3 × 1 ＝ 3", 26, C.blue, 'middle', true)] },
     { note: "3が 2こ分。3ふえる。", add: [lb(160, 90, "3 × 2 ＝ 6", 26, C.blue, 'middle', true)] },
@@ -497,7 +497,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3が 5こ分。", add: [lb(160, 210, "3 × 5 ＝ 15", 26, C.blue, 'middle', true)] },
     { note: "3が 9こ分まで 3ずつ ふえて いく。", add: [...fresh(lb(160, 120, "3 × 9 ＝ 27", 26, C.red, 'middle', true))] },
     { note: "3の だんは 3ずつ ふえる。", add: [lb(160, 50, "3ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_056_a: show([
     { note: "4の だんを おぼえよう。4が 1こ分。", add: [lb(160, 50, "4 × 1 ＝ 4", 26, C.blue, 'middle', true)] },
     { note: "4が 2こ分。4ふえる。", add: [lb(160, 90, "4 × 2 ＝ 8", 26, C.blue, 'middle', true)] },
@@ -506,7 +506,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4が 5こ分。", add: [lb(160, 210, "4 × 5 ＝ 20", 26, C.blue, 'middle', true)] },
     { note: "4が 9こ分まで 4ずつ ふえて いく。", add: [...fresh(lb(160, 120, "4 × 9 ＝ 36", 26, C.red, 'middle', true))] },
     { note: "4の だんは 4ずつ ふえる。", add: [lb(160, 50, "4ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_057_a: show([
     { note: "6の だんを おぼえよう。6が 1こ分。", add: [lb(160, 50, "6 × 1 ＝ 6", 26, C.blue, 'middle', true)] },
     { note: "6が 2こ分。6ふえる。", add: [lb(160, 90, "6 × 2 ＝ 12", 26, C.blue, 'middle', true)] },
@@ -515,7 +515,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "6が 5こ分。", add: [lb(160, 210, "6 × 5 ＝ 30", 26, C.blue, 'middle', true)] },
     { note: "6が 9こ分まで 6ずつ ふえて いく。", add: [...fresh(lb(160, 120, "6 × 9 ＝ 54", 26, C.red, 'middle', true))] },
     { note: "6の だんは 6ずつ ふえる。", add: [lb(160, 50, "6ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_058_a: show([
     { note: "7の だんを おぼえよう。7が 1こ分。", add: [lb(160, 50, "7 × 1 ＝ 7", 26, C.blue, 'middle', true)] },
     { note: "7が 2こ分。7ふえる。", add: [lb(160, 90, "7 × 2 ＝ 14", 26, C.blue, 'middle', true)] },
@@ -524,7 +524,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "7が 5こ分。", add: [lb(160, 210, "7 × 5 ＝ 35", 26, C.blue, 'middle', true)] },
     { note: "7が 9こ分まで 7ずつ ふえて いく。", add: [...fresh(lb(160, 120, "7 × 9 ＝ 63", 26, C.red, 'middle', true))] },
     { note: "7の だんは 7ずつ ふえる。", add: [lb(160, 50, "7ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_059_a: show([
     { note: "8の だんを おぼえよう。8が 1こ分。", add: [lb(160, 50, "8 × 1 ＝ 8", 26, C.blue, 'middle', true)] },
     { note: "8が 2こ分。8ふえる。", add: [lb(160, 90, "8 × 2 ＝ 16", 26, C.blue, 'middle', true)] },
@@ -533,7 +533,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "8が 5こ分。", add: [lb(160, 210, "8 × 5 ＝ 40", 26, C.blue, 'middle', true)] },
     { note: "8が 9こ分まで 8ずつ ふえて いく。", add: [...fresh(lb(160, 120, "8 × 9 ＝ 72", 26, C.red, 'middle', true))] },
     { note: "8の だんは 8ずつ ふえる。", add: [lb(160, 50, "8ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_060_a: show([
     { note: "9の だんを おぼえよう。9が 1こ分。", add: [lb(160, 50, "9 × 1 ＝ 9", 26, C.blue, 'middle', true)] },
     { note: "9が 2こ分。9ふえる。", add: [lb(160, 90, "9 × 2 ＝ 18", 26, C.blue, 'middle', true)] },
@@ -542,7 +542,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "9が 5こ分。", add: [lb(160, 210, "9 × 5 ＝ 45", 26, C.blue, 'middle', true)] },
     { note: "9が 9こ分まで 9ずつ ふえて いく。", add: [...fresh(lb(160, 120, "9 × 9 ＝ 81", 26, C.red, 'middle', true))] },
     { note: "9の だんは 9ずつ ふえる。", add: [lb(160, 50, "9ずつ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_061_a: show([
     { note: "1の だんを 見よう。", add: [lb(160, 50, "1 × 5 ＝ 5", 26, C.blue, 'middle', true)] },
     { note: "1が 5つ分で 5。", add: [lb(160, 90, "1 が 5つ分", 26, C.gray, 'middle', true)] },
@@ -551,7 +551,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ぜんぶ 0。", add: [lb(160, 210, "0 × 5 ＝ 0", 26, C.red, 'middle', true)] },
     { note: "5×0 も 同じ。おさらが 0まい。", add: [...fresh(lb(160, 120, "5 × 0 ＝ 0", 26, C.red, 'middle', true))] },
     { note: "0 が つくと 答えは 0。", add: [lb(160, 50, "0 が つく ＝ 0", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_062_a: show([
     { note: "○を 3こずつ 4れつ ならべたよ。", add: [...dots(3, (160 - 112/2), 45, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 89, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 133, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(3, (160 - 112/2), 177, { r: 21, gap: 56, perRow: 3, color: C.main, fill: FILL.warm, texts: undefined })] },
     { note: "たてに 見ると 3こが 4れつ。", add: [lb(160, 222, "3 × 4 ＝ 12", 26, C.blue, 'middle', true)] },
@@ -560,7 +560,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "同じ ○だから 答えも 同じ 12。", add: [cover(0, 193, 320, 44), cover(0, 203, 320, 37), lb(160, 222, "3×4 ＝ 4×3 ＝ 12", 26, C.red, 'middle', true)] },
     { note: "入れかえても 同じ。", add: [...fresh(lb(160, 120, "入れかえても 同じ", 32, C.red, 'middle', true))] },
     { note: "九九は 半分 おぼえれば OK。", add: [...fresh(lb(160, 120, "九九は 半分で OK", 32, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_063_a: show([
     { note: "4×5＝20 を 使って 4×6 を もとめよう。", add: [lb(160, 50, "4 × 5 ＝ 20", 26, C.ink, 'middle', true)] },
     { note: "4×6 は かける 数が 1 ふえた。", add: [lb(160, 90, "5 → 6", 26, C.red, 'middle', true)] },
@@ -569,7 +569,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4×6 ＝ 24。", add: [lb(160, 210, "4 × 6 ＝ 24", 26, C.red, 'middle', true)] },
     { note: "へる ときは 4 を ひく。4×4＝16。", add: [...fresh(lb(160, 120, "20 − 4 ＝ 16", 26, C.blue, 'middle', true))] },
     { note: "ふえる のは かけられる 数。", add: [lb(160, 50, "4 だけ ふえる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_064_a: show([
     { note: "九九の 表。たてと よこに 1〜9。", add: [lb(160, 50, "九九の 表", 26, C.ink, 'middle', true)] },
     { note: "よこの 7 を 見つける。", add: [lb(160, 90, "よこ ＝ 7", 26, C.blue, 'middle', true)] },
@@ -578,7 +578,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "6 × 7 ＝ 42。", add: [lb(160, 210, "6 × 7 ＝ 42", 26, C.red, 'middle', true)] },
     { note: "7×6 の 場所も 42。", add: [...fresh(lb(160, 120, "7 × 6 ＝ 42", 26, C.blue, 'middle', true))] },
     { note: "入れかえても 同じ。", add: [lb(160, 50, "同じ 答え", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_065_a: show([
     { note: "9の だんの 答えを 見よう。", add: [lb(160, 50, "9, 18, 27, 36, …", 26, C.ink, 'middle', true)] },
     { note: "十の くらいは 1ずつ ふえる。", add: [lb(160, 90, "0 → 1 → 2 → 3", 26, C.blue, 'middle', true)] },
@@ -587,7 +587,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "63 でも たしかめよう。", add: [lb(160, 210, "6 ＋ 3 ＝ 9", 26, C.red, 'middle', true)] },
     { note: "5の だんは 一の くらいが 5・0・5・0。", add: [...fresh(lb(160, 120, "5, 10, 15, 20", 26, C.gray, 'middle', true))] },
     { note: "2の だんは 一の くらいが くりかえす。", add: [lb(160, 50, "2, 4, 6, 8, 10", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_066_a: show([
     { note: "1はこに 6こ、5はこ ある。", add: [lb(160, 50, "1はこ 6こ、5はこ", 26, C.ink, 'middle', true)] },
     { note: "1つぶんの 数は 6。", add: [lb(160, 90, "1つぶん ＝ 6", 26, C.blue, 'middle', true)] },
@@ -596,7 +596,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "6の だん「ろくご さんじゅう」。", add: [lb(160, 210, "6 × 5 ＝ 30", 26, C.red, 'middle', true)] },
     { note: "答えは 30こ。単位を わすれずに。", add: [...fresh(lb(160, 120, "答え 30こ", 26, C.red, 'middle', true))] },
     { note: "6＋6＋6＋6＋6 でも 30。", add: [lb(160, 50, "6＋6＋6＋6＋6 ＝ 30", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_067_a: show([
     { note: "4×3＝12 の おはなしを つくろう。", add: [lb(160, 50, "4 × 3 ＝ 12", 26, C.ink, 'middle', true)] },
     { note: "1つぶんは 4。たとえば 4こ。", add: [lb(160, 90, "1つぶん ＝ 4", 26, C.blue, 'middle', true)] },
@@ -605,7 +605,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ぜんぶで 12こ。", add: [lb(160, 210, "12こ", 26, C.red, 'middle', true)] },
     { note: "ほかの おはなしも 作れる。", add: [...fresh(lb(160, 120, "4人ずつ 3台", 26, C.gray, 'middle', true))] },
     { note: "しきに あう おはなしが 作れた。", add: [lb(160, 50, "おはなし ＝ しき", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_068_a: show([
     { note: "1さらに 7こずつ、3さら。ぜんぶで なんこ？", add: [...dots(7, (160 - 246/2), 40, { r: 15, gap: 41, perRow: 7, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(7, (160 - 246/2), 85, { r: 15, gap: 41, perRow: 7, color: C.main, fill: FILL.warm, texts: undefined }), ...dots(7, (160 - 246/2), 130, { r: 15, gap: 41, perRow: 7, color: C.main, fill: FILL.warm, texts: undefined })] },
     { note: "1さらが 7こ。", add: [lb(160, 205, "1さら ＝ 7こ", 24, C.blue, 'middle', true)] },
@@ -614,7 +614,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "しきは 7×3。", add: [cover(63, 179, 195, 41), cover(0, 185, 320, 40), lb(160, 205, "7 × 3", 30, C.red, 'middle', true)] },
     { note: "7の だん「しちさん にじゅういち」。", add: [cover(59, 172, 202, 51), cover(0, 185, 320, 40), lb(160, 205, "7 × 3 ＝ 21", 30, C.red, 'middle', true)] },
     { note: "答えは 21こ。", add: [cover(0, 172, 320, 51), cover(0, 185, 320, 40), lb(160, 205, "答え 21こ", 30, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_069_a: show([
     { note: "□ に あてはまる 数を さがそう。", add: [lb(160, 50, "□ × 4 ＝ 12", 26, C.ink, 'middle', true)] },
     { note: "4の だんを となえる。", add: [lb(160, 90, "4, 8, 12, …", 26, C.blue, 'middle', true)] },
@@ -623,7 +623,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "しきに 入れて たしかめる。", add: [lb(160, 210, "3 × 4 ＝ 12", 26, C.gray, 'middle', true)] },
     { note: "6×□＝42 は？ 6の だん。", add: [...fresh(lb(160, 120, "6, 12, …, 42", 26, C.blue, 'middle', true))] },
     { note: "42 は 7ばんめ。□＝7。", add: [lb(160, 50, "6 × 7 ＝ 42", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_070_a: show([
     { note: "もとの テープは 3cm。", add: [lb(160, 50, "3cm", 26, C.ink, 'middle', true)] },
     { note: "2ばいは 3cmが 2つ分。", add: [lb(160, 90, "3 × 2 ＝ 6cm", 26, C.blue, 'middle', true)] },
@@ -632,7 +632,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3×4＝12。", add: [lb(160, 210, "12cm", 26, C.red, 'middle', true)] },
     { note: "たし算でも たしかめる。", add: [...fresh(lb(160, 120, "3＋3＋3＋3 ＝ 12", 26, C.gray, 'middle', true))] },
     { note: "「○ばい」は かけ算。", add: [lb(160, 50, "ばい ＝ かけ算", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_071_a: show([
     { note: "5＋5＋5＋5＋5 を 見よう。", add: [lb(160, 50, "5＋5＋5＋5＋5", 26, C.ink, 'middle', true)] },
     { note: "同じ 数 5 を 5回。", add: [lb(160, 90, "5が 5つ分", 26, C.blue, 'middle', true)] },
@@ -641,7 +641,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "5＋3＋2 は？ 数が ちがう。", add: [lb(160, 210, "5＋3＋2", 26, C.ink, 'middle', true)] },
     { note: "かけ算に できない。", add: [...fresh(lb(160, 120, "× できない", 26, C.red, 'middle', true))] },
     { note: "同じ 数 だけ かけ算に できる。", add: [lb(160, 50, "同じ 数 ＝ かけ算", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_072_a: show([
     { note: "7×8 の 答えに 自信が ない。", add: [lb(160, 50, "7 × 8 ＝ ？", 26, C.ink, 'middle', true)] },
     { note: "となりの 九九を 使う。7×7＝49。", add: [lb(160, 90, "7 × 7 ＝ 49", 26, C.blue, 'middle', true)] },
@@ -650,7 +650,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "入れかえても たしかめる。", add: [lb(160, 210, "8 × 7 ＝ 56", 26, C.blue, 'middle', true)] },
     { note: "たし算でも 56。", add: [...fresh(lb(160, 120, "7を 8回 たす ＝ 56", 26, C.gray, 'middle', true))] },
     { note: "3つの 方法で 同じ 答え。", add: [lb(160, 50, "56", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_073_a: show([
     { note: "3本の 直線で かこむと、三角形に なる。", add: [ln(160, 50, 80, 170, C.main, false, 5), ln(80, 170, 240, 170, C.main, false, 5), ln(240, 170, 160, 50, C.main, false, 5)] },
     { note: "かこんで いる 直線を 辺と 言う。", add: [lb(160, 195, "辺 ＝ 直線", 24, C.red, 'middle', true)] },
@@ -659,7 +659,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "直線が 2本 だと すきまが できる。", add: [...fresh(ln(100, 60, 160, 160, C.main, false, 5),ln(160, 160, 220, 60, C.main, false, 5),lb(160, 205, "すきま！かこめない", 22, C.red, 'middle', true))] },
     { note: "まがった 線が あるのも 三角形では ない。", add: [...fresh(lb(160, 120, "円は 三角形では ない", 26, C.red, 'middle', true))] },
     { note: "3本の 直線で かこまれた 形が 三角形。", add: [...fresh(lb(160, 120, "三角形 ＝ 直線3本", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_074_a: show([
     { note: "4本の 直線で かこむと、四角形に なる。", add: [bx(80, 50, 160, 110, "", C.main, FILL.warm, 12)] },
     { note: "辺を 数える。", add: [lb(160, 195, "辺は 4つ", 28, C.red, 'middle', true)] },
@@ -668,7 +668,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "正方形も 四角形。", add: [...fresh(bx(100, 50, 120, 120, "", C.main, FILL.warm, 12),lb(160, 205, "正方形", 24, C.blue, 'middle', true))] },
     { note: "辺の 数が 形の 名前に なる。", add: [...fresh(lb(160, 80, "3本 → 三角形", 28, C.blue, 'middle', true),lb(160, 140, "4本 → 四角形", 28, C.red, 'middle', true))] },
     { note: "4本の 直線で かこまれた 形が 四角形。", add: [...fresh(lb(160, 120, "四角形 ＝ 直線4本", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_075_a: show([
     { note: "三角形の 辺と ちょう点を 見よう。", add: [ln(160, 45, 80, 160, C.main, false, 5), ln(80, 160, 240, 160, C.main, false, 5), ln(240, 160, 160, 45, C.main, false, 5)] },
     { note: "まわりの 直線を 辺と 言う。", add: [lb(160, 195, "辺 ＝ まわりの 直線", 22, C.red, 'middle', true)] },
@@ -677,7 +677,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ちょう点も ぜんぶで 3つ。", add: [cover(29, 171, 262, 37), cover(0, 178, 320, 40), lb(160, 195, "ちょう点 3つ", 28, C.blue, 'middle', true)] },
     { note: "四角形は 辺も ちょう点も 4つ。", add: [...fresh(lb(160, 80, "四角形", 28, C.ink, 'middle', true),lb(160, 140, "辺 4つ・ちょう点 4つ", 26, C.red, 'middle', true))] },
     { note: "辺と ちょう点の 数は いつも 同じ。", add: [...fresh(lb(160, 120, "辺の 数 ＝ ちょう点の 数", 26, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_076_a: show([
     { note: "長方形を 見よう。", add: [bx(60, 60, 200, 100, "", C.main, FILL.warm, 12)] },
     { note: "4つの かどは ぜんぶ 直角。", add: [lb(160, 195, "かど ＝ 4つとも 直角", 22, C.red, 'middle', true)] },
@@ -686,7 +686,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "むかい合う 辺は 同じ 長さ。", add: [cover(55, 166, 209, 44), cover(0, 178, 320, 40), lb(160, 195, "むかい合う 辺 ＝ 同じ", 24, C.red, 'middle', true)] },
     { note: "4つの 辺は 3、5、3、5。", add: [...fresh(lb(160, 120, "3cm  5cm  3cm  5cm", 28, C.red, 'middle', true))] },
     { note: "長方形：かどが 直角、むかい合う 辺が 同じ。", add: [...fresh(lb(160, 120, "長方形のきまり", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_077_a: show([
     { note: "正方形を 見よう。", add: [bx(100, 55, 120, 120, "", C.main, FILL.warm, 12)] },
     { note: "4つの かどは ぜんぶ 直角。", add: [lb(160, 205, "かど ＝ 4つとも 直角", 22, C.red, 'middle', true)] },
@@ -695,7 +695,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "長方形との ちがいを くらべよう。", add: [...fresh(lb(160, 80, "長方形：むかい合う 辺が 同じ", 22, C.blue, 'middle', true),lb(160, 140, "正方形：4つとも 同じ", 22, C.red, 'middle', true))] },
     { note: "正方形は 長方形の とくべつな なかま。", add: [...fresh(lb(160, 120, "正方形は 長方形の なかま", 26, C.red, 'middle', true))] },
     { note: "正方形：かどが 直角・辺が ぜんぶ 同じ。", add: [...fresh(lb(160, 120, "正方形のきまり", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_078_a: show([
     { note: "三角定規の 形を 見よう。", add: [ln(90, 170, 90, 50, C.main, false, 5), ln(90, 50, 230, 170, C.main, false, 5), ln(230, 170, 90, 170, C.main, false, 5)] },
     { note: "左下の かどが 直角。", add: [lb(160, 205, "左下の かど ＝ 直角", 24, C.red, 'middle', true)] },
@@ -704,7 +704,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "これを 直角三角形と 言う。", add: [...fresh(lb(160, 120, "直角三角形", 36, C.red, 'middle', true))] },
     { note: "長方形を ななめに 切ると 2つ できる。", add: [...fresh(lb(160, 120, "長方形 → 直角三角形 2つ", 24, C.blue, 'middle', true))] },
     { note: "1つの かどが 直角な 三角形。", add: [...fresh(lb(160, 120, "三角形 ＋ 直角 1つ", 28, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_079_a: show([
     { note: "紙を 半分に 折る。", add: [bx(80, 50, 160, 110, "", C.main, FILL.warm, 12), ln(160, 50, 160, 160, C.red, false, 4)] },
     { note: "折り目が できる。", add: [lb(160, 195, "折り目", 24, C.red, 'middle', true)] },
@@ -713,7 +713,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "三角定規の かどを あててみる。", add: [...fresh(lb(160, 120, "三角定規で たしかめる", 26, C.blue, 'middle', true))] },
     { note: "ぴったり かさなれば 直角。", add: [...fresh(lb(160, 120, "ぴったり ＝ 直角", 30, C.red, 'middle', true))] },
     { note: "身の まわりの かどを さがそう。", add: [...fresh(lb(160, 120, "本・ドア・つくえ", 28, C.blue, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_080_a: show([
     { note: "長方形と 正方形の 辺を 調べよう。", add: [lb(160, 50, "辺の 長さを 調べる", 26, C.ink, 'middle', true)] },
     { note: "長方形：3、5、3、5。", add: [lb(160, 90, "3cm・5cm・3cm・5cm", 26, C.blue, 'middle', true)] },
@@ -722,7 +722,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4つの 辺が 同じ。", add: [lb(160, 210, "正方形", 26, C.red, 'middle', true)] },
     { note: "どちらも かどは 直角。", add: [...fresh(lb(160, 120, "かど ＝ 直角", 26, C.gray, 'middle', true))] },
     { note: "辺の 長さが 見分ける ポイント。", add: [lb(160, 50, "辺の 長さに 注目", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_081_a: show([
     { note: "方眼に 長方形を かこう。", add: [lb(160, 50, "たて 3ます・よこ 4ます", 26, C.ink, 'middle', true)] },
     { note: "ちょう点Aを うつ。", add: [lb(160, 90, "点 A", 26, C.blue, 'middle', true)] },
@@ -731,7 +731,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "Cから 左へ 4ます。", add: [lb(160, 210, "C → D（4ます）", 26, C.blue, 'middle', true)] },
     { note: "Dから Aへ もどる。", add: [...fresh(lb(160, 120, "D → A", 26, C.red, 'middle', true))] },
     { note: "長方形が できた。", add: [lb(160, 50, "長方形", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_082_a: show([
     { note: "長方形の 紙。", add: [bx(60, 60, 200, 110, "", C.main, FILL.warm, 12)] },
     { note: "かどを むすぶ 線を ひく。", add: [ln(60, 60, 260, 170, C.red, false, 4)] },
@@ -740,7 +740,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "どちらも 直角の かどが ある。", add: [cover(39, 176, 242, 44), cover(0, 188, 320, 40), lb(160, 205, "直角三角形", 26, C.red, 'middle', true)] },
     { note: "正方形も 同じ。", add: [...fresh(lb(160, 120, "正方形 → 直角三角形 2つ", 26, C.blue, 'middle', true))] },
     { note: "2つの 三角形は 同じ 形。", add: [...fresh(lb(160, 120, "同じ 形が 2つ", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_083_a: show([
     { note: "はこの 形を 見よう。", add: [lb(160, 50, "はこ", 26, C.ink, 'middle', true)] },
     { note: "上と 下の 面。", add: [lb(160, 90, "上・下 ＝ 2つ", 26, C.blue, 'middle', true)] },
@@ -749,7 +749,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "あわせて 6つ。", add: [lb(160, 210, "面 ＝ 6つ", 26, C.red, 'middle', true)] },
     { note: "向かい合う 面は 同じ 形。", add: [...fresh(lb(160, 120, "向かい合う ＝ 同じ", 26, C.red, 'middle', true))] },
     { note: "さいころは 6つとも 正方形。", add: [lb(160, 50, "さいころ ＝ 正方形 6つ", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_084_a: show([
     { note: "はこの 辺を 数えよう。", add: [lb(160, 50, "はこ", 26, C.ink, 'middle', true)] },
     { note: "上の 面の まわり。", add: [lb(160, 90, "4本", 26, C.blue, 'middle', true)] },
@@ -758,7 +758,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4＋4＋4＝12。", add: [lb(160, 210, "辺 ＝ 12本", 26, C.red, 'middle', true)] },
     { note: "ちょう点は 上に 4つ、下に 4つ。", add: [...fresh(lb(160, 120, "4＋4＝8つ", 26, C.red, 'middle', true))] },
     { note: "面6・辺12・ちょう点8。", add: [lb(160, 50, "6・12・8", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_085_a: show([
     { note: "はこを 切り開こう。", add: [lb(160, 50, "はこ → てんかい図", 26, C.ink, 'middle', true)] },
     { note: "辺を 何本か 切って ひろげる。", add: [lb(160, 90, "切って ひろげる", 26, C.blue, 'middle', true)] },
@@ -767,7 +767,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "組み立てると はこに なる。", add: [lb(160, 210, "組み立てる → はこ", 26, C.blue, 'middle', true)] },
     { note: "てんかい図で 面の 数が わかる。", add: [...fresh(lb(160, 120, "てんかい図", 26, C.red, 'middle', true))] },
     { note: "必要な 紙の まい数も わかる。", add: [lb(160, 50, "6まい", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_086_a: show([
     { note: "さいころを 見よう。", add: [lb(160, 50, "さいころ", 26, C.ink, 'middle', true)] },
     { note: "向かい合う 面の 目を たす。", add: [lb(160, 90, "1 ＋ 6 ＝ 7", 26, C.blue, 'middle', true)] },
@@ -776,7 +776,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "上の 面が 2 なら 下は？", add: [lb(160, 210, "7 − 2", 26, C.red, 'middle', true)] },
     { note: "7−2＝5。", add: [...fresh(lb(160, 120, "下 ＝ 5", 26, C.red, 'middle', true))] },
     { note: "向かい合う 目の 和は いつも 7。", add: [lb(160, 50, "和 ＝ 7", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_087_a: show([
     { note: "はこを つくろう。", add: [lb(160, 50, "紙の はこ", 26, C.ink, 'middle', true)] },
     { note: "面は 6まい 必要。", add: [lb(160, 90, "面 ＝ 6まい", 26, C.red, 'middle', true)] },
@@ -785,7 +785,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "6まいを つなぐ。", add: [lb(160, 210, "のりで つなぐ", 26, C.gray, 'middle', true)] },
     { note: "6まいが そろって はこに なる。", add: [...fresh(lb(160, 120, "6まい", 26, C.red, 'middle', true))] },
     { note: "同じ 形の 組を 見つける。", add: [lb(160, 50, "3組", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_088_a: show([
     { note: "すきな くだものを しらべよう。", add: [lb(160, 50, "すきな くだもの", 26, C.ink, 'middle', true)] },
     { note: "1人 ○1こ。りんご 5。", add: [lb(160, 90, "りんご ○○○○○", 26, C.red, 'middle', true)] },
@@ -794,7 +794,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ぶどう 6。", add: [lb(160, 210, "ぶどう ○○○○○○", 26, C.blue, 'middle', true)] },
     { note: "ぜんぶで 5＋8＋3＋6。", add: [...fresh(lb(160, 120, "＝ 22人", 26, C.red, 'middle', true))] },
     { note: "いちばん 多いのは みかん。", add: [lb(160, 50, "一番 多い ＝ みかん", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_089_a: show([
     { note: "調べた 数を 表に まとめよう。", add: [lb(160, 50, "表", 26, C.ink, 'middle', true)] },
     { note: "りんご 5、みかん 8。", add: [lb(160, 90, "5　8", 26, C.blue, 'middle', true)] },
@@ -803,7 +803,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "いちばん 多いのは みかん。", add: [lb(160, 210, "みかん 8人", 26, C.red, 'middle', true)] },
     { note: "ちがいは ひき算。", add: [...fresh(lb(160, 120, "8 − 3 ＝ 5", 26, C.red, 'middle', true))] },
     { note: "表だと 計算が かんたん。", add: [lb(160, 50, "表 ＝ 整理", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_090_a: show([
     { note: "絵グラフを 見よう。", add: [lb(160, 50, "絵グラフ", 26, C.ink, 'middle', true)] },
     { note: "1つの ○ ＝ 1人。", add: [lb(160, 90, "○ ＝ 1人", 26, C.red, 'middle', true)] },
@@ -812,7 +812,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "バナナ 3つ、ぶどう 6つ。", add: [lb(160, 210, "バナナ 3、ぶどう 6", 26, C.gray, 'middle', true)] },
     { note: "いちばん 高いのは みかん。", add: [...fresh(lb(160, 120, "いちばん ＝ みかん", 26, C.red, 'middle', true))] },
     { note: "高さで 多い・少ないが わかる。", add: [lb(160, 50, "高い ＝ 多い", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_091_a: show([
     { note: "ぼうグラフを 読もう。", add: [lb(160, 50, "ぼうグラフ", 26, C.ink, 'middle', true)] },
     { note: "まず 1めもりの 大きさを 見る。", add: [lb(160, 90, "1めもり ＝ 1人", 26, C.red, 'middle', true)] },
@@ -821,7 +821,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "だから 8人。", add: [lb(160, 210, "8人", 26, C.red, 'middle', true)] },
     { note: "ほかの ぼうも 同じ。", add: [...fresh(lb(160, 120, "ぶどう 6、りんご 5", 26, C.gray, 'middle', true))] },
     { note: "いちばん 長いのは みかん。", add: [lb(160, 50, "いちばん ＝ みかん", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_092_a: show([
     { note: "表から ぼうグラフを かこう。", add: [lb(160, 50, "表 → ぼうグラフ", 26, C.ink, 'middle', true)] },
     { note: "よこに 種類を ならべる。", add: [lb(160, 90, "りんご・みかん・…", 26, C.blue, 'middle', true)] },
@@ -830,7 +830,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "バナナ 3、ぶどう 6。", add: [lb(160, 210, "バナナ 3、ぶどう 6", 26, C.blue, 'middle', true)] },
     { note: "題名を つける。", add: [...fresh(lb(160, 120, "題名", 26, C.gray, 'middle', true))] },
     { note: "高さが 表と 合うか 見る。", add: [lb(160, 50, "高さ ＝ 数", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_093_a: show([
     { note: "表と ぼうグラフを くらべよう。", add: [lb(160, 50, "表 と ぼうグラフ", 26, C.ink, 'middle', true)] },
     { note: "表：正しい 数が わかる。", add: [lb(160, 90, "表 ＝ 正しい 数", 26, C.blue, 'middle', true)] },
@@ -839,7 +839,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "正しい 数が ほしい → 表。", add: [lb(160, 210, "数を 知る → 表", 26, C.blue, 'middle', true)] },
     { note: "両方 使うと なお いい。", add: [...fresh(lb(160, 120, "表 ＋ グラフ", 26, C.red, 'middle', true))] },
     { note: "目的に あわせて えらぶ。", add: [lb(160, 50, "目的に あわせる", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_094_a: show([
     { note: "ケーキを 同じ 大きさに 2つに 分けよう。", add: [bx(80, 60, 160, 100, "", C.main, FILL.warm, 12), ln(160, 60, 160, 160, C.red, false, 4)] },
     { note: "1つ分の 大きさは 同じ。", add: [lb(160, 195, "同じ 大きさ", 24, C.red, 'middle', true)] },
@@ -848,7 +848,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "12この あめを 半分に 分けると？", add: [...fresh(lb(160, 80, "12こ", 36, C.ink, 'middle', true),lb(160, 140, "半分は？", 28, C.blue, 'middle', true))] },
     { note: "6こと 6こに 分かれる。", add: [...fresh(lb(160, 80, "6こ ＋ 6こ", 32, C.blue, 'middle', true),lb(160, 140, "半分 ＝ 6こ", 32, C.red, 'middle', true))] },
     { note: "同じ 大きさに 2つが 半分。", add: [...fresh(lb(160, 120, "同じ 大きさに 2つ", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_095_a: show([
     { note: "ケーキを 同じ 大きさに 4つに 分けよう。", add: [bx(80, 55, 160, 110, "", C.main, FILL.warm, 12), ln(160, 55, 160, 165, C.red, false, 4), ln(80, 110, 240, 110, C.red, false, 4)] },
     { note: "1つ分の 大きさは 同じ。", add: [lb(160, 200, "同じ 大きさ", 24, C.red, 'middle', true)] },
@@ -857,7 +857,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "12この あめを 4つに 分けると？", add: [...fresh(lb(160, 80, "12こ", 36, C.ink, 'middle', true),lb(160, 140, "1/4 は？", 28, C.blue, 'middle', true))] },
     { note: "3こずつ 4つに 分かれる。", add: [...fresh(lb(160, 80, "3こ 3こ 3こ 3こ", 28, C.blue, 'middle', true),lb(160, 140, "1/4 ＝ 3こ", 32, C.red, 'middle', true))] },
     { note: "同じ 大きさに 4つが 1/4。", add: [...fresh(lb(160, 120, "同じ 大きさに 4つ", 30, C.red, 'middle', true))] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_096_a: show([
     { note: "1/2 と 1/4 を くらべよう。", add: [lb(160, 50, "1/2 と 1/4", 26, C.ink, 'middle', true)] },
     { note: "2つに 分けた 1つ分。", add: [lb(160, 90, "1/2", 26, C.blue, 'middle', true)] },
@@ -866,7 +866,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "1/4 を 2つ 合わせると？", add: [lb(160, 210, "1/4 ＋ 1/4", 26, C.ink, 'middle', true)] },
     { note: "1/2 に なる。", add: [...fresh(lb(160, 120, "＝ 1/2", 26, C.red, 'middle', true))] },
     { note: "分ける 数が 多い ほど 小さい。", add: [lb(160, 50, "数が 多い → 小さい", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_097_a: show([
     { note: "ケーキを 8つに 分けよう。", add: [lb(160, 50, "8つに 分ける", 26, C.ink, 'middle', true)] },
     { note: "1つ分が 1/8。", add: [lb(160, 90, "1/8", 26, C.red, 'middle', true)] },
@@ -875,7 +875,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "1/8 が 8つで もとの 大きさ。", add: [lb(160, 210, "8つ ＝ 1つ分", 26, C.red, 'middle', true)] },
     { note: "分ける 数が 多い ほど 小さい。", add: [...fresh(lb(160, 120, "数が 多い → 小さい", 26, C.red, 'middle', true))] },
     { note: "1/8 ＜ 1/4 ＜ 1/2。", add: [lb(160, 50, "1/8 ＜ 1/4 ＜ 1/2", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_098_a: show([
     { note: "分け方を くらべよう。", add: [lb(160, 50, "分け方", 26, C.ink, 'middle', true)] },
     { note: "半分に 折る と ぴったり かさなる。", add: [lb(160, 90, "ぴったり ＝ 同じ", 26, C.red, 'middle', true)] },
@@ -884,7 +884,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "かさねても 合わない。", add: [lb(160, 210, "ずれる", 26, C.blue, 'middle', true)] },
     { note: "1/2 とは 言えない。", add: [...fresh(lb(160, 120, "1/2 ではない", 26, C.red, 'middle', true))] },
     { note: "同じ 大きさが 大事。", add: [lb(160, 50, "同じ 大きさ", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_099_a: show([
     { note: "分数の 読み方。", add: [lb(160, 50, "1/2 ＝ にぶんの いち", 26, C.ink, 'middle', true)] },
     { note: "1/4 ＝ よんぶんの いち。", add: [lb(160, 90, "1/4 ＝ よんぶんの いち", 26, C.blue, 'middle', true)] },
@@ -893,7 +893,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "上の 数は 何こ分。", add: [lb(160, 210, "上 ＝ 何こ分", 26, C.red, 'middle', true)] },
     { note: "4つに 分けた 2つ分は？", add: [...fresh(lb(160, 120, "2/4", 26, C.red, 'middle', true))] },
     { note: "2/4 は 半分と 同じ。", add: [lb(160, 50, "2/4 ＝ 1/2", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_100_a: show([
     { note: "50＋30 を 暗算で しよう。", add: [lb(160, 50, "50 ＋ 30", 26, C.ink, 'middle', true)] },
     { note: "50 は 10が 5こ。", add: [lb(160, 90, "50 ＝ 10が 5こ", 26, C.blue, 'middle', true)] },
@@ -902,7 +902,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "10が 8こ だから 80。", add: [lb(160, 210, "＝ 80", 26, C.red, 'middle', true)] },
     { note: "ひき算で たしかめる。", add: [...fresh(lb(160, 120, "80 − 30 ＝ 50", 26, C.gray, 'middle', true))] },
     { note: "10の まとまりで 考える。", add: [lb(160, 50, "10が □こ", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_101_a: show([
     { note: "80＋50 を 暗算で しよう。", add: [lb(160, 50, "80 ＋ 50", 26, C.ink, 'middle', true)] },
     { note: "80 は 10が 8こ。", add: [lb(160, 90, "10が 8こ", 26, C.blue, 'middle', true)] },
@@ -911,7 +911,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "10が 13こ ＝ 130。", add: [lb(160, 210, "＝ 130", 26, C.red, 'middle', true)] },
     { note: "130−50＝80 で たしかめ。", add: [...fresh(lb(160, 120, "130 − 50 ＝ 80", 26, C.gray, 'middle', true))] },
     { note: "10が 10こ で 100。", add: [lb(160, 50, "100 ＝ 10が 10こ", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_102_a: show([
     { note: "130−50 を 暗算で しよう。", add: [lb(160, 50, "130 − 50", 26, C.ink, 'middle', true)] },
     { note: "130 は 10が 13こ。", add: [lb(160, 90, "10が 13こ", 26, C.blue, 'middle', true)] },
@@ -920,7 +920,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "10が 8こ ＝ 80。", add: [lb(160, 210, "＝ 80", 26, C.red, 'middle', true)] },
     { note: "たし算で たしかめる。", add: [...fresh(lb(160, 120, "80 ＋ 50 ＝ 130", 26, C.gray, 'middle', true))] },
     { note: "10の まとまりで 考える。", add: [lb(160, 50, "10が □こ", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_103_a: show([
     { note: "35 に いくつ たすと 100？", add: [lb(160, 50, "35 ＋ □ ＝ 100", 26, C.ink, 'middle', true)] },
     { note: "一の くらいは 5 → あと 5。", add: [lb(160, 90, "5 ＋ 5 ＝ 10", 26, C.blue, 'middle', true)] },
@@ -929,7 +929,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "たしかめ。", add: [lb(160, 210, "35 ＋ 65 ＝ 100", 26, C.red, 'middle', true)] },
     { note: "100−37＝63。", add: [...fresh(lb(160, 120, "37 ＋ 63 ＝ 100", 26, C.gray, 'middle', true))] },
     { note: "一の くらいで 10、十の くらいで 9。", add: [lb(160, 50, "10 と 9", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_104_a: show([
     { note: "98＋5 を くふうして 解こう。", add: [lb(160, 50, "98 ＋ 5", 26, C.ink, 'middle', true)] },
     { note: "98 は あと 2 で 100。", add: [lb(160, 90, "98 ＋ 2 ＝ 100", 26, C.blue, 'middle', true)] },
@@ -938,7 +938,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 103。", add: [lb(160, 210, "＝ 103", 26, C.red, 'middle', true)] },
     { note: "99＋7 も 同じ。", add: [...fresh(lb(160, 120, "99＋1＋6 ＝ 106", 26, C.gray, 'middle', true))] },
     { note: "100に して から 考える。", add: [lb(160, 50, "100 に する", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_105_a: show([
     { note: "47＋8 を 暗算で しよう。", add: [lb(160, 50, "47 ＋ 8", 26, C.ink, 'middle', true)] },
     { note: "47 は あと 3 で 50。", add: [lb(160, 90, "47 ＋ 3 ＝ 50", 26, C.blue, 'middle', true)] },
@@ -947,7 +947,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 55。", add: [lb(160, 210, "＝ 55", 26, C.red, 'middle', true)] },
     { note: "36＋27 も 同じ。", add: [...fresh(lb(160, 120, "36＋4＋23 ＝ 63", 26, C.gray, 'middle', true))] },
     { note: "10の まとまりが ポイント。", add: [lb(160, 50, "10に する", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_106_a: show([
     { note: "53−8 を 暗算で しよう。", add: [lb(160, 50, "53 − 8", 26, C.ink, 'middle', true)] },
     { note: "53 から 3 を ひいて 50。", add: [lb(160, 90, "53 − 3 ＝ 50", 26, C.blue, 'middle', true)] },
@@ -956,7 +956,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 45。", add: [lb(160, 210, "＝ 45", 26, C.red, 'middle', true)] },
     { note: "71−26 は 20 から ひく。", add: [...fresh(lb(160, 120, "71−20−6 ＝ 45", 26, C.gray, 'middle', true))] },
     { note: "10の まとまりが ポイント。", add: [lb(160, 50, "10に する", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_107_a: show([
     { note: "58＋33 の 見当を つけよう。", add: [lb(160, 50, "58 ＋ 33", 26, C.ink, 'middle', true)] },
     { note: "58 は 約 60。", add: [lb(160, 90, "58 は 約 60", 26, C.blue, 'middle', true)] },
@@ -965,7 +965,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ぴったりは 91。", add: [lb(160, 210, "58 ＋ 33 ＝ 91", 26, C.red, 'middle', true)] },
     { note: "見当と 近い。合っている。", add: [...fresh(lb(160, 120, "近い ＝ 合っている", 26, C.red, 'middle', true))] },
     { note: "見当は まちがいを ふせぐ。", add: [lb(160, 50, "見当 ＋ たしかめ", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_108_a: show([
     { note: "赤 18こ、青 27こ。", add: [lb(160, 50, "赤 18　青 27", 26, C.ink, 'middle', true)] },
     { note: "線で あらわす。", add: [lb(160, 90, "赤 ──　青 ────", 26, C.blue, 'middle', true)] },
@@ -974,7 +974,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "答えは 9こ。", add: [lb(160, 210, "＝ 9こ", 26, C.red, 'middle', true)] },
     { note: "あわせては たし算。", add: [...fresh(lb(160, 120, "18 ＋ 27 ＝ 45", 26, C.gray, 'middle', true))] },
     { note: "図に すると わかりやすい。", add: [lb(160, 50, "図に かこう", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_109_a: show([
     { note: "あめが 54こ。", add: [lb(160, 50, "全体 ＝ 54", 26, C.ink, 'middle', true)] },
     { note: "35こ あげた。", add: [lb(160, 90, "あげた ＝ 35", 26, C.blue, 'middle', true)] },
@@ -983,7 +983,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 4−3＝1。", add: [lb(160, 210, "4 − 3 ＝ 1", 26, C.gray, 'middle', true)] },
     { note: "のこりは 19こ。", add: [...fresh(lb(160, 120, "＝ 19こ", 26, C.red, 'middle', true))] },
     { note: "たし算で たしかめ。", add: [lb(160, 50, "19 ＋ 35 ＝ 54", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_110_a: show([
     { note: "男の子 12人、女の子 8人。", add: [lb(160, 50, "男 12　女 8", 26, C.ink, 'middle', true)] },
     { note: "「ぜんぶで」なら たし算。", add: [lb(160, 90, "12 ＋ 8 ＝ 20", 26, C.blue, 'middle', true)] },
@@ -992,7 +992,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "ことばに 線を ひく。", add: [lb(160, 210, "聞かれて いる ことば", 26, C.red, 'middle', true)] },
     { note: "「ぜんぶ」は あわせる。", add: [...fresh(lb(160, 120, "ぜんぶ ＝ たし算", 26, C.blue, 'middle', true))] },
     { note: "「ちがい」は くらべる。", add: [lb(160, 50, "ちがい ＝ ひき算", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_111_a: show([
     { note: "おとな 25人、子ども 38人。", add: [lb(160, 50, "25人 と 38人", 26, C.ink, 'middle', true)] },
     { note: "まず 来た 人の 合計。", add: [lb(160, 90, "25 ＋ 38 ＝ 63", 26, C.blue, 'middle', true)] },
@@ -1001,7 +1001,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 5−1＝4。", add: [lb(160, 210, "5 − 1 ＝ 4", 26, C.gray, 'middle', true)] },
     { note: "今 46人。", add: [...fresh(lb(160, 120, "＝ 46人", 26, C.red, 'middle', true))] },
     { note: "たしかめ。", add: [lb(160, 50, "46 ＋ 17 ＝ 63", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_112_a: show([
     { note: "前から 5ばんめ、後ろから 4ばんめ。", add: [bx(20, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(56, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(92, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(128, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(164, 90, 30, 40, "●", C.main, FILL.warm, 18), bx(200, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(236, 90, 30, 40, "○", C.main, FILL.warm, 18), bx(272, 90, 30, 40, "○", C.main, FILL.warm, 18)] },
     { note: "前から 5ばんめは ●の 人。", add: [lb(160, 40, "前から 5ばんめ", 24, C.blue, 'middle', true)] },
@@ -1010,7 +1010,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "1 ひく。", add: [cover(0, 14, 320, 41), cover(0, 20, 320, 40), lb(160, 40, "5 ＋ 4 − 1", 28, C.red, 'middle', true)] },
     { note: "ぜんぶで 8人。", add: [cover(0, 9, 320, 48), cover(0, 20, 320, 40), lb(160, 40, "＝ 8人", 30, C.red, 'middle', true)] },
     { note: "前に 4人、●、後ろに 3人 でも 8人。", add: [cover(78, 7, 165, 51), cover(0, 20, 320, 40), lb(160, 40, "4 ＋ 1 ＋ 3 ＝ 8", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_113_a: show([
     { note: "あめを 8こ 食べたら 15こ。", add: [lb(160, 50, "食べた 8、のこり 15", 26, C.ink, 'middle', true)] },
     { note: "はじめの 数を □ と する。", add: [lb(160, 90, "□ − 8 ＝ 15", 26, C.blue, 'middle', true)] },
@@ -1019,7 +1019,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "十の くらい 1＋1＝2。", add: [lb(160, 210, "1 ＋ 1 ＝ 2", 26, C.gray, 'middle', true)] },
     { note: "はじめは 23こ。", add: [...fresh(lb(160, 120, "＝ 23こ", 26, C.red, 'middle', true))] },
     { note: "たしかめ。", add: [lb(160, 50, "23 − 8 ＝ 15", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_114_a: show([
     { note: "数の ならびを 見よう。", add: [lb(160, 50, "3, 6, 9, 12, □", 26, C.ink, 'middle', true)] },
     { note: "となりの ちがいを 見る。", add: [lb(160, 90, "6 − 3 ＝ 3", 26, C.blue, 'middle', true)] },
@@ -1028,7 +1028,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "□ は 12 に 3 を たす。", add: [lb(160, 210, "12 ＋ 3", 26, C.red, 'middle', true)] },
     { note: "□ ＝ 15。", add: [...fresh(lb(160, 120, "□ ＝ 15", 26, C.red, 'middle', true))] },
     { note: "3の だんと 同じ。", add: [lb(160, 50, "3, 6, 9, 12, 15", 26, C.gray, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_115_a: show([
     { note: "1年生の 復習を しよう。", add: [lb(160, 50, "復習", 26, C.ink, 'middle', true)] },
     { note: "8＋7。8＋2＝10。", add: [lb(160, 90, "8 ＋ 2 ＝ 10", 26, C.blue, 'middle', true)] },
@@ -1037,7 +1037,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "4＋3＝7。", add: [lb(160, 210, "＝ 7", 26, C.red, 'middle', true)] },
     { note: "10の まとまりが カギ。", add: [...fresh(lb(160, 120, "10に する", 26, C.red, 'middle', true))] },
     { note: "これが ひっ算の 土台。", add: [lb(160, 50, "ひっ算の 土台", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_116_a: show([
     { note: "3けたの 数と ひっ算の まとめ。", add: [lb(160, 50, "まとめ①", 26, C.ink, 'middle', true)] },
     { note: "258＋134。", add: [lb(160, 90, "258 ＋ 134 ＝ 392", 26, C.red, 'middle', true)] },
@@ -1046,7 +1046,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "たしかめを わすれずに。", add: [lb(160, 210, "たしかめ", 26, C.blue, 'middle', true)] },
     { note: "くり上がり・くり下がり。", add: [...fresh(lb(160, 120, "1つずつ", 26, C.blue, 'middle', true))] },
     { note: "よく できました。", add: [lb(160, 50, "まとめ ①", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_117_a: show([
     { note: "長さ・かさ・時間の まとめ。", add: [lb(160, 50, "まとめ②", 26, C.ink, 'middle', true)] },
     { note: "3cm5mm ＝ 35mm。", add: [lb(160, 90, "3cm5mm ＝ 35mm", 26, C.red, 'middle', true)] },
@@ -1055,7 +1055,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "午前10時→午後2時。", add: [lb(160, 210, "4時間", 26, C.red, 'middle', true)] },
     { note: "1時間30分 ＝ 90分。", add: [...fresh(lb(160, 120, "90分", 26, C.red, 'middle', true))] },
     { note: "たんいを そろえる。", add: [lb(160, 50, "たんいの かんけい", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_118_a: show([
     { note: "かけ算の まとめ。", add: [lb(160, 50, "まとめ③", 26, C.ink, 'middle', true)] },
     { note: "4×6 ＝ 24。", add: [lb(160, 90, "4 × 6 ＝ 24", 26, C.red, 'middle', true)] },
@@ -1064,7 +1064,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "3×9 ＝ 27。", add: [lb(160, 210, "3 × 9 ＝ 27", 26, C.red, 'middle', true)] },
     { note: "□×8＝40 の □ は 5。", add: [...fresh(lb(160, 120, "□ ＝ 5", 26, C.red, 'middle', true))] },
     { note: "九九を すらすら。", add: [lb(160, 50, "九九 ＝ 土台", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_119_a: show([
     { note: "図形・表・分数の まとめ。", add: [lb(160, 50, "まとめ④", 26, C.ink, 'middle', true)] },
     { note: "三角形：辺3・ちょう点3。", add: [lb(160, 90, "三角形 3 と 3", 26, C.red, 'middle', true)] },
@@ -1073,7 +1073,7 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "表の 合計は 22。", add: [lb(160, 210, "合計 ＝ 22", 26, C.red, 'middle', true)] },
     { note: "1/2 は 半分。", add: [...fresh(lb(160, 120, "1/2 ＝ 半分", 26, C.red, 'middle', true))] },
     { note: "よく できました。", add: [lb(160, 50, "まとめ ④", 26, C.blue, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
   u120e2_120_a: show([
     { note: "3年生の 計算を ちょっと 見よう。", add: [lb(160, 50, "23 × 3", 26, C.ink, 'middle', true)] },
     { note: "23 ＝ 20 ＋ 3 と 分ける。", add: [lb(160, 90, "20 ＋ 3", 26, C.blue, 'middle', true)] },
@@ -1082,5 +1082,5 @@ export const lessonFigsU120E2Sansu: Record<string, Figure> = {
     { note: "60＋9＝69。", add: [lb(160, 210, "＝ 69", 26, C.red, 'middle', true)] },
     { note: "九九が 大切。", add: [...fresh(lb(160, 120, "九九 ＝ 土台", 26, C.blue, 'middle', true))] },
     { note: "3年生も がんばろう。", add: [lb(160, 50, "3年生へ！", 26, C.red, 'middle', true)] },
-  ], "動かして、1つずつ たしかめよう"),
+  ], "うごかして、1つずつ たしかめよう"),
 };

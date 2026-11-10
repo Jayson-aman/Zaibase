@@ -486,7 +486,7 @@ export const honshiken202701KokoKokugo2: Question[] = [
   }),
   Q(44, 'standard', {
     passage: `牀前看二月光一
-疑二是地上霜一
+疑是地上霜
 挙レ頭望二山月一
 低レ頭思二故郷一
 （李白「静夜思」）`,
@@ -511,7 +511,7 @@ export const honshiken202701KokoKokugo2: Question[] = [
   }),
   Q(45, 'advanced', {
     passage: `牀前看二月光一
-疑二是地上霜一
+疑是地上霜
 挙レ頭望二山月一
 低レ頭思二故郷一
 （李白「静夜思」）

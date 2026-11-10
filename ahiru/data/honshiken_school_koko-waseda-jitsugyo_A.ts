@@ -1264,15 +1264,15 @@ export const honshikenSchool_koko_waseda_jitsugyo_A: Question[] = [
     "course": "koko-waseda-jitsugyo",
     "difficulty": "advanced",
     "question": "次の英文には、誤りが1か所あります。誤りを含む部分を選びなさい。\nMy uncle (ア)has lived (イ)in Nagano (ウ)for (エ)2015.",
-    "answer": "ア　for",
+    "answer": "ウ　for",
     "hint": "「2015年から（ずっと）」と、起点を表すときの前置詞を考える。",
-    "explanation": "【何を聞かれているか】文の中のまちがいを見つける。\n【なぜそうなるのか】現在完了の継続を表す文で、期間（5年間など）を表すときは for、起点（2015年から、など）を表すときは since を使う。この文の 2015 は、「いつから」を表す起点なので、for ではなく since が正しい。\n【ステップ1】現在完了〈has lived〉は、継続を表す文として正しい。\n【ステップ2】in Nagano は場所を表していて正しい。\n【ステップ3】2015 は「〜年から」という起点なので since が必要。for は期間（for ten years など）に使う。\n【答え】ア　for\n【確かめ】正しい文は My uncle has lived in Nagano since 2015.（おじは2015年から長野に住んでいます。）。\n【よくあるまちがい】イ の has lived をまちがいと考える（現在完了の継続の形として正しい）。",
+    "explanation": "【何を聞かれているか】文の中のまちがいを見つける。\n【なぜそうなるのか】現在完了の継続を表す文で、期間（5年間など）を表すときは for、起点（2015年から、など）を表すときは since を使う。この文の 2015 は、「いつから」を表す起点なので、for ではなく since が正しい。\n【ステップ1】現在完了〈has lived〉は、継続を表す文として正しい。\n【ステップ2】in Nagano は場所を表していて正しい。\n【ステップ3】2015 は「〜年から」という起点なので since が必要。for は期間（for ten years など）に使う。\n【答え】ウ　for\n【確かめ】正しい文は My uncle has lived in Nagano since 2015.（おじは2015年から長野に住んでいます。）。\n【よくあるまちがい】ア の has lived をまちがいと考える（現在完了の継続の形として正しい）。",
     "pitfall": "for と since の区別がつかない。",
     "memoryTip": "期間＝for、起点＝since。",
     "choices": [
-      "ア　for",
-      "イ　has lived",
-      "ウ　in Nagano",
+      "ア　has lived",
+      "イ　in Nagano",
+      "ウ　for",
       "エ　2015"
     ]
   },

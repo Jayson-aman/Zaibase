@@ -401,7 +401,7 @@ export const honshikenSchool_tokyo_eiko_B: Question[] = [
     "examType": "chugaku",
     "course": "tokyo-eiko",
     "difficulty": "standard",
-    "question": "ヒトがうでを曲げてひじをかたくするとき、うでの内側の筋肉と外側の筋肉は、どうなっていますか。正しいものを選びなさい。",
+    "question": "ヒトがうでを曲げて力こぶをつくるとき、うでの内側の筋肉と外側の筋肉は、どうなっていますか。正しいものを選びなさい。",
     "choices": [
       "内側の筋肉がちぢみ、外側の筋肉がゆるむ",
       "内側の筋肉がゆるみ、外側の筋肉がちぢむ",
