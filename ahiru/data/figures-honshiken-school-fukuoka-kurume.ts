@@ -827,7 +827,7 @@ const k11: Figure = show([
 ], '苦い＝補欠のくやしさ、甘い＝役に立てたうれしさ。入りまじった気持ち。');
 
 export const figuresHonshikenSchool_kokugo: Record<string, Figure> = {
-  [id('kokugo', 4)]: k04, [id('kokugo', 5)]: k05, [id('kokugo', 6)]: k06, [id('kokugo', 7)]: k07,
+  [id('kokugo', 4)]: k04, [id('kokugo', 6)]: k06, [id('kokugo', 7)]: k07,
   [id('kokugo', 8)]: k08, [id('kokugo', 9)]: k09, [id('kokugo', 10)]: k10, [id('kokugo', 11)]: k11,
 };
 

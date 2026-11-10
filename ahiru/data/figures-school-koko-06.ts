@@ -1362,7 +1362,6 @@ export const figuresSchoolKoko06: Record<string, Figure> = {
   tokai_rika_03: sub_tokai03,
   shitennoji_koko_sansu_02: shi02,
   shitennoji_koko_sansu_05: shi05,
-  shitennoji_koko_sansu_09: shi09,
   shitennoji_koko_sansu_10: shi10,
   shitennoji_koko_sansu_11: shi11,
   shitennoji_koko_sansu_16: shi16,
