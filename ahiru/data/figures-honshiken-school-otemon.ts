@@ -378,17 +378,6 @@ const h02: Figure = show([
   S('確かめ。日本も1977年に200海里の水域を設定しました。世界の国々が同じように決めたので、遠洋漁業がへったことと合います。', ['日本も1977年に設定', '世界の国々が同じ動き', '=漁場がせばまった ✓']),
 ], '遠洋漁業の衰退＝200海里（排他的経済水域）の設定＋石油価格の上昇。');
 
-// shakai_03 食料自給率
-const pbar = (y: number, pct: number, color: string, fill: string, label: string): E[] => [rect(60, y, 200, 26, C.gray, FILL.gray), rect(60, y, pct * 2, 26, color, fill), tx(30, y + 18, label, 10, color), tx(60 + pct * 2 + 22, y + 18, `${pct}%`, 13, color)];
-const h03: Figure = show([
-  S('2024年度の日本の食料自給率（カロリーベース）に、最も近い値を選びます。', ['自給率はおよそ何%？'], L(['約20%　約38%', '約60%　約80%'], 50, 34, 18, C.ink)),
-  SF('食料自給率は、国内で消費する食料のうち、国内でつくられた割合です。全体を100%の帯で表します。', ['国内で消費する食料＝100%'], [rect(60, 50, 200, 26, C.gray, FILL.gray), tx(160, 40, '消費する食料（100%）', 12, C.gray)]),
-  SF('カロリーベース（食料のエネルギーで計算）の自給率は、約38%です。帯の半分より短くなります。', ['カロリーベース＝約38%'], pbar(50, 38, C.red, FILL.red, 'カロリー')),
-  S('❓ なぜ低いの？ 小麦や大豆、肉や卵のもとになる飼料のとうもろこしなどを、たくさん輸入しているからです。', ['小麦・大豆・飼料を輸入', '→ 自給率が低い']),
-  SF('金額で計算する生産額ベースは、約64%です。野菜や果物は金額が大きいけれどカロリーは小さいので、カロリーベースより高くなります。', ['生産額ベース＝約64%', 'カロリーベース＝約38%'], [...pbar(40, 38, C.red, FILL.red, 'カロリー'), ...pbar(86, 64, C.blue, FILL.blue, '金額')]),
-  S('答えは、約38%です。', ['=答え　約38%']),
-  S('確かめ。約20%は低すぎ、約60%は生産額ベースの値、約80%は高すぎます。「半分以下」という知識とも合います。', ['約60%＝生産額ベース', '約38%＝カロリーベース', '=半分以下 ✓']),
-], '食料自給率（2024年度）：カロリーベース約38%、生産額ベース約64%。');
 
 // shakai_04 中京工業地帯
 const h04: Figure = show([
@@ -620,7 +609,6 @@ export const figuresHonshikenSchool_otemon: Record<string, Figure> = {
   honshiken_school_otemon_rika_12: r12,
   honshiken_school_otemon_shakai_01: h01,
   honshiken_school_otemon_shakai_02: h02,
-  honshiken_school_otemon_shakai_03: h03,
   honshiken_school_otemon_shakai_04: h04,
   honshiken_school_otemon_shakai_05: h05,
   honshiken_school_otemon_shakai_06: h06,

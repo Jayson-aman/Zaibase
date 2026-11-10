@@ -3,362 +3,6 @@ import type { Figure } from './figures';
 import { show, type Slide } from './diagram-kit';
 
 const D: Record<string, { slides: unknown; caption: string }> = {
- "ritsumeikan_koko_kokugo_04": {
-  "caption": "答え　見込みがないとあきらめる",
-  "slides": [
-   {
-    "note": "慣用句「さじを投げる」の意味を選ぶ問題。言葉どおりに読むと、さじを投げ捨てるだけで、意味がわからない。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "①状況・問い",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "慣用句「さじを投げる」",
-      "color": "#0284C7",
-      "fill": "#E0F2FE",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 28,
-      "text": "意味はどれか？",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "「さじ」は、昔、医者が薬を量って混ぜるのに使った道具。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "②手がかり",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "さじ＝薬を量る道具",
-      "color": "#16A34A",
-      "fill": "#DCFCE7",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 28,
-      "text": "昔の医者が使った",
-      "color": "#16A34A",
-      "fill": "#DCFCE7",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "治る見込みがないと考えた医者が、薬を調合するさじを投げ出す。ここから、見込みがないとあきらめる意味になったとされる。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "③なぜそうなる",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "治る見込みがない",
-      "color": "#9333EA",
-      "fill": "#F3E8FF",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 28,
-      "text": "→ さじを投げ出す",
-      "color": "#9333EA",
-      "fill": "#F3E8FF",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 96,
-      "w": 296,
-      "h": 28,
-      "text": "→ あきらめる",
-      "color": "#9333EA",
-      "fill": "#F3E8FF",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "選択肢を成り立ちと照らす。あきらめる意味と合うのはイだけ。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "④手順",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "ア 役目をゆずる　×",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 28,
-      "text": "ウ 思い切った手段　×",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 96,
-      "w": 296,
-      "h": 28,
-      "text": "エ 世話をする　×",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 130,
-      "w": 296,
-      "h": 28,
-      "text": "イ 見込みなくあきらめる　○",
-      "color": "#16A34A",
-      "fill": "#DCFCE7",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "答えは「見込みがないと判断して、あきらめる。」",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "⑤答え",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "見込みがないと判断して、あきらめる。",
-      "color": "#E11D48",
-      "fill": "#FFE4E6",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "例文に入れて読み直し、意味が通るか確かめる。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "⑥確かめ",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "例文で確かめる",
-      "color": "#16A34A",
-      "fill": "#DCFCE7",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 43,
-      "text": "何度説得しても聞かない。先生もついにさじ\nを投げた。",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     }
-    ]
-   },
-   {
-    "note": "「投げる」の字面にひかれて、「思い切った手段」と考えるのは誤り。成り立ちで考える。",
-    "add": [
-     {
-      "t": "box",
-      "x": 0,
-      "y": 0,
-      "w": 320,
-      "h": 240,
-      "color": "#FFFFFF",
-      "fill": "#FFFFFF",
-      "size": 14
-     },
-     {
-      "t": "label",
-      "x": 12,
-      "y": 19,
-      "text": "⑦ひっかけ注意",
-      "size": 12,
-      "color": "#0284C7",
-      "anchor": "start",
-      "bold": true
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 28,
-      "w": 296,
-      "h": 28,
-      "text": "×「投げる」の字面で思い切った手段",
-      "color": "#E11D48",
-      "fill": "#FFE4E6",
-      "size": 13
-     },
-     {
-      "t": "box",
-      "x": 12,
-      "y": 62,
-      "w": 296,
-      "h": 28,
-      "text": "成り立ちから意味を考える",
-      "color": "#6E645C",
-      "fill": "#F1EFEA",
-      "size": 13
-     }
-    ]
-   }
-  ]
- },
  "ritsumeikan_koko_kokugo_10": {
   "caption": "答え　難しく【ない】（形容詞）",
   "slides": [
@@ -2041,10 +1685,10 @@ const D: Record<string, { slides: unknown; caption: string }> = {
   ]
  },
  "ritsumeikan_koko_kokugo_15": {
-  "caption": "答え　しかし",
+  "caption": "答え\u3000かわって引き受けること",
   "slides": [
    {
-    "note": "空欄①に入る接続語を選ぶ。",
+    "note": "本文中の「肩代わり」の意味を選ぶ。",
     "add": [
      {
       "t": "box",
@@ -2072,7 +1716,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "空欄①に入る接続語は？",
+      "text": "「肩代わり」の意味は？",
       "color": "#0284C7",
       "fill": "#E0F2FE",
       "size": 13
@@ -2080,7 +1724,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "空欄の前と後ろの内容を取り出す。",
+    "note": "本文の該当する文を読んで、何について言っているのかを確かめる。",
     "add": [
      {
       "t": "box",
@@ -2108,7 +1752,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "前：迷うことはほとんどない",
+      "text": "本文：機械が肩代わりしてしまっている",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 13
@@ -2119,7 +1763,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 62,
       "w": 296,
       "h": 28,
-      "text": "後：見えにくい代価がある",
+      "text": "目印・坂の向きを結びつける作業",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 13
@@ -2127,7 +1771,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "前がよい点、後ろがその裏にある悪い点で、内容が反対になっている。",
+    "note": "本来は人が頭の中でしていた作業を、いまは機械がしてくれている。人がするはずの作業を、機械がかわって引き受けていることになる。",
     "add": [
      {
       "t": "box",
@@ -2155,7 +1799,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "前＝よい点",
+      "text": "本来は人が頭の中でしていた作業",
       "color": "#9333EA",
       "fill": "#F3E8FF",
       "size": 13
@@ -2166,7 +1810,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 62,
       "w": 296,
       "h": 28,
-      "text": "後＝その裏の悪い点",
+      "text": "それを、いまは機械がしている",
       "color": "#9333EA",
       "fill": "#F3E8FF",
       "size": 13
@@ -2177,7 +1821,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 96,
       "w": 296,
       "h": 28,
-      "text": "反対の内容 → 逆接",
+      "text": "＝かわって引き受けている",
       "color": "#9333EA",
       "fill": "#F3E8FF",
       "size": 13
@@ -2185,7 +1829,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "選択肢の働きを調べる。",
+    "note": "選択肢の意味を調べる。",
     "add": [
      {
       "t": "box",
@@ -2213,7 +1857,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "たとえば＝例を挙げる　×",
+      "text": "イ・ウ：意味がちがう\u3000×",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 13
@@ -2224,7 +1868,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 62,
       "w": 296,
       "h": 28,
-      "text": "だから・そこで＝順接　×",
+      "text": "エ：手伝うだけ\u3000×",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 13
@@ -2235,7 +1879,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 96,
       "w": 296,
       "h": 28,
-      "text": "しかし＝逆接　○",
+      "text": "ア：かわって引き受ける\u3000○",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 13
@@ -2243,7 +1887,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "答えは「しかし」。",
+    "note": "答えは「ほかの人にかわって、その仕事や負担を引き受けること」。",
     "add": [
      {
       "t": "box",
@@ -2271,7 +1915,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "しかし",
+      "text": "かわって引き受けること",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 13
@@ -2306,8 +1950,8 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "x": 12,
       "y": 28,
       "w": 296,
-      "h": 43,
-      "text": "迷うことはほとんどない。しかし、この便利\nさには、見えにくい代価がある。",
+      "h": 28,
+      "text": "機械が、人にかわって作業を引き受けている",
       "color": "#16A34A",
       "fill": "#DCFCE7",
       "size": 13
@@ -2315,7 +1959,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
     ]
    },
    {
-    "note": "「だから」を選ぶのは誤り。",
+    "note": "「手伝う」だと考えるのは誤り。",
     "add": [
      {
       "t": "box",
@@ -2343,7 +1987,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 28,
       "w": 296,
       "h": 28,
-      "text": "×「だから」",
+      "text": "×「手伝う・助ける」",
       "color": "#E11D48",
       "fill": "#FFE4E6",
       "size": 13
@@ -2354,7 +1998,7 @@ const D: Record<string, { slides: unknown; caption: string }> = {
       "y": 62,
       "w": 296,
       "h": 28,
-      "text": "便利だから代価がある、は成り立たない",
+      "text": "全部かわって引き受けること",
       "color": "#6E645C",
       "fill": "#F1EFEA",
       "size": 13

@@ -1031,12 +1031,6 @@ export const figuresSansuGap3: Record<string, Figure> = {
     caption: '線分ABを3:1に内分する点Pの座標は解答なので点は示さない。',
   },
   // 円 x²+y²=25 上の点(3,4)（与えられた点）。接線の方程式は解答なので示さない。
-  koko_sansu_ex_15_034: {
-    kind: 'circle',
-    points: [{ angle: 53.13, label: '(3, 4)' }],
-    radiusLabel: 'x² + y² = 25',
-    caption: '円 x²+y²=25 上の点(3, 4)。この点における接線の方程式は解答なので図には示さない。',
-  },
   // 底辺8cm・高さ6cmの三角形と、同じ面積の平行四辺形（既出パターン、△ABC用）。
   koko_kankan_sansu_b_06: {
     kind: 'coordinate',
