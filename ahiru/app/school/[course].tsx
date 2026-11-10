@@ -194,9 +194,10 @@ export default function SchoolCurriculumScreen() {
   const { course } = useLocalSearchParams<{ course: string }>();
   const router = useRouter();
   const { hasAccess: betaAccess } = useBetaAccess();
-  const { tier: subTier, loading: subLoading } = useSubscription();
-  const isPro = subTier === 'pro' || subTier === 'max' || betaAccess;
-  const isMax = subTier === 'max' || betaAccess;
+  const { tier: subTier, loading: subLoading, welcomeTrial } = useSubscription();
+  // 初回ログイン後3日間の全開放では、学校別の本試験対策の中身（PRO・MAX）も開く
+  const isPro = subTier === 'pro' || subTier === 'max' || welcomeTrial || betaAccess;
+  const isMax = subTier === 'max' || welcomeTrial || betaAccess;
 
   const [activeSubject, setActiveSubject] = useState<SubjectKey>('sansu');
   const { questions } = useAllQuestions();
