@@ -97,7 +97,12 @@ export const cover = (x: number, y: number, w: number, h: number): DiagramElemen
   bx(x, y, w, h, undefined, '#FFFFFF', '#FFFFFF');
 
 /** 下の帯（y から下）を白でぬりつぶして、新しい部品に置きかえる。 */
-export const band = (y: number, ...els: DiagramElement[]): DiagramElement[] => [cover(0, y, 320, 240 - y), ...els];
+// 下の帯の式の箱は y=150 以降に置く。y=146 のまま白でおおうと、図の下端（y=141〜148）に置いた
+// 文字（O・A・B・x など）が半分切れて見えたので、146 指定のときだけ 150 からおおう（白い枠線が 149.2 から。箱の枠も 149.2 から）。
+export const band = (y: number, ...els: DiagramElement[]): DiagramElement[] => {
+  const top = y === 146 ? 150 : y;
+  return [cover(0, top, 320, 240 - top), ...els];
+};
 
 /** 画面全体をぬりつぶして、まっさらな図に切りかえる。 */
 export const fresh = (...els: DiagramElement[]): DiagramElement[] => [cover(0, 0, 320, 240), ...els];
