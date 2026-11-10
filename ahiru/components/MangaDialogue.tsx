@@ -180,6 +180,8 @@ const styles = StyleSheet.create({
   dotActive: { backgroundColor: '#B5622E' },
   panelImage: {
     width: '100%',
+    maxWidth: 360,
+    alignSelf: 'center',
     aspectRatio: 1,
     borderRadius: 12,
     marginBottom: 8,

@@ -833,8 +833,12 @@ const styles = StyleSheet.create({
   detailSectionTitle: { fontSize: 16, fontWeight: '800', color: '#6B4226', marginBottom: 8 },
   detailItem: { fontSize: 14, color: '#333', lineHeight: 24 },
   tabImage: {
+    // 元の絵は正方形。横に引きのばして上下を切ると、パソコンでは絵の大部分が切れる。
+    // 正方形のまま、幅に上限をつけて中央に置く（スマホ・タブレット・パソコンで同じ見え方）。
     width: '100%',
-    height: 170,
+    maxWidth: 340,
+    aspectRatio: 1,
+    alignSelf: 'center',
     borderRadius: 12,
     marginBottom: 12,
     backgroundColor: '#F5EFE4',
@@ -849,7 +853,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 4,
     borderLeftColor: '#F59E0B',
   },
-  spotlightImage: { width: '100%', height: 150, borderRadius: 10, marginBottom: 8, backgroundColor: '#F5EFE4' },
+  spotlightImage: { width: '100%', maxWidth: 280, aspectRatio: 1, alignSelf: 'center', borderRadius: 10, marginBottom: 8, backgroundColor: '#F5EFE4' },
   spotlightName: { fontSize: 16, fontWeight: '800', color: '#221C18', marginBottom: 4 },
   spotlightLocation: { fontSize: 13, color: '#666', marginBottom: 6 },
   spotlightWhy: { fontSize: 14, color: '#333', lineHeight: 22 },
