@@ -1,7 +1,7 @@
 Thank you for reviewing Zaibase受験 (Ver. 2.2.11).
 
 [About the app]
-An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams): a textbook with animated diagrams, a formula collection, about 16,000 practice questions in five subjects and school-specific courses. Japanese only. Not affiliated with any school (stated in the description).
+An exam-preparation app for Japanese students (elementary school students preparing for junior-high entrance exams, and junior-high students preparing for high-school entrance exams): a textbook with animated diagrams, a formula collection, about 30,000 practice questions in five subjects and school-specific courses. Japanese only. Not affiliated with any school (stated in the description).
 
 [Sign-in]
 Most content works without an account. Sign-in is required only before buying a one-time (consumable) item, so the unlocked content is saved to the user's account. Buying a PRO/MAX subscription does not require sign-in. To test the one-time items, please sign in with the demo account in the App Review Information section.
