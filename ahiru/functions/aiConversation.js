@@ -53,6 +53,11 @@ const LEVEL_GUIDE = {
 };
 
 const { jstDay: dayKey, refundDaily } = require("./_usage");
+const { assertNotDisposable, takeGlobalFree, giveBackGlobalFree } = require("./_freeGuard");
+
+// 無料のAI英会話（1日3回）の、全体の1日の上限。使い捨てメールで大量にアカウントを作られても、費用はここで止まる。
+// 環境変数 FREE_CAP_CONVERSATION で変えられる。
+const FREE_CONVERSATION_DAILY_CAP = 3000;
 
 async function checkAndIncrementUsage(uid, limit) {
   const usageRef = db.collection("aiConversationUsage").doc(uid);
@@ -124,7 +129,20 @@ exports.chatEnglishConversation = onCall(
     }
     const dailyLimit = paid ? PAID_DAILY_LIMIT : FREE_DAILY_LIMIT;
 
-    await checkAndIncrementUsage(uid, dailyLimit);
+    // 無料の枠のときだけ、使い捨てメールを断り、全体の1日の上限を数える（有料の人にはかからない）
+    let freeGlobalTaken = false;
+    if (!paid) {
+      assertNotDisposable(req, "AI英会話の無料枠");
+      await takeGlobalFree(db, "conversation", FREE_CONVERSATION_DAILY_CAP, "今日のAI英会話の無料枠は、受け付けを終了しました。明日また試してね。英単語Proなら、いつでも使えるよ！");
+      freeGlobalTaken = true;
+    }
+    try {
+      await checkAndIncrementUsage(uid, dailyLimit);
+    } catch (e) {
+      // 1日3回の上限などで弾かれたときは、全体の枠を戻す
+      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
+      throw e;
+    }
 
     const levelGuide = LEVEL_GUIDE[level] ?? LEVEL_GUIDE.eiken_2;
     // 履歴は件数・各要素の内容長を制限し、roleを許可値に限定（コスト濫用防止）
@@ -183,6 +201,7 @@ ${scenarioLine}
     } catch (err) {
       console.error("chatEnglishConversation: Claude API error", err);
       await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
+      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してください。");
     }
 
@@ -190,6 +209,7 @@ ${scenarioLine}
     const reply = textBlock?.text?.trim() ?? "";
     if (!reply) {
       await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
+      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
       throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
     }
 

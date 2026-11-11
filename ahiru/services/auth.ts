@@ -3,6 +3,7 @@
 // なることで、RevenueCat の加入状態を共有し、iOS↔Web の二重課金を防ぐ。
 // ログイン成功時に identifyUser(uid) で RevenueCat に同一ユーザーを紐付ける。
 
+import { isDisposableEmail } from '../utils/disposableEmail';
 import { getFirebaseAuth, isFirebaseConfigured } from './firebaseClient';
 import { identifyUser, logoutUser, syncPurchasesToCurrentUser } from './subscription';
 
@@ -98,6 +99,10 @@ function localKeyOf(u: { uid: string; isAnonymous: boolean } | null | undefined)
 
 export async function signUpEmail(email: string, password: string): Promise<AuthUser> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
+  // 使い捨てメールでの登録は断る（無料のAI体験を、何度も作り直して使われるのを防ぐ）
+  if (isDisposableEmail(email)) {
+    throw new AuthError('使い捨てメールアドレスでは登録できません。ふだん使っているメールアドレスを入れてください。');
+  }
   const auth = await getFirebaseAuth();
   const { createUserWithEmailAndPassword, linkWithCredential, EmailAuthProvider } = await import('firebase/auth');
   try {
