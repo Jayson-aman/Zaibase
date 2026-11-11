@@ -39,6 +39,11 @@ const MONTHLY_SESSION_LIMIT = 18;
 const TURN_LIMIT = 6;
 
 const { jstMonth: monthKey } = require("./_usage");
+const { assertNotDisposable, claimTrialForEmail, takeGlobalFree, giveBackGlobalFree } = require("./_freeGuard");
+
+// 無料のAI個別指導（Opus を使う最も高い経路）の、全体の1日の上限。
+// 使い捨てメールで大量にアカウントを作られても、無料の費用はこの数で止まる。環境変数 FREE_CAP_TUTOR で変えられる。
+const FREE_TUTOR_DAILY_CAP = 100;
 
 /**
  * AI が答えられなかったとき、先に消費した分（月の回数・1問の質問回数・無料体験）を戻す。
@@ -161,6 +166,13 @@ exports.askTutor = onCall(
       throw new HttpsError("unavailable", "いま会員の状態を確認できません。少し待ってから、もう一度試してね。");
     }
     let trialConsumed = false;
+    let trialGlobalDay = false; // 全体の無料枠を数えたか（失敗したら戻す）
+    const releaseTrial = async () => {
+      // AI が答えられなかったのに無料体験（1回限り）だけ消えるのは不公平なので、戻す（全体の枠も戻す）
+      if (!trialConsumed) return;
+      await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
+      if (trialGlobalDay) await giveBackGlobalFree(db, "tutor");
+    };
 
     // 無料体験は「1セッション」であって「1メッセージ」ではない。
     // 継続中の会話（isNewSession=false）まで弾くと、体験が1往復で切れて
@@ -176,6 +188,11 @@ exports.askTutor = onCall(
           "AI個別指導の無料体験（1回）は、ログインすると使えます。マイページからログインしてください。"
         );
       }
+      // 使い捨てメールには無料体験を出さない。
+      assertNotDisposable(req, "AI個別指導の無料体験");
+      // 無料体験の全体の1日の上限（超えたら、その日の無料体験は終わり）。
+      await takeGlobalFree(db, "tutor", FREE_TUTOR_DAILY_CAP, "今日のAI個別指導の無料体験は、受け付けを終了しました。明日また試してね。Maxプランなら、いつでも使えるよ！");
+      trialGlobalDay = true;
       // 体験の「未使用を確認 → 使用済みにする」を1つのトランザクションで行う。
       // 分けると、同じuidで別sessionIdの新規セッションを並列に送ったとき、
       // 全部が「未使用」を見て通り、Opusの無料体験が何セッションも使えてしまう。
@@ -187,7 +204,14 @@ exports.askTutor = onCall(
             "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
           );
         }
+        // 同じメール（gmail の「.」や「+別名」をそろえたもの）では、二度使わせない
+        await claimTrialForEmail(db, tx, req, "tutor");
         tx.set(userRef, { trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+      }).catch(async (e) => {
+        // ここで弾かれたときは、先に数えた全体の枠を戻す
+        await giveBackGlobalFree(db, "tutor");
+        trialGlobalDay = false;
+        throw e;
       });
       trialConsumed = true;
     }
@@ -197,9 +221,7 @@ exports.askTutor = onCall(
       turnCount = await getOrCreateSession(uid, sessionId, isNewSession);
     } catch (e) {
       // 月の上限・往復上限などで AI を呼ぶ前に弾かれたのに、無料体験（1回限り）だけ消えるのを防ぐ
-      if (trialConsumed) {
-        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
-      }
+      await releaseTrial();
       throw e;
     }
 
@@ -264,9 +286,7 @@ exports.askTutor = onCall(
       console.error("askTutor: Claude API error", err);
       await refundTutorTurn(uid, sessionId, isNewSession);
       // AI が答えられなかったのに無料体験（1回限り）だけ消えるのは不公平なので、戻す
-      if (trialConsumed) {
-        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
-      }
+      await releaseTrial();
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してね。");
     }
 
@@ -274,9 +294,7 @@ exports.askTutor = onCall(
     const answer = textBlock?.text?.trim() ?? "";
     if (!answer) {
       await refundTutorTurn(uid, sessionId, isNewSession);
-      if (trialConsumed) {
-        await userRef.set({ trialAiUsed: false, updatedAt: FieldValue.serverTimestamp() }, { merge: true }).catch(() => {});
-      }
+      await releaseTrial();
       throw new HttpsError("internal", "回答の生成に失敗しました。もう一度試してね。");
     }
 

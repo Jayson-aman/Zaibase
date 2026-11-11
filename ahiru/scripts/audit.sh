@@ -49,6 +49,7 @@ rm -rf "$OUT"
 echo
 echo "━━━ 3/4 コード監査（静的） ━━━"
 node scripts/audit-code.mjs || fail=1
+node scripts/check-disposable-list.mjs || fail=1
 
 echo
 echo "━━━ 4/4 Web バンドル ━━━"
