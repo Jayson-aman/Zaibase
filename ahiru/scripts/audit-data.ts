@@ -1308,6 +1308,39 @@ for (const q of Q) {
 }
 check('【問題集】問題文も答えも同じ重複', [...qdup.values()].filter((v) => v.length > 1).map((v) => v.join('/')));
 
+// 「学校別」と言いながら、他の学校や共通の問題と同じ内容の問題が出ていないか。
+// ⚠️2026/11/10、ユーザーの「学校別と言いながら、同じ問題はないですよね」で全30,364問を測ると、
+//   同じ慣用句・ことわざ・四字熟語・敬語が複数校に出ていた（学校別どうしで61問）。
+//   「問題文も答えも同じ」の検査には通る（言い回しや選択肢が少しちがう）ので、
+//   記号をすべて落とした問題文だけで突き合わせる。
+// ・本文を前提にする設問（「この文章で筆者は〜」「本文の内容に合うものは」「傍線部」「空らん」など）は、
+//   本文がちがえば別の問題なので見ない（見ると誤検出が大量に出る）。passage のある問題も同じ。
+// ・共通の問題（general・koko-general・kankan・koko-kankan・月例模試・教科書の問題）と同じなら、
+//   学校別の側を差しかえる。学校別どうしだけなら、1校には残してよい（残りを差しかえる）。
+const SCHOOL_STEM = /本文|この文章|筆者|文中|次の英文|passage|会話|次の文章|この文|文章中|傍線|空らん|空所|お知らせ|年表|図|表|グラフ|次の詩|詩の/;
+const POOL_COURSES = new Set(['', 'general', 'koko-general', 'kankan', 'koko-kankan']);
+const isSchoolQuestion = (q: any) =>
+  /^honshiken_school_/.test(String(q.id)) || !POOL_COURSES.has(String(q.course ?? ''));
+const dnorm = (x: string) => String(x ?? '').replace(/\s+|　/g, '').replace(/[。、．，！？!?・「」『』（）()\-ー]/g, '');
+const schoolDup = new Map<string, any[]>();
+for (const q of Q) {
+  const k = dnorm(q.question);
+  if (k.length < 18 || q.passage || SCHOOL_STEM.test(k)) continue;
+  schoolDup.set(k, [...(schoolDup.get(k) ?? []), q]);
+}
+check(
+  '【学校別】他校・共通と同じ内容の問題',
+  [...schoolDup.values()]
+    .filter((v) => new Set(v.map((x) => x.id)).size > 1)
+    .filter((v) => {
+      const school = v.filter(isSchoolQuestion);
+      if (school.length === 0) return false;
+      const hasPool = v.some((x) => !isSchoolQuestion(x));
+      return school.length - (hasPool ? 0 : 1) > 0;
+    })
+    .map((v) => v.map((x) => x.id).join('/')),
+);
+
 // 「⚡ はやく解くコツ」の参照切れと、いまの本数。
 // コツは問題idで引くので、問題を消したり id を変えたりすると黙って出なくなる。
 check(
