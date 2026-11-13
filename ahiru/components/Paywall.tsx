@@ -224,7 +224,7 @@ export default function Paywall({ visible, onClose, onPurchased }: Props) {
     if (n && intro?.periodUnit === 'DAY') return `${n}日間`;
     if (n && intro?.periodUnit === 'WEEK') return `${n * 7}日間`;
     if (n && intro?.periodUnit === 'MONTH') return `${n}か月`;
-    return '1か月';
+    return '7日間';
   };
   const proIntro = introPriceLabel(proProd);
   const maxIntro = introPriceLabel(maxProd);

@@ -9,6 +9,7 @@ import { initRevenueCat } from '../services/subscription';
 import { subscribeAuth } from '../services/auth';
 import ErrorBoundary from '../components/ErrorBoundary';
 import ConsentModal from '../components/ConsentModal';
+import TrialEndedGate from '../components/TrialEndedGate';
 
 const CONSENT_KEY = 'ahiru_terms_agreed_v1';
 
@@ -138,6 +139,7 @@ export default function RootLayout() {
           options={{ headerShown: false, presentation: 'modal' }}
         />
       </Stack>
+      {!isLegalRoute && <TrialEndedGate />}
       {consentChecked && showConsent && !isLegalRoute && (
         <ConsentModal onAgree={handleConsent} />
       )}
