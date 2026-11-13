@@ -68,7 +68,7 @@ export default function WelcomeTrialBanner({ onAction }: { onAction: () => void 
     notice = {
       icon: '🎁',
       title: left <= 1 ? '全部ひらく体験は、あと1日です' : `全部ひらく体験中です（あと${left}日）`,
-      body: '期間中は、単元・公式集・問題集・本試験対策の中身がすべて読めます（AIの機能と、Max限定の発展問題はのぞきます）。終わったあとは、続けて使うにはプランが必要です（体験だけで自動で課金されることはありません）。',
+      body: '期間中は、単元・公式集・問題集・本試験対策の中身がすべて読めます（AIの機能と、Max限定の発展問題はのぞきます）。終わったあとは、無料の範囲にもどります（自動で課金されることはありません）。続けて使いたいときは、はじめての方向けのお試し価格（お1人1回）で、PRO・MAXを始められます。',
       urgent: left <= 1,
       action: 'プランを見る',
     };
@@ -76,7 +76,7 @@ export default function WelcomeTrialBanner({ onAction }: { onAction: () => void 
     notice = {
       icon: '⏰',
       title: '全部ひらく体験が終わりました',
-      body: '続けて使うには、プランをえらんでください。',
+      body: '無料の範囲での学習は、これまでどおり続けられます。ロックされた単元や公式集の続きは、はじめての方向けのお試し価格（お1人1回）で、PRO・MAXから読めます。',
       urgent: false,
       action: 'プランを見る',
     };
