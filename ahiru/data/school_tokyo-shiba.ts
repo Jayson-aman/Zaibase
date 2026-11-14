@@ -495,7 +495,7 @@ const SPECS: Spec[] = [
     tip: '色のつく面の数で、位置を分けて数える。',
   },
   {
-    id: 'shiba_kokugo_01', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_01', subj: 'kokugo', diff: 'advanced',
     q: '【国語①】次の文の（　）に入る熟語として最も適切なものを選びなさい。「赤と青は、おたがいを引き立てる（　）的な色の組み合わせだ。」',
     choices: ['対象', '対称', '対照', '対症'],
     answer: '対照',
@@ -537,7 +537,7 @@ const SPECS: Spec[] = [
     tip: '境内は「けいだい」と声に出して覚える。',
   },
   {
-    id: 'shiba_kokugo_04', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_04', subj: 'kokugo', diff: 'advanced',
     q: '【国語④】「事件の発端を調べる」の「発端」の読み方として正しいものを選びなさい。',
     choices: ['はつたん', 'ほったん', 'はったん', 'ほつたん'],
     answer: 'ほったん',
@@ -564,7 +564,7 @@ const SPECS: Spec[] = [
     tip: '豊（ゆたか）＋富（とむ）。',
   },
   {
-    id: 'shiba_kokugo_06', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_06', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑥】「画竜点睛を欠く」の意味として最も適切なものを選びなさい。',
     choices: ['最後に大切な仕上げが足りなくて、全体が引き立たない', '絵をかくのが下手で、人に見せられない', '大きな力で、物事を無理に押し切る', 'はじめと終わりが同じで、変化がない'],
     answer: '最後に大切な仕上げが足りなくて、全体が引き立たない',
@@ -606,7 +606,7 @@ const SPECS: Spec[] = [
     tip: '枚挙にいとまがない＝多すぎて数えきれない。',
   },
   {
-    id: 'shiba_kokugo_09', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_09', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑨】次の文の（　）に入る言葉として最も適切なものを選びなさい。「先生のお宅で、先生が描かれた絵を（　）しました。」',
     choices: ['拝見', '拝聴', '拝借', 'ごらん'],
     answer: '拝見',
@@ -634,7 +634,7 @@ const SPECS: Spec[] = [
     tip: '活用しない・体言以外を修飾＝副詞。',
   },
   {
-    id: 'shiba_kokugo_11', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_11', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑪】「赤い花が風に静かにゆれる。」の「静かに」は、どの言葉を修飾していますか。',
     choices: ['赤い', '花が', '風に', 'ゆれる'],
     answer: 'ゆれる',
@@ -662,7 +662,7 @@ const SPECS: Spec[] = [
     tip: '逆接＝しかし・けれども・それでも。',
   },
   {
-    id: 'shiba_kokugo_13', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_13', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑬】次の熟語のうち、組み立てが他の三つとちがうものを選びなさい。',
     choices: ['高低', '強弱', '左右', '読書'],
     answer: '読書',
@@ -676,7 +676,7 @@ const SPECS: Spec[] = [
     tip: '反対の意味の字を並べた熟語は、2字をくらべて見つける。',
   },
   {
-    id: 'shiba_kokugo_14', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_14', subj: 'kokugo', diff: 'basic',
     q: '【国語⑭】「菜の花や月は東に日は西に」の俳句の季節として正しいものを選びなさい。',
     choices: ['春', '夏', '秋', '冬'],
     answer: '春',
@@ -789,7 +789,7 @@ const SPECS: Spec[] = [
     tip: '「何の理由か」をきちんと区別する。',
   },
   {
-    id: 'shiba_kokugo_22', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_22', subj: 'kokugo', diff: 'advanced',
     passage: '街路樹は、道ばたをかざるためだけに植えられているのではない。夏には、葉が日光をさえぎり、同時に葉から水分を空気中に出すので、まわりの温度を下げてくれる。また、根が雨水を地面にすいこむため、大雨のときに道路にたまる水の量をおさえる役目もある。さらに、枝や葉が風の勢いをやわらげ、ほこりが舞い上がるのを防ぐこともわかってきた。だが、根が育ちすぎて歩道をもち上げたり、落ち葉が排水口をふさいだりするという問題も起きている。そのため、多くの町では、植える木の種類や間かくを、場所ごとに考えて決めている。',
     q: '【国語㉒】本文で、「だが」のあとに述べられている街路樹の問題点として最も適切なものを選びなさい。',
     choices: ['根が歩道をもち上げたり、落ち葉が排水口をふさいだりすること', 'ほこりが舞い上がること', '大雨で道路に水がたまること', '夏の日光が強くなること'],
@@ -819,7 +819,7 @@ const SPECS: Spec[] = [
     tip: '本文のどこに書いてあるか、根拠をさがす。',
   },
   {
-    id: 'shiba_kokugo_24', subj: 'kokugo', diff: 'advanced',
+    id: 'shiba_kokugo_24', subj: 'kokugo', diff: 'standard',
     passage: '「全然おいしい」と言う人が増えている。もともと「全然」は、「全然ない」のように、打ち消しの言葉と結びつくのが正しいとされてきた。だが、明治時代の小説には「全然よい」のような使い方も見られ、肯定の言葉と結びつく例は、昔からあったことがわかる。ことばの正しさは、辞書が決めるのではなく、人々の使い方の積み重ねによって、少しずつ変わっていくものなのだ。ただし、変化をそのまま受け入れるかどうかは、場面による。手紙や発表では、相手に誤解されないよう、なじみのある使い方を選ぶほうがよい。',
     q: '【国語㉔】本文で筆者が述べている考えとして最も適切なものを選びなさい。',
     choices: ['ことばの正しさは、使い方の積み重ねによって少しずつ変わっていく', '「全然」は打ち消しの言葉とだけ使うべきだ', '辞書にのっていることばだけを使うべきだ', '新しいことばは、使わないほうがよい'],
@@ -834,7 +834,7 @@ const SPECS: Spec[] = [
     tip: '「のだ」のある文に筆者の考え。',
   },
   {
-    id: 'shiba_kokugo_25', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_25', subj: 'kokugo', diff: 'basic',
     passage: '「全然おいしい」と言う人が増えている。もともと「全然」は、「全然ない」のように、打ち消しの言葉と結びつくのが正しいとされてきた。だが、明治時代の小説には「全然よい」のような使い方も見られ、肯定の言葉と結びつく例は、昔からあったことがわかる。ことばの正しさは、辞書が決めるのではなく、人々の使い方の積み重ねによって、少しずつ変わっていくものなのだ。ただし、変化をそのまま受け入れるかどうかは、場面による。手紙や発表では、相手に誤解されないよう、なじみのある使い方を選ぶほうがよい。',
     q: '【国語㉕】本文の「ただし」の働きとして最も適切なものを選びなさい。',
     choices: ['前の内容に、条件や注意を付け加える', '前の内容と反対のことを述べる', '前の内容を、例を挙げて説明する', '話題を別のものに変える'],
@@ -849,7 +849,7 @@ const SPECS: Spec[] = [
     tip: 'ただし・なお＝補足。',
   },
   {
-    id: 'shiba_kokugo_26', subj: 'kokugo', diff: 'standard',
+    id: 'shiba_kokugo_26', subj: 'kokugo', diff: 'basic',
     passage: '「全然おいしい」と言う人が増えている。もともと「全然」は、「全然ない」のように、打ち消しの言葉と結びつくのが正しいとされてきた。だが、明治時代の小説には「全然よい」のような使い方も見られ、肯定の言葉と結びつく例は、昔からあったことがわかる。ことばの正しさは、辞書が決めるのではなく、人々の使い方の積み重ねによって、少しずつ変わっていくものなのだ。ただし、変化をそのまま受け入れるかどうかは、場面による。手紙や発表では、相手に誤解されないよう、なじみのある使い方を選ぶほうがよい。',
     q: '【国語㉖】本文から読み取れることとして正しいものを選びなさい。',
     choices: ['明治時代の小説に、「全然」を肯定の言葉と使う例がある', '明治より前は、打ち消しとだけ使っていた', '辞書が使い方を決めて、人々に広めた', '手紙では、新しい使い方を選ぶほうがよい'],
@@ -954,7 +954,7 @@ const SPECS: Spec[] = [
     tip: '足が軽い＝心が軽い。',
   },
   {
-    id: 'shiba_rika_01', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_01', subj: 'rika', diff: 'advanced',
     q: '【理科①】長さ100cmの軽い棒の、左端から40cmの点を支えます。左端に90gのおもりをつるしたとき、右端に何gのおもりをつるせばつり合いますか。',
     answer: '60g',
     hint: 'てこは、「おもりの重さ×支点からのきょり」が左右で等しいときにつり合います。',
@@ -980,7 +980,7 @@ const SPECS: Spec[] = [
     tip: '動滑車：力は1/2、引く長さは2倍。',
   },
   {
-    id: 'shiba_rika_03', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_03', subj: 'rika', diff: 'advanced',
     q: '【理科③】自然の長さが12cmのばねに20gのおもりをつるすと、ばねの長さは16cmになりました。このばねに35gのおもりをつるすと、ばねの長さは何cmになりますか。',
     answer: '19cm',
     hint: 'ばねののびは、おもりの重さに比例します。まず、1gあたりののびを出しましょう。',
@@ -993,7 +993,7 @@ const SPECS: Spec[] = [
     tip: 'ばねの長さ＝自然の長さ＋のび。',
   },
   {
-    id: 'shiba_rika_04', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_04', subj: 'rika', diff: 'advanced',
     q: '【理科④】体積50cm³、空気中での重さが140gの金属を、水中にすべてしずめて、ばねばかりでつるします。ばねばかりは何gを示しますか。水1cm³の重さは1gとします。',
     answer: '90g',
     hint: '水中の物体には、おしのけた水の重さと同じ大きさの、上向きの力（浮力）がはたらきます。',
@@ -1006,7 +1006,7 @@ const SPECS: Spec[] = [
     tip: 'ばねばかりの値＝空気中の重さ−浮力。',
   },
   {
-    id: 'shiba_rika_05', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_05', subj: 'rika', diff: 'advanced',
     q: '【理科⑤】重さ60g、体積100cm³の木片を、水にうかべました。水面より下にある部分の体積は何cm³ですか。',
     answer: '60cm³',
     hint: '浮いているとき、浮力の大きさは、物体の重さと同じです。',
@@ -1072,7 +1072,7 @@ const SPECS: Spec[] = [
     tip: '水にとけにくい→水上置換法。',
   },
   {
-    id: 'shiba_rika_10', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_10', subj: 'rika', diff: 'basic',
     q: '【理科⑩】石灰水にBTB液を加えると、何色になりますか。',
     choices: ['黄色', '緑色', '青色', '赤色'],
     answer: '青色',
@@ -1128,7 +1128,7 @@ const SPECS: Spec[] = [
     tip: '道管＝水の通り道。',
   },
   {
-    id: 'shiba_rika_14', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_14', subj: 'rika', diff: 'basic',
     q: '【理科⑭】アサガオの葉の一部をアルミはくでおおい、一日日光に当てたあと、ヨウ素液をつけました。アルミはくでおおっていた部分の変化として正しいものを選びなさい。',
     choices: ['青むらさき色になる', '変化しない', '赤くなる', '黄色になる'],
     answer: '変化しない',
@@ -1184,7 +1184,7 @@ const SPECS: Spec[] = [
     tip: '肺のあと：酸素が多い。全身のあと：二酸化炭素が多い。',
   },
   {
-    id: 'shiba_rika_18', subj: 'rika', diff: 'standard',
+    id: 'shiba_rika_18', subj: 'rika', diff: 'basic',
     q: '【理科⑱】ご飯つぶをよくかんでいると、あまく感じてきます。その理由として最も適切なものを選びなさい。',
     choices: ['だ液のはたらきで、デンプンが別のものに変わるから', 'だ液のはたらきで、ご飯が水に変わるから', 'かむことで、ご飯に熱が加わるから', 'かむことで、ご飯の体積が減るから'],
     answer: 'だ液のはたらきで、デンプンが別のものに変わるから',
@@ -1216,7 +1216,7 @@ const SPECS: Spec[] = [
     q: '【理科⑳】夏の大三角をつくる星の1つ、デネブをふくむ星座を選びなさい。',
     choices: ['こと座', 'わし座', 'はくちょう座', 'さそり座'],
     answer: 'はくちょう座',
-    hint: '夏の大三角は、こと座・わし座・はくちょう座の1等星でつくられます。',
+    hint: '夏の大三角は、ベガ・アルタイル・デネブの3つの1等星を結んでできます。',
     ask: 'デネブをふくむ星座。',
     why: '夏の大三角は、こと座のベガ、わし座のアルタイル、はくちょう座のデネブの3つの星を結んだ三角形。',
     steps: ['夏の大三角の3つの星は、ベガ・アルタイル・デネブ。', 'ベガはこと座、アルタイルはわし座。', 'デネブはのこりのはくちょう座。'],
@@ -1390,7 +1390,7 @@ const SPECS: Spec[] = [
     tip: '食べるほうは増え、食べられるほうは減る。',
   },
   {
-    id: 'shiba_shakai_01', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_01', subj: 'shakai', diff: 'basic',
     q: '【社会①】流域面積（その川に雨がふると流れこむ範囲の面積）が日本でいちばん広い川を選びなさい。',
     choices: ['信濃川', '利根川', '石狩川', '北上川'],
     answer: '利根川',
@@ -1446,7 +1446,7 @@ const SPECS: Spec[] = [
     tip: '太平洋側：夏に雨、冬は晴れ。',
   },
   {
-    id: 'shiba_shakai_05', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_05', subj: 'shakai', diff: 'advanced',
     q: '【社会⑤】三陸沖は、寒流の親潮と暖流の黒潮がぶつかるため、よい漁場になっています。この2つの海流がぶつかる場所を何といいますか。',
     choices: ['潮目', '海溝', '大陸だな', '三角州'],
     answer: '潮目',
@@ -1557,7 +1557,7 @@ const SPECS: Spec[] = [
     tip: '日本の森林：国土の約3分の2。',
   },
   {
-    id: 'shiba_shakai_13', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_13', subj: 'shakai', diff: 'basic',
     q: '【社会⑬】アメリカ人のモースが発見した、東京都にある縄文時代の遺跡を選びなさい。',
     choices: ['大森貝塚', '三内丸山遺跡', '吉野ヶ里遺跡', '登呂遺跡'],
     answer: '大森貝塚',
@@ -1613,7 +1613,7 @@ const SPECS: Spec[] = [
     tip: '聖武＝大仏、桓武＝平安京。',
   },
   {
-    id: 'shiba_shakai_17', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_17', subj: 'shakai', diff: 'advanced',
     q: '【社会⑰】「この世をば わが世とぞ思ふ 望月の かけたることも なしと思へば」とよんだ人物を選びなさい。',
     choices: ['藤原道長', '平清盛', '源頼朝', '足利尊氏'],
     answer: '藤原道長',
@@ -1655,7 +1655,7 @@ const SPECS: Spec[] = [
     tip: '金閣＝義満、銀閣＝義政。',
   },
   {
-    id: 'shiba_shakai_20', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_20', subj: 'shakai', diff: 'advanced',
     q: '【社会⑳】織田信長・徳川家康の連合軍が、鉄砲を使って武田軍をやぶった戦いを選びなさい。',
     choices: ['長篠の戦い', '関ヶ原の戦い', '桶狭間の戦い', '壇ノ浦の戦い'],
     answer: '長篠の戦い',
@@ -1683,7 +1683,7 @@ const SPECS: Spec[] = [
     tip: '出島＝オランダ、唐人屋敷＝中国。',
   },
   {
-    id: 'shiba_shakai_22', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_22', subj: 'shakai', diff: 'advanced',
     q: '【社会㉒】江戸時代の寛政の改革をおこなった老中を選びなさい。',
     choices: ['松平定信', '水野忠邦', '徳川吉宗', '田沼意次'],
     answer: '松平定信',
@@ -1711,7 +1711,7 @@ const SPECS: Spec[] = [
     tip: '伊藤博文＝憲法・初代首相、板垣＝自由民権。',
   },
   {
-    id: 'shiba_shakai_24', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_24', subj: 'shakai', diff: 'advanced',
     q: '【社会㉔】日清戦争のあと、1895年に結ばれた講和条約を選びなさい。',
     choices: ['下関条約', 'ポーツマス条約', '日米和親条約', 'サンフランシスコ平和条約'],
     answer: '下関条約',
@@ -1795,7 +1795,7 @@ const SPECS: Spec[] = [
     tip: '国連本部＝ニューヨーク。',
   },
   {
-    id: 'shiba_shakai_30', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_30', subj: 'shakai', diff: 'advanced',
     q: '【社会㉚】日本の「非核三原則」に含まれないものを選びなさい。',
     choices: ['使わず', '持たず', 'つくらず', '持ちこませず'],
     answer: '使わず',
@@ -1809,7 +1809,7 @@ const SPECS: Spec[] = [
     tip: '持たず・つくらず・持ちこませず。',
   },
   {
-    id: 'shiba_shakai_31', subj: 'shakai', diff: 'standard',
+    id: 'shiba_shakai_31', subj: 'shakai', diff: 'advanced',
     q: '【社会㉛】地方裁判所の判決に不服があるとき、次に裁判を求める（控訴する）裁判所を選びなさい。',
     choices: ['高等裁判所', '最高裁判所', '家庭裁判所', '簡易裁判所'],
     answer: '高等裁判所',
