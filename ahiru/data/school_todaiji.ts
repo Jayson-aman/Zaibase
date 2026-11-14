@@ -81,7 +81,7 @@ function mk(s: Spec): Question {
 const SPECS: Spec[] = [
   // ===== 算数（32問） =====
   {
-    id: 'todaiji_sansu_01', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_01', subj: 'sansu', diff: 'basic',
     q: '【算数①】次の計算をしなさい。 1.25×3.2×2.5',
     answer: '10',
     hint: '3.2 を 0.8×4 に分けると、かけて 1 になる組が見つかります。',
@@ -94,7 +94,7 @@ const SPECS: Spec[] = [
     tip: 'かけて 1 や 10 や 100 になる組をさがす。',
   },
   {
-    id: 'todaiji_sansu_02', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_02', subj: 'sansu', diff: 'standard',
     q: '【算数②】次の計算をしなさい。 1/2＋1/6＋1/12＋1/20＋1/30',
     answer: '5/6',
     hint: '分母は 2×1、3×2、4×3… と並んでいます。1/6 は 1/2−1/3 と書けます。',
@@ -107,7 +107,7 @@ const SPECS: Spec[] = [
     tip: '1/(□×(□＋1))は2つの分数の差に分ける。',
   },
   {
-    id: 'todaiji_sansu_03', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_03', subj: 'sansu', diff: 'standard',
     q: '【算数③】360 の約数は全部で何個ありますか。',
     answer: '24個',
     hint: '360 を素数のかけ算に分け、同じ素数を何個使うかの選び方を数えましょう。',
@@ -120,7 +120,7 @@ const SPECS: Spec[] = [
     tip: '約数の個数は「使う個数の選び方」の積。',
   },
   {
-    id: 'todaiji_sansu_04', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_04', subj: 'sansu', diff: 'advanced',
     q: '【算数④】たて252m、よこ180mの長方形の土地に、同じ大きさの正方形のタイルを、すき間なく、切らずにしきつめます。できるだけ大きなタイルを使うとき、タイルは全部で何枚必要ですか。',
     answer: '35枚',
     hint: 'まず、たてとよこをわり切れる最大の長さを求めましょう。',
@@ -133,7 +133,7 @@ const SPECS: Spec[] = [
     tip: 'ぴったり分けるなら最大公約数。',
   },
   {
-    id: 'todaiji_sansu_05', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_05', subj: 'sansu', diff: 'basic',
     q: '【算数⑤】8%の食塩水200gに、3%の食塩水を混ぜて5%の食塩水を作ります。3%の食塩水は何g混ぜればよいですか。',
     answer: '300g',
     hint: '5%との差を、それぞれ考えましょう（てんびんの考え方）。',
@@ -146,7 +146,7 @@ const SPECS: Spec[] = [
     tip: 'てんびんは「差の逆比」が重さの比。',
   },
   {
-    id: 'todaiji_sansu_06', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_06', subj: 'sansu', diff: 'standard',
     q: '【算数⑥】1個80円のみかんと1個120円のりんごを合わせて25個買ったところ、代金は合計2400円でした。りんごは何個買いましたか。',
     answer: '10個',
     hint: '25個ぜんぶがみかんだったら、代金はいくらになるか考えましょう。',
@@ -159,7 +159,7 @@ const SPECS: Spec[] = [
     tip: 'ぜんぶ安いほうと仮定して、差を1個ぶんの差でわる。',
   },
   {
-    id: 'todaiji_sansu_07', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_07', subj: 'sansu', diff: 'standard',
     q: '【算数⑦】18km はなれたA町とB町から、兄はA町から時速6km、弟はB町から時速4kmで、同時に向かい合って歩き出しました。2人が出会うのは何時間何分後ですか。',
     answer: '1時間48分',
     hint: '向かい合うときは、1時間に近づく道のりを考えます。',
@@ -172,7 +172,7 @@ const SPECS: Spec[] = [
     tip: '出会い算は「きょり÷速さの和」。',
   },
   {
-    id: 'todaiji_sansu_08', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_08', subj: 'sansu', diff: 'advanced',
     q: '【算数⑧】静水での速さが時速12kmの船が、流れの速さが時速3kmの川を15km上ります。上りにかかる時間は何時間何分ですか。',
     answer: '1時間40分',
     hint: '上りは流れにさからうので、船の速さは流れの分だけおそくなります。',
@@ -185,7 +185,7 @@ const SPECS: Spec[] = [
     tip: '上り＝静水−流れ、下り＝静水＋流れ。',
   },
   {
-    id: 'todaiji_sansu_09', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_09', subj: 'sansu', diff: 'basic',
     q: '【算数⑨】長さ150mの電車が、秒速25mで長さ600mのトンネルを通ります。電車がトンネルの中に完全にかくれている時間は何秒間ですか。',
     answer: '18秒',
     hint: '電車の先頭と最後尾が、それぞれどこにあるときかを考えましょう。',
@@ -198,7 +198,7 @@ const SPECS: Spec[] = [
     tip: 'かくれている間は、トンネルの長さ−電車の長さ。',
   },
   {
-    id: 'todaiji_sansu_10', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_10', subj: 'sansu', diff: 'standard',
     q: '【算数⑩】ある仕事を終えるのに、Aさん1人では12日、Bさん1人では20日かかります。この仕事を2人で3日間続けたあと、残りをBさんだけで行いました。Bさんだけで働いたのは何日間ですか。',
     answer: '12日',
     hint: '仕事全体を、12と20の最小公倍数の「60」とおいてみましょう。',
@@ -211,7 +211,7 @@ const SPECS: Spec[] = [
     tip: '仕事算は全体を最小公倍数でおく。',
   },
   {
-    id: 'todaiji_sansu_11', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_11', subj: 'sansu', diff: 'standard',
     q: '【算数⑪】1、2、3、4、5の数字が書かれたカードが1枚ずつあります。このうち3枚を並べて、3けたの奇数を作ります。全部で何通りできますか。',
     answer: '36通り',
     hint: '奇数は、一の位が奇数であることから決めましょう。',
@@ -224,7 +224,7 @@ const SPECS: Spec[] = [
     tip: '条件のある位から先に決める。',
   },
   {
-    id: 'todaiji_sansu_12', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_12', subj: 'sansu', diff: 'advanced',
     q: '【算数⑫】たて3区画、よこ4区画の碁盤の目の道があります。左下のAから右上のBまで、右か上にだけ進んで行く最短の道順は何通りありますか。',
     answer: '35通り',
     hint: '各交差点まで来る道順の数を、左と下の交差点の数をたして順に書きこんでいきましょう。',
@@ -237,7 +237,7 @@ const SPECS: Spec[] = [
     tip: '道順は「左＋下」の書きこみ表。',
   },
   {
-    id: 'todaiji_sansu_13', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_13', subj: 'sansu', diff: 'basic',
     q: '【算数⑬】2、5、8、11、… と、ある決まりで数が並んでいます。50番目の数はいくつですか。',
     answer: '149',
     hint: 'となりあう数の差はいつも同じです。1番目から何回ふえたかを考えましょう。',
@@ -250,7 +250,7 @@ const SPECS: Spec[] = [
     tip: '□番目＝はじめの数＋差×(□−1)。',
   },
   {
-    id: 'todaiji_sansu_14', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_14', subj: 'sansu', diff: 'standard',
     q: '【算数⑭】長方形ABCDで、AB＝8cm、BC＝12cm です。辺BC上にBE＝4cmとなる点E、辺CD上にCF＝4cmとなる点Fをとります。三角形AEFの面積は何cm²ですか。',
     answer: '40cm²',
     hint: '長方形から、まわりの3つの直角三角形をひきましょう。',
@@ -263,7 +263,7 @@ const SPECS: Spec[] = [
     tip: 'まわりの三角形をひいて求める。',
   },
   {
-    id: 'todaiji_sansu_15', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_15', subj: 'sansu', diff: 'standard',
     q: '【算数⑮】中心がO、半径が10cmで中心角が90°のおうぎ形OABがあります。弦ABと弧ABで囲まれた部分の面積は何cm²ですか。ただし、円周率は3.14とします。',
     answer: '28.5cm²',
     hint: 'おうぎ形から、直角二等辺三角形OABをひきます。',
@@ -276,7 +276,7 @@ const SPECS: Spec[] = [
     tip: '弓形＝おうぎ形−三角形。',
   },
   {
-    id: 'todaiji_sansu_16', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_16', subj: 'sansu', diff: 'advanced',
     q: '【算数⑯】1辺が1cmの立方体を64個すきまなくならべて、1辺が4cmの大きな立方体を作り、その表面全部に色をぬります。そのあとばらばらにしたとき、ちょうど1面だけ色がぬられた小さな立方体は何個ありますか。',
     answer: '24個',
     hint: '大きな立方体の1つの面の、まん中の部分を考えましょう。',
@@ -289,7 +289,7 @@ const SPECS: Spec[] = [
     tip: '1面だけは「面のまん中×6」。',
   },
   {
-    id: 'todaiji_sansu_17', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_17', subj: 'sansu', diff: 'basic',
     q: '【算数⑰】底面が30cm×40cmの直方体の水そうに、深さ15cmまで水が入っています。この中に石をしずめたところ、水面の高さが18cmになりました。石の体積は何cm³ですか。ただし、石は完全に水の中にしずんでいます。',
     answer: '3600cm³',
     hint: '水面が上がった部分の体積が、石の体積と等しくなります。',
@@ -302,7 +302,7 @@ const SPECS: Spec[] = [
     tip: '石の体積＝底面積×上がった高さ。',
   },
   {
-    id: 'todaiji_sansu_18', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_18', subj: 'sansu', diff: 'standard',
     q: '【算数⑱】兄と弟の持っているお金の比は 7：3 です。兄が弟に300円わたしたところ、2人のお金の比は 3：2 になりました。兄がはじめに持っていたお金は何円ですか。',
     answer: '2100円',
     hint: '2人の合計は変わりません。合計をそろえて比を見くらべましょう。',
@@ -315,7 +315,7 @@ const SPECS: Spec[] = [
     tip: '比の問題は「変わらない量」をそろえる。',
   },
   {
-    id: 'todaiji_sansu_19', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_19', subj: 'sansu', diff: 'standard',
     q: '【算数⑲】現在、父は42才、子は12才です。父の年れいが子の年れいのちょうど3倍になるのは、今から何年後ですか。',
     answer: '3年後',
     hint: '年れいの差は、何年たっても変わりません。',
@@ -328,7 +328,7 @@ const SPECS: Spec[] = [
     tip: '年れい算は「差が一定」。',
   },
   {
-    id: 'todaiji_sansu_20', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_20', subj: 'sansu', diff: 'advanced',
     q: '【算数⑳】原価2000円の品物に、3割の利益を見こんで定価をつけ、その定価の1割引きで売りました。このとき利益は何円ですか。',
     answer: '340円',
     hint: '定価をまず求め、そこから売り値を出します。',
@@ -341,7 +341,7 @@ const SPECS: Spec[] = [
     tip: '割合は「何をもとにするか」で変わる。',
   },
   {
-    id: 'todaiji_sansu_21', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_21', subj: 'sansu', diff: 'basic',
     q: '【算数㉑】ある道のりを、行きは時速6km、帰りは時速4kmで往復しました。往復の平均の速さは時速何kmですか。ただし、片道は12kmとします。',
     answer: '時速4.8km',
     hint: '往復の道のりと、かかった時間をそれぞれ求めましょう。',
@@ -354,7 +354,7 @@ const SPECS: Spec[] = [
     tip: '平均の速さ＝全体の道のり÷全体の時間。',
   },
   {
-    id: 'todaiji_sansu_22', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_22', subj: 'sansu', diff: 'standard',
     q: '【算数㉒】3時40分のとき、時計の長針と短針がつくる角のうち、小さいほうの角は何度ですか。',
     answer: '130度',
     hint: '長針は1分で6度、短針は1分で0.5度進みます。12の位置を0度として、それぞれの針の位置を考えましょう。',
@@ -367,7 +367,7 @@ const SPECS: Spec[] = [
     tip: '長針は1分で6度、短針は1分で0.5度。',
   },
   {
-    id: 'todaiji_sansu_23', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_23', subj: 'sansu', diff: 'standard',
     q: '【算数㉓】100から200までの整数(100と200をふくむ)のうち、7でわり切れる数は何個ありますか。',
     answer: '14個',
     hint: '100以上の最小の7の倍数と、200以下の最大の7の倍数を求めましょう。',
@@ -380,7 +380,7 @@ const SPECS: Spec[] = [
     tip: '倍数の個数は□の範囲の個数。',
   },
   {
-    id: 'todaiji_sansu_24', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_24', subj: 'sansu', diff: 'advanced',
     q: '【算数㉔】1から100までの整数のうち、3でも5でもわり切れない数は何個ありますか。',
     answer: '53個',
     hint: '3の倍数、5の倍数、その両方(15の倍数)の個数を、順に求めましょう。',
@@ -393,7 +393,7 @@ const SPECS: Spec[] = [
     tip: '「または」は、たして重なりを引く。',
   },
   {
-    id: 'todaiji_sansu_25', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_25', subj: 'sansu', diff: 'basic',
     q: '【算数㉕】7でわると3あまり、5でわると2あまる2けたの整数のうち、最も大きい数はいくつですか。',
     answer: '87',
     hint: '7でわって3あまる数を小さい順に書き、5でわった余りを調べましょう。',
@@ -406,7 +406,7 @@ const SPECS: Spec[] = [
     tip: 'あまりの問題は最小公倍数ごとに見つかる。',
   },
   {
-    id: 'todaiji_sansu_26', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_26', subj: 'sansu', diff: 'standard',
     q: '【算数㉖】1、2、3、4の4枚のカードをすべて使って、4けたの整数を作ります。小さいほうから数えて10番目の数はいくつですか。',
     answer: '2341',
     hint: '千の位が1の数が何個あるかを、先に数えましょう。',
@@ -419,7 +419,7 @@ const SPECS: Spec[] = [
     tip: '辞書式に、上の位から数える。',
   },
   {
-    id: 'todaiji_sansu_27', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_27', subj: 'sansu', diff: 'standard',
     q: '【算数㉗】8チームを4チームずつ2つのグループに分け、各グループで総当たり戦(どのチームとも1回ずつ試合)を行います。そのあと、各グループ1位どうしで決勝戦を1試合行います。試合は全部で何試合ですか。',
     answer: '13試合',
     hint: '4チームの総当たりが何試合かを、まず求めましょう。',
@@ -432,7 +432,7 @@ const SPECS: Spec[] = [
     tip: '総当たり＝チーム数×(チーム数−1)÷2。',
   },
   {
-    id: 'todaiji_sansu_28', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_28', subj: 'sansu', diff: 'advanced',
     q: '【算数㉘】周囲が240mの池のまわりに、6mおきに木が植えてあります。これを8mおきに植えかえるとき、木を動かさなくてよい位置は何か所ありますか。ただし、はじめの木の位置は同じ場所から数えるものとします。',
     answer: '10か所',
     hint: '6mおきの位置と8mおきの位置が重なる間かくを考えましょう。',
@@ -445,7 +445,7 @@ const SPECS: Spec[] = [
     tip: '池のまわりは、間かくの数＝木の数。',
   },
   {
-    id: 'todaiji_sansu_29', subj: 'sansu', diff: 'basic',
+    id: 'todaijichu_sansu_29', subj: 'sansu', diff: 'basic',
     q: '【算数㉙】子どもたちにあめを配ります。1人に5個ずつ配ると12個あまり、7個ずつ配ると6個たりません。あめは全部で何個ありますか。',
     answer: '57個',
     hint: '配る個数を2個ふやすと、必要なあめがどれだけふえるかを考えましょう。',
@@ -458,7 +458,7 @@ const SPECS: Spec[] = [
     tip: '過不足算は(あまり＋ふそく)÷1人の差。',
   },
   {
-    id: 'todaiji_sansu_30', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_30', subj: 'sansu', diff: 'standard',
     q: '【算数㉚】空の水そうに、A管だけで水を入れると24分でいっぱいになります。A管は毎分6Lの水を入れます。A管とB管を同時に使うと8分でいっぱいになります。B管は毎分何Lの水を入れますか。',
     answer: '毎分12L',
     hint: '水そうの容積を、A管の量から求めましょう。',
@@ -471,7 +471,7 @@ const SPECS: Spec[] = [
     tip: '水そうの問題は、全体の量を先に出す。',
   },
   {
-    id: 'todaiji_sansu_31', subj: 'sansu', diff: 'standard',
+    id: 'todaijichu_sansu_31', subj: 'sansu', diff: 'standard',
     q: '【算数㉛】正五角形ABCDEで、対角線ACを引きます。角ACDの大きさは何度ですか。',
     answer: '72度',
     hint: '正五角形の1つの内角は何度か、まず求めましょう。三角形ABCは二等辺三角形です。',
@@ -484,7 +484,7 @@ const SPECS: Spec[] = [
     tip: '正多角形は、1つの内角から調べる。',
   },
   {
-    id: 'todaiji_sansu_32', subj: 'sansu', diff: 'advanced',
+    id: 'todaijichu_sansu_32', subj: 'sansu', diff: 'advanced',
     q: '【算数㉜】1辺が6cmの立方体の1つの頂点(角)から、1辺が2cmの小さな立方体を切り取ります。残った立体の表面積は何cm²ですか。',
     answer: '216cm²',
     hint: '切り取ったあとに、なくなる面積と、新しく出てくる面積を比べましょう。',
@@ -498,7 +498,7 @@ const SPECS: Spec[] = [
   },
   // ===== 国語（32問） =====
   {
-    id: 'todaiji_kokugo_01', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_01', subj: 'kokugo', diff: 'basic',
     q: '【国語①】文章を読んで、問いに答えなさい。\n傍線部「このようす」が指すものとして最も適切なものを選びなさい。（「このようす」は第3文の「しかし、このようすを〜」の部分です）',
     passage: '奈良の公園には、たくさんのシカがいる。シカは、観光客の手にあるせんべいを見つけると、すぐに近づいてくる。しかし、このようすを「人になれた動物」とだけ見るのは正しくない。シカは野生の動物であり、人が決めたとおりには動かない。実際、せんべいを持たない人には見向きもしないシカも多い。人とシカが長くいっしょにくらしてこられたのは、人がシカを「かわいいから」と思うだけでなく、「相手には相手のくらしがある」と考え、きょりを保つくふうを重ねてきたからだ。近づきすぎれば、おたがいにけがをする。大切なのは、親しくなることよりも、ちがいを知って尊重することなのである。',
     choices: ['シカが観光客の持つせんべいに近づいてくるようす', 'シカが人を見て逃げるようす', '観光客がシカに近づきすぎるようす', 'シカが人間の言うとおりに動くようす'],
@@ -513,7 +513,7 @@ const SPECS: Spec[] = [
     tip: '指示語は、直前から探して入れかえて確かめる。',
   },
   {
-    id: 'todaiji_kokugo_02', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_02', subj: 'kokugo', diff: 'standard',
     q: '【国語②】文章を読んで、問いに答えなさい。\n筆者が最も言いたいことは何ですか。',
     passage: '奈良の公園には、たくさんのシカがいる。シカは、観光客の手にあるせんべいを見つけると、すぐに近づいてくる。しかし、このようすを「人になれた動物」とだけ見るのは正しくない。シカは野生の動物であり、人が決めたとおりには動かない。実際、せんべいを持たない人には見向きもしないシカも多い。人とシカが長くいっしょにくらしてこられたのは、人がシカを「かわいいから」と思うだけでなく、「相手には相手のくらしがある」と考え、きょりを保つくふうを重ねてきたからだ。近づきすぎれば、おたがいにけがをする。大切なのは、親しくなることよりも、ちがいを知って尊重することなのである。',
     choices: ['人とシカが親しくなることを最も大切にするべきだ', '野生のシカとはきょりを保ち、ちがいを知って尊重することが大切だ', 'シカに自由にえさをやって親しくなるべきだ', 'シカは人になれているので危険はない'],
@@ -528,7 +528,7 @@ const SPECS: Spec[] = [
     tip: '「Aよりも B」はBが主張。',
   },
   {
-    id: 'todaiji_kokugo_03', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_03', subj: 'kokugo', diff: 'standard',
     q: '【国語③】文章を読んで、問いに答えなさい。\n人とシカが長くいっしょにくらしてこられたのは、なぜですか。40字以内で説明しなさい。',
     passage: '奈良の公園には、たくさんのシカがいる。シカは、観光客の手にあるせんべいを見つけると、すぐに近づいてくる。しかし、このようすを「人になれた動物」とだけ見るのは正しくない。シカは野生の動物であり、人が決めたとおりには動かない。実際、せんべいを持たない人には見向きもしないシカも多い。人とシカが長くいっしょにくらしてこられたのは、人がシカを「かわいいから」と思うだけでなく、「相手には相手のくらしがある」と考え、きょりを保つくふうを重ねてきたからだ。近づきすぎれば、おたがいにけがをする。大切なのは、親しくなることよりも、ちがいを知って尊重することなのである。',
     answer: '相手にも相手のくらしがあると考え、きょりを保つくふうを重ねてきたから。',
@@ -542,7 +542,7 @@ const SPECS: Spec[] = [
     tip: '理由は「〜から」でしめくくる。',
   },
   {
-    id: 'todaiji_kokugo_04', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_04', subj: 'kokugo', diff: 'advanced',
     q: '【国語④】文章を読んで、問いに答えなさい。\n傍線部「しぶしぶ」から読み取れる「ぼく」の気持ちとして最も適切なものを選びなさい。（傍線部は「ぼくはしぶしぶ、もう一度板に向かった。」）',
     passage: '祖父の作業場には、木のにおいがこもっていた。ぼくは、かんなくずの山をぼんやり見つめていた。夏休みの宿題の本立てが、どうしてもまっすぐにならない。「もう、やめる」そう言ってのこぎりを置くと、祖父は何も言わずに、ぼくが切った板を作業台にのせた。板のはしを、指の腹でゆっくりなでる。「ここが、ほんの少し高い」それだけ言って、かんなをぼくに返した。ぼくはしぶしぶ、もう一度板に向かった。かんなを引くたびに、うすい木のかわが、りんごの皮のように長くのびた。ふと、手のひらにつたわる板の感じが変わったことに気づいた。さっきまでざらついていたはずの面が、水の上のようになめらかだった。祖父はまだ何も言わない。けれど、ひげの下の口もとが、わずかにゆるんだように見えた。',
     choices: ['やる気は出ないが、もう一度取り組むことにした', '祖父に腹を立てて反発している', 'すぐに作業を終わらせたいと急いでいる', '板を切るのが楽しみでたまらない'],
@@ -557,7 +557,7 @@ const SPECS: Spec[] = [
     tip: '「しぶしぶ」＝気が進まないがやる。',
   },
   {
-    id: 'todaiji_kokugo_05', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_05', subj: 'kokugo', diff: 'basic',
     q: '【国語⑤】文章を読んで、問いに答えなさい。\n祖父がほとんど何も言わず、板のはしを指の腹でなでただけだったのは、なぜですか。最も適切なものを選びなさい。',
     passage: '祖父の作業場には、木のにおいがこもっていた。ぼくは、かんなくずの山をぼんやり見つめていた。夏休みの宿題の本立てが、どうしてもまっすぐにならない。「もう、やめる」そう言ってのこぎりを置くと、祖父は何も言わずに、ぼくが切った板を作業台にのせた。板のはしを、指の腹でゆっくりなでる。「ここが、ほんの少し高い」それだけ言って、かんなをぼくに返した。ぼくはしぶしぶ、もう一度板に向かった。かんなを引くたびに、うすい木のかわが、りんごの皮のように長くのびた。ふと、手のひらにつたわる板の感じが変わったことに気づいた。さっきまでざらついていたはずの面が、水の上のようになめらかだった。祖父はまだ何も言わない。けれど、ひげの下の口もとが、わずかにゆるんだように見えた。',
     choices: ['どこが悪いかを教えながらも、ぼく自身に気づかせようとしているから', 'ぼくの作った板にあきれはてているから', 'いそがしくて、ぼくの相手をしていられないから', 'ぼくが本立てを作ることに反対しているから'],
@@ -572,7 +572,7 @@ const SPECS: Spec[] = [
     tip: '登場人物の行動は、場面全体から意図を考える。',
   },
   {
-    id: 'todaiji_kokugo_06', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_06', subj: 'kokugo', diff: 'standard',
     q: '【国語⑥】文章を読んで、問いに答えなさい。\n最後の「口もとが、わずかにゆるんだように見えた」から読み取れる祖父の気持ちとして、最も適切なものを選びなさい。',
     passage: '祖父の作業場には、木のにおいがこもっていた。ぼくは、かんなくずの山をぼんやり見つめていた。夏休みの宿題の本立てが、どうしてもまっすぐにならない。「もう、やめる」そう言ってのこぎりを置くと、祖父は何も言わずに、ぼくが切った板を作業台にのせた。板のはしを、指の腹でゆっくりなでる。「ここが、ほんの少し高い」それだけ言って、かんなをぼくに返した。ぼくはしぶしぶ、もう一度板に向かった。かんなを引くたびに、うすい木のかわが、りんごの皮のように長くのびた。ふと、手のひらにつたわる板の感じが変わったことに気づいた。さっきまでざらついていたはずの面が、水の上のようになめらかだった。祖父はまだ何も言わない。けれど、ひげの下の口もとが、わずかにゆるんだように見えた。',
     choices: ['ぼくの上達を静かによろこんでいる', 'ぼくの失敗を笑っている', '作業にあきている', 'ぼくに怒りをおさえている'],
@@ -587,7 +587,7 @@ const SPECS: Spec[] = [
     tip: 'しぐさ＋直前のできごとで気持ちを読む。',
   },
   {
-    id: 'todaiji_kokugo_07', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_07', subj: 'kokugo', diff: 'standard',
     q: '【国語⑦】文章を読んで、問いに答えなさい。\n傍線部「そこで」の働きとして最も適切なものを選びなさい。（傍線部は「そこで、だれがはかっても同じ結果が出るように」）',
     passage: 'ものさしは、長さをはかる道具である。だが、はかるためには、まず「何を一つぶんとするか」を決めておかなければならない。昔は、人のうでの長さや足のサイズが基準だった。しかし、人によって長さがちがうため、同じ「三つぶん」でも、場所がちがえば長さが変わってしまった。そこで、だれがはかっても同じ結果が出るように、共通の基準が定められた。基準がそろうことで、遠くはなれた人どうしでも、おたがいの数字を信じて取引ができるようになった。数字は、ただ長さを表すだけではなく、人と人との信頼を支えるしくみでもあるのだ。',
     choices: ['前の内容を受けて、その結果や対策を述べる', '前と反対のことを述べる', '前の内容につけ加える', '話題を変える'],
@@ -602,7 +602,7 @@ const SPECS: Spec[] = [
     tip: '「そこで」＝前を受けて対策・結果。',
   },
   {
-    id: 'todaiji_kokugo_08', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_08', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑧】文章を読んで、問いに答えなさい。\n昔の基準が不便だった理由として、最も適切なものを選びなさい。',
     passage: 'ものさしは、長さをはかる道具である。だが、はかるためには、まず「何を一つぶんとするか」を決めておかなければならない。昔は、人のうでの長さや足のサイズが基準だった。しかし、人によって長さがちがうため、同じ「三つぶん」でも、場所がちがえば長さが変わってしまった。そこで、だれがはかっても同じ結果が出るように、共通の基準が定められた。基準がそろうことで、遠くはなれた人どうしでも、おたがいの数字を信じて取引ができるようになった。数字は、ただ長さを表すだけではなく、人と人との信頼を支えるしくみでもあるのだ。',
     choices: ['人によって長さがちがい、同じ「三つぶん」でも長さが変わってしまったから', '基準が長すぎて使えなかったから', '基準そのものがなかったから', '数字がまだなかったから'],
@@ -617,7 +617,7 @@ const SPECS: Spec[] = [
     tip: '「しかし」の後ろに問題点がくる。',
   },
   {
-    id: 'todaiji_kokugo_09', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_09', subj: 'kokugo', diff: 'basic',
     q: '【国語⑨】文章を読んで、問いに答えなさい。\n筆者の考えに最も合うものを選びなさい。',
     passage: 'ものさしは、長さをはかる道具である。だが、はかるためには、まず「何を一つぶんとするか」を決めておかなければならない。昔は、人のうでの長さや足のサイズが基準だった。しかし、人によって長さがちがうため、同じ「三つぶん」でも、場所がちがえば長さが変わってしまった。そこで、だれがはかっても同じ結果が出るように、共通の基準が定められた。基準がそろうことで、遠くはなれた人どうしでも、おたがいの数字を信じて取引ができるようになった。数字は、ただ長さを表すだけではなく、人と人との信頼を支えるしくみでもあるのだ。',
     choices: ['共通の基準は、長さを表すだけでなく、人と人との信頼を支えている', 'ものさしは、昔のものが最も正確だ', '数字は、人の気持ちを表せない', '長さは、人によってちがってよい'],
@@ -632,7 +632,7 @@ const SPECS: Spec[] = [
     tip: '筆者の主張は、最後の段落に出やすい。',
   },
   {
-    id: 'todaiji_kokugo_10', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_10', subj: 'kokugo', diff: 'standard',
     q: '【国語⑩】文章を読んで、問いに答えなさい。\n傍線部「むだに見えた時間」について、筆者はどのように考えるようになりましたか。最も適切なものを選びなさい。',
     passage: 'バスを待つ時間は、むだな時間だと思われがちだ。スマートフォンを取り出せば、時間をつぶす方法はいくらでもある。ところが、先日、画面を見ずに待ってみると、ふだん気づかないものが目に入ってきた。道ばたの草のあいだに咲く小さな白い花、電線にとまるスズメのならび方、ゆれる雲のかたち。むだに見えた時間は、実は、世界のほうからこちらに話しかけてくる時間だったのかもしれない。急いでいるとき、人は目的地しか見ていない。立ち止まって初めて、まわりの景色が見えてくるのである。',
     choices: ['世界のほうから話しかけてくる、大切な時間かもしれない', 'やはり何も得られない時間だ', 'スマートフォンを見る時間よりも短い時間だ', '急ぐために必要な時間だ'],
@@ -647,7 +647,7 @@ const SPECS: Spec[] = [
     tip: '考えの変化は「ところが」の後ろに。',
   },
   {
-    id: 'todaiji_kokugo_11', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_11', subj: 'kokugo', diff: 'standard',
     q: '【国語⑪】文章を読んで、問いに答えなさい。\n傍線部「急いでいるとき、人は目的地しか見ていない」に合う具体例はどれですか。',
     passage: 'バスを待つ時間は、むだな時間だと思われがちだ。スマートフォンを取り出せば、時間をつぶす方法はいくらでもある。ところが、先日、画面を見ずに待ってみると、ふだん気づかないものが目に入ってきた。道ばたの草のあいだに咲く小さな白い花、電線にとまるスズメのならび方、ゆれる雲のかたち。むだに見えた時間は、実は、世界のほうからこちらに話しかけてくる時間だったのかもしれない。急いでいるとき、人は目的地しか見ていない。立ち止まって初めて、まわりの景色が見えてくるのである。',
     choices: ['電車に間に合わせようと走り抜けて、道ばたの花に気づかなかった', '散歩のとちゅうで立ち止まって雲をながめた', '友だちと話しながらゆっくり歩いた', '公園のベンチにすわって休んだ'],
@@ -662,7 +662,7 @@ const SPECS: Spec[] = [
     tip: '具体例は、本文の主張と合うかで選ぶ。',
   },
   {
-    id: 'todaiji_kokugo_12', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_12', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑫】文章を読んで、問いに答えなさい。\n筆者は、画面を見ずに待ってみることで、何に気づいたのですか。40字以内で説明しなさい。',
     passage: 'バスを待つ時間は、むだな時間だと思われがちだ。スマートフォンを取り出せば、時間をつぶす方法はいくらでもある。ところが、先日、画面を見ずに待ってみると、ふだん気づかないものが目に入ってきた。道ばたの草のあいだに咲く小さな白い花、電線にとまるスズメのならび方、ゆれる雲のかたち。むだに見えた時間は、実は、世界のほうからこちらに話しかけてくる時間だったのかもしれない。急いでいるとき、人は目的地しか見ていない。立ち止まって初めて、まわりの景色が見えてくるのである。',
     answer: '立ち止まって待つと、ふだん気づかないまわりの景色が見えてくること。',
@@ -676,7 +676,7 @@ const SPECS: Spec[] = [
     tip: '筆者の気づきは、結論の文にある。',
   },
   {
-    id: 'todaiji_kokugo_13', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_13', subj: 'kokugo', diff: 'basic',
     q: '【国語⑬】次の傍線部の漢字の読みをひらがなで書きなさい。\n苦労した仲間を労う。',
     answer: 'ねぎらう',
     hint: '相手の苦労に感謝し、いたわる気持ちを表す言葉です。',
@@ -689,7 +689,7 @@ const SPECS: Spec[] = [
     tip: '労う＝ねぎらう、労る＝いたわる。',
   },
   {
-    id: 'todaiji_kokugo_14', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_14', subj: 'kokugo', diff: 'standard',
     q: '【国語⑭】次の傍線部の漢字の読みをひらがなで書きなさい。\n粘り強い努力が、才能を培う。',
     answer: 'つちかう',
     hint: '土を育てるように、時間をかけて育てることを表します。',
@@ -702,7 +702,7 @@ const SPECS: Spec[] = [
     tip: '培う＝つちかう（時間をかけて育てる）。',
   },
   {
-    id: 'todaiji_kokugo_15', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_15', subj: 'kokugo', diff: 'standard',
     q: '【国語⑮】次の傍線部の漢字の読みをひらがなで書きなさい。\n先生の話を遮る。',
     answer: 'さえぎる',
     hint: 'ほかの人が話している途中で、じゃまをする場面を思い出しましょう。',
@@ -715,7 +715,7 @@ const SPECS: Spec[] = [
     tip: '遮る＝さえぎる。',
   },
   {
-    id: 'todaiji_kokugo_16', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_16', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑯】次の傍線部の漢字の読みをひらがなで書きなさい。\n先輩の失敗を戒める。',
     answer: 'いましめる',
     hint: '「注意をうながす」という意味の言葉です。',
@@ -728,7 +728,7 @@ const SPECS: Spec[] = [
     tip: '戒める＝いましめる。',
   },
   {
-    id: 'todaiji_kokugo_17', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_17', subj: 'kokugo', diff: 'basic',
     q: '【国語⑰】次の傍線部のカタカナを漢字で書きなさい。\n祖父は遠い故郷へのキョウシュウの念を語った。',
     answer: '郷愁',
     hint: '「故郷をなつかしむ気持ち」を表す熟語です。',
@@ -741,7 +741,7 @@ const SPECS: Spec[] = [
     tip: '郷愁＝郷＋愁（心のうれい）。',
   },
   {
-    id: 'todaiji_kokugo_18', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_18', subj: 'kokugo', diff: 'standard',
     q: '【国語⑱】次の傍線部のカタカナを漢字で書きなさい。\n新人の失敗にカンダイな態度で接した。',
     answer: '寛大',
     hint: '心が広く、きびしくとがめないことを表す熟語です。',
@@ -754,7 +754,7 @@ const SPECS: Spec[] = [
     tip: '寛大＝心が広い。',
   },
   {
-    id: 'todaiji_kokugo_19', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_19', subj: 'kokugo', diff: 'standard',
     q: '【国語⑲】次の傍線部のカタカナを漢字で書きなさい。\n祖父はむかしをカイコして、静かに語りはじめた。',
     answer: '回顧',
     hint: '過去のできごとをふり返って思い出すという意味です。',
@@ -767,7 +767,7 @@ const SPECS: Spec[] = [
     tip: '回顧＝回＋顧（ふり返る）。',
   },
   {
-    id: 'todaiji_kokugo_20', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_20', subj: 'kokugo', diff: 'advanced',
     q: '【国語⑳】次の慣用句の意味として最も適切なものを選びなさい。\n「襟を正す」',
     choices: ['気持ちを引きしめて、まじめな態度になる', '服のよごれを落とす', 'おしゃれに気をつかう', '相手の身だしなみを注意する'],
     answer: '気持ちを引きしめて、まじめな態度になる',
@@ -781,7 +781,7 @@ const SPECS: Spec[] = [
     tip: '襟を正す＝気を引きしめる。',
   },
   {
-    id: 'todaiji_kokugo_21', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_21', subj: 'kokugo', diff: 'basic',
     q: '【国語㉑】次の慣用句の意味として最も適切なものを選びなさい。\n「采配を振る」',
     choices: ['全体を指揮して、物事を進める', '物事を投げ出す', '相手の意見に従う', '他人の意見をさえぎる'],
     answer: '全体を指揮して、物事を進める',
@@ -795,7 +795,7 @@ const SPECS: Spec[] = [
     tip: '采配を振る＝指揮をとる。',
   },
   {
-    id: 'todaiji_kokugo_22', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_22', subj: 'kokugo', diff: 'standard',
     q: '【国語㉒】次のことわざの意味として最も適切なものを選びなさい。\n「雨垂れ石を穿つ」',
     choices: ['小さな努力でも、続ければ大きな成果をあげる', '大きな力は、小さな力に負ける', '雨の日は、外に出ないほうがよい', 'よくない出来事が続く'],
     answer: '小さな努力でも、続ければ大きな成果をあげる',
@@ -809,7 +809,7 @@ const SPECS: Spec[] = [
     tip: '雨垂れ石を穿つ＝継続は力。',
   },
   {
-    id: 'todaiji_kokugo_23', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_23', subj: 'kokugo', diff: 'standard',
     q: '【国語㉓】次の四字熟語の意味として最も適切なものを選びなさい。\n「臥薪嘗胆」',
     choices: ['目的をとげるために、苦労をたえしのぶこと', '何度も失敗をくり返すこと', '物事を細かく見通すこと', '考えがころころ変わること'],
     answer: '目的をとげるために、苦労をたえしのぶこと',
@@ -823,7 +823,7 @@ const SPECS: Spec[] = [
     tip: '臥薪嘗胆＝苦労にたえて目標をめざす。',
   },
   {
-    id: 'todaiji_kokugo_24', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_24', subj: 'kokugo', diff: 'advanced',
     q: '【国語㉔】次の四字熟語の意味として最も適切なものを選びなさい。\n「粉骨砕身」',
     choices: ['力のかぎり努力すること', 'すぐにあきらめること', '体をこわすこと', '思いきって失敗すること'],
     answer: '力のかぎり努力すること',
@@ -837,7 +837,7 @@ const SPECS: Spec[] = [
     tip: '粉骨砕身＝力のかぎり努力。',
   },
   {
-    id: 'todaiji_kokugo_25', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_25', subj: 'kokugo', diff: 'basic',
     q: '【国語㉕】次の文のうち、敬語の使い方が正しいものはどれですか。',
     choices: ['先生が私の絵を拝見なさった', 'お客様が受付で申し上げている', '校長先生が明日こちらにいらっしゃるそうです', '私が先生に資料をお渡しになります'],
     answer: '校長先生が明日こちらにいらっしゃるそうです',
@@ -851,7 +851,7 @@ const SPECS: Spec[] = [
     tip: '他人の動作＝尊敬語、自分の動作＝謙譲語。',
   },
   {
-    id: 'todaiji_kokugo_26', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_26', subj: 'kokugo', diff: 'standard',
     q: '【国語㉖】次の傍線部のうち、謙譲語はどれですか。',
     choices: ['先生が「召し上がる」', '母が「おっしゃる」', '私が先生に「申し上げる」', '社長が「お越しになる」'],
     answer: '私が先生に「申し上げる」',
@@ -865,7 +865,7 @@ const SPECS: Spec[] = [
     tip: '言う：おっしゃる（尊敬）／申し上げる（謙譲）。',
   },
   {
-    id: 'todaiji_kokugo_27', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_27', subj: 'kokugo', diff: 'standard',
     q: '【国語㉗】次の文のうち、「ない」が助動詞(打ち消し)であるものはどれですか。',
     choices: ['ぼくはまだ宿題をしていない', 'この本はおもしろくない', 'ここには水が少ない', 'そんなことをしたらあぶない'],
     answer: 'ぼくはまだ宿題をしていない',
@@ -879,7 +879,7 @@ const SPECS: Spec[] = [
     tip: '「ぬ」に言いかえられれば助動詞。',
   },
   {
-    id: 'todaiji_kokugo_28', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_28', subj: 'kokugo', diff: 'advanced',
     q: '【国語㉘】「友だちがくれたのは赤いペンだ」の傍線部「の」と同じ働きをしている「の」はどれですか。（傍線部は「くれたのは」の「の」）',
     choices: ['ぼくが好きなのは、この歌だ', 'ぼくの妹は小学生だ', '雨の降る日に出かけた', '学校の図書室を利用する'],
     answer: 'ぼくが好きなのは、この歌だ',
@@ -893,7 +893,7 @@ const SPECS: Spec[] = [
     tip: '「の」＝「もの」に置きかえられるか。',
   },
   {
-    id: 'todaiji_kokugo_29', subj: 'kokugo', diff: 'basic',
+    id: 'todaijichu_kokugo_29', subj: 'kokugo', diff: 'basic',
     q: '【国語㉙】「校長先生が朝礼で話される」の傍線部「れる」と同じ意味・働きのものを選びなさい。',
     choices: ['先生が教室に来られた', '先生にほめられた', '故郷がしのばれる', 'この魚は生で食べられる'],
     answer: '先生が教室に来られた',
@@ -907,7 +907,7 @@ const SPECS: Spec[] = [
     tip: 'れる・られる：受身・可能・自発・尊敬。',
   },
   {
-    id: 'todaiji_kokugo_30', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_30', subj: 'kokugo', diff: 'standard',
     q: '【国語㉚】次の熟語のうち、反対の意味の漢字を組み合わせたものはどれですか。',
     choices: ['抑揚', '豊富', '読書', '県営'],
     answer: '抑揚',
@@ -921,7 +921,7 @@ const SPECS: Spec[] = [
     tip: '反対の意味の字：強弱・長短・出入。',
   },
   {
-    id: 'todaiji_kokugo_31', subj: 'kokugo', diff: 'standard',
+    id: 'todaijichu_kokugo_31', subj: 'kokugo', diff: 'standard',
     q: '【国語㉛】次の傍線部のうち、「学問をおさめる」の「おさめる」にあてはまる漢字はどれですか。',
     choices: ['修める', '納める', '治める', '収める'],
     answer: '修める',
@@ -935,7 +935,7 @@ const SPECS: Spec[] = [
     tip: '修める＝学問・技を身につける。',
   },
   {
-    id: 'todaiji_kokugo_32', subj: 'kokugo', diff: 'advanced',
+    id: 'todaijichu_kokugo_32', subj: 'kokugo', diff: 'advanced',
     q: '【国語㉜】次の傍線部の意味として最も適切なものを選びなさい。\n「その町の名物は、あまねく知れわたっている。」',
     choices: ['広く行きわたって', '少しだけ', '最近になって', 'かくれて'],
     answer: '広く行きわたって',
@@ -950,7 +950,7 @@ const SPECS: Spec[] = [
   },
   // ===== 理科（32問） =====
   {
-    id: 'todaiji_rika_01', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_01', subj: 'rika', diff: 'basic',
     q: '【理科①】ふりこの1往復する時間(周期)は、ふりこの長さが4倍になると2倍になります。長さ25cmのふりこが1往復する時間が1秒のとき、長さ100cmのふりこが10往復するのにかかる時間は何秒ですか。',
     answer: '20秒',
     hint: '長さが4倍のとき、1往復の時間は何倍になるかを考えましょう。',
@@ -963,7 +963,7 @@ const SPECS: Spec[] = [
     tip: '長さ4倍で周期2倍、9倍で3倍。',
   },
   {
-    id: 'todaiji_rika_02', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_02', subj: 'rika', diff: 'standard',
     q: '【理科②】定滑車1個と動滑車2個を組み合わせて、ロープ4本で物体をつり上げます。滑車の重さとまさつは考えません。120gの物体を10cm引き上げるには、ロープを何cm引けばよいですか。',
     answer: '40cm',
     hint: '物体をささえるロープが何本あるかと、仕事の原理を考えましょう。',
@@ -976,7 +976,7 @@ const SPECS: Spec[] = [
     tip: '力が1/□なら、引く長さは□倍。',
   },
   {
-    id: 'todaiji_rika_03', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_03', subj: 'rika', diff: 'standard',
     q: '【理科③】電池1個と豆電球1個をつないだときの豆電球の明るさを①とします。電池2個を直列につなぎ、豆電球2個を直列につないだ回路で、豆電球1個の明るさは①と比べてどうなりますか。',
     choices: ['①より暗い', '①と同じ', '①より明るい', '光らない'],
     answer: '①と同じ',
@@ -990,7 +990,7 @@ const SPECS: Spec[] = [
     tip: '電流＝電池の数÷豆電球の数（直列のとき）。',
   },
   {
-    id: 'todaiji_rika_04', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_04', subj: 'rika', diff: 'advanced',
     q: '【理科④】電池2個を並列につなぎ、豆電球1個をつないだとき、電池1個・豆電球1個のときと比べて正しいものはどれですか。',
     choices: ['明るさは同じで、電池は長持ちする', '明るさは2倍で、電池の持ちは同じ', '明るさは2倍で、電池も2倍長持ちする', '明るさも電池の持ちも同じ'],
     answer: '明るさは同じで、電池は長持ちする',
@@ -1004,7 +1004,7 @@ const SPECS: Spec[] = [
     tip: '電池の並列は「明るさそのまま、長持ち」。',
   },
   {
-    id: 'todaiji_rika_05', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_05', subj: 'rika', diff: 'basic',
     q: '【理科⑤】遠くで花火が開くのが見えてから、3秒後に音が聞こえました。音の速さを秒速340mとすると、花火が開いた場所までは何mですか。ただし、光が届く時間は考えません。',
     answer: '1020m',
     hint: '光は一瞬で届くとみなし、音がかかった時間を使います。',
@@ -1017,7 +1017,7 @@ const SPECS: Spec[] = [
     tip: 'きょり＝音速×音がおくれた時間。',
   },
   {
-    id: 'todaiji_rika_06', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_06', subj: 'rika', diff: 'standard',
     q: '【理科⑥】水500cm³(500g)を凍らせると、体積は1.1倍になります。できた氷を、水にうかべたとき、水面より上に出ている部分の体積は何cm³ですか。ただし、水1cm³は1gとします。',
     answer: '50cm³',
     hint: '氷の重さは、凍る前の水と同じです。うかんでいるとき、浮力は物の重さと等しくなります。',
@@ -1030,7 +1030,7 @@ const SPECS: Spec[] = [
     tip: 'うかぶ物は、浮力＝物の重さ。',
   },
   {
-    id: 'todaiji_rika_07', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_07', subj: 'rika', diff: 'standard',
     q: '【理科⑦】次の水よう液を、それぞれ蒸発皿に入れて加熱して水を完全に蒸発させたとき、あとに何も残らないものはどれですか。',
     choices: ['食塩水', '砂糖水', '塩酸', 'ミョウバン水'],
     answer: '塩酸',
@@ -1044,7 +1044,7 @@ const SPECS: Spec[] = [
     tip: '塩酸・炭酸水・アンモニア水は、何も残らない。',
   },
   {
-    id: 'todaiji_rika_08', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_08', subj: 'rika', diff: 'advanced',
     q: '【理科⑧】うすい過酸化水素水(オキシドール)に、二酸化マンガン2gを加えると、酸素が発生しました。反応が終わったあと、液をろ過し、ろ紙に残った二酸化マンガンをよくかわかして重さをはかりました。何gになりますか。',
     answer: '2g',
     hint: '二酸化マンガンは、反応を助けるだけで、自分は変化しません。',
@@ -1057,7 +1057,7 @@ const SPECS: Spec[] = [
     tip: '二酸化マンガンは、反応の前後で変化しない。',
   },
   {
-    id: 'todaiji_rika_09', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_09', subj: 'rika', diff: 'basic',
     q: '【理科⑨】びんの中でろうそくを燃やし、火が消えたあとのびんの中の気体について、正しいものはどれですか。',
     choices: ['酸素はすべてなくなっている', '酸素は約21%から約17%に減り、二酸化炭素がふえている', 'ちっ素が燃えて減っている', '二酸化炭素が酸素に変わっている'],
     answer: '酸素は約21%から約17%に減り、二酸化炭素がふえている',
@@ -1071,7 +1071,7 @@ const SPECS: Spec[] = [
     tip: 'ろうそくが消えても、酸素は約17%残る。',
   },
   {
-    id: 'todaiji_rika_10', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_10', subj: 'rika', diff: 'standard',
     q: '【理科⑩】同じ大きさの葉をつけた枝を4本用意し、水を入れたメスシリンダーにさして、4日後の水の減った量を調べました。A：何もしない枝は14mL、B：葉の表側にワセリンをぬった枝は12mL、C：葉の裏側にワセリンをぬった枝は5mL、D：葉をすべて取りワセリンをぬった枝は1mL減りました。葉の裏側から出ていった水の量は何mLですか。',
     answer: '9mL',
     hint: '「裏にワセリンをぬる」と、裏からは水が出られなくなります。何もしない枝との差を考えましょう。',
@@ -1084,7 +1084,7 @@ const SPECS: Spec[] = [
     tip: '蒸散量は「何もしない枝との差」で求める。',
   },
   {
-    id: 'todaiji_rika_11', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_11', subj: 'rika', diff: 'standard',
     q: '【理科⑪】次の昆虫のうち、卵→幼虫→さなぎ→成虫の順に育つ(さなぎの時期がある)ものはどれですか。',
     choices: ['トンボ', 'カブトムシ', 'バッタ', 'セミ'],
     answer: 'カブトムシ',
@@ -1098,7 +1098,7 @@ const SPECS: Spec[] = [
     tip: '完全変態：チョウ・ハチ・甲虫・ハエ。',
   },
   {
-    id: 'todaiji_rika_12', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_12', subj: 'rika', diff: 'advanced',
     q: '【理科⑫】ヒトの心臓は、1回の拍動で約70mLの血液を送り出します。脈拍が1分間に70回のとき、1分間に心臓が送り出す血液は何mLですか。',
     answer: '4900mL',
     hint: '1回に送る量に、1分間の回数をかけます。',
@@ -1111,7 +1111,7 @@ const SPECS: Spec[] = [
     tip: '1分間の送血量＝1回の量×脈拍数。',
   },
   {
-    id: 'todaiji_rika_13', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_13', subj: 'rika', diff: 'basic',
     q: '【理科⑬】3本の試験管に、うすいでんぷんのりを入れました。Aには水、Bにはだ液を加えて40℃の湯に、Cにはだ液を加えて氷水に10分間つけました。そのあとヨウ素液を加えると、AとCは青むらさき色になり、Bは変化しませんでした。この結果からわかることはどれですか。',
     choices: ['だ液は体温に近い温度でよくはたらく', 'だ液は低い温度でもよくはたらく', '水はでんぷんを分解する', 'ヨウ素液はでんぷんがないと色が変わる'],
     answer: 'だ液は体温に近い温度でよくはたらく',
@@ -1125,7 +1125,7 @@ const SPECS: Spec[] = [
     tip: '対照実験は、変える条件は1つだけ。',
   },
   {
-    id: 'todaiji_rika_14', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_14', subj: 'rika', diff: 'standard',
     q: '【理科⑭】午後9時に、北の空で北極星を中心にして北斗七星が見える向きを調べました。午前0時にもう一度調べると、北斗七星は北極星を中心に、反時計回りに何度回って見えますか。',
     answer: '45度',
     hint: '北の空の星は、1時間に約15度ずつ回って見えます。',
@@ -1138,7 +1138,7 @@ const SPECS: Spec[] = [
     tip: '北の星は反時計回りに1時間15度。',
   },
   {
-    id: 'todaiji_rika_15', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_15', subj: 'rika', diff: 'standard',
     q: '【理科⑮】月の出の時刻は、毎日約50分ずつおそくなります。満月の日の月の出が午後6時だったとき、4日後の月の出はおよそ何時何分ですか。',
     answer: '午後9時20分',
     hint: '50分を4日分たしましょう。',
@@ -1151,7 +1151,7 @@ const SPECS: Spec[] = [
     tip: '月の出は毎日約50分おそくなる。',
   },
   {
-    id: 'todaiji_rika_16', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_16', subj: 'rika', diff: 'advanced',
     q: '【理科⑯】A地点(標高50m)では、地表から6mの深さに火山灰の層がありました。B地点(標高46m)では、地表から2mの深さに同じ火山灰の層がありました。この地域の地層が水平だとすると、標高52mのC地点では、地表から何mの深さに同じ火山灰の層がありますか。',
     answer: '8m',
     hint: '火山灰の層の標高を、A地点とB地点で求めましょう。',
@@ -1164,7 +1164,7 @@ const SPECS: Spec[] = [
     tip: '柱状図は、標高にそろえて比べる。',
   },
   {
-    id: 'todaiji_rika_17', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_17', subj: 'rika', diff: 'basic',
     q: '【理科⑰】ある日、気温が20℃で、空気1m³中に8.5gの水蒸気がふくまれていました。20℃の飽和水蒸気量を17gとすると、このときの湿度は何%ですか。',
     answer: '50%',
     hint: '湿度は、ふくまれている水蒸気の量が飽和水蒸気量の何%かで表します。',
@@ -1177,7 +1177,7 @@ const SPECS: Spec[] = [
     tip: '湿度＝ふくんでいる量÷飽和水蒸気量×100。',
   },
   {
-    id: 'todaiji_rika_18', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_18', subj: 'rika', diff: 'standard',
     q: '【理科⑱】気温20℃で、空気1m³中に12.8gの水蒸気がふくまれている空気を、5℃まで冷やしました。飽和水蒸気量は、15℃で12.8g、10℃で9.4g、5℃で6.8gです。5℃まで冷やしたとき、1m³あたり何gの水滴ができますか。',
     answer: '6.0g',
     hint: '5℃で空気がふくむことのできる量を、表から読みましょう。',
@@ -1190,7 +1190,7 @@ const SPECS: Spec[] = [
     tip: '水滴＝もとの量−冷やした温度の飽和量。',
   },
   {
-    id: 'todaiji_rika_19', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_19', subj: 'rika', diff: 'standard',
     q: '【理科⑲】ある場所で、春分の日の太陽の南中高度は55度でした。地球の地軸のかたむきを23.4度とすると、この場所の冬至の日の南中高度は何度ですか。',
     answer: '31.6度',
     hint: '冬至には、太陽は春分のときよりも低い位置を通ります。',
@@ -1203,7 +1203,7 @@ const SPECS: Spec[] = [
     tip: '南中高度は夏至＋23.4度、冬至−23.4度。',
   },
   {
-    id: 'todaiji_rika_20', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_20', subj: 'rika', diff: 'advanced',
     q: '【理科⑳】80℃の水100gと、20℃の水200gを混ぜました。混ぜたあとの水の温度は何℃ですか。ただし、熱は外ににげないものとします。',
     answer: '40℃',
     hint: '熱の量は「水の重さ×温度」でくらべられます。',
@@ -1216,7 +1216,7 @@ const SPECS: Spec[] = [
     tip: '混ぜた温度は、重さ×温度の合計÷全体の重さ。',
   },
   {
-    id: 'todaiji_rika_21', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_21', subj: 'rika', diff: 'basic',
     q: '【理科㉑】60℃の水100gには、ある物質が80gまでとけます。60℃でこの物質をとかした飽和水溶液360gがあります。この水溶液から、60℃のまま水を50g蒸発させると、とけきれなくなって出てくる固体は何gですか。',
     answer: '40g',
     hint: '飽和水溶液360gの中の水の量を、まず求めましょう。',
@@ -1229,7 +1229,7 @@ const SPECS: Spec[] = [
     tip: '蒸発＝その水にとけていた分が出る。',
   },
   {
-    id: 'todaiji_rika_22', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_22', subj: 'rika', diff: 'standard',
     q: '【理科㉒】5%の食塩水300gに水を加えて、3%の食塩水にします。加える水は何gですか。',
     answer: '200g',
     hint: '水を加えても、とけている食塩の量は変わりません。',
@@ -1242,7 +1242,7 @@ const SPECS: Spec[] = [
     tip: '水を加えても、食塩の量は変わらない。',
   },
   {
-    id: 'todaiji_rika_23', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_23', subj: 'rika', diff: 'standard',
     q: '【理科㉓】石灰石1gを塩酸に加えると、二酸化炭素が240mL発生します。ただし、用意した塩酸では、最大960mLまでしか発生しません。石灰石を6g加えたときに発生する二酸化炭素は何mLですか。',
     answer: '960mL',
     hint: '石灰石が何gのとき、塩酸がちょうど使い切られるかを考えましょう。',
@@ -1255,7 +1255,7 @@ const SPECS: Spec[] = [
     tip: '発生量は、少ないほうの材料で決まる。',
   },
   {
-    id: 'todaiji_rika_24', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_24', subj: 'rika', diff: 'advanced',
     q: '【理科㉔】ふろの水を下から温めると、やがて全体が温まります。このときの熱の伝わり方を何といいますか。',
     choices: ['伝導', '対流', '放射', '蒸発'],
     answer: '対流',
@@ -1269,7 +1269,7 @@ const SPECS: Spec[] = [
     tip: '水や空気は対流、金属は伝導、太陽は放射。',
   },
   {
-    id: 'todaiji_rika_25', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_25', subj: 'rika', diff: 'basic',
     q: '【理科㉕】棒磁石を、真ん中で2つに切りました。切ったあとの2つの磁石について、正しいものはどれですか。',
     choices: ['どちらもN極とS極の両方をもつ磁石になる', '一方はN極だけ、もう一方はS極だけになる', 'どちらも磁石の力を失う', '一方だけが磁石になる'],
     answer: 'どちらもN極とS極の両方をもつ磁石になる',
@@ -1283,7 +1283,7 @@ const SPECS: Spec[] = [
     tip: '磁石は何度切っても、N極とS極の両方をもつ。',
   },
   {
-    id: 'todaiji_rika_26', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_26', subj: 'rika', diff: 'standard',
     q: '【理科㉖】焦点きょりが10cmの凸レンズの前20cmの位置にろうそくを置きます。レンズの後ろにスクリーンを置いて、はっきりした像をうつすには、スクリーンをレンズから何cmの位置に置けばよいですか。',
     answer: '20cm',
     hint: '焦点きょりの2倍の位置に物を置くと、どんな像ができるかを思い出しましょう。',
@@ -1296,7 +1296,7 @@ const SPECS: Spec[] = [
     tip: '物が2f→像も2fで、同じ大きさ。',
   },
   {
-    id: 'todaiji_rika_27', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_27', subj: 'rika', diff: 'standard',
     q: '【理科㉗】体積が100cm³で、重さが60gの木のかたまりを水にうかべました。水中にしずんでいる部分の体積は何cm³ですか。ただし、水1cm³は1gとします。',
     answer: '60cm³',
     hint: 'うかんでいる物体にはたらく浮力は、物体の重さと等しくなります。',
@@ -1309,7 +1309,7 @@ const SPECS: Spec[] = [
     tip: 'うかぶ物の水中の体積＝重さ÷水1cm³の重さ。',
   },
   {
-    id: 'todaiji_rika_28', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_28', subj: 'rika', diff: 'advanced',
     q: '【理科㉘】溶岩のねばりけが強い火山について、正しいものはどれですか。',
     choices: ['もり上がった形になりやすく、激しい噴火になりやすい', '平らに広がった形になりやすく、おだやかな噴火になりやすい', '火山灰が出ない', '溶岩は黒く、ほとんどねばらない'],
     answer: 'もり上がった形になりやすく、激しい噴火になりやすい',
@@ -1323,7 +1323,7 @@ const SPECS: Spec[] = [
     tip: 'ねばりけ強：もり上がる、弱：平ら。',
   },
   {
-    id: 'todaiji_rika_29', subj: 'rika', diff: 'basic',
+    id: 'todaijichu_rika_29', subj: 'rika', diff: 'basic',
     q: '【理科㉙】地震が起こると、はじめに小さなゆれ(初期微動)をおこすP波と、そのあとに大きなゆれ(主要動)をおこすS波が伝わります。P波は秒速8km、S波は秒速4kmとすると、初期微動継続時間が12秒だったとき、震源までのきょりは何kmですか。',
     answer: '96km',
     hint: '震源までのきょり1kmあたり、P波とS波の到着の時間の差を考えましょう。',
@@ -1336,7 +1336,7 @@ const SPECS: Spec[] = [
     tip: '1kmあたりの時間の差を求め、全体の時間の差でわりかえす。',
   },
   {
-    id: 'todaiji_rika_30', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_30', subj: 'rika', diff: 'standard',
     q: '【理科㉚】ある池で、植物プランクトン→ミジンコ→メダカ→サギの順に食べる・食べられるの関係があります。何かの原因でメダカが急に大きく減ったとき、すぐあとに起こる変化として最も適切なものはどれですか。',
     choices: ['ミジンコはふえ、サギはへる', 'ミジンコもサギもふえる', 'ミジンコはへり、サギはふえる', '植物プランクトンがふえる'],
     answer: 'ミジンコはふえ、サギはへる',
@@ -1350,7 +1350,7 @@ const SPECS: Spec[] = [
     tip: '食物連鎖は、下は逆、上は同じ向きに変わる。',
   },
   {
-    id: 'todaiji_rika_31', subj: 'rika', diff: 'standard',
+    id: 'todaijichu_rika_31', subj: 'rika', diff: 'standard',
     q: '【理科㉛】ふ(白い部分)の入ったアサガオの葉を、一日日光に当てたあと、ヨウ素液にひたしました。このときの結果として正しいものはどれですか。',
     choices: ['緑の部分だけが青むらさき色になる', '葉全体が青むらさき色になる', 'ふの部分だけが青むらさき色になる', 'どこも色が変わらない'],
     answer: '緑の部分だけが青むらさき色になる',
@@ -1364,7 +1364,7 @@ const SPECS: Spec[] = [
     tip: 'ふ入りの葉は、緑の部分だけ反応する。',
   },
   {
-    id: 'todaiji_rika_32', subj: 'rika', diff: 'advanced',
+    id: 'todaijichu_rika_32', subj: 'rika', diff: 'advanced',
     q: '【理科㉜】曲がって流れる川の曲がり角で、外側の川岸のようすとして正しいものはどれですか。',
     choices: ['流れが速く、岸が深くけずられる', '流れがおそく、土砂が積もる', '流れがおそく、岸が深くけずられる', '流れが速く、土砂が積もる'],
     answer: '流れが速く、岸が深くけずられる',
@@ -1379,7 +1379,7 @@ const SPECS: Spec[] = [
   },
   // ===== 社会（32問） =====
   {
-    id: 'todaiji_shakai_01', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_01', subj: 'shakai', diff: 'basic',
     q: '【社会①】次のうち、奈良県と県境が接していない府県はどれですか。',
     choices: ['三重県', '和歌山県', '大阪府', '愛知県'],
     answer: '愛知県',
@@ -1393,7 +1393,7 @@ const SPECS: Spec[] = [
     tip: '奈良：京都・大阪・和歌山・三重と接する。',
   },
   {
-    id: 'todaiji_shakai_02', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_02', subj: 'shakai', diff: 'standard',
     q: '【社会②】奈良県の吉野すぎと並んで、人工美林として知られる尾鷲ひのきは、どの県の産地ですか。',
     choices: ['三重県', '和歌山県', '愛知県', '滋賀県'],
     answer: '三重県',
@@ -1407,7 +1407,7 @@ const SPECS: Spec[] = [
     tip: '尾鷲＝三重、吉野＝奈良。',
   },
   {
-    id: 'todaiji_shakai_03', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_03', subj: 'shakai', diff: 'standard',
     q: '【社会③】琵琶湖から流れ出して、大阪湾にそそぐ川はどれですか。',
     choices: ['淀川', '紀の川', '大和川', '木曽川'],
     answer: '淀川',
@@ -1421,7 +1421,7 @@ const SPECS: Spec[] = [
     tip: '琵琶湖→瀬田川→宇治川→淀川。',
   },
   {
-    id: 'todaiji_shakai_04', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_04', subj: 'shakai', diff: 'advanced',
     q: '【社会④】紀伊半島の南東部に、雨の量が非常に多い地域がある理由として正しいものはどれですか。',
     choices: ['夏に南東から湿った風がふき、山地にぶつかって雨を降らせるから', '冬に北西から湿った風がふき、雪を降らせるから', '瀬戸内海に面していて、雨が少ないから', '冷たい親潮が流れているから'],
     answer: '夏に南東から湿った風がふき、山地にぶつかって雨を降らせるから',
@@ -1435,7 +1435,7 @@ const SPECS: Spec[] = [
     tip: '紀伊半島南東部＝夏の南東風＋山地。',
   },
   {
-    id: 'todaiji_shakai_05', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_05', subj: 'shakai', diff: 'basic',
     q: '【社会⑤】縮尺が2万5千分の1の地形図上で、たて3cm、よこ4cmの長方形の土地があります。実際の面積は何km²ですか。',
     answer: '0.75km²',
     hint: 'まず、地図上の長さが実際の何mにあたるかを、たてとよこで求めましょう。',
@@ -1448,7 +1448,7 @@ const SPECS: Spec[] = [
     tip: '長さを実際にもどしてから面積を求める。',
   },
   {
-    id: 'todaiji_shakai_06', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_06', subj: 'shakai', diff: 'standard',
     q: '【社会⑥】有明海沿岸で養殖がさかんな「のり」の生産量が、全国で最も多い県はどこですか。',
     choices: ['佐賀県', '長崎県', '宮崎県', '熊本県'],
     answer: '佐賀県',
@@ -1462,7 +1462,7 @@ const SPECS: Spec[] = [
     tip: 'のり＝有明海の佐賀県。',
   },
   {
-    id: 'todaiji_shakai_07', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_07', subj: 'shakai', diff: 'standard',
     q: '【社会⑦】阪神工業地帯の特色として、正しいものはどれですか。',
     choices: ['東大阪などに中小工場が多く、金属・機械・化学の工業がさかん', '自動車工業が出荷額の約7割を占める', 'せんい工業が出荷額の約半分を占める', '石油化学コンビナートはまったくない'],
     answer: '東大阪などに中小工場が多く、金属・機械・化学の工業がさかん',
@@ -1476,7 +1476,7 @@ const SPECS: Spec[] = [
     tip: '阪神：中小工場が多い、中京：自動車。',
   },
   {
-    id: 'todaiji_shakai_08', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_08', subj: 'shakai', diff: 'advanced',
     q: '【社会⑧】日本の最西端にある島はどれですか。',
     choices: ['与那国島', '沖ノ鳥島', '南鳥島', '択捉島'],
     answer: '与那国島',
@@ -1490,7 +1490,7 @@ const SPECS: Spec[] = [
     tip: '東南鳥・西与那国・南沖ノ鳥・北択捉。',
   },
   {
-    id: 'todaiji_shakai_09', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_09', subj: 'shakai', diff: 'basic',
     q: '【社会⑨】日本が輸入する原油の大部分は、どの地域からきていますか。',
     choices: ['中東', '東南アジア', 'ヨーロッパ', '南アメリカ'],
     answer: '中東',
@@ -1504,7 +1504,7 @@ const SPECS: Spec[] = [
     tip: '原油＝中東、石炭・鉄鉱石＝オーストラリア。',
   },
   {
-    id: 'todaiji_shakai_10', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_10', subj: 'shakai', diff: 'standard',
     q: '【社会⑩】冬に日本海側の地方で雪が多く降る理由として正しいものはどれですか。',
     choices: ['北西の季節風が日本海から水蒸気をふくみ、山地にぶつかるから', '南東の季節風が山地にぶつかるから', '黒潮の影響で暖かいから', '親潮の影響で寒いから'],
     answer: '北西の季節風が日本海から水蒸気をふくみ、山地にぶつかるから',
@@ -1518,7 +1518,7 @@ const SPECS: Spec[] = [
     tip: '冬＝北西風＝日本海側に雪。',
   },
   {
-    id: 'todaiji_shakai_11', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_11', subj: 'shakai', diff: 'standard',
     q: '【社会⑪】次のうち、県名と県庁所在地名が同じものはどれですか。',
     choices: ['茨城県', '福島県', '石川県', '愛媛県'],
     answer: '福島県',
@@ -1532,7 +1532,7 @@ const SPECS: Spec[] = [
     tip: '県庁所在地は県名と都市名の両方を覚える。',
   },
   {
-    id: 'todaiji_shakai_12', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_12', subj: 'shakai', diff: 'advanced',
     q: '【社会⑫】青森県の三内丸山遺跡は、何時代の遺跡ですか。',
     choices: ['縄文時代', '弥生時代', '古墳時代', '飛鳥時代'],
     answer: '縄文時代',
@@ -1546,7 +1546,7 @@ const SPECS: Spec[] = [
     tip: '三内丸山＝縄文、吉野ヶ里＝弥生。',
   },
   {
-    id: 'todaiji_shakai_13', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_13', subj: 'shakai', diff: 'basic',
     q: '【社会⑬】古墳時代に、大陸から日本に渡ってきて、さまざまな技術を伝えた人々を「渡来人」といいます。渡来人が伝えたものとして正しいものはどれですか。',
     choices: ['須恵器', '縄文土器', '磨製石器', '銅鐸'],
     answer: '須恵器',
@@ -1560,7 +1560,7 @@ const SPECS: Spec[] = [
     tip: '渡来人＝須恵器・漢字・仏教・機織り。',
   },
   {
-    id: 'todaiji_shakai_14', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_14', subj: 'shakai', diff: 'standard',
     q: '【社会⑭】聖徳太子が、隋の皇帝へ手紙をもたせて派遣した人物はだれですか。',
     choices: ['小野妹子', '阿倍仲麻呂', '鑑真', '最澄'],
     answer: '小野妹子',
@@ -1574,7 +1574,7 @@ const SPECS: Spec[] = [
     tip: '遣隋使＝小野妹子。',
   },
   {
-    id: 'todaiji_shakai_15', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_15', subj: 'shakai', diff: 'standard',
     q: '【社会⑮】645年に蘇我氏をほろぼし、大化の改新を始めた人物のひとりで、のちに天智天皇になった皇子はだれですか。',
     choices: ['中大兄皇子', '大海人皇子', '聖徳太子', '天武天皇'],
     answer: '中大兄皇子',
@@ -1588,7 +1588,7 @@ const SPECS: Spec[] = [
     tip: '中大兄皇子＝天智天皇。',
   },
   {
-    id: 'todaiji_shakai_16', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_16', subj: 'shakai', diff: 'advanced',
     q: '【社会⑯】奈良の東大寺に大仏をつくることを命じた天皇はだれですか。',
     choices: ['聖武天皇', '桓武天皇', '推古天皇', '天智天皇'],
     answer: '聖武天皇',
@@ -1602,7 +1602,7 @@ const SPECS: Spec[] = [
     tip: '聖武天皇＝大仏＋国分寺。',
   },
   {
-    id: 'todaiji_shakai_17', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_17', subj: 'shakai', diff: 'basic',
     q: '【社会⑰】日本に渡ることに何度も失敗しながら、ついに来日して、奈良に唐招提寺を建てた唐の僧はだれですか。',
     choices: ['鑑真', '空海', '最澄', '行基'],
     answer: '鑑真',
@@ -1616,7 +1616,7 @@ const SPECS: Spec[] = [
     tip: '唐から来た鑑真、日本から行った空海・最澄。',
   },
   {
-    id: 'todaiji_shakai_18', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_18', subj: 'shakai', diff: 'standard',
     q: '【社会⑱】平安時代の中ごろ、藤原氏が天皇に代わって政治を行うために就いた地位として、天皇が幼いときの「摂政」と、成人したあとの何とがありますか。',
     choices: ['関白', '太政大臣', '征夷大将軍', '執権'],
     answer: '関白',
@@ -1630,7 +1630,7 @@ const SPECS: Spec[] = [
     tip: '摂関政治＝摂政＋関白。',
   },
   {
-    id: 'todaiji_shakai_19', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_19', subj: 'shakai', diff: 'standard',
     q: '【社会⑲】鎌倉時代に、東大寺南大門の金剛力士像をつくった仏師の組み合わせはどれですか。',
     choices: ['運慶と快慶', '雪舟と狩野永徳', '観阿弥と世阿弥', '近松門左衛門と井原西鶴'],
     answer: '運慶と快慶',
@@ -1644,7 +1644,7 @@ const SPECS: Spec[] = [
     tip: '運慶・快慶＝鎌倉の彫刻。',
   },
   {
-    id: 'todaiji_shakai_20', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_20', subj: 'shakai', diff: 'advanced',
     q: '【社会⑳】室町時代に京都の東山に銀閣を建てた将軍はだれですか。',
     choices: ['足利義政', '足利義満', '足利尊氏', '徳川家光'],
     answer: '足利義政',
@@ -1658,7 +1658,7 @@ const SPECS: Spec[] = [
     tip: '金閣＝義満、銀閣＝義政。',
   },
   {
-    id: 'todaiji_shakai_21', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_21', subj: 'shakai', diff: 'basic',
     q: '【社会㉑】豊臣秀吉が刀狩を行った目的として最も適切なものはどれですか。',
     choices: ['百姓の武力を取り上げ、武士と百姓の区別をはっきりさせるため', '刀を集めて外国に輸出するため', '城をつくる材料にするため', '武士に刀を配るため'],
     answer: '百姓の武力を取り上げ、武士と百姓の区別をはっきりさせるため',
@@ -1672,7 +1672,7 @@ const SPECS: Spec[] = [
     tip: '刀狩＋太閤検地＝兵農分離。',
   },
   {
-    id: 'todaiji_shakai_22', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_22', subj: 'shakai', diff: 'standard',
     q: '【社会㉒】江戸時代、蝦夷地(今の北海道)でアイヌの人々との交易を行った藩はどこですか。',
     choices: ['松前藩', '薩摩藩', '対馬藩', '長崎奉行所'],
     answer: '松前藩',
@@ -1686,7 +1686,7 @@ const SPECS: Spec[] = [
     tip: '松前＝アイヌ、薩摩＝琉球、対馬＝朝鮮。',
   },
   {
-    id: 'todaiji_shakai_23', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_23', subj: 'shakai', diff: 'standard',
     q: '【社会㉓】江戸時代、全国から米や特産物が集まり、「天下の台所」とよばれた都市はどこですか。',
     choices: ['大阪', '江戸', '京都', '長崎'],
     answer: '大阪',
@@ -1700,7 +1700,7 @@ const SPECS: Spec[] = [
     tip: '江戸＝政治、大阪＝商業、京都＝文化・朝廷。',
   },
   {
-    id: 'todaiji_shakai_24', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_24', subj: 'shakai', diff: 'advanced',
     q: '【社会㉔】明治時代に、鉄鋼の生産を行うために国が建設した官営の八幡製鉄所は、現在のどの県にありますか。',
     choices: ['福岡県', '群馬県', '愛知県', '大阪府'],
     answer: '福岡県',
@@ -1714,7 +1714,7 @@ const SPECS: Spec[] = [
     tip: '八幡製鉄所＝福岡、富岡製糸場＝群馬。',
   },
   {
-    id: 'todaiji_shakai_25', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_25', subj: 'shakai', diff: 'basic',
     q: '【社会㉕】1925年に成立した普通選挙法では、何才以上の男子に選挙権が認められましたか。',
     answer: '25才',
     hint: 'それまでは、一定の税金を納めた男子に限られていました。',
@@ -1727,7 +1727,7 @@ const SPECS: Spec[] = [
     tip: '普通選挙法＝25才以上の男子。',
   },
   {
-    id: 'todaiji_shakai_26', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_26', subj: 'shakai', diff: 'standard',
     q: '【社会㉖】日本国憲法が施行された日は、現在、何という祝日になっていますか。',
     choices: ['憲法記念日', '文化の日', '建国記念の日', '勤労感謝の日'],
     answer: '憲法記念日',
@@ -1741,7 +1741,7 @@ const SPECS: Spec[] = [
     tip: '公布＝文化の日、施行＝憲法記念日。',
   },
   {
-    id: 'todaiji_shakai_27', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_27', subj: 'shakai', diff: 'standard',
     q: '【社会㉗】内閣不信任の決議が衆議院で可決されたとき、内閣はどうしなければなりませんか。',
     choices: ['10日以内に衆議院を解散するか、総辞職する', '参議院を解散する', '天皇が内閣を解散する', '裁判所の判断を待つ'],
     answer: '10日以内に衆議院を解散するか、総辞職する',
@@ -1755,7 +1755,7 @@ const SPECS: Spec[] = [
     tip: '不信任＝10日以内に解散か総辞職。',
   },
   {
-    id: 'todaiji_shakai_28', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_28', subj: 'shakai', diff: 'advanced',
     q: '【社会㉘】裁判官をやめさせるかどうかを判断する、国会に設けられる裁判所を何といいますか。',
     answer: '弾劾裁判所',
     hint: '裁判官の不正をただす裁判所です。',
@@ -1768,7 +1768,7 @@ const SPECS: Spec[] = [
     tip: '国会→裁判所：弾劾裁判。',
   },
   {
-    id: 'todaiji_shakai_29', subj: 'shakai', diff: 'basic',
+    id: 'todaijichu_shakai_29', subj: 'shakai', diff: 'basic',
     q: '【社会㉙】次のうち、税金を納める人と、実際に負担する人が同じである直接税はどれですか。',
     choices: ['所得税', '消費税', 'たばこ税', '関税'],
     answer: '所得税',
@@ -1782,7 +1782,7 @@ const SPECS: Spec[] = [
     tip: '直接税＝所得税・法人税・相続税。',
   },
   {
-    id: 'todaiji_shakai_30', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_30', subj: 'shakai', diff: 'standard',
     q: '【社会㉚】地方公共団体で、条例の制定や改正を求める直接請求をするには、有権者の何分の1以上の署名が必要ですか。',
     answer: '50分の1',
     hint: '有権者のごく一部でも、請求ができるようになっています。',
@@ -1795,7 +1795,7 @@ const SPECS: Spec[] = [
     tip: '条例＝50分の1、解散・解職＝3分の1。',
   },
   {
-    id: 'todaiji_shakai_31', subj: 'shakai', diff: 'standard',
+    id: 'todaijichu_shakai_31', subj: 'shakai', diff: 'standard',
     q: '【社会㉛】日本国憲法第25条に定められている、「健康で文化的な最低限度の生活を営む権利」を何といいますか。',
     choices: ['生存権', '自由権', '参政権', '請求権'],
     answer: '生存権',
@@ -1809,7 +1809,7 @@ const SPECS: Spec[] = [
     tip: '社会権＝生存権・教育・勤労。',
   },
   {
-    id: 'todaiji_shakai_32', subj: 'shakai', diff: 'advanced',
+    id: 'todaijichu_shakai_32', subj: 'shakai', diff: 'advanced',
     q: '【社会㉜】世界遺産の登録を行う国際連合の機関はどれですか。',
     choices: ['ユネスコ', 'ユニセフ', '世界保健機関', '国際通貨基金'],
     answer: 'ユネスコ',
