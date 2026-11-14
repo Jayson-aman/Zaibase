@@ -374,6 +374,22 @@ import { schoolSuma } from './school_suma';
 import { honshikenSchool_suma_A } from './honshiken_school_suma_A';
 import { honshikenSchool_suma_B } from './honshiken_school_suma_B';
 import { schoolKokoTsukuba } from './school_koko-tsukuba';
+import { schoolTokyoWaseda } from './school_tokyo-waseda';
+import { schoolTokyoKeioChutobu } from './school_tokyo-keio-chutobu';
+import { schoolTokyoShiba } from './school_tokyo-shiba';
+import { schoolTokyoIchikawa } from './school_tokyo-ichikawa';
+import { schoolTodaiji } from './school_todaiji';
+import { schoolKansaiDaiichi } from './school_kansai-daiichi';
+import { schoolDoshishaKori } from './school_doshisha-kori';
+import { schoolDoshishaJoshi } from './school_doshisha-joshi';
+import { schoolKokoGakugei } from './school_koko-gakugei';
+import { schoolKokoRikkyoNiiza } from './school_koko-rikkyo-niiza';
+import { schoolKokoChuo } from './school_koko-chuo';
+import { schoolKokoAoyama } from './school_koko-aoyama';
+import { schoolKokoDoshisha } from './school_koko-doshisha';
+import { schoolKokoKansaiDaiichi } from './school_koko-kansai-daiichi';
+import { schoolKokoDoshishaKori } from './school_koko-doshisha-kori';
+import { schoolKokoDoshishaJoshi } from './school_koko-doshisha-joshi';
 import { honshikenSchool_koko_tsukuba_A } from './honshiken_school_koko-tsukuba_A';
 import { honshikenSchool_koko_tsukuba_B } from './honshiken_school_koko-tsukuba_B';
 import { schoolKokoShibumaku } from './school_koko-shibumaku';
@@ -4244,6 +4260,22 @@ const baseQuestions: Question[] = [
   ...honshikenSchool_suma_A,
   ...honshikenSchool_suma_B,
   ...schoolKokoTsukuba,
+  ...schoolTokyoWaseda,
+  ...schoolTokyoKeioChutobu,
+  ...schoolTokyoShiba,
+  ...schoolTokyoIchikawa,
+  ...schoolTodaiji,
+  ...schoolKansaiDaiichi,
+  ...schoolDoshishaKori,
+  ...schoolDoshishaJoshi,
+  ...schoolKokoGakugei,
+  ...schoolKokoRikkyoNiiza,
+  ...schoolKokoChuo,
+  ...schoolKokoAoyama,
+  ...schoolKokoDoshisha,
+  ...schoolKokoKansaiDaiichi,
+  ...schoolKokoDoshishaKori,
+  ...schoolKokoDoshishaJoshi,
   ...honshikenSchool_koko_tsukuba_A,
   ...honshikenSchool_koko_tsukuba_B,
   ...schoolKokoShibumaku,
