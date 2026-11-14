@@ -53,7 +53,7 @@ const LEVEL_GUIDE = {
 };
 
 const { jstDay: dayKey, refundDaily } = require("./_usage");
-const { assertNotDisposable, takeGlobalFree, giveBackGlobalFree } = require("./_freeGuard");
+const { assertNotDisposable, takeGlobalFree, giveBackGlobalFree, takeFreeDailyGroups, giveBackFreeDailyGroups } = require("./_freeGuard");
 
 // 無料のAI英会話（1日3回）の、全体の1日の上限。使い捨てメールで大量にアカウントを作られても、費用はここで止まる。
 // 環境変数 FREE_CAP_CONVERSATION で変えられる。
@@ -131,16 +131,24 @@ exports.chatEnglishConversation = onCall(
 
     // 無料の枠のときだけ、使い捨てメールを断り、全体の1日の上限を数える（有料の人にはかからない）
     let freeGlobalTaken = false;
+    let freeGroupRefs = [];
     if (!paid) {
       assertNotDisposable(req, "AI英会話の無料枠");
       await takeGlobalFree(db, "conversation", FREE_CONVERSATION_DAILY_CAP, "今日のAI英会話の無料枠は、受け付けを終了しました。明日また試してね。英単語Proなら、いつでも使えるよ！");
       freeGlobalTaken = true;
+      // 番号だけが違うメール・同じ端末・同じ独自ドメインでは、1日の回数を共有する
+      try {
+        freeGroupRefs = await takeFreeDailyGroups(db, req, "conversation", FREE_DAILY_LIMIT);
+      } catch (e) {
+        await giveBackGlobalFree(db, "conversation");
+        throw e;
+      }
     }
     try {
       await checkAndIncrementUsage(uid, dailyLimit);
     } catch (e) {
       // 1日3回の上限などで弾かれたときは、全体の枠を戻す
-      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
+      if (freeGlobalTaken) { await giveBackGlobalFree(db, "conversation"); await giveBackFreeDailyGroups(db, freeGroupRefs); }
       throw e;
     }
 
@@ -201,7 +209,7 @@ ${scenarioLine}
     } catch (err) {
       console.error("chatEnglishConversation: Claude API error", err);
       await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
-      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
+      if (freeGlobalTaken) { await giveBackGlobalFree(db, "conversation"); await giveBackFreeDailyGroups(db, freeGroupRefs); }
       throw new HttpsError("internal", "AIとの通信でエラーが発生しました。もう一度試してください。");
     }
 
@@ -209,7 +217,7 @@ ${scenarioLine}
     const reply = textBlock?.text?.trim() ?? "";
     if (!reply) {
       await refundDaily(db, "aiConversationUsage", uid, "day", "messagesUsed");
-      if (freeGlobalTaken) await giveBackGlobalFree(db, "conversation");
+      if (freeGlobalTaken) { await giveBackGlobalFree(db, "conversation"); await giveBackFreeDailyGroups(db, freeGroupRefs); }
       throw new HttpsError("internal", "応答の生成に失敗しました。もう一度試してください。");
     }
 
