@@ -138,7 +138,7 @@ export default function RootLayout() {
           options={{ headerShown: false, presentation: 'modal' }}
         />
       </Stack>
-      {consentChecked && showConsent && !isLegalRoute && (
+      {consentChecked && showConsent && !(isLegalRoute && Platform.OS === 'web') && (
         <ConsentModal onAgree={handleConsent} />
       )}
     </ErrorBoundary>

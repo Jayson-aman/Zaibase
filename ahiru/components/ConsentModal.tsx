@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Modal,
   View,
   Text,
   TouchableOpacity,
@@ -137,23 +136,14 @@ export default function ConsentModal({ onAgree }: Props) {
       </View>
   );
 
-  if (isWeb) {
-    return (
-      <View style={[StyleSheet.absoluteFill, styles.webOverlay]}>
-        {inner}
-      </View>
-    );
-  }
-
+  // Web でもネイティブでも、画面に重ねる View で出す。
+  // ネイティブで RN の <Modal> を使うと、「利用規約」を開く（別のモーダル画面を出す）→閉じる、で
+  // iOS のモーダルの出し入れが重なり、同意前の画面が固まる（2026/11/14 実機で確認）。
+  // View なら、規約の画面は同意画面の上に別の画面として出るだけで、出し入れが起きない。
   return (
-    <Modal
-      visible
-      animationType="slide"
-      presentationStyle="fullScreen"
-      statusBarTranslucent
-    >
+    <View style={[StyleSheet.absoluteFill, styles.webOverlay]}>
       {inner}
-    </Modal>
+    </View>
   );
 }
 
@@ -164,6 +154,7 @@ const styles = StyleSheet.create({
   },
   webOverlay: {
     zIndex: 9999,
+    elevation: 9999,
   },
   header: {
     backgroundColor: '#FFFFFF',
