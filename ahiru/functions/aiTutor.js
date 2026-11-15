@@ -39,7 +39,7 @@ const MONTHLY_SESSION_LIMIT = 18;
 const TURN_LIMIT = 6;
 
 const { jstMonth: monthKey } = require("./_usage");
-const { assertNotDisposable, claimTrialForEmail, takeGlobalFree, giveBackGlobalFree } = require("./_freeGuard");
+const { assertNotDisposable, claimFreeIdentity, takeGlobalFree, giveBackGlobalFree } = require("./_freeGuard");
 
 // 無料のAI個別指導（Opus を使う最も高い経路）の、全体の1日の上限。
 // 使い捨てメールで大量にアカウントを作られても、無料の費用はこの数で止まる。環境変数 FREE_CAP_TUTOR で変えられる。
@@ -204,8 +204,9 @@ exports.askTutor = onCall(
             "AI個別指導の無料体験（1回）は使い切りました。Maxプランにアップグレードすると月18回使えるよ！"
           );
         }
-        // 同じメール（gmail の「.」や「+別名」をそろえたもの）では、二度使わせない
-        await claimTrialForEmail(db, tx, req, "tutor");
+        // 同じメール（gmail の「.」や「+別名」をそろえたもの）・番号だけが違うメール・
+        // 同じ端末・同じ独自ドメイン・同じネットワークでは、無料体験を何度も使わせない
+        await claimFreeIdentity(db, tx, req, "tutor");
         tx.set(userRef, { trialAiUsed: true, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
       }).catch(async (e) => {
         // ここで弾かれたときは、先に数えた全体の枠を戻す

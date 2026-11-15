@@ -1,4 +1,5 @@
 import { callFirebaseFunction } from './firebaseClient';
+import { getDeviceId } from '../utils/deviceId';
 
 export type TutorRole = 'user' | 'assistant';
 export interface TutorMessage {
@@ -12,6 +13,8 @@ interface AskTutorRequest {
   history: TutorMessage[];
   sessionId: string;
   isNewSession: boolean;
+  /** 同じ端末で無料体験を何度も使われないようにするための端末ID（サーバーが数える） */
+  deviceId?: string;
 }
 
 interface AskTutorResponse {
@@ -22,7 +25,8 @@ interface AskTutorResponse {
 }
 
 export async function askTutor(params: AskTutorRequest): Promise<AskTutorResponse> {
-  return callFirebaseFunction<AskTutorRequest, AskTutorResponse>('askTutor', params);
+  const deviceId = await getDeviceId();
+  return callFirebaseFunction<AskTutorRequest, AskTutorResponse>('askTutor', { ...params, deviceId });
 }
 
 interface AddCreditsResponse { ok: true; creditsToAdd: number }
