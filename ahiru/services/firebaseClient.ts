@@ -81,24 +81,39 @@ async function ensureSignedIn(): Promise<string> {
 
 let anonSignInInFlight: Promise<string> | null = null;
 
-// Web のみ reCAPTCHA v3 で App Check を有効化。
-// ネイティブ（iOS/Android）の App Check（App Attest / Play Integrity）は
-// EAS Build でのネイティブ設定が別途必要なため未対応 — 現状はFirestoreの
-// 利用回数制限（1日5回/匿名uid）が主な不正利用対策になる。
+// Web は reCAPTCHA v3、iOS は App Attest（services/appAttest.ts・functions/appAttest.js）で App Check を有効化。
+// Android（Play Integrity）は未対応。トークンが取れない端末は、トークンなしで続ける。
+// サーバー側は、環境変数 REQUIRE_APP_CHECK_FREE=1 にするまで「無料枠にトークンを必須としない」。
 let appCheckInitialized = false;
 async function ensureAppCheck(): Promise<void> {
-  if (appCheckInitialized || Platform.OS !== 'web') return;
-  const siteKey = process.env.EXPO_PUBLIC_FIREBASE_RECAPTCHA_SITE_KEY;
-  if (!siteKey) return;
-  try {
-    const { initializeAppCheck, ReCaptchaV3Provider } = await import('firebase/app-check');
-    initializeAppCheck(getFirebaseApp(), {
-      provider: new ReCaptchaV3Provider(siteKey),
-      isTokenAutoRefreshEnabled: true,
-    });
-    appCheckInitialized = true;
-  } catch {
-    // App Check 初期化失敗時はサーバー側の enforceAppCheck で弾かれるだけなので致命的ではない
+  if (appCheckInitialized) return;
+  if (Platform.OS === 'web') {
+    const siteKey = process.env.EXPO_PUBLIC_FIREBASE_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+    try {
+      const { initializeAppCheck, ReCaptchaV3Provider } = await import('firebase/app-check');
+      initializeAppCheck(getFirebaseApp(), {
+        provider: new ReCaptchaV3Provider(siteKey),
+        isTokenAutoRefreshEnabled: true,
+      });
+      appCheckInitialized = true;
+    } catch {
+      // App Check 初期化失敗時はサーバー側で弾かれるだけなので致命的ではない
+    }
+    return;
+  }
+  if (Platform.OS === 'ios') {
+    try {
+      const { initializeAppCheck, CustomProvider } = await import('firebase/app-check');
+      const { fetchAppAttestToken } = await import('./appAttest');
+      initializeAppCheck(getFirebaseApp(), {
+        provider: new CustomProvider({ getToken: () => fetchAppAttestToken(firebaseConfig) }),
+        isTokenAutoRefreshEnabled: true,
+      });
+      appCheckInitialized = true;
+    } catch {
+      // 初期化できなくても、トークンなしで続ける
+    }
   }
 }
 

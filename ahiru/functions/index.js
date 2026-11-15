@@ -26,6 +26,12 @@ exports.speakText = tts.speakText;
 const aiConversation = require("./aiConversation");
 exports.chatEnglishConversation = aiConversation.chatEnglishConversation;
 
+// ── iOS App Attest（本物のアプリだけに App Check トークンを出す。appAttest.js の先頭を参照） ──
+const appAttest = require("./appAttest");
+exports.appAttestChallenge = appAttest.appAttestChallenge;
+exports.appAttestRegister = appAttest.appAttestRegister;
+exports.appAttestToken = appAttest.appAttestToken;
+
 // ── 全国ランキング（順位計算はサーバー側。全ユーザーの一覧を公開しないため） ──
 const ranking = require("./ranking");
 exports.getMyRanking = ranking.getMyRanking;

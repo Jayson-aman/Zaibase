@@ -13,8 +13,26 @@
 const crypto = require("crypto");
 const { HttpsError } = require("firebase-functions/v2/https");
 const { FieldValue } = require("firebase-admin/firestore");
+const logger = require("firebase-functions/logger");
 const { jstDay } = require("./_usage");
 const DISPOSABLE = new Set(require("./_disposableDomains"));
+
+/**
+ * 無料の枠は「本物のアプリ（App Check のトークンつき）」からだけ出す。
+ * 既定では【見るだけ】：トークンの有無を数えてログに出す（古いアプリはトークンを持たないので、いきなり止めない）。
+ * 環境変数 REQUIRE_APP_CHECK_FREE=1 にすると、トークンの無いリクエストの無料枠を断る。
+ * 切りかえる前に、Cloud Logging で "freeGuard appcheck" の present=false の割合が十分に減ったか確かめること。
+ */
+function requireAppCheckForFree(req, kind) {
+  const present = !!req.app;
+  logger.info("freeGuard appcheck", { kind, present });
+  if (!present && process.env.REQUIRE_APP_CHECK_FREE === "1") {
+    throw new HttpsError(
+      "failed-precondition",
+      "無料体験をお使いいただくには、アプリを最新版にアップデートしてください（正規のアプリからのみご利用いただけます）。"
+    );
+  }
+}
 
 /** メールの比べるための形にそろえる（大文字小文字・gmail の「.」と「+別名」を無視） */
 function normalizeEmail(email) {
@@ -114,6 +132,7 @@ function clientIp(req) {
  *  - 同じ端末／独自ドメイン／同じネットワークの1日 … 使えるアカウントの数が上限なら断る
  */
 async function claimFreeIdentity(db, tx, req, kind) {
+  requireAppCheckForFree(req, kind);
   const uid = req.auth.uid;
   const email = req.auth?.token?.email;
   const day = jstDay();
@@ -188,6 +207,7 @@ async function claimFreeIdentity(db, tx, req, kind) {
  * 先に数えて、あとで AI が答えられなかったら takeBack で戻す。返すのは、数えた文書の一覧。
  */
 async function takeFreeDailyGroups(db, req, kind, perPersonLimit) {
+  requireAppCheckForFree(req, kind);
   const email = req.auth?.token?.email;
   const day = jstDay();
   const groups = [];
@@ -262,6 +282,7 @@ async function giveBackGlobalFree(db, kind, day = jstDay()) {
 
 module.exports = {
   normalizeEmail, patternKey, cleanDeviceId, isDisposableEmail, assertNotDisposable,
-  claimFreeIdentity, takeFreeDailyGroups, giveBackFreeDailyGroups,
+  claimFreeIdentity,
+  requireAppCheckForFree, takeFreeDailyGroups, giveBackFreeDailyGroups,
   takeGlobalFree, giveBackGlobalFree,
 };
