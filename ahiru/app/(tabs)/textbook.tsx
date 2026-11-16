@@ -140,6 +140,8 @@ export default function TextbookScreen() {
   // 「小1の算数」への切りかえ。小1〜小3の単元は、ふつうの一覧には混ぜない
   const [lowGrade, setLowGrade] = useState<GradeKey | null>(null);
   const lowMode = lowGrade != null;
+  // 「🧠 工夫した解き方」への切りかえ（算数・数学のみ）。ふつうの一覧にも、同じ単元が入っている
+  const [kufu, setKufu] = useState(false);
   // 受験種別で絞らないと、中学受験の小学生に中1〜中3の内容が混ざって出てしまう。
   const { examType: savedExamType } = useExamType();
   const [examType, setExamType] = useState<ExamType>('chugaku');
@@ -156,14 +158,23 @@ export default function TextbookScreen() {
   // 選んだ教科×受験種別の単元だけ（約4MB）を、教科を選んでから読みこむ（読みこみ中は null）
   const chunk = useLessonChunk(selectedSubject ? `${selectedSubject}-${examType}` : null);
   const lowActive = lowMode && (selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai' || selectedSubject === 'eigo') && examType === 'chugaku';
+  const kufuActive = kufu && selectedSubject === 'sansu';
   const lessons = useMemo(
     () =>
       (chunk ?? []).filter((l) => {
+        if (kufuActive) return l.id.startsWith('kufu_');
         const g = gradeOfStudyPeriod(l.studyPeriod) ?? undefined;
         return lowActive ? g === lowGrade : !isLowGrade(g);
       }),
-    [chunk, lowActive, lowGrade],
+    [chunk, lowActive, lowGrade, kufuActive],
   );
+  // 工夫した解き方の一覧でも、単元ページと同じ位置（教科全体での順番）で、無料の範囲と鍵を判定する
+  const chunkIndexById = useMemo(() => {
+    if (!kufuActive || !chunk) return null;
+    const m = new Map<string, number>();
+    chunk.forEach((l, i) => m.set(l.id, i));
+    return m;
+  }, [kufuActive, chunk]);
 
   // 科目タイルの単元数は、前もって書き出した数（data/lesson-index.generated.ts）を使う。単元の本体は読まない。
   const subjectCounts = useMemo(() => {
@@ -175,6 +186,7 @@ export default function TextbookScreen() {
   function handleSubjectPress(key: SubjectKey) {
     // 各科目の最初のFREE_LESSON_LIMIT単元は無料で見られるため、一覧自体は
     // Pro未加入でも開ける（実際のロックは単元ごと・詳細ページ側で行う）。
+    setKufu(false);
     setSelectedSubject(key);
   }
 
@@ -197,15 +209,18 @@ export default function TextbookScreen() {
 
   // renderItemを毎回作りなおすとFlatListが全行を描き直すので、こちらもメモ化する。
   const renderLesson = useCallback(
-    ({ item, index }: { item: Lesson; index: number }) => (
-      <LessonCard
-        lesson={item}
-        idx={index}
-        locked={isLockedForBrowse(item, index, isPro, unlockedUnitIds)}
-        onPress={handleLessonPress}
-      />
-    ),
-    [isPro, unlockedUnitIds, handleLessonPress],
+    ({ item, index }: { item: Lesson; index: number }) => {
+      const idx = chunkIndexById ? (chunkIndexById.get(item.id) ?? index) : index;
+      return (
+        <LessonCard
+          lesson={item}
+          idx={idx}
+          locked={isLockedForBrowse(item, idx, isPro, unlockedUnitIds)}
+          onPress={handleLessonPress}
+        />
+      );
+    },
+    [isPro, unlockedUnitIds, handleLessonPress, chunkIndexById],
   );
 
   // 読みこみ中は「準備中」と出さない（本当に空のときだけ出す）
@@ -297,7 +312,7 @@ export default function TextbookScreen() {
       {(selectedSubject === 'sansu' || selectedSubject === 'kokugo' || selectedSubject === 'rika' || selectedSubject === 'shakai' || selectedSubject === 'eigo') && examType === 'chugaku' && (
         <View style={styles.examTypeRow}>
           {([
-            { g: null as GradeKey | null, label: 'ふつうの 単元' },
+            { g: null as GradeKey | null, k: false, label: 'ふつうの 単元' },
             ...(selectedSubject === 'eigo'
               ? [
                   { g: 'e1' as GradeKey | null, label: '🌱 小1の 英語' },
@@ -315,23 +330,59 @@ export default function TextbookScreen() {
                   { g: 'e2' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小2の 国語' : '🌱 小2の 算数' },
                   { g: 'e3' as GradeKey | null, label: selectedSubject === 'kokugo' ? '🌱 小3の 国語' : '🌱 小3の 算数' },
                 ]),
-          ]).map((t) => (
-            <TouchableOpacity
-              key={t.label}
-              style={[styles.examTypeBtn, lowGrade === t.g && styles.examTypeBtnActive]}
-              onPress={() => setLowGrade(t.g)}
-              activeOpacity={0.85}
-            >
-              <Text style={[styles.examTypeText, lowGrade === t.g && styles.examTypeTextActive]}>{t.label}</Text>
-            </TouchableOpacity>
-          ))}
+            ...(selectedSubject === 'sansu' ? [{ g: null as GradeKey | null, k: true, label: '🧠 工夫した解き方' }] : []),
+          ] as { g: GradeKey | null; k?: boolean; label: string }[]).map((t) => {
+            const active = t.k ? kufuActive : lowGrade === t.g && !kufuActive;
+            return (
+              <TouchableOpacity
+                key={t.label}
+                style={[styles.examTypeBtn, active && styles.examTypeBtnActive]}
+                onPress={() => {
+                  setKufu(!!t.k);
+                  setLowGrade(t.g);
+                }}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.examTypeText, active && styles.examTypeTextActive]}>{t.label}</Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+      )}
+
+      {/* 高校受験の数学：ふつうの単元／工夫した解き方 */}
+      {selectedSubject === 'sansu' && examType === 'koko' && (
+        <View style={styles.examTypeRow}>
+          {[
+            { k: false, label: 'ふつうの 単元' },
+            { k: true, label: '🧠 工夫した解き方' },
+          ].map((t) => {
+            const active = t.k === kufuActive;
+            return (
+              <TouchableOpacity
+                key={t.label}
+                style={[styles.examTypeBtn, active && styles.examTypeBtnActive]}
+                onPress={() => setKufu(t.k)}
+                activeOpacity={0.85}
+              >
+                <Text style={[styles.examTypeText, active && styles.examTypeTextActive]}>{t.label}</Text>
+              </TouchableOpacity>
+            );
+          })}
         </View>
       )}
 
       {/* Lesson List */}
       {selectedSubject != null && (
         <Text style={styles.lessonListTitle}>
-          {subjectLabel(selectedSubject, examType)} の単元一覧
+          {kufuActive
+            ? `${subjectLabel(selectedSubject, examType)}：工夫した解き方`
+            : `${subjectLabel(selectedSubject, examType)} の単元一覧`}
+        </Text>
+      )}
+      {kufuActive && (
+        <Text style={styles.kufuNote}>
+          計算や図形の、くふうした解き方を集めました。ふつうの単元の一覧にも、同じ単元が入っています。
         </Text>
       )}
       {showLoading && (
@@ -348,7 +399,7 @@ export default function TextbookScreen() {
       )}
     </View>
     ),
-    [isPro, examType, selectedSubject, subjectCounts, showEmpty, showLoading, lowMode],
+    [isPro, examType, selectedSubject, subjectCounts, showEmpty, showLoading, lowMode, lowGrade, kufuActive],
   );
 
   if (loading) {
@@ -430,6 +481,7 @@ const styles = StyleSheet.create({
   },
   proBannerText: { fontSize: 12, color: '#FEF3C7', fontWeight: '700' },
   proBannerNote: { fontSize: 12, color: '#FEF3C7', fontWeight: '500', lineHeight: 19, marginTop: 4 },
+  kufuNote: { fontSize: 13, color: '#6E645C', fontWeight: '600', lineHeight: 20, marginHorizontal: 16, marginBottom: 8 },
   sectionLabel: {
     fontSize: 12,
     fontWeight: '800',
