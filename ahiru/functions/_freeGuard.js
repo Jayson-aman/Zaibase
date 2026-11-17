@@ -34,6 +34,27 @@ function requireAppCheckForFree(req, kind) {
   }
 }
 
+/**
+ * 無料の枠は「メールの持ち主の確認が済んだアカウント」にだけ出す（実在しない・他人のメールでの登録を防ぐ）。
+ * 既定では【見るだけ】：確認済みかどうかを数えてログに出す（今のアプリは、確認メールを送らないので、いきなり止めない）。
+ * 環境変数 REQUIRE_EMAIL_VERIFIED_FREE=1 にすると、確認が済んでいないアカウントの無料枠を断る。
+ * 切りかえる前に、新しいアプリ（確認メールの案内つき）が広まったか、Cloud Logging の
+ * "freeGuard emailverified" の verified=false の割合で確かめること。
+ * Google・Apple ログインを足したときは、提供元が確認済みとして返すので、そのまま通る。
+ */
+function requireVerifiedEmailForFree(req, kind) {
+  const email = req.auth?.token?.email;
+  if (!email) return; // メールのない（匿名の）アカウントは、別の仕組み（匿名には無料を出さない）で止まる
+  const verified = req.auth?.token?.email_verified === true;
+  logger.info("freeGuard emailverified", { kind, verified });
+  if (!verified && process.env.REQUIRE_EMAIL_VERIFIED_FREE === "1") {
+    throw new HttpsError(
+      "failed-precondition",
+      "無料体験をお使いいただくには、メールアドレスの確認が必要です。登録したメールに届いた確認のリンクを押してください（「学習の記録」画面の「確認しました」からも確認できます）。"
+    );
+  }
+}
+
 /** メールの比べるための形にそろえる（大文字小文字・gmail の「.」と「+別名」を無視） */
 function normalizeEmail(email) {
   const e = String(email || "").trim().toLowerCase();
@@ -133,6 +154,7 @@ function clientIp(req) {
  */
 async function claimFreeIdentity(db, tx, req, kind) {
   requireAppCheckForFree(req, kind);
+  requireVerifiedEmailForFree(req, kind);
   const uid = req.auth.uid;
   const email = req.auth?.token?.email;
   const day = jstDay();
@@ -208,6 +230,7 @@ async function claimFreeIdentity(db, tx, req, kind) {
  */
 async function takeFreeDailyGroups(db, req, kind, perPersonLimit) {
   requireAppCheckForFree(req, kind);
+  requireVerifiedEmailForFree(req, kind);
   const email = req.auth?.token?.email;
   const day = jstDay();
   const groups = [];
@@ -283,6 +306,6 @@ async function giveBackGlobalFree(db, kind, day = jstDay()) {
 module.exports = {
   normalizeEmail, patternKey, cleanDeviceId, isDisposableEmail, assertNotDisposable,
   claimFreeIdentity,
-  requireAppCheckForFree, takeFreeDailyGroups, giveBackFreeDailyGroups,
+  requireAppCheckForFree, requireVerifiedEmailForFree, takeFreeDailyGroups, giveBackFreeDailyGroups,
   takeGlobalFree, giveBackGlobalFree,
 };

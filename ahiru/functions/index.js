@@ -31,6 +31,7 @@ const appAttest = require("./appAttest");
 exports.appAttestChallenge = appAttest.appAttestChallenge;
 exports.appAttestRegister = appAttest.appAttestRegister;
 exports.appAttestToken = appAttest.appAttestToken;
+exports.cleanupAppAttestChallenges = appAttest.cleanupAppAttestChallenges;
 
 // ── 全国ランキング（順位計算はサーバー側。全ユーザーの一覧を公開しないため） ──
 const ranking = require("./ranking");

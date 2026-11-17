@@ -25,6 +25,7 @@
  */
 const crypto = require("crypto");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
+const { onSchedule } = require("firebase-functions/v2/scheduler");
 const logger = require("firebase-functions/logger");
 const admin = require("firebase-admin");
 const { FieldValue, Timestamp } = require("firebase-admin/firestore");
@@ -264,5 +265,28 @@ exports.appAttestToken = onCall({ region: "asia-northeast1" }, async (req) => {
   const { token } = await admin.appCheck().createToken(cfg.appCheckAppId, { ttlMillis });
   return { token, ttlMillis };
 });
+
+/**
+ * 期限の過ぎた challenge を、6 時間ごとに消す。
+ * appAttestChallenge はログインなしで呼べるので、大量に呼ばれても、データが溜まり続けないようにする。
+ * （Firestore の TTL ポリシーを設定しなくても、これで消える。TTL を設定した場合は、二重になるだけで害はない。）
+ */
+exports.cleanupAppAttestChallenges = onSchedule(
+  { schedule: "every 6 hours", region: "asia-northeast1", timeZone: "Asia/Tokyo" },
+  async () => {
+    const col = db().collection("appAttestChallenges");
+    let removed = 0;
+    for (let round = 0; round < 20; round++) {
+      const snap = await col.where("expiresAt", "<", Timestamp.now()).limit(400).get();
+      if (snap.empty) break;
+      const batch = db().batch();
+      snap.docs.forEach((d) => batch.delete(d.ref));
+      await batch.commit();
+      removed += snap.size;
+      if (snap.size < 400) break;
+    }
+    logger.info("appAttest: expired challenges removed", { removed });
+  }
+);
 
 exports._test = { cborDecode, verifyAttestation, verifyAssertion, extractNonceFromCert, APPLE_ROOT_PEM };

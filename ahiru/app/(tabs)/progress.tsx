@@ -21,7 +21,15 @@ import { fetchMyRanking, RankingResult } from '../../services/ranking';
 import Paywall from '../../components/Paywall';
 import SubjectIcon from '../../components/SubjectIcon';
 import { useAuthUser } from '../../hooks/useAuthUser';
-import { signOutUser, deleteAccount, AuthError, ReauthRequired } from '../../services/auth';
+import {
+  signOutUser,
+  deleteAccount,
+  AuthError,
+  ReauthRequired,
+  resendVerificationEmail,
+  getEmailVerifiedLocal,
+  refreshEmailVerified,
+} from '../../services/auth';
 import { alertCompat } from '../../utils/dialog';
 
 const SUBJECTS: SubjectKey[] = ['sansu', 'kokugo', 'rika', 'shakai', 'eigo'];
@@ -32,6 +40,55 @@ function AccountCard({ onChanged }: { onChanged: () => void }) {
   const [pw, setPw] = useState('');
   const [deleting, setDeleting] = useState(false);
   const [loggingOut, setLoggingOut] = useState(false);
+  // メールの持ち主の確認（確認メールのリンクを押したか）。null は、まだ分かっていない／ログインしていない。
+  const [verified, setVerified] = useState<boolean | null>(null);
+  const [verifyBusy, setVerifyBusy] = useState(false);
+  useEffect(() => {
+    if (!isLoggedIn) {
+      setVerified(null);
+      return;
+    }
+    let alive = true;
+    getEmailVerifiedLocal().then((v) => {
+      if (alive) setVerified(v);
+    });
+    // リンクを押したあとに画面に戻ってきたときのために、静かに最新にしておく
+    refreshEmailVerified()
+      .then((v) => {
+        if (alive) setVerified(v);
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [isLoggedIn]);
+
+  async function handleResendVerification() {
+    if (verifyBusy) return;
+    setVerifyBusy(true);
+    try {
+      await resendVerificationEmail();
+      alertCompat('確認メールを送りました', 'メールに届いたリンクを押してから、「確認しました」を押してください。届かないときは、迷惑メールのフォルダーも見てください。');
+    } catch (e: any) {
+      alertCompat('送れませんでした', e instanceof AuthError ? e.message : 'しばらくしてから、もう一度お試しください。');
+    } finally {
+      setVerifyBusy(false);
+    }
+  }
+
+  async function handleCheckVerified() {
+    if (verifyBusy) return;
+    setVerifyBusy(true);
+    try {
+      const v = await refreshEmailVerified();
+      setVerified(v);
+      alertCompat(v ? '確認できました' : 'まだ確認できません', v ? 'ありがとうございます。AI の無料体験などを、お使いいただけます。' : 'メールのリンクを押したあとで、もう一度押してください。');
+    } catch {
+      alertCompat('確認できませんでした', '通信状況を確認して、もう一度お試しください。');
+    } finally {
+      setVerifyBusy(false);
+    }
+  }
 
   async function handleLogout() {
     alertCompat('ログアウト', 'ログアウトしますか？', [
@@ -102,6 +159,22 @@ function AccountCard({ onChanged }: { onChanged: () => void }) {
         <Text style={styles.accountLabel}>ログイン中</Text>
         <Text style={styles.accountEmail}>{email ?? 'アカウント'}</Text>
         <Text style={styles.accountNote}>ご購入内容は、同じアカウントでログインすれば別の端末でも引き継げます。</Text>
+        {verified === false && (
+          <View style={styles.verifyBox}>
+            <Text style={styles.verifyTitle}>メールアドレスの確認がまだです</Text>
+            <Text style={styles.verifyText}>
+              登録したメールアドレスに、確認のメールを送りました。メールのリンクを押してください。確認が済むと、AI の無料体験などをお使いいただけます（学習の記録や、買った内容は、そのままお使いいただけます）。
+            </Text>
+            <View style={styles.verifyRow}>
+              <TouchableOpacity style={styles.verifyBtn} onPress={handleResendVerification} disabled={verifyBusy} activeOpacity={0.85}>
+                <Text style={styles.verifyBtnText}>メールを再送</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[styles.verifyBtn, styles.verifyBtnMain]} onPress={handleCheckVerified} disabled={verifyBusy} activeOpacity={0.85}>
+                <Text style={[styles.verifyBtnText, styles.verifyBtnMainText]}>確認しました</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        )}
         <TouchableOpacity style={styles.accountLogout} onPress={handleLogout} activeOpacity={0.85}>
           <Text style={styles.accountLogoutText}>ログアウト</Text>
         </TouchableOpacity>
@@ -580,6 +653,14 @@ const styles = StyleSheet.create({
   accountLabel: { fontSize: 12, color: '#B5622E', fontWeight: '700' },
   accountEmail: { fontSize: 16, color: '#2B2420', fontWeight: '700', marginTop: 4 },
   accountNote: { fontSize: 12, color: '#6E645C', marginTop: 6, lineHeight: 18 },
+  verifyBox: { marginTop: 10, padding: 12, borderRadius: 10, backgroundColor: '#FFF7E6', borderWidth: 1, borderColor: '#F5D79A' },
+  verifyTitle: { fontSize: 13, fontWeight: '800', color: '#7A4B00', marginBottom: 4 },
+  verifyText: { fontSize: 12, color: '#6E645C', lineHeight: 18 },
+  verifyRow: { flexDirection: 'row', gap: 8, marginTop: 10 },
+  verifyBtn: { flex: 1, paddingVertical: 9, borderRadius: 8, borderWidth: 1, borderColor: '#D9A441', alignItems: 'center', backgroundColor: '#FFFFFF' },
+  verifyBtnText: { fontSize: 13, fontWeight: '700', color: '#7A4B00' },
+  verifyBtnMain: { backgroundColor: '#D9A441' },
+  verifyBtnMainText: { color: '#FFFFFF' },
   accountLogout: { marginTop: 12, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, backgroundColor: '#F5EFE4' },
   accountLogoutText: { color: '#6E645C', fontWeight: '700', fontSize: 14 },
   accountDelete: { marginTop: 8, alignSelf: 'flex-start', paddingVertical: 8, paddingHorizontal: 16, borderRadius: 10, borderWidth: 1, borderColor: '#FCA5A5' },

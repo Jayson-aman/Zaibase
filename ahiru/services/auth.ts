@@ -97,6 +97,51 @@ function localKeyOf(u: { uid: string; isAnonymous: boolean } | null | undefined)
   return u && !u.isAnonymous ? u.uid : 'anon';
 }
 
+/** 確認メールを送る（登録の直後に、あとから失敗しても登録は止めない） */
+async function sendVerificationQuietly(user: any): Promise<void> {
+  try {
+    const auth = await getFirebaseAuth();
+    (auth as any).languageCode = 'ja';
+    const { sendEmailVerification } = await import('firebase/auth');
+    await sendEmailVerification(user);
+  } catch {
+    // 送れなくても、あとで画面から再送できる
+  }
+}
+
+/** 確認メールをもう一度送る */
+export async function resendVerificationEmail(): Promise<void> {
+  const auth = await getFirebaseAuth();
+  const u = auth.currentUser;
+  if (!u || u.isAnonymous) throw new AuthError('ログインしていません。');
+  try {
+    (auth as any).languageCode = 'ja';
+    const { sendEmailVerification } = await import('firebase/auth');
+    await sendEmailVerification(u);
+  } catch (e: any) {
+    throw new AuthError(friendlyError(e?.code));
+  }
+}
+
+/** いま端末が知っている「メール確認済み」か（通信なし）。ログインしていなければ null。 */
+export async function getEmailVerifiedLocal(): Promise<boolean | null> {
+  if (!isFirebaseConfigured()) return null;
+  const auth = await getFirebaseAuth();
+  const u = auth.currentUser;
+  if (!u || u.isAnonymous) return null;
+  return !!u.emailVerified;
+}
+
+/** サーバーに問い合わせて、確認済みかを最新にする（メールのリンクを押したあとに呼ぶ）。サーバー側の判定にも反映する。 */
+export async function refreshEmailVerified(): Promise<boolean> {
+  const auth = await getFirebaseAuth();
+  const u = auth.currentUser;
+  if (!u || u.isAnonymous) return false;
+  await u.reload();
+  await u.getIdToken(true);
+  return !!u.emailVerified;
+}
+
 export async function signUpEmail(email: string, password: string): Promise<AuthUser> {
   if (!isFirebaseConfigured()) throw new AuthError('この機能は準備中です');
   // 使い捨てメールでの登録は断る（無料のAI体験を、何度も作り直して使われるのを防ぐ）
@@ -114,12 +159,14 @@ export async function signUpEmail(email: string, password: string): Promise<Auth
       await identifyUser(cred.user.uid);
       const linked = toAuthUser(cred.user);
       authListeners.forEach((l) => l(linked));
+      void sendVerificationQuietly(cred.user);
       return linked;
     }
     const before = localKeyOf(current);
     const cred = await createUserWithEmailAndPassword(auth, email.trim(), password);
     await swapLocalUserData(before, localKeyOf(cred.user));
     await identifyUser(cred.user.uid);
+    void sendVerificationQuietly(cred.user);
     return toAuthUser(cred.user);
   } catch (e: any) {
     throw new AuthError(friendlyError(e?.code));
