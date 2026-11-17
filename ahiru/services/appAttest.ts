@@ -43,8 +43,29 @@ async function registerKey(config: object, AI: typeof import('@expo/app-integrit
   return keyId;
 }
 
+// 同時に何度も呼ばれると、鍵が何個も作られる。進行中の 1 回を共有する。
+let inFlight: Promise<{ token: string; expireTimeMillis: number }> | null = null;
+
 /** App Check トークンを取る。取れないときは例外（呼び出し側がトークンなしで続ける） */
-export async function fetchAppAttestToken(config: object): Promise<{ token: string; expireTimeMillis: number }> {
+export function fetchAppAttestToken(config: object): Promise<{ token: string; expireTimeMillis: number }> {
+  if (!inFlight) {
+    const p = fetchOnce(config);
+    const clear = () => {
+      if (inFlight === p) inFlight = null;
+    };
+    p.then(clear, clear);
+    inFlight = p;
+  }
+  return inFlight;
+}
+
+/** 通信の失敗（つながらない・時間切れ）か。鍵のせいではないので、鍵は作りなおさない */
+function isNetworkError(e: any): boolean {
+  const code = String(e?.code ?? '');
+  return /functions\/(unavailable|deadline-exceeded|internal|resource-exhausted|cancelled|unknown)/.test(code);
+}
+
+async function fetchOnce(config: object): Promise<{ token: string; expireTimeMillis: number }> {
   if (Platform.OS !== 'ios') throw new Error('unsupported');
   if (Date.now() - lastFailAt < FAIL_COOLDOWN_MS) throw new Error('cooldown');
   try {
@@ -61,8 +82,9 @@ export async function fetchAppAttestToken(config: object): Promise<{ token: stri
     try {
       res = await tryToken(keyId);
     } catch (e: any) {
-      // サーバーに鍵が無い・鍵が壊れている → 作りなおして一度だけやりなおす
-      if (!/not-found|permission-denied/.test(String(e?.code ?? e?.message ?? ''))) throw e;
+      // 鍵が使えない（サーバーに無い・端末にもう無い〔機種変更・バックアップからの復元など〕・壊れている）
+      // → 作りなおして一度だけやりなおす。通信の失敗のときは、鍵はそのままにする。
+      if (isNetworkError(e)) throw e;
       await AsyncStorage.removeItem(KEY_STORE);
       keyId = await registerKey(config, AI);
       res = await tryToken(keyId);
