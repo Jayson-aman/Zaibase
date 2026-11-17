@@ -38,6 +38,8 @@ import { lessonsKufu9 } from './lessons-kufu9';
 import { lessonsKufu10 } from './lessons-kufu10';
 import { lessonsKufu11 } from './lessons-kufu11';
 import { lessonsKufu12 } from './lessons-kufu12';
+import { lessonsKufu13 } from './lessons-kufu13';
+import { lessonsKufu14 } from './lessons-kufu14';
 import { lessonsKoushikiC1Menseki } from './lessons-koushiki-c1menseki';
 import { lessonsKoushikiC2En } from './lessons-koushiki-c2en';
 import { lessonsKoushikiC3Tairyoku1 } from './lessons-koushiki-c3tairyoku1';
@@ -7461,5 +7463,7 @@ export const sansuLessons: Lesson[] = [
   ...lessonsKufu10.filter((l) => l.examType !== 'koko'),
   ...lessonsKufu11.filter((l) => l.examType !== 'koko'),
   ...lessonsKufu12.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu13.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu14.filter((l) => l.examType !== 'koko'),
   ...lessonsRitsumeikan_sansu,
 ];

@@ -22,6 +22,8 @@ import { lessonsKufu8 } from './lessons-kufu8';
 import { lessonsKufu9 } from './lessons-kufu9';
 import { lessonsKufu11 } from './lessons-kufu11';
 import { lessonsKufu12 } from './lessons-kufu12';
+import { lessonsKufu13 } from './lessons-kufu13';
+import { lessonsKufu14 } from './lessons-kufu14';
 import { lessonsKoushikiK2Heikou } from './lessons-koushiki-k2heikou';
 import { lessonsKoushikiK4En1 } from './lessons-koushiki-k4en1';
 import { lessonsKoushikiK5En2 } from './lessons-koushiki-k5en2';
@@ -5264,6 +5266,8 @@ export const kokoMathLessons: Lesson[] = [
   ...lessonsKufu9.filter((l) => l.examType === 'koko'),
   ...lessonsKufu11.filter((l) => l.examType === 'koko'),
   ...lessonsKufu12.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu13.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu14.filter((l) => l.examType === 'koko'),
   ...lessonsKoushikiK2Heikou,
   ...lessonsKoushikiK4En1,
   ...lessonsKoushikiK5En2,
