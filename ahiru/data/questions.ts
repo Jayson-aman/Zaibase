@@ -528,6 +528,7 @@ import { gradeJ1EigoQuestions } from './grade_j1_eigo';
 import { gradeJ2EigoQuestions } from './grade_j2_eigo';
 import { gradeJ2ShakaiRekishiQuestions } from './grade_j2_shakai_rekishi';
 import { gradeJ3SansuKimatsuQuestions } from './grade_j3_sansu_kimatsu';
+import { gradeJ1SansuKimatsuQuestions } from './grade_j1_sansu_kimatsu';
 import { gradeJ2KokugoDoushiQuestions } from './grade_j2_kokugo_doushi';
 import { gradeE6EigoQuestions } from './grade_e6_eigo';
 import { gradeJ3EigoQuestions } from './grade_j3_eigo';
@@ -4415,6 +4416,7 @@ const baseQuestions: Question[] = [
   ...gradeJ2EigoQuestions,
   ...gradeJ2ShakaiRekishiQuestions,
   ...gradeJ3SansuKimatsuQuestions,
+  ...gradeJ1SansuKimatsuQuestions,
   ...gradeJ2KokugoDoushiQuestions,
   ...gradeE6EigoQuestions,
   ...gradeJ3EigoQuestions,
