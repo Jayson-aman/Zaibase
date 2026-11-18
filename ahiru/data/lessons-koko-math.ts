@@ -26,6 +26,20 @@ import { lessonsKufu13 } from './lessons-kufu13';
 import { lessonsKufu14 } from './lessons-kufu14';
 import { lessonsKufu15 } from './lessons-kufu15';
 import { lessonsKufu16 } from './lessons-kufu16';
+import { lessonsKufu20 } from './lessons-kufu20';
+import { lessonsKufu21 } from './lessons-kufu21';
+import { lessonsKufu22 } from './lessons-kufu22';
+import { lessonsKufu23 } from './lessons-kufu23';
+import { lessonsKufu24 } from './lessons-kufu24';
+import { lessonsKufu25 } from './lessons-kufu25';
+import { lessonsKufu26 } from './lessons-kufu26';
+import { lessonsKufu27 } from './lessons-kufu27';
+import { lessonsKufu28 } from './lessons-kufu28';
+import { lessonsKufu29 } from './lessons-kufu29';
+import { lessonsKufu30 } from './lessons-kufu30';
+import { lessonsKufu31 } from './lessons-kufu31';
+import { lessonsKufu32 } from './lessons-kufu32';
+import { lessonsKufu33 } from './lessons-kufu33';
 import { lessonsKoushikiK2Heikou } from './lessons-koushiki-k2heikou';
 import { lessonsKoushikiK4En1 } from './lessons-koushiki-k4en1';
 import { lessonsKoushikiK5En2 } from './lessons-koushiki-k5en2';
@@ -5272,6 +5286,20 @@ export const kokoMathLessons: Lesson[] = [
   ...lessonsKufu14.filter((l) => l.examType === 'koko'),
   ...lessonsKufu15.filter((l) => l.examType === 'koko'),
   ...lessonsKufu16.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu20,
+  ...lessonsKufu21,
+  ...lessonsKufu22,
+  ...lessonsKufu23,
+  ...lessonsKufu24,
+  ...lessonsKufu25,
+  ...lessonsKufu26,
+  ...lessonsKufu27,
+  ...lessonsKufu28,
+  ...lessonsKufu29,
+  ...lessonsKufu30,
+  ...lessonsKufu31,
+  ...lessonsKufu32,
+  ...lessonsKufu33,
   ...lessonsKoushikiK2Heikou,
   ...lessonsKoushikiK4En1,
   ...lessonsKoushikiK5En2,
