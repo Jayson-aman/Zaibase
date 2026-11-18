@@ -2033,6 +2033,7 @@ export const LESSON_CHUNK: Record<string, string> = {
   "kufu_342": "sansu-koko",
   "kufu_343": "sansu-koko",
   "kufu_344": "sansu-koko",
+  "kufu_345": "sansu-koko",
   "u120_j1_sansu_001": "sansu-koko",
   "u120_j1_sansu_002": "sansu-koko",
   "u120_j1_sansu_003": "sansu-koko",
@@ -9059,7 +9060,7 @@ export const LESSON_CHUNK: Record<string, string> = {
 
 export const LESSON_COUNTS: Record<string, number> = {
   "sansu|chugaku": 948,
-  "sansu|koko": 935,
+  "sansu|koko": 936,
   "kokugo|chugaku": 711,
   "kokugo|koko": 783,
   "rika|chugaku": 695,

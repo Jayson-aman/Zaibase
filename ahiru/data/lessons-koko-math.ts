@@ -43,6 +43,7 @@ import { lessonsKufu33 } from './lessons-kufu33';
 import { lessonsKufu35 } from './lessons-kufu35';
 import { lessonsKufu36 } from './lessons-kufu36';
 import { lessonsKufu37 } from './lessons-kufu37';
+import { lessonsKufu38 } from './lessons-kufu38';
 import { lessonsKoushikiK2Heikou } from './lessons-koushiki-k2heikou';
 import { lessonsKoushikiK4En1 } from './lessons-koushiki-k4en1';
 import { lessonsKoushikiK5En2 } from './lessons-koushiki-k5en2';
@@ -5306,6 +5307,7 @@ export const kokoMathLessons: Lesson[] = [
   ...lessonsKufu35,
   ...lessonsKufu36,
   ...lessonsKufu37,
+  ...lessonsKufu38,
   ...lessonsKoushikiK2Heikou,
   ...lessonsKoushikiK4En1,
   ...lessonsKoushikiK5En2,
