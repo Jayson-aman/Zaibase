@@ -21,6 +21,7 @@ import SubjectIcon from './SubjectIcon';
 import { getHistoryThemeLabel } from '../data/images';
 import { explanationText, hintText } from '../utils/explanation';
 import ExplanationSlides from './ExplanationSlides';
+import SolutionSlides from './SolutionSlides';
 import { getQuickTrick } from '../data/quick-tricks';
 import { getSubjectThemeLabel, getSubjectIllustration } from '../data/subjectImages';
 import { figuresModule } from '../data/figures-lazy';
@@ -276,6 +277,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <ExplanationSlides key={question.id} q={question} />
+              <SolutionSlides questionId={question.id} note={question.id.startsWith('grade_j2_sansu_chuukan_') ? '同じ型の問題のスライドです（数値は、この問題とちがいます）。' : undefined} />
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}
@@ -380,6 +382,7 @@ export default function QuizCard({ question, onReveal, choices, onChoiceSelect, 
             <View style={styles.hintBox}>
               <Text style={styles.hintLabel}>📖 解説</Text>
               <ExplanationSlides key={question.id} q={question} />
+              <SolutionSlides questionId={question.id} note={question.id.startsWith('grade_j2_sansu_chuukan_') ? '同じ型の問題のスライドです（数値は、この問題とちがいます）。' : undefined} />
               {hintText(question) !== '' && (
                 <Text style={styles.hintText}>💡 {rich(hintText(question))}</Text>
               )}

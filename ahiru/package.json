@@ -4,6 +4,7 @@
   "main": "index.ts",
   "dependencies": {
     "@expo-google-fonts/biz-udgothic": "^0.4.0",
+    "@expo/app-integrity": "56.0.3",
     "@expo/metro-runtime": "^56.0.16",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@revenuecat/purchases-js": "^1.47.0",

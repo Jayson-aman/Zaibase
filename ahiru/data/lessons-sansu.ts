@@ -26,6 +26,23 @@ import { lessonsU120E1Sansu } from './lessons-u120-e1-sansu';
 import { lessonsU120E2Sansu } from './lessons-u120-e2-sansu';
 import { lessonsU120E3Sansu } from './lessons-u120-e3-sansu';
 import { lessonsU120CalcTrivia } from './lessons-calc-trivia';
+import { lessonsKufu } from './lessons-kufu';
+import { lessonsKufu2 } from './lessons-kufu2';
+import { lessonsKufu3 } from './lessons-kufu3';
+import { lessonsKufu4 } from './lessons-kufu4';
+import { lessonsKufu5 } from './lessons-kufu5';
+import { lessonsKufu6 } from './lessons-kufu6';
+import { lessonsKufu7 } from './lessons-kufu7';
+import { lessonsKufu8 } from './lessons-kufu8';
+import { lessonsKufu9 } from './lessons-kufu9';
+import { lessonsKufu10 } from './lessons-kufu10';
+import { lessonsKufu11 } from './lessons-kufu11';
+import { lessonsKufu12 } from './lessons-kufu12';
+import { lessonsKufu13 } from './lessons-kufu13';
+import { lessonsKufu14 } from './lessons-kufu14';
+import { lessonsKufu15 } from './lessons-kufu15';
+import { lessonsKufu16 } from './lessons-kufu16';
+import { lessonsKufu34 } from './lessons-kufu34';
 import { lessonsKoushikiC1Menseki } from './lessons-koushiki-c1menseki';
 import { lessonsKoushikiC2En } from './lessons-koushiki-c2en';
 import { lessonsKoushikiC3Tairyoku1 } from './lessons-koushiki-c3tairyoku1';
@@ -7437,5 +7454,22 @@ export const sansuLessons: Lesson[] = [
   ...lessonsU120E6Sansu,
   ...lessonsU120J1Sansu,
   ...lessonsU120CalcTrivia,
+  ...lessonsKufu.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu2.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu3.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu4.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu5.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu6.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu7.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu8.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu9.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu10.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu11.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu12.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu13.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu14.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu15.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu16.filter((l) => l.examType !== 'koko'),
+  ...lessonsKufu34,
   ...lessonsRitsumeikan_sansu,
 ];

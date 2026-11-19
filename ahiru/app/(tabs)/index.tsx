@@ -21,6 +21,7 @@ import { useSubscription } from '../../hooks/useSubscription';
 import PlanStatusBanner from '../../components/PlanStatusBanner';
 import FreeUpgradeCard from '../../components/FreeUpgradeCard';
 import StudyStartCard from '../../components/StudyStartCard';
+import ExamCountdownCard from '../../components/ExamCountdownCard';
 import { subjectInfo, type SubjectKey } from '../../data/questions-meta';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import { COUNTS_BY_COURSE, COUNTS_GENERAL } from '../../data/question-counts.generated';
@@ -319,6 +320,9 @@ export default function HomeScreen() {
 
         {/* はじめての人には「はじめの5問」、続けている人には連続日数と今日の目標 */}
         {!listenPickerActive && <StudyStartCard examType={examType} />}
+
+        {/* 入試の日を決めた人には「あと◯日」、決めていない人には小さな入口 */}
+        {!listenPickerActive && <ExamCountdownCard examType={examType} />}
 
         {/* まず読んで学ぶところ（教科書・公式集）を一番上に置く。
             問題を解く前に開く場所なので、下のタブではなくここから入る。 */}

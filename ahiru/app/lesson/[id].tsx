@@ -23,6 +23,7 @@ import LessonRenderer from '../../components/LessonRenderer';
 import FigureView from '../../components/FigureView';
 import InlineQuiz, { questionsToQuizItems } from '../../components/InlineQuiz';
 import ReviewBlocks from '../../components/ReviewBlocks';
+import SolutionSlides from '../../components/SolutionSlides';
 import { getRelatedQuestions } from '../../data/lesson-questions';
 import { useSubjectQuestions } from '../../hooks/useSubjectQuestions';
 import VideoPlayer from '../../components/VideoPlayer';
@@ -275,6 +276,7 @@ export default function LessonDetailScreen() {
               excludeHeadings={lesson.sections.map((x) => x.heading ?? '')}
               max={2}
             />
+            <SolutionSlides lessonId={lesson.id} />
             <LessonRenderer
               sections={trialSections(lesson.sections)}
               isMax={false}
@@ -391,6 +393,7 @@ export default function LessonDetailScreen() {
               excludeHeadings={lesson.sections.map((x) => x.heading ?? '')}
               max={2}
             />
+            <SolutionSlides lessonId={lesson.id} />
             <LessonRenderer
               sections={lesson.sections}
               isMax={isMax}

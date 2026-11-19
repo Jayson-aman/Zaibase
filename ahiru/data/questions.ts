@@ -527,6 +527,20 @@ import { gradeJ3KokugoQuestions } from './grade_j3_kokugo';
 import { gradeJ1EigoQuestions } from './grade_j1_eigo';
 import { gradeJ2EigoQuestions } from './grade_j2_eigo';
 import { gradeJ2ShakaiRekishiQuestions } from './grade_j2_shakai_rekishi';
+import { gradeJ3SansuKimatsuQuestions } from './grade_j3_sansu_kimatsu';
+import { gradeJ1SansuKimatsuQuestions } from './grade_j1_sansu_kimatsu';
+import { gradeJ2SansuKimatsuQuestions } from './grade_j2_sansu_kimatsu';
+import { gradeJ2SansuChuukanQuestions } from './grade_j2_sansu_chuukan';
+import { gradeJ2SansuHeikousenQuestions } from './grade_j2_sansu_heikousen';
+import { gradeJ3SansuHenniQuestions } from './grade_j3_sansu_henni';
+import { gradeJ2SansuBunsuuQuestions } from './grade_j2_sansu_bunsuu';
+import { gradeJ3SansuWabunQuestions } from './grade_j3_sansu_wabun';
+import { gradeJ3SansuHobutsuQuestions } from './grade_j3_sansu_hobutsu';
+import { gradeJ3SansuRootQuestions } from './grade_j3_sansu_root';
+import { gradeJ2SansuYajiriQuestions } from './grade_j2_sansu_yajiri';
+import { gradeJ3SansuTokyoQuestions } from './grade_j3_sansu_tokyo';
+import { gradeJ3ShakaiTohQuestions } from './grade_j3_shakai_toh';
+import { gradeJ3ShakaiKouminQuestions } from './grade_j3_shakai_koumin';
 import { gradeJ2KokugoDoushiQuestions } from './grade_j2_kokugo_doushi';
 import { gradeE6EigoQuestions } from './grade_e6_eigo';
 import { gradeJ3EigoQuestions } from './grade_j3_eigo';
@@ -4413,6 +4427,20 @@ const baseQuestions: Question[] = [
   ...gradeJ1EigoQuestions,
   ...gradeJ2EigoQuestions,
   ...gradeJ2ShakaiRekishiQuestions,
+  ...gradeJ3SansuKimatsuQuestions,
+  ...gradeJ1SansuKimatsuQuestions,
+  ...gradeJ2SansuKimatsuQuestions,
+  ...gradeJ2SansuChuukanQuestions,
+  ...gradeJ2SansuHeikousenQuestions,
+  ...gradeJ3SansuHenniQuestions,
+  ...gradeJ2SansuBunsuuQuestions,
+  ...gradeJ3SansuWabunQuestions,
+  ...gradeJ3SansuHobutsuQuestions,
+  ...gradeJ3SansuRootQuestions,
+  ...gradeJ2SansuYajiriQuestions,
+  ...gradeJ3SansuTokyoQuestions,
+  ...gradeJ3ShakaiTohQuestions,
+  ...gradeJ3ShakaiKouminQuestions,
   ...gradeJ2KokugoDoushiQuestions,
   ...gradeE6EigoQuestions,
   ...gradeJ3EigoQuestions,

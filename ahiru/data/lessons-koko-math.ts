@@ -12,6 +12,39 @@ import { kokoMathExt10Lessons } from './lessons-koko-math-ext10';
 import { kokoMathExt11Lessons } from './lessons-koko-math-ext11';
 import { kokoMathExt12Lessons } from './lessons-koko-math-ext12';
 import { kokoMathNewGrade10Lessons } from './lessons-koko-math-newgrade10';
+import { lessonsKufu } from './lessons-kufu';
+import { lessonsKufu2 } from './lessons-kufu2';
+import { lessonsKufu3 } from './lessons-kufu3';
+import { lessonsKufu4 } from './lessons-kufu4';
+import { lessonsKufu5 } from './lessons-kufu5';
+import { lessonsKufu7 } from './lessons-kufu7';
+import { lessonsKufu8 } from './lessons-kufu8';
+import { lessonsKufu9 } from './lessons-kufu9';
+import { lessonsKufu11 } from './lessons-kufu11';
+import { lessonsKufu12 } from './lessons-kufu12';
+import { lessonsKufu13 } from './lessons-kufu13';
+import { lessonsKufu14 } from './lessons-kufu14';
+import { lessonsKufu15 } from './lessons-kufu15';
+import { lessonsKufu16 } from './lessons-kufu16';
+import { lessonsKufu20 } from './lessons-kufu20';
+import { lessonsKufu21 } from './lessons-kufu21';
+import { lessonsKufu22 } from './lessons-kufu22';
+import { lessonsKufu23 } from './lessons-kufu23';
+import { lessonsKufu24 } from './lessons-kufu24';
+import { lessonsKufu25 } from './lessons-kufu25';
+import { lessonsKufu26 } from './lessons-kufu26';
+import { lessonsKufu27 } from './lessons-kufu27';
+import { lessonsKufu28 } from './lessons-kufu28';
+import { lessonsKufu29 } from './lessons-kufu29';
+import { lessonsKufu30 } from './lessons-kufu30';
+import { lessonsKufu31 } from './lessons-kufu31';
+import { lessonsKufu32 } from './lessons-kufu32';
+import { lessonsKufu33 } from './lessons-kufu33';
+import { lessonsKufu35 } from './lessons-kufu35';
+import { lessonsKufu36 } from './lessons-kufu36';
+import { lessonsKufu37 } from './lessons-kufu37';
+import { lessonsKufu38 } from './lessons-kufu38';
+import { lessonsKufu39 } from './lessons-kufu39';
 import { lessonsKoushikiK2Heikou } from './lessons-koushiki-k2heikou';
 import { lessonsKoushikiK4En1 } from './lessons-koushiki-k4en1';
 import { lessonsKoushikiK5En2 } from './lessons-koushiki-k5en2';
@@ -5244,6 +5277,39 @@ export const kokoMathLessons: Lesson[] = [
   ...kokoMathExt11Lessons,
   ...kokoMathExt12Lessons,
   ...kokoMathNewGrade10Lessons,
+  ...lessonsKufu.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu2.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu3.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu4.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu5.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu7.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu8.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu9.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu11.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu12.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu13.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu14.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu15.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu16.filter((l) => l.examType === 'koko'),
+  ...lessonsKufu20,
+  ...lessonsKufu21,
+  ...lessonsKufu22,
+  ...lessonsKufu23,
+  ...lessonsKufu24,
+  ...lessonsKufu25,
+  ...lessonsKufu26,
+  ...lessonsKufu27,
+  ...lessonsKufu28,
+  ...lessonsKufu29,
+  ...lessonsKufu30,
+  ...lessonsKufu31,
+  ...lessonsKufu32,
+  ...lessonsKufu33,
+  ...lessonsKufu35,
+  ...lessonsKufu36,
+  ...lessonsKufu37,
+  ...lessonsKufu38,
+  ...lessonsKufu39,
   ...lessonsKoushikiK2Heikou,
   ...lessonsKoushikiK4En1,
   ...lessonsKoushikiK5En2,
