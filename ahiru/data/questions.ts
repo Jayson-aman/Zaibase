@@ -536,6 +536,7 @@ import { gradeJ3SansuHenniQuestions } from './grade_j3_sansu_henni';
 import { gradeJ2SansuBunsuuQuestions } from './grade_j2_sansu_bunsuu';
 import { gradeJ3SansuWabunQuestions } from './grade_j3_sansu_wabun';
 import { gradeJ3SansuHobutsuQuestions } from './grade_j3_sansu_hobutsu';
+import { gradeJ3SansuRootQuestions } from './grade_j3_sansu_root';
 import { gradeJ3SansuTokyoQuestions } from './grade_j3_sansu_tokyo';
 import { gradeJ3ShakaiTohQuestions } from './grade_j3_shakai_toh';
 import { gradeJ3ShakaiKouminQuestions } from './grade_j3_shakai_koumin';
@@ -4434,6 +4435,7 @@ const baseQuestions: Question[] = [
   ...gradeJ2SansuBunsuuQuestions,
   ...gradeJ3SansuWabunQuestions,
   ...gradeJ3SansuHobutsuQuestions,
+  ...gradeJ3SansuRootQuestions,
   ...gradeJ3SansuTokyoQuestions,
   ...gradeJ3ShakaiTohQuestions,
   ...gradeJ3ShakaiKouminQuestions,
