@@ -22,7 +22,6 @@ export const QUESTION_SLIDES: Record<string, string[]> = {
   "grade_j2_rika_kimatsu_018": ["grade_j2_rika_kimatsu_018_r11.webp"],
   "grade_j2_rika_kimatsu_019": ["grade_j2_rika_kimatsu_019_r12.webp"],
   "grade_j2_rika_kimatsu_020": ["grade_j2_rika_kimatsu_020_r13.webp"],
-  "grade_j2_rika_kimatsu_021": ["grade_j2_rika_kimatsu_021_r15.webp"],
   "grade_j3_shakai_koumin_001": ["grade_j3_shakai_koumin_001_s1.webp"],
   "grade_j3_shakai_koumin_002": ["grade_j3_shakai_koumin_002_s1.webp"],
   "grade_j3_shakai_koumin_003": ["grade_j3_shakai_koumin_003_s1.webp"],
