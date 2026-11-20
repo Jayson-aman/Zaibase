@@ -1,45 +1,16 @@
 // 平面図形 前半（角度・面積・等積変形・相似）— sansu_s126〜sansu_s160 用の図解データ。
 // 位置はすべて distance formula / shoelace 公式で検算済み（生成時の検証スクリプト参照）。
 import type { Figure } from './figures';
+import { staticFix } from './lesson-figs-static-fix';
 
 export const lessonFigsSansuExt04: Record<string, Figure> = {
   // ===== 1. 角度の基本 =====
 
   // s126: 三角形の内角の和（角B=55°, 角C=65°, 角A=60°）
-  lf_sansu_ext04_126: {
-    kind: 'polygon',
-    points: [
-      { x: 4.8, y: 6.86, label: 'A' },
-      { x: 0, y: 0, label: 'B' },
-      { x: 8, y: 0, label: 'C' },
-    ],
-    caption: '角B＝55°、角C＝65°のとき、角A＝180−55−65＝60°。三角形の内角の和は常に180°',
-    steps: [
-      "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
-      "三角形の内角の和は180°。角度を求めるときの手がかりになる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "角B＝55°、角C＝65°のとき、角A＝180−55−65＝60°。三角形の内角の和は常に180°",
-    ],
-    buildSteps: 3,
-  },
+  lf_sansu_ext04_126: { ...staticFix.lf_sansu_ext04_126, caption: '角B＝55°、角C＝65°のとき、角A＝180−55−65＝60°。三角形の内角の和は常に180°' },
 
   // s127: 三角形の外角の性質（角A=42°, 角B=88°, 角C=50°、Cの外角=130°）
-  lf_sansu_ext04_127: {
-    kind: 'polygon',
-    points: [
-      { x: 0.32, y: 9.15, label: 'A' },
-      { x: 0, y: 0, label: 'B' },
-      { x: 8, y: 0, label: 'C' },
-    ],
-    caption: '角A＝42°、角B＝88°のとき、角Cの内角＝50°。角Cの外角＝隣り合わない2つの内角の和＝42＋88＝130°',
-    steps: [
-      "頂点を順に A・B・C と結んだ三角形。まず形と頂点の名前をおさえる。",
-      "三角形の内角の和は180°。角度を求めるときの手がかりになる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "角A＝42°、角B＝88°のとき、角Cの内角＝50°。角Cの外角＝隣り合わない2つの内角の和＝42＋88＝130°",
-    ],
-    buildSteps: 3,
-  },
+  lf_sansu_ext04_127: { ...staticFix.lf_sansu_ext04_127, caption: '角A＝42°、角B＝88°のとき、角Cの内角＝50°。角Cの外角＝隣り合わない2つの内角の和＝42＋88＝130°' },
 
   // s128: 平行線と角度（同位角・錯角）
   lf_sansu_ext04_128: {
@@ -1604,25 +1575,7 @@ export const lessonFigsSansuExt04: Record<string, Figure> = {
   },
 
   // s158：線分ACとBDがOで交わり AB∥CD。対頂角＋錯角で △OAB∽△OCD、相似比 AB:CD=4:6
-  sext04_s158_naze: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 4, label: 'A' },
-      { x: 4, y: 4, label: 'B' },
-      { x: -1, y: -1, label: 'D' },
-      { x: 5, y: -1, label: 'C' },
-    ],
-    sideLabels: ['AB 4cm', null, 'CD 6cm', null],
-    caption: '線分 AC と BD が O で交わり、AB ∥ CD。対頂角 角 AOB＝角 COD はいつでも等しいが、それだけでは 1 組。AB ∥ CD の錯角 角 OAB＝角 OCD で 2 組そろって △OAB ∽ △OCD。相似比 AB:CD＝4:6＝2:3 で OA:OC＝OB:OD＝2:3。OA＝3 なら OC＝4.5。平行でなければ相似は言えない。',
-    steps: [
-      '線分 AC と線分 BD が点 O で交わる砂時計の形。上の AB と下の CD は平行。',
-      '角 AOB と角 COD は対頂角で、平行に関係なく等しい。でも相似には等しい角が 2 組必要で、これは 1 組だけ。',
-      'AB ∥ CD なので、AC を横断線と見ると角 OAB と角 OCD は錯角で等しい。2 組そろって △OAB ∽ △OCD。対応は A↔C、B↔D。',
-      '相似比は AB:CD＝4:6＝2:3。OA:OC＝2:3 なので OA＝3cm なら OC＝3×3/2＝4.5cm。大きい三角形の辺 OC が長い。3×2/3＝2 は比を逆にかけた誤り。',
-      '検算：OA:OC＝3:4.5＝2:3＝AB:CD で一致。OB:OD も 2:3。平行の印が無い図では対頂角しか無く、相似は使えない。',
-    ],
-    buildSteps: 1,
-  },
+  sext04_s158_naze: { ...staticFix.sext04_s158_naze, caption: '線分 AC と BD が O で交わり、AB ∥ CD。対頂角 角 AOB＝角 COD はいつでも等しいが、それだけでは 1 組。AB ∥ CD の錯角 角 OAB＝角 OCD で 2 組そろって △OAB ∽ △OCD。相似比 AB:CD＝4:6＝2:3 で OA:OC＝OB:OD＝2:3。OA＝3 なら OC＝4.5。平行でなければ相似は言えない。' },
 
   // s159：同じ時刻の影。棒2mの影3m、木の影15m。相似な直角三角形なので 木の高さ＝15×2/3＝10m
   sext04_s159_naze: {

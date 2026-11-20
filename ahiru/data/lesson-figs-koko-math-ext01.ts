@@ -1,4 +1,5 @@
 import type { Figure } from './figures';
+import { staticFix } from './lesson-figs-static-fix';
 
 // 高校受験 数学「正負の数・文字式・式の計算」拡張ユニット（koko_math_s001〜koko_math_s040）の教科書用図解。
 // キーは lessons-koko-math-ext01.ts の figureId と対応。
@@ -166,25 +167,7 @@ export const lessonFigsKokoMathExt01: Record<string, Figure> = {
   },
 
   // s022：分配法則 a(b+c)＝ab+ac の面積モデル
-  lf_kokomathext01_022: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 0 },
-      { x: 7, y: 0 },
-      { x: 7, y: 5 },
-      { x: 0, y: 5 },
-    ],
-    sideLabels: ['3＋4', '5', null, null],
-    fill: true,
-    caption: '縦5、横 3＋4 の長方形。面積は 5×(3＋4)＝35 だが、横を3と4に分けると 5×3＝15 と 5×4＝20 の2枚に分かれ、和はやはり35。これが分配法則 a(b＋c)＝ab＋ac の正体',
-    steps: [
-      "頂点を順に A・B・C・D と結んだ四角形。まず形と頂点の名前をおさえる。",
-      "辺に書かれている長さは 3＋4、5。どの辺のことかを図で確かめる。",
-      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
-      "縦5、横 3＋4 の長方形。面積は 5×(3＋4)＝35 だが、横を3と4に分けると 5×3＝15 と 5×4＝20 の2枚に分かれ、和はやはり35。これが分配法則 a(b＋c)＝ab＋ac の正体",
-    ],
-    buildSteps: 3,
-  },
+  lf_kokomathext01_022: { ...staticFix.lf_kokomathext01_022, caption: '縦5、横 3＋4 の長方形。面積は 5×(3＋4)＝35 だが、横を3と4に分けると 5×3＝15 と 5×4＝20 の2枚に分かれ、和はやはり35。これが分配法則 a(b＋c)＝ab＋ac の正体' },
 
   // s023：単項式の積を直方体の体積で見る
   lf_kokomathext01_023: {
@@ -195,27 +178,7 @@ export const lessonFigsKokoMathExt01: Record<string, Figure> = {
   },
 
   // s025：L字型の面積は「全体−欠け」でも「2つに分けて足す」でも求まる
-  lf_kokomathext01_025: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 0 },
-      { x: 8, y: 0 },
-      { x: 8, y: 3 },
-      { x: 3, y: 3 },
-      { x: 3, y: 6 },
-      { x: 0, y: 6 },
-    ],
-    sideLabels: ['8', '3', '5', '3', '3', '6'],
-    fill: true,
-    caption: 'L字型の面積。大きい長方形からへこみを引いて 8×6−5×3＝33、2つの長方形に分けて 8×3＋3×3＝33。どちらでも同じになるのは分配法則 a(b−c)＝ab−ac が成り立つから',
-    steps: [
-      "図にある点は A・B・C・D・E・F。どの点がどこにあるかを最初におさえる。",
-      "辺に書かれている長さは 8、3、5、3。どの辺のことかを図で確かめる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "L字型の面積。大きい長方形からへこみを引いて 8×6−5×3＝33、2つの長方形に分けて 8×3＋3×3＝33。どちらでも同じになるのは分配法則 a(b−c)＝ab−ac が成り立つから",
-    ],
-    buildSteps: 3,
-  },
+  lf_kokomathext01_025: { ...staticFix.lf_kokomathext01_025, caption: 'L字型の面積。大きい長方形からへこみを引いて 8×6−5×3＝33、2つの長方形に分けて 8×3＋3×3＝33。どちらでも同じになるのは分配法則 a(b−c)＝ab−ac が成り立つから' },
 
   // s030：台形の面積の公式を h について解く
   lf_kokomathext01_030: {

@@ -1,4 +1,5 @@
 import type { Figure } from './figures';
+import { staticFix } from './lesson-figs-static-fix';
 
 // 高校受験 理科「動物・人体・生殖と遺伝」拡張ユニット（koko_rika_s341〜koko_rika_s380）の教科書用図解。
 // キーは lessons-koko-rika-ext10.ts の figureId と対応（全40課中19課に付与）。
@@ -282,24 +283,7 @@ export const lessonFigsKokoRikaExt10: Record<string, Figure> = {
   },
 
   // s376：Aa × Aa の組み合わせ表（格子）
-  lf_kokorikaext10_376: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 2, label: 'AA' },
-      { x: 2, y: 2, label: 'Aa' },
-      { x: 2, y: 0, label: 'aa' },
-      { x: 0, y: 0, label: 'Aa' },
-    ],
-    caption:
-      'Aa × Aa の組み合わせ表（格子）。上の行が一方の生殖細胞A、下の行がa、左の列がもう一方のA、右の列がaにあたり、四隅の4通りが同じ確率で起こる。内訳は AA が1、Aa が2（左下と右上の2か所）、aa が1 で、遺伝子型の比は AA:Aa:aa＝1:2:1。見た目は AA と Aa がどちらも顕性形質なので、顕性:潜性＝(1＋2):1＝3:1 になる',
-    steps: [
-      "頂点を順に AA・Aa・aa・Aa と結んだ四角形。まず形と頂点の名前をおさえる。",
-      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "Aa × Aa の組み合わせ表（格子）。上の行が一方の生殖細胞A、下の行がa、左の列がもう一方のA、右の列がaにあたり、四隅の4通りが同じ確率で起こる。内訳は AA が1、Aa が2（左下と右上の2か所）、aa が1 で、遺伝子型の比は AA:Aa:aa＝1:2:1。見た目は AA と Aa がどちらも顕性形質なので、顕性:潜性＝(1＋2):1＝3:1 になる",
-    ],
-    buildSteps: 3,
-  },
+  lf_kokorikaext10_376: staticFix.lf_kokorikaext10_376,
 
   // s377：F2の遺伝子型の割合（1:2:1）
   lf_kokorikaext10_377: {
@@ -322,24 +306,7 @@ export const lessonFigsKokoRikaExt10: Record<string, Figure> = {
   },
 
   // s378：検定交雑 Aa × aa の組み合わせ表（格子）
-  lf_kokorikaext10_378: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 2, label: 'Aa' },
-      { x: 2, y: 2, label: 'Aa' },
-      { x: 2, y: 0, label: 'aa' },
-      { x: 0, y: 0, label: 'aa' },
-    ],
-    caption:
-      '検定交雑 Aa × aa の組み合わせ表（格子）。aa がつくる生殖細胞は a の1種類だけなので、左右の列はどちらも a になる。上の行（Aの生殖細胞）からは Aa が2つ、下の行（aの生殖細胞）からは aa が2つできて、Aa:aa＝1:1。見た目も 顕性:潜性＝1:1 になる。調べたい個体が AA なら子はすべて Aa（すべて顕性形質）になるので、潜性形質が出るかどうかで遺伝子型を判定できる',
-    steps: [
-      "頂点を順に Aa・Aa・aa・aa と結んだ四角形。まず形と頂点の名前をおさえる。",
-      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "検定交雑 Aa × aa の組み合わせ表（格子）。aa がつくる生殖細胞は a の1種類だけなので、左右の列はどちらも a になる。上の行（Aの生殖細胞）からは Aa が2つ、下の行（aの生殖細胞）からは aa が2つできて、Aa:aa＝1:1。見た目も 顕性:潜性＝1:1 になる。調べたい個体が AA なら子はすべて Aa（すべて顕性形質）になるので、潜性形質が出るかどうかで遺伝子型を判定できる",
-    ],
-    buildSteps: 3,
-  },
+  lf_kokorikaext10_378: staticFix.lf_kokorikaext10_378,
 
   // s379：F2の表現型の割合（3:1）
   lf_kokorikaext10_379: {
