@@ -1,3 +1,4 @@
+import { isWelcomeTrialOfferOpen } from '../services/welcomeTrial';
 import React, { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
@@ -42,13 +43,13 @@ export default function WelcomeTrialBanner({ onAction }: { onAction: () => void 
   // まだログインしていない人には、ログインすると体験が始まることを知らせる
   // （体験は実アカウントでのログインが条件で、知らないままだと始まらない）
   if (!user || user.isAnonymous) {
-    if (inviteDismissed) return null;
+    if (inviteDismissed || !isWelcomeTrialOfferOpen()) return null;
     return (
       <PlanNoticeCard
         notice={{
           icon: '🎁',
           title: 'ログインすると、3日間ぜんぶひらきます',
-          body: 'メールアドレスで登録してログインすると、はじめの3日間、単元・公式集・問題集・本試験対策の中身がすべて読めます。自動で課金されることはありません。',
+          body: '11月30日までに、メールアドレスで登録してログインすると、はじめの3日間、単元・公式集・問題集・本試験対策の中身がすべて読めます。自動で課金されることはありません。',
           urgent: false,
           action: 'ログイン・新規登録',
         }}
