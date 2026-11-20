@@ -5,6 +5,12 @@ import { getFirestoreDb, isFirebaseConfigured } from './firebaseClient';
 // 開始日時はサーバーの時刻（serverTimestamp）で Firestore の welcomeTrial/{uid} に1度だけ書く。
 // 端末のストレージだけで数えると、Web 版はブラウザのデータを消すだけで何度でも延ばせるため。
 export const WELCOME_TRIAL_DAYS = 3;
+/** 3日間の全開放を始められる最終日時（日本時間 2026/11/30 23:59:59）。これを過ぎて初めてログインした人には、体験は始まらない。すでに始めた人は、3日間そのまま続く。 */
+export const WELCOME_TRIAL_ENTRY_DEADLINE_MS = new Date('2026-11-30T23:59:59+09:00').getTime();
+/** 体験の受け付け中か（締切の前か） */
+export function isWelcomeTrialOfferOpen(now: number = Date.now()): boolean {
+  return now <= WELCOME_TRIAL_ENTRY_DEADLINE_MS;
+}
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 const startedCache = new Map<string, Promise<number | null>>();
@@ -27,6 +33,8 @@ export function ensureWelcomeTrialStart(uid: string): Promise<number | null> {
       };
       const existing = await read();
       if (existing != null) return existing;
+      // 締切のあとに初めてログインした人には、体験を始めない
+      if (!isWelcomeTrialOfferOpen()) return null;
       await setDoc(ref, { startedAt: serverTimestamp() });
       return await read();
     } catch {
