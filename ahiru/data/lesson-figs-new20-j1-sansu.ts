@@ -1,4 +1,5 @@
 import type { Figure } from './figures';
+import { staticFix } from './lesson-figs-static-fix';
 
 export const lessonFigsNew20J1Sansu: Record<string, Figure> = {
   lf_new20j1_01: {
@@ -185,28 +186,7 @@ export const lessonFigsNew20J1Sansu: Record<string, Figure> = {
     ],
   },
 
-  lf_new20j1_08: {
-    kind: 'polygon',
-    points: [
-      { x: 0, y: 0 },
-      { x: 100, y: 0 },
-      { x: 100, y: 36 },
-      { x: 0, y: 36 },
-    ],
-    sideLabels: ['100(=99+1)', '36', null, null],
-    fill: true,
-    caption: '36×99は99を100−1と考えて分配法則を使う。36×100−36×1=3600−36=3564。100に近い数は差を利用すると暗算しやすい',
-    steps: [
-      '36×99をそのまま計算すると筆算が大変',
-      '99を100−1と考える',
-      '36×99=36×(100−1)',
-      '分配法則で36×100−36×1に分ける',
-      '36×100=3600',
-      '36×1=36',
-      '3600−36=3564',
-      'このように「100に近い数」は100との差を利用すると暗算しやすい',
-    ],
-  },
+  lf_new20j1_08: { ...staticFix.lf_new20j1_08, caption: '36×99は99を100−1と考えて分配法則を使う。36×100−36×1=3600−36=3564。100に近い数は差を利用すると暗算しやすい' },
 
   lf_new20j1_09: {
     kind: 'barChart',

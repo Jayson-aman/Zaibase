@@ -1,4 +1,5 @@
 import type { Figure } from './figures';
+import { staticFix } from './lesson-figs-static-fix';
 
 // 高校受験 数学「平面図形（角・作図・多角形・合同）」拡張ユニット用の図解。
 // キーは lessons-koko-math-ext06.ts の figureId と完全一致させること。
@@ -31,25 +32,7 @@ export const lessonFigsKokoMathExt06: Record<string, Figure> = {
   },
 
   // s195 ブーメラン型（矢じり形）の角
-  lf_kokomathext06_195: {
-    kind: 'polygon',
-    points: [
-      { x: 2, y: 4.6, label: 'A' },
-      { x: 0, y: 0, label: 'B' },
-      { x: 2, y: 1.5, label: 'D' },
-      { x: 4, y: 0, label: 'C' },
-    ],
-    fill: true,
-    caption:
-      'ブーメラン型（矢じり形）。内側にへこんだ点Dについて、∠BDC＝∠BAC＋∠ABD＋∠ACD が成り立つ',
-    steps: [
-      "頂点を順に A・B・D・C と結んだ四角形。まず形と頂点の名前をおさえる。",
-      "四角形の内角の和は360°。角度を求めるときの手がかりになる。",
-      "長さや角の等しいところに印をつけながら、使える性質をさがす。",
-      "ブーメラン型（矢じり形）。内側にへこんだ点Dについて、∠BDC＝∠BAC＋∠ABD＋∠ACD が成り立つ",
-    ],
-    buildSteps: 3,
-  },
+  lf_kokomathext06_195: staticFix.lf_kokomathext06_195,
 
   // s197 多角形の内角の和（正六角形を1つの頂点からの対角線で分ける）
   lf_kokomathext06_197: {
