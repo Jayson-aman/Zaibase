@@ -541,6 +541,7 @@ import { gradeJ2SansuYajiriQuestions } from './grade_j2_sansu_yajiri';
 import { gradeE6SansuAlmondQuestions } from './grade_e6_sansu_almond';
 import { gradeJ3SansuShaeiQuestions } from './grade_j3_sansu_shaei';
 import { gradeE6SansuSquare100Questions } from './grade_e6_sansu_square100';
+import { gradeE6SansuNyushi5Questions } from './grade_e6_sansu_nyushi5';
 import { gradeJ2RikaKimatsuQuestions } from './grade_j2_rika_kimatsu';
 import { gradeJ3SansuTokyoQuestions } from './grade_j3_sansu_tokyo';
 import { gradeJ3ShakaiTohQuestions } from './grade_j3_shakai_toh';
@@ -4445,6 +4446,7 @@ const baseQuestions: Question[] = [
   ...gradeE6SansuAlmondQuestions,
   ...gradeJ3SansuShaeiQuestions,
   ...gradeE6SansuSquare100Questions,
+  ...gradeE6SansuNyushi5Questions,
   ...gradeJ2RikaKimatsuQuestions,
   ...gradeJ3SansuTokyoQuestions,
   ...gradeJ3ShakaiTohQuestions,
